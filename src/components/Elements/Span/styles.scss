@@ -1,7 +1,8 @@
 :local {
-
-  .component {
-    display: inherit;
+  .docz {
+    padding: 20px;
+    width: 100px;
+    display: inline-block;
   }
 
   .block {
@@ -70,7 +71,7 @@
   }
 
   .monospace {
-    font-family: $monospace;
+    font-family: monospace;
   }
 
   .error {

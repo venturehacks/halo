@@ -1,14 +1,37 @@
 {
+  "compileOnSave": false,
   "compilerOptions": {
+    "target": "es2017",
+    "module": "es2015",
+    "moduleResolution": "node",
+    "lib": ["es2017", "dom"],
+    "inlineSourceMap": true,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
     "jsx": "react",
-    "module": "commonjs",
-    "declaration": false,
-    "strict": false,
-    "noImplicitAny": false,
-    "outDir": "./dist",
-    "sourceMap": true,
-    "target": "es5"
+    "outDir": "dist",
+    "rootDir": "src",
+    "strict": false /* Enable all strict type-checking options. */,
+    "typeRoots": ["node_modules/@types"],
+    "types": ["node"],
+    /* Strict Type-Checking Options */
+    "noImplicitAny": false /* Raise error on expressions and declarations with an implied 'any' type. */,
+    "strictNullChecks": false /* Enable strict null checks. */,
+    "strictFunctionTypes": true /* Enable strict checking of function types. */,
+    "strictPropertyInitialization": false /* Enable strict checking of property initialization in classes. */,
+    "noImplicitThis": true /* Raise error on 'this' expressions with an implied 'any' type. */,
+    "alwaysStrict": true /* Parse in strict mode and emit "use strict" for each source file. */,
+    /* Additional Checks */
+    "noUnusedLocals": false /* Report errors on unused locals. */,
+    "noUnusedParameters": false /* Report errors on unused parameters. */,
+    "noImplicitReturns": false /* Report error when not all code paths in function return a value. */,
+    "noFallthroughCasesInSwitch": false /* Report errors for fallthrough cases in switch statement. */,
+    /* Debugging Options */
+    "traceResolution": false /* Report module resolution log messages. */,
+    "listEmittedFiles": false /* Print names of generated files part of the compilation. */,
+    "listFiles": false /* Print names of files part of the compilation. */,
+    "pretty": true /* Stylize errors and messages using color and context. */,
   },
-  "include": ["src"],
-  "exclude": ["node_modules", "**/__tests__/*"]
+  "include": ["src/**/*"],
+  "exclude": ["node_modules/**", "**/__tests__/*"]
 }

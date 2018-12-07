@@ -4,6 +4,12 @@
 dist/*.js*
 dist/index.js
 .DS_Store
+.docz
+.idea
+.build
+dist
+.cache
+stats.html
 
 ############################################################
 # .gitignore for node
