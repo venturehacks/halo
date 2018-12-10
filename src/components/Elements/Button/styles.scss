@@ -1,0 +1,72 @@
+.component {
+  border: 1px solid transparent;
+  border-radius: 3px;
+
+  & + & {
+    margin-left: 8px;
+  }
+
+  &:hover {
+    cursor: pointer;
+    color: currentColor;
+    text-decoration: none;
+  }
+
+  &.primary {
+    background-color: blue;
+    border-color: blue;
+    color: white;
+
+    &:hover,
+    &.domstate--hover, {
+      background-color: darken(blue, 5%)
+    }
+
+    &:active,
+    &.domstate--active, {
+      background-color: lighten(blue, 5%)
+    }
+  }
+
+  &.secondary {
+    background-color: transparent;
+    border-color: blue;
+    color: blue;
+
+    &:hover,
+    &.domstate--hover, {
+      color: darken(blue, 5%);
+      border-color: darken(blue, 5%);
+    }
+
+    &:active,
+    &.domstate--active, {
+      color: lighten(blue, 5%);
+      border-color: lighten(blue, 5%);
+    }
+  }
+
+  &.regular {
+    font-size: 16px;
+    padding: 12px 16px;
+    &:last-child {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+
+  &.small {
+    font-size: 14px;
+    padding: 8px 16px;
+    &:last-child {
+      padding-left: 32px;
+      padding-right: 32px;
+    }
+  }
+
+  &.inline {
+    font-size: inherit;
+    padding: 4px 8px;
+  }
+}
+

@@ -1,0 +1,39 @@
+---
+name: Button
+menu: Elements
+---
+
+import { Playground, PropsTable } from 'docz'
+import Button from './'
+import { css, jsx } from '@emotion/core'
+
+# Button
+
+## Samples
+
+### Regular
+
+<div>
+  <Button secondary>Secondary</Button>
+  <Button>Primary</Button>
+</div>
+
+### Small
+
+<div>
+  <Button size="small" secondary>Secondary</Button>
+  <Button size="small">Primary</Button>
+</div>
+
+### Inline
+
+<div key="inline" style={{
+  fontSize: '12px'
+}}>
+  <Button size="inline">Primary</Button> to get the job.
+  <Button size="inline" secondary>Secondary</Button> to get the job.
+</div>
+
+## Props
+
+<PropsTable of={Button} />
