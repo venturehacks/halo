@@ -26,7 +26,7 @@ export interface Props {
 }
 
 class Span extends React.Component<Props> {
-  public render() {
+  public render(): React.ReactNode {
     const {
       antialiased,
       block,
