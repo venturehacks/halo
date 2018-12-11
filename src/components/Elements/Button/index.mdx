@@ -9,31 +9,65 @@ import { css, jsx } from '@emotion/core'
 
 # Button
 
-## Samples
-
-### Regular
-
 <div>
-  <Button secondary>Secondary</Button>
   <Button>Primary</Button>
+  &nbsp;
+  <Button variant='secondary'>Secondary</Button>
+  &nbsp;
+  <Button variant='alternate'>Alternate</Button>
 </div>
 
-### Small
-
-<div>
-  <Button size="small" secondary>Secondary</Button>
-  <Button size="small">Primary</Button>
-</div>
-
-### Inline
-
-<div key="inline" style={{
-  fontSize: '12px'
-}}>
-  <Button size="inline">Primary</Button> to get the job.
-  <Button size="inline" secondary>Secondary</Button> to get the job.
-</div>
 
 ## Props
 
 <PropsTable of={Button} />
+
+## Sizes
+
+#### Regular
+
+<div>
+  <Button>Press me</Button>
+  &nbsp;
+  <Button variant='secondary'>Press me</Button>
+  &nbsp;
+  <Button variant='alternate'>Press me</Button>
+</div>
+
+#### Small
+
+<div>
+  <Button size='small'>Press me</Button>
+  &nbsp;
+  <Button size='small' variant='secondary'>Press me</Button>
+  &nbsp;
+  <Button size='small' variant='alternate'>Press me</Button>
+</div>
+
+#### Inline
+
+<div key='inline' style={{
+  fontSize: '12px'
+}}>
+  <Button size='inline'>Press me</Button> to get the job.
+  <Button size='inline' variant='secondary'>Press me</Button> to get the job.
+</div>
+
+
+## States
+
+<div>
+  <Button>initial</Button>
+  &nbsp;
+  <Button className='_forceHover'>:hover</Button>
+  &nbsp;
+  <Button className='_forceActive'>:active</Button>
+</div>
+<br />
+<div>
+  <Button variant='secondary'>initial</Button>
+  &nbsp;
+  <Button variant='secondary' className='_forceHover'>:hover</Button>
+  &nbsp;
+  <Button variant='secondary' className='_forceActive'>:active</Button>
+</div>

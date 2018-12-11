@@ -1,39 +1,44 @@
-import classNames from 'classnames'
 import * as React from 'react'
 import { SFC } from 'react'
 import * as styles from './styles.scss'
+import classNames from 'classnames'
 
-export interface Props {
+export interface ButtonProps {
+  variant: 'primary' | 'secondary' | 'alternate'
+  size: 'regular'|'small'|'inline'
+  /** apply native disabled property */
+  disabled: boolean
   children?: React.ReactNode
   className?: string
-  disabled?: boolean
+  /** provide hyperlink by styling <a> like button */
   href?: string
   onClick?:
-    React.MouseEvent<HTMLButtonElement> |
-    React.MouseEvent<HTMLAnchorElement>
-  primary?: any
-  secondary?: any
-  size?: 'regular'|'small'|'inline'
+  (e: React.MouseEvent<HTMLButtonElement|HTMLAnchorElement>) => void
 }
 
-class Button extends React.Component<Props &
-    React.AnchorHTMLAttributes<HTMLAnchorElement> &
-    React.ButtonHTMLAttributes<HTMLButtonElement>> {
+class Button extends React.PureComponent<ButtonProps> {
+  public static defaultProps = {
+    variant: 'primary',
+    size: 'regular',
+    disabled: false,
+  };
+
   public render(): React.ReactNode {
     const {
       children,
       className,
       href,
-      primary,
-      secondary,
       size,
+      onClick,
+      variant,
       ...other
     } = this.props;
 
     const buttonClassNames = classNames([
       styles.component,
-      !secondary && styles.primary,
-      secondary && styles.secondary,
+      variant === 'primary' && styles.primary,
+      variant === 'secondary' && styles.secondary,
+      variant === 'alternate' && styles.alternate,
       size === 'regular' && styles.regular,
       size === 'small' && styles.small,
       size === 'inline' && styles.inline,
@@ -42,22 +47,27 @@ class Button extends React.Component<Props &
 
     if (href) {
       return (
-        <a href={href} className={buttonClassNames} {...other}>
+        <a
+          className={buttonClassNames}
+          href={href}
+          onClick={onClick}
+          {...other}
+        >
           {children}
         </a>
       );
     } else {
       return (
-        <button className={buttonClassNames} {...other}>
+        <button
+          className={buttonClassNames}
+          onClick={onClick}
+          {...other}
+        >
           {children}
         </button>
       );
     }
   }
-};
-
-Button.defaultProps = {
-  size: 'regular'
 };
 
 export default Button;
