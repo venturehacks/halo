@@ -9,9 +9,10 @@
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "declarationDir": "./dist/typings/",
-    "jsx": "react",
-    "outDir": "dist/es6/",
     "rootDir": "src",
+    "baseUrl": "./src",
+    "outDir": "./dist",
+    "jsx": "react",
     "strict": false /* Enable all strict type-checking options. */,
     "typeRoots": ["node_modules/@types"],
     "types": ["node"],
@@ -31,7 +32,7 @@
     "traceResolution": false /* Report module resolution log messages. */,
     "listEmittedFiles": false /* Print names of generated files part of the compilation. */,
     "listFiles": false /* Print names of files part of the compilation. */,
-    "pretty": true /* Stylize errors and messages using color and context. */,
+    "pretty": true /* Stylize errors and messages using color and context. */
   },
   "include": ["src/**/*"],
   "exclude": ["node_modules/**", "**/__tests__/*"]

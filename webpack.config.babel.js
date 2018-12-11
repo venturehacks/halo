@@ -15,7 +15,7 @@ const plugins = [
   new MiniCssExtractPlugin({
     // Options similar to the same options in webpackOptions.output
     // both options are optional
-    filename: "[name].css",
+    filename: "halo.css",
     chunkFilename: "[id].css"
   }),
 ];
@@ -29,6 +29,7 @@ export default {
     libraryTarget: 'umd',
     library: 'halo',
     publicPath: path.resolve('./dist'),
+    pathinfo: true,
     umdNamedDefine: true,
     globalObject: 'this'
   },

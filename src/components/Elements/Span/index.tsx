@@ -3,7 +3,7 @@ import * as React from 'react'
 import { SFC } from 'react'
 import * as styles from './styles.scss'
 
-export interface Props {
+export interface SpanProps {
   antialiased?: any
   block?: any
   bold?: any
@@ -25,7 +25,7 @@ export interface Props {
   xxmuted?: any
 }
 
-class Span extends React.Component<Props> {
+class Span extends React.Component<SpanProps> {
   public render(): React.ReactNode {
     const {
       antialiased,

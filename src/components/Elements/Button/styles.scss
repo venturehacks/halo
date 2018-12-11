@@ -11,6 +11,7 @@ $alternate-text: #8FA3BF;
 .component {
   border: 1px solid transparent;
   border-radius: 3px;
+  text-decoration: none;
 
   & + & {
     margin-left: 8px;
