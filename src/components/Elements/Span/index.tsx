@@ -85,4 +85,5 @@ class Span extends React.Component<Props> {
   }
 };
 
+export { Span };
 export default Span;

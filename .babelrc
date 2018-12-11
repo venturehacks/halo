@@ -1,5 +1,21 @@
 {
   "plugins": [
-    "emotion"
-  ]
+    "emotion",
+  ],
+  "presets": [
+    ["@babel/preset-env", {
+      "loose": true
+      /*"modules": "commonjs" /ENV === 'es6' ? false : 'commonjs', */
+    }],
+    "@babel/preset-react",
+  ],
+  "env": {
+    "es6": {
+      "plugins": [
+        [
+          "transform-imports"
+        ]
+      ]
+    }
+  }
 }

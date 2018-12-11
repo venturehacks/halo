@@ -70,4 +70,7 @@ class Button extends React.PureComponent<ButtonProps> {
   }
 };
 
+export { Button };
 export default Button;
+
+
