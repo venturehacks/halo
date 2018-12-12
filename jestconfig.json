@@ -20,9 +20,6 @@
     "<rootDir>/test/jest-setup.ts"
   ],
   "testPathIgnorePatterns": [
-    "<rootDir>/node_modules/",
-    "<rootDir>/src/assets/",
-    "<rootDir>/src/css/",
-    "<rootDir>/src/sass/"
+    "<rootDir>/node_modules/"
   ]
 }
