@@ -1,0 +1,110 @@
+version: 2
+jobs:
+  test:
+    parallelism: 1
+    resource_class: medium
+    working_directory: ~/halo
+    docker:
+      - image: circleci/node:8.14-browsers
+    steps:
+    - run:
+      name: git checkout
+      command: "                      mkdir -p ~/.ssh\n                      echo\
+        \ -e \"Host github.com\n\tStrictHostKeyChecking no\n\" >> ~/.ssh/config\n\
+        \                      if [ -z \"$CIRCLE_BRANCH\" ]; then\n            \
+        \            git clone git@github.com:venturehacks/$CIRCLE_PROJECT_REPONAME.git\
+        \ .\n                      else\n                        git clone git@github.com:venturehacks/$CIRCLE_PROJECT_REPONAME.git\
+        \ . \\\n                            --branch $CIRCLE_BRANCH --depth=100\n\
+        \                      fi\n                      git reset --hard $CIRCLE_SHA1\n"
+    - restore_cache:
+        name: Restore bundle install cache
+        keys:
+        - v1-halo-bundle-{{ checksum "Gemfile.lock" }}
+        - v1-halo-bundle-{{ checksum "halo.gemspec" }}
+        - v1-halo-bundle-
+    - run:
+        name: bundle install
+        command: bundle check > /dev/null || bundle install -j "$(nproc)" --path vendor/bundle
+        no_output_timeout: 1h
+    - save_cache:
+        name: Save bundle install cache
+        key: v1-halo-bundle-{{ checksum "Gemfile.lock" }}
+        paths:
+        - vendor/bundle
+    - restore_cache:
+        name: Restore yarn install cache
+        keys:
+        - v1-halo-node_modules-{{ checksum "yarn.lock" }}
+        - v1-halo-node_modules-
+    - run:
+        name: yarn install
+        command: yarn install
+    - save_cache:
+        name: Save yarn install cache
+        key: v1-halo-node_modules-{{ checksum "yarn.lock" }}
+        paths:
+        - node_modules
+    - run:
+        name: build node module
+        no_output_timeout: 1h
+        command: yarn build:node
+        environment:
+          NODE_ENV: production
+    - run:
+        name: build ruby gem
+        no_output_timeout: 1h
+        command: yarn build:gem
+    - run:
+        name: Tests
+        command: yarn test
+    - store_artifacts:
+        path: log/test.log
+    - store_test_results:
+        path: test/reports
+
+  build:
+    parallelism: 1
+    resource_class: medium
+    working_directory: ~/halo
+    docker:
+      - image: circleci/node:8.14-browsers
+    steps:
+    - run:
+      name: git checkout
+      command: "                      mkdir -p ~/.ssh\n                      echo\
+        \ -e \"Host github.com\n\tStrictHostKeyChecking no\n\" >> ~/.ssh/config\n\
+        \                      if [ -z \"$CIRCLE_BRANCH\" ]; then\n            \
+        \            git clone git@github.com:venturehacks/$CIRCLE_PROJECT_REPONAME.git\
+        \ .\n                      else\n                        git clone git@github.com:venturehacks/$CIRCLE_PROJECT_REPONAME.git\
+        \ . \\\n                            --branch $CIRCLE_BRANCH --depth=100\n\
+        \                      fi\n                      git reset --hard $CIRCLE_SHA1\n"
+    - restore_cache:
+        name: Restore bundle install cache
+        keys:
+        - v1-halo-bundle-{{ checksum "Gemfile.lock" }}
+        - v1-halo-bundle-{{ checksum "halo.gemspec" }}
+        - v1-halo-bundle-
+    - run:
+        name: bundle install
+        command: bundle check > /dev/null || bundle install -j "$(nproc)" --path vendor/bundle
+        no_output_timeout: 1h
+    - restore_cache:
+        name: Restore yarn install cache
+        keys:
+        - v1-halo-node_modules-{{ checksum "yarn.lock" }}
+        - v1-halo-node_modules-
+    - run:
+        name: yarn install
+        command: yarn install
+
+
+workflows:
+  version: 2
+  build-and-test:
+    jobs:
+    - test:
+        context: org-global
+
+# notify:
+#   webhooks:
+#   - url: https://angellist-deploy-bot.herokuapp.com/webhook/a3fde4eae0ab6cb52fcc02f5dcabf791
