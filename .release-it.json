@@ -12,6 +12,8 @@
     "private": true
   },
   "scripts": {
+    "beforeStart": "npm test",
+    "afterBump": "npm run build",
     "afterRelease": "echo Successfully released ${name} v${version} to ${repo.repository}."
   }
 }
