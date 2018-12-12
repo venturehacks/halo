@@ -5,7 +5,12 @@ jobs:
     resource_class: medium
     working_directory: ~/halo
     docker:
-    - image: circleci/node:8.14-browsers
+    - image: angellistdev/alist_build_deps:0.30
+      auth:
+        username: circleci0angellist
+        password: $DOCKERHUB_PASSWORD
+      environment:
+        RAILS_ENV: test
     steps:
     - run:
         name: git checkout
