@@ -1,0 +1,17 @@
+{
+  "src": {
+    "tagName": "v${version}"
+  },
+  "github": {
+    "release": true,
+    "tokenRef": "RELEASE_IT_GITHUB_TOKEN",
+    "commitArgs": "-S"
+  },
+  "npm": {
+    "publish": false,
+    "private": true
+  },
+  "scripts": {
+    "afterRelease": "echo Successfully released ${name} v${version} to ${repo.repository}."
+  }
+}

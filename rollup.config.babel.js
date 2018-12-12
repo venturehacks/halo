@@ -5,6 +5,7 @@ import replace from 'rollup-plugin-replace';
 import postcss from 'rollup-plugin-postcss'
 import typescript from 'rollup-plugin-typescript';
 import packageJson from 'rollup-plugin-generate-package-json';
+import builtins from 'rollup-plugin-node-builtins';
 import pkg from './package.json';
 
 const libraryName = 'halo',
@@ -38,7 +39,7 @@ export default {
   }],
 
   plugins: [
-
+    builtins(),
     postcss({
       modules: true,
       extensions: ['.css', '.sass', '.scss'],
