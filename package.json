@@ -1,15 +1,16 @@
 {
   "name": "halo",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Next-generation design system for Talent and beyond.",
   "author": "Drew Lustro <drew@angel.com>",
   "license": "UNLICENSED",
   "private": true,
   "main": "dist/halo.js",
   "module": "dist/halo.module.js",
+  "style": "lib/core/_halo.scss",
   "types": "dist/typings/index.d.ts",
   "scripts": {
-    "build": "yarn build:clean; rollup -c rollup.config.babel.js",
+    "build": "yarn build:clean; tsc; rollup -c rollup.config.babel.js;",
     "build:clean": "rm -rf ./dist/*",
     "postversion": "git push && git push --tags",
     "prepare": "npm run build",
