@@ -5,17 +5,17 @@ jobs:
     resource_class: medium
     working_directory: ~/halo
     docker:
-      - image: circleci/node:8.14-browsers
+    - image: circleci/node:8.14-browsers
     steps:
     - run:
-      name: git checkout
-      command: "                      mkdir -p ~/.ssh\n                      echo\
-        \ -e \"Host github.com\n\tStrictHostKeyChecking no\n\" >> ~/.ssh/config\n\
-        \                      if [ -z \"$CIRCLE_BRANCH\" ]; then\n            \
-        \            git clone git@github.com:venturehacks/$CIRCLE_PROJECT_REPONAME.git\
-        \ .\n                      else\n                        git clone git@github.com:venturehacks/$CIRCLE_PROJECT_REPONAME.git\
-        \ . \\\n                            --branch $CIRCLE_BRANCH --depth=100\n\
-        \                      fi\n                      git reset --hard $CIRCLE_SHA1\n"
+        name: git checkout
+        command: "                      mkdir -p ~/.ssh\n                      echo\
+          \ -e \"Host github.com\n\tStrictHostKeyChecking no\n\" >> ~/.ssh/config\n\
+          \                      if [ -z \"$CIRCLE_BRANCH\" ]; then\n            \
+          \            git clone git@github.com:venturehacks/$CIRCLE_PROJECT_REPONAME.git\
+          \ .\n                      else\n                        git clone git@github.com:venturehacks/$CIRCLE_PROJECT_REPONAME.git\
+          \ . \\\n                            --branch $CIRCLE_BRANCH --depth=100\n\
+          \                      fi\n                      git reset --hard $CIRCLE_SHA1\n"
     - restore_cache:
         name: Restore bundle install cache
         keys:
@@ -70,14 +70,14 @@ jobs:
       - image: circleci/node:8.14-browsers
     steps:
     - run:
-      name: git checkout
-      command: "                      mkdir -p ~/.ssh\n                      echo\
-        \ -e \"Host github.com\n\tStrictHostKeyChecking no\n\" >> ~/.ssh/config\n\
-        \                      if [ -z \"$CIRCLE_BRANCH\" ]; then\n            \
-        \            git clone git@github.com:venturehacks/$CIRCLE_PROJECT_REPONAME.git\
-        \ .\n                      else\n                        git clone git@github.com:venturehacks/$CIRCLE_PROJECT_REPONAME.git\
-        \ . \\\n                            --branch $CIRCLE_BRANCH --depth=100\n\
-        \                      fi\n                      git reset --hard $CIRCLE_SHA1\n"
+        name: git checkout
+        command: "                      mkdir -p ~/.ssh\n                      echo\
+          \ -e \"Host github.com\n\tStrictHostKeyChecking no\n\" >> ~/.ssh/config\n\
+          \                      if [ -z \"$CIRCLE_BRANCH\" ]; then\n            \
+          \            git clone git@github.com:venturehacks/$CIRCLE_PROJECT_REPONAME.git\
+          \ .\n                      else\n                        git clone git@github.com:venturehacks/$CIRCLE_PROJECT_REPONAME.git\
+          \ . \\\n                            --branch $CIRCLE_BRANCH --depth=100\n\
+          \                      fi\n                      git reset --hard $CIRCLE_SHA1\n"
     - restore_cache:
         name: Restore bundle install cache
         keys:
