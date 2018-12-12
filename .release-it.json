@@ -1,4 +1,10 @@
 {
+  "scripts": {
+    "beforeStart": "yarn test",
+    "beforeStage": "yarn build",
+    "changelog": "git log --pretty=format:\"* %s (%h)\" [REV_RANGE]",
+    "afterRelease": "echo Successfully released ${name} v${version} to ${repo.repository}."
+  },
   "src": {
     "tagName": "v${version}"
   },
@@ -10,10 +16,5 @@
   "npm": {
     "publish": false,
     "private": true
-  },
-  "scripts": {
-    "beforeStart": "yarn test",
-    "afterBump": "yarn build",
-    "afterRelease": "echo Successfully released ${name} v${version} to ${repo.repository}."
   }
 }
