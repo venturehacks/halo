@@ -41,8 +41,8 @@ jobs:
         - v1-halo-node_modules-{{ checksum "yarn.lock" }}
         - v1-halo-node_modules-
     - run:
-        name: yarn install
-        command: yarn install
+        name: yarn install (skip implicit build in "prepare")
+        command: yarn install --ignore-scripts
     - save_cache:
         name: Save yarn install cache
         key: v1-halo-node_modules-{{ checksum "yarn.lock" }}
