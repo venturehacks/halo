@@ -12,8 +12,8 @@
     "private": true
   },
   "scripts": {
-    "beforeStart": "npm test",
-    "afterBump": "npm run build",
+    "beforeStart": "yarn test",
+    "afterBump": "yarn build",
     "afterRelease": "echo Successfully released ${name} v${version} to ${repo.repository}."
   }
 }
