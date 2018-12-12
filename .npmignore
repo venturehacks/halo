@@ -15,7 +15,6 @@ halo.gemspec
 features/
 Gemfile
 Gemfile.lock
-lib/
 pkg/
 Rakefile
 spec/
