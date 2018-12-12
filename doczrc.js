@@ -14,5 +14,15 @@ export default {
   ],
   themeConfig: {
     primary: '#01BAEF'
+  },
+  /*
+  modifyBundlerConfig: (config) => {
+    config.module.rules.push({
+      test: /\.scss$/,
+      use: ["style-loader", 'typings-for-css-modules-loader?modules&sass']
+    })
+
+    return config
   }
+  */
 }

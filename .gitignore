@@ -10,6 +10,7 @@ dist/index.js
 dist
 .cache
 stats.html
+.vscode
 
 *gem
 *swp
