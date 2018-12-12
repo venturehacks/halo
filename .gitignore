@@ -11,6 +11,28 @@ dist
 .cache
 stats.html
 
+*gem
+*swp
+.sass-cache
+Gemfile.lock
+/test.rb
+
+############################################################
+# via bundler gem
+############################################################
+
+.bundle/
+.yardoc
+_yardoc/
+coverage/
+doc/
+pkg/
+spec/reports/
+tmp/
+
+# rspec failure tracking
+.rspec_status
+
 ############################################################
 # .gitignore for node
 ############################################################

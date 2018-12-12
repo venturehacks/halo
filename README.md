@@ -6,6 +6,8 @@ In 1987, Jordan Belfort (Leonardo DiCaprio) takes an entry-level job at a Wall S
 
 ### Installing
 
+#### Node Package
+
 ```bash
 # install
 yarn
@@ -20,18 +22,19 @@ npm test
 npm run serve
 ```
 
+#### Gem
 
-### Package save
+Add this line to your application's Gemfile:
 
-```json
-{
-  "babel-jest": "^23.6.0",
-  "babel-plugin-transform-class-properties": "^6.24.1",
-  "babel-plugin-transform-react-jsx-source": "^6.22.0",
-  "babel-preset-env": "^1.7.0",
-  "babel-preset-react": "^6.24.1",
-  "webpack": "^4.26.0",
-  "webpack-cli": "^3.1.2"
-}
+```ruby
+gem 'halo'
 ```
-    
+
+And then execute:
+
+    $ bundle
+
+Or install it yourself as:
+
+    $ gem install halo
+
