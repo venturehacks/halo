@@ -19,7 +19,6 @@ jobs:
     - restore_cache:
         name: Restore bundle install cache
         keys:
-        - v1-halo-bundle-{{ checksum "Gemfile.lock" }}
         - v1-halo-bundle-{{ checksum "halo.gemspec" }}
         - v1-halo-bundle-
     - run:
@@ -28,7 +27,7 @@ jobs:
         no_output_timeout: 1h
     - save_cache:
         name: Save bundle install cache
-        key: v1-halo-bundle-{{ checksum "Gemfile.lock" }}
+        key: v1-halo-bundle-{{ checksum "halo.gemspec" }}
         paths:
         - vendor/bundle
     - restore_cache:
@@ -81,7 +80,6 @@ jobs:
     - restore_cache:
         name: Restore bundle install cache
         keys:
-        - v1-halo-bundle-{{ checksum "Gemfile.lock" }}
         - v1-halo-bundle-{{ checksum "halo.gemspec" }}
         - v1-halo-bundle-
     - run:
