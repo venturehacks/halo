@@ -22,8 +22,8 @@ Gem::Specification.new do |s|
     end
   end
 
-  s.test_files = `git ls-files -- {test,spec,features}/*`.split('\n')
-  s.executables = `git ls-files -- bin/*`.split('\n').map { |f| File.basename(f) }
+  s.test_files = `git ls-files -- {test,spec,features}/*`.split("\n")
+  s.executables = `git ls-files -- bin/*`.split("\n").map { |f| File.basename(f) }
   s.require_paths = ['lib']
 
   s.add_development_dependency 'aruba', '~> 0.14'
