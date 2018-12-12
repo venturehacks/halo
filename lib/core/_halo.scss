@@ -1,0 +1,14 @@
+@charset "UTF-8";
+
+// Halo Design System
+
+@mixin halo-test {
+  color: aquamarine;
+  font-size: 60px;
+  margin: 2em;
+  outline: 1px solid red;
+  padding: 3em;
+  text-align: center;
+  text-decoration: underline;
+  -webkit-font-smoothing: antialiased;
+}
