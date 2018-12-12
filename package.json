@@ -2,7 +2,7 @@
   "name": "halo",
   "version": "0.2.1",
   "description": "Next-generation design system for Talent and beyond.",
-  "author": "Drew Lustro <drew@angel.com>",
+  "author": "Drew Lustro <drew@angel.co>",
   "license": "UNLICENSED",
   "private": true,
   "main": "dist/halo.js",
