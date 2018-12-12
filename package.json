@@ -12,12 +12,9 @@
   "scripts": {
     "build": "yarn clean && tsc && rollup -c rollup.config.babel.js",
     "clean": "rm -rf ./dist/*",
-    "postversion": "git push && git push --tags",
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
-    "preversion": "npm run lint",
     "test": "jest --config jestconfig.json",
-    "version": "npm run format && git add -A src",
     "webpack": "webpack",
     "dev": "docz dev",
     "docz:build": "docz build"
