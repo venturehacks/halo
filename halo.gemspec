@@ -12,7 +12,7 @@ Gem::Specification.new do |s|
   s.summary     = 'The Halō Design System'
   s.description = 'Next-generation design system for Talent and beyond.'
   s.homepage    = 'https://github.com/venturehacks/halo'
-  s.license     = 'All Rights Reserved'
+  s.license     = 'UNLICENSED'
   s.platform    = Gem::Platform::RUBY
 
   s.files       = Dir.chdir(File.expand_path(__dir__)) do
@@ -33,6 +33,7 @@ Gem::Specification.new do |s|
   s.add_development_dependency 'rake', '~> 12.3'
   s.add_development_dependency 'rspec', '~> 3.4'
   s.add_development_dependency 'scss_lint', '0.57'
+  s.add_development_dependency 'json', '2.1'
   s.add_runtime_dependency 'sass', '~> 3.4'
   # s.add_runtime_dependency 'thor', '~> 0.20'
 end
