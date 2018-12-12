@@ -1,4 +1,5 @@
 {
+  "buildCommand": "yarn build",
   "scripts": {
     "beforeStart": "yarn test",
     "beforeStage": "yarn build",
@@ -6,7 +7,9 @@
     "afterRelease": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },
   "src": {
-    "tagName": "v${version}"
+    "tagName": "v${version}",
+    "beforeStartCommand": "yarn test",
+    "afterReleaseCommand": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },
   "github": {
     "release": true,
