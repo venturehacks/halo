@@ -15,9 +15,15 @@
     "prepare": "npm run build",
     "prepublishOnly": "npm test && npm run lint",
     "test": "jest --config jestconfig.json",
-    "webpack": "webpack",
     "dev": "docz dev",
-    "docz:build": "docz build"
+    "docz:dev": "docz dev",
+    "docs:dev": "npm run docz:dev",
+    "docz:build": "docz build",
+    "docs:build": "npm run docz:build",
+    "release": "release-it",
+    "release-patch": "release-it patch",
+    "release-minor": "release-it minor",
+    "release-major": "release-it major"
   },
   "repository": {
     "type": "git",
@@ -51,6 +57,7 @@
     "react": "^16.6.3",
     "react-dom": "^16.6.3",
     "react-test-renderer": "^16.6.3",
+    "release-it": "^8.4.2",
     "rollup": "^0.67.4",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-generate-package-json": "^2.1.1",
