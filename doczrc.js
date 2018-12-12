@@ -15,6 +15,7 @@ export default {
   themeConfig: {
     primary: '#01BAEF'
   },
+
   /*
   modifyBundlerConfig: (config) => {
     config.module.rules.push({
