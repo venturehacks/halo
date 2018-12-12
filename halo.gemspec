@@ -27,13 +27,13 @@ Gem::Specification.new do |s|
   s.require_paths = ['lib']
 
   s.add_development_dependency 'aruba', '~> 0.14'
-  s.add_development_dependency 'bundler', '~> 1.17'
+  s.add_development_dependency 'bundler', '~> 1.16'
   s.add_development_dependency 'css_parser', '~> 1.6'
   s.add_development_dependency 'cucumber', '~> 3.1'
+  s.add_development_dependency 'json', '2.1'
   s.add_development_dependency 'rake', '~> 12.3'
   s.add_development_dependency 'rspec', '~> 3.4'
   s.add_development_dependency 'scss_lint', '0.57'
-  s.add_development_dependency 'json', '2.1'
   s.add_runtime_dependency 'sass', '~> 3.4'
   # s.add_runtime_dependency 'thor', '~> 0.20'
 end
