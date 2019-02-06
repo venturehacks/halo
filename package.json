@@ -10,7 +10,7 @@
   "style": "lib/core/_halo.scss",
   "types": "dist/typings/index.d.ts",
   "scripts": {
-    "build": "yarn build:node && yarn build:gem",
+    "build": "yarn build:node",
     "build:node": "yarn clean && tsc && rollup -c rollup.config.babel.js",
     "build:gem": "bin/generate_version && gem build halo.gemspec",
     "clean": "rm -rf ./dist/*",
