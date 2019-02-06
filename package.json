@@ -12,7 +12,7 @@
   "scripts": {
     "build": "yarn build:node",
     "build:node": "yarn clean && tsc && rollup -c rollup.config.babel.js",
-    "build:gem": "bin/generate_version && gem build halo.gemspec",
+    "gem": "bin/generate_version && gem build halo.gemspec",
     "clean": "rm -rf ./dist/*",
     "prepare": "yarn build",
     "prepublishOnly": "yarn test && yarn lint",
