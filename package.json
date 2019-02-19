@@ -11,7 +11,8 @@
   "types": "dist/typings/index.d.ts",
   "scripts": {
     "build": "yarn build:node",
-    "build:node": "yarn clean && tsc && rollup -c rollup.config.babel.js",
+    "build:node": "tsc && rollup -c rollup.config.babel.js",
+    "watch": "chokidar \"src/**/*.{ts,tsx,scss}\" --command \"yarn build\"",
     "gem": "bin/generate_version && gem build halo.gemspec",
     "clean": "rm -rf ./dist/*",
     "prepare": "yarn build",
@@ -46,6 +47,7 @@
     "@types/react": "^16.7.6",
     "@types/react-dom": "^16.0.9",
     "babel-plugin-emotion": "^10.0.4",
+    "chokidar-cli": "^1.2.2",
     "classnames": "^2.2.6",
     "cross-env": "^5.2.0",
     "docz": "latest",
