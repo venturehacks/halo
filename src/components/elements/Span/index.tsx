@@ -1,10 +1,9 @@
 import classNames from 'classnames';
 import * as React from 'react';
-import { SFC } from 'react';
 
 import * as styles from './styles.scss';
 
-export interface SpanProps {
+interface SpanProps {
   antialiased?: any;
   block?: any;
   bold?: any;
@@ -93,5 +92,4 @@ class Span extends React.Component<SpanProps> {
   }
 }
 
-export { Span };
-export default Span;
+export { Span, SpanProps };

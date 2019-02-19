@@ -1,3 +1,71 @@
 .component {
-  background-color: orange;
+  color: #050C26; // $halo-heading
+  font-weight: 500;
+  line-height: 1;
+  margin: 0;
+
+  &.flow {
+    margin-bottom: 0.75em;
+  }
+
+  // MARKETING
+
+  &.presetHugeHeadline {
+    font-size: 54px;
+    font-weight: 600;
+  }
+
+  &.presetLargeHeadline {
+    font-size: 48px;
+    font-weight: 600;
+  }
+
+  &.presetMediumHeadline {
+    font-size: 36px;
+    font-weight: 500;
+  }
+
+  &.presetSmallHeadline {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  &.presetMicroHeadline {
+    font-size: 16px;
+    line-height: 1.6;
+  }
+
+  &.presetLargeSubhead {
+    font-size: 24px;
+    line-height: 1.5;
+    color: #627899; // # $halo-header--subhead
+  }
+
+  &.presetSmallSubhead {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #627899; // # $halo-header--subhead
+  }
+
+  // INTERFACE
+
+  &.presetPage {
+    font-size: 20px;
+  }
+
+  &.presetPanel {
+    font-size: 18px;
+    color: #162040;
+  }
+
+  &.presetSection {
+    font-size: 16px;
+    color: #162040;
+  }
+
+  &.presetMicro {
+    font-size: 14px;
+    color: #162040;
+    line-height: 1.145;
+  }
 }

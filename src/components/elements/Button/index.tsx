@@ -1,10 +1,9 @@
 import classNames from 'classnames';
 import * as React from 'react';
-import { SFC } from 'react';
 
 import * as styles from './styles.scss';
 
-export interface ButtonProps {
+interface ButtonProps {
   variant: 'primary' | 'secondary' | 'alternate';
   size: 'regular' | 'small' | 'inline';
   /** apply native disabled property */
@@ -68,5 +67,4 @@ class Button extends React.PureComponent<ButtonProps> {
   }
 }
 
-export { Button };
-export default Button;
+export { Button, ButtonProps };

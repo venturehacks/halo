@@ -3,14 +3,14 @@ import * as React from 'react';
 
 import * as styles from './styles.scss';
 
-export interface Props {
-  preset: 'normal' | 'support' | 'micro' | 'error';
-  flow: boolean;
+interface ParagraphProps {
+  preset?: 'normal' | 'support' | 'micro' | 'error';
+  flow?: boolean;
   children: React.ReactNode;
   className?: string;
 }
 
-export default function Paragraph({ flow = false, preset = 'normal', children, className }: Props) {
+function Paragraph({ flow = false, preset = 'normal', children, className }: ParagraphProps) {
   const classes = classNames(
     styles.component,
     preset === 'support' && styles.presetSupport,
@@ -26,3 +26,5 @@ export default function Paragraph({ flow = false, preset = 'normal', children, c
     </p>
   );
 }
+
+export { Paragraph, ParagraphProps };
