@@ -1,21 +1,71 @@
 {
-  "extends": ["tslint:latest", "tslint-config-prettier"],
+  "defaultSeverity": "error",
+  "extends": [
+    "tslint:latest",
+    "tslint-react",
+    "tslint-config-prettier"
+  ],
+  "linterOptions": {
+    "exclude": [
+      "node_modules/**/*",
+      "*.config.*"
+    ]
+  },
+  "jsRules": {},
   "rules": {
-    "class-name": false,
-    "curly": false,
-    "interface-name": [true, "never-prefix"],
-    "ordered-imports": false,
+    "interface-name": [
+      true,
+      "never-prefix"
+    ],
+    "no-implicit-dependencies": [
+      true,
+      "dev",
+      [
+        "~"
+      ]
+    ],
+    "no-submodule-imports": [
+      true,
+      "~"
+    ],
+    "import/no-extraneous-dependencies": [
+      "error",
+      {
+        "devDependencies": ["**/__test__/**/*", "*.config.*"]
+      }
+    ],
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore",
+      "allow-pascal-case"
+    ],
     "object-literal-sort-keys": false,
-    "no-console": false,
-    "no-unused-expression": [true, "allow-fast-null-checks"],
-    "no-implicit-dependencies": [true, "dev"],
-    "no-duplicate-imports": false,
-    "no-submodule-imports": false,
-    "no-shadowed-variable": false,
-    "max-classes-per-file": false,
-    "no-var-keyword": false,
-    "no-parameter-reassignment": false,
-    "no-object-literal-type-assertion": false,
-    "typedef": [true, "call-signature"]
-  }
+    "jsx-no-lambda": false,
+    "jsx-boolean-value": false,
+    "jsx-no-multiline-js": false,
+    "max-line-length": false,
+    "ordered-imports": [
+      true,
+      {
+        "import-sources-order": "lowercase-last",
+        "grouped-imports": true,
+        "named-imports-order": "lowercase-last",
+        "module-source-path": "full"
+      }
+    ],
+    "curly": true,
+    "quotemark": [
+      true,
+      "single",
+      "avoid-escape",
+      "jsx-double"
+    ],
+    "member-access": [
+      true,
+      "no-public"
+    ]
+  },
+  "rulesDirectory": []
 }

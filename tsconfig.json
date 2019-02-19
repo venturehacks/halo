@@ -32,8 +32,19 @@
     "traceResolution": false /* Report module resolution log messages. */,
     "listEmittedFiles": false /* Print names of generated files part of the compilation. */,
     "listFiles": false /* Print names of files part of the compilation. */,
-    "pretty": true /* Stylize errors and messages using color and context. */
+    "pretty": true, /* Stylize errors and messages using color and context. */
+    "plugins": [
+      {
+        "name": "typescript-tslint-plugin",
+        "configFile": "./tslint.json",
+        "exclude": [
+          "node_modules/**/*",
+          ".next/**/*",
+          "schema*"
+        ]
+      }
+    ]
   },
   "include": ["src/**/*"],
-  "exclude": ["node_modules/**", "**/__tests__/*"]
+  "exclude": ["node_modules/**", "**/__tests__/*"],
 }
