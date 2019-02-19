@@ -1,29 +1,31 @@
-import * as React from 'react'
-import { SFC } from 'react'
-import * as styles from './styles.scss'
-import classNames from 'classnames'
+import classNames from 'classnames';
+import * as React from 'react';
+import { SFC } from 'react';
+
+import * as styles from './styles.scss';
 
 export interface ButtonProps {
-  variant: 'primary' | 'secondary' | 'alternate'
-  size: 'regular'|'small'|'inline'
+  variant: 'primary' | 'secondary' | 'alternate';
+  size: 'regular' | 'small' | 'inline';
   /** apply native disabled property */
-  disabled: boolean
-  children?: React.ReactNode
-  className?: string
+  disabled: boolean;
+  children?: React.ReactNode;
+  className?: string;
   /** provide hyperlink by styling <a> like button */
-  href?: string
-  onClick?:
-  (e: React.MouseEvent<HTMLButtonElement|HTMLAnchorElement>) => void
+  href?: string;
+  onClick?: (
+    e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
+  ) => void;
 }
 
 class Button extends React.PureComponent<ButtonProps> {
-  public static defaultProps = {
+  static defaultProps = {
     variant: 'primary',
     size: 'regular',
     disabled: false,
   };
 
-  public render(): React.ReactNode {
+  render(): React.ReactNode {
     const {
       children,
       className,
@@ -58,19 +60,13 @@ class Button extends React.PureComponent<ButtonProps> {
       );
     } else {
       return (
-        <button
-          className={buttonClassNames}
-          onClick={onClick}
-          {...other}
-        >
+        <button className={buttonClassNames} onClick={onClick} {...other}>
           {children}
         </button>
       );
     }
   }
-};
+}
 
 export { Button };
 export default Button;
-
-

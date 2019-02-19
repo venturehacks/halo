@@ -1,7 +1,7 @@
-import * as React from 'react'
-import { SFC } from 'react'
-import * as styles from './styles.scss'
-import classNames from 'classnames'
+import classNames from 'classnames';
+import * as React from 'react';
+
+import * as styles from './styles.scss';
 
 export interface AvatarProps {
   children?: React.ReactNode;
@@ -9,15 +9,12 @@ export interface AvatarProps {
 }
 
 class Avatar extends React.PureComponent<AvatarProps> {
-  public static defaultProps = {
-  };
+  static defaultProps = {};
 
-  public render(): React.ReactNode {
+  render(): React.ReactNode {
     return '<Avatar />';
   }
-};
+}
 
 export { Avatar };
 export default Avatar;
-
-

@@ -1,89 +1,86 @@
-:local {
-  .docz {
-    padding: 20px;
-    width: 100px;
-    display: inline-block;
-  }
+.docz {
+  padding: 20px;
+  width: 100px;
+  display: inline-block;
+}
 
-  .block {
-    display: block;
-  }
+.block {
+  display: block;
+}
 
-  .xxsmall {
-    font-size: 0.65em;
-  }
+.xxsmall {
+  font-size: 0.65em;
+}
 
-  .xsmall {
-    font-size: 0.775em;
-  }
+.xsmall {
+  font-size: 0.775em;
+}
 
-  .small {
-    font-size: 0.9em;
-  }
+.small {
+  font-size: 0.9em;
+}
 
-  .medium {
-    font-size: 1em;
-  }
+.medium {
+  font-size: 1em;
+}
 
-  .large {
-    font-size: 1.2em;
-  }
+.large {
+  font-size: 1.2em;
+}
 
-  .xlarge {
-    font-size: 1.3em;
-  }
+.xlarge {
+  font-size: 1.3em;
+}
 
-  .xxlarge {
-    font-size: 1.5em;
-  }
+.xxlarge {
+  font-size: 1.5em;
+}
 
-  .light {
-    color: #999999;
-  }
+.light {
+  color: #999;
+}
 
-  .muted {
-    opacity: 0.8;
-  }
+.muted {
+  opacity: 0.8;
+}
 
-  .xmuted {
-    opacity: 0.5;
-  }
+.xmuted {
+  opacity: 0.5;
+}
 
-  .xxmuted {
-    opacity: 0.25;
-  }
+.xxmuted {
+  opacity: 0.25;
+}
 
-  .italic {
-    font-style: italic;
-  }
+.italic {
+  font-style: italic;
+}
 
-  .semibold {
-    font-weight: 500;
-  }
+.semibold {
+  font-weight: 500;
+}
 
-  .bold {
-    font-weight: 600;
-  }
+.bold {
+  font-weight: 600;
+}
 
-  .uppercase {
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
+.uppercase {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
 
-  .monospace {
-    font-family: monospace;
-  }
+.monospace {
+  font-family: monospace;
+}
 
-  .error {
-    color: red;
-  }
+.error {
+  color: red;
+}
 
-  .success {
-    color: green;
-  }
+.success {
+  color: green;
+}
 
-  .antialiased {
-    font-smoothing: grayscale;
-    -webkit-font-smoothing: antialiased;
-  }
+.antialiased {
+  -webkit-font-smoothing: antialiased;
 }

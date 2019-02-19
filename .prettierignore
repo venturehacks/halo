@@ -1,0 +1,6 @@
+.cache
+.circleci
+.docz
+dist
+node_modules
+*.js

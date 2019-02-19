@@ -1,23 +1,21 @@
-import * as React from 'react'
-import { SFC } from 'react'
-import * as styles from './styles.scss'
-import classNames from 'classnames'
+import classNames from 'classnames';
+import * as React from 'react';
+import { SFC } from 'react';
+
+import * as styles from './styles.scss';
 
 export interface IconProps {
-  children?: React.ReactNode
-  className?: string
+  children?: React.ReactNode;
+  className?: string;
 }
 
 class Icon extends React.PureComponent<IconProps> {
-  public static defaultProps = {
-  };
+  static defaultProps = {};
 
-  public render(): React.ReactNode {
+  render(): React.ReactNode {
     return '<Icon />';
   }
-};
+}
 
 export { Icon };
 export default Icon;
-
-

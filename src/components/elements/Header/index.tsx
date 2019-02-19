@@ -1,23 +1,21 @@
-import * as React from 'react'
-import { SFC } from 'react'
-import * as styles from './styles.scss'
-import classNames from 'classnames'
+import classNames from 'classnames';
+import * as React from 'react';
+import { SFC } from 'react';
+
+import * as styles from './styles.scss';
 
 export interface HeaderProps {
-  children?: React.ReactNode
-  className?: string
+  children?: React.ReactNode;
+  className?: string;
 }
 
 class Header extends React.PureComponent<HeaderProps> {
-  public static defaultProps = {
-  };
+  static defaultProps = {};
 
-  public render(): React.ReactNode {
+  render(): React.ReactNode {
     return '<Header />';
   }
-};
+}
 
 export { Header };
 export default Header;
-
-

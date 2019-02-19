@@ -1,32 +1,40 @@
-import classNames from 'classnames'
-import * as React from 'react'
-import { SFC } from 'react'
-import * as styles from './styles.scss'
+import classNames from 'classnames';
+import * as React from 'react';
+import { SFC } from 'react';
+
+import * as styles from './styles.scss';
 
 export interface SpanProps {
-  antialiased?: any
-  block?: any
-  bold?: any
-  children?: React.ReactNode
-  className?: string
-  docz?: any
-  error?: any
-  italic?: any
-  light?: any
-  monospace?: any
-  muted?: any
-  semibold?: any
-  semistrong?: any
-  size?: 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large' | 'xlarge' | 'xxlarge'
-  strong?: any
-  success?: any
-  uppercase?: any
-  xmuted?: any
-  xxmuted?: any
+  antialiased?: any;
+  block?: any;
+  bold?: any;
+  children?: React.ReactNode;
+  className?: string;
+  docz?: any;
+  error?: any;
+  italic?: any;
+  light?: any;
+  monospace?: any;
+  muted?: any;
+  semibold?: any;
+  semistrong?: any;
+  size?:
+    | 'xxsmall'
+    | 'xsmall'
+    | 'small'
+    | 'medium'
+    | 'large'
+    | 'xlarge'
+    | 'xxlarge';
+  strong?: any;
+  success?: any;
+  uppercase?: any;
+  xmuted?: any;
+  xxmuted?: any;
 }
 
 class Span extends React.Component<SpanProps> {
-  public render(): React.ReactNode {
+  render(): React.ReactNode {
     const {
       antialiased,
       block,
@@ -83,7 +91,7 @@ class Span extends React.Component<SpanProps> {
       </span>
     );
   }
-};
+}
 
 export { Span };
 export default Span;

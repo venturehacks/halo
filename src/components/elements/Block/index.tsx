@@ -1,22 +1,20 @@
-import * as React from 'react'
-import * as styles from './styles.scss'
-import classNames from 'classnames'
+import classNames from 'classnames';
+import * as React from 'react';
+
+import * as styles from './styles.scss';
 
 export interface BlockProps {
-  children?: React.ReactNode
-  className?: string
+  children?: React.ReactNode;
+  className?: string;
 }
 
 class Block extends React.PureComponent<BlockProps> {
-  public static defaultProps = {
-  };
+  static defaultProps = {};
 
-  public render(): React.ReactNode {
+  render(): React.ReactNode {
     return '<Block />';
   }
-};
+}
 
 export { Block };
 export default Block;
-
-

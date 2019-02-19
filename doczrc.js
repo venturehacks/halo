@@ -1,4 +1,4 @@
-import { css } from 'docz-plugin-css'
+import { css } from 'docz-plugin-css';
 
 export default {
   title: 'Halo Design System',
@@ -9,11 +9,11 @@ export default {
       cssmodules: true,
       loaderOpts: {
         /* whatever your preprocessor loader accept */
-      }
-    })
+      },
+    }),
   ],
   themeConfig: {
-    primary: '#01BAEF'
+    primary: '#01BAEF',
   },
 
   /*
@@ -26,4 +26,4 @@ export default {
     return config
   }
   */
-}
+};
