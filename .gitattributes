@@ -1,0 +1,4 @@
+# Don't render generated files by default
+# https://thoughtbot.com/blog/github-diff-supression
+
+**/styles.scss.d.ts linguist-generated
