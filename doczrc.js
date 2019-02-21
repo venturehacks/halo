@@ -1,4 +1,5 @@
 import { css } from 'docz-plugin-css';
+import path from 'path';
 
 export default {
   title: 'Halo Design System',
@@ -8,22 +9,13 @@ export default {
       preprocessor: 'sass',
       cssmodules: true,
       loaderOpts: {
-        /* whatever your preprocessor loader accept */
+        includePaths: [
+          path.resolve(__dirname, 'src', 'scss')
+        ]
       },
     }),
   ],
   themeConfig: {
     primary: '#01BAEF',
   },
-
-  /*
-  modifyBundlerConfig: (config) => {
-    config.module.rules.push({
-      test: /\.scss$/,
-      use: ["style-loader", 'typings-for-css-modules-loader?modules&sass']
-    })
-
-    return config
-  }
-  */
 };
