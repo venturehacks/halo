@@ -4,11 +4,12 @@ import * as React from 'react';
 import * as styles from './styles.scss';
 
 interface ButtonProps {
-  variant: 'primary' | 'secondary' | 'alternate';
+  variant: 'primary' | 'secondary' | 'alternate' | 'gray';
   size: 'regular' | 'small' | 'inline';
   /** apply native disabled property */
   disabled: boolean;
   children?: React.ReactNode;
+  icon?: React.ReactNode;
   className?: string;
   /** provide hyperlink by styling <a> like button */
   href?: string;
@@ -31,6 +32,7 @@ class Button extends React.PureComponent<ButtonProps> {
       href,
       size,
       onClick,
+      icon,
       variant,
       ...other
     } = this.props;
@@ -40,9 +42,12 @@ class Button extends React.PureComponent<ButtonProps> {
       variant === 'primary' && styles.primary,
       variant === 'secondary' && styles.secondary,
       variant === 'alternate' && styles.alternate,
+      variant === 'gray' && styles.gray,
       size === 'regular' && styles.regular,
       size === 'small' && styles.small,
       size === 'inline' && styles.inline,
+      icon && styles.icon,
+      icon && !children && styles.iconOnly,
       className,
     ]);
 
@@ -54,13 +59,13 @@ class Button extends React.PureComponent<ButtonProps> {
           onClick={onClick}
           {...other}
         >
-          {children}
+          {icon} {children}
         </a>
       );
     } else {
       return (
         <button className={buttonClassNames} onClick={onClick} {...other}>
-          {children}
+          {icon} {children}
         </button>
       );
     }
