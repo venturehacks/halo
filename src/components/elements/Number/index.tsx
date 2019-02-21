@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import * as React from 'react';
-import { SFC } from 'react';
 
 import * as styles from './styles.scss';
 

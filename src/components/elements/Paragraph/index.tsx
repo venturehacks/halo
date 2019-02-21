@@ -10,7 +10,12 @@ interface ParagraphProps {
   className?: string;
 }
 
-function Paragraph({ flow = false, preset = 'normal', children, className }: ParagraphProps) {
+function Paragraph({
+  flow = false,
+  preset = 'normal',
+  children,
+  className,
+}: ParagraphProps) {
   const classes = classNames(
     styles.component,
     preset === 'support' && styles.presetSupport,
@@ -20,11 +25,7 @@ function Paragraph({ flow = false, preset = 'normal', children, className }: Par
     className,
   );
 
-  return (
-    <p className={classes}>
-      {children}
-    </p>
-  );
+  return <p className={classes}>{children}</p>;
 }
 
 export { Paragraph, ParagraphProps };

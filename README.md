@@ -73,7 +73,6 @@ Or install it yourself as:
 
     $ gem install halo
 
-
 ---
 
 ## Usage
@@ -89,4 +88,3 @@ Import to use Halo library variables, mixins, functions:
 .foo
   +halo-test
 ```
-

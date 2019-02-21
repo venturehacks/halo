@@ -9,14 +9,8 @@ interface PillTagProps {
 }
 
 function PillTag({ children, className }: PillTagProps) {
-  const classes = classNames(
-    styles.component,
-  )
-  return (
-    <span className={classes}>
-      {children}
-    </span>
-  );
+  const classes = classNames(styles.component);
+  return <span className={classes}>{children}</span>;
 }
 
 export { PillTag, PillTagProps };

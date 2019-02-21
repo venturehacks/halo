@@ -8,7 +8,19 @@ interface HeaderProps {
    * style-only preset
    * @default none
    */
-  preset?: 'none' | 'page' | 'panel' | 'section' | 'micro' | 'huge-headline' | 'large-headline' | 'medium-headline' | 'small-headline' | 'micro-headline' | 'large-subhead' | 'small-subhead'
+  preset?:
+    | 'none'
+    | 'page'
+    | 'panel'
+    | 'section'
+    | 'micro'
+    | 'huge-headline'
+    | 'large-headline'
+    | 'medium-headline'
+    | 'small-headline'
+    | 'micro-headline'
+    | 'large-subhead'
+    | 'small-subhead';
 
   /**
    * HTML tag override
@@ -18,7 +30,7 @@ interface HeaderProps {
 
   /**
    * include page flow margins
-   * @default false
+   * @default true
    */
   flow?: boolean;
 
@@ -55,10 +67,21 @@ interface HeaderProps {
   h6?: boolean;
 
   children: React.ReactNode;
-
 }
 
-function Header({ flow = true, preset = 'none', h1 = false, h2 = false, h3 = false, h4 = false, h5 = false, h6 = false, tag = 'h3', children, className }: HeaderProps) {
+function Header({
+  flow = true,
+  preset = 'none',
+  h1 = false,
+  h2 = false,
+  h3 = false,
+  h4 = false,
+  h5 = false,
+  h6 = false,
+  tag = 'h3',
+  children,
+  className,
+}: HeaderProps) {
   const classes = classNames(
     styles.component,
     // Marketing presets
@@ -78,12 +101,12 @@ function Header({ flow = true, preset = 'none', h1 = false, h2 = false, h3 = fal
     className,
   );
 
-  tag = h1 && 'h1' || tag;
-  tag = h2 && 'h2' || tag;
-  tag = h3 && 'h3' || tag;
-  tag = h4 && 'h4' || tag;
-  tag = h5 && 'h5' || tag;
-  tag = h6 && 'h6' || tag;
+  tag = (h1 && 'h1') || tag;
+  tag = (h2 && 'h2') || tag;
+  tag = (h3 && 'h3') || tag;
+  tag = (h4 && 'h4') || tag;
+  tag = (h5 && 'h5') || tag;
+  tag = (h6 && 'h6') || tag;
 
   const props = {
     className: classes,
