@@ -1,4 +1,4 @@
-# Halō
+# Halō :angel:
 
 ## Getting Started
 
