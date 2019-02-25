@@ -17,5 +17,10 @@ export default {
   ],
   themeConfig: {
     primary: '#01BAEF',
+    styles: {
+      body: {
+        fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
+      }
+    }
   },
 };
