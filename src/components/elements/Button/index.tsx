@@ -4,25 +4,27 @@ import * as React from 'react';
 import * as styles from './styles.scss';
 
 interface ButtonProps {
-  variant: 'primary' | 'secondary' | 'alternate' | 'gray';
-  size: 'regular' | 'small' | 'inline';
+  variant?: 'primary' | 'secondary' | 'alternate' | 'gray';
+  size?: 'regular' | 'small' | 'inline';
   /** apply native disabled property */
-  disabled: boolean;
+  disabled?: boolean;
   children?: React.ReactNode;
   icon?: React.ReactNode;
   className?: string;
   /** provide hyperlink by styling <a> like button */
   href?: string;
-  onClick?: (
-    e: React.MouseEvent<HTMLButtonElement | HTMLAnchorElement>,
-  ) => void;
+  type?: 'submit' | 'button' | 'clear';
+  onClick?: (e: React.ChangeEvent<any>) => void;
 }
 
-class Button extends React.PureComponent<ButtonProps> {
+class Button extends React.PureComponent<
+  ButtonProps & React.PropsWithoutRef<JSX.IntrinsicElements['button']>
+> {
   static defaultProps = {
     variant: 'primary',
     size: 'regular',
     disabled: false,
+    type: 'button',
   };
 
   render(): React.ReactNode {
@@ -53,12 +55,7 @@ class Button extends React.PureComponent<ButtonProps> {
 
     if (href) {
       return (
-        <a
-          className={buttonClassNames}
-          href={href}
-          onClick={onClick}
-          {...other}
-        >
+        <a className={buttonClassNames} href={href} onClick={onClick}>
           {icon} {children}
         </a>
       );
