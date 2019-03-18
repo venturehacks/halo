@@ -1,90 +1,104 @@
-# Halō :angel:
+# Halo :angel:
 
-## Getting Started
+Halo is our design system. It enables our small group of designers to design and ship faster by institutionalizing key decisions and providing an already established groundwork. 
 
-In 1987, Jordan Belfort (Leonardo DiCaprio) takes an entry-level job at a Wall Street brokerage firm. By the early 1990s, while still in his 20s, Belfort founds his own firm, Stratton Oakmont. Together with his trusted lieutenant (Jonah Hill) and a merry band of brokers, Belfort makes a huge fortune by defrauding wealthy investors out of millions. However, while Belfort and his cronies partake in a hedonistic brew of sex, drugs and thrills, the SEC and the FBI close in on his empire of excess.
+You can see Halo in action **today**.
 
-### Install
+Preview the new company profiles (WIP): [angel.co/~talent/angellist](https://angel.co/~talent/angellist)
 
-#### Node module
+&nbsp;
+
+## Quickstart
+
+### Explore Halo
+
+View living documentation and browse code.
 
 ```bash
-# install
+git clone git@github.com:venturehacks/halo.git
+cd halo
 yarn
-
-# run docz dev environment
-npm run dev
-
-# build docz website (not ready)
-npm run docz:build
-
-# build release module via rollup
-npm run build
-
-# run Jest/Rspec tests
-npm test
-
-# create git release
-npm run release # requires personal token RELEASE_IT_GITHUB_TOKEN
-
+yarn run dev
 ```
 
-#### Configure webpack
+### Use Halo in a Project
 
-Get the include paths for `sass-loader` in your webpack config:
+[Generate a Github personal access token](https://github.com/settings/tokens) so that your project can read this repository.
 
-```diff
-  // webpack.config.js
+Halo is built as a node module. In the future, Halo will be published as a private module so that we do not leak Github tokens.
 
-+ const haloIncludePath = require('halo').includePath;
+#### Install Halo
 
-  // ...
+```bash
+yarn add ssh://git@github.com:venturehacks/halo.git
+```
 
-  {
-    loader: "fast-sass-loader",
-    options: {
-      sassOptions: {
-        sourceComments: true,
-        includePaths: [
-          path.resolve(appDir, "stylesheets"),
-          path.resolve(rootDir, "node_modules"),
-+         haloIncludePath,
-        ]
-      }
-    }
+#### Add access token
+
+Include your GitHub token so CircleCI can build the application.
+
+```json
+// package.json
+{
+  "private": true,
+  "dependencies": {
+    "halo": "git+https://PERSONAL-ACCESS-TOKEN:x-oauth-basic@github.com/venturehacks/halo#stable"
   }
+}
 ```
 
-#### Alternative installation: Gem
+#### Apply Halo components
 
-Halo is also available as a Ruby gem for Rails apps that use the standard asset pipeline.
+```tsx
+import { Button, Header, Span } from 'halo';
 
-Add this line to your application's Gemfile:
+// ...
 
-```ruby
-gem 'halo'
+  <Header h1>Title is Wow</Header>
+  <Span muted>muted subtext is bueno</Span>
+
+  <Button variant="gray">Cancel</Button>
+  <Button
+    variant="primary"
+    onClick={() => console.log('OK!')}
+  >
+    OK
+  </Button>
 ```
 
-And then execute:
-
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install halo
+&nbsp;
 
 ---
 
-## Usage
+## Roadmap
 
-#### Sass
+| Date |  Milestone |   | Status |
+|---|---|---|:---:|
+| 2019 May | `v0.6.0` | Typography, Grid | 🔶 |
+| 2019 April | `v0.5.0` | Form input components, SVG iconography | 🔶 |
+| 2019 March | `v0.4.0` | color palette, Avatar, Button icon support | 🔶 |
+| 2019 February | `v0.3.1` | Header, Span, Paragraph, Button, PillTag | ✅ |
+| 2019 February 18 | infrastructure | Best-practice configs, strict linting introduced. | ✅ |
+| 2018 November | inception | Project skeleton is designed and built using TypeScript, React, Jest, webpack | ✅ |
 
-Import to use Halo library variables, mixins, functions:
+&nbsp;
 
-```sass
-@import halo
+### Design Release Notes
 
+Design maintains separate release notes in parallel. The Halo repository needs to "catch up" to the latest from design.
 
-.foo
-  +halo-test
-```
+- [Design: Halo Releaes Notes](https://venturehacks.quip.com/zb36AxAbZnBi/Halo-Design-Release-Notes)
+- [Design: Halo README](https://venturehacks.quip.com/zb36AxAbZnBi/Halo-Design-Release-Notes)
+- [Why we need a design system](https://venturehacks.quip.com/brjDAYTIUyqO/A-design-system-for-AngelList)
+
+&nbsp;
+
+## Team
+
+- **Engineering**
+  - Drew Lustro (lead)
+  - Tiffany Wu (support)
+- **Design**
+  - Shane Zucker (lead)
+  - Gearóid O’Rourke (support)
+  - Lily Chen (support)
