@@ -87,7 +87,7 @@ import { Button, Header, Span } from 'halo';
 
 Design maintains separate release notes in parallel. The Halo repository needs to "catch up" to the latest from design.
 
-- [Design: Halo Releaes Notes](https://venturehacks.quip.com/zb36AxAbZnBi/Halo-Design-Release-Notes)
+- [Design: Halo Release Notes](https://venturehacks.quip.com/zb36AxAbZnBi/Halo-Design-Release-Notes)
 - [Design: Halo README](https://venturehacks.quip.com/zb36AxAbZnBi/Halo-Design-Release-Notes)
 - [Why we need a design system](https://venturehacks.quip.com/brjDAYTIUyqO/A-design-system-for-AngelList)
 
