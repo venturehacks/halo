@@ -78,7 +78,7 @@ import { Button, Header, Span } from 'halo';
 | 2019 April | `v0.5.0` | Form input components, SVG iconography | 🔶 |
 | 2019 March | `v0.4.0` | color palette, Avatar, Button icon support | 🔶 |
 | 2019 February | `v0.3.1` | Header, Span, Paragraph, Button, PillTag | ✅ |
-| 2019 February 18 | infrastructure | Best-practice configs, strict linting introduced. | ✅ |
+| 2019 January | infrastructure | Best-practice configs, strict linting introduced. | ✅ |
 | 2018 November | inception | Project skeleton is designed and built using TypeScript, React, Jest, webpack | ✅ |
 
 &nbsp;
