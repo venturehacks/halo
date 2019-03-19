@@ -132,6 +132,23 @@ Design maintains separate release notes and numeric versioning.
   - Gearóid O’Rourke
   - Lily Chen
   - Stephen Varaday
+- **Dogfood**
+  - Tiffany Wu
+  - Jerry Yu
+  - Thomas Hu
+  
+  
+  ### Special Thanks
+    
+  - **Platform**
+    - Veselin Todorov (framework, support)
+  - **Venture**
+    - Xinran Xao (framework, support)
+  - **DevOps**
+    - Korbin Hoffman (framework, deploy, support)
+    - Aaron Vinson (ci builds, deploy)
+  
+
   
 &nbsp;
 
