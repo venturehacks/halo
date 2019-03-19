@@ -98,7 +98,8 @@ return (
 
 | Date          | Milestone      |                                                                               | Status |
 | ------------- | -------------- | ----------------------------------------------------------------------------- | :----: |
-| 2019 –      | `v1.0.0`       | CoPro production release                                                              |   🌀   |
+| 2019 &nbsp; –      | `v1.0.0`       | CoPro production release                                                              |   🌀   |
+| ⋯     | ⋯       | ⋯                                                              |   ⋯   |
 | 2019 April–May      | `v0.6.0`       | Typography, Grid                                                              |   🔶   |
 | 2019 April    | `v0.5.0`       | Form input components, SVG iconography                                        |   🔶   |
 | 2019 March    | `v0.4.0`       | Box, color palette, scss vars/mixin library export                                     |   ✅   |
@@ -110,7 +111,7 @@ return (
 
 ### Design Release Notes
 
-Design maintains separate release notes in parallel. The Halo repository needs to "catch up" to the latest from design.
+Design maintains separate release notes in parallel. The Halo repository routinely must "catch up" to the latest Sketch release.
 
 - [Design: Halo Release Notes](https://venturehacks.quip.com/zb36AxAbZnBi/Halo-Design-Release-Notes)
 - [Design: Halo README](https://venturehacks.quip.com/zb36AxAbZnBi/Halo-Design-Release-Notes)
