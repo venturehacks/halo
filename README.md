@@ -1,6 +1,6 @@
 # Halo :angel:
 
-Halo is our design system. It enables our small group of designers to design and ship faster by institutionalizing key decisions and providing an already established groundwork. 
+Halo is our design system. It enables our small group of designers to design and ship faster by institutionalizing key decisions and providing an already established groundwork.
 
 You can see Halo in action **today**.
 
@@ -72,14 +72,14 @@ import { Button, Header, Span } from 'halo';
 
 ## Roadmap
 
-| Date |  Milestone |   | Status |
-|---|---|---|:---:|
-| 2019 May | `v0.6.0` | Typography, Grid | 🔶 |
-| 2019 April | `v0.5.0` | Form input components, SVG iconography | 🔶 |
-| 2019 March | `v0.4.0` | color palette, Avatar, Button icon support | 🔶 |
-| 2019 February | `v0.3.1` | Header, Span, Paragraph, Button, PillTag | ✅ |
-| 2019 January | infrastructure | Best-practice configs, strict linting introduced. | ✅ |
-| 2018 November | inception | Project skeleton is designed and built using TypeScript, React, Jest, webpack | ✅ |
+| Date          | Milestone      |                                                                               | Status |
+| ------------- | -------------- | ----------------------------------------------------------------------------- | :----: |
+| 2019 May      | `v0.6.0`       | Typography, Grid                                                              |   🔶   |
+| 2019 April    | `v0.5.0`       | Form input components, SVG iconography                                        |   🔶   |
+| 2019 March    | `v0.4.0`       | color palette, sass library export support                                    |   🔶   |
+| 2019 February | `v0.3.1`       | Header, Span, Paragraph, Button, PillTag                                      |   ✅   |
+| 2019 January  | infrastructure | Best-practice configs, strict linting introduced.                             |   ✅   |
+| 2018 November | inception      | Project skeleton is designed and built using TypeScript, React, Jest, webpack |   ✅   |
 
 &nbsp;
 

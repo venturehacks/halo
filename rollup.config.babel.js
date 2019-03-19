@@ -8,31 +8,37 @@ import builtins from 'rollup-plugin-node-builtins';
 import alias from 'rollup-plugin-alias';
 import pkg from './package.json';
 
-const libraryName = 'halo'
-const globalLibs = {
+const LIBRARY_NAME = 'halo';
+
+const GLOBAL_LIBS = {
   classnames: 'classnames',
   react: 'React',
   'react-dom': 'ReactDOM',
 };
-const externalLibs = ['classnames', 'react', 'react-dom'];
+
+const EXTERNAL_LIBS = [
+  'classnames',
+  'react',
+  'react-dom'
+];
 
 export default {
   input: './src/index.tsx',
   output: [
     {
-      external: externalLibs,
+      external: EXTERNAL_LIBS,
       file: `${pkg.main}`,
       format: 'umd',
-      globals: globalLibs,
-      name: libraryName,
+      globals: GLOBAL_LIBS,
+      name: LIBRARY_NAME,
       sourcemap: true,
     },
     {
-      external: externalLibs,
+      external: EXTERNAL_LIBS,
       file: `${pkg.module}`,
       format: 'es',
-      globals: globalLibs,
-      name: libraryName,
+      globals: GLOBAL_LIBS,
+      name: LIBRARY_NAME,
       sourcemap: true,
     },
   ],
@@ -64,8 +70,7 @@ export default {
     commonjs({
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
       include: 'node_modules/**',
-    }),
+    })
   ],
-
   external: ['react', 'react-dom'],
 };

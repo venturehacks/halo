@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import * as React from 'react';
 
-import * as styles from './styles.scss'
+import * as styles from './styles.scss';
 
 export interface BoxProps {
   className?: string;
@@ -17,14 +17,7 @@ Box.defaultProps = {
   wrap: false,
 };
 
-function Box({
-  children,
-  className,
-  column,
-  row,
-  wrap
-}: BoxProps) {
-
+function Box({ children, className, column, row, wrap }: BoxProps) {
   const classes = classNames(
     styles.component,
     className,
@@ -33,11 +26,7 @@ function Box({
     wrap && styles.wrap,
   );
 
-  return (
-    <div className={classes}>
-      {children}
-    </div>
-  )
+  return <div className={classes}>{children}</div>;
 }
 
 export { Box };

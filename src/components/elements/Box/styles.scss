@@ -1,7 +1,6 @@
-@import '../../../scss/halo';
+@import '../../../../scss/halo';
 
 .component {
-
   &.column {
     @include flex-column;
   }
