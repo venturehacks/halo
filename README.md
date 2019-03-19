@@ -75,7 +75,7 @@ return (
 
 #### Scss
 
-> **Note:** actually interesting mixins + vars coming soon :)
+> **Note:** mixins + vars that are *actually* interesting coming soon :)
 
 ```scss
 // single import grants all variables, mixins, etc.
