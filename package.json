@@ -44,6 +44,9 @@
     "release-minor": "release-it minor",
     "release-patch": "release-it patch"
   },
+  "github": {
+    "release": true
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/venturehacks/halo.git"
