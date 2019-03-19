@@ -4,6 +4,7 @@
     "target": "es2015",
     "module": "es2015",
     "moduleResolution": "node",
+    "esModuleInterop": true,
     "lib": ["es2015", "dom"],
     "inlineSourceMap": true,
     "allowSyntheticDefaultImports": true,
@@ -14,6 +15,12 @@
     "outDir": "./dist",
     "jsx": "react",
     "strict": false /* Enable all strict type-checking options. */,
+    "resolveJsonModule": true,
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ],
+    },
     "typeRoots": ["node_modules/@types"],
     "types": ["node", "jest"],
     /* Strict Type-Checking Options */

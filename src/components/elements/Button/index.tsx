@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import * as styles from './styles.scss';
 
-interface ButtonProps {
+export interface ButtonProps {
   variant?: 'primary' | 'secondary' | 'alternate' | 'gray';
   size?: 'regular' | 'small' | 'inline';
   /** apply native disabled property */
@@ -69,4 +69,5 @@ class Button extends React.PureComponent<
   }
 }
 
-export { Button, ButtonProps };
+export { Button };
+export default Button;

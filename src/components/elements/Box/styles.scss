@@ -1,0 +1,15 @@
+@import '../../../../scss/halo';
+
+.component {
+  &.column {
+    @include flex-column;
+  }
+
+  &.row {
+    @include flex-row;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+}

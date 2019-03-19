@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import * as styles from './styles.scss';
 
-interface PillTagProps {
+export interface PillTagProps {
   children?: React.ReactNode;
   className?: string;
 }
@@ -13,5 +13,5 @@ function PillTag({ children, className }: PillTagProps) {
   return <span className={classes}>{children}</span>;
 }
 
-export { PillTag, PillTagProps };
+export { PillTag };
 export default PillTag;
