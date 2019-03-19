@@ -120,8 +120,9 @@ Design maintains separate release notes in parallel. The Halo repository needs t
 ## Team
 
 - **Engineering**
-  - Drew Lustro
+  - Drew Lustro 
 - **Design**
-  - Shane Zucker (lead)
-  - Gearóid O’Rourke (support)
-  - Lily Chen (support)
+  - Shane Zucker · lead
+  - Gearóid O’Rourke · support
+  - Lily Chen (support · support
+  - Stephen Varaday · support
