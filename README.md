@@ -137,17 +137,15 @@ Design maintains separate release notes and numeric versioning.
   - Jerry Yu
   - Thomas Hu
   
-  
-  ## Special Thanks
+&nbsp;
+
+## Special Thanks
     
-  - **Platform**
-    - Veselin Todorov (framework, support)
-  - **Venture**
-    - Xinran Xao (framework, support)
-  - **DevOps**
-    - Korbin Hoffman (framework, deploy, support)
-    - Aaron Vinson (ci builds, deploy)
+- Veselin Todorov (tooling)
+- Korbin Hoffman (tooling)
+- Aaron Vinson (ci builds)
   
+
 
   
 &nbsp;
