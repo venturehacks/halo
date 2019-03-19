@@ -98,7 +98,8 @@ return (
 
 | Date          | Milestone      |                                                                               | Status |
 | ------------- | -------------- | ----------------------------------------------------------------------------- | :----: |
-| 2019 April-May      | `v0.6.0`       | Typography, Grid                                                              |   🔶   |
+| 2019 –      | `v1.0.0`       | Stable 1.0                                                              |   🌀   |
+| 2019 April–May      | `v0.6.0`       | Typography, Grid                                                              |   🔶   |
 | 2019 April    | `v0.5.0`       | Form input components, SVG iconography                                        |   🔶   |
 | 2019 March    | `v0.4.0`       | Box, color palette, scss vars/mixin library export                                     |   ✅   |
 | 2019 February | `v0.3.1`       | Header, Span, Paragraph, Button, PillTag                                      |   ✅   |
