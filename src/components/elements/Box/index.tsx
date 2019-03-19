@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import * as styles from './styles.scss'
 
-interface BoxProps {
+export interface BoxProps {
   className?: string;
   children?: React.ReactNode;
   column?: boolean;
@@ -17,7 +17,7 @@ Box.defaultProps = {
   wrap: false,
 };
 
-export default function Box({
+function Box({
   children,
   className,
   column,
@@ -40,4 +40,4 @@ export default function Box({
   )
 }
 
-export { Box, BoxProps };
+export { Box };

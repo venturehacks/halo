@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import * as styles from './styles.scss';
 
-interface ParagraphProps {
+export interface ParagraphProps {
   preset?: 'normal' | 'support' | 'micro' | 'error';
   flow?: boolean;
   children: React.ReactNode;
@@ -28,4 +28,4 @@ function Paragraph({
   return <p className={classes}>{children}</p>;
 }
 
-export { Paragraph, ParagraphProps };
+export { Paragraph };

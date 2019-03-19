@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import * as styles from './styles.scss';
 
-interface HeaderProps {
+export interface HeaderProps {
   /**
    * style-only preset
    * @default none
@@ -115,5 +115,4 @@ function Header({
   return React.createElement(tag, props, children);
 }
 
-export { Header, HeaderProps };
-export default Header;
+export { Header };

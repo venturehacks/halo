@@ -5,7 +5,7 @@ import { Header } from '../elements/Header';
 
 import * as styles from './styles.scss'
 
-interface ColorSwatchProps {
+export interface ColorSwatchProps {
   className?: string;
   children?: React.ReactNode;
   color: string;
@@ -29,4 +29,4 @@ function ColorSwatch({
   )
 }
 
-export { ColorSwatch, ColorSwatchProps };
+export { ColorSwatch };

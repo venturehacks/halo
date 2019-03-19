@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import * as styles from './styles.scss';
 
-interface SpanProps {
+export interface SpanProps {
   antialiased?: any;
   block?: any;
   bold?: any;
@@ -92,4 +92,4 @@ class Span extends React.Component<SpanProps> {
   }
 }
 
-export { Span, SpanProps };
+export { Span };
