@@ -100,9 +100,9 @@ return (
 | ------------- | -------------- | ----------------------------------------------------------------------------- | :----: |
 | 2019 April-May      | `v0.6.0`       | Typography, Grid                                                              |   🔶   |
 | 2019 April    | `v0.5.0`       | Form input components, SVG iconography                                        |   🔶   |
-| 2019 March    | `v0.4.0`       | color palette, scss library export support                                    |   ✅   |
+| 2019 March    | `v0.4.0`       | Box, color palette, scss vars/mixin library export                                     |   ✅   |
 | 2019 February | `v0.3.1`       | Header, Span, Paragraph, Button, PillTag                                      |   ✅   |
-| 2019 January  | infrastructure | Best-practice configs, strict linting introduced.                             |   ✅   |
+| 2019 January  | infrastructure | Best-practice configs, introduce strict linting                              |   ✅   |
 | 2018 November | inception      | Project skeleton; built with TypeScript, React, Jest, webpack |   ✅   |
 
 &nbsp;
