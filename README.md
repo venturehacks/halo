@@ -111,9 +111,9 @@ return (
 
 &nbsp;
 
-### Design Release Notes
+### Design Releases
 
-Design maintains release notes in parallel. The Halo repository routinely must "catch up" to the latest release of Sketch files. 
+This repo lags behind design and must routinely "catch up" to the latest release from design (aka a bunch of sketch files). Design maintains separate release notes and versioning.
 
 - [Design: Halo Release Notes](https://venturehacks.quip.com/zb36AxAbZnBi/Halo-Design-Release-Notes)
 - [Design: Halo README](https://venturehacks.quip.com/zb36AxAbZnBi/Halo-Design-Release-Notes)
