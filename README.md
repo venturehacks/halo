@@ -133,4 +133,4 @@ Design maintains separate release notes in parallel. The Halo repository routine
   
 &nbsp;
 
-<img src="https://user-images.githubusercontent.com/194885/54588593-b2a26580-49e0-11e9-99c2-8a702f69747a.gif" width="80" alt="heloswhere" />
+<img src="https://user-images.githubusercontent.com/194885/54588593-b2a26580-49e0-11e9-99c2-8a702f69747a.gif" width="78" alt="heloswhere" />
