@@ -1,18 +1,20 @@
+import path from 'path';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import replace from 'rollup-plugin-replace';
 import postcss from 'rollup-plugin-postcss';
 import typescript from 'rollup-plugin-typescript';
 import builtins from 'rollup-plugin-node-builtins';
+import alias from 'rollup-plugin-alias';
 import pkg from './package.json';
 
-const libraryName = 'halo',
-  globalLibs = {
-    classnames: 'classnames',
-    react: 'React',
-    'react-dom': 'ReactDOM',
-  },
-  externalLibs = ['classnames', 'react', 'react-dom'];
+const libraryName = 'halo'
+const globalLibs = {
+  classnames: 'classnames',
+  react: 'React',
+  'react-dom': 'ReactDOM',
+};
+const externalLibs = ['classnames', 'react', 'react-dom'];
 
 export default {
   input: './src/index.tsx',
@@ -37,6 +39,10 @@ export default {
 
   plugins: [
     builtins(),
+    alias({
+      resolve: ['.tsx', '.ts', '.jsx', '.js'],
+      '~': path.join(__dirname, 'src'),
+    }),
     postcss({
       modules: true,
       extensions: ['.css', '.sass', '.scss'],

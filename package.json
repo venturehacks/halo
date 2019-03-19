@@ -85,6 +85,7 @@
     "react-test-renderer": "^16.6.3",
     "release-it": "^8.4.2",
     "rollup": "^0.67.4",
+    "rollup-plugin-alias": "^1.5.1",
     "rollup-plugin-commonjs": "^9.2.0",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-resolve": "^4.0.0",

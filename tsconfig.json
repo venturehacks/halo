@@ -15,6 +15,11 @@
     "jsx": "react",
     "strict": false /* Enable all strict type-checking options. */,
     "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "~/*": [
+        "./src/*"
+      ],
+    },
     "types": ["node", "jest"],
     /* Strict Type-Checking Options */
     "noImplicitAny": false /* Raise error on expressions and declarations with an implied 'any' type. */,
