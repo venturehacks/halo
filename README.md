@@ -138,7 +138,7 @@ Design maintains separate release notes and numeric versioning.
   - Thomas Hu
   
   
-  ### Special Thanks
+  ## Special Thanks
     
   - **Platform**
     - Veselin Todorov (framework, support)
