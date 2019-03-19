@@ -4,10 +4,10 @@ require 'halo/version'
 module Halo
   if defined?(Rails) && defined?(Rails::Engine)
     class Engine < ::Rails::Engine
-      config.assets.paths << File.expand_path('../src/scss', __dir__)
+      config.assets.paths << File.expand_path('../scss', __dir__)
     end
   else
-    Sass.load_paths << File.expand_path('../src/scss', __dir__)
+    Sass.load_paths << File.expand_path('../scss', __dir__)
   end
 
   class Sass
