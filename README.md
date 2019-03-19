@@ -2,10 +2,6 @@
 
 Halo is our design system. It enables our small group of designers to design and ship faster by institutionalizing key decisions and providing an already established groundwork.
 
-You can see Halo in action **today**.
-
-Preview the new company profiles (WIP): [angel.co/~talent/angellist](https://angel.co/~talent/angellist)
-
 &nbsp;
 
 ![Halo color palette preview](https://user-images.githubusercontent.com/194885/54584454-9f899880-49d4-11e9-8238-db144693e0c8.jpg)
@@ -126,7 +122,7 @@ Design maintains separate release notes and numeric versioning.
 ## Team
 
 - **Engineering**
-  - Drew Lustro 
+  - Drew Lustro
   - Tiffany Wu
 - **Design**
   - Shane Zucker
@@ -136,18 +132,18 @@ Design maintains separate release notes and numeric versioning.
 - **Dogfood**
   - Jerry Yu
   - Thomas Hu
-  
+
 &nbsp;
 
 ## Special Thanks
-    
+
 - Veselin Todorov (tooling)
 - Korbin Hoffman (tooling)
 - Aaron Vinson (ci builds)
-  
 
 
-  
+
+
 &nbsp;
 
 <img src="https://user-images.githubusercontent.com/194885/54588593-b2a26580-49e0-11e9-99c2-8a702f69747a.gif" width="78" alt="heloswhere" />
