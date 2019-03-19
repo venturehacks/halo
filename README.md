@@ -21,19 +21,19 @@ yarn
 yarn run dev
 ```
 
-### Use Halo in a Project
+### Install Halo in a project
 
 [Generate a Github personal access token](https://github.com/settings/tokens) so that your project can read this repository.
 
 Halo is built as a node module. In the future, Halo will be published as a private module so that we do not leak Github tokens.
 
-#### Install Halo
+#### Add dependency
 
 ```bash
 yarn add ssh://git@github.com:venturehacks/halo.git
 ```
 
-#### Add access token
+#### Supply access token
 
 Include your GitHub token so CircleCI can build the application.
 
@@ -47,23 +47,43 @@ Include your GitHub token so CircleCI can build the application.
 }
 ```
 
-#### Apply Halo components
+### Using Halo
+
+#### React
 
 ```tsx
-import { Button, Header, Span } from 'halo';
+import { Box, Button, Header, Span } from 'halo';
 
-// ...
+return (
+  <Box>
+    <Header h1>Title is Wow</Header>
+    <Span muted>muted subtext is bueno</Span>
 
-  <Header h1>Title is Wow</Header>
-  <Span muted>muted subtext is bueno</Span>
+    <Box row>
+      <Button variant="gray">Cancel</Button>
+      <Button variant="primary" onClick={() => console.log('OK!')}>
+        OK
+      </Button>
+    </Box>
+  </Box>
+);
+```
 
-  <Button variant="gray">Cancel</Button>
-  <Button
-    variant="primary"
-    onClick={() => console.log('OK!')}
-  >
-    OK
-  </Button>
+#### Scss
+
+> **Note:** actually interesting mixins + vars coming soon :)
+
+```scss
+// single import grants all variables, mixins, etc.
+@import '~halo/scss/halo';
+
+.foo {
+  color: $halo-test-variable;
+}
+
+.bar {
+  @include halo-test;
+}
 ```
 
 &nbsp;
@@ -76,7 +96,7 @@ import { Button, Header, Span } from 'halo';
 | ------------- | -------------- | ----------------------------------------------------------------------------- | :----: |
 | 2019 May      | `v0.6.0`       | Typography, Grid                                                              |   🔶   |
 | 2019 April    | `v0.5.0`       | Form input components, SVG iconography                                        |   🔶   |
-| 2019 March    | `v0.4.0`       | color palette, sass library export support                                    |   🔶   |
+| 2019 March    | `v0.4.0`       | color palette, scss library export support                                    |   ✅   |
 | 2019 February | `v0.3.1`       | Header, Span, Paragraph, Button, PillTag                                      |   ✅   |
 | 2019 January  | infrastructure | Best-practice configs, strict linting introduced.                             |   ✅   |
 | 2018 November | inception      | Project skeleton is designed and built using TypeScript, React, Jest, webpack |   ✅   |
