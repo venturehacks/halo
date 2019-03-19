@@ -98,12 +98,12 @@ return (
 
 | Date          | Milestone      |                                                                               | Status |
 | ------------- | -------------- | ----------------------------------------------------------------------------- | :----: |
-| 2019 May      | `v0.6.0`       | Typography, Grid                                                              |   🔶   |
+| 2019 April-May      | `v0.6.0`       | Typography, Grid                                                              |   🔶   |
 | 2019 April    | `v0.5.0`       | Form input components, SVG iconography                                        |   🔶   |
 | 2019 March    | `v0.4.0`       | color palette, scss library export support                                    |   ✅   |
 | 2019 February | `v0.3.1`       | Header, Span, Paragraph, Button, PillTag                                      |   ✅   |
 | 2019 January  | infrastructure | Best-practice configs, strict linting introduced.                             |   ✅   |
-| 2018 November | inception      | Project skeleton is designed and built using TypeScript, React, Jest, webpack |   ✅   |
+| 2018 November | inception      | Project skeleton; built with TypeScript, React, Jest, webpack |   ✅   |
 
 &nbsp;
 
@@ -122,7 +122,11 @@ Design maintains separate release notes in parallel. The Halo repository needs t
 - **Engineering**
   - Drew Lustro 
 - **Design**
-  - Shane Zucker · lead
-  - Gearóid O’Rourke · support
-  - Lily Chen (support · support
-  - Stephen Varaday · support
+  - Shane Zucker
+  - Gearóid O’Rourke
+  - Lily Chen
+  - Stephen Varaday
+  
+&nbsp;
+
+<img src="https://user-images.githubusercontent.com/194885/54588593-b2a26580-49e0-11e9-99c2-8a702f69747a.gif" width="80" alt="heloswhere" />
