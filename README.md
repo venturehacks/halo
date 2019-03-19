@@ -8,6 +8,10 @@ Preview the new company profiles (WIP): [angel.co/~talent/angellist](https://ang
 
 &nbsp;
 
+![Halo color palette preview](https://user-images.githubusercontent.com/194885/54584454-9f899880-49d4-11e9-8238-db144693e0c8.jpg)
+
+&nbsp;
+
 ## Quickstart
 
 ### Explore Halo
