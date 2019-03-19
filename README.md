@@ -127,13 +127,13 @@ Design maintains separate release notes and numeric versioning.
 
 - **Engineering**
   - Drew Lustro 
+  - Tiffany Wu
 - **Design**
   - Shane Zucker
   - Gearóid O’Rourke
   - Lily Chen
   - Stephen Varaday
 - **Dogfood**
-  - Tiffany Wu
   - Jerry Yu
   - Thomas Hu
   
