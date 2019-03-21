@@ -1,4 +1,7 @@
-export const component: string;
-export const column: string;
-export const row: string;
-export const wrap: string;
+declare const styles: {
+  readonly component: string;
+  readonly column: string;
+  readonly row: string;
+  readonly wrap: string;
+};
+export = styles;

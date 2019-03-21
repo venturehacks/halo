@@ -1,3 +1,6 @@
-export const component: string;
-export const color: string;
-export const attributes: string;
+declare const styles: {
+  readonly component: string;
+  readonly color: string;
+  readonly attributes: string;
+};
+export = styles;

@@ -1,11 +1,14 @@
-export const component: string;
-export const primary: string;
-export const secondary: string;
-export const alternate: string;
-export const gray: string;
-export const regular: string;
-export const text: string;
-export const iconOnly: string;
-export const small: string;
-export const inline: string;
-export const icon: string;
+declare const styles: {
+  readonly component: string;
+  readonly primary: string;
+  readonly secondary: string;
+  readonly alternate: string;
+  readonly gray: string;
+  readonly regular: string;
+  readonly text: string;
+  readonly iconOnly: string;
+  readonly small: string;
+  readonly inline: string;
+  readonly icon: string;
+};
+export = styles;
