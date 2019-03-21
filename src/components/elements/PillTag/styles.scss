@@ -11,18 +11,14 @@ $border: #e4e7f0;
   border: 1px solid $border;
   color: $text;
   font-size: 14px;
-  font-weight: 500;
   height: $height;
   line-height: $height - 2px;
-  padding: 0 13px;
+  padding: 0 10px;
   text-align: center;
   margin-bottom: 0.333rem;
+  margin-right: 0.333rem;
 
   // @include font-antialiased;
-
-  & + & {
-    margin-left: 0.333rem;
-  }
 
   a,
   a:link,

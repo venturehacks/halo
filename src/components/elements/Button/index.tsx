@@ -59,13 +59,13 @@ class Button extends React.PureComponent<
           {icon} {children}
         </a>
       );
-    } else {
-      return (
-        <button className={buttonClassNames} onClick={onClick} {...other}>
-          {icon} {children}
-        </button>
-      );
     }
+
+    return (
+      <button className={buttonClassNames} onClick={onClick} {...other}>
+        {icon} {children}
+      </button>
+    );
   }
 }
 

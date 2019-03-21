@@ -1,5 +1,8 @@
-export const component: string;
-export const presetSupport: string;
-export const presetMicro: string;
-export const presetError: string;
-export const flow: string;
+declare const styles: {
+  readonly component: string;
+  readonly presetSupport: string;
+  readonly presetMicro: string;
+  readonly presetError: string;
+  readonly flow: string;
+};
+export = styles;

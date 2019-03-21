@@ -71,7 +71,7 @@ return (
 
 #### Scss
 
-> **Note:** mixins + vars that are *actually* interesting coming soon :)
+> **Note:** mixins + vars that are _actually_ interesting coming soon :)
 
 ```scss
 // single import grants all variables, mixins, etc.
@@ -92,18 +92,16 @@ return (
 
 ## Roadmap
 
-
-
-| Date          | Milestone      |                                                                               | Status |
-| ------------- | -------------- | ----------------------------------------------------------------------------- | :----: |
-| 2019 &nbsp; –      | `v1.0.0`       | CoPro production release                                                              |   🌀   |
-| ⋯     | ⋯       | ⋯                                                              |   ⋯   |
-| 2019 April–May      | `v0.6.0`       | Typography, Grid                                                              |   🔶   |
-| 2019 April    | `v0.5.0`       | Form input components, SVG iconography                                        |   🔶   |
-| 2019 March    | `v0.4.0`       | Box, color palette, scss vars/mixin library export                                     |   ✅   |
-| 2019 February | `v0.3.1`       | Header, Span, Paragraph, Button, PillTag                                      |   ✅   |
-| 2019 January  | infrastructure | Best-practice configs, introduce strict linting                              |   ✅   |
-| 2018 November | inception      | Project skeleton; built with TypeScript, React, Jest, webpack |   ✅   |
+| Date           | Milestone      |                                                               | Status |
+| -------------- | -------------- | ------------------------------------------------------------- | :----: |
+| 2019 &nbsp; –  | `v1.0.0`       | CoPro production release                                      |   🌀   |
+| ⋯              | ⋯              | ⋯                                                             |   ⋯    |
+| 2019 April–May | `v0.6.0`       | Typography, Grid                                              |   🔶   |
+| 2019 April     | `v0.5.0`       | Form input components, SVG iconography                        |   🔶   |
+| 2019 March     | `v0.4.0`       | Box, color palette, scss vars/mixin library export            |   ✅   |
+| 2019 February  | `v0.3.1`       | Header, Span, Paragraph, Button, PillTag                      |   ✅   |
+| 2019 January   | infrastructure | Best-practice configs, introduce strict linting               |   ✅   |
+| 2018 November  | inception      | Project skeleton; built with TypeScript, React, Jest, webpack |   ✅   |
 
 &nbsp;
 
@@ -140,9 +138,6 @@ Design maintains separate release notes and numeric versioning.
 - Veselin Todorov (tooling)
 - Korbin Hoffman (tooling)
 - Aaron Vinson (ci builds)
-
-
-
 
 &nbsp;
 
