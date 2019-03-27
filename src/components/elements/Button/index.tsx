@@ -1,10 +1,12 @@
 import classNames from 'classnames';
 import * as React from 'react';
 
+import withForwardedRef from '../../../withForwardedRef';
+
 import * as styles from './styles.scss';
 
 export interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'alternate' | 'gray';
+  variant?: 'primary' | 'secondary' | 'alternate' | 'gray' | 'secondary-gray';
   size?: 'regular' | 'small' | 'inline';
   /** apply native disabled property */
   disabled?: boolean;
@@ -15,9 +17,10 @@ export interface ButtonProps {
   href?: string;
   type?: 'submit' | 'button' | 'clear';
   onClick?: (e: React.ChangeEvent<any>) => void;
+  forwardedRef: React.Ref<any>;
 }
 
-class Button extends React.PureComponent<
+class ButtonComponent extends React.PureComponent<
   ButtonProps & React.PropsWithoutRef<JSX.IntrinsicElements['button']>
 > {
   static defaultProps = {
@@ -36,6 +39,7 @@ class Button extends React.PureComponent<
       onClick,
       icon,
       variant,
+      forwardedRef,
       ...other
     } = this.props;
 
@@ -45,6 +49,7 @@ class Button extends React.PureComponent<
       variant === 'secondary' && styles.secondary,
       variant === 'alternate' && styles.alternate,
       variant === 'gray' && styles.gray,
+      variant === 'secondary-gray' && styles.secondaryGray,
       size === 'regular' && styles.regular,
       size === 'small' && styles.small,
       size === 'inline' && styles.inline,
@@ -55,19 +60,31 @@ class Button extends React.PureComponent<
 
     if (href) {
       return (
-        <a className={buttonClassNames} href={href} onClick={onClick}>
+        <a
+          className={buttonClassNames}
+          href={href}
+          onClick={onClick}
+          ref={forwardedRef}
+        >
           {icon} {children}
         </a>
       );
     }
 
     return (
-      <button className={buttonClassNames} onClick={onClick} {...other}>
+      <button
+        className={buttonClassNames}
+        onClick={onClick}
+        ref={forwardedRef}
+        {...other}
+      >
         {icon} {children}
       </button>
     );
   }
 }
+
+const Button = withForwardedRef(ButtonComponent);
 
 export { Button };
 export default Button;
