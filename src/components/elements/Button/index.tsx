@@ -17,7 +17,7 @@ export interface ButtonProps {
   href?: string;
   type?: 'submit' | 'button' | 'clear';
   onClick?: (e: React.ChangeEvent<any>) => void;
-  forwardedRef: React.Ref<any>;
+  forwardedRef?: React.Ref<any>;
 }
 
 class ButtonComponent extends React.PureComponent<
