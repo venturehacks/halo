@@ -8,6 +8,9 @@ $secondary-bg--active: #268bff;
 
 $alternate-text: #8fa3bf;
 
+$secondary-gray-bg--normal: #7B91B1;
+$secondary-gray-text: #576F92;
+
 .component {
   border: 1px solid transparent;
   border-radius: 3px;
@@ -76,11 +79,17 @@ $alternate-text: #8fa3bf;
     color: #979797;
   }
 
+  &.secondaryGray {
+    background-color: transparent;
+    border-color: $secondary-gray-bg--normal;
+    color: $secondary-gray-text;
+  }
+
   &.regular {
     font-size: 16px;
     padding: 12px 16px;
 
-    &:last-child {
+    &:last-of-type {
       padding-left: 40px;
       padding-right: 40px;
     }
@@ -99,7 +108,7 @@ $alternate-text: #8fa3bf;
     font-size: 14px;
     padding: 8px 16px;
 
-    &:last-child {
+    &:last-of-type {
       padding-left: 32px;
       padding-right: 32px;
     }
