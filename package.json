@@ -79,6 +79,7 @@
     "docz-theme-default": "^0.13.7",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
+    "formik": "^1.5.2",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
     "node-sass": "^4.11.0",
