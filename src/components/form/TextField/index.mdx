@@ -1,0 +1,27 @@
+---
+name: TextField
+menu: Form
+---
+
+import { Playground, PropsTable } from 'docz';
+import { Formik, Form, Field } from 'formik';
+import { TextField } from './';
+
+# TextField
+
+<Formik
+  initialValues={{ first_name: 'Great', last_name: 'Guy' }}
+  onSubmit={() => {}}
+>
+  {(formik) => (
+    <Form>
+      <Field name="first_name" component={TextField} placeholder="First name" />
+      <Field name="last_name" component={TextField} placeholder="Last name" />
+    </Form>
+  )}
+</Formik>
+
+
+## Props
+
+<PropsTable of={TextField} />
