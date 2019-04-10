@@ -1,0 +1,129 @@
+// gray
+$gray--xxxdark: #050c26 !default;
+$gray--xxdark: #162040 !default;
+$gray--xdark: #385075 !default;
+$gray--dark: #576f92 !default;
+$gray: #7b91b1 !default;
+$gray--light: #acbdd5 !default;
+$gray--xlight: #d2d9e5 !default;
+$gray--xxlight: #e4e7f0 !default;
+$gray--xxxlight: #f2f4f7 !default;
+
+// blue
+$blue--xxxdark: #000649 !default;
+$blue--xxdark: #001366 !default;
+$blue--xdark: #0029b0 !default;
+$blue--dark: #0059de !default;
+$blue: #0f6fff !default;
+$blue--light: #268bff !default;
+$blue--xlight: #85beff !default;
+$blue--xxlight: #dde9f8 !default;
+$blue--xxxlight: #f2f8ff !default;
+
+// green
+$green--xxxdark: #003520 !default;
+$green--xxdark: #004328 !default;
+$green--xdark: #005a37 !default;
+$green--dark: #008953 !default;
+$green: #009c5e !default;
+$green--light: #00a880 !default;
+$green--xlight: #00cc96 !default;
+$green--xxlight: #b7ecde !default;
+$green--xxxlight: #e1faf3 !default;
+
+// red
+$red--xxxdark: #4d001d !default;
+$red--xxdark: #a00038 !default;
+$red--xdark: #cc033e !default;
+$red--dark: #e9304b !default;
+$red: #f2555f !default;
+$red--light: #f56671 !default;
+$red--xlight: #fb868e !default;
+$red--xxlight: #ffdce0 !default;
+$red--xxxlight: #fff1f3 !default;
+
+// purple
+$purple--xxxdark: #220061 !default;
+$purple--xxdark: #311094 !default;
+$purple--xdark: #4039a8 !default;
+$purple--dark: #5646be !default;
+$purple: #7956bf !default;
+$purple--light: #9875de !default;
+$purple--xlight: #b99ae9 !default;
+$purple--xxlight: #dbc0f8 !default;
+$purple--xxxlight: #f8f1ff !default;
+
+// orange
+$orange--xxxdark: #4e2400 !default;
+$orange--xxdark: #914404 !default;
+$orange--xdark: #b35a04 !default;
+$orange--dark: #c56e09 !default;
+$orange: #cb7d0e !default;
+$orange--light: #f2a73d !default;
+$orange--xlight: #e9b44f !default;
+$orange--xxlight: #fce79b !default;
+$orange--xxxlight: #fff9e7 !default;
+
+// for map-get programmatic look up
+$colors: (
+  // gray
+  gray--xxxdark: $gray--xxxdark,
+  gray--xxdark: $gray--xxdark,
+  gray--xdark: $gray--xdark,
+  gray--dark: $gray--dark,
+  gray: $gray,
+  gray--light: $gray--light,
+  gray--xlight: $gray--xlight,
+  gray--xxlight: $gray--xxlight,
+  gray--xxxlight: $gray--xxxlight,
+  // blue
+  blue--xxxdark: $blue--xxxdark,
+  blue--xxdark: $blue--xxdark,
+  blue--xdark: $blue--xdark,
+  blue--dark: $blue--dark,
+  blue: $blue,
+  blue--light: $blue--light,
+  blue--xlight: $blue--xlight,
+  blue--xxlight: $blue--xxlight,
+  blue--xxxlight: $blue--xxxlight,
+  // green
+  green--xxxdark: $green--xxxdark,
+  green--xxdark: $green--xxdark,
+  green--xdark: $green--xdark,
+  green--dark: $green--dark,
+  green: $green,
+  green--light: $green--light,
+  green--xlight: $green--xlight,
+  green--xxlight: $green--xxlight,
+  green--xxxlight: $green--xxxlight,
+  // red
+  red--xxxdark: $red--xxxdark,
+  red--xxdark: $red--xxdark,
+  red--xdark: $red--xdark,
+  red--dark: $red--dark,
+  red: $red,
+  red--light: $red--light,
+  red--xlight: $red--xlight,
+  red--xxlight: $red--xxlight,
+  red--xxxlight: $red--xxxlight,
+  // purple
+  purple--xxxdark: $purple--xxxdark,
+  purple--xxdark: $purple--xxdark,
+  purple--xdark: $purple--xdark,
+  purple--dark: $purple--dark,
+  purple: $purple,
+  purple--light: $purple--light,
+  purple--xlight: $purple--xlight,
+  purple--xxlight: $purple--xxlight,
+  purple--xxxlight: $purple--xxxlight,
+  // orange
+  orange--xxxdark: $orange--xxxdark,
+  orange--xxdark: $orange--xxdark,
+  orange--xdark: $orange--xdark,
+  orange--dark: $orange--dark,
+  orange: $orange,
+  orange--light: $orange--light,
+  orange--xlight: $orange--xlight,
+  orange--xxlight: $orange--xxlight,
+  orange--xxxlight: $orange--xxxlight,
+);

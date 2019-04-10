@@ -4,8 +4,8 @@ route: /colors
 order: 9
 ---
 
-import { ColorSwatch } from './components/ColorSwatch';
-import { Box } from './components/elements/Box';
+import { ColorSwatch } from './components/util/ColorSwatch';
+import { Box } from './components/core/Box';
 
 # Color Palette
 
@@ -14,75 +14,75 @@ import { Box } from './components/elements/Box';
 <Box>
   {/* Grays */}
   <Box row>
-    <ColorSwatch name="Gray" color="#050C26" />
-    <ColorSwatch name="Gray" color="#162040" />
-    <ColorSwatch name="Gray" color="#385075" />
-    <ColorSwatch name="Gray" color="#576F92" />
-    <ColorSwatch name="Gray" color="#7B91B1" />
-    <ColorSwatch name="Gray" color="#ACBDD5" />
-    <ColorSwatch name="Gray" color="#D2D9E5" />
-    <ColorSwatch name="Gray" color="#E4E7F0" />
-    <ColorSwatch name="Gray" color="#F2F4F7" />
+    <ColorSwatch name="Gray" swatch="gray--xxxdark" />
+    <ColorSwatch name="Gray" swatch="gray--xxdark" />
+    <ColorSwatch name="Gray" swatch="gray--xdark" />
+    <ColorSwatch name="Gray" swatch="gray--dark" />
+    <ColorSwatch name="Gray" swatch="gray" />
+    <ColorSwatch name="Gray" swatch="gray--light" />
+    <ColorSwatch name="Gray" swatch="gray--xlight" />
+    <ColorSwatch name="Gray" swatch="gray--xxlight" />
+    <ColorSwatch name="Gray" swatch="gray--xxxlight" />
   </Box>
   {/* Blues */}
   <Box row>
-    <ColorSwatch name="Blue" color="#000649" />
-    <ColorSwatch name="Blue" color="#001366" />
-    <ColorSwatch name="Blue" color="#0029B0" />
-    <ColorSwatch name="Blue" color="#0059DE" />
-    <ColorSwatch name="Blue" color="#0F6FFF" />
-    <ColorSwatch name="Blue" color="#268BFF" />
-    <ColorSwatch name="Blue" color="#85BEFF" />
-    <ColorSwatch name="Blue" color="#DDE9F8" />
-    <ColorSwatch name="Blue" color="#F2F8FF" />
+    <ColorSwatch name="Blue" swatch="blue--xxxdark" />
+    <ColorSwatch name="Blue" swatch="blue--xxdark" />
+    <ColorSwatch name="Blue" swatch="blue--xdark" />
+    <ColorSwatch name="Blue" swatch="blue--dark" />
+    <ColorSwatch name="Blue" swatch="blue" />
+    <ColorSwatch name="Blue" swatch="blue--light" />
+    <ColorSwatch name="Blue" swatch="blue--xlight" />
+    <ColorSwatch name="Blue" swatch="blue--xxlight" />
+    <ColorSwatch name="Blue" swatch="blue--xxxlight" />
   </Box>
   {/* Greens */}
   <Box row>
-    <ColorSwatch name="Green" color="#003520" />
-    <ColorSwatch name="Green" color="#004328" />
-    <ColorSwatch name="Green" color="#005A37" />
-    <ColorSwatch name="Green" color="#008953" />
-    <ColorSwatch name="Green" color="#009C5E" />
-    <ColorSwatch name="Green" color="#00A880" />
-    <ColorSwatch name="Green" color="#00CC96" />
-    <ColorSwatch name="Green" color="#B7ECDE" />
-    <ColorSwatch name="Green" color="#E1FAF3" />
+    <ColorSwatch name="Green" swatch="green--xxxdark" />
+    <ColorSwatch name="Green" swatch="green--xxdark" />
+    <ColorSwatch name="Green" swatch="green--xdark" />
+    <ColorSwatch name="Green" swatch="green--dark" />
+    <ColorSwatch name="Green" swatch="green" />
+    <ColorSwatch name="Green" swatch="green--light" />
+    <ColorSwatch name="Green" swatch="green--xlight" />
+    <ColorSwatch name="Green" swatch="green--xxlight" />
+    <ColorSwatch name="Green" swatch="green--xxxlight" />
   </Box>
   {/* Reds */}
   <Box row>
-    <ColorSwatch name="Red" color="#4D001D" />
-    <ColorSwatch name="Red" color="#A00038" />
-    <ColorSwatch name="Red" color="#CC033E" />
-    <ColorSwatch name="Red" color="#E9304B" />
-    <ColorSwatch name="Red" color="#F2555F" />
-    <ColorSwatch name="Red" color="#F56671" />
-    <ColorSwatch name="Red" color="#FB868E" />
-    <ColorSwatch name="Red" color="#FFDCE0" />
-    <ColorSwatch name="Red" color="#FFF1F3" />
+    <ColorSwatch name="Red" swatch="red--xxxdark" />
+    <ColorSwatch name="Red" swatch="red--xxdark" />
+    <ColorSwatch name="Red" swatch="red--xdark" />
+    <ColorSwatch name="Red" swatch="red--dark" />
+    <ColorSwatch name="Red" swatch="red" />
+    <ColorSwatch name="Red" swatch="red--light" />
+    <ColorSwatch name="Red" swatch="red--xlight" />
+    <ColorSwatch name="Red" swatch="red--xxlight" />
+    <ColorSwatch name="Red" swatch="red--xxxlight" />
   </Box>
   {/* Purples */}
   <Box row>
-    <ColorSwatch name="Purple" color="#220061" />
-    <ColorSwatch name="Purple" color="#311094" />
-    <ColorSwatch name="Purple" color="#4039A8" />
-    <ColorSwatch name="Purple" color="#5646BE" />
-    <ColorSwatch name="Purple" color="#7956BF" />
-    <ColorSwatch name="Purple" color="#9875DE" />
-    <ColorSwatch name="Purple" color="#B99AE9" />
-    <ColorSwatch name="Purple" color="#DBC0F8" />
-    <ColorSwatch name="Purple" color="#F8F1FF" />
+    <ColorSwatch name="Purple" swatch="purple--xxxdark" />
+    <ColorSwatch name="Purple" swatch="purple--xxdark" />
+    <ColorSwatch name="Purple" swatch="purple--xdark" />
+    <ColorSwatch name="Purple" swatch="purple--dark" />
+    <ColorSwatch name="Purple" swatch="purple" />
+    <ColorSwatch name="Purple" swatch="purple--light" />
+    <ColorSwatch name="Purple" swatch="purple--xlight" />
+    <ColorSwatch name="Purple" swatch="purple--xxlight" />
+    <ColorSwatch name="Purple" swatch="purple--xxxlight" />
   </Box>
   {/* Oranges */}
   <Box row>
-    <ColorSwatch name="Orange" color="#4E2400" />
-    <ColorSwatch name="Orange" color="#914404" />
-    <ColorSwatch name="Orange" color="#B35A04" />
-    <ColorSwatch name="Orange" color="#C56E09" />
-    <ColorSwatch name="Orange" color="#CB7D0E" />
-    <ColorSwatch name="Orange" color="#F2A73D" />
-    <ColorSwatch name="Orange" color="#E9B44F" />
-    <ColorSwatch name="Orange" color="#FCE79B" />
-    <ColorSwatch name="Orange" color="#FFF9E7" />
+    <ColorSwatch name="Orange" swatch="orange--xxxdark" />
+    <ColorSwatch name="Orange" swatch="orange--xxdark" />
+    <ColorSwatch name="Orange" swatch="orange--xdark" />
+    <ColorSwatch name="Orange" swatch="orange--dark" />
+    <ColorSwatch name="Orange" swatch="orange" />
+    <ColorSwatch name="Orange" swatch="orange--light" />
+    <ColorSwatch name="Orange" swatch="orange--xlight" />
+    <ColorSwatch name="Orange" swatch="orange--xxlight" />
+    <ColorSwatch name="Orange" swatch="orange--xxxlight" />
   </Box>
 </Box>
 

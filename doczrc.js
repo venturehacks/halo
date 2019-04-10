@@ -23,7 +23,10 @@ export default {
     styles: {
       body: {
         fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
-      }
+      },
+      playground: {
+        padding: '20px',
+      },
     }
   },
 };
