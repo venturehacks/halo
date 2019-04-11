@@ -1,0 +1,11 @@
+@import '../../../../scss/halo';
+
+.component {
+  margin-top: tempo(0.25);
+  margin-bottom: tempo(0.5);
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: $red--xdark;
+  white-space: pre-wrap;
+}

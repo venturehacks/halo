@@ -13,7 +13,13 @@ export interface ColorSwatchProps {
   name: string;
 }
 
-function ColorSwatch({ name, color, children, swatch, className }: ColorSwatchProps) {
+function ColorSwatch({
+  name,
+  color,
+  children,
+  swatch,
+  className,
+}: ColorSwatchProps) {
   return (
     <div className={classNames(styles.component, styles[swatch], className)}>
       <div className={styles.color} style={{ backgroundColor: color }} />
@@ -35,7 +41,7 @@ function getNameFromSwatch(swatch: string) {
     for (let i = 0; i < n; i++) {
       intensity += 'X';
     }
-    const matches = variant.match(/[x]*(dark|light)/)
+    const matches = variant.match(/[x]*(dark|light)/);
     direction = matches !== null ? matches[1] : '';
   }
   return [color, intensity, direction].join(' ');

@@ -1,12 +1,23 @@
 import { css } from 'docz-plugin-css';
 import path from 'path';
+import merge from 'webpack-merge';
+
+// const customWebpackConfig = {
+//   resolve: {
+//     alias: {
+//       '~/components': path.join(__dirname, 'src', 'components'),
+//     }
+//   }
+// };
 
 export default {
   title: 'Halo Design System',
   typescript: true,
-  // onCreateWebpackChain: (config) => {
-  //   config.resolve.alias.set('~/components', path.join(__dirname, 'src', 'components'))
-  // },
+  onCreateWebpackChain: (config) => {
+    if (config.resolve.alias.set) {
+      config.resolve.alias.set('~/components', path.join(__dirname, 'src', 'components'));
+    }
+  },
   plugins: [
     css({
       preprocessor: 'sass',

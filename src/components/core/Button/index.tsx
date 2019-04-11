@@ -87,4 +87,3 @@ class ButtonComponent extends React.PureComponent<
 const Button = withForwardedRef(ButtonComponent);
 
 export { Button };
-export default Button;

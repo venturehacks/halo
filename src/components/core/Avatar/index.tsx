@@ -17,4 +17,3 @@ class Avatar extends React.PureComponent<AvatarProps> {
 }
 
 export { Avatar };
-export default Avatar;

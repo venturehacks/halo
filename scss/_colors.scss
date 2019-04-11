@@ -67,7 +67,7 @@ $orange--xxxlight: #fff9e7 !default;
 // for map-get programmatic look up
 $colors: (
   // gray
-  gray--xxxdark: $gray--xxxdark,
+    gray--xxxdark: $gray--xxxdark,
   gray--xxdark: $gray--xxdark,
   gray--xdark: $gray--xdark,
   gray--dark: $gray--dark,
@@ -77,7 +77,7 @@ $colors: (
   gray--xxlight: $gray--xxlight,
   gray--xxxlight: $gray--xxxlight,
   // blue
-  blue--xxxdark: $blue--xxxdark,
+    blue--xxxdark: $blue--xxxdark,
   blue--xxdark: $blue--xxdark,
   blue--xdark: $blue--xdark,
   blue--dark: $blue--dark,
@@ -87,7 +87,7 @@ $colors: (
   blue--xxlight: $blue--xxlight,
   blue--xxxlight: $blue--xxxlight,
   // green
-  green--xxxdark: $green--xxxdark,
+    green--xxxdark: $green--xxxdark,
   green--xxdark: $green--xxdark,
   green--xdark: $green--xdark,
   green--dark: $green--dark,
@@ -97,7 +97,7 @@ $colors: (
   green--xxlight: $green--xxlight,
   green--xxxlight: $green--xxxlight,
   // red
-  red--xxxdark: $red--xxxdark,
+    red--xxxdark: $red--xxxdark,
   red--xxdark: $red--xxdark,
   red--xdark: $red--xdark,
   red--dark: $red--dark,
@@ -107,7 +107,7 @@ $colors: (
   red--xxlight: $red--xxlight,
   red--xxxlight: $red--xxxlight,
   // purple
-  purple--xxxdark: $purple--xxxdark,
+    purple--xxxdark: $purple--xxxdark,
   purple--xxdark: $purple--xxdark,
   purple--xdark: $purple--xdark,
   purple--dark: $purple--dark,
@@ -117,7 +117,7 @@ $colors: (
   purple--xxlight: $purple--xxlight,
   purple--xxxlight: $purple--xxxlight,
   // orange
-  orange--xxxdark: $orange--xxxdark,
+    orange--xxxdark: $orange--xxxdark,
   orange--xxdark: $orange--xxdark,
   orange--xdark: $orange--xdark,
   orange--dark: $orange--dark,
@@ -125,5 +125,5 @@ $colors: (
   orange--light: $orange--light,
   orange--xlight: $orange--xlight,
   orange--xxlight: $orange--xxlight,
-  orange--xxxlight: $orange--xxxlight,
+  orange--xxxlight: $orange--xxxlight
 );

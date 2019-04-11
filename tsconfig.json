@@ -5,12 +5,16 @@
     "module": "es2015",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "lib": ["es2015", "dom"],
+    "lib": [
+      "dom",
+      "es2015",
+      "es2016",
+      "es2017"
+    ],
     "inlineSourceMap": true,
     "allowSyntheticDefaultImports": true,
     "declaration": true,
     "declarationDir": "./dist/typings/",
-    "rootDir": "src",
     "baseUrl": "./src",
     "outDir": "./dist",
     "jsx": "react",
@@ -18,11 +22,16 @@
     "resolveJsonModule": true,
     "paths": {
       "~/*": [
-        "./src/*"
+        "components/core/*",
+        "components/form/*",
+        "components/util/*",
+        "*",
       ],
     },
-    "typeRoots": ["node_modules/@types"],
-    "types": ["node", "jest"],
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types",
+    ],
     /* Strict Type-Checking Options */
     "noImplicitAny": false /* Raise error on expressions and declarations with an implied 'any' type. */,
     "strictNullChecks": false /* Enable strict null checks. */,
@@ -52,6 +61,6 @@
       }
     ]
   },
-  "include": ["src/**/*"],
+  "include": ["./src/**/*"],
   "exclude": ["node_modules/**", "**/__tests__/*", "dist/**"],
 }
