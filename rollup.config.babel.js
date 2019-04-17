@@ -15,14 +15,12 @@ const GLOBAL_LIBS = {
   classnames: 'classnames',
   react: 'React',
   'react-dom': 'ReactDOM',
-  formik: 'formik',
 };
 
 const EXTERNAL_LIBS = [
   'classnames',
   'react',
   'react-dom',
-  'formik',
 ];
 
 export default {
@@ -75,5 +73,5 @@ export default {
       include: 'node_modules/**',
     })
   ],
-  external: ['react', 'react-dom', 'formik'],
+  external: ['react', 'react-dom'],
 };

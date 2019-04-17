@@ -1,5 +1,3 @@
-import { FormikContext } from 'formik';
-
 declare module '*.scss' {
   interface IClassNames {
     [className: string]: string;
@@ -17,7 +15,3 @@ interface Dictionary<T> {
 
 type ReactEventT = React.ChangeEvent<any>;
 type EventFunctionT = (e: React.ChangeEvent<any>) => void;
-
-interface FormikContextProps {
-  formik: FormikContext<Dictionary<string>>;
-}
