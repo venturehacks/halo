@@ -4,17 +4,11 @@ import * as React from 'react';
 import * as styles from './styles.scss';
 
 export interface IconProps {
-  children?: React.ReactNode;
   className?: string;
 }
 
-class Icon extends React.PureComponent<IconProps> {
-  static defaultProps = {};
-
-  render(): React.ReactNode {
-    return '<Icon />';
-  }
+function Icon({ className }: IconProps) {
+  return <div className={classNames(styles.component, className)}>Icon</div>;
 }
 
 export { Icon };
-export default Icon;

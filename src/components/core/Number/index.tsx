@@ -4,17 +4,17 @@ import * as React from 'react';
 import * as styles from './styles.scss';
 
 export interface NumberProps {
-  children?: React.ReactNode;
   className?: string;
+  children?: React.ReactNode;
 }
 
-class Number extends React.PureComponent<NumberProps> {
-  static defaultProps = {};
-
-  render(): React.ReactNode {
-    return '<Number />';
-  }
+function Number({ children, className }: NumberProps) {
+  return (
+    <div className={classNames(styles.component, className)}>
+      <div>Number</div>
+      {children}
+    </div>
+  );
 }
 
 export { Number };
-export default Number;

@@ -4,16 +4,17 @@ import * as React from 'react';
 import * as styles from './styles.scss';
 
 export interface AvatarProps {
-  children?: React.ReactNode;
   className?: string;
+  children?: React.ReactNode;
 }
 
-class Avatar extends React.PureComponent<AvatarProps> {
-  static defaultProps = {};
-
-  render(): React.ReactNode {
-    return '<Avatar />';
-  }
+export default function Avatar({ children, className }: AvatarProps) {
+  return (
+    <div className={classNames(styles.component, className)}>
+      <div>Avatar</div>
+      {children}
+    </div>
+  );
 }
 
 export { Avatar };

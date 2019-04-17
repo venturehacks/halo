@@ -18,6 +18,7 @@ Box.defaultProps = {
   row: false,
   wrap: false,
   padding: 0,
+  margin: 0,
 };
 
 function Box({
@@ -35,8 +36,8 @@ function Box({
     column && styles.column,
     row && styles.row,
     wrap && styles.wrap,
-    padding && styles[`padding-${Number(padding)}`],
-    margin && styles[`margin-${Number(margin)}`],
+    padding && styles[`padding_${Number(padding)}`],
+    margin && styles[`margin_${Number(margin)}`],
   );
 
   return <div className={classes}>{children}</div>;

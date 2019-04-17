@@ -13,13 +13,7 @@ export interface ColorSwatchProps {
   name: string;
 }
 
-function ColorSwatch({
-  name,
-  color,
-  children,
-  swatch,
-  className,
-}: ColorSwatchProps) {
+function ColorSwatch({ name, color, swatch, className }: ColorSwatchProps) {
   return (
     <div className={classNames(styles.component, styles[swatch], className)}>
       <div className={styles.color} style={{ backgroundColor: color }} />

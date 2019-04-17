@@ -14,11 +14,11 @@
   }
 
   @for $i from 1 through 10 {
-    &.padding-#{$i} {
+    &.padding_#{$i} {
       padding: tempo($i);
     }
 
-    &.margin-#{$i} {
+    &.margin_#{$i} {
       margin: tempo($i);
     }
   }
