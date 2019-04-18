@@ -1,0 +1,13 @@
+// 24px => 24
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+@mixin halo-test {
+  color: aquamarine;
+  font-size: 60px;
+  margin: 1em;
+  outline: 1px solid red;
+  padding: 1em;
+  text-align: center;
+}

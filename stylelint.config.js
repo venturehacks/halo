@@ -20,6 +20,7 @@ module.exports = {
       'always',
       {
         except: ['first-nested'],
+        ignore: ['between-comments', 'stylelint-commands'],
       },
     ],
     'selector-attribute-quotes': 'always',
@@ -30,6 +31,6 @@ module.exports = {
         ignorePseudoClasses: ['global'],
       },
     ],
-    'selector-pseudo-element-colon-notation': 'single',
+    'selector-pseudo-element-colon-notation': 'double',
   },
 };

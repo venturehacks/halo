@@ -1,0 +1,59 @@
+@import '../variables';
+
+@mixin font(
+  $color: null,
+  $family: null,
+  $line: null,
+  $size: null,
+  $weight: null,
+  $transform: null,
+  $antialiased: null,
+  $truncate: null
+) {
+  @if map-has-key($colors, $color) {
+    color: map-get($colors, $color);
+  }
+  @if map-has-key($font-sizes, $size) {
+    font-size: map-get($font-sizes, $size);
+  }
+  @if map-has-key($weigths, $weight) {
+    font-weight: map-get($weights, $weight);
+  }
+  @if map-has-key($font-families, $family) {
+    font-family: map-get($font-families, $family);
+  }
+
+  @if index($text-transforms, $transform) != -1 {
+    text-transform: $transform;
+  }
+
+  @if map-has-key($line-heights, $line) {
+    line-height: map-get($line-heights, $line);
+  } @else {
+    line-height: $size * 1.4; // default line height is 140%
+  }
+
+  @if $antialiased {
+    @include font-antialiased;
+  }
+
+  @if $truncate {
+    @include font-truncate;
+  }
+}
+
+@mixin font-antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin font-subpixel {
+  -webkit-font-smoothing: auto;
+  -moz-osx-font-smoothing: auto;
+}
+
+@mixin font-truncate {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}

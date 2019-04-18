@@ -1,25 +1,13 @@
 @charset 'UTF-8';
+
+// explicitly vars only
 @import 'variables';
-@import 'colors';
-@import 'flex';
-@import 'space';
 
-@mixin halo-test {
-  color: aquamarine;
-  font-size: 60px;
-  margin: 2em;
-  outline: 1px solid red;
-  padding: 3em;
-  text-align: center;
-  text-decoration: underline;
-  -webkit-font-smoothing: antialiased;
-}
-
-@mixin font-antialiased {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-@mixin font-monospace {
-  font-family: Monaco, 'Courier New', monospace;
-}
+// mixins
+@import 'mixins/border';
+@import 'mixins/breakpoints';
+@import 'mixins/flex';
+@import 'mixins/font';
+@import 'mixins/position';
+@import 'mixins/reset';
+@import 'mixins/space';

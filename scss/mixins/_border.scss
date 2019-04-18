@@ -1,0 +1,7 @@
+@mixin border-rounded($radius: 4px) {
+  border-radius: $radius;
+}
+
+@mixin border-circle {
+  border-radius: 50%;
+}

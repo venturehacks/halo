@@ -8,7 +8,7 @@ export interface SpanProps {
   block?: boolean;
   bold?: boolean;
   children?: React.ReactNode;
-  className?: boolean;
+  className?: string;
   docz?: boolean;
   error?: boolean;
   italic?: boolean;
