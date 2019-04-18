@@ -1,14 +1,4 @@
-html {
-  box-sizing: border-box;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+@import '../scss/halo';
 
-body {
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-}
+@include html-reset;
 
-*,
-*:before,
-*:after {
-  box-sizing: inherit;
-}

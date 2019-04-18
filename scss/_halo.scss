@@ -1,25 +1,20 @@
 @charset 'UTF-8';
-@import 'variables';
+
+// partial imports include both variables + mixins for convenience
+@import 'border';
+@import 'breakpoints';
 @import 'colors';
 @import 'flex';
+@import 'reset';
 @import 'space';
+@import 'type';
+@import 'zindex';
 
 @mixin halo-test {
   color: aquamarine;
   font-size: 60px;
-  margin: 2em;
+  margin: 1em;
   outline: 1px solid red;
-  padding: 3em;
+  padding: 1em;
   text-align: center;
-  text-decoration: underline;
-  -webkit-font-smoothing: antialiased;
-}
-
-@mixin font-antialiased {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-@mixin font-monospace {
-  font-family: Monaco, 'Courier New', monospace;
 }

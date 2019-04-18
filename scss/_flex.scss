@@ -37,10 +37,6 @@ $to-flex: (
   }
 }
 
-@mixin flex-1 {
-  flex: 1 1 0;
-}
-
 @mixin position(
   $position,
   $top: null,
