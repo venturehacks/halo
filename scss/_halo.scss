@@ -1,20 +1,13 @@
 @charset 'UTF-8';
 
-// partial imports include both variables + mixins for convenience
-@import 'border';
-@import 'breakpoints';
-@import 'colors';
-@import 'flex';
-@import 'reset';
-@import 'space';
-@import 'type';
-@import 'zindex';
+// explicitly vars only
+@import 'variables';
 
-@mixin halo-test {
-  color: aquamarine;
-  font-size: 60px;
-  margin: 1em;
-  outline: 1px solid red;
-  padding: 1em;
-  text-align: center;
-}
+// mixins
+@import 'mixins/border';
+@import 'mixins/breakpoints';
+@import 'mixins/flex';
+@import 'mixins/font';
+@import 'mixins/position';
+@import 'mixins/reset';
+@import 'mixins/space';
