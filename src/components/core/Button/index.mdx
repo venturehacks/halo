@@ -1,0 +1,76 @@
+---
+name: Button
+menu: Core
+---
+
+import { PropsTable, Playground } from 'docz';
+import { Button } from './'
+
+# Button
+
+<div>
+  <Button>Primary</Button>
+  &nbsp;
+  <Button variant='secondary'>Secondary</Button>
+  &nbsp;
+  <Button variant='gray'>Gray</Button>
+  &nbsp;
+  <Button variant='alternate'>Alternate</Button>
+</div>
+
+
+## Props
+
+⚠️ Disabled for now. Upcoming versions of docz will be able to sort out HoC components.
+
+<PropsTable of={Button} />
+
+## Sizes
+
+#### Regular
+
+<div>
+  <Button>Press me</Button>
+  &nbsp;
+  <Button variant='secondary'>Press me</Button>
+  &nbsp;
+  <Button variant='alternate'>Press me</Button>
+</div>
+
+#### Small
+
+<div>
+  <Button size='small'>Press me</Button>
+  &nbsp;
+  <Button size='small' variant='secondary'>Press me</Button>
+  &nbsp;
+  <Button size='small' variant='alternate'>Press me</Button>
+</div>
+
+#### Inline
+
+<div key='inline' style={{
+  fontSize: '12px'
+}}>
+  <Button size='inline'>Press me</Button> to get the job.
+  <Button size='inline' variant='secondary'>Press me</Button> to get the job.
+</div>
+
+
+## States
+
+<div>
+  <Button>initial</Button>
+  &nbsp;
+  <Button className='_forceHover'>:hover</Button>
+  &nbsp;
+  <Button className='_forceActive'>:active</Button>
+</div>
+<br />
+<div>
+  <Button variant='secondary'>initial</Button>
+  &nbsp;
+  <Button variant='secondary' className='_forceHover'>:hover</Button>
+  &nbsp;
+  <Button variant='secondary' className='_forceActive'>:active</Button>
+</div>

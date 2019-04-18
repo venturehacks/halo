@@ -1,0 +1,7 @@
+@function tempo($scalar: 1) {
+  @if (($scalar * 4) % 1 != 0) {
+    @warn 'tempo() parameter $scalar cannot be more granular than increments of 0.25 (given: #{$scalar})';
+  }
+
+  @return 16px * $scalar;
+}

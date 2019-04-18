@@ -1,6 +1,9 @@
-export * from './elements/Box';
-export * from './elements/Button';
-export * from './elements/Header';
-export * from './elements/Paragraph';
-export * from './elements/PillTag';
-export * from './elements/Span';
+// core
+export * from './core/Box';
+export * from './core/Button';
+export * from './core/Header';
+export * from './core/Paragraph';
+export * from './core/PillTag';
+export * from './core/Span';
+// util
+export * from './util/ColorSwatch';

@@ -1,0 +1,43 @@
+@import '../../../../scss/halo';
+
+.component {
+  border-radius: 4px;
+  box-sizing: border-box;
+  height: 150px;
+  margin-right: 18px;
+  margin-bottom: 18px;
+
+  .color {
+    width: 120px;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 4px;
+    content: ' ';
+  }
+
+  .name {
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    text-transform: capitalize;
+    white-space: nowrap;
+    word-break: keep-all;
+  }
+
+  .attributes {
+    margin-top: 6px;
+    color: #999;
+    font-size: 12px;
+    font-family: 'Courier New', Courier, monospace;
+    white-space: nowrap;
+    word-break: keep-all;
+  }
+}
+
+// enumerate all swatches
+@each $name, $color in $colors {
+  .#{$name} {
+    .color {
+      background-color: $color;
+    }
+  }
+}

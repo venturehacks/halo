@@ -1,0 +1,25 @@
+@import '../../../../scss/halo';
+
+.component {
+  &.column {
+    @include flex-column;
+  }
+
+  &.row {
+    @include flex-row;
+  }
+
+  &.wrap {
+    flex-wrap: wrap;
+  }
+
+  @for $i from 1 through 10 {
+    &.padding_#{$i} {
+      padding: tempo($i);
+    }
+
+    &.margin_#{$i} {
+      margin: tempo($i);
+    }
+  }
+}

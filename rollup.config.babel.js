@@ -6,6 +6,7 @@ import postcss from 'rollup-plugin-postcss';
 import typescript from 'rollup-plugin-typescript';
 import builtins from 'rollup-plugin-node-builtins';
 import alias from 'rollup-plugin-alias';
+// @ts-ignore
 import pkg from './package.json';
 
 const LIBRARY_NAME = 'halo';
@@ -19,7 +20,7 @@ const GLOBAL_LIBS = {
 const EXTERNAL_LIBS = [
   'classnames',
   'react',
-  'react-dom'
+  'react-dom',
 ];
 
 export default {

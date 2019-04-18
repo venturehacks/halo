@@ -5,41 +5,52 @@
     "module": "es2015",
     "moduleResolution": "node",
     "esModuleInterop": true,
-    "lib": ["es2015", "dom"],
-    "inlineSourceMap": true,
+    "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
+    "strict": true /* Enable all strict type-checking options. */,
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "removeComments": false,
+    "preserveConstEnums": true,
+    "inlineSourceMap": true,
+    "skipLibCheck": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "strictNullChecks": false,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": false,
+    "alwaysStrict": true,
+    "noImplicitReturns": false,
+    "noFallthroughCasesInSwitch": false,
+    "traceResolution": false,
+    "listEmittedFiles": false,
+    "listFiles": false,
+    "pretty": true,
     "declaration": true,
     "declarationDir": "./dist/typings/",
-    "rootDir": "src",
     "baseUrl": "./src",
     "outDir": "./dist",
     "jsx": "react",
-    "strict": false /* Enable all strict type-checking options. */,
-    "resolveJsonModule": true,
     "paths": {
       "~/*": [
-        "./src/*"
+        "components/core/*",
+        "components/form/*",
+        "components/util/*",
+        "*",
       ],
     },
-    "typeRoots": ["node_modules/@types"],
-    "types": ["node", "jest"],
-    /* Strict Type-Checking Options */
-    "noImplicitAny": false /* Raise error on expressions and declarations with an implied 'any' type. */,
-    "strictNullChecks": false /* Enable strict null checks. */,
-    "strictFunctionTypes": true /* Enable strict checking of function types. */,
-    "strictPropertyInitialization": false /* Enable strict checking of property initialization in classes. */,
-    "noImplicitThis": true /* Raise error on 'this' expressions with an implied 'any' type. */,
-    "alwaysStrict": true /* Parse in strict mode and emit "use strict" for each source file. */,
-    /* Additional Checks */
-    "noUnusedLocals": false /* Report errors on unused locals. */,
-    "noUnusedParameters": false /* Report errors on unused parameters. */,
-    "noImplicitReturns": false /* Report error when not all code paths in function return a value. */,
-    "noFallthroughCasesInSwitch": false /* Report errors for fallthrough cases in switch statement. */,
-    /* Debugging Options */
-    "traceResolution": false /* Report module resolution log messages. */,
-    "listEmittedFiles": false /* Print names of generated files part of the compilation. */,
-    "listFiles": false /* Print names of files part of the compilation. */,
-    "pretty": true, /* Stylize errors and messages using color and context. */
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/types",
+    ],
+    "lib": [
+      "dom",
+      "es2015",
+      "es2016",
+      "es2017"
+    ],
     "plugins": [
       {
         "name": "typescript-tslint-plugin",
@@ -52,6 +63,13 @@
       }
     ]
   },
-  "include": ["src/**/*"],
-  "exclude": ["node_modules/**", "**/__tests__/*", "dist/**"],
+  "include": [
+    "./src/**/*",
+    "./test/**/*"
+  ],
+  "exclude": [
+    "node_modules/**",
+    "**/__tests__/*",
+    "dist/**"
+  ],
 }
