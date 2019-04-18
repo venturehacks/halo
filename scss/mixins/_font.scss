@@ -1,0 +1,62 @@
+@import '../variables';
+
+@mixin font(
+  $color: null,
+  $family: null,
+  $line: null,
+  $size: null,
+  $transform: null,
+  $weight: null,
+  $antialiased: null
+) {
+  @if $color {
+    color: map-get($colors, $color);
+  }
+  @if $size {
+    font-size: map-get($font-sizes, $size);
+  }
+  @if $weight {
+    font-weight: map-get($weights, $weight);
+  }
+  @if $family {
+    font-family: map-get($font-families, $family);
+  }
+
+  @if index($text-transforms, $transform) != -1 {
+    text-transform: $transform;
+  }
+
+  @if $line {
+    line-height: map-get($line-heights, $line);
+  } @else {
+    line-height: map-get(
+      $line-heights,
+      $size * 1.4
+    ); // default line height is 140%
+  }
+
+  @if $antialiased {
+    @include font-antialiased;
+  }
+}
+
+@mixin font-antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin font-primary {
+  @include font($family: $font-family-primary);
+}
+
+@mixin font-secondary {
+  @include font($family: $font-family-secondary);
+}
+
+@mixin font-serif {
+  @include font($family: $font-family-serif);
+}
+
+@mixin font-monospace {
+  @include font($family: $font-family-monospace);
+}
