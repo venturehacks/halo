@@ -14,12 +14,16 @@ $font-family-primary: 'helvetica neue', arial, helvetica, freesans,
 $font-family-secondary: georgia, serif;
 $font-family-serif: georgia, serif;
 $font-family-monospace: Monaco, 'Courier New', monospace;
+$font-family-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol';
 
 $font-families: (
   primary: $font-family-primary,
   secondary: $font-family-secondary,
   serif: $font-family-serif,
   monospace: $font-family-monospace,
+  system: $font-family-system,
 );
 
 // weights
@@ -77,6 +81,7 @@ $z-index--overlay: 200;
 $z-index--postoverlay: 300;
 $z-index--modal: 400;
 $z-index--postmodal: 500;
-$z-index--sky: 1000;
-$z-index--space: 9000;
+$z-index--toast: 1000;
+$z-index--sky: 10000;
+$z-index--space: 20000;
 $z-index--max: 2147483647;
