@@ -4,19 +4,19 @@ import * as React from 'react';
 import * as styles from './styles.scss';
 
 export interface SpanProps {
-  antialiased?: any;
-  block?: any;
-  bold?: any;
+  antialiased?: boolean;
+  block?: boolean;
+  bold?: boolean;
   children?: React.ReactNode;
-  className?: string;
-  docz?: any;
-  error?: any;
-  italic?: any;
-  light?: any;
-  monospace?: any;
-  muted?: any;
-  semibold?: any;
-  semistrong?: any;
+  className?: boolean;
+  docz?: boolean;
+  error?: boolean;
+  italic?: boolean;
+  light?: boolean;
+  monospace?: boolean;
+  muted?: boolean;
+  semibold?: boolean;
+  semistrong?: boolean;
   size?:
     | 'xxsmall'
     | 'xsmall'
@@ -25,11 +25,11 @@ export interface SpanProps {
     | 'large'
     | 'xlarge'
     | 'xxlarge';
-  strong?: any;
-  success?: any;
-  uppercase?: any;
-  xmuted?: any;
-  xxmuted?: any;
+  strong?: boolean;
+  success?: boolean;
+  uppercase?: boolean;
+  xmuted?: boolean;
+  xxmuted?: boolean;
 }
 
 class Span extends React.Component<SpanProps> {
