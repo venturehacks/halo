@@ -1,6 +1,7 @@
-@import '../../../../scss/halo';
+@import 'halo';
 
 .component {
+  @include border-box; // TODO: deprecate
   border-radius: 4px;
   box-sizing: border-box;
   height: 150px;

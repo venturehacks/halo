@@ -1,4 +1,7 @@
+@import 'halo';
+
 .component {
+  @include border-box; // TODO: deprecate
   color: #050c26; // $halo-heading
   font-weight: 500;
   line-height: 1;

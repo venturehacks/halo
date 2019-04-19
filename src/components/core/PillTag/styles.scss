@@ -1,10 +1,11 @@
-@import '../../../../scss/halo';
+@import 'halo';
 
 $height: 28px;
 $text: #627899;
 $border: #e4e7f0;
 
 .component {
+  @include border-box; // TODO: deprecate
   display: inline-block;
   box-sizing: border-box;
   border-radius: $height / 2;

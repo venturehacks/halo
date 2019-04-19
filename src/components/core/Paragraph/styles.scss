@@ -1,4 +1,7 @@
+@import 'halo';
+
 .component {
+  @include border-box; // TODO: deprecate
   font-size: 16px; // 16pt / 24pt
   line-height: 1.5;
   color: #162040; // $halo-text
