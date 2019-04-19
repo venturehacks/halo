@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import * as React from 'react';
-
-import { Span } from '../../core/Span';
+import { Span } from '~/components/core/Span';
 
 import * as styles from './styles.scss';
 

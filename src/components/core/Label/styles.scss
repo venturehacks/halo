@@ -2,7 +2,12 @@
 
 .component {
   @include border-rounded;
-  @include font($size: 14px, $weight: medium, $transform: uppercase, $spacing: 0.4px);
+  @include font(
+    $size: 14px,
+    $weight: medium,
+    $transform: uppercase,
+    $spacing: 0.4px
+  );
   padding: tempo(0.25) tempo(0.5);
 
   &.blue {

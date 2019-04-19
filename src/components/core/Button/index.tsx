@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 import * as React from 'react';
-import { withForwardedRef } from '~/lib/withForwardedRef';
+import { ForwardedRefProps, withForwardedRef } from '~/lib/withForwardedRef';
 
 import * as styles from './styles.scss';
 
-export interface ButtonProps {
+export interface ButtonProps extends ForwardedRefProps {
   variant?: 'primary' | 'secondary' | 'alternate' | 'gray' | 'secondary-gray';
   size?: 'regular' | 'small' | 'inline';
   /** apply native disabled property */
@@ -16,10 +16,9 @@ export interface ButtonProps {
   href?: string;
   type?: 'submit' | 'button' | 'clear';
   onClick?: (e: React.ChangeEvent<any>) => void;
-  forwardedRef?: React.Ref<any>;
 }
 
-class ButtonComponent extends React.PureComponent<
+class ButtonRaw extends React.PureComponent<
   ButtonProps & React.PropsWithoutRef<JSX.IntrinsicElements['button']>
 > {
   static defaultProps = {
@@ -83,6 +82,6 @@ class ButtonComponent extends React.PureComponent<
   }
 }
 
-const Button = withForwardedRef(ButtonComponent);
+const Button = withForwardedRef(ButtonRaw);
 
-export { Button, ButtonComponent };
+export { Button };

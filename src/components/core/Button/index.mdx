@@ -4,11 +4,12 @@ menu: Core
 ---
 
 import { Props, Playground } from 'docz';
-import { Button, ButtonComponent } from './'
+import { Box } from '~/components/core/Box';
+import { Button } from './'
 
 # Button
 
-<div>
+<Box row>
   <Button>Primary</Button>
   &nbsp;
   <Button variant='secondary'>Secondary</Button>
@@ -16,60 +17,70 @@ import { Button, ButtonComponent } from './'
   <Button variant='gray'>Gray</Button>
   &nbsp;
   <Button variant='alternate'>Alternate</Button>
-</div>
-
-## Props
-
-⚠️ Disabled for now. Upcoming versions of docz will be able to sort out HoC components.
-
-<Props of={ButtonComponent} />
+</Box>
 
 ## Sizes
 
-#### Regular
-
-<div>
-  <Button>Press me</Button>
+<Box row>
+  <Button>Regular</Button>
   &nbsp;
-  <Button variant='secondary'>Press me</Button>
+  <Button variant='secondary'>Secondary</Button>
   &nbsp;
-  <Button variant='alternate'>Press me</Button>
-</div>
+  <Button variant='gray'>Gray</Button>
+</Box>
 
-#### Small
+<br />
 
-<div>
-  <Button size='small'>Press me</Button>
+<Box row>
+  <Button size='small'>Small</Button>
   &nbsp;
-  <Button size='small' variant='secondary'>Press me</Button>
+  <Button size='small' variant='secondary'>Small secondary</Button>
   &nbsp;
-  <Button size='small' variant='alternate'>Press me</Button>
-</div>
+  <Button size='small' variant='gray'>Small gray</Button>
+</Box>
 
-#### Inline
+<br />
 
-<div key='inline' style={{
+<Box row key='inline' style={{
   fontSize: '12px'
 }}>
-  <Button size='inline'>Press me</Button> to get the job.
-  <Button size='inline' variant='secondary'>Press me</Button> to get the job.
-</div>
+  <Button size='inline'>Inline</Button> to get the job.
+  <Button size='inline' variant='secondary'>Inline secondary</Button> to get the job.
+</Box>
 
 
 ## States
 
-<div>
+<Box row>
   <Button>initial</Button>
   &nbsp;
   <Button className='_forceHover'>:hover</Button>
   &nbsp;
   <Button className='_forceActive'>:active</Button>
-</div>
+</Box>
+
 <br />
-<div>
+
+<Box row>
   <Button variant='secondary'>initial</Button>
   &nbsp;
   <Button variant='secondary' className='_forceHover'>:hover</Button>
   &nbsp;
   <Button variant='secondary' className='_forceActive'>:active</Button>
-</div>
+</Box>
+
+<br />
+
+<Box row>
+  <Button variant='gray'>initial</Button>
+  &nbsp;
+  <Button variant='gray' className='_forceHover'>:hover</Button>
+  &nbsp;
+  <Button variant='gray' className='_forceActive'>:active</Button>
+</Box>
+
+## Props
+
+⚠️ Disabled for now. Upcoming versions of docz will be able to sort out HoC components.
+
+<Props of={Button} />

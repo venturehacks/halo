@@ -1,18 +1,5 @@
 @import 'halo';
 
-$primary-bg--normal: #0f6fff;
-$primary-bg--hover: #0059de;
-$primary-bg--active: #268bff;
-
-$secondary-bg--normal: #0f6fff;
-$secondary-bg--hover: #0059de;
-$secondary-bg--active: #268bff;
-
-$alternate-text: #8fa3bf;
-
-$secondary-gray-bg--normal: #7b91b1;
-$secondary-gray-text: #576f92;
-
 .component {
   @include border-box; // TODO: deprecate
   border: 1px solid transparent;
@@ -37,44 +24,44 @@ $secondary-gray-text: #576f92;
   }
 
   &.primary {
-    background-color: $primary-bg--normal;
-    border-color: $primary-bg--normal;
+    background-color: $blue;
+    border-color: $blue;
     color: white;
 
     &:hover,
     &:global(._forceHover) {
-      border-color: $primary-bg--hover;
-      background-color: $primary-bg--hover;
+      border-color: $blue--dark;
+      background-color: $blue--dark;
     }
 
     &:active,
     &:global(._forceActive) {
-      border-color: $primary-bg--active;
-      background-color: $primary-bg--active;
+      border-color: $blue--light;
+      background-color: $blue--light;
     }
   }
 
   &.secondary {
     background-color: transparent;
-    border-color: $secondary-bg--normal;
-    color: $secondary-bg--normal;
+    border-color: $blue;
+    color: $blue;
 
     &:hover,
     &:global(._forceHover) {
-      color: $secondary-bg--hover;
-      border-color: $secondary-bg--hover;
+      color: $blue--dark;
+      border-color: $blue--dark;
     }
 
     &:active,
     &:global(._forceActive) {
-      color: $secondary-bg--active;
-      border-color: $secondary-bg--active;
+      color: $blue--light;
+      border-color: $blue--light;
       opacity: 0.9;
     }
   }
 
   &.alternate {
-    color: $alternate-text;
+    color: $gray;
   }
 
   &.gray {
@@ -84,8 +71,8 @@ $secondary-gray-text: #576f92;
 
   &.secondaryGray {
     background-color: transparent;
-    border-color: $secondary-gray-bg--normal;
-    color: $secondary-gray-text;
+    border-color: $gray;
+    color: $gray--dark;
   }
 
   &.regular {
@@ -127,8 +114,10 @@ $secondary-gray-text: #576f92;
   }
 
   &.inline {
+    display: inline-block;
     font-size: inherit;
     padding: 4px 8px;
+    margin-right: 0.333em;
   }
 
   &.icon {

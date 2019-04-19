@@ -16,9 +16,7 @@ function Label({ children, className, color = 'blue' }: LabelProps) {
     color && styles[color],
   );
 
-  return (
-    <span className={classes}>{children}</span>
-  );
+  return <span className={classes}>{children}</span>;
 }
 
-export { Label }
+export { Label };
