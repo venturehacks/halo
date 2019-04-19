@@ -3,6 +3,10 @@
   @return $value / ($value * 0 + 1);
 }
 
+@function has-unit($v) {
+  @return not unitless($v);
+}
+
 @mixin halo-test {
   color: aquamarine;
   font-size: 60px;
