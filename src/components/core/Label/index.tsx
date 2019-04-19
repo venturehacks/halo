@@ -1,20 +1,24 @@
 import classNames from 'classnames';
 import * as React from 'react';
 
-import * as styles from './styles.scss';
+import styles from './styles.scss';
 
-export interface LabelProps {
+interface LabelProps {
   className?: string;
-  children?: React.ReactNode;
+  children: React.ReactNode;
+  color: 'blue' | 'gray';
 }
 
-function Label({ children, className }: LabelProps) {
+function Label({ children, className, color = 'blue' }: LabelProps) {
+  const classes = classNames(
+    styles.component,
+    className,
+    color && styles[color],
+  );
+
   return (
-    <div className={classNames(styles.component, className)}>
-      <div>Label</div>
-      {children}
-    </div>
+    <span className={classes}>{children}</span>
   );
 }
 
-export { Label };
+export { Label }
