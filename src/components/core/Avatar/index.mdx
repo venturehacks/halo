@@ -4,11 +4,47 @@ menu: Core
 ---
 
 import { Props, Playground } from 'docz';
-import { Avatar } from './'
+import { Avatar } from './Avatar'
+import { Box } from '../Box';
 
 # Avatar
+
+<Box row>
+  <Avatar
+    size="large"
+    badge="L"
+    badgeColor="blue"
+    tooltip="Always a C+ student"
+    imageUrl="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+  />
+
+  <Avatar
+    size="medium"
+    badge="M"
+    badgeColor="green"
+    tooltip="Always a C+ student"
+    imageUrl="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+  />
+
+  <Avatar
+    size="small"
+    badge="S"
+    badgeColor="purple"
+    tooltip="Always a C+ student"
+    imageUrl="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+  />
+
+  <Avatar
+    size="xsmall"
+    badge="XS"
+    badgeColor="red"
+    tooltip="Always a C+ student"
+    imageUrl="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+  />
+</Box>
 
 ## Props
 
 <Props of={Avatar} />
+
 
