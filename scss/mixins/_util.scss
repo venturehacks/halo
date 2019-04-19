@@ -11,3 +11,11 @@
   padding: 1em;
   text-align: center;
 }
+
+@mixin border-box {
+  box-sizing: border-box;
+
+  * {
+    box-sizing: border-box;
+  }
+}

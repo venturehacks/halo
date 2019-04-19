@@ -1,5 +1,5 @@
 import path from 'path';
-import nodeResolve from 'rollup-plugin-node-resolve';
+import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import replace from 'rollup-plugin-replace';
 import postcss from 'rollup-plugin-postcss';
@@ -54,19 +54,25 @@ export default {
       modules: true,
       extensions: ['.css', '.sass', '.scss'],
       namedExports: true,
+      use: [
+        [
+          'sass', {
+            includePaths: [path.join(__dirname, 'scss')]
+          }
+        ]
+      ]
     }),
     typescript(),
     replace({
       exclude: 'node_modules/**',
       'process.env.NODE_ENV': JSON.stringify('development'),
     }),
-    nodeResolve({
-      // pass custom options to the resolve plugin
-      jsnext: true,
-      main: true,
+    resolve({
+      mainFields: ['module', 'main'],
       customResolveOptions: {
         moduleDirectory: 'node_modules',
       },
+      dedupe: ['react', 'react-dom'],
     }),
     commonjs({
       extensions: ['.js', '.jsx', '.ts', '.tsx'],

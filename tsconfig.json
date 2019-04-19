@@ -7,6 +7,7 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
+    "allowJs": false,
     "strict": true /* Enable all strict type-checking options. */,
     "noImplicitAny": false,
     "noImplicitThis": true,
@@ -35,10 +36,7 @@
     "jsx": "react",
     "paths": {
       "~/*": [
-        "components/core/*",
-        "components/form/*",
-        "components/util/*",
-        "*",
+        "./*",
       ],
     },
     "typeRoots": [

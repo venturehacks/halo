@@ -1,8 +1,10 @@
 import * as React from 'react';
 
-export default function withForwardedRef(
-  WrappedComponent: React.ComponentType<any>,
-) {
+export interface ForwardedRefProps {
+  forwardedRef?: React.Ref<any>;
+}
+
+function withForwardedRef(WrappedComponent: React.ComponentType<any>) {
   function forwardRef(props: any, ref: React.Ref<any>) {
     return <WrappedComponent {...props} forwardedRef={ref} />;
   }
@@ -12,3 +14,5 @@ export default function withForwardedRef(
 
   return React.forwardRef(forwardRef);
 }
+
+export { withForwardedRef };

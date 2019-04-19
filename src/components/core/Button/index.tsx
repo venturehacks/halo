@@ -1,7 +1,6 @@
 import classNames from 'classnames';
 import * as React from 'react';
-
-import withForwardedRef from '../../../withForwardedRef';
+import { withForwardedRef } from '~/lib/withForwardedRef';
 
 import * as styles from './styles.scss';
 
