@@ -14,6 +14,7 @@ const LIBRARY_NAME = 'halo';
 const GLOBAL_LIBS = {
   classnames: 'classnames',
   react: 'React',
+  lodash: 'lodash',
   'react-dom': 'ReactDOM',
 };
 
@@ -79,5 +80,5 @@ export default {
       include: 'node_modules/**',
     })
   ],
-  external: ['react', 'react-dom'],
+  external: ['react', 'react-dom', 'lodash'],
 };
