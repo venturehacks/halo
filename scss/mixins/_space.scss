@@ -1,7 +1,48 @@
-@function tempo($scalar: 1) {
-  @if (($scalar * 4) % 1 != 0) {
-    @warn 'tempo() parameter $scalar cannot be more granular than increments of 0.25 (given: #{$scalar})';
+@function tempo($magnitude) {
+  @if (($magnitude * 4) % 1 != 0) {
+    @warn 'tempo() parameter $magnitude cannot be more granular than increments of 0.25 (given: #{$magnitude})';
   }
 
-  @return 16px * $scalar;
+  @return 16px * $magnitude;
+}
+
+@function grid-width($cells) {
+  $cell-width: tempo(2); // 32px
+  $gutter-width: tempo(1); // 16px
+  $gutters: $cells - 1;
+
+  @if ($cells % 1 != 0) {
+    @warn 'grid-width() parameter $cells must be an integer! (given: #{$cells})';
+  }
+
+  @if ($cells > 24) {
+    @warn 'grid-width() parameter $cells cannot be greater than 24! (given: #{$cells})';
+  }
+
+  @return ($cells * $cell-width) + ($gutters * $gutter-width);
+}
+
+@mixin grid($cells, $offset: 0, $centered: false) {
+  $total: $cells + $offset;
+
+  @if $total > 24 {
+    @warn 'grid() sum of parameters $cells + $offset cannot be greater than 24! (given: #{$cells} cells + #{$offset} offset = #{$total})';
+  }
+  flex-basis: grid-width($cells);
+  width: grid-width($cells);
+
+  @if $offset > 0 and $centered {
+    @warn 'grid() cannot be both centered and apply an offset!';
+  }
+
+  @if $offset > 0 {
+    @include grid-offset($offset);
+  } @else if $centered {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+@mixin grid-offset($offset) {
+  margin-left: grid-width($offset);
 }
