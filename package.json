@@ -7,7 +7,6 @@
   "private": true,
   "main": "dist/halo.js",
   "module": "dist/halo.module.js",
-  "sass": "scss/_halo.scss",
   "style": "scss/_halo.scss",
   "types": "dist/typings/index.d.ts",
   "scripts": {
