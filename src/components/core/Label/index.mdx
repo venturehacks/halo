@@ -1,22 +1,36 @@
 ---
 name: Label
 menu: Core
+route: /core/label
 ---
 
 import { Props, Playground } from 'docz';
 import { Label } from './'
+import { Header } from '~/components/core/Header';
 import { Box } from '~/components/core/Box';
 
 # Label
 
-<Label>We're Hiring</Label>
+<Playground>
+  <Box margin={{ bottom: 3 }}>
+    <Label>We're Hiring My Dude</Label>
+  </Box>
 
-### Colors
+  <Header h3>Colors</Header>
 
-<Label color="blue">Blue</Label>
-&nbsp; &nbsp; &nbsp;
-<Label color="gray">Gray</Label>
+  <Box row>
+    <Box margin={{ right: 2 }}>
+      <Label color="blue">Blue</Label>
+    </Box>
+    <Box>
+      <Label color="gray">Gray</Label>
+    </Box>
+  </Box>
 
-## Props
+</Playground>
+
+### Props
 
 <Props of={Label} />
+
+⚠️ Disabled for now. Upcoming versions of docz will be able to sort out HoC components.

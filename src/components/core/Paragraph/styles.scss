@@ -2,31 +2,33 @@
 
 .component {
   @include border-box; // TODO: deprecate
-  font-size: 16px; // 16pt / 24pt
+  @include font($size: 16px, $color: gray--xxdark);
   line-height: 1.5;
-  color: #162040; // $halo-text
   margin: 0;
   padding: 0;
+
+  &.flow {
+    margin-bottom: 2em;
+  }
 
   &.presetSupport {
     font-size: 14px; // 14pt / 20pt
     line-height: 1.43;
-    color: #627899; // $halo-text--support
+    letter-spacing: 0.01em;
+    color: $gray--dark; // $halo-text--support
   }
 
   &.presetMicro {
     font-size: 12px; // 12pt / 20pt
     line-height: 1.668;
-    color: #8fa3bf; // $halo-text--micro
+    letter-spacing: 0.01em;
+    color: $gray; // $halo-text--micro
   }
 
-  &.presetError {
+  &.presetNotice {
     font-size: 14px; // 14pt / 20pt
     line-height: 1.43;
-    color: #f2a73d; // $halo-text--support
-  }
-
-  &.flow {
-    margin-bottom: 32px;
+    letter-spacing: 0.01em;
+    color: $orange--light; // $halo-text--support
   }
 }

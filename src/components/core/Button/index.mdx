@@ -1,6 +1,7 @@
 ---
 name: Button
 menu: Core
+route: /core/button
 ---
 
 import { Props, Playground } from 'docz';
@@ -9,70 +10,66 @@ import { Button } from './'
 
 # Button
 
-<Box row>
-  <Button>primary</Button>
-  &nbsp;
-  <Button variant='secondary'>secondary</Button>
-  &nbsp;
-  <Button variant='secondary-gray'>secondary-gray</Button>
-  &nbsp;
-  <Button variant='gray'>gray</Button>
-  &nbsp;
-  <Button variant='alternate'>alternate</Button>
-</Box>
+<Playground>
+  <Box row>
+    <Button>primary</Button>
+    <Button variant="secondary">secondary</Button>
+    <Button variant="secondary-gray">secondary-gray</Button>
+    <Button variant="gray">gray</Button>
+    <Button variant="alternate">alternate</Button>
+  </Box>
+</Playground>
 
-## Sizes
+### Sizes
 
-<Box row>
-  <Button size='large' variant='secondary-gray'>large 20px</Button>
+<Box row valign="bottom">
+  <Button size="large" variant="secondary-gray">large 20px</Button>
   &nbsp;
-  <Button variant='secondary-gray'>regular 16px</Button>
+  <Button variant="secondary-gray">regular 16px</Button>
   &nbsp;
-  <Button size='small' variant='secondary-gray'>small 14px</Button>
+  <Button size="small" variant="secondary-gray">small 14px</Button>
   &nbsp;
-  <Button size='xsmall' variant='secondary-gray'>xsmall 12px</Button>
-</Box>
-
-<br />
-
-<Box row key='inline' style={{
-  fontSize: '12px'
-}}>
-  <Button size='inline' variant='secondary-gray'>Inline</Button> to get the job.
-</Box>
-
-
-## States
-
-<Box row>
-  <Button>initial</Button>
-  &nbsp;
-  <Button className='_forceHover'>:hover</Button>
-  &nbsp;
-  <Button className='_forceActive'>:active</Button>
+  <Button size="xsmall" variant="secondary-gray">xsmall 12px</Button>
 </Box>
 
 <br />
 
 <Box row>
-  <Button variant='secondary'>initial</Button>
+  <Button size="inline" variant="secondary-gray">Inline</Button> to get the job.
+</Box>
+
+
+### States
+
+<Box row>
+  <Button size="small">initial</Button>
   &nbsp;
-  <Button variant='secondary' className='_forceHover'>:hover</Button>
+  <Button size="small" className="_forceHover">:hover</Button>
   &nbsp;
-  <Button variant='secondary' className='_forceActive'>:active</Button>
+  <Button size="small" className="_forceActive">:active</Button>
 </Box>
 
 <br />
 
 <Box row>
-  <Button variant='gray'>initial</Button>
+  <Button size="small" variant="secondary">initial</Button>
   &nbsp;
-  <Button variant='gray' className='_forceHover'>:hover</Button>
+  <Button size="small" variant="secondary" className="_forceHover">:hover</Button>
   &nbsp;
-  <Button variant='gray' className='_forceActive'>:active</Button>
+  <Button size="small" variant="secondary" className="_forceActive">:active</Button>
 </Box>
 
-## Props
+<br />
+
+<Box row>
+  <Button size="small" variant="gray">initial</Button>
+  &nbsp;
+  <Button size="small" variant="gray" className="_forceHover">:hover</Button>
+  &nbsp;
+  <Button size="small" variant="gray" className="_forceActive">:active</Button>
+</Box>
+
+### Props
 
 ⚠️ Disabled for now. Upcoming versions of docz will be able to sort out HoC components.
 

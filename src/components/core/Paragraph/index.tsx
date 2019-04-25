@@ -4,7 +4,7 @@ import * as React from 'react';
 import * as styles from './styles.scss';
 
 export interface ParagraphProps {
-  preset?: 'normal' | 'support' | 'micro' | 'error';
+  preset?: 'normal' | 'support' | 'micro' | 'notice';
   flow?: boolean;
   children: React.ReactNode;
   className?: string;
@@ -20,7 +20,7 @@ function Paragraph({
     styles.component,
     preset === 'support' && styles.presetSupport,
     preset === 'micro' && styles.presetMicro,
-    preset === 'error' && styles.presetError,
+    preset === 'notice' && styles.presetNotice,
     flow && styles.flow,
     className,
   );

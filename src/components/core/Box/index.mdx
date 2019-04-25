@@ -1,13 +1,45 @@
 ---
 name: Box
 menu: Core
+route: /core/box
 ---
 
 import { Props, Playground } from 'docz';
 import { Box } from './';
+import { Button } from '~/components/core/Button';
 
 # Box
 
-## Props
+Use Box to quickly scaffold flexbox layouts.
+
+<Playground>
+  <Box row align="space-between" margin={{ bottom: 2 }}>
+    <Button>align</Button>
+    <Button variant='secondary'>space-between</Button>
+    <Button variant='secondary-gray'>of</Button>
+    <Button variant='gray'>content</Button>
+  </Box>
+  <Box row align="right" valign="bottom" margin={{ top: 4 }}>
+    <Button>align</Button>
+    <Button variant='secondary' size="small">right</Button>
+    <Button variant='secondary-gray' size="small">with</Button>
+    <Button variant='gray' size="small">margin</Button>
+    <Button variant='alternate' size="small">{`{{ top: 4 }}`}</Button>
+  </Box>
+  <Box row align="left" valign="top" padding={4}>
+    <Button>align</Button>
+    <Button variant='secondary' size="small">left</Button>
+    <Button variant='secondary-gray' size="small">with</Button>
+    <Button variant='gray' size="small">padding</Button>
+    <Button variant='alternate' size="small">4</Button>
+  </Box>
+</Playground>
+
+
+
+### Props
 
 <Props of={Box} />
+
+⚠️ Disabled for now. Upcoming versions of docz will be able to sort out HoC components.
+

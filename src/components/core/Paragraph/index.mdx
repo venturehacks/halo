@@ -1,38 +1,43 @@
 ---
 name: Paragraph
 menu: Core
+route: /core/paragraph
 ---
 
 import { Props, Playground } from 'docz';
+import { Header } from '~/components/core/Header';
+import { Box } from '~/components/core/Box';
 import { Paragraph } from './'
 
 # Paragraph
 
-## Props
+<Playground>
+  <Paragraph flow>
+    Lorem ipsum dolor amet qui mustache kombucha elit. Leggings blue bottle pitchfork glossier copper mug, food truck hexagon everyday carry. Microdosing viral marfa, esse stumptown forage aesthetic freegan officia. Hammock seitan ea bitters fingerstache, dreamcatcher ullamco irure chia dolor labore unicorn pug fixie eiusmod.
+  </Paragraph>
+
+  <Header h3>Support</Header>
+
+  <Paragraph preset="support" flow>
+    Freegan exercitation sunt, keffiyeh slow-carb master cleanse 8-bit skateboard roof party glossier cred.
+  </Paragraph>
+
+  <Header h3>Micro</Header>
+
+  <Paragraph preset="micro" flow>
+    Distillery live-edge tumeric, meditation tilde gentrify.
+  </Paragraph>
+
+  <Header h3>Notice</Header>
+
+  <Paragraph preset="notice">
+    Woke wayfarers normcore prominent.
+  </Paragraph>
+</Playground>
+
+### Props
 
 <Props of={Paragraph} />
 
-### Body
+⚠️ Disabled for now. Upcoming versions of docz will be able to sort out HoC components.
 
-<Paragraph flow>
-  Lorem ipsum dolor amet qui mustache kombucha elit. Leggings blue bottle pitchfork glossier copper mug, food truck hexagon everyday carry. Microdosing viral marfa, esse stumptown forage aesthetic freegan officia. Hammock seitan ea bitters fingerstache, dreamcatcher ullamco irure chia dolor labore unicorn pug fixie eiusmod.
-</Paragraph>
-
-### Support
-
-<Paragraph preset="support" flow>
-  Freegan exercitation sunt, keffiyeh slow-carb master cleanse 8-bit skateboard roof party glossier cred.
-</Paragraph>
-
-### Micro
-
-<Paragraph preset="micro" flow>
-  Distillery live-edge tumeric, meditation tilde gentrify.
-</Paragraph>
-
-
-### Error
-
-<Paragraph preset="error">
-  Woke wayfarers normcore prominent.
-</Paragraph>

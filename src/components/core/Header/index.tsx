@@ -66,6 +66,8 @@ export interface HeaderProps {
    */
   h6?: boolean;
 
+  muted?: boolean;
+
   children: React.ReactNode;
 }
 
@@ -78,6 +80,7 @@ function Header({
   h4 = false,
   h5 = false,
   h6 = false,
+  muted = false,
   tag = 'h3',
   children,
   className,
@@ -98,6 +101,7 @@ function Header({
     preset === 'section' && styles.presetSection,
     (h5 || h6 || preset === 'micro') && styles.presetMicro,
     flow && styles.flow,
+    muted && styles.muted,
     className,
   );
 

@@ -1,14 +1,38 @@
 ---
 name: Badge
 menu: Core
+route: /core/badge
 ---
 
 import { Props, Playground } from 'docz';
 import { Badge } from './'
+import { Box } from '~/components/core/Box';
+import { ColorSwatch } from '~/components/util/ColorSwatch';
 
 # Badge
 
-## Props
+Single character, colored badge to decorate on any element with a `position: relative` layotu context;
+
+<Playground>
+  <Box row>
+    <Box relative margin={{ right: 2 }}>
+      <ColorSwatch name="Circle badge" swatch="gray--xxlight" showVariable={false} />
+      <Badge color="purple">A</Badge>
+    </Box>
+    <Box relative margin={{ right: 2 }}>
+      <ColorSwatch name="Square badge" swatch="gray--xxlight" showVariable={false} />
+      <Badge color="blue" shape="square">B</Badge>
+    </Box>
+    <Box relative margin={{ right: 2 }}>
+      <ColorSwatch name="Badge with tooltip" swatch="gray--xxlight" showVariable={false} />
+      <Badge color="orange" tooltip="wow, sick badge">C</Badge>
+    </Box>
+  </Box>
+</Playground>
+
+
+### Props
 
 <Props of={Badge} />
 
+⚠️ Disabled for now. Upcoming versions of docz will be able to sort out HoC components.

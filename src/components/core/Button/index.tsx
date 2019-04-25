@@ -5,13 +5,13 @@ import { ForwardedRefProps, withForwardedRef } from '~/lib/withForwardedRef';
 import * as styles from './styles.scss';
 
 export interface ButtonProps extends ForwardedRefProps {
-  variant?: 'primary' | 'secondary' | 'gray' | 'secondary-gray' | 'alternate';
   size?: 'large' | 'regular' | 'small' | 'xsmall' | 'inline';
+  variant?: 'primary' | 'secondary' | 'gray' | 'secondary-gray' | 'alternate';
   /** apply native disabled property */
   disabled?: boolean;
   children?: React.ReactNode;
-  icon?: React.ReactNode;
   className?: string;
+  icon?: React.ReactNode;
   /** provide hyperlink by styling <a> anchor link like a button */
   href?: string;
   type?: 'submit' | 'button' | 'clear' | 'reset';

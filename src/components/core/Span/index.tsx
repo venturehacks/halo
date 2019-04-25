@@ -9,7 +9,6 @@ export interface SpanProps {
   bold?: boolean;
   children?: React.ReactNode;
   className?: string;
-  docz?: boolean;
   error?: boolean;
   italic?: boolean;
   light?: boolean;
@@ -40,7 +39,6 @@ class Span extends React.Component<SpanProps> {
       bold,
       children,
       className,
-      docz,
       error,
       italic,
       light,
@@ -57,7 +55,8 @@ class Span extends React.Component<SpanProps> {
       ...other
     } = this.props;
 
-    const spanClassName = classNames([
+    const spanClassName = classNames(
+      styles.component,
       size === 'small' && styles.small,
       size === 'xsmall' && styles.xsmall,
       size === 'xxsmall' && styles.xxsmall,
@@ -66,7 +65,6 @@ class Span extends React.Component<SpanProps> {
       size === 'xlarge' && styles.xlarge,
       size === 'xxlarge' && styles.xxlarge,
       antialiased && styles.antialiased,
-      docz && styles.docz,
       block && styles.block,
       italic && styles.italic,
       muted && styles.muted,
@@ -82,7 +80,7 @@ class Span extends React.Component<SpanProps> {
       error && styles.error,
       success && styles.success,
       className,
-    ]);
+    );
 
     return (
       <span className={spanClassName} {...other}>

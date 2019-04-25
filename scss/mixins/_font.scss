@@ -13,6 +13,8 @@
 ) {
   @if map-has-key($colors, $color) {
     color: map-get($colors, $color);
+  } @else if $color {
+    color: $color;
   }
 
   @if map-has-key($font-sizes, $size) {

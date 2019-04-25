@@ -17,6 +17,11 @@
     text-decoration: none;
   }
 
+  &:focus {
+    // probably should not turn this off due to accessibility.
+    outline: 0;
+  }
+
   &[disabled] {
     opacity: 0.5;
     pointer-events: none;

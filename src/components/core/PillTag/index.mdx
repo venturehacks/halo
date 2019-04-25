@@ -1,34 +1,41 @@
 ---
 name: PillTag
 menu: Core
+route: /core/pill-tag
 ---
 
 import { Props, Playground } from 'docz';
+import { Header } from '~/components/core/Header';
+import { Box } from '~/components/core/Box';
 import { PillTag } from './'
 
 # PillTag
 
-<PillTag>
-  Payments
-</PillTag>
+<Playground>
+  <PillTag>
+    Payments
+  </PillTag>
 
-<PillTag>
-  Credit Cards
-</PillTag>
+  <PillTag>
+    Credit Cards
+  </PillTag>
 
-<PillTag>
-  Developer Tools
-</PillTag>
+  <PillTag>
+    Developer Tools
+  </PillTag>
 
-<PillTag>
-  Cloud Infrastructure
-</PillTag>
+  <PillTag>
+    Cloud Infrastructure
+  </PillTag>
 
-<PillTag>
-  <a href="#">Hyperlink</a>
-</PillTag>
+  <PillTag>
+    <a href="#">Hyperlink</a>
+  </PillTag>
+</Playground>
 
 
-## Props
+### Props
 
 <Props of={PillTag} />
+
+⚠️ Disabled for now. Upcoming versions of docz will be able to sort out HoC components.

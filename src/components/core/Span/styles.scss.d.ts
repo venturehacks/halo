@@ -1,5 +1,5 @@
 declare const styles: {
-  readonly "docz": string;
+  readonly "component": string;
   readonly "block": string;
   readonly "xxsmall": string;
   readonly "xsmall": string;

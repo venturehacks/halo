@@ -5,21 +5,31 @@ import { Span } from '~/components/core/Span';
 import * as styles from './styles.scss';
 
 export interface ColorSwatchProps {
-  className?: string;
   children?: React.ReactNode;
-  swatch?: string;
-  color: string;
-  name: string;
+  className?: string;
+  color?: string; // force color override
+  name?: string;
+  showVariable?: boolean;
+  swatch?: string; // swatch in Halo palette; ex: grey--xxlight
 }
 
-function ColorSwatch({ name, color, swatch, className }: ColorSwatchProps) {
+function ColorSwatch({
+  name,
+  color,
+  swatch,
+  className,
+  showVariable = true,
+}: ColorSwatchProps) {
   return (
     <div className={classNames(styles.component, styles[swatch], className)}>
       <div className={styles.color} style={{ backgroundColor: color }} />
       <Span className={styles.name} semibold block>
-        {swatch ? getNameFromSwatch(swatch) : name}
+        {name}
+        {!name && swatch && getNameFromSwatch(swatch)}
       </Span>
-      <div className={styles.attributes}>{swatch ? `$${swatch}` : color}</div>
+      {showVariable && (
+        <div className={styles.attributes}>{swatch ? `$${swatch}` : color}</div>
+      )}
     </div>
   );
 }
