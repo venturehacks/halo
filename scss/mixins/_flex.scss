@@ -28,7 +28,6 @@ $box-flex: (
   min-height: 0;
 }
 
-
 @mixin flex-row($fill: false, $align: null, $valign: top, $basis: null) {
   display: flex;
   flex-direction: row;
@@ -47,4 +46,3 @@ $box-flex: (
   min-width: 0;
   min-height: 0;
 }
-

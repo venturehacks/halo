@@ -32,7 +32,13 @@
   }
 
   .attributes {
-    @include font($color: gray, $size: 10px, $family: monospace, $antialiased: true, $spacing: -0.02em);
+    @include font(
+      $color: gray,
+      $size: 10px,
+      $family: monospace,
+      $antialiased: true,
+      $spacing: -0.02em
+    );
     white-space: nowrap;
     word-break: keep-all;
   }

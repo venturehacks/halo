@@ -1,7 +1,10 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import { ForwardedRefProps, withForwardedRef } from '../../../lib/withForwardedRef';
+import {
+  ForwardedRefProps,
+  withForwardedRef,
+} from '../../../lib/withForwardedRef';
 import { Badge, BadgeColor } from '../Badge';
 
 import styles from './styles.scss';
