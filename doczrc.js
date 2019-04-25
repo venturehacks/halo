@@ -5,6 +5,8 @@ import merge from 'webpack-merge';
 export default {
   title: 'Halo Design System',
   typescript: true,
+  debug: false,
+  src: path.join(__dirname, 'src'),
   onCreateWebpackChain: (config) => {
     if (config.resolve.alias.set) {
       config.resolve.alias.set('~/components', path.join(__dirname, 'src', 'components'));
@@ -35,4 +37,11 @@ export default {
       },
     }
   },
+  menu: [
+    'Welcome',
+    'Colors',
+    {
+      name: 'Core'
+    }
+  ]
 };
