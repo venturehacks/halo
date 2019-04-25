@@ -37,9 +37,17 @@
 
   @if $offset > 0 {
     @include grid-offset($offset);
-  } @else if $centered {
+  }
+
+  @if $centered {
     margin-left: auto;
     margin-right: auto;
+  } @else {
+    // automatically include right gutter
+    margin-right: tempo(1);
+    &:last-child {
+      margin-right: 0;
+    }
   }
 }
 
