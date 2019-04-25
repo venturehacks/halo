@@ -10,33 +10,27 @@ import { Button } from './'
 # Button
 
 <Box row>
-  <Button>Primary</Button>
+  <Button>primary</Button>
   &nbsp;
-  <Button variant='secondary'>Secondary</Button>
+  <Button variant='secondary'>secondary</Button>
   &nbsp;
-  <Button variant='gray'>Gray</Button>
+  <Button variant='secondary-gray'>secondary-gray</Button>
   &nbsp;
-  <Button variant='alternate'>Alternate</Button>
+  <Button variant='gray'>gray</Button>
+  &nbsp;
+  <Button variant='alternate'>alternate</Button>
 </Box>
 
 ## Sizes
 
 <Box row>
-  <Button>Regular</Button>
+  <Button size='large' variant='secondary-gray'>large 20px</Button>
   &nbsp;
-  <Button variant='secondary'>Secondary</Button>
+  <Button variant='secondary-gray'>regular 16px</Button>
   &nbsp;
-  <Button variant='gray'>Gray</Button>
-</Box>
-
-<br />
-
-<Box row>
-  <Button size='small'>Small</Button>
+  <Button size='small' variant='secondary-gray'>small 14px</Button>
   &nbsp;
-  <Button size='small' variant='secondary'>Small secondary</Button>
-  &nbsp;
-  <Button size='small' variant='gray'>Small gray</Button>
+  <Button size='xsmall' variant='secondary-gray'>xsmall 12px</Button>
 </Box>
 
 <br />
@@ -44,8 +38,7 @@ import { Button } from './'
 <Box row key='inline' style={{
   fontSize: '12px'
 }}>
-  <Button size='inline'>Inline</Button> to get the job.
-  <Button size='inline' variant='secondary'>Inline secondary</Button> to get the job.
+  <Button size='inline' variant='secondary-gray'>Inline</Button> to get the job.
 </Box>
 
 

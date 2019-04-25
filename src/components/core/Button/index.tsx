@@ -5,17 +5,17 @@ import { ForwardedRefProps, withForwardedRef } from '~/lib/withForwardedRef';
 import * as styles from './styles.scss';
 
 export interface ButtonProps extends ForwardedRefProps {
-  variant?: 'primary' | 'secondary' | 'alternate' | 'gray' | 'secondary-gray';
-  size?: 'regular' | 'small' | 'inline';
+  variant?: 'primary' | 'secondary' | 'gray' | 'secondary-gray' | 'alternate';
+  size?: 'large' | 'regular' | 'small' | 'xsmall' | 'inline';
   /** apply native disabled property */
   disabled?: boolean;
   children?: React.ReactNode;
   icon?: React.ReactNode;
   className?: string;
-  /** provide hyperlink by styling <a> like button */
+  /** provide hyperlink by styling <a> anchor link like a button */
   href?: string;
-  type?: 'submit' | 'button' | 'clear';
-  onClick?: (e: React.ChangeEvent<any>) => void;
+  type?: 'submit' | 'button' | 'clear' | 'reset';
+  onClick?: EventFunctionT;
 }
 
 class ButtonRaw extends React.PureComponent<
@@ -48,8 +48,10 @@ class ButtonRaw extends React.PureComponent<
       variant === 'alternate' && styles.alternate,
       variant === 'gray' && styles.gray,
       variant === 'secondary-gray' && styles.secondaryGray,
+      size === 'large' && styles.large,
       size === 'regular' && styles.regular,
       size === 'small' && styles.small,
+      size === 'xsmall' && styles.xsmall,
       size === 'inline' && styles.inline,
       icon && styles.icon,
       icon && !children && styles.iconOnly,

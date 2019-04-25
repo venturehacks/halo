@@ -2,13 +2,13 @@
 
 .component {
   @include border-box; // TODO: deprecate
+  @include border-rounded;
   border: 1px solid transparent;
-  border-radius: 3px;
   text-decoration: none;
   overflow: hidden;
 
   & + & {
-    margin-left: 8px;
+    margin-left: 0.5em;
   }
 
   &:hover {
@@ -22,6 +22,8 @@
     pointer-events: none;
     cursor: default;
   }
+
+  // Colors
 
   &.primary {
     background-color: $blue;
@@ -75,9 +77,11 @@
     color: $gray--dark;
   }
 
-  &.regular {
-    font-size: 16px;
-    padding: 12px 16px;
+  // Sizes
+
+  &.large {
+    font-size: 20px;
+    padding: tempo(1) tempo(1.25);
 
     &:last-of-type {
       padding-left: 40px;
@@ -85,38 +89,71 @@
     }
 
     &.text {
-      padding-left: 16px;
-      padding-right: 16px;
+      padding-left: tempo(1);
+      padding-right: tempo(1);
     }
 
     &.iconOnly {
-      padding: 16px;
+      padding: tempo(1.25);
+    }
+  }
+
+  &.regular {
+    font-size: 16px;
+    padding: tempo(0.75) tempo(1);
+
+    &:last-of-type {
+      padding-left: tempo(2.5);
+      padding-right: tempo(2.5);
+    }
+
+    &.text {
+      padding-left: tempo(1);
+      padding-right: tempo(1);
+    }
+
+    &.iconOnly {
+      padding: tempo(1);
     }
   }
 
   &.small {
     font-size: 14px;
-    padding: 8px 16px;
+    padding: tempo(0.5) tempo(1);
 
     &:last-of-type {
-      padding-left: 32px;
-      padding-right: 32px;
+      padding-left: tempo(1);
+      padding-right: tempo(1);
     }
 
     &.text {
-      padding-left: 8px;
-      padding-right: 8px;
+      padding-left: tempo(0.5);
+      padding-right: tempo(0.5);
     }
 
     &.iconOnly {
-      padding: 8px;
+      padding: tempo(0.5);
+    }
+  }
+
+  &.xsmall {
+    font-size: 12px;
+    padding: tempo(0.5) tempo(1);
+
+    &.text {
+      padding-left: tempo(0.5);
+      padding-right: tempo(0.5);
+    }
+
+    &.iconOnly {
+      padding: tempo(0.5);
     }
   }
 
   &.inline {
     display: inline-block;
     font-size: inherit;
-    padding: 4px 8px;
+    padding: tempo(0.25) tempo(0.5);
     margin-right: 0.333em;
   }
 

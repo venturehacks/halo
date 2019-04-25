@@ -12,10 +12,18 @@ $to-flex: (
 @mixin flex-row($fill: false, $align: null, $valign: top, $basis: null) {
   display: flex;
   flex-direction: row;
-  @if $basis { flex-basis: $basis; }
-  @if $valign { align-items: map-get($to-flex, $valign); }
-  @if $align { justify-content: map-get($to-flex, $align); }
-  @if $fill { flex: 1 1 0; }
+  @if $basis {
+    flex-basis: $basis;
+  }
+  @if $valign {
+    align-items: map-get($to-flex, $valign);
+  }
+  @if $align {
+    justify-content: map-get($to-flex, $align);
+  }
+  @if $fill {
+    flex: 1 1 0;
+  }
   min-width: 0;
   min-height: 0;
 }
@@ -23,10 +31,18 @@ $to-flex: (
 @mixin flex-column($fill: false, $align: null, $valign: null, $basis: null) {
   display: flex;
   flex-direction: column;
-  @if $basis { flex-basis: $basis; }
-  @if $align { align-items: map-get($to-flex, $align); }
-  @if $valign { justify-content: map-get($to-flex, $valign); }
-  @if $fill { flex: 1 1 0; }
+  @if $basis {
+    flex-basis: $basis;
+  }
+  @if $align {
+    align-items: map-get($to-flex, $align);
+  }
+  @if $valign {
+    justify-content: map-get($to-flex, $valign);
+  }
+  @if $fill {
+    flex: 1 1 0;
+  }
   min-width: 0;
   min-height: 0;
 }
