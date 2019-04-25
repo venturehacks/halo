@@ -8,29 +8,41 @@
   $weight: null,
   $transform: null,
   $antialiased: null,
+  $spacing: null,
   $truncate: null
 ) {
   @if map-has-key($colors, $color) {
     color: map-get($colors, $color);
+  } @else if $color {
+    color: $color;
   }
+
   @if map-has-key($font-sizes, $size) {
     font-size: map-get($font-sizes, $size);
+  } @else if $size and has-unit($size) {
+    font-size: $size;
   }
-  @if map-has-key($weigths, $weight) {
+
+  @if map-has-key($weights, $weight) {
     font-weight: map-get($weights, $weight);
   }
+
   @if map-has-key($font-families, $family) {
     font-family: map-get($font-families, $family);
   }
 
-  @if index($text-transforms, $transform) != -1 {
+  @if $transform and index($text-transforms, $transform) != -1 {
     text-transform: $transform;
   }
 
   @if map-has-key($line-heights, $line) {
     line-height: map-get($line-heights, $line);
-  } @else {
+  } @else if $line and $size {
     line-height: $size * 1.4; // default line height is 140%
+  }
+
+  @if $spacing and has-unit($spacing) {
+    letter-spacing: $spacing;
   }
 
   @if $antialiased {

@@ -1,24 +1,14 @@
-$primary-bg--normal: #0f6fff;
-$primary-bg--hover: #0059de;
-$primary-bg--active: #268bff;
-
-$secondary-bg--normal: #0f6fff;
-$secondary-bg--hover: #0059de;
-$secondary-bg--active: #268bff;
-
-$alternate-text: #8fa3bf;
-
-$secondary-gray-bg--normal: #7b91b1;
-$secondary-gray-text: #576f92;
+@import 'halo';
 
 .component {
+  @include border-box; // TODO: deprecate
+  @include border-rounded;
   border: 1px solid transparent;
-  border-radius: 3px;
   text-decoration: none;
   overflow: hidden;
 
   & + & {
-    margin-left: 8px;
+    margin-left: 0.5em;
   }
 
   &:hover {
@@ -27,51 +17,58 @@ $secondary-gray-text: #576f92;
     text-decoration: none;
   }
 
+  &:focus {
+    // probably should not turn this off due to accessibility.
+    outline: 0;
+  }
+
   &[disabled] {
     opacity: 0.5;
     pointer-events: none;
     cursor: default;
   }
 
+  // Colors
+
   &.primary {
-    background-color: $primary-bg--normal;
-    border-color: $primary-bg--normal;
+    background-color: $blue;
+    border-color: $blue;
     color: white;
 
     &:hover,
     &:global(._forceHover) {
-      border-color: $primary-bg--hover;
-      background-color: $primary-bg--hover;
+      border-color: $blue--dark;
+      background-color: $blue--dark;
     }
 
     &:active,
     &:global(._forceActive) {
-      border-color: $primary-bg--active;
-      background-color: $primary-bg--active;
+      border-color: $blue--light;
+      background-color: $blue--light;
     }
   }
 
   &.secondary {
     background-color: transparent;
-    border-color: $secondary-bg--normal;
-    color: $secondary-bg--normal;
+    border-color: $blue;
+    color: $blue;
 
     &:hover,
     &:global(._forceHover) {
-      color: $secondary-bg--hover;
-      border-color: $secondary-bg--hover;
+      color: $blue--dark;
+      border-color: $blue--dark;
     }
 
     &:active,
     &:global(._forceActive) {
-      color: $secondary-bg--active;
-      border-color: $secondary-bg--active;
+      color: $blue--light;
+      border-color: $blue--light;
       opacity: 0.9;
     }
   }
 
   &.alternate {
-    color: $alternate-text;
+    color: $gray;
   }
 
   &.gray {
@@ -81,13 +78,15 @@ $secondary-gray-text: #576f92;
 
   &.secondaryGray {
     background-color: transparent;
-    border-color: $secondary-gray-bg--normal;
-    color: $secondary-gray-text;
+    border-color: $gray;
+    color: $gray--dark;
   }
 
-  &.regular {
-    font-size: 16px;
-    padding: 12px 16px;
+  // Sizes
+
+  &.large {
+    font-size: 20px;
+    padding: tempo(1) tempo(1.25);
 
     &:last-of-type {
       padding-left: 40px;
@@ -95,37 +94,72 @@ $secondary-gray-text: #576f92;
     }
 
     &.text {
-      padding-left: 16px;
-      padding-right: 16px;
+      padding-left: tempo(1);
+      padding-right: tempo(1);
     }
 
     &.iconOnly {
-      padding: 16px;
+      padding: tempo(1.25);
+    }
+  }
+
+  &.regular {
+    font-size: 16px;
+    padding: tempo(0.75) tempo(1);
+
+    &:last-of-type {
+      padding-left: tempo(2.5);
+      padding-right: tempo(2.5);
+    }
+
+    &.text {
+      padding-left: tempo(1);
+      padding-right: tempo(1);
+    }
+
+    &.iconOnly {
+      padding: tempo(1);
     }
   }
 
   &.small {
     font-size: 14px;
-    padding: 8px 16px;
+    padding: tempo(0.5) tempo(1);
 
     &:last-of-type {
-      padding-left: 32px;
-      padding-right: 32px;
+      padding-left: tempo(1);
+      padding-right: tempo(1);
     }
 
     &.text {
-      padding-left: 8px;
-      padding-right: 8px;
+      padding-left: tempo(0.5);
+      padding-right: tempo(0.5);
     }
 
     &.iconOnly {
-      padding: 8px;
+      padding: tempo(0.5);
+    }
+  }
+
+  &.xsmall {
+    font-size: 12px;
+    padding: tempo(0.5) tempo(1);
+
+    &.text {
+      padding-left: tempo(0.5);
+      padding-right: tempo(0.5);
+    }
+
+    &.iconOnly {
+      padding: tempo(0.5);
     }
   }
 
   &.inline {
+    display: inline-block;
     font-size: inherit;
-    padding: 4px 8px;
+    padding: tempo(0.25) tempo(0.5);
+    margin-right: 0.333em;
   }
 
   &.icon {

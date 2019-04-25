@@ -1,11 +1,14 @@
 import path from 'path';
-import nodeResolve from 'rollup-plugin-node-resolve';
+import resolve from 'rollup-plugin-node-resolve';
 import commonjs from 'rollup-plugin-commonjs';
 import replace from 'rollup-plugin-replace';
 import postcss from 'rollup-plugin-postcss';
-import typescript from 'rollup-plugin-typescript';
+import typescript from 'rollup-plugin-typescript2';
 import builtins from 'rollup-plugin-node-builtins';
 import alias from 'rollup-plugin-alias';
+import filesize from 'rollup-plugin-filesize';
+import camelCase from 'camelcase';
+
 // @ts-ignore
 import pkg from './package.json';
 
@@ -14,6 +17,7 @@ const LIBRARY_NAME = 'halo';
 const GLOBAL_LIBS = {
   classnames: 'classnames',
   react: 'React',
+  lodash: 'lodash',
   'react-dom': 'ReactDOM',
 };
 
@@ -21,6 +25,7 @@ const EXTERNAL_LIBS = [
   'classnames',
   'react',
   'react-dom',
+  'lodash',
 ];
 
 export default {
@@ -45,33 +50,45 @@ export default {
   ],
 
   plugins: [
-    builtins(),
+    // note: alias not currently used; busted after tsc compilation
     alias({
       resolve: ['.tsx', '.ts', '.jsx', '.js'],
       '~': path.join(__dirname, 'src'),
     }),
+    builtins(),
+    resolve({
+      mainFields: ['module', 'main'],
+      customResolveOptions: {
+        moduleDirectory: 'node_modules',
+      },
+      dedupe: ['react', 'react-dom', 'lodash'],
+    }),
     postcss({
       modules: true,
       extensions: ['.css', '.sass', '.scss'],
-      namedExports: true,
+      namedExports: (name) => {
+        // converts scss dashes to camelCase:
+        // styles.gray--xxlight => styles.grayXxlight
+        return camelCase(name);
+      },
+      use: [
+        [
+          'sass', {
+            includePaths: [path.join(__dirname, 'scss')]
+          }
+        ]
+      ]
     }),
     typescript(),
     replace({
       exclude: 'node_modules/**',
       'process.env.NODE_ENV': JSON.stringify('development'),
     }),
-    nodeResolve({
-      // pass custom options to the resolve plugin
-      jsnext: true,
-      main: true,
-      customResolveOptions: {
-        moduleDirectory: 'node_modules',
-      },
-    }),
     commonjs({
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
       include: 'node_modules/**',
-    })
+    }),
+    filesize()
   ],
-  external: ['react', 'react-dom'],
+  external: ['react', 'react-dom', 'lodash'],
 };

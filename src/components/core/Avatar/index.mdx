@@ -1,14 +1,57 @@
 ---
 name: Avatar
 menu: Core
+route: /core/avatar
 ---
 
 import { Props, Playground } from 'docz';
-import { Avatar } from './'
+import { Avatar } from './';
+import { Box } from '../Box';
 
 # Avatar
 
-## Props
+
+<Playground>
+  <Box row align="space-between" maxWidth="500px">
+    <Avatar
+      size="large"
+      badge="L"
+      badgeColor="blue"
+      tooltip="Always a C+ student"
+      imageUrl="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+    />
+
+    <Avatar
+      size="medium"
+      badge="M"
+      badgeColor="green"
+      tooltip="Always a C+ student"
+      imageUrl="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+    />
+
+    <Avatar
+      size="small"
+      badge="S"
+      badgeColor="purple"
+      tooltip="Always a C+ student"
+      imageUrl="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+    />
+
+    <Avatar
+      size="xsmall"
+      badge="XS"
+      badgeColor="red"
+      tooltip="Always a C+ student"
+      imageUrl="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+    />
+  </Box>
+</Playground>
+
+### Props
 
 <Props of={Avatar} />
+
+⚠️ Disabled for now. Upcoming versions of docz will be able to sort out HoC components.
+
+
 

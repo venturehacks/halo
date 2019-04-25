@@ -1,3 +1,22 @@
+@import 'halo';
+
 .component {
-  background-color: orange;
+  @include border-rounded;
+  @include font(
+    $size: 14px,
+    $weight: medium,
+    $transform: uppercase,
+    $spacing: 0.4px
+  );
+  padding: tempo(0.25) tempo(0.5);
+
+  &.blue {
+    @include font($color: blue--dark);
+    background: rgba($blue--xxlight, 0.77);
+  }
+
+  &.gray {
+    @include font($color: gray--dark);
+    background: rgba($gray--xxlight, 0.77);
+  }
 }

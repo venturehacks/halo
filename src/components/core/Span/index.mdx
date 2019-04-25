@@ -1,31 +1,43 @@
 ---
 name: Span
 menu: Core
+route: /core/span
 ---
 
 import { Props, Playground } from 'docz';
+import { Box } from '../Box';
 import { Span } from './'
 
 # Span
 
-<div>
-  <Span docz>plain</Span>
-  <Span docz italic>italic</Span>
-  <Span docz bold>semibold</Span>
-  <Span docz bold>bold/strong</Span>
-</div>
-<div>
-  <Span docz muted>muted</Span>
-  <Span docz xmuted>xmuted</Span>
-  <Span docz xxmuted>xxmuted</Span>
-</div>
-<div>
-  <Span docz error>error</Span>
-  <Span docz success>success</Span>
-  <Span docz antialiased>antialiased</Span>
-</div>
+<Playground>
+  <div className="docz">
+    <Box row>
+      <Span>plain</Span>
+      <Span italic>italic</Span>
+      <Span bold>semibold</Span>
+      <Span bold>bold/strong</Span>
+    </Box>
+    <Box row>
+      <Span muted>muted</Span>
+      <Span xmuted>xmuted</Span>
+      <Span xxmuted>xxmuted</Span>
+      <Span antialiased>antialiased</Span>
+    </Box>
+    <Box row>
+      <Span uppercase>error</Span>
+      <Span monospace>success</Span>
+    </Box>
+    <Box row>
+      <Span error>error</Span>
+      <Span success>success</Span>
+    </Box>
+  </div>
+</Playground>
 
 
-## Props
+### Props
 
 <Props of={Span} />
+
+⚠️ Disabled for now. Upcoming versions of docz will be able to sort out HoC components.

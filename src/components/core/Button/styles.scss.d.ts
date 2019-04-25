@@ -5,10 +5,12 @@ declare const styles: {
   readonly "alternate": string;
   readonly "gray": string;
   readonly "secondaryGray": string;
-  readonly "regular": string;
+  readonly "large": string;
   readonly "text": string;
   readonly "iconOnly": string;
+  readonly "regular": string;
   readonly "small": string;
+  readonly "xsmall": string;
   readonly "inline": string;
   readonly "icon": string;
 };

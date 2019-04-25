@@ -1,4 +1,4 @@
-$to-flex: (
+$box-flex: (
   top: flex-start,
   center: center,
   bottom: flex-end,
@@ -9,30 +9,40 @@ $to-flex: (
   space-evenly: space-evenly,
 );
 
-@mixin flex-row($fill: false, $align: null, $valign: null, $basis: null) {
-  display: flex;
-  flex-basis: $basis;
-  flex-direction: row;
-  min-width: 0;
-  min-height: 0;
-  align-items: map-get($to-flex, $valign);
-  justify-content: map-get($to-flex, $align);
-
-  @if $fill {
-    flex: 1 1 0;
-  }
-}
-
 @mixin flex-column($fill: false, $align: null, $valign: null, $basis: null) {
   display: flex;
-  flex-basis: $basis;
   flex-direction: column;
-  min-width: 0;
-  min-height: 0;
-  align-items: map-get($to-flex, $align);
-  justify-content: map-get($to-flex, $valign);
-
+  @if $basis {
+    flex-basis: $basis;
+  }
+  @if $align {
+    align-items: map-get($box-flex, $align);
+  }
+  @if $valign {
+    justify-content: map-get($box-flex, $valign);
+  }
   @if $fill {
     flex: 1 1 0;
   }
+  min-width: 0;
+  min-height: 0;
+}
+
+@mixin flex-row($fill: false, $align: null, $valign: top, $basis: null) {
+  display: flex;
+  flex-direction: row;
+  @if $basis {
+    flex-basis: $basis;
+  }
+  @if $align {
+    justify-content: map-get($box-flex, $align);
+  }
+  @if $valign {
+    align-items: map-get($box-flex, $valign);
+  }
+  @if $fill {
+    flex: 1 1 0;
+  }
+  min-width: 0;
+  min-height: 0;
 }

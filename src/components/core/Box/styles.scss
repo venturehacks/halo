@@ -1,25 +1,59 @@
-@import '../../../../scss/halo';
+@import 'halo';
+
+$box-alignments: (
+  top center bottom left right normal space-between space-evenly
+);
+
+$directions: (top bottom left right);
 
 .component {
-  &.column {
-    @include flex-column;
-  }
-
-  &.row {
-    @include flex-row;
-  }
+  @include border-box; // TODO: deprecate
 
   &.wrap {
     flex-wrap: wrap;
   }
 
-  @for $i from 1 through 10 {
-    &.padding_#{$i} {
-      padding: tempo($i);
-    }
+  &.relative {
+    position: relative;
+  }
 
-    &.margin_#{$i} {
-      margin: tempo($i);
+  &.column {
+    @include flex-column($align: flex-start);
+
+    @each $alignment in $box-alignments {
+      &.align_#{$alignment} {
+        align-items: map-get($box-flex, $alignment);
+      }
+
+      &.valign_#{$alignment} {
+        justify-content: map-get($box-flex, $alignment);
+      }
+    }
+  }
+
+  &.row {
+    @include flex-row;
+
+    @each $alignment in $box-alignments {
+      &.align_#{$alignment} {
+        justify-content: map-get($box-flex, $alignment);
+      }
+
+      &.valign_#{$alignment} {
+        align-items: map-get($box-flex, $alignment);
+      }
+    }
+  }
+
+  @for $i from 1 through 10 {
+    @each $d in $directions {
+      &.padding_#{$d}_#{$i} {
+        padding-#{$d}: tempo($i);
+      }
+
+      &.margin_#{$d}_#{$i} {
+        margin-#{$d}: tempo($i);
+      }
     }
   }
 }

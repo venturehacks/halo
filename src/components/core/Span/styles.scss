@@ -1,7 +1,12 @@
-.docz {
-  padding: 20px;
-  width: 100px;
-  display: inline-block;
+@import 'halo';
+
+.component {
+  :global(.docz) & {
+    // TODO: deprecate
+    padding: 20px;
+    width: 100px;
+    display: inline-block;
+  }
 }
 
 .block {
@@ -70,7 +75,7 @@
 }
 
 .monospace {
-  font-family: monospace;
+  @include font($family: monospace);
 }
 
 .error {
@@ -82,5 +87,5 @@
 }
 
 .antialiased {
-  -webkit-font-smoothing: antialiased;
+  @include font($antialiased: true);
 }

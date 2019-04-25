@@ -1,0 +1,63 @@
+@import 'halo';
+
+$badge-size: 16px;
+
+.component {
+  position: absolute;
+  right: -3px;
+  top: -2px;
+  @include border-box; // TODO: deprecate
+  @include border-circle;
+  @include font(
+    $size: 9px,
+    $weight: bold,
+    $color: white,
+    $transform: uppercase,
+    $antialiased: true
+  );
+  border: 1px solid $gray--xxxlight;
+  height: $badge-size;
+  text-align: center;
+  padding-left: 1px;
+
+  // shapes
+  &.circle {
+    @include border-circle;
+    width: $badge-size;
+  }
+
+  &.square {
+    @include border-rounded(2px);
+    padding: 0 3px;
+  }
+
+  // colors
+  &.gray {
+    background-color: $gray--dark;
+    border-color: $gray--xxxlight;
+  }
+
+  &.purple {
+    background-color: $purple--dark;
+    border-color: $purple--xxxlight;
+  }
+
+  &.blue {
+    background-color: $blue--dark;
+    border-color: $blue--xxxlight;
+  }
+
+  &.green {
+    background-color: $green--dark;
+    border-color: $green--xxxlight;
+  }
+  &.red {
+    background-color: $red--dark;
+    border-color: $red--xxxlight;
+  }
+
+  &.orange {
+    background-color: $orange--dark;
+    border-color: $orange--xxxlight;
+  }
+}

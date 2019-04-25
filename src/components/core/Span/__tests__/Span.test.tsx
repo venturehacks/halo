@@ -1,5 +1,6 @@
-import * as React from 'react';
 import { shallow } from 'enzyme';
+import * as React from 'react';
+
 import { Span } from '../index';
 
 test('Link changes the class when hovered', () => {

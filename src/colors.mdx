@@ -1,91 +1,85 @@
 ---
 name: Colors
 route: /colors
-order: 9
 ---
 
 import { ColorSwatch } from './components/util/ColorSwatch';
 import { Box } from './components/core/Box';
 
-# Color Palette
 
-## All
+# Color Palette
 
 <Box>
   {/* Grays */}
-  <Box row>
-    <ColorSwatch name="Gray" swatch="gray--xxxdark" />
-    <ColorSwatch name="Gray" swatch="gray--xxdark" />
-    <ColorSwatch name="Gray" swatch="gray--xdark" />
-    <ColorSwatch name="Gray" swatch="gray--dark" />
-    <ColorSwatch name="Gray" swatch="gray" />
-    <ColorSwatch name="Gray" swatch="gray--light" />
-    <ColorSwatch name="Gray" swatch="gray--xlight" />
-    <ColorSwatch name="Gray" swatch="gray--xxlight" />
-    <ColorSwatch name="Gray" swatch="gray--xxxlight" />
+  <Box row align="space-between" margin={{ bottom: 1 }}>
+    <ColorSwatch swatch="gray--xxxdark" />
+    <ColorSwatch swatch="gray--xxdark" />
+    <ColorSwatch swatch="gray--xdark" />
+    <ColorSwatch swatch="gray--dark" />
+    <ColorSwatch swatch="gray" />
+    <ColorSwatch swatch="gray--light" />
+    <ColorSwatch swatch="gray--xlight" />
+    <ColorSwatch swatch="gray--xxlight" />
+    <ColorSwatch swatch="gray--xxxlight" />
   </Box>
   {/* Blues */}
-  <Box row>
-    <ColorSwatch name="Blue" swatch="blue--xxxdark" />
-    <ColorSwatch name="Blue" swatch="blue--xxdark" />
-    <ColorSwatch name="Blue" swatch="blue--xdark" />
-    <ColorSwatch name="Blue" swatch="blue--dark" />
-    <ColorSwatch name="Blue" swatch="blue" />
-    <ColorSwatch name="Blue" swatch="blue--light" />
-    <ColorSwatch name="Blue" swatch="blue--xlight" />
-    <ColorSwatch name="Blue" swatch="blue--xxlight" />
-    <ColorSwatch name="Blue" swatch="blue--xxxlight" />
+  <Box row align="space-between" margin={{ bottom: 1 }}>
+    <ColorSwatch swatch="blue--xxxdark" />
+    <ColorSwatch swatch="blue--xxdark" />
+    <ColorSwatch swatch="blue--xdark" />
+    <ColorSwatch swatch="blue--dark" />
+    <ColorSwatch swatch="blue" />
+    <ColorSwatch swatch="blue--light" />
+    <ColorSwatch swatch="blue--xlight" />
+    <ColorSwatch swatch="blue--xxlight" />
+    <ColorSwatch swatch="blue--xxxlight" />
   </Box>
   {/* Greens */}
-  <Box row>
-    <ColorSwatch name="Green" swatch="green--xxxdark" />
-    <ColorSwatch name="Green" swatch="green--xxdark" />
-    <ColorSwatch name="Green" swatch="green--xdark" />
-    <ColorSwatch name="Green" swatch="green--dark" />
-    <ColorSwatch name="Green" swatch="green" />
-    <ColorSwatch name="Green" swatch="green--light" />
-    <ColorSwatch name="Green" swatch="green--xlight" />
-    <ColorSwatch name="Green" swatch="green--xxlight" />
-    <ColorSwatch name="Green" swatch="green--xxxlight" />
+  <Box row align="space-between" margin={{ bottom: 1 }}>
+    <ColorSwatch swatch="green--xxxdark" />
+    <ColorSwatch swatch="green--xxdark" />
+    <ColorSwatch swatch="green--xdark" />
+    <ColorSwatch swatch="green--dark" />
+    <ColorSwatch swatch="green" />
+    <ColorSwatch swatch="green--light" />
+    <ColorSwatch swatch="green--xlight" />
+    <ColorSwatch swatch="green--xxlight" />
+    <ColorSwatch swatch="green--xxxlight" />
   </Box>
   {/* Reds */}
-  <Box row>
-    <ColorSwatch name="Red" swatch="red--xxxdark" />
-    <ColorSwatch name="Red" swatch="red--xxdark" />
-    <ColorSwatch name="Red" swatch="red--xdark" />
-    <ColorSwatch name="Red" swatch="red--dark" />
-    <ColorSwatch name="Red" swatch="red" />
-    <ColorSwatch name="Red" swatch="red--light" />
-    <ColorSwatch name="Red" swatch="red--xlight" />
-    <ColorSwatch name="Red" swatch="red--xxlight" />
-    <ColorSwatch name="Red" swatch="red--xxxlight" />
+  <Box row align="space-between" margin={{ bottom: 1 }}>
+    <ColorSwatch swatch="red--xxxdark" />
+    <ColorSwatch swatch="red--xxdark" />
+    <ColorSwatch swatch="red--xdark" />
+    <ColorSwatch swatch="red--dark" />
+    <ColorSwatch swatch="red" />
+    <ColorSwatch swatch="red--light" />
+    <ColorSwatch swatch="red--xlight" />
+    <ColorSwatch swatch="red--xxlight" />
+    <ColorSwatch swatch="red--xxxlight" />
   </Box>
   {/* Purples */}
-  <Box row>
-    <ColorSwatch name="Purple" swatch="purple--xxxdark" />
-    <ColorSwatch name="Purple" swatch="purple--xxdark" />
-    <ColorSwatch name="Purple" swatch="purple--xdark" />
-    <ColorSwatch name="Purple" swatch="purple--dark" />
-    <ColorSwatch name="Purple" swatch="purple" />
-    <ColorSwatch name="Purple" swatch="purple--light" />
-    <ColorSwatch name="Purple" swatch="purple--xlight" />
-    <ColorSwatch name="Purple" swatch="purple--xxlight" />
-    <ColorSwatch name="Purple" swatch="purple--xxxlight" />
+  <Box row align="space-between" margin={{ bottom: 1 }}>
+    <ColorSwatch swatch="purple--xxxdark" />
+    <ColorSwatch swatch="purple--xxdark" />
+    <ColorSwatch swatch="purple--xdark" />
+    <ColorSwatch swatch="purple--dark" />
+    <ColorSwatch swatch="purple" />
+    <ColorSwatch swatch="purple--light" />
+    <ColorSwatch swatch="purple--xlight" />
+    <ColorSwatch swatch="purple--xxlight" />
+    <ColorSwatch swatch="purple--xxxlight" />
   </Box>
   {/* Oranges */}
-  <Box row>
-    <ColorSwatch name="Orange" swatch="orange--xxxdark" />
-    <ColorSwatch name="Orange" swatch="orange--xxdark" />
-    <ColorSwatch name="Orange" swatch="orange--xdark" />
-    <ColorSwatch name="Orange" swatch="orange--dark" />
-    <ColorSwatch name="Orange" swatch="orange" />
-    <ColorSwatch name="Orange" swatch="orange--light" />
-    <ColorSwatch name="Orange" swatch="orange--xlight" />
-    <ColorSwatch name="Orange" swatch="orange--xxlight" />
-    <ColorSwatch name="Orange" swatch="orange--xxxlight" />
+  <Box row align="space-between" margin={{ bottom: 1 }}>
+    <ColorSwatch swatch="orange--xxxdark" />
+    <ColorSwatch swatch="orange--xxdark" />
+    <ColorSwatch swatch="orange--xdark" />
+    <ColorSwatch swatch="orange--dark" />
+    <ColorSwatch swatch="orange" />
+    <ColorSwatch swatch="orange--light" />
+    <ColorSwatch swatch="orange--xlight" />
+    <ColorSwatch swatch="orange--xxlight" />
+    <ColorSwatch swatch="orange--xxxlight" />
   </Box>
 </Box>
-
-## Interface
-
-## Background

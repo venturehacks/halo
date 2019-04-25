@@ -1,33 +1,44 @@
-@import '../../../../scss/halo';
+@import 'halo';
 
 .component {
-  border-radius: 4px;
-  box-sizing: border-box;
+  @include border-box; // TODO: deprecate
+  @include border-rounded;
   height: 150px;
-  margin-right: 18px;
-  margin-bottom: 18px;
+
+  & + & {
+    margin-left: tempo(0.5);
+  }
+
+  &:first-of-type {
+    margin-left: 0;
+  }
 
   .color {
-    width: 120px;
+    @include border-rounded;
+    width: 100px;
     height: 80px;
-    margin-bottom: 10px;
-    border-radius: 4px;
+    margin-bottom: tempo(0.5);
     content: ' ';
   }
 
   .name {
-    font-size: 14px;
-    letter-spacing: -0.02em;
+    display: block;
+    font-weight: 600;
+    font-size: 12px;
     text-transform: capitalize;
     white-space: nowrap;
     word-break: keep-all;
+    margin-bottom: tempo(0.25);
   }
 
   .attributes {
-    margin-top: 6px;
-    color: #999;
-    font-size: 12px;
-    font-family: 'Courier New', Courier, monospace;
+    @include font(
+      $color: gray,
+      $size: 10px,
+      $family: monospace,
+      $antialiased: true,
+      $spacing: -0.02em
+    );
     white-space: nowrap;
     word-break: keep-all;
   }

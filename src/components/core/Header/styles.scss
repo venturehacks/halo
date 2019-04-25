@@ -1,11 +1,18 @@
+@import 'halo';
+
 .component {
-  color: #050c26; // $halo-heading
+  @include border-box; // TODO: deprecate
+  color: $gray--xxxdark;
   font-weight: 500;
   line-height: 1;
   margin: 0;
 
   &.flow {
     margin-bottom: 0.75em;
+  }
+
+  &.muted {
+    color: $gray;
   }
 
   // MARKETING

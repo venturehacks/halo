@@ -1,26 +1,28 @@
 import classNames from 'classnames';
 import * as React from 'react';
 
-import withForwardedRef from '../../../withForwardedRef';
+import {
+  ForwardedRefProps,
+  withForwardedRef,
+} from '../../../lib/withForwardedRef';
 
 import * as styles from './styles.scss';
 
-export interface ButtonProps {
-  variant?: 'primary' | 'secondary' | 'alternate' | 'gray' | 'secondary-gray';
-  size?: 'regular' | 'small' | 'inline';
+export interface ButtonProps extends ForwardedRefProps {
+  size?: 'large' | 'regular' | 'small' | 'xsmall' | 'inline';
+  variant?: 'primary' | 'secondary' | 'gray' | 'secondary-gray' | 'alternate';
   /** apply native disabled property */
   disabled?: boolean;
   children?: React.ReactNode;
-  icon?: React.ReactNode;
   className?: string;
-  /** provide hyperlink by styling <a> like button */
+  icon?: React.ReactNode;
+  /** provide hyperlink by styling <a> anchor link like a button */
   href?: string;
-  type?: 'submit' | 'button' | 'clear';
-  onClick?: (e: React.ChangeEvent<any>) => void;
-  forwardedRef?: React.Ref<any>;
+  type?: 'submit' | 'button' | 'clear' | 'reset';
+  onClick?: EventFunctionT;
 }
 
-class ButtonComponent extends React.PureComponent<
+class ButtonRaw extends React.PureComponent<
   ButtonProps & React.PropsWithoutRef<JSX.IntrinsicElements['button']>
 > {
   static defaultProps = {
@@ -50,8 +52,10 @@ class ButtonComponent extends React.PureComponent<
       variant === 'alternate' && styles.alternate,
       variant === 'gray' && styles.gray,
       variant === 'secondary-gray' && styles.secondaryGray,
+      size === 'large' && styles.large,
       size === 'regular' && styles.regular,
       size === 'small' && styles.small,
+      size === 'xsmall' && styles.xsmall,
       size === 'inline' && styles.inline,
       icon && styles.icon,
       icon && !children && styles.iconOnly,
@@ -84,6 +88,6 @@ class ButtonComponent extends React.PureComponent<
   }
 }
 
-const Button = withForwardedRef(ButtonComponent);
+const Button = withForwardedRef(ButtonRaw);
 
-export { Button, ButtonComponent };
+export { Button };

@@ -7,7 +7,6 @@
   "private": true,
   "main": "dist/halo.js",
   "module": "dist/halo.module.js",
-  "sass": "scss/_halo.scss",
   "style": "scss/_halo.scss",
   "types": "dist/typings/index.d.ts",
   "scripts": {
@@ -16,7 +15,7 @@
     "dev": "docz dev",
     "beforeStage": "npx auto-changelog",
     "changelog": "npx auto-changelog --package --commit-limit false  --template ./tools/changelog.compact.hbs",
-    "watch": "concurrently --kill-others --kill-others-on-fail --names \"HALO:BUILD,HALO:EXPORT:SCSS\" --prefix-colors \"bgBlue.bold,bgMagenta.bold\" --timestamp-format \"YYYY-MM-DD HH:MM\" \"yarn:watch:styles\" \"yarn:watch:build\"",
+    "watch": "concurrently --kill-others --kill-others-on-fail --names \"HALO:STYLES,HALO:BUILD\" --prefix-colors \"bgBlue.bold,bgMagenta.bold\" --timestamp-format \"YYYY-MM-DD HH:MM\" \"yarn:watch:styles\" \"yarn:watch:build\"",
     "watch:build": "chokidar \"src/**/*.{ts,tsx,scss}\" --command \"yarn build\"",
     "watch:styles": "chokidar \"src/**/*.scss\" --command \"yarn run export:scss\"",
     "clean": "rm -rf ./dist/*",
@@ -62,14 +61,15 @@
     "@types/enzyme-adapter-react-16": "^1.0.3",
     "@types/jest": "^23.3.10",
     "@types/lodash": "^4.14.118",
-    "@types/node": "^11.9.4",
+    "@types/node": "^11.13.7",
     "@types/prop-types": "^15.5.6",
-    "@types/react": "^16.8.13",
+    "@types/react": "^16.8.14",
     "@types/react-dom": "^16.8.4",
     "acorn": "6.0.5",
     "auto-changelog": "^1.11.0",
     "awesome-typed-sass-modules": "^1.1.5",
     "babel-plugin-emotion": "^10.0.4",
+    "camelcase": "^5.3.1",
     "chokidar-cli": "^1.2.2",
     "classnames": "^2.2.6",
     "concurrently": "^4.1.0",
@@ -82,6 +82,7 @@
     "enzyme-adapter-react-16": "^1.7.0",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
+    "lodash": "^4.17.11",
     "node-sass": "^4.11.0",
     "prettier": "^1.15.2",
     "prop-types": "^15.6.2",
@@ -89,14 +90,15 @@
     "react-dom": "^16.8.6",
     "react-test-renderer": "^16.8.6",
     "release-it": "^8.4.2",
-    "rollup": "^0.67.4",
+    "rollup": "^1.10.1",
     "rollup-plugin-alias": "^1.5.1",
     "rollup-plugin-commonjs": "^9.2.0",
+    "rollup-plugin-filesize": "^6.0.1",
     "rollup-plugin-node-builtins": "^2.1.2",
     "rollup-plugin-node-resolve": "^4.0.0",
-    "rollup-plugin-postcss": "^1.6.3",
+    "rollup-plugin-postcss": "^2.0.3",
     "rollup-plugin-replace": "^2.1.0",
-    "rollup-plugin-typescript": "^1.0.0",
+    "rollup-plugin-typescript2": "^0.21.0",
     "sass": "^1.15.2",
     "stylelint": "^9.10.1",
     "stylelint-config-prettier": "^4.0.0",
@@ -106,7 +108,7 @@
     "tslib": "^1.9.3",
     "tslint": "^5.12.1",
     "tslint-config-prettier": "^1.18.0",
-    "tslint-react": "^3.6.0",
+    "tslint-react": "^4.0.0",
     "typescript": "^3.3.3",
     "webpack": "4.28.4",
     "webpack-merge": "^4.2.1"
@@ -117,9 +119,12 @@
     "react-dom": ">= 16.8.6"
   },
   "resolutions": {
-    "**/docz-core": "^1.0.2"
+    "**/docz-core": "^1.0.3"
   },
   "engines": {
     "node": ">= 8"
+  },
+  "dependencies": {
+    "@tippy.js/react": "^2.1.2"
   }
 }

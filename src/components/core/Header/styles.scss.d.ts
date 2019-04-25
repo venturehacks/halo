@@ -1,6 +1,7 @@
 declare const styles: {
   readonly "component": string;
   readonly "flow": string;
+  readonly "muted": string;
   readonly "presetHugeHeadline": string;
   readonly "presetLargeHeadline": string;
   readonly "presetMediumHeadline": string;
