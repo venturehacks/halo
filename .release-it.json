@@ -2,14 +2,16 @@
   "buildCommand": "yarn build",
   "scripts": {
     "beforeStart": "yarn test",
-    "beforeStage": "yarn build",
-    "changelog": "git log --pretty=format:\"* %s (%h)\" [REV_RANGE]",
+    "beforeStage": "yarn build && yarn run changelog",
     "afterRelease": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },
   "src": {
     "tagName": "v${version}",
     "beforeStartCommand": "yarn test",
     "afterReleaseCommand": "echo Successfully released ${name} v${version} to ${repo.repository}."
+  },
+  "git": {
+    "changelog": "git log --pretty=format:\"* %s (%h)\" [REV_RANGE]"
   },
   "github": {
     "release": true,
