@@ -19,11 +19,11 @@ $directions: (top bottom left right);
     @include flex-column($align: flex-start);
 
     @each $alignment in $box-alignments {
-      &.align--#{$alignment} {
+      &.align_#{$alignment} {
         align-items: map-get($box-flex, $alignment);
       }
 
-      &.valign--#{$alignment} {
+      &.valign_#{$alignment} {
         justify-content: map-get($box-flex, $alignment);
       }
     }

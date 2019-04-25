@@ -22,6 +22,8 @@
   }
 
   .name {
+    display: block;
+    font-weight: 600;
     font-size: 12px;
     text-transform: capitalize;
     white-space: nowrap;

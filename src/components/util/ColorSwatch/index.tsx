@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import * as React from 'react';
-import { Span } from '~/components/core/Span';
 
 import * as styles from './styles.scss';
 
@@ -23,10 +22,10 @@ function ColorSwatch({
   return (
     <div className={classNames(styles.component, styles[swatch], className)}>
       <div className={styles.color} style={{ backgroundColor: color }} />
-      <Span className={styles.name} semibold block>
+      <span className={styles.name}>
         {name}
         {!name && swatch && getNameFromSwatch(swatch)}
-      </Span>
+      </span>
       {showVariable && (
         <div className={styles.attributes}>{swatch ? `$${swatch}` : color}</div>
       )}
