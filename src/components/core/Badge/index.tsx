@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import * as React from 'react';
-import { Tooltip } from '~/components/core/Tooltip';
+
+import { Tooltip } from '../Tooltip';
 
 import * as styles from './styles.scss';
 
