@@ -35,13 +35,18 @@ export default {
       playground: {
         padding: '20px',
       },
-    }
+    },
+    showPlaygroundEditor: true,
   },
   menu: [
     'Welcome',
     'Colors',
     {
+      name: 'Structure',
+      menu: ['Grid', 'Cell', 'Box']
+    },
+    {
       name: 'Core'
-    }
+    },
   ]
 };
