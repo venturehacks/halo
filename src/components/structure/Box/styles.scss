@@ -46,25 +46,6 @@ $grid-cell-count: 24;
     }
   }
 
-  // TODO: considering moving grid classes to <Grid />
-  &.gridRow {
-    @include grid-row;
-  }
-
-  &.gridCellCentered {
-    @include grid-cell-centered;
-  }
-
-  @for $c from 1 through $grid-cell-count {
-    &.gridCell_#{$c} {
-      @include grid-cell($c);
-    }
-
-    &.gridOffset_#{$c} {
-      @include grid-cell-offset($c);
-    }
-  }
-
   @for $i from 1 through 10 {
     @each $d in $directions {
       &.padding_#{$d}_#{$i} {

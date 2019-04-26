@@ -27,9 +27,6 @@ export interface BoxProps {
   children?: React.ReactNode;
   className?: string;
   column?: boolean;
-  gridRow?: boolean;
-  gridCellSpan?: number;
-  gridCentered?: boolean;
   margin?: number | boolean | NegativeSpace;
   maxHeight?: number | string;
   maxWidth?: number | string;
@@ -56,9 +53,6 @@ function Box({
   children,
   className,
   column,
-  gridCellSpan,
-  gridCentered,
-  gridRow,
   margin,
   maxHeight,
   maxWidth,
@@ -70,57 +64,23 @@ function Box({
   valign,
   wrap,
 }: BoxProps) {
-  // mutually exclusive: gridRow vs. gridCell
-  const isGridElement = gridRow || gridCellSpan;
-  const isGridRow = isGridElement && !gridCellSpan;
-  const isGridCell = isGridElement && !isGridRow;
-
-  // mutually exclusive: column vs. row (grid takes precedence over both)
+  // mutually exclusive: grid vs flexcolumn vs. flexrow
+  const isGridElement = !row && !column;
   const isGenericFlexColumn = !isGridElement && column && !row;
   const isGenericFlexRow = !isGridElement && row;
 
-  // parse 4-direction hash of padding/margin
+  // parse 4-direction hashes for padding/margin
   let negativeSpaceClasses: Dictionary<number | boolean> = {};
-
-  if (typeof padding === 'object') {
-    negativeSpaceClasses = {
-      ...negativeSpaceClasses,
-      ...mapKeys(padding, (value, key) => styles[`padding_${key}_${value}`]),
-    };
-  } else if (
-    (typeof padding === 'number' || typeof padding === 'boolean') &&
-    padding
-  ) {
-    negativeSpaceClasses = {
-      ...negativeSpaceClasses,
-      ...{
-        [styles[`padding_top_${Number(padding)}`]]: true,
-        [styles[`padding_bottom_${Number(padding)}`]]: true,
-        [styles[`padding_left_${Number(padding)}`]]: true,
-        [styles[`padding_right_${Number(padding)}`]]: true,
-      },
-    };
-  }
-
-  if (typeof margin === 'object') {
-    negativeSpaceClasses = {
-      ...negativeSpaceClasses,
-      ...mapKeys(margin, (value, key) => styles[`margin_${key}_${value}`]),
-    };
-  } else if (
-    (typeof margin === 'number' || typeof margin === 'boolean') &&
-    margin
-  ) {
-    negativeSpaceClasses = {
-      ...negativeSpaceClasses,
-      ...{
-        [styles[`margin_top_${Number(margin)}`]]: true,
-        [styles[`margin_bottom_${Number(margin)}`]]: true,
-        [styles[`margin_left_${Number(margin)}`]]: !isGridElement, // disallow for grid elements
-        [styles[`margin_right_${Number(margin)}`]]: !isGridElement, // disallow for grid elements
-      },
-    };
-  }
+  negativeSpaceClasses = augmentNegativeSpaceClasses(
+    negativeSpaceClasses,
+    margin,
+    'margin',
+  );
+  negativeSpaceClasses = augmentNegativeSpaceClasses(
+    negativeSpaceClasses,
+    padding,
+    'padding',
+  );
 
   // inline styles for order, etc.
   const inlineStyles: Dictionary<string | number> = {};
@@ -146,9 +106,6 @@ function Box({
     className,
     isGenericFlexColumn && styles.flexColumn,
     isGenericFlexRow && styles.flexRow,
-    isGridRow && styles.gridRow,
-    isGridCell && styles[`gridCell_${gridCellSpan}`],
-    isGridCell && gridCentered && styles.gridCellCentered,
     relative && styles.relative,
     textAlign && styles[`textAlign_${textAlign}`],
     wrap && styles.wrap,
@@ -162,6 +119,34 @@ function Box({
       {children}
     </div>
   );
+}
+
+function augmentNegativeSpaceClasses(
+  classes: Dictionary<number | boolean>,
+  space: NegativeSpace | number | boolean,
+  metric: 'padding' | 'margin',
+) {
+  if (typeof space === 'object') {
+    return {
+      ...classes,
+      ...mapKeys(space, (value, key) => styles[`${metric}_${key}_${value}`]),
+    };
+  } else if (
+    (typeof space === 'number' || typeof space === 'boolean') &&
+    space
+  ) {
+    return {
+      ...classes,
+      ...{
+        [styles[`${metric}_top_${Number(space)}`]]: true,
+        [styles[`${metric}_bottom_${Number(space)}`]]: true,
+        [styles[`${metric}_left_${Number(space)}`]]: true,
+        [styles[`${metric}_right_${Number(space)}`]]: true,
+      },
+    };
+  }
+
+  return classes;
 }
 
 export { Box };
