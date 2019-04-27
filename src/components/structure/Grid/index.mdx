@@ -1,0 +1,98 @@
+---
+name: Grid
+menu: Structure
+route: /structure/grid
+---
+
+import { Props, Playground } from 'docz';
+import { Grid } from './';
+import { Cell } from '../Cell';
+
+# Grid
+
+Declare a grid container `<Grid>` and fill with `<Cell>` content that snaps to a 24-column grid. Grid cells have sane responsive defaults and stack vertically on handset devices.
+
+### 💡 Convenience of Box
+
+`<Cell>` is a thin preset on `<Grid>`<br />
+`<Grid>` is a thin preset on `<Box>`
+
+
+Both elements inherit most customizations offered by [`<Box>`](/structure/box) by forwarding props.
+
+<Playground>
+  <Grid margin={{ bottom: 2 }}>
+    <Cell span={24} background="aquamarine" textAlign="center" padding>
+     24 cells
+    </Cell>
+  </Grid>
+    <Grid margin={{ bottom: 2 }}>
+    <Cell span={8} background="lightpink" textAlign="center" padding>
+      8
+    </Cell>
+    <Cell span={8} background="lightpink" textAlign="center" padding>
+      8
+    </Cell>
+    <Cell span={8} background="lightpink" textAlign="center" padding>
+      8
+    </Cell>
+  </Grid>
+    <Grid margin={{ bottom: 2 }}>
+    <Cell span={4} background="tomato" textAlign="center" padding={1}>
+      4
+    </Cell>
+    <Cell span={4} background="tomato" textAlign="center" padding>
+      4
+    </Cell>
+    <Cell span={4} background="tomato" textAlign="center" padding>
+      4
+    </Cell>
+    <Cell span={4} background="tomato" textAlign="center" padding={1}>
+      4
+    </Cell>
+    <Cell span={4} background="tomato" textAlign="center" padding>
+      4
+    </Cell>
+    <Cell span={4} background="tomato" textAlign="center" padding>
+      4
+    </Cell>
+  </Grid>
+  <Grid>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+    <Cell background="whitesmoke" textAlign="center">1</Cell>
+  </Grid>
+</Playground>
+
+### Props
+
+<Props of={Grid} />
+
+⚠️ Disabled for now. Upcoming versions of docz will be able to sort out HoC components.
+

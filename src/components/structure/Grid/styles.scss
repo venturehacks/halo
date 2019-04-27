@@ -1,0 +1,25 @@
+@import 'halo';
+
+$grid-cell-count: 24;
+
+.component {
+  @include border-box; // TODO: deprecate
+
+  &.row {
+    @include grid-row;
+  }
+
+  &.centered {
+    @include grid-cell-centered;
+  }
+
+  @for $c from 1 through $grid-cell-count {
+    &.cellSpan_#{$c} {
+      @include grid-cell($c);
+    }
+
+    &.cellOffset_#{$c} {
+      @include grid-cell-offset($c);
+    }
+  }
+}

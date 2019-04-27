@@ -2,24 +2,7 @@ declare const styles: {
   readonly "component": string;
   readonly "wrap": string;
   readonly "relative": string;
-  readonly "column": string;
-  readonly "align--top": string;
-  readonly "valign--top": string;
-  readonly "align--center": string;
-  readonly "valign--center": string;
-  readonly "align--bottom": string;
-  readonly "valign--bottom": string;
-  readonly "align--left": string;
-  readonly "valign--left": string;
-  readonly "align--right": string;
-  readonly "valign--right": string;
-  readonly "align--normal": string;
-  readonly "valign--normal": string;
-  readonly "align--space-between": string;
-  readonly "valign--space-between": string;
-  readonly "align--space-evenly": string;
-  readonly "valign--space-evenly": string;
-  readonly "row": string;
+  readonly "flexColumn": string;
   readonly "align_top": string;
   readonly "valign_top": string;
   readonly "align_center": string;
@@ -36,6 +19,7 @@ declare const styles: {
   readonly "valign_space-between": string;
   readonly "align_space-evenly": string;
   readonly "valign_space-evenly": string;
+  readonly "flexRow": string;
   readonly "padding_top_1": string;
   readonly "margin_top_1": string;
   readonly "padding_bottom_1": string;
@@ -116,6 +100,9 @@ declare const styles: {
   readonly "margin_left_10": string;
   readonly "padding_right_10": string;
   readonly "margin_right_10": string;
+  readonly "textAlign_left": string;
+  readonly "textAlign_center": string;
+  readonly "textAlign_right": string;
 };
 export = styles;
 

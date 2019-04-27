@@ -1,7 +1,91 @@
-@function tempo($scalar: 1) {
-  @if (($scalar * 4) % 1 != 0) {
-    @warn 'tempo() parameter $scalar cannot be more granular than increments of 0.25 (given: #{$scalar})';
+@import 'flex';
+@import 'breakpoints';
+
+@function tempo($magnitude) {
+  @if (($magnitude * 4) % 1 != 0) {
+    @warn 'tempo() parameter $magnitude cannot be more granular than increments of 0.25 (given: #{$magnitude})';
   }
 
-  @return 16px * $scalar;
+  @return 16px * $magnitude;
+}
+
+@function grid-cell-width($cells) {
+  $cell-width: tempo(2); // 32px
+  $gutter-width: tempo(1); // 16px
+  $gutters: $cells - 1;
+
+  @if ($cells % 1 != 0) {
+    @warn 'grid-cell-width() parameter $cells must be an integer! (given: #{$cells})';
+  }
+
+  @if ($cells > 24) {
+    @warn 'grid-cell-width() parameter $cells cannot be greater than 24! (given: #{$cells})';
+  }
+
+  @return ($cells * $cell-width) + ($gutters * $gutter-width);
+}
+
+// wrapper for grid cells
+@mixin grid-row {
+  @include flex-row($align: left, $valign: top);
+  width: 100%;
+  flex-wrap: nowrap;
+
+  @include desktop-up {
+    max-width: 1136px;
+  }
+}
+
+@mixin grid-cell($cells, $offset: 0, $centered: false) {
+  $total: $cells + $offset;
+
+  @if $total > 24 {
+    @warn 'grid() sum of parameters $cells + $offset cannot be greater than 24! (given: #{$cells} cells + #{$offset} offset = #{$total})';
+  }
+
+  @if $offset > 0 and $centered {
+    @warn 'grid() cannot be both centered and apply an offset!';
+  }
+
+  // responsive width by default
+  flex-basis: ($cells / 24) * 100%;
+  flex-shrink: 24 / $cells;
+  width: ($cells / 24) * 100%;
+
+  @include desktop-up {
+    flex-basis: grid-cell-width($cells);
+    width: grid-cell-width($cells);
+  }
+
+  @if $offset > 0 {
+    @include grid-cell-offset($offset);
+  }
+
+  @if $centered {
+    @include grid-cell-centered;
+  } @else {
+    // TODO: responsive margins
+    // ...
+
+    // automatically include right gutter
+    @include desktop-up {
+      margin-right: tempo(1);
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+@mixin grid-cell-centered {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin grid-cell-offset($offset) {
+  margin-left: ($offset / 24) * 1%;
+
+  @include desktop-up {
+    margin-left: grid-cell-width($offset);
+  }
 }

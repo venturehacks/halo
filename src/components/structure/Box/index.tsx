@@ -23,6 +23,7 @@ export interface NegativeSpace {
 
 export interface BoxProps {
   align?: BoxAlign;
+  background?: string;
   children?: React.ReactNode;
   className?: string;
   column?: boolean;
@@ -33,6 +34,7 @@ export interface BoxProps {
   padding?: number | boolean | NegativeSpace;
   relative?: boolean;
   row?: boolean;
+  textAlign?: 'left' | 'center' | 'right';
   valign?: BoxAlign;
   wrap?: boolean;
 }
@@ -47,6 +49,7 @@ Box.defaultProps = {
 
 function Box({
   align,
+  background,
   children,
   className,
   column,
@@ -57,48 +60,27 @@ function Box({
   padding,
   relative,
   row,
+  textAlign,
   valign,
   wrap,
 }: BoxProps) {
-  // only allow column OR row
-  const isColumn = column && !row;
+  // mutually exclusive: grid vs flexcolumn vs. flexrow
+  const isGridElement = !row && !column;
+  const isGenericFlexColumn = !isGridElement && column && !row;
+  const isGenericFlexRow = !isGridElement && row;
 
-  // negative space classes
-  let negativeSpace: Dictionary<number | boolean> = {};
-
-  if (typeof padding === 'object') {
-    negativeSpace = {
-      ...negativeSpace,
-      ...mapKeys(padding, (value, key) => styles[`padding_${key}_${value}`]),
-    };
-  } else if (typeof padding === 'number' && padding > 0) {
-    negativeSpace = {
-      ...negativeSpace,
-      ...{
-        [styles[`padding_top_${padding}`]]: true,
-        [styles[`padding_bottom_${padding}`]]: true,
-        [styles[`padding_left_${padding}`]]: true,
-        [styles[`padding_right_${padding}`]]: true,
-      },
-    };
-  }
-
-  if (typeof margin === 'object') {
-    negativeSpace = {
-      ...negativeSpace,
-      ...mapKeys(margin, (value, key) => styles[`margin_${key}_${value}`]),
-    };
-  } else if (typeof margin === 'number' && margin > 0) {
-    negativeSpace = {
-      ...negativeSpace,
-      ...{
-        [styles[`margin_top_${margin}`]]: true,
-        [styles[`margin_bottom_${margin}`]]: true,
-        [styles[`margin_left_${margin}`]]: true,
-        [styles[`margin_right_${margin}`]]: true,
-      },
-    };
-  }
+  // parse 4-direction hashes for padding/margin
+  let negativeSpaceClasses: Dictionary<number | boolean> = {};
+  negativeSpaceClasses = augmentNegativeSpaceClasses(
+    negativeSpaceClasses,
+    margin,
+    'margin',
+  );
+  negativeSpaceClasses = augmentNegativeSpaceClasses(
+    negativeSpaceClasses,
+    padding,
+    'padding',
+  );
 
   // inline styles for order, etc.
   const inlineStyles: Dictionary<string | number> = {};
@@ -115,16 +97,21 @@ function Box({
     inlineStyles.maxHeight = maxHeight;
   }
 
+  if (background) {
+    inlineStyles.background = background;
+  }
+
   const classes = classNames(
     styles.component,
     className,
-    isColumn && styles.column,
-    !isColumn && styles.row,
+    isGenericFlexColumn && styles.flexColumn,
+    isGenericFlexRow && styles.flexRow,
     relative && styles.relative,
+    textAlign && styles[`textAlign_${textAlign}`],
     wrap && styles.wrap,
     align && styles[`align_${align}`],
     valign && styles[`valign_${valign}`],
-    negativeSpace,
+    negativeSpaceClasses,
   );
 
   return (
@@ -132,6 +119,34 @@ function Box({
       {children}
     </div>
   );
+}
+
+function augmentNegativeSpaceClasses(
+  classes: Dictionary<number | boolean>,
+  space: NegativeSpace | number | boolean,
+  metric: 'padding' | 'margin',
+) {
+  if (typeof space === 'object') {
+    return {
+      ...classes,
+      ...mapKeys(space, (value, key) => styles[`${metric}_${key}_${value}`]),
+    };
+  } else if (
+    (typeof space === 'number' || typeof space === 'boolean') &&
+    space
+  ) {
+    return {
+      ...classes,
+      ...{
+        [styles[`${metric}_top_${Number(space)}`]]: true,
+        [styles[`${metric}_bottom_${Number(space)}`]]: true,
+        [styles[`${metric}_left_${Number(space)}`]]: true,
+        [styles[`${metric}_right_${Number(space)}`]]: true,
+      },
+    };
+  }
+
+  return classes;
 }
 
 export { Box };

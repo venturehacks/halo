@@ -1,10 +1,11 @@
 @import 'halo';
 
+$directions: (top bottom left right);
 $box-alignments: (
   top center bottom left right normal space-between space-evenly
 );
-
-$directions: (top bottom left right);
+$text-alignments: (left center right);
+$grid-cell-count: 24;
 
 .component {
   @include border-box; // TODO: deprecate
@@ -17,7 +18,7 @@ $directions: (top bottom left right);
     position: relative;
   }
 
-  &.column {
+  &.flexColumn {
     @include flex-column($align: flex-start);
 
     @each $alignment in $box-alignments {
@@ -31,7 +32,7 @@ $directions: (top bottom left right);
     }
   }
 
-  &.row {
+  &.flexRow {
     @include flex-row;
 
     @each $alignment in $box-alignments {
@@ -54,6 +55,12 @@ $directions: (top bottom left right);
       &.margin_#{$d}_#{$i} {
         margin-#{$d}: tempo($i);
       }
+    }
+  }
+
+  @each $t in $text-alignments {
+    &.textAlign_#{$t} {
+      text-align: $t;
     }
   }
 }
