@@ -2,12 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.5.2](https://github.com/venturehacks/halo/compare/0.5.1...v0.5.2)
+#### [v0.5.3](https://github.com/venturehacks/halo/compare/0.5.2...v0.5.3)
+
+> 29 April 2019
+
+- Ensure export of AvatarProps [`cc73620`](https://github.com/venturehacks/halo/commit/cc736207e95310a81f881a06181fd9f3131fdb21)
+
+#### [0.5.2](https://github.com/venturehacks/halo/compare/0.5.1...0.5.2)
 
 > 29 April 2019
 
 - Fix Header h6 class reference [`bc4e34f`](https://github.com/venturehacks/halo/commit/bc4e34f5042255649b156a0a051f57b4f26d1a2d)
 - Header h6 preset to mirror muted header sizes [`1d7151e`](https://github.com/venturehacks/halo/commit/1d7151ecbfbd9083f8694448b349d5756c392c66)
+- Release 0.5.2 [`90ad69c`](https://github.com/venturehacks/halo/commit/90ad69c78bb9bf1016eb6740c7ebbe3755d20e0d)
 
 #### [0.5.1](https://github.com/venturehacks/halo/compare/0.5.0...0.5.1)
 
