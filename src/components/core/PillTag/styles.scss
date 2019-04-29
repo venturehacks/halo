@@ -1,16 +1,14 @@
 @import 'halo';
 
 $height: 28px;
-$text: #627899;
-$border: #e4e7f0;
 
 .component {
   @include border-box; // TODO: deprecate
   display: inline-block;
   box-sizing: border-box;
   border-radius: $height / 2;
-  border: 1px solid $border;
-  color: $text;
+  border: 1px solid $gray--xxlight;
+  color: $gray--dark;
   font-size: 14px;
   height: $height;
   line-height: $height - 2px;
@@ -18,15 +16,14 @@ $border: #e4e7f0;
   text-align: center;
   margin-bottom: 0.333rem;
   margin-right: 0.333rem;
-
-  // @include font-antialiased;
+  overflow: hidden;
 
   a,
   a:link,
   a:visited,
   a:hover,
   a:active {
-    color: $text;
+    color: $gray--dark;
     text-decoration: none;
     cursor: pointer;
   }
