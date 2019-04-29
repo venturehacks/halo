@@ -2,11 +2,24 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.5.3](https://github.com/venturehacks/halo/compare/0.5.2...v0.5.3)
+#### [v0.5.4](https://github.com/venturehacks/halo/compare/0.5.3...v0.5.4)
+
+> 29 April 2019
+
+- Include:active styling on Button [`d9c6ae8`](https://github.com/venturehacks/halo/commit/d9c6ae8c066c229419cca155a08607854f58b0b1)
+- PillTag hides overflow [`0998dd5`](https://github.com/venturehacks/halo/commit/0998dd533374f74b8344a087f2252559de8a1c47)
+- export BadgeShape [`a333423`](https://github.com/venturehacks/halo/commit/a33342301340c9a3645a9e55659de44d11d72979)
+- Synthetic default import on Avatar seems to break JSX autocomplete [`bdf807e`](https://github.com/venturehacks/halo/commit/bdf807e1fb9c04d0e0031f7900bf55822f776dc1)
+- allowSyntheticDefaultImports > esModuleInterop [`fc084cb`](https://github.com/venturehacks/halo/commit/fc084cbb24f9d45e3794c411eec974a3cf8c61b3)
+- Patch synthetic default import compat on jest [`c6c32bd`](https://github.com/venturehacks/halo/commit/c6c32bd86528f72ad50e82643ac6777fc1ea54e1)
+- Do not run prettier on changelog [`67a06c4`](https://github.com/venturehacks/halo/commit/67a06c4f9f17f3e29e71d726b4ec53e190217882)
+
+#### [0.5.3](https://github.com/venturehacks/halo/compare/0.5.2...0.5.3)
 
 > 29 April 2019
 
 - Ensure export of AvatarProps [`cc73620`](https://github.com/venturehacks/halo/commit/cc736207e95310a81f881a06181fd9f3131fdb21)
+- Release 0.5.3 [`354f367`](https://github.com/venturehacks/halo/commit/354f367590857cb288a308e45b989834ab924300)
 
 #### [0.5.2](https://github.com/venturehacks/halo/compare/0.5.1...0.5.2)
 
