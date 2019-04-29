@@ -2,7 +2,14 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.5.1](https://github.com/venturehacks/halo/compare/0.5.0...v0.5.1)
+#### [v0.5.2](https://github.com/venturehacks/halo/compare/0.5.1...v0.5.2)
+
+> 29 April 2019
+
+- Fix Header h6 class reference [`bc4e34f`](https://github.com/venturehacks/halo/commit/bc4e34f5042255649b156a0a051f57b4f26d1a2d)
+- Header h6 preset to mirror muted header sizes [`1d7151e`](https://github.com/venturehacks/halo/commit/1d7151ecbfbd9083f8694448b349d5756c392c66)
+
+#### [0.5.1](https://github.com/venturehacks/halo/compare/0.5.0...0.5.1)
 
 > 27 April 2019
 
@@ -11,6 +18,7 @@ All notable changes to this project will be documented in this file. Dates are d
 - Remove grid props + styles from Box; negative space subroutine [`a96b8d1`](https://github.com/venturehacks/halo/commit/a96b8d127ba65bf9573a81a2f0a18f94723a3d89)
 - grid-row with sane defaults, some responsive capabilities [`98dc2d9`](https://github.com/venturehacks/halo/commit/98dc2d906710df5d5e8b75b881eca1e503f6951f)
 - Grid sass mixins + funcs [`858e0bd`](https://github.com/venturehacks/halo/commit/858e0bd139cb5a2fe0ea089dd66990c4017e7a8f)
+- Release 0.5.1 [`8381ba4`](https://github.com/venturehacks/halo/commit/8381ba437ca04d41de75857678c5235e3508a057)
 - Automatically include right gutter [`23859f1`](https://github.com/venturehacks/halo/commit/23859f15e20713c042b58fd18c613f634e6fe650)
 
 #### [0.5.0](https://github.com/venturehacks/halo/compare/v0.4.3...0.5.0)
