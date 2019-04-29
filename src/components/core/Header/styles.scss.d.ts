@@ -7,13 +7,13 @@ declare const styles: {
   readonly "presetMediumHeadline": string;
   readonly "presetSmallHeadline": string;
   readonly "presetMicroHeadline": string;
-  readonly "presetNanoHeadline": string;
   readonly "presetLargeSubhead": string;
   readonly "presetSmallSubhead": string;
   readonly "presetPage": string;
   readonly "presetPanel": string;
   readonly "presetSection": string;
   readonly "presetMicro": string;
+  readonly "presetNano": string;
 };
 export = styles;
 
