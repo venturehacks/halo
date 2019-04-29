@@ -5,7 +5,7 @@ import {
   ForwardedRefProps,
   withForwardedRef,
 } from '../../../lib/withForwardedRef';
-import { Badge, BadgeColor } from '../Badge';
+import { Badge, BadgeColor, BadgeShape } from '../Badge';
 
 import styles from './styles.scss';
 
@@ -16,6 +16,7 @@ export type AvatarSize = 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large';
 export interface AvatarProps {
   badge?: string | boolean;
   badgeColor?: BadgeColor;
+  badgeShape?: BadgeShape;
   className?: string;
   imageUrl: string;
   name: string;
@@ -27,6 +28,7 @@ export interface AvatarProps {
 function AvatarRaw({
   badge = false,
   badgeColor,
+  badgeShape,
   className,
   imageUrl,
   name,
@@ -37,6 +39,7 @@ function AvatarRaw({
 }: AvatarProps & ForwardedRefProps) {
   const badgeOptions = {
     color: badgeColor,
+    shape: badgeShape,
     tooltip,
   };
 

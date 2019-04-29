@@ -13,11 +13,13 @@ export type BadgeColor =
   | 'purple'
   | 'red';
 
+export type BadgeShape = 'square' | 'circle';
+
 export interface BadgeProps {
   children?: React.ReactNode;
   className?: string;
   color?: BadgeColor;
-  shape?: 'square' | 'circle';
+  shape?: BadgeShape;
   tooltip?: string;
 }
 
