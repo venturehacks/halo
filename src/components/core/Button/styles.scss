@@ -44,7 +44,7 @@
     &:active,
     &:global(._forceActive) {
       border-color: $blue--light;
-      background-color: $blue--light;
+      background-color: $blue--xlight;
     }
   }
 
@@ -63,6 +63,7 @@
     &:global(._forceActive) {
       color: $blue--light;
       border-color: $blue--light;
+      background-color: $gray--xxxlight;
       opacity: 0.9;
     }
   }
@@ -72,14 +73,31 @@
   }
 
   &.gray {
-    background-color: #f2f4f7;
-    color: #979797;
+    background-color: $gray--xxxlight;
+    color: $gray--light;
+
+    &:hover {
+      background-color: lighten($gray--xxxlight, 10%);
+    }
+
+    &:active {
+      background-color: $gray--xxlight;
+    }
   }
 
   &.secondaryGray {
     background-color: transparent;
     border-color: $gray;
     color: $gray--dark;
+
+    &:hover {
+      border-color: $gray--light;
+      color: $gray;
+    }
+
+    &:active {
+      background-color: $gray--xxxlight;
+    }
   }
 
   // Sizes
