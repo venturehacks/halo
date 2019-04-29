@@ -2,9 +2,8 @@
   "compileOnSave": false,
   "compilerOptions": {
     "target": "es2015",
-    "module": "es2015",
+    "module": "esnext",
     "moduleResolution": "node",
-    "esModuleInterop": true,
     "resolveJsonModule": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": false,
