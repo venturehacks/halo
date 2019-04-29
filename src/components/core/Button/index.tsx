@@ -8,7 +8,7 @@ import {
 
 import * as styles from './styles.scss';
 
-export interface ButtonProps extends ForwardedRefProps {
+export interface ButtonProps {
   size?: 'large' | 'regular' | 'small' | 'xsmall' | 'inline';
   variant?: 'primary' | 'secondary' | 'gray' | 'secondary-gray' | 'alternate';
   /** apply native disabled property */
@@ -23,7 +23,9 @@ export interface ButtonProps extends ForwardedRefProps {
 }
 
 class ButtonRaw extends React.PureComponent<
-  ButtonProps & React.PropsWithoutRef<JSX.IntrinsicElements['button']>
+  ButtonProps &
+    ForwardedRefProps &
+    React.PropsWithoutRef<JSX.IntrinsicElements['button']>
 > {
   static defaultProps = {
     variant: 'primary',

@@ -13,7 +13,7 @@ export type AvatarShape = 'circle' | 'square';
 
 export type AvatarSize = 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large';
 
-interface Props extends ForwardedRefProps {
+export interface AvatarProps {
   badge?: string | boolean;
   badgeColor?: BadgeColor;
   className?: string;
@@ -34,7 +34,7 @@ function AvatarRaw({
   size = 'medium',
   tooltip,
   forwardedRef,
-}: Props) {
+}: AvatarProps & ForwardedRefProps) {
   const badgeOptions = {
     color: badgeColor,
     tooltip,
