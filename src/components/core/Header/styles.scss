@@ -42,6 +42,13 @@
     line-height: 1.6;
   }
 
+  &.presetNanoHeadline {
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 1.6;
+    text-transform: uppercase;
+  }
+
   &.presetLargeSubhead {
     font-size: 24px;
     line-height: 1.5;

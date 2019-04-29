@@ -14,6 +14,7 @@ export interface HeaderProps {
     | 'panel'
     | 'section'
     | 'micro'
+    | 'nano'
     | 'huge-headline'
     | 'large-headline'
     | 'medium-headline'
@@ -99,7 +100,9 @@ function Header({
     preset === 'page' && styles.presetPage,
     preset === 'panel' && styles.presetPanel,
     preset === 'section' && styles.presetSection,
-    (h5 || h6 || preset === 'micro') && styles.presetMicro,
+    (h5 || preset === 'micro') && styles.presetMicro,
+    (h6 || preset === 'nano') && styles.presetNano,
+
     flow && styles.flow,
     muted && styles.muted,
     className,

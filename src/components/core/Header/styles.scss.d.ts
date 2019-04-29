@@ -7,6 +7,7 @@ declare const styles: {
   readonly "presetMediumHeadline": string;
   readonly "presetSmallHeadline": string;
   readonly "presetMicroHeadline": string;
+  readonly "presetNanoHeadline": string;
   readonly "presetLargeSubhead": string;
   readonly "presetSmallSubhead": string;
   readonly "presetPage": string;
