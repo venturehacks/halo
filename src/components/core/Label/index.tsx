@@ -6,7 +6,7 @@ import styles from './styles.scss';
 interface LabelProps {
   className?: string;
   children: React.ReactNode;
-  color: 'blue' | 'gray';
+  color?: 'blue' | 'gray';
 }
 
 function Label({ children, className, color = 'blue' }: LabelProps) {
