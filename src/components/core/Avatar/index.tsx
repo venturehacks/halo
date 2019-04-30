@@ -63,6 +63,6 @@ function AvatarRaw({
   );
 }
 
-const Avatar = withForwardedRef(AvatarRaw);
+const Avatar = withForwardedRef<AvatarProps>(AvatarRaw);
 
 export { Avatar };

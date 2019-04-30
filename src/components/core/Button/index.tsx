@@ -22,74 +22,63 @@ export interface ButtonProps {
   onClick?: EventFunctionT;
 }
 
-class ButtonRaw extends React.PureComponent<
-  ButtonProps &
-    ForwardedRefProps &
-    React.PropsWithoutRef<JSX.IntrinsicElements['button']>
-> {
-  static defaultProps = {
-    variant: 'primary',
-    size: 'regular',
-    disabled: false,
-    type: 'button',
-  };
+function ButtonRaw({
+  children,
+  className,
+  forwardedRef,
+  href,
+  icon,
+  onClick,
+  size = 'regular',
+  type = 'button',
+  variant = 'primary',
+  ...other
+}: ButtonProps &
+  ForwardedRefProps &
+  React.PropsWithoutRef<JSX.IntrinsicElements['button']>) {
+  const buttonClassNames = classNames([
+    styles.component,
+    variant === 'primary' && styles.primary,
+    variant === 'secondary' && styles.secondary,
+    variant === 'alternate' && styles.alternate,
+    variant === 'gray' && styles.gray,
+    variant === 'secondary-gray' && styles.secondaryGray,
+    size === 'large' && styles.large,
+    size === 'regular' && styles.regular,
+    size === 'small' && styles.small,
+    size === 'xsmall' && styles.xsmall,
+    size === 'inline' && styles.inline,
+    icon && styles.icon,
+    icon && !children && styles.iconOnly,
+    className,
+  ]);
 
-  render(): React.ReactNode {
-    const {
-      children,
-      className,
-      href,
-      size,
-      onClick,
-      icon,
-      variant,
-      forwardedRef,
-      ...other
-    } = this.props;
-
-    const buttonClassNames = classNames([
-      styles.component,
-      variant === 'primary' && styles.primary,
-      variant === 'secondary' && styles.secondary,
-      variant === 'alternate' && styles.alternate,
-      variant === 'gray' && styles.gray,
-      variant === 'secondary-gray' && styles.secondaryGray,
-      size === 'large' && styles.large,
-      size === 'regular' && styles.regular,
-      size === 'small' && styles.small,
-      size === 'xsmall' && styles.xsmall,
-      size === 'inline' && styles.inline,
-      icon && styles.icon,
-      icon && !children && styles.iconOnly,
-      className,
-    ]);
-
-    if (href) {
-      return (
-        <a
-          className={buttonClassNames}
-          href={href}
-          onClick={onClick}
-          ref={forwardedRef}
-        >
-          {icon} {children}
-        </a>
-      );
-    }
-
+  if (href) {
     return (
-      <button
+      <a
         className={buttonClassNames}
+        href={href}
         onClick={onClick}
         ref={forwardedRef}
-        {...other}
       >
         {icon} {children}
-      </button>
+      </a>
     );
   }
+
+  return (
+    <button
+      className={buttonClassNames}
+      onClick={onClick}
+      ref={forwardedRef}
+      type={type}
+      {...other}
+    >
+      {icon} {children}
+    </button>
+  );
 }
 
-const Button = withForwardedRef(ButtonRaw);
+const Button = withForwardedRef<ButtonProps>(ButtonRaw);
 
 export { Button };
