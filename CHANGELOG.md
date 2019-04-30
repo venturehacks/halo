@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.5.4](https://github.com/venturehacks/halo/compare/0.5.3...v0.5.4)
+#### [v0.5.5](https://github.com/venturehacks/halo/compare/0.5.4...v0.5.5)
+
+> 30 April 2019
+
+- Try to resolve withForwardRef HoC destroying props [`da5ff15`](https://github.com/venturehacks/halo/commit/da5ff15863cd2dd53bcb9b29c4570e5b08bd1817)
+
+#### [0.5.4](https://github.com/venturehacks/halo/compare/0.5.3...0.5.4)
 
 > 29 April 2019
 
 - Include:active styling on Button [`d9c6ae8`](https://github.com/venturehacks/halo/commit/d9c6ae8c066c229419cca155a08607854f58b0b1)
+- Release 0.5.4 [`27b443b`](https://github.com/venturehacks/halo/commit/27b443bc541e3fa2f11779989fc3e0d37c020059)
 - PillTag hides overflow [`0998dd5`](https://github.com/venturehacks/halo/commit/0998dd533374f74b8344a087f2252559de8a1c47)
 - export BadgeShape [`a333423`](https://github.com/venturehacks/halo/commit/a33342301340c9a3645a9e55659de44d11d72979)
 - Synthetic default import on Avatar seems to break JSX autocomplete [`bdf807e`](https://github.com/venturehacks/halo/commit/bdf807e1fb9c04d0e0031f7900bf55822f776dc1)
