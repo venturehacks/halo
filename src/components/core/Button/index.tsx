@@ -8,9 +8,17 @@ import {
 
 import * as styles from './styles.scss';
 
+export type ButtonSize = 'large' | 'regular' | 'small' | 'xsmall' | 'inline';
+export type ButtonVariant =
+  | 'primary'
+  | 'secondary'
+  | 'gray'
+  | 'secondary-gray'
+  | 'alternate';
+
 export interface ButtonProps {
-  size?: 'large' | 'regular' | 'small' | 'xsmall' | 'inline';
-  variant?: 'primary' | 'secondary' | 'gray' | 'secondary-gray' | 'alternate';
+  size?: ButtonSize;
+  variant?: ButtonVariant;
   /** apply native disabled property */
   disabled?: boolean;
   children?: React.ReactNode;
