@@ -2,11 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.5.5](https://github.com/venturehacks/halo/compare/0.5.4...v0.5.5)
+#### [v0.5.6](https://github.com/venturehacks/halo/compare/0.5.5...v0.5.6)
+
+> 30 April 2019
+
+- Export ButtonSize + ButtonVariant [`4afafd6`](https://github.com/venturehacks/halo/commit/4afafd6d9a8bde8e41a44c1a148fe7d7be2eaf92)
+- mark Label.color as optional prop [`e43c1fd`](https://github.com/venturehacks/halo/commit/e43c1fd2dd51de8d9b4e23e801dfc98464e4c218)
+
+#### [0.5.5](https://github.com/venturehacks/halo/compare/0.5.4...0.5.5)
 
 > 30 April 2019
 
 - Try to resolve withForwardRef HoC destroying props [`da5ff15`](https://github.com/venturehacks/halo/commit/da5ff15863cd2dd53bcb9b29c4570e5b08bd1817)
+- Release 0.5.5 [`823187f`](https://github.com/venturehacks/halo/commit/823187f3ff28de7fef74da52d0fcd00fab852aa4)
 
 #### [0.5.4](https://github.com/venturehacks/halo/compare/0.5.3...0.5.4)
 
