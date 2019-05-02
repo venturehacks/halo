@@ -12,14 +12,15 @@ $grid-cell-count: 24;
   &.centered {
     @include grid-cell-centered;
   }
+}
 
-  @for $c from 1 through $grid-cell-count {
-    &.cellSpan_#{$c} {
-      @include grid-cell($c);
-    }
+// dynamic indexed classnames must be global
+@for $c from 1 through $grid-cell-count {
+  :global(.__halo_cellSpan_#{$c}) {
+    @include grid-cell($c);
+  }
 
-    &.cellOffset_#{$c} {
-      @include grid-cell-offset($c);
-    }
+  :global(.__halo_cellOffset_#{$c}) {
+    @include grid-cell-offset($c);
   }
 }

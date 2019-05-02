@@ -5,7 +5,7 @@ import { Box, BoxProps } from '../Box';
 
 import * as styles from './styles.scss';
 
-export interface GridProps {
+export interface GridProps extends BoxProps {
   centered?: boolean;
   children?: React.ReactNode;
   className?: string;
@@ -28,14 +28,14 @@ function Grid({
   row,
   span,
   ...boxProps
-}: GridProps & BoxProps) {
+}: GridProps) {
   const classes = classNames(
     styles.component,
     className,
     row && styles.row,
     !row && centered && styles.centered,
-    !row && span && styles[`cellSpan_${span}`],
-    !row && offset && styles[`cellOffset_${offset}`],
+    !row && span && `__halo_cellSpan_${span}`,
+    !row && offset && `__halo_cellOffset_${offset}`,
   );
 
   return (
