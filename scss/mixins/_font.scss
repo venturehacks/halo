@@ -50,7 +50,7 @@
   }
 
   @if $truncate {
-    @include font-truncate;
+    @include text-truncate;
   }
 }
 
@@ -64,7 +64,8 @@
   -moz-osx-font-smoothing: auto;
 }
 
-@mixin font-truncate {
+// note: requires fixed width container
+@mixin text-truncate {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;

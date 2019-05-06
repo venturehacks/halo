@@ -118,7 +118,8 @@
     "react-dom": ">= 16.8.6"
   },
   "resolutions": {
-    "**/docz-core": "^1.0.3"
+    "**/docz-core": "^1.0.3",
+    "get-caller-file": "1.0.3"
   },
   "engines": {
     "node": ">= 8"
