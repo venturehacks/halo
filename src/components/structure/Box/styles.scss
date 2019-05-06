@@ -20,47 +20,52 @@ $grid-cell-count: 24;
 
   &.flexColumn {
     @include flex-column($align: flex-start);
-
-    @each $alignment in $box-alignments {
-      &.align_#{$alignment} {
-        align-items: map-get($box-flex, $alignment);
-      }
-
-      &.valign_#{$alignment} {
-        justify-content: map-get($box-flex, $alignment);
-      }
-    }
   }
 
   &.flexRow {
     @include flex-row;
+  }
+}
 
-    @each $alignment in $box-alignments {
-      &.align_#{$alignment} {
-        justify-content: map-get($box-flex, $alignment);
-      }
+/**
+ * TODO: global selectors shouldn't be necessary.
+         figure out what the hell is wrong with cssmodules
+**/
 
-      &.valign_#{$alignment} {
-        align-items: map-get($box-flex, $alignment);
-      }
-    }
+@each $alignment in $box-alignments {
+  // column
+  :global(.__halo_column_align_#{$alignment}) {
+    align-items: map-get($box-flex, $alignment);
   }
 
-  @for $i from 1 through 10 {
-    @each $d in $directions {
-      &.padding_#{$d}_#{$i} {
-        padding-#{$d}: tempo($i);
-      }
-
-      &.margin_#{$d}_#{$i} {
-        margin-#{$d}: tempo($i);
-      }
-    }
+  :global(.__halo_column_valign_#{$alignment}) {
+    justify-content: map-get($box-flex, $alignment);
   }
 
-  @each $t in $text-alignments {
-    &.textAlign_#{$t} {
-      text-align: $t;
+  // row
+  :global(.__halo_row_align_#{$alignment}) {
+    justify-content: map-get($box-flex, $alignment);
+  }
+
+  :global(.__halo_row_valign_#{$alignment}) {
+    align-items: map-get($box-flex, $alignment);
+  }
+}
+
+@for $i from 1 through 10 {
+  @each $d in $directions {
+    :global(.__halo_padding_#{$d}_#{$i}) {
+      padding-#{$d}: tempo($i);
     }
+
+    :global(.__halo_margin_#{$d}_#{$i}) {
+      margin-#{$d}: tempo($i);
+    }
+  }
+}
+
+@each $t in $text-alignments {
+  :global(.__halo_textAlign_#{$t}) {
+    text-align: $t;
   }
 }

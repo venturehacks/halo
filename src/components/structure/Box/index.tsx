@@ -107,10 +107,12 @@ function Box({
     isGenericFlexColumn && styles.flexColumn,
     isGenericFlexRow && styles.flexRow,
     relative && styles.relative,
-    textAlign && styles[`textAlign_${textAlign}`],
+    textAlign && styles[`__halo_textAlign_${textAlign}`],
     wrap && styles.wrap,
-    align && styles[`align_${align}`],
-    valign && styles[`valign_${valign}`],
+    isGenericFlexColumn && align && `__halo_column_align_${align}`,
+    isGenericFlexColumn && valign && `__halo_column_valign_${align}`,
+    isGenericFlexRow && align && `__halo_row_align_${align}`,
+    isGenericFlexRow && valign && `__halo_row_valign_${align}`,
     negativeSpaceClasses,
   );
 
@@ -129,7 +131,7 @@ function augmentNegativeSpaceClasses(
   if (typeof space === 'object') {
     return {
       ...classes,
-      ...mapKeys(space, (value, key) => styles[`${metric}_${key}_${value}`]),
+      ...mapKeys(space, (value, key) => `__halo_${metric}_${key}_${value}`),
     };
   } else if (
     (typeof space === 'number' || typeof space === 'boolean') &&
@@ -138,10 +140,10 @@ function augmentNegativeSpaceClasses(
     return {
       ...classes,
       ...{
-        [styles[`${metric}_top_${Number(space)}`]]: true,
-        [styles[`${metric}_bottom_${Number(space)}`]]: true,
-        [styles[`${metric}_left_${Number(space)}`]]: true,
-        [styles[`${metric}_right_${Number(space)}`]]: true,
+        [`__halo_${metric}_top_${Number(space)}`]: true,
+        [`__halo_${metric}_bottom_${Number(space)}`]: true,
+        [`__halo_${metric}_left_${Number(space)}`]: true,
+        [`__halo_${metric}_right_${Number(space)}`]: true,
       },
     };
   }
