@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.5.8](https://github.com/venturehacks/halo/compare/0.5.7...v0.5.8)
+#### [v0.5.9](https://github.com/venturehacks/halo/compare/0.5.8...v0.5.9)
+
+> 6 May 2019
+
+- Use globally scoped dynamic classes for Box [`bde478f`](https://github.com/venturehacks/halo/commit/bde478f959e2a62babc0a8080417c11cbb51b76c)
+
+#### [0.5.8](https://github.com/venturehacks/halo/compare/0.5.7...0.5.8)
 
 > 6 May 2019
 
 - Pin get-caller-file resolution to 1.0.3 [`452fe73`](https://github.com/venturehacks/halo/commit/452fe73d6f9967b3f76cad1993edba2017e4c132)
+- Release 0.5.8 [`1a3befc`](https://github.com/venturehacks/halo/commit/1a3befc91b9c68a071d437df9ed7a8c3bbb9cd5e)
 
 #### [0.5.7](https://github.com/venturehacks/halo/compare/0.5.6...0.5.7)
 
