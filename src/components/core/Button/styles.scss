@@ -161,7 +161,7 @@
 
   &.xsmall {
     font-size: 12px;
-    padding: tempo(0.5) tempo(1);
+    padding: tempo(0.25) tempo(0.5);
 
     &.text {
       padding-left: tempo(0.5);
@@ -177,7 +177,6 @@
     display: inline-block;
     font-size: inherit;
     padding: tempo(0.25) tempo(0.5);
-    margin-right: 0.333em;
   }
 
   &.icon {
