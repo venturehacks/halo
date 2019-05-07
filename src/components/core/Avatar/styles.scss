@@ -6,7 +6,6 @@ $size-xsmall: 32px;
 $size-small: 48px;
 $size-medium: 60px;
 $size-large: 80px;
-
 $size-badge: 16px;
 
 .component {
@@ -42,7 +41,7 @@ $size-badge: 16px;
 
 img.avatar {
   display: block;
-  border: 1px solid $gray--dark;
+  border: 1px solid $gray--xxxlight;
   max-width: 100%;
 
   // shapes
