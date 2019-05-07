@@ -2,11 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.5.9](https://github.com/venturehacks/halo/compare/0.5.8...v0.5.9)
+#### [v0.5.10](https://github.com/venturehacks/halo/compare/0.5.9...v0.5.10)
+
+> 7 May 2019
+
+- improve Button xsmall metrics; remove inline Button margin [`e48cff7`](https://github.com/venturehacks/halo/commit/e48cff76345e6e0914f09078791093375bc4d93f)
+- correct Avatar outline color [`ad70eb3`](https://github.com/venturehacks/halo/commit/ad70eb3f7937e9d076fbc7d19ec0a293476a90e1)
+
+#### [0.5.9](https://github.com/venturehacks/halo/compare/0.5.8...0.5.9)
 
 > 6 May 2019
 
 - Use globally scoped dynamic classes for Box [`bde478f`](https://github.com/venturehacks/halo/commit/bde478f959e2a62babc0a8080417c11cbb51b76c)
+- Release 0.5.9 [`b324da0`](https://github.com/venturehacks/halo/commit/b324da0282529d98313f019dd4c8e4077d51b4b0)
 
 #### [0.5.8](https://github.com/venturehacks/halo/compare/0.5.7...0.5.8)
 
