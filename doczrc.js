@@ -9,6 +9,7 @@ export default {
   notUseSpecifiers: true,
   src: path.join(__dirname, 'src'),
   filterComponents: files => files.filter(filepath => /components\/.*\/*\.(js|jsx|ts|tsx)$/.test(filepath)),
+  dest: '/docs',
   onCreateWebpackChain: (config) => {
     if (config.resolve.alias.set) {
       config.resolve.alias.set('~/components', path.join(__dirname, 'src', 'components'));
