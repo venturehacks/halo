@@ -4,6 +4,7 @@ import { PaletteColor } from '~/lib/colors';
 import {
   TextColorScheme,
   TextContrast,
+  TextLineHeight,
   TextSize,
   TextWeight,
   textContrastForConfiguration,
