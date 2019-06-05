@@ -2,10 +2,27 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.5.10](https://github.com/venturehacks/halo/compare/0.5.9...v0.5.10)
+#### [v0.5.11](https://github.com/venturehacks/halo/compare/0.5.10...v0.5.11)
+
+> 5 June 2019
+
+- Another try at docs [`aa52980`](https://github.com/venturehacks/halo/commit/aa52980ed655524f41b8c35947f00a48e0e0b150)
+- First try at docs deploy [`0440c7f`](https://github.com/venturehacks/halo/commit/0440c7ffc41fec888b737a7e7392c20438d17dc0)
+- Docz 1.2.0 + props table fixes :tada: [`939ff81`](https://github.com/venturehacks/halo/commit/939ff81464236f5fe5ca4aa006e091f2dd807ef7)
+- Another try at docs [`d6ad56f`](https://github.com/venturehacks/halo/commit/d6ad56f799d73c3c487dae0c94d604154dc14bea)
+- Another try at docs [`76bb404`](https://github.com/venturehacks/halo/commit/76bb4044590c08f800bcc64e31ee8747405ff106)
+- Another try at docs [`7ba2215`](https://github.com/venturehacks/halo/commit/7ba2215a075823a049ffd58d96a703b915dfda5b)
+- docs maybe works this time [`3a224cf`](https://github.com/venturehacks/halo/commit/3a224cf7475bc54a2a6faa2e695464148862e8ba)
+- Fix paths for Netlify [`919f025`](https://github.com/venturehacks/halo/commit/919f025e7d44e709fe3e1bedc3bbdf510bac984b)
+- Set theme jekyll-theme-minimal [`6e2982a`](https://github.com/venturehacks/halo/commit/6e2982ab69b9ede1e8fbc14f7cdd2c30b4c35292)
+- Prepare for docs deploy [`7c6f5f2`](https://github.com/venturehacks/halo/commit/7c6f5f22b661454819da8e930fbc5b95203f0c23)
+- [Avatar] add max-height to img [`b772954`](https://github.com/venturehacks/halo/commit/b772954dd89d8a03d4309e97ea4a1017b3175035)
+
+#### [0.5.10](https://github.com/venturehacks/halo/compare/0.5.9...0.5.10)
 
 > 7 May 2019
 
+- Release 0.5.10 [`e8457c4`](https://github.com/venturehacks/halo/commit/e8457c4db259beb17154a241d109728dbb555a92)
 - improve Button xsmall metrics; remove inline Button margin [`e48cff7`](https://github.com/venturehacks/halo/commit/e48cff76345e6e0914f09078791093375bc4d93f)
 - correct Avatar outline color [`ad70eb3`](https://github.com/venturehacks/halo/commit/ad70eb3f7937e9d076fbc7d19ec0a293476a90e1)
 
