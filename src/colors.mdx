@@ -5,81 +5,112 @@ route: /colors
 
 import { ColorSwatch } from './components/util/ColorSwatch';
 import { Box } from './components/structure/Box';
-
+import './index.scss';
 
 # Color Palette
 
+## Typography
+
 <Box>
-  {/* Grays */}
+  {/* dark text on light */}
   <Box row align="space-between" margin={{ bottom: 1 }}>
-    <ColorSwatch swatch="gray--xxxdark" />
-    <ColorSwatch swatch="gray--xxdark" />
-    <ColorSwatch swatch="gray--xdark" />
-    <ColorSwatch swatch="gray--dark" />
-    <ColorSwatch swatch="gray" />
-    <ColorSwatch swatch="gray--light" />
-    <ColorSwatch swatch="gray--xlight" />
-    <ColorSwatch swatch="gray--xxlight" />
-    <ColorSwatch swatch="gray--xxxlight" />
+    <ColorSwatch swatch="text-dark--aaaa" />
+    <ColorSwatch swatch="text-dark--aaa" />
+    <ColorSwatch swatch="text-dark--aa" />
+    <ColorSwatch swatch="text-dark--a" />
+    <ColorSwatch swatch="text-dark--link" />
+    <ColorSwatch swatch="text-dark--success" />
+    <ColorSwatch swatch="text-dark--warning" />
+    <ColorSwatch swatch="text-dark--error" />
+  </Box>
+  {/* light text on dark */}
+  <Box row align="space-between" margin={{ bottom: 1 }}>
+    <ColorSwatch swatch="text-light--aaaa" backgroundColor="black" />
+    <ColorSwatch swatch="text-light--aaa" backgroundColor="black" />
+    <ColorSwatch swatch="text-light--aa" backgroundColor="black" />
+    <ColorSwatch swatch="text-light--a" backgroundColor="black" />
+    <ColorSwatch swatch="text-light--link" backgroundColor="black" />
+    <ColorSwatch swatch="text-light--success" backgroundColor="black" />
+    <ColorSwatch swatch="text-light--warning" backgroundColor="black" />
+    <ColorSwatch swatch="text-light--error" backgroundColor="black" />
+  </Box>
+</Box>
+
+
+## Spectrum
+
+<Box>
+  {/* slates */}
+  <Box row align="space-between" margin={{ bottom: 1 }}>
+    <ColorSwatch swatch="slate--900" />
+    <ColorSwatch swatch="slate--800" />
+    <ColorSwatch swatch="slate--700" />
+    <ColorSwatch swatch="slate--600" />
+    <ColorSwatch swatch="slate--500" />
+    <ColorSwatch swatch="slate--400" />
+    <ColorSwatch swatch="slate--300" />
+    <ColorSwatch swatch="slate--200" />
+    <ColorSwatch swatch="slate--100" />
   </Box>
   {/* Blues */}
   <Box row align="space-between" margin={{ bottom: 1 }}>
-    <ColorSwatch swatch="blue--xxxdark" />
-    <ColorSwatch swatch="blue--xxdark" />
-    <ColorSwatch swatch="blue--xdark" />
-    <ColorSwatch swatch="blue--dark" />
-    <ColorSwatch swatch="blue" />
-    <ColorSwatch swatch="blue--light" />
-    <ColorSwatch swatch="blue--xlight" />
-    <ColorSwatch swatch="blue--xxlight" />
-    <ColorSwatch swatch="blue--xxxlight" />
+    <ColorSwatch swatch="blue--900" />
+    <ColorSwatch swatch="blue--800" />
+    <ColorSwatch swatch="blue--700" />
+    <ColorSwatch swatch="blue--600" />
+    <ColorSwatch swatch="blue--500" />
+    <ColorSwatch swatch="blue--400" />
+    <ColorSwatch swatch="blue--300" />
+    <ColorSwatch swatch="blue--200" />
+    <ColorSwatch swatch="blue--100" />
   </Box>
   {/* Greens */}
   <Box row align="space-between" margin={{ bottom: 1 }}>
-    <ColorSwatch swatch="green--xxxdark" />
-    <ColorSwatch swatch="green--xxdark" />
-    <ColorSwatch swatch="green--xdark" />
-    <ColorSwatch swatch="green--dark" />
-    <ColorSwatch swatch="green" />
-    <ColorSwatch swatch="green--light" />
-    <ColorSwatch swatch="green--xlight" />
-    <ColorSwatch swatch="green--xxlight" />
-    <ColorSwatch swatch="green--xxxlight" />
+    <ColorSwatch swatch="green--900" />
+    <ColorSwatch swatch="green--800" />
+    <ColorSwatch swatch="green--700" />
+    <ColorSwatch swatch="green--600" />
+    <ColorSwatch swatch="green--500" />
+    <ColorSwatch swatch="green--400" />
+    <ColorSwatch swatch="green--300" />
+    <ColorSwatch swatch="green--200" />
+    <ColorSwatch swatch="green--100" />
   </Box>
   {/* Reds */}
   <Box row align="space-between" margin={{ bottom: 1 }}>
-    <ColorSwatch swatch="red--xxxdark" />
-    <ColorSwatch swatch="red--xxdark" />
-    <ColorSwatch swatch="red--xdark" />
-    <ColorSwatch swatch="red--dark" />
-    <ColorSwatch swatch="red" />
-    <ColorSwatch swatch="red--light" />
-    <ColorSwatch swatch="red--xlight" />
-    <ColorSwatch swatch="red--xxlight" />
-    <ColorSwatch swatch="red--xxxlight" />
+    <ColorSwatch swatch="red--900" />
+    <ColorSwatch swatch="red--800" />
+    <ColorSwatch swatch="red--700" />
+    <ColorSwatch swatch="red--600" />
+    <ColorSwatch swatch="red--500" />
+    <ColorSwatch swatch="red--400" />
+    <ColorSwatch swatch="red--300" />
+    <ColorSwatch swatch="red--200" />
+    <ColorSwatch swatch="red--100" />
   </Box>
   {/* Purples */}
   <Box row align="space-between" margin={{ bottom: 1 }}>
-    <ColorSwatch swatch="purple--xxxdark" />
-    <ColorSwatch swatch="purple--xxdark" />
-    <ColorSwatch swatch="purple--xdark" />
-    <ColorSwatch swatch="purple--dark" />
-    <ColorSwatch swatch="purple" />
-    <ColorSwatch swatch="purple--light" />
-    <ColorSwatch swatch="purple--xlight" />
-    <ColorSwatch swatch="purple--xxlight" />
-    <ColorSwatch swatch="purple--xxxlight" />
+    <ColorSwatch swatch="purple--900" />
+    <ColorSwatch swatch="purple--800" />
+    <ColorSwatch swatch="purple--700" />
+    <ColorSwatch swatch="purple--600" />
+    <ColorSwatch swatch="purple--500" />
+    <ColorSwatch swatch="purple--400" />
+    <ColorSwatch swatch="purple--300" />
+    <ColorSwatch swatch="purple--200" />
+    <ColorSwatch swatch="purple--100" />
   </Box>
   {/* Oranges */}
   <Box row align="space-between" margin={{ bottom: 1 }}>
-    <ColorSwatch swatch="orange--xxxdark" />
-    <ColorSwatch swatch="orange--xxdark" />
-    <ColorSwatch swatch="orange--xdark" />
-    <ColorSwatch swatch="orange--dark" />
-    <ColorSwatch swatch="orange" />
-    <ColorSwatch swatch="orange--light" />
-    <ColorSwatch swatch="orange--xlight" />
-    <ColorSwatch swatch="orange--xxlight" />
-    <ColorSwatch swatch="orange--xxxlight" />
+    <ColorSwatch swatch="orange--900" />
+    <ColorSwatch swatch="orange--800" />
+    <ColorSwatch swatch="orange--700" />
+    <ColorSwatch swatch="orange--600" />
+    <ColorSwatch swatch="orange--500" />
+    <ColorSwatch swatch="orange--400" />
+    <ColorSwatch swatch="orange--300" />
+    <ColorSwatch swatch="orange--200" />
+    <ColorSwatch swatch="orange--100" />
   </Box>
 </Box>
+

@@ -2,132 +2,168 @@
 $white: #fff;
 $black: #000;
 
-// gray
-$gray--xxxdark: #050c26 !default;
-$gray--xxdark: #162040 !default;
-$gray--xdark: #385075 !default;
-$gray--dark: #576f92 !default;
-$gray: #7b91b1 !default;
-$gray--light: #acbdd5 !default;
-$gray--xlight: #d2d9e5 !default;
-$gray--xxlight: #e4e7f0 !default;
-$gray--xxxlight: #f2f4f7 !default;
+// TYPOGRAPHY
+
+// dark text on light background
+$text-dark--aaaa: #050c26;
+$text-dark--aaa: #525769;
+$text-dark--aa: #717584;
+$text-dark--a: #9194a0;
+
+$text-dark--link: #0a6cff;
+$text-dark--success: #008562;
+$text-dark--warning: #ac6600;
+$text-dark--error: #cc033e;
+
+// light text on dark background
+$text-light--aaaa: #fff;
+$text-light--aaa: #9b9da8;
+$text-light--aa: #777b89;
+$text-light--a: #5a5e70;
+
+$text-light--link: #1a75ff;
+$text-light--success: #009c5e;
+$text-light--warning: #c56e09;
+$text-light--error: #ee2531;
+
+// SPECTRUM
+
+// slate
+$slate--900: #050c26 !default;
+$slate--800: #162040 !default;
+$slate--700: #385075 !default;
+$slate--600: #576f92 !default;
+$slate--500: #7b91b1 !default;
+$slate--400: #acbdd5 !default;
+$slate--300: #d2d9e5 !default;
+$slate--200: #e4e7f0 !default;
+$slate--100: #f2f4f7 !default;
 
 // blue
-$blue--xxxdark: #000649 !default;
-$blue--xxdark: #001366 !default;
-$blue--xdark: #0029b0 !default;
-$blue--dark: #0059de !default;
-$blue: #0f6fff !default;
-$blue--light: #268bff !default;
-$blue--xlight: #85beff !default;
-$blue--xxlight: #dde9f8 !default;
-$blue--xxxlight: #f2f8ff !default;
+$blue--900: #000649 !default;
+$blue--800: #001366 !default;
+$blue--700: #0029b0 !default;
+$blue--600: #0059de !default;
+$blue--500: #0f6fff !default;
+$blue--400: #268bff !default;
+$blue--300: #85beff !default;
+$blue--200: #dde9f8 !default;
+$blue--100: #f2f8ff !default;
 
 // green
-$green--xxxdark: #003520 !default;
-$green--xxdark: #004328 !default;
-$green--xdark: #005a37 !default;
-$green--dark: #008953 !default;
-$green: #009c5e !default;
-$green--light: #00a880 !default;
-$green--xlight: #00cc96 !default;
-$green--xxlight: #b7ecde !default;
-$green--xxxlight: #e1faf3 !default;
+$green--900: #003520 !default;
+$green--800: #004328 !default;
+$green--700: #005a37 !default;
+$green--600: #008953 !default;
+$green--500: #009c5e !default;
+$green--400: #00a880 !default;
+$green--300: #00cc96 !default;
+$green--200: #b7ecde !default;
+$green--100: #e1faf3 !default;
 
 // red
-$red--xxxdark: #4d001d !default;
-$red--xxdark: #a00038 !default;
-$red--xdark: #cc033e !default;
-$red--dark: #e9304b !default;
-$red: #f2555f !default;
-$red--light: #f56671 !default;
-$red--xlight: #fb868e !default;
-$red--xxlight: #ffdce0 !default;
-$red--xxxlight: #fff1f3 !default;
+$red--900: #4d001d !default;
+$red--800: #a00038 !default;
+$red--700: #cc033e !default;
+$red--600: #e9304b !default;
+$red--500: #f2555f !default;
+$red--400: #f56671 !default;
+$red--300: #fb868e !default;
+$red--200: #ffdce0 !default;
+$red--100: #fff1f3 !default;
 
 // purple
-$purple--xxxdark: #220061 !default;
-$purple--xxdark: #311094 !default;
-$purple--xdark: #4039a8 !default;
-$purple--dark: #5646be !default;
-$purple: #7956bf !default;
-$purple--light: #9875de !default;
-$purple--xlight: #b99ae9 !default;
-$purple--xxlight: #dbc0f8 !default;
-$purple--xxxlight: #f8f1ff !default;
+$purple--900: #220061 !default;
+$purple--800: #311094 !default;
+$purple--700: #4039a8 !default;
+$purple--600: #5646be !default;
+$purple--500: #7956bf !default;
+$purple--400: #9875de !default;
+$purple--300: #b99ae9 !default;
+$purple--200: #dbc0f8 !default;
+$purple--100: #f8f1ff !default;
 
 // orange
-$orange--xxxdark: #4e2400 !default;
-$orange--xxdark: #914404 !default;
-$orange--xdark: #b35a04 !default;
-$orange--dark: #c56e09 !default;
-$orange: #cb7d0e !default;
-$orange--light: #f2a73d !default;
-$orange--xlight: #e9b44f !default;
-$orange--xxlight: #fce79b !default;
-$orange--xxxlight: #fff9e7 !default;
+$orange--900: #4e2400 !default;
+$orange--800: #914404 !default;
+$orange--700: #b35a04 !default;
+$orange--600: #c56e09 !default;
+$orange--500: #cb7d0e !default;
+$orange--400: #f2a73d !default;
+$orange--300: #e9b44f !default;
+$orange--200: #fce79b !default;
+$orange--100: #fff9e7 !default;
 
 // for map-get programmatic look up
 $colors: (
-  // gray
-    gray--xxxdark: $gray--xxxdark,
-  gray--xxdark: $gray--xxdark,
-  gray--xdark: $gray--xdark,
-  gray--dark: $gray--dark,
-  gray: $gray,
-  gray--light: $gray--light,
-  gray--xlight: $gray--xlight,
-  gray--xxlight: $gray--xxlight,
-  gray--xxxlight: $gray--xxxlight,
-  // blue
-    blue--xxxdark: $blue--xxxdark,
-  blue--xxdark: $blue--xxdark,
-  blue--xdark: $blue--xdark,
-  blue--dark: $blue--dark,
-  blue: $blue,
-  blue--light: $blue--light,
-  blue--xlight: $blue--xlight,
-  blue--xxlight: $blue--xxlight,
-  blue--xxxlight: $blue--xxxlight,
-  // green
-    green--xxxdark: $green--xxxdark,
-  green--xxdark: $green--xxdark,
-  green--xdark: $green--xdark,
-  green--dark: $green--dark,
-  green: $green,
-  green--light: $green--light,
-  green--xlight: $green--xlight,
-  green--xxlight: $green--xxlight,
-  green--xxxlight: $green--xxxlight,
-  // red
-    red--xxxdark: $red--xxxdark,
-  red--xxdark: $red--xxdark,
-  red--xdark: $red--xdark,
-  red--dark: $red--dark,
-  red: $red,
-  red--light: $red--light,
-  red--xlight: $red--xlight,
-  red--xxlight: $red--xxlight,
-  red--xxxlight: $red--xxxlight,
-  // purple
-    purple--xxxdark: $purple--xxxdark,
-  purple--xxdark: $purple--xxdark,
-  purple--xdark: $purple--xdark,
-  purple--dark: $purple--dark,
-  purple: $purple,
-  purple--light: $purple--light,
-  purple--xlight: $purple--xlight,
-  purple--xxlight: $purple--xxlight,
-  purple--xxxlight: $purple--xxxlight,
-  // orange
-    orange--xxxdark: $orange--xxxdark,
-  orange--xxdark: $orange--xxdark,
-  orange--xdark: $orange--xdark,
-  orange--dark: $orange--dark,
-  orange: $orange,
-  orange--light: $orange--light,
-  orange--xlight: $orange--xlight,
-  orange--xxlight: $orange--xxlight,
-  orange--xxxlight: $orange--xxxlight
+  text-dark--aaaa: $text-dark--aaaa,
+  text-dark--aaa: $text-dark--aaa,
+  text-dark--aa: $text-dark--aa,
+  text-dark--a: $text-dark--a,
+  text-dark--link: $text-dark--link,
+  text-dark--success: $text-dark--success,
+  text-dark--warning: $text-dark--warning,
+  text-dark--error: $text-dark--error,
+  text-light--aaaa: $text-light--aaaa,
+  text-light--aaa: $text-light--aaa,
+  text-light--aa: $text-light--aa,
+  text-light--a: $text-light--a,
+  text-light--link: $text-light--link,
+  text-light--success: $text-light--success,
+  text-light--warning: $text-light--warning,
+  text-light--error: $text-light--error,
+  slate--900: $slate--900,
+  slate--800: $slate--800,
+  slate--700: $slate--700,
+  slate--600: $slate--600,
+  slate--500: $slate--500,
+  slate--400: $slate--400,
+  slate--300: $slate--300,
+  slate--200: $slate--200,
+  slate--100: $slate--100,
+  blue--900: $blue--900,
+  blue--800: $blue--800,
+  blue--700: $blue--700,
+  blue--600: $blue--600,
+  blue--500: $blue--500,
+  blue--400: $blue--400,
+  blue--300: $blue--300,
+  blue--200: $blue--200,
+  blue--100: $blue--100,
+  green--900: $green--900,
+  green--800: $green--800,
+  green--700: $green--700,
+  green--600: $green--600,
+  green--500: $green--500,
+  green--400: $green--400,
+  green--300: $green--300,
+  green--200: $green--200,
+  green--100: $green--100,
+  red--900: $red--900,
+  red--800: $red--800,
+  red--700: $red--700,
+  red--600: $red--600,
+  red--500: $red--500,
+  red--400: $red--400,
+  red--300: $red--300,
+  red--200: $red--200,
+  red--100: $red--100,
+  purple--900: $purple--900,
+  purple--800: $purple--800,
+  purple--700: $purple--700,
+  purple--600: $purple--600,
+  purple--500: $purple--500,
+  purple--400: $purple--400,
+  purple--300: $purple--300,
+  purple--200: $purple--200,
+  purple--100: $purple--100,
+  orange--900: $orange--900,
+  orange--800: $orange--800,
+  orange--700: $orange--700,
+  orange--600: $orange--600,
+  orange--500: $orange--500,
+  orange--400: $orange--400,
+  orange--300: $orange--300,
+  orange--200: $orange--200,
+  orange--100: $orange--100,
 );

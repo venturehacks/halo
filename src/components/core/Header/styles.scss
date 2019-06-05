@@ -2,7 +2,7 @@
 
 .component {
   @include border-box; // TODO: deprecate
-  color: $gray--xxxdark;
+  color: $slate--900;
   font-weight: 500;
   line-height: 1;
   margin: 0;
@@ -12,7 +12,7 @@
   }
 
   &.muted.muted {
-    color: $gray;
+    color: $slate--500;
   }
 
   // MARKETING
@@ -62,17 +62,17 @@
 
   &.presetPanel {
     font-size: 18px;
-    color: $gray--xxdark;
+    color: $slate--800;
   }
 
   &.presetSection {
     font-size: 16px;
-    color: $gray--xxdark;
+    color: $slate--800;
   }
 
   &.presetMicro {
     font-size: 14px;
-    color: $gray--xxdark;
+    color: $slate--800;
     line-height: 1.145;
   }
 

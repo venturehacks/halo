@@ -4,7 +4,7 @@
   :global(.docz) & {
     // TODO: deprecate
     padding: 20px;
-    width: 100px;
+    width: 150px;
     display: inline-block;
   }
 }
@@ -42,7 +42,7 @@
 }
 
 .light {
-  color: #999;
+  color: $slate--300;
 }
 
 .muted {
@@ -79,11 +79,15 @@
 }
 
 .error {
-  color: red;
+  color: $text-dark--error;
+}
+
+.warning {
+  color: $text-dark--warning;
 }
 
 .success {
-  color: green;
+  color: $text-dark--success;
 }
 
 .antialiased {

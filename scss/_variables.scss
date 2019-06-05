@@ -27,8 +27,8 @@ $font-families: (
 );
 
 // weights
-$weight-ultralight: 200;
-$weight-light: 300;
+$weight-ultra400: 200;
+$weight-400: 300;
 $weight-regular: 400;
 $weight-medium: 500;
 $weight-semibold: 600;
@@ -36,8 +36,8 @@ $weight-bold: 700;
 $weight-heavy: 800;
 
 $weights: (
-  ultralight: $weight-ultralight,
-  light: $weight-light,
+  ultra400: $weight-ultra400,
+  400: $weight-400,
   regular: $weight-regular,
   medium: $weight-medium,
   semibold: $weight-semibold,

@@ -11,12 +11,12 @@
   padding: tempo(0.25) tempo(0.5);
 
   &.blue {
-    @include font($color: blue--dark);
-    background: rgba($blue--xxlight, 0.77);
+    @include font($color: blue--600);
+    background: rgba($blue--200, 0.77);
   }
 
   &.gray {
-    @include font($color: gray--dark);
-    background: rgba($gray--xxlight, 0.77);
+    @include font($color: slate--600);
+    background: rgba($slate--200, 0.77);
   }
 }

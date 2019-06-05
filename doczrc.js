@@ -3,13 +3,13 @@ import path from 'path';
 import merge from 'webpack-merge';
 
 export default {
-  title: 'Halo Design System',
-  typescript: true,
   debug: false,
+  dest: '/docs',
   notUseSpecifiers: true,
   src: path.join(__dirname, 'src'),
+  title: 'Halo Design System',
+  typescript: true,
   filterComponents: files => files.filter(filepath => /components\/.*\/*\.(js|jsx|ts|tsx)$/.test(filepath)),
-  dest: '/docs',
   onCreateWebpackChain: (config) => {
     if (config.resolve.alias.set) {
       config.resolve.alias.set('~/components', path.join(__dirname, 'src', 'components'));
