@@ -7,13 +7,12 @@
   @return not unitless($v);
 }
 
-@mixin halo-test {
-  color: aquamarine;
-  font-size: 60px;
-  margin: 1em;
-  outline: 1px solid red;
-  padding: 1em;
-  text-align: center;
+/// @author Hugo Giraudel
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
 }
 
 @mixin border-box {
