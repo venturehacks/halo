@@ -58,7 +58,7 @@ $grid-cell-count: 24;
   }
 }
 
-@for $i from 1 through 10 {
+@for $i from 1 through 20 {
   @each $d in $directions {
     :global(.__halo_padding_#{$d}_#{$i}) {
       padding-#{$d}: tempo($i);

@@ -104,7 +104,7 @@
 
   &.large {
     font-size: 20px;
-    padding: tempo(1) tempo(1.25);
+    padding: tempo(1 * 2) tempo(1.25 * 2);
 
     &:last-of-type {
       padding-left: 40px;
@@ -112,71 +112,71 @@
     }
 
     &.text {
-      padding-left: tempo(1);
-      padding-right: tempo(1);
+      padding-left: tempo(1 * 2);
+      padding-right: tempo(1 * 2);
     }
 
     &.iconOnly {
-      padding: tempo(1.25);
+      padding: tempo(1.25 * 2);
     }
   }
 
   &.regular {
     font-size: 16px;
-    padding: tempo(0.75) tempo(1);
+    padding: tempo(0.75 * 2) tempo(1 * 2);
 
     &:last-of-type {
-      padding-left: tempo(2.5);
-      padding-right: tempo(2.5);
+      padding-left: tempo(2.5 * 2);
+      padding-right: tempo(2.5 * 2);
     }
 
     &.text {
-      padding-left: tempo(1);
-      padding-right: tempo(1);
+      padding-left: tempo(1 * 2);
+      padding-right: tempo(1 * 2);
     }
 
     &.iconOnly {
-      padding: tempo(1);
+      padding: tempo(1 * 2);
     }
   }
 
   &.small {
     font-size: 14px;
-    padding: tempo(0.5) tempo(1);
+    padding: tempo(0.5 * 2) tempo(1 * 2);
 
     &:last-of-type {
-      padding-left: tempo(1);
-      padding-right: tempo(1);
+      padding-left: tempo(1 * 2);
+      padding-right: tempo(1 * 2);
     }
 
     &.text {
-      padding-left: tempo(0.5);
-      padding-right: tempo(0.5);
+      padding-left: tempo(0.5 * 2);
+      padding-right: tempo(0.5 * 2);
     }
 
     &.iconOnly {
-      padding: tempo(0.5);
+      padding: tempo(0.5 * 2);
     }
   }
 
   &.xsmall {
     font-size: 12px;
-    padding: tempo(0.25) tempo(0.5);
+    padding: tempo(0.25 * 2) tempo(0.5 * 2);
 
     &.text {
-      padding-left: tempo(0.5);
-      padding-right: tempo(0.5);
+      padding-left: tempo(0.5 * 2);
+      padding-right: tempo(0.5 * 2);
     }
 
     &.iconOnly {
-      padding: tempo(0.5);
+      padding: tempo(0.5 * 2);
     }
   }
 
   &.inline {
     display: inline-block;
     font-size: inherit;
-    padding: tempo(0.25) tempo(0.5);
+    padding: tempo(0.25 * 2) tempo(0.5 * 2);
   }
 
   &.icon {
