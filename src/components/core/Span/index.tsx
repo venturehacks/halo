@@ -14,16 +14,25 @@ import * as styles from './styles.scss';
 export interface SpanProps {
   /**
    * Type size override
+   * @default (pass through)
    */
   size?: TextSize;
 
   /**
+   * Fine control over line height
+   * @default (pass through)
+   */
+  lineHeight?: TextLineHeight;
+
+  /**
    * Fine control of type contrast
+   * @default AAAA
    */
   contrast?: TextContrast;
 
   /**
-   * Fine control of type contrast
+   * Dark or light text
+   * @default dark
    */
   colorScheme?: TextColorScheme;
 
@@ -33,7 +42,7 @@ export interface SpanProps {
   weight?: TextWeight;
 
   /**
-   * Explicit color override
+   * Explicit text color override
    */
   color?: PaletteColor;
 
@@ -102,7 +111,7 @@ export interface SpanProps {
    * HTML tag override
    * @default span
    */
-  tag?: 'span' | 'div';
+  tag?: 'span' | 'div' | 'p';
 }
 
 function Span(props: SpanProps) {
@@ -114,6 +123,7 @@ function Span(props: SpanProps) {
     className,
     color,
     colorScheme = 'dark',
+    lineHeight,
     error,
     italic,
     monospace,
@@ -125,15 +135,14 @@ function Span(props: SpanProps) {
     warning,
   } = props;
 
-  // debugger;
   const textContrast: TextContrast = textContrastForConfiguration(props);
-
   const hasColorOverride = success || error || warning || color;
 
   const classes = classNames(
     styles[colorScheme],
     !hasColorOverride && styles[textContrast],
     size && styles[`size--${size}`],
+    lineHeight && styles[`lineHeight--${lineHeight}`],
     color && styles[color],
     antialiased && styles.antialiased,
     block && styles.block,
