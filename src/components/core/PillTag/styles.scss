@@ -17,6 +17,7 @@ $height: 28px;
   margin-bottom: 0.333rem;
   margin-right: 0.333rem;
   overflow: hidden;
+  @include text-truncate;
 
   a,
   a:link,
