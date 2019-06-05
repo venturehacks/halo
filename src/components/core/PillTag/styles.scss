@@ -4,6 +4,7 @@ $height: 28px;
 
 .component {
   @include border-box; // TODO: deprecate
+  @include text-truncate;
   display: inline-block;
   box-sizing: border-box;
   border-radius: $height / 2;
@@ -16,7 +17,6 @@ $height: 28px;
   text-align: center;
   margin-bottom: 0.333rem;
   margin-right: 0.333rem;
-  overflow: hidden;
 
   a,
   a:link,
