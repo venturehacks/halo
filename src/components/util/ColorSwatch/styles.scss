@@ -75,10 +75,10 @@
         transform: translateX(-50%);
         display: inline-block;
         padding: 0 tempo(0.5);
-        background-color: rgba($white, 0.7);
+        background-color: rgba($white, 0.6);
         text-align: center;
         line-height: 20px;
-        color: darken($color, 50%);
+        color: darken($color, 70%);
         content: '#{$color}';
         @include border-rounded;
         @include font-antialiased;

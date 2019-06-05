@@ -100,7 +100,7 @@
 // custom colors
 
 @each $name, $color in $colors {
-  .#{$name} {
+  .#{$name}.#{$name} {
     color: $color;
   }
 }

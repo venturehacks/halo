@@ -77,7 +77,7 @@ export interface SpanProps {
   warning?: boolean;
 
   /**
-   * Colors text error red
+   * Red error text
    */
   error?: boolean;
 
@@ -144,7 +144,7 @@ function Span(props: SpanProps) {
     size && styles[`size--${size}`],
     lineHeight && styles[`lineHeight--${lineHeight}`],
     color && styles[color],
-    antialiased && styles.antialiased,
+    (antialiased || colorScheme === 'light') && styles.antialiased,
     block && styles.block,
     bold && styles.bold,
     error && styles.error,

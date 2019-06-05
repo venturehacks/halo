@@ -7,7 +7,6 @@
   @return not unitless($v);
 }
 
-/// @author Hugo Giraudel
 @function map-deep-get($map, $keys...) {
   @each $key in $keys {
     $map: map-get($map, $key);
