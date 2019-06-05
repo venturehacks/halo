@@ -112,9 +112,9 @@ function Box({
     textAlign && styles[`__halo_textAlign_${textAlign}`],
     wrap && styles.wrap,
     isGenericFlexColumn && align && `__halo_column_align_${align}`,
-    isGenericFlexColumn && valign && `__halo_column_valign_${align}`,
+    isGenericFlexColumn && valign && `__halo_column_valign_${valign}`,
     isGenericFlexRow && align && `__halo_row_align_${align}`,
-    isGenericFlexRow && valign && `__halo_row_valign_${align}`,
+    isGenericFlexRow && valign && `__halo_row_valign_${valign}`,
     negativeSpaceClasses,
     background && styles[`background-${background}`],
   );

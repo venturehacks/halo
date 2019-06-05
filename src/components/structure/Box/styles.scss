@@ -10,21 +10,21 @@ $grid-cell-count: 24;
 .component {
   @include border-box; // TODO: deprecate
 
-  &.wrap {
-    flex-wrap: wrap;
-  }
-
   &.relative {
     position: relative;
   }
+}
 
-  &.flexColumn {
-    @include flex-column($align: flex-start);
-  }
+.wrap {
+  flex-wrap: wrap;
+}
 
-  &.flexRow {
-    @include flex-row;
-  }
+.flexColumn {
+  @include flex-column($align: flex-start);
+}
+
+.flexRow {
+  @include flex-row;
 }
 
 @each $name, $color in $colors {

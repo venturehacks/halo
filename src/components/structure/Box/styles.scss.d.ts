@@ -1,7 +1,7 @@
 declare const styles: {
   readonly "component": string;
-  readonly "wrap": string;
   readonly "relative": string;
+  readonly "wrap": string;
   readonly "flexColumn": string;
   readonly "flexRow": string;
   readonly "background-black": string;
