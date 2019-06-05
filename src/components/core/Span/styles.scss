@@ -1,5 +1,64 @@
 @import 'halo';
 
+// Sizes (includes line height)
+
+@each $name, $font-size-and-lh in $font-sizes-map {
+  .#{$name} {
+    font-size: map-get($font-size-and-lh, font-size);
+    line-height: map-get($font-size-and-lh, line-height);
+  }
+}
+
+// Custom line heights
+
+@each $name, $line-height in $line-heights {
+  .lineHeight--#{$name}.lineHeight--#{$name} {
+    line-height: $line-height;
+  }
+}
+
+// Convenience configuration
+
+.block {
+  display: block;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.semibold {
+  font-weight: $weight--medium; // aka "medium"
+}
+
+.bold {
+  font-weight: $weight--bold;
+}
+
+.monospace {
+  @include font($family: monospace);
+}
+
+.error {
+  color: $text-dark--error;
+}
+
+.warning {
+  color: $text-dark--warning;
+}
+
+.success {
+  color: $text-dark--success;
+}
+
+.antialiased {
+  @include font-antialiased;
+}
+
 // color scheme + type contrast
 
 .dark {
@@ -38,104 +97,7 @@
   }
 }
 
-// Sizes
-
-.size--6xl {
-  font-size: 56px;
-  line-height: 60px;
-}
-
-.size--5xl {
-  font-size: 48px;
-  line-height: 51px;
-}
-
-.size--4xl {
-  font-size: 40px;
-  line-height: 42px;
-}
-
-.size--3xl {
-  font-size: 36px;
-  line-height: 40px;
-}
-
-.size--2xl {
-  font-size: 32px;
-  line-height: 36px;
-}
-
-.size--xl {
-  font-size: 24px;
-  line-height: 30px;
-}
-
-.size--lg {
-  font-size: 18px;
-  line-height: 27px;
-}
-
-.size--md {
-  font-size: 16px;
-  line-height: 24px;
-}
-
-.size--sm {
-  font-size: 14px;
-  line-height: 21px;
-}
-
-.size--xs {
-  font-size: 12px;
-  line-height: 20px;
-}
-
-.size--2xs {
-  font-size: 11px;
-  line-height: 16px;
-}
-
-// Convenience configuration
-
-.uppercase {
-  text-transform: uppercase;
-}
-
-.block {
-  display: block;
-}
-
-.italic {
-  font-style: italic;
-}
-
-.semibold {
-  font-weight: 500; // aka "medium"
-}
-
-.bold {
-  font-weight: 700;
-}
-
-.monospace {
-  @include font($family: monospace);
-}
-
-.error {
-  color: $text-dark--error;
-}
-
-.warning {
-  color: $text-dark--warning;
-}
-
-.success {
-  color: $text-dark--success;
-}
-
-.antialiased {
-  @include font-antialiased;
-}
+// custom colors
 
 @each $name, $color in $colors {
   .#{$name} {
