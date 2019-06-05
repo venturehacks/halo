@@ -27,6 +27,12 @@ $grid-cell-count: 24;
   }
 }
 
+@each $name, $color in $colors {
+  .background-#{$name} {
+    background-color: $color;
+  }
+}
+
 /**
  * TODO: global selectors shouldn't be necessary.
          figure out what the hell is wrong with cssmodules

@@ -1,93 +1,168 @@
 import classNames from 'classnames';
 import * as React from 'react';
+import { PaletteColor } from '~/lib/colors';
+import {
+  TextColorScheme,
+  TextContrast,
+  TextSize,
+  TextWeight,
+  textContrastForConfiguration,
+} from '~/lib/text';
 
 import * as styles from './styles.scss';
 
 export interface SpanProps {
-  antialiased?: boolean;
+  /**
+   * Type size override
+   */
+  size?: TextSize;
+
+  /**
+   * Fine control of type contrast
+   */
+  contrast?: TextContrast;
+
+  /**
+   * Fine control of type contrast
+   */
+  colorScheme?: TextColorScheme;
+
+  /**
+   * Fine control of type weight
+   */
+  weight?: TextWeight;
+
+  /**
+   * Explicit color override
+   */
+  color?: PaletteColor;
+
+  /**
+   * Renders as a block-level element
+   */
   block?: boolean;
+
+  /**
+   * Convenience for medium weight type
+   */
+  semibold?: boolean;
   bold?: boolean;
+  italic?: boolean;
+
+  /**
+   * Convenience for bold text
+   */
+  strong?: boolean;
+
   children?: React.ReactNode;
   className?: string;
-  error?: boolean;
-  italic?: boolean;
-  light?: boolean;
-  monospace?: boolean;
-  muted?: boolean;
-  semibold?: boolean;
-  semistrong?: boolean;
-  size?:
-    | 'xxsmall'
-    | 'xsmall'
-    | 'small'
-    | 'medium'
-    | 'large'
-    | 'xlarge'
-    | 'xxlarge';
-  strong?: boolean;
+
+  /**
+   * Green successful text
+   */
   success?: boolean;
-  uppercase?: boolean;
+
+  /**
+   * Orange warning text
+   */
+  warning?: boolean;
+
+  /**
+   * Colors text error red
+   */
+  error?: boolean;
+
+  /**
+   * Convenience for contrast AAA typography
+   */
+  muted?: boolean;
+
+  /**
+   * Convenience for contrast AA typography
+   */
   xmuted?: boolean;
+
+  /**
+   * Convenience for contrast A typography
+   */
   xxmuted?: boolean;
+
+  /**
+   * Tranform text to all capitals
+   */
+  uppercase?: boolean;
+  monospace?: boolean;
+
+  /**
+   * Sharpens text. Ideal for light text on dark backgrounds
+   */
+  antialiased?: boolean;
+
+  /**
+   * HTML tag override
+   * @default span
+   */
+  tag?: 'span' | 'div';
 }
 
-class Span extends React.Component<SpanProps> {
-  render(): React.ReactNode {
-    const {
-      antialiased,
-      block,
-      bold,
-      children,
-      className,
-      error,
-      italic,
-      light,
-      monospace,
-      muted,
-      semibold,
-      semistrong,
-      size,
-      strong,
-      success,
-      uppercase,
-      xmuted,
-      xxmuted,
-      ...other
-    } = this.props;
+function Span(props: SpanProps) {
+  const {
+    antialiased,
+    block,
+    bold,
+    children,
+    className,
+    color,
+    colorScheme = 'dark',
+    error,
+    italic,
+    monospace,
+    semibold,
+    size,
+    strong,
+    success,
+    uppercase,
+    warning,
+  } = props;
 
-    const spanClassName = classNames(
-      styles.component,
-      size === 'small' && styles.small,
-      size === 'xsmall' && styles.xsmall,
-      size === 'xxsmall' && styles.xxsmall,
-      size === 'medium' && styles.medium,
-      size === 'large' && styles.large,
-      size === 'xlarge' && styles.xlarge,
-      size === 'xxlarge' && styles.xxlarge,
-      antialiased && styles.antialiased,
-      block && styles.block,
-      italic && styles.italic,
-      muted && styles.muted,
-      xmuted && styles.xmuted,
-      xxmuted && styles.xxmuted,
-      light && styles.light,
-      bold && styles.bold,
-      strong && styles.bold,
-      semibold && styles.semibold,
-      semistrong && styles.semibold,
-      uppercase && styles.uppercase,
-      monospace && styles.monospace,
-      error && styles.error,
-      success && styles.success,
-      className,
-    );
+  // debugger;
+  const textContrast: TextContrast = textContrastForConfiguration(props);
 
-    return (
-      <span className={spanClassName} {...other}>
-        {children}
-      </span>
-    );
-  }
+  const hasColorOverride = success || error || warning || color;
+
+  const classes = classNames(
+    styles[colorScheme],
+    !hasColorOverride && styles[textContrast],
+    size && styles[`size--${size}`],
+    color && styles[color],
+    antialiased && styles.antialiased,
+    block && styles.block,
+    bold && styles.bold,
+    error && styles.error,
+    italic && styles.italic,
+    monospace && styles.monospace,
+    semibold && styles.semibold,
+    strong && styles.bold,
+    success && styles.success,
+    uppercase && styles.uppercase,
+    warning && styles.warning,
+    className,
+  );
+
+  const tagName = tagNameForConfiguration(props);
+
+  const componentProps = {
+    className: classes,
+  };
+
+  return React.createElement(tagName, componentProps, children);
 }
 
 export { Span };
+
+function tagNameForConfiguration({ block, tag }: SpanProps) {
+  if (tag) return tag;
+  if (block) return 'div';
+
+  return 'span';
+}

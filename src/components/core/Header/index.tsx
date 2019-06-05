@@ -1,33 +1,44 @@
 import classNames from 'classnames';
 import * as React from 'react';
+import { PaletteColor } from '~/lib';
+import { TextColorScheme, TextContrast, TextSize } from '~/lib/text';
+
+import { Span } from '../Span';
 
 import * as styles from './styles.scss';
 
 export interface HeaderProps {
-  /**
-   * style-only preset
-   * @default none
-   */
-  preset?:
-    | 'none'
-    | 'page'
-    | 'panel'
-    | 'section'
-    | 'micro'
-    | 'nano'
-    | 'huge-headline'
-    | 'large-headline'
-    | 'medium-headline'
-    | 'small-headline'
-    | 'micro-headline'
-    | 'large-subhead'
-    | 'small-subhead';
+  className?: string;
 
   /**
-   * HTML tag override
-   * @default h3
+   * <h1> preset, 3xl text
    */
-  tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  h1?: boolean;
+
+  /**
+   * <h2> preset, 2xl text
+   */
+  h2?: boolean;
+
+  /**
+   * <h3> preset, xl text
+   */
+  h3?: boolean;
+
+  /**
+   * <h4> preset, lg text
+   */
+  h4?: boolean;
+
+  /**
+   * <h5> preset, sm text
+   */
+  h5?: boolean;
+
+  /**
+   * <h6> preset, xs text, all caps
+   */
+  h6?: boolean;
 
   /**
    * include page flow margins
@@ -35,91 +46,125 @@ export interface HeaderProps {
    */
   flow?: boolean;
 
-  className?: string;
+  /**
+   * Explicit override over type size
+   */
+  size?: TextSize;
 
   /**
-   * <h1 /> semantic preset
+   * Fine control of type contrast
    */
-  h1?: boolean;
+  contrast?: TextContrast;
 
   /**
-   * <h2 /> semantic preset
+   * Fine control of type contrast
    */
-  h2?: boolean;
+  colorScheme?: TextColorScheme;
 
   /**
-   * <h3 /> semantic preset
+   * Explicitly set text to a palette color
    */
-  h3?: boolean;
+  color?: PaletteColor;
 
   /**
-   * <h4 /> semantic preset
+   * Convenience for contrast AAA typography
    */
-  h4?: boolean;
-
-  /**
-   * <h5 /> semantic preset
-   */
-  h5?: boolean;
-
-  /**
-   * <h6 /> semantic preset
-   */
-  h6?: boolean;
-
   muted?: boolean;
+
+  /**
+   * Convenience for contrast AA typography
+   */
+  xmuted?: boolean;
+
+  /**
+   * Convenience for contrast A typography
+   */
+  xxmuted?: boolean;
+
+  /**
+   * Capitalize all letters
+   */
+  uppercase?: boolean;
+
+  /**
+   * HTML tag override
+   * @default h3
+   */
+  tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 
   children: React.ReactNode;
 }
 
-function Header({
-  flow = true,
-  preset = 'none',
-  h1 = false,
-  h2 = false,
-  h3 = false,
-  h4 = false,
-  h5 = false,
-  h6 = false,
-  muted = false,
-  tag = 'h3',
-  children,
-  className,
-}: HeaderProps) {
-  const classes = classNames(
-    styles.component,
-    // Marketing presets
-    preset === 'huge-headline' && styles.presetHugeHeadline,
-    (h1 || preset === 'large-headline') && styles.presetLargeHeadline,
-    (h2 || preset === 'medium-headline') && styles.presetMediumHeadline,
-    (h3 || preset === 'small-headline') && styles.presetSmallHeadline,
-    (h4 || preset === 'micro-headline') && styles.presetMicroHeadline,
-    preset === 'large-subhead' && styles.presetLargeSubhead,
-    preset === 'small-subhead' && styles.presetSmallSubhead,
-    // Interface presets
-    preset === 'page' && styles.presetPage,
-    preset === 'panel' && styles.presetPanel,
-    preset === 'section' && styles.presetSection,
-    (h5 || preset === 'micro') && styles.presetMicro,
-    (h6 || preset === 'nano') && styles.presetNano,
-
-    flow && styles.flow,
-    muted && styles.muted,
+function Header(props: HeaderProps) {
+  const {
+    children,
     className,
-  );
+    color,
+    colorScheme = 'dark',
+    contrast,
+    flow = true,
+    muted,
+    size,
+    uppercase = false,
+    xmuted,
+    xxmuted,
+  } = props;
 
-  tag = (h1 && 'h1') || tag;
-  tag = (h2 && 'h2') || tag;
-  tag = (h3 && 'h3') || tag;
-  tag = (h4 && 'h4') || tag;
-  tag = (h5 && 'h5') || tag;
-  tag = (h6 && 'h6') || tag;
+  const textSize: TextSize = size || textSizeForConfiguration(props);
+  const tagName = tagNameForConfiguration(props);
 
-  const props = {
+  const classes = classNames(styles.component, flow && styles.flow, className);
+
+  const componentProps = {
     className: classes,
   };
 
-  return React.createElement(tag, props, children);
+  const formattedContent = (
+    <Span
+      color={color}
+      colorScheme={colorScheme}
+      size={textSize}
+      contrast={contrast}
+      muted={muted}
+      xmuted={xmuted}
+      xxmuted={xxmuted}
+      uppercase={uppercase || props.h6}
+    >
+      {children}
+    </Span>
+  );
+
+  return React.createElement(tagName, componentProps, formattedContent);
+}
+
+function textSizeForConfiguration({
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+}: HeaderProps): TextSize {
+  if (h1) return '4xl';
+  if (h2) return '2xl';
+  if (h3) return 'xl';
+  if (h4) return 'lg';
+  if (h5) return 'sm';
+  if (h6) return 'xs';
+
+  return 'xl'; // h3 is default
+}
+
+function tagNameForConfiguration({ h1, h2, h3, h4, h5, h6, tag }: HeaderProps) {
+  if (tag) return tag;
+  if (h1) return 'h1';
+  if (h2) return 'h2';
+  if (h3) return 'h3';
+  if (h4) return 'h4';
+  if (h5) return 'h5';
+  if (h6) return 'h6';
+
+  return 'h3';
 }
 
 export { Header };

@@ -96,6 +96,8 @@ $orange--100: #fff9e7 !default;
 
 // for map-get programmatic look up
 $colors: (
+  black: $black,
+  white: $white,
   text-dark--aaaa: $text-dark--aaaa,
   text-dark--aaa: $text-dark--aaa,
   text-dark--aa: $text-dark--aa,

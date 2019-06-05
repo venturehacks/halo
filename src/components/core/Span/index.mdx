@@ -1,7 +1,7 @@
 ---
 name: Span
 menu: Core
-route: /core/span
+route: /core/Span
 ---
 
 import { Props, Playground } from 'docz';
@@ -12,25 +12,29 @@ import { Span } from './'
 
 <Playground>
   <div className="docz">
-    <Box row>
-      <Span>plain</Span>
-      <Span italic>italic</Span>
-      <Span bold>semibold</Span>
-      <Span bold>bold/strong</Span>
+    <Box row align="space-evenly">
+      <Box padding><Span>plain</Span></Box>
+      <Box padding><Span italic>italic</Span></Box>
+      <Box padding><Span semibold>semibold</Span></Box>
+      <Box padding><Span bold>bold/strong</Span></Box>
     </Box>
-    <Box row>
-      <Span muted>muted</Span>
-      <Span xmuted>xmuted</Span>
-      <Span xxmuted>xxmuted</Span>
-      <Span antialiased>antialiased</Span>
+    <Box row align="space-evenly">
+      <Box padding><Span muted>muted</Span></Box>
+      <Box padding><Span xmuted>xmuted</Span></Box>
+      <Box padding><Span xxmuted>xxmuted</Span></Box>
+      <Box padding background="#555"><Span warning antialiased>antialiased</Span></Box>
     </Box>
-    <Box row>
-      <Span uppercase>uppercase</Span>
-      <Span monospace>monospace</Span>
+    <Box row align="space-evenly">
+      <Box padding><Span uppercase>uppercase</Span></Box>
+      <Box padding><Span monospace>monospace</Span></Box>
     </Box>
-    <Box row>
-      <Span error>error</Span>
-      <Span success>success</Span>
+    <Box row align="space-evenly">
+      <Box padding><Span error>error</Span></Box>
+      <Box padding><Span success>success</Span></Box>
+    </Box>
+    <Box row align="space-evenly">
+      <Box padding><Span color="purple--700">purple--700</Span></Box>
+      <Box padding><Span color="orange--200">orange--200</Span></Box>
     </Box>
   </div>
 </Playground>

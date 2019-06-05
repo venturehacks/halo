@@ -1,60 +1,108 @@
 @import 'halo';
 
-.component {
-  :global(.docz) & {
-    // TODO: deprecate
-    padding: 20px;
-    width: 150px;
-    display: inline-block;
+// color scheme + type contrast
+
+.dark {
+  &.AAAA {
+    color: $text-dark--aaaa;
   }
+
+  &.AAA {
+    color: $text-dark--aaa;
+  }
+
+  &.AA {
+    color: $text-dark--aa;
+  }
+
+  &.A {
+    color: $text-dark--a;
+  }
+}
+
+.light {
+  &.AAAA {
+    color: $text-light--aaaa;
+  }
+
+  &.AAA {
+    color: $text-light--aaa;
+  }
+
+  &.AA {
+    color: $text-light--aa;
+  }
+
+  &.A {
+    color: $text-light--a;
+  }
+}
+
+// Sizes
+
+.size--6xl {
+  font-size: 56px;
+  line-height: 60px;
+}
+
+.size--5xl {
+  font-size: 48px;
+  line-height: 51px;
+}
+
+.size--4xl {
+  font-size: 40px;
+  line-height: 42px;
+}
+
+.size--3xl {
+  font-size: 36px;
+  line-height: 40px;
+}
+
+.size--2xl {
+  font-size: 32px;
+  line-height: 36px;
+}
+
+.size--xl {
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.size--lg {
+  font-size: 18px;
+  line-height: 27px;
+}
+
+.size--md {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.size--sm {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.size--xs {
+  font-size: 12px;
+  line-height: 20px;
+}
+
+.size--2xs {
+  font-size: 11px;
+  line-height: 16px;
+}
+
+// Convenience configuration
+
+.uppercase {
+  text-transform: uppercase;
 }
 
 .block {
   display: block;
-}
-
-.xxsmall {
-  font-size: 0.65em;
-}
-
-.xsmall {
-  font-size: 0.775em;
-}
-
-.small {
-  font-size: 0.9em;
-}
-
-.medium {
-  font-size: 1em;
-}
-
-.large {
-  font-size: 1.2em;
-}
-
-.xlarge {
-  font-size: 1.3em;
-}
-
-.xxlarge {
-  font-size: 1.5em;
-}
-
-.light {
-  color: $slate--300;
-}
-
-.muted {
-  opacity: 0.8;
-}
-
-.xmuted {
-  opacity: 0.5;
-}
-
-.xxmuted {
-  opacity: 0.25;
 }
 
 .italic {
@@ -62,16 +110,11 @@
 }
 
 .semibold {
-  font-weight: 500;
+  font-weight: 500; // aka "medium"
 }
 
 .bold {
-  font-weight: 600;
-}
-
-.uppercase {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-weight: 700;
 }
 
 .monospace {
@@ -91,5 +134,11 @@
 }
 
 .antialiased {
-  @include font($antialiased: true);
+  @include font-antialiased;
+}
+
+@each $name, $color in $colors {
+  .#{$name} {
+    color: $color;
+  }
 }

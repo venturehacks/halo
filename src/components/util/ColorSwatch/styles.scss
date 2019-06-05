@@ -67,6 +67,7 @@
       position: relative;
       background-color: $color;
 
+      // Clever Boi™ way to print the hex color value as content
       &::before {
         position: absolute;
         top: calc(60% - 20px);
@@ -74,12 +75,12 @@
         transform: translateX(-50%);
         display: inline-block;
         padding: 0 tempo(0.5);
-        @include border-rounded;
         background-color: rgba($white, 0.7);
         text-align: center;
         line-height: 20px;
         color: darken($color, 50%);
         content: '#{$color}';
+        @include border-rounded;
         @include font-antialiased;
         @include font(
           $size: 11px,

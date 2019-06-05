@@ -55,7 +55,7 @@
         "module-source-path": "full"
       }
     ],
-    "curly": true,
+    "curly": [true, "ignore-same-line"],
     "quotemark": [
       true,
       "single",
