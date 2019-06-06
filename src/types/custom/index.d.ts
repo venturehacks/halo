@@ -9,7 +9,7 @@ declare module '*.scss' {
 /**
  * Dictionary of string => T value pairs
  */
-export interface Dictionary<T> {
+interface Dictionary<T> {
   [key: string]: T;
 }
 
