@@ -4,11 +4,12 @@ $height: 28px;
 
 .component {
   @include border-box; // TODO: deprecate
+  @include text-truncate;
   display: inline-block;
   box-sizing: border-box;
   border-radius: $height / 2;
-  border: 1px solid $gray--xxlight;
-  color: $gray--dark;
+  border: 1px solid $slate--200;
+  color: $slate--600;
   font-size: 14px;
   height: $height;
   line-height: $height - 2px;
@@ -16,14 +17,13 @@ $height: 28px;
   text-align: center;
   margin-bottom: 0.333rem;
   margin-right: 0.333rem;
-  overflow: hidden;
 
   a,
   a:link,
   a:visited,
   a:hover,
   a:active {
-    color: $gray--dark;
+    color: $slate--600;
     text-decoration: none;
     cursor: pointer;
   }

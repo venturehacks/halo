@@ -11,11 +11,15 @@ import { Button } from './'
 # Button
 
 <Playground>
+  <Box row margin={{ bottom: 2 }}>
+    <Button>Primary</Button>
+    <Button variant="secondary">Secondary</Button>
+    <Button variant="secondary-gray" emphasis={false}>Secondary Gray</Button>
+    <Button variant="gray">Gray</Button>
+  </Box>
   <Box row>
-    <Button>primary</Button>
-    <Button variant="secondary">secondary</Button>
-    <Button variant="secondary-gray">secondary-gray</Button>
-    <Button variant="gray">gray</Button>
+    <Button variant="warning">Warning</Button>
+    <Button variant="danger">Danger</Button>
     <Button variant="alternate">alternate</Button>
   </Box>
 </Playground>
@@ -35,7 +39,7 @@ import { Button } from './'
 <br />
 
 <Box row>
-  <Button size="inline" variant="secondary-gray">Inline</Button> to get the job.
+  <Button size="inline" variant="secondary-gray">Inline</Button> &nbsp; button to apply.
 </Box>
 
 

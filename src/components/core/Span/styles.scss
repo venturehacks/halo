@@ -1,60 +1,30 @@
 @import 'halo';
 
-.component {
-  :global(.docz) & {
-    // TODO: deprecate
-    padding: 20px;
-    width: 100px;
-    display: inline-block;
+// Sizes (includes line height)
+
+@each $name, $font-size-and-lh in $font-sizes-map {
+  .#{$name} {
+    font-size: map-get($font-size-and-lh, font-size);
+    line-height: map-get($font-size-and-lh, line-height);
   }
 }
+
+// Custom line heights
+
+@each $name, $line-height in $line-heights {
+  .lineHeight--#{$name}.lineHeight--#{$name} {
+    line-height: $line-height;
+  }
+}
+
+// Convenience configuration
 
 .block {
   display: block;
 }
 
-.xxsmall {
-  font-size: 0.65em;
-}
-
-.xsmall {
-  font-size: 0.775em;
-}
-
-.small {
-  font-size: 0.9em;
-}
-
-.medium {
-  font-size: 1em;
-}
-
-.large {
-  font-size: 1.2em;
-}
-
-.xlarge {
-  font-size: 1.3em;
-}
-
-.xxlarge {
-  font-size: 1.5em;
-}
-
-.light {
-  color: #999;
-}
-
-.muted {
-  opacity: 0.8;
-}
-
-.xmuted {
-  opacity: 0.5;
-}
-
-.xxmuted {
-  opacity: 0.25;
+.uppercase {
+  text-transform: uppercase;
 }
 
 .italic {
@@ -62,16 +32,11 @@
 }
 
 .semibold {
-  font-weight: 500;
+  font-weight: $weight--medium; // aka "medium"
 }
 
 .bold {
-  font-weight: 600;
-}
-
-.uppercase {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-weight: $weight--bold;
 }
 
 .monospace {
@@ -79,13 +44,63 @@
 }
 
 .error {
-  color: red;
+  color: $text-dark--error;
+}
+
+.warning {
+  color: $text-dark--warning;
 }
 
 .success {
-  color: green;
+  color: $text-dark--success;
 }
 
 .antialiased {
-  @include font($antialiased: true);
+  @include font-antialiased;
+}
+
+// color scheme + type contrast
+
+.dark {
+  &.AAAA {
+    color: $text-dark--aaaa;
+  }
+
+  &.AAA {
+    color: $text-dark--aaa;
+  }
+
+  &.AA {
+    color: $text-dark--aa;
+  }
+
+  &.A {
+    color: $text-dark--a;
+  }
+}
+
+.light {
+  &.AAAA {
+    color: $text-light--aaaa;
+  }
+
+  &.AAA {
+    color: $text-light--aaa;
+  }
+
+  &.AA {
+    color: $text-light--aa;
+  }
+
+  &.A {
+    color: $text-light--a;
+  }
+}
+
+// custom colors
+
+@each $name, $color in $colors {
+  .#{$name}.#{$name} {
+    color: $color;
+  }
 }

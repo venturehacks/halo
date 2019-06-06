@@ -1,7 +1,7 @@
 ---
 name: Span
 menu: Core
-route: /core/span
+route: /core/Span
 ---
 
 import { Props, Playground } from 'docz';
@@ -12,25 +12,53 @@ import { Span } from './'
 
 <Playground>
   <div className="docz">
-    <Box row>
-      <Span>plain</Span>
-      <Span italic>italic</Span>
-      <Span bold>semibold</Span>
-      <Span bold>bold/strong</Span>
+    <Box row align="space-evenly" margin={{ bottom: 1 }}>
+      <Box padding><Span>plain</Span></Box>
+      <Box padding><Span italic>italic</Span></Box>
+      <Box padding><Span semibold>semibold</Span></Box>
+      <Box padding><Span bold>bold/strong</Span></Box>
     </Box>
-    <Box row>
-      <Span muted>muted</Span>
-      <Span xmuted>xmuted</Span>
-      <Span xxmuted>xxmuted</Span>
-      <Span antialiased>antialiased</Span>
+    <Box row align="space-evenly" background="black" margin={{ bottom: 1 }}>
+      <Box padding><Span contrast="AAAA" colorScheme="light">AAAA contrast</Span></Box>
+      <Box padding><Span contrast="AAA" colorScheme="light">AAA contrast</Span></Box>
+      <Box padding><Span contrast="AA" colorScheme="light">AA contrast</Span></Box>
+      <Box padding><Span contrast="A" colorScheme="light">A contrast</Span></Box>
     </Box>
-    <Box row>
-      <Span uppercase>error</Span>
-      <Span monospace>success</Span>
+    <Box row align="space-evenly" margin={{ bottom: 1 }}>
+      <Box padding><Span muted>muted</Span></Box>
+      <Box padding><Span xmuted>xmuted</Span></Box>
+      <Box padding><Span xxmuted>xxmuted</Span></Box>
+      <Box padding><Span error antialiased>antialiased</Span></Box>
     </Box>
-    <Box row>
-      <Span error>error</Span>
-      <Span success>success</Span>
+    <Box row align="space-evenly" margin={{ bottom: 1 }}>
+      <Box padding><Span uppercase>uppercase</Span></Box>
+      <Box padding><Span monospace>monospace</Span></Box>
+    </Box>
+    <Box row align="space-evenly" margin={{ bottom: 1 }}>
+      <Box padding><Span success>success</Span></Box>
+      <Box padding><Span warning>warning</Span></Box>
+      <Box padding><Span error>error</Span></Box>
+
+    </Box>
+    <Box row align="space-evenly" margin={{ bottom: 1 }}>
+      <Box padding><Span color="orange--300">orange--300</Span></Box>
+      <Box padding><Span color="red--400">red--400</Span></Box>
+      <Box padding><Span color="green--600">green--600</Span></Box>
+      <Box padding><Span color="purple--700">purple--700</Span></Box>
+    </Box>
+    <Box row align="space-evenly" valign="bottom" margin={{ bottom: 1 }}>
+      <Box padding><Span size="2xs">2xs</Span></Box>
+      <Box padding><Span size="xs">xs</Span></Box>
+      <Box padding><Span size="sm">sm</Span></Box>
+      <Box padding><Span size="md">md</Span></Box>
+      <Box padding><Span size="lg">lg</Span></Box>
+      <Box padding><Span size="xl">xl</Span></Box>
+      <Box padding><Span size="2xl">2xl</Span></Box>
+      <Box padding><Span size="3xl">3xl</Span></Box>
+      <Box padding><Span size="4xl">4xl</Span></Box>
+      <Box padding><Span size="5xl">5xl</Span></Box>
+      <Box padding><Span size="6xl">6xl</Span></Box>
+
     </Box>
   </div>
 </Playground>

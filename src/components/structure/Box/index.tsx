@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import { mapKeys } from 'lodash';
 import * as React from 'react';
+import { PaletteColor } from '~/lib/colors';
 
 import * as styles from './styles.scss';
 
@@ -23,7 +24,7 @@ export interface NegativeSpace {
 
 export interface BoxProps {
   align?: BoxAlign;
-  background?: string;
+  background?: PaletteColor | string;
   children?: React.ReactNode;
   className?: string;
   column?: boolean;
@@ -98,6 +99,7 @@ function Box({
   }
 
   if (background) {
+    // TODO: filter PaletteColors
     inlineStyles.background = background;
   }
 
@@ -110,10 +112,11 @@ function Box({
     textAlign && styles[`__halo_textAlign_${textAlign}`],
     wrap && styles.wrap,
     isGenericFlexColumn && align && `__halo_column_align_${align}`,
-    isGenericFlexColumn && valign && `__halo_column_valign_${align}`,
+    isGenericFlexColumn && valign && `__halo_column_valign_${valign}`,
     isGenericFlexRow && align && `__halo_row_align_${align}`,
-    isGenericFlexRow && valign && `__halo_row_valign_${align}`,
+    isGenericFlexRow && valign && `__halo_row_valign_${valign}`,
     negativeSpaceClasses,
+    background && styles[`background-${background}`],
   );
 
   return (

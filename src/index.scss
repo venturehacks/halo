@@ -1,3 +1,15 @@
 @import '../scss/halo';
 
 @include html-reset;
+
+:global {
+  // hack for color palette page
+  @media (min-width: 920px) {
+    div#root {
+      > div > div > div:nth-child(4) > div {
+        width: 100%;
+        max-width: 1200px;
+      }
+    }
+  }
+}

@@ -9,65 +9,116 @@
  */
 
 // families
-$font-family-primary: 'helvetica neue', arial, helvetica, freesans,
+$font-family--primary: 'helvetica neue', arial, helvetica, freesans,
   'liberation sans', 'numbus sans l', sans-serif;
-$font-family-secondary: georgia, serif;
-$font-family-serif: georgia, serif;
-$font-family-monospace: Monaco, 'Courier New', monospace;
-$font-family-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+$font-family--secondary: georgia, serif;
+$font-family--serif: georgia, serif;
+$font-family--monospace: Monaco, 'Courier New', monospace;
+$font-family--system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
   Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
   'Segoe UI Symbol';
 
 $font-families: (
-  primary: $font-family-primary,
-  secondary: $font-family-secondary,
-  serif: $font-family-serif,
-  monospace: $font-family-monospace,
-  system: $font-family-system,
+  primary: $font-family--primary,
+  secondary: $font-family--secondary,
+  serif: $font-family--serif,
+  monospace: $font-family--monospace,
+  system: $font-family--system,
 );
 
 // weights
-$weight-ultralight: 200;
-$weight-light: 300;
-$weight-regular: 400;
-$weight-medium: 500;
-$weight-semibold: 600;
-$weight-bold: 700;
-$weight-heavy: 800;
+$weight--ultralight: 200;
+$weight--light: 300;
+$weight--regular: 400;
+$weight--medium: 500;
+$weight--semibold: 600;
+$weight--bold: 700;
+$weight--heavy: 800;
 
 $weights: (
-  ultralight: $weight-ultralight,
-  light: $weight-light,
-  regular: $weight-regular,
-  medium: $weight-medium,
-  semibold: $weight-semibold,
-  bold: $weight-bold,
-  heavy: $weight-heavy,
+  ultralight: $weight--ultralight,
+  light: $weight--light,
+  regular: $weight--regular,
+  medium: $weight--medium,
+  semibold: $weight--semibold,
+  bold: $weight--bold,
+  heavy: $weight--heavy,
 );
 
 // transforms
 $text-transforms: (lowercase, uppercase, capitalize, none);
 
-// sizes (NOTE: TBD/WIP)
-$font-size-small-placeholder: 10px;
-$font-size-regular-placeholder: 14px;
-$font-size-large-placeholder: 24px;
-
-$font-sizes: (
-  small: $font-size-small-placeholder,
-  regular: $font-size-regular-placeholder,
-  large: $font-size-large-placeholder,
+$font-sizes-map: (
+  size--2xs: (
+    font-size: 11px,
+    line-height: 16px,
+  ),
+  size--xs: (
+    font-size: 12px,
+    line-height: 20px,
+  ),
+  size--sm: (
+    font-size: 14px,
+    line-height: 21px,
+  ),
+  size--md: (
+    font-size: 16px,
+    line-height: 24px,
+  ),
+  size--lg: (
+    font-size: 18px,
+    line-height: 27px,
+  ),
+  size--xl: (
+    font-size: 24px,
+    line-height: 30px,
+  ),
+  size--2xl: (
+    font-size: 32px,
+    line-height: 36px,
+  ),
+  size--3xl: (
+    font-size: 36px,
+    line-height: 40px,
+  ),
+  size--4xl: (
+    font-size: 40px,
+    line-height: 42px,
+  ),
+  size--5xl: (
+    font-size: 48px,
+    line-height: 51px,
+  ),
+  size--6xl: (
+    font-size: 56px,
+    line-height: 60px,
+  ),
 );
 
-// line heights (NOTE: TBD/WIP)
-$line-height-small-placeholder: 14px;
-$line-height-regular-placeholder: 18px;
-$line-height-large-placeholder: 30px;
+$font-sizes: (
+  size--2xs: map-deep-get($font-sizes-map, size--2xs),
+  size--xs: map-deep-get($font-sizes-map, size--xs),
+  size--sm: map-deep-get($font-sizes-map, size--sm),
+  size--md: map-deep-get($font-sizes-map, size--md),
+  size--lg: map-deep-get($font-sizes-map, size--lg),
+  size--xl: map-deep-get($font-sizes-map, size--xl),
+  size--2xl: map-deep-get($font-sizes-map, size--2xl),
+  size--3xl: map-deep-get($font-sizes-map, size--3xl),
+  size--4xl: map-deep-get($font-sizes-map, size--4xl),
+  size--5xl: map-deep-get($font-sizes-map, size--5xl),
+  size--6xl: map-deep-get($font-sizes-map, size--6xl),
+);
+
+$line-height--default: 1.5;
+$line-height--comfortable: 1.25;
+$line-height--compact: 1.125;
+$line-height--dense: 1.0625;
 
 $line-heights: (
-  small: $line-height-small-placeholder,
-  regular: $line-height-regular-placeholder,
-  large: $line-height-large-placeholder,
+  default: $line-height--default,
+  comfortable: $line-height--comfortable,
+  compact: $line-height--compact,
+  dense: $line-height--dense,
 );
 
 /**

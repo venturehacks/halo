@@ -14,8 +14,8 @@
   ],
   "moduleFileExtensions": ["ts", "tsx", "js", "jsx", "json", "node"],
   "moduleNameMapper": {
-    "^.+\\.(css|scss)$": "identity-obj-proxy"
-  },
+    "^.+\\.(css|scss)$": "identity-obj-proxy",
+    "~/(.*)$": "<rootDir>/src/$1"  },
   "setupFiles": [
     "<rootDir>/test/jest-setup.ts"
   ],

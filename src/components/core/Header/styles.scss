@@ -2,84 +2,11 @@
 
 .component {
   @include border-box; // TODO: deprecate
-  color: $gray--xxxdark;
-  font-weight: 500;
-  line-height: 1;
+  color: $text-dark--aaaa;
+  font-weight: 700;
   margin: 0;
 
   &.flow {
     margin-bottom: 0.75em;
-  }
-
-  &.muted.muted {
-    color: $gray;
-  }
-
-  // MARKETING
-
-  &.presetHugeHeadline {
-    font-size: 54px;
-    font-weight: 600;
-  }
-
-  &.presetLargeHeadline {
-    font-size: 48px;
-    font-weight: 600;
-  }
-
-  &.presetMediumHeadline {
-    font-size: 36px;
-    font-weight: 500;
-  }
-
-  &.presetSmallHeadline {
-    font-size: 24px;
-    font-weight: 500;
-  }
-
-  &.presetMicroHeadline {
-    font-size: 16px;
-    line-height: 1.6;
-  }
-
-  &.presetLargeSubhead {
-    font-size: 24px;
-    line-height: 1.5;
-    color: #627899; // # $halo-header--subhead
-  }
-
-  &.presetSmallSubhead {
-    font-size: 18px;
-    line-height: 1.5;
-    color: #627899; // # $halo-header--subhead
-  }
-
-  // INTERFACE
-
-  &.presetPage {
-    font-size: 20px;
-  }
-
-  &.presetPanel {
-    font-size: 18px;
-    color: $gray--xxdark;
-  }
-
-  &.presetSection {
-    font-size: 16px;
-    color: $gray--xxdark;
-  }
-
-  &.presetMicro {
-    font-size: 14px;
-    color: $gray--xxdark;
-    line-height: 1.145;
-  }
-
-  &.presetNano {
-    font-size: 13px;
-    font-weight: 600;
-    line-height: 1.2;
-    text-transform: uppercase;
   }
 }

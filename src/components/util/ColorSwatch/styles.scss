@@ -2,11 +2,15 @@
 
 .component {
   @include border-box; // TODO: deprecate
-  @include border-rounded;
+  @include border-rounded(2px);
+  @include flex-column($fill: true);
+  align-items: stretch;
+  padding: tempo(1);
   height: 150px;
+  overflow: hidden;
 
   & + & {
-    margin-left: tempo(0.5);
+    margin-left: tempo(1);
   }
 
   &:first-of-type {
@@ -15,9 +19,10 @@
 
   .color {
     @include border-rounded;
-    width: 100px;
+
+    // width: 100px;
     height: 80px;
-    margin-bottom: tempo(0.5);
+    margin-bottom: tempo(1);
     content: ' ';
   }
 
@@ -25,22 +30,33 @@
     display: block;
     font-weight: 600;
     font-size: 12px;
-    text-transform: capitalize;
+
+    // text-transform: capitalize;
     white-space: nowrap;
     word-break: keep-all;
-    margin-bottom: tempo(0.25);
+    margin-bottom: tempo(0.5);
   }
 
   .attributes {
     @include font(
-      $color: gray,
-      $size: 10px,
+      $color: slate--600,
+      $size: 11px,
       $family: monospace,
-      $antialiased: true,
-      $spacing: -0.02em
+      $antialiased: true
     );
     white-space: nowrap;
     word-break: keep-all;
+  }
+
+  &.backgroundBlack {
+    color: $white;
+    background-color: $black;
+    @include font-antialiased;
+  }
+
+  &.backgroundWhite {
+    color: $black;
+    border: 1px solid $slate--100;
   }
 }
 
@@ -48,7 +64,31 @@
 @each $name, $color in $colors {
   .#{$name} {
     .color {
+      position: relative;
       background-color: $color;
+
+      // Clever Boi™ way to print the hex color value as content
+      &::before {
+        position: absolute;
+        top: calc(60% - 20px);
+        left: 50%;
+        transform: translateX(-50%);
+        display: inline-block;
+        padding: 0 tempo(1);
+        background-color: rgba($white, 0.6);
+        text-align: center;
+        line-height: 20px;
+        color: darken($color, 70%);
+        content: '#{$color}';
+        @include border-rounded;
+        @include font-antialiased;
+        @include font(
+          $size: 11px,
+          $family: monospace,
+          $antialiased: true,
+          $spacing: 0.05em
+        );
+      }
     }
   }
 }

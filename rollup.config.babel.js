@@ -68,7 +68,7 @@ export default {
       extensions: ['.css', '.sass', '.scss'],
       namedExports: (name) => {
         // converts scss dashes to camelCase:
-        // styles.gray--xxlight => styles.grayXxlight
+        // styles.slate--200 => styles.gray200
         return camelCase(name);
       },
       use: [

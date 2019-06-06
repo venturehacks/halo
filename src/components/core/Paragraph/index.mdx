@@ -6,32 +6,31 @@ route: /core/paragraph
 
 import { Props, Playground } from 'docz';
 import { Header } from '../Header';
-import { Box } from '../../structure/Box';
 import { Paragraph } from './'
 
 # Paragraph
 
 <Playground>
-  <Paragraph flow>
-    Lorem ipsum dolor amet qui mustache kombucha elit. Leggings blue bottle pitchfork glossier copper mug, food truck hexagon everyday carry. Microdosing viral marfa, esse stumptown forage aesthetic freegan officia. Hammock seitan ea bitters fingerstache, dreamcatcher ullamco irure chia dolor labore unicorn pug fixie eiusmod.
+  <Paragraph>
+    The Paragraph component is ideal for rendering blocks of copy. It offers a narrower subset of features from Span, with stronger default enforcement of type size and line height. By default, it applies a natural document flow bottom margin.
   </Paragraph>
 
-  <Header h3>Support</Header>
+  <Header h3>Comfortable, Contrast AAA</Header>
 
-  <Paragraph preset="support" flow>
-    Freegan exercitation sunt, keffiyeh slow-carb master cleanse 8-bit skateboard roof party glossier cred.
+  <Paragraph contrast="AAA" lineHeight="comfortable">
+    The Paragraph component is ideal for rendering blocks of copy. It offers a narrower subset of features from Span, with stronger default enforcement of type size and line height. By default, it applies a natural document flow bottom margin.
   </Paragraph>
 
-  <Header h3>Micro</Header>
+  <Header h3>Compact, Contrast AA</Header>
 
-  <Paragraph preset="micro" flow>
-    Distillery live-edge tumeric, meditation tilde gentrify.
+  <Paragraph contrast="AA" lineHeight="comfortable">
+    The Paragraph component is ideal for rendering blocks of copy. It offers a narrower subset of features from Span, with stronger default enforcement of type size and line height. By default, it applies a natural document flow bottom margin.
   </Paragraph>
 
-  <Header h3>Notice</Header>
+  <Header h3>Dense, Contrast A</Header>
 
-  <Paragraph preset="notice">
-    Woke wayfarers normcore prominent.
+  <Paragraph contrast="A" lineHeight="dense">
+    The Paragraph component is ideal for rendering blocks of copy. It offers a narrower subset of features from Span, with stronger default enforcement of type size and line height. By default, it applies a natural document flow bottom margin.
   </Paragraph>
 </Playground>
 

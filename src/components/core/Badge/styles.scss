@@ -13,12 +13,12 @@ $badge-size: 16px;
     $weight: bold,
     $color: white,
     $transform: uppercase,
-    $antialiased: true
+    $antialiased: true,
+    $line: 9px
   );
-  border: 1px solid $gray--xxxlight;
+  border: 1px solid $slate--100;
   height: $badge-size;
   text-align: center;
-  padding-left: 1px;
 
   // shapes
   &.circle {
@@ -33,31 +33,31 @@ $badge-size: 16px;
 
   // colors
   &.gray {
-    background-color: $gray--dark;
-    border-color: $gray--xxxlight;
+    background-color: $slate--600;
+    border-color: $slate--100;
   }
 
   &.purple {
-    background-color: $purple--dark;
-    border-color: $purple--xxxlight;
+    background-color: $purple--600;
+    border-color: $purple--100;
   }
 
   &.blue {
-    background-color: $blue--dark;
-    border-color: $blue--xxxlight;
+    background-color: $blue--600;
+    border-color: $blue--100;
   }
 
   &.green {
-    background-color: $green--dark;
-    border-color: $green--xxxlight;
+    background-color: $green--600;
+    border-color: $green--100;
   }
   &.red {
-    background-color: $red--dark;
-    border-color: $red--xxxlight;
+    background-color: $red--600;
+    border-color: $red--100;
   }
 
   &.orange {
-    background-color: $orange--dark;
-    border-color: $orange--xxxlight;
+    background-color: $orange--600;
+    border-color: $orange--100;
   }
 }
