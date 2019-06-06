@@ -1,3 +1,4 @@
+import camelCase from 'camelcase';
 import classNames from 'classnames';
 import * as React from 'react';
 
@@ -12,13 +13,25 @@ export type ButtonSize = 'large' | 'regular' | 'small' | 'xsmall' | 'inline';
 export type ButtonVariant =
   | 'primary'
   | 'secondary'
+  | 'warning'
+  | 'danger'
   | 'gray'
   | 'secondary-gray'
   | 'alternate';
 
 export interface ButtonProps {
-  size?: ButtonSize;
+  /**
+   * Main control for button style
+   */
   variant?: ButtonVariant;
+
+  size?: ButtonSize;
+
+  /**
+   * Bold text
+   */
+  emphasis?: boolean;
+
   /** apply native disabled property */
   disabled?: boolean;
   children?: React.ReactNode;
@@ -33,6 +46,7 @@ export interface ButtonProps {
 function ButtonRaw({
   children,
   className,
+  emphasis = true,
   forwardedRef,
   href,
   icon,
@@ -46,16 +60,9 @@ function ButtonRaw({
   React.PropsWithoutRef<JSX.IntrinsicElements['button']>) {
   const buttonClassNames = classNames([
     styles.component,
-    variant === 'primary' && styles.primary,
-    variant === 'secondary' && styles.secondary,
-    variant === 'alternate' && styles.alternate,
-    variant === 'gray' && styles.gray,
-    variant === 'secondary-gray' && styles.secondaryGray,
-    size === 'large' && styles.large,
-    size === 'regular' && styles.regular,
-    size === 'small' && styles.small,
-    size === 'xsmall' && styles.xsmall,
-    size === 'inline' && styles.inline,
+    styles[camelCase(variant)],
+    styles[size],
+    emphasis && styles.emphasis,
     icon && styles.icon,
     icon && !children && styles.iconOnly,
     className,

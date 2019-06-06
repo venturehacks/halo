@@ -3,23 +3,24 @@
 .component {
   @include border-box; // TODO: deprecate
   @include border-rounded;
+  @include font-antialiased;
   border: 1px solid transparent;
   text-decoration: none;
   overflow: hidden;
 
   & + & {
-    margin-left: 0.5em;
+    margin-left: 0.75em;
   }
 
   &:hover {
     cursor: pointer;
-    color: currentColor;
     text-decoration: none;
   }
 
   &:focus {
     // probably should not turn this off due to accessibility.
     outline: 0;
+    box-shadow: 0 0 0 4px $blue--200;
   }
 
   &[disabled] {
@@ -27,159 +28,200 @@
     pointer-events: none;
     cursor: default;
   }
+}
 
-  // Colors
+// Colors
 
-  &.primary {
-    background-color: $blue--500;
-    border-color: $blue--500;
-    color: white;
+.primary {
+  background-color: $blue--500;
+  border-color: $blue--500;
+  color: $white;
 
-    &:hover,
-    &:global(._forceHover) {
-      border-color: $blue--600;
-      background-color: $blue--600;
-    }
-
-    &:active,
-    &:global(._forceActive) {
-      border-color: $blue--300;
-      background-color: $blue--300;
-    }
+  &:hover {
+    color: $white;
+    border-color: $blue--600;
+    background-color: $blue--600;
   }
 
-  &.secondary {
-    background-color: transparent;
-    border-color: $blue--500;
-    color: $blue--500;
+  &:active {
+    color: $white;
+    border-color: $blue--300;
+    background-color: $blue--300;
+  }
+}
 
-    &:hover,
-    &:global(._forceHover) {
-      color: $blue--600;
-      border-color: $blue--600;
-    }
+.secondary {
+  background-color: $white;
+  border-color: $blue--500;
+  color: $blue--500;
 
-    &:active,
-    &:global(._forceActive) {
-      color: $blue--400;
-      border-color: $blue--300;
-      background-color: $slate--100;
-      opacity: 0.9;
-    }
+  &:hover {
+    color: $blue--600;
+    border-color: $blue--600;
+    background-color: #ebecee;
   }
 
-  &.alternate {
+  &:active {
+    color: $blue--400;
+    border-color: $blue--300;
+    background-color: #ebecee;
+    opacity: 0.9;
+  }
+}
+
+.warning {
+  background-color: $orange--400;
+  border-color: $orange--400;
+  color: #0d0b22;
+
+  &:hover {
+    color: #0d0b22;
+    border-color: $orange--400;
+    background-color: #df9a3b;
+  }
+
+  &:active {
+    color: #0d0b22;
+    border-color: $orange--400;
+    background-color: #ebecee;
+    opacity: 0.9;
+  }
+}
+
+.danger {
+  background-color: $red--500;
+  border-color: $red--500;
+  color: $white;
+
+  &:hover {
+    color: $white;
+    border-color: $red--700;
+    background-color: $red--700;
+  }
+
+  &:active {
+    color: $white;
+    border-color: $red--700;
+    background-color: $red--700;
+    opacity: 0.9;
+  }
+}
+
+.gray {
+  background-color: $slate--100;
+  color: $slate--400;
+
+  &:hover {
+    background-color: lighten ($slate--100, 10%);
+  }
+
+  &:active {
+    background-color: $slate--200;
+  }
+}
+
+.secondaryGray {
+  background-color: transparent;
+  border-color: $slate--500;
+  color: $slate--600;
+
+  &:hover {
+    border-color: $slate--400;
     color: $slate--500;
   }
 
-  &.gray {
+  &:active {
     background-color: $slate--100;
-    color: $slate--400;
+  }
+}
 
-    &:hover {
-      background-color: lighten ($slate--100, 10%);
-    }
+.alternate {
+  color: $slate--500;
+}
 
-    &:active {
-      background-color: $slate--200;
-    }
+// Sizes
+
+.large {
+  font-size: 20px;
+  padding: tempo(2) tempo(2.5);
+
+  &:last-of-type {
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
-  &.secondaryGray {
-    background-color: transparent;
-    border-color: $slate--500;
-    color: $slate--600;
-
-    &:hover {
-      border-color: $slate--400;
-      color: $slate--500;
-    }
-
-    &:active {
-      background-color: $slate--100;
-    }
+  &.text {
+    padding-left: tempo(2);
+    padding-right: tempo(2);
   }
 
-  // Sizes
+  &.iconOnly {
+    padding: tempo(2.5);
+  }
+}
 
-  &.large {
-    font-size: 20px;
-    padding: tempo(1 * 2) tempo(1.25 * 2);
+.regular {
+  font-size: 16px;
+  padding: tempo(0.75 * 2) tempo(2);
 
-    &:last-of-type {
-      padding-left: 40px;
-      padding-right: 40px;
-    }
-
-    &.text {
-      padding-left: tempo(1 * 2);
-      padding-right: tempo(1 * 2);
-    }
-
-    &.iconOnly {
-      padding: tempo(1.25 * 2);
-    }
+  &:last-of-type {
+    padding-left: tempo(5);
+    padding-right: tempo(5);
   }
 
-  &.regular {
-    font-size: 16px;
-    padding: tempo(0.75 * 2) tempo(1 * 2);
-
-    &:last-of-type {
-      padding-left: tempo(2.5 * 2);
-      padding-right: tempo(2.5 * 2);
-    }
-
-    &.text {
-      padding-left: tempo(1 * 2);
-      padding-right: tempo(1 * 2);
-    }
-
-    &.iconOnly {
-      padding: tempo(1 * 2);
-    }
+  &.text {
+    padding-left: tempo(2);
+    padding-right: tempo(2);
   }
 
-  &.small {
-    font-size: 14px;
-    padding: tempo(0.5 * 2) tempo(1 * 2);
+  &.iconOnly {
+    padding: tempo(2);
+  }
+}
 
-    &:last-of-type {
-      padding-left: tempo(1 * 2);
-      padding-right: tempo(1 * 2);
-    }
+.small {
+  font-size: 14px;
+  padding: tempo(1) tempo(2);
 
-    &.text {
-      padding-left: tempo(0.5 * 2);
-      padding-right: tempo(0.5 * 2);
-    }
-
-    &.iconOnly {
-      padding: tempo(0.5 * 2);
-    }
+  &:last-of-type {
+    padding-left: tempo(2);
+    padding-right: tempo(2);
   }
 
-  &.xsmall {
-    font-size: 12px;
-    padding: tempo(0.25 * 2) tempo(0.5 * 2);
-
-    &.text {
-      padding-left: tempo(0.5 * 2);
-      padding-right: tempo(0.5 * 2);
-    }
-
-    &.iconOnly {
-      padding: tempo(0.5 * 2);
-    }
+  &.text {
+    padding-left: tempo(1);
+    padding-right: tempo(1);
   }
 
-  &.inline {
-    display: inline-block;
-    font-size: inherit;
-    padding: tempo(0.25 * 2) tempo(0.5 * 2);
+  &.iconOnly {
+    padding: tempo(1);
+  }
+}
+
+.xsmall {
+  font-size: 12px;
+  padding: tempo(0.5) tempo(1);
+
+  &.text {
+    padding-left: tempo(1);
+    padding-right: tempo(1);
   }
 
-  &.icon {
-    text-align: center;
+  &.iconOnly {
+    padding: tempo(1);
   }
+}
+
+.emphasis {
+  font-weight: $weight--bold;
+}
+
+.inline {
+  display: inline-block;
+  font-size: inherit;
+  padding: tempo(0.5) tempo(1);
+}
+
+.icon {
+  text-align: center;
 }
