@@ -5,13 +5,3 @@ declare module '*.scss' {
   const classNames: IClassNames;
   export = classNames;
 }
-
-/**
- * Dictionary of string => T value pairs
- */
-interface Dictionary<T> {
-  [key: string]: T;
-}
-
-type ReactEventT = React.ChangeEvent<any>;
-type EventFunctionT = (e: React.ChangeEvent<any>) => void;

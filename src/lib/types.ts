@@ -2,7 +2,7 @@
 // Make a single property optional
 // https://stackoverflow.com/a/46941824
 // prettier-ignore
-export type Overwrite<T1, T2> = {
+type Overwrite<T1, T2> = {
   [P in Exclude<keyof T1, keyof T2>]: T1[P]
 } & T2;
 
@@ -21,25 +21,28 @@ export type Overwrite<T1, T2> = {
  * The type of Two will be
  * interface Two { two: string }
  */
-export type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
+type Omit<T, K extends keyof T> = Pick<T, Exclude<keyof T, K>>;
 
-export type Diff<T, U> = T extends U ? never : T; // Remove types from T that are assignable to U
-export type Filter<T, U> = T extends U ? T : never; // Remove types from T that are not assignable to U
+type Diff<T, U> = T extends U ? never : T; // Remove types from T that are assignable to U
+type Filter<T, U> = T extends U ? T : never; // Remove types from T that are not assignable to U
 
 /**
  * Remove from T the keys that are in common with K
  */
-export type Optionalize<T extends K, K> = Omit<T, keyof K>;
+type Optionalize<T extends K, K> = Omit<T, keyof K>;
 
 /**
  * Make a Type into a Maybe Type
  */
-export type Nullable<T> = T | null;
-export type Maybe<T> = T | undefined;
+type Nullable<T> = T | null;
+type Maybe<T> = T | undefined;
 
 /**
  * Dictionary of string, value pairs
  */
-export interface Dictionary<T> {
+interface Dictionary<T> {
   [key: string]: T;
 }
+
+type ReactEventT = React.ChangeEvent<any>;
+type EventFunctionT = (e: React.ChangeEvent<any>) => void;
