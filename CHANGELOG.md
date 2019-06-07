@@ -2,10 +2,45 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.5.11](https://github.com/venturehacks/halo/compare/0.5.10...v0.5.11)
+#### [v0.6.0](https://github.com/venturehacks/halo/compare/0.5.11...v0.6.0)
+
+> 7 June 2019
+
+- Sass Documentation [`#17`](https://github.com/venturehacks/halo/pull/17)
+- Official Color Palette & Typography Overhaul [`#15`](https://github.com/venturehacks/halo/pull/15)
+- New Button variants; reduce default selector specificity [`9fdcd3a`](https://github.com/venturehacks/halo/commit/9fdcd3a8380aa3ad61fbc2cb3951dcddd3c43b7e)
+- Refactor $font-sizes-map as deep map including size + line height [`598c833`](https://github.com/venturehacks/halo/commit/598c8331b1cc703ed270217a3c1e01d8064636f6)
+- Remove built docs from repository [`6365b5d`](https://github.com/venturehacks/halo/commit/6365b5d11f7ba8097b7a6da2aea9ba710bce5168)
+- Stronger, clearer documentation; updated roadmap [`9acfb19`](https://github.com/venturehacks/halo/commit/9acfb191f0020c934499546d8da0222ff535ed6c)
+- Documentation for Scss mixins [`2b6a10c`](https://github.com/venturehacks/halo/commit/2b6a10c4d99e94ff58a98093238f60c80e2cf7f3)
+- Refactor Paragraph as a wrapper on Span with simpler API [`af4f679`](https://github.com/venturehacks/halo/commit/af4f6798f90ba7f24fa22cf747f28ff19181ce84)
+- Documentation for Scss breakpoints [`0dfcde8`](https://github.com/venturehacks/halo/commit/0dfcde82036f765667f9ab62a5472def66050ab9)
+- :knife: Kill unfinished components for now (Icon, Number) [`8233bed`](https://github.com/venturehacks/halo/commit/8233bed0a43a2584ffbc145437cb21626a545a2d)
+- Change tempo scalar to 8px (down from 16px) [`f8461ba`](https://github.com/venturehacks/halo/commit/f8461ba182d856fad66cb6ff365df1e850fc0c6e)
+- Improve documentation of Span and add line height override support [`0ff822d`](https://github.com/venturehacks/halo/commit/0ff822d22d9f3a600a6a3716eceffdc0609a38f3)
+- Kill unused $font-sizes list [`6b5270c`](https://github.com/venturehacks/halo/commit/6b5270c0082edd092ee4ef64fceb1a24fb64e3ec)
+- Documentation for Scss utilities [`a8d699e`](https://github.com/venturehacks/halo/commit/a8d699eac1fa9690eb2e6e239ca38cd19a6bdfa0)
+- Tweak Button colors [`0d9f7e8`](https://github.com/venturehacks/halo/commit/0d9f7e850a2ade8bb8770ee3fa7a53f4f5ca3aa1)
+- Documentation for Scss functions [`a2ce60f`](https://github.com/venturehacks/halo/commit/a2ce60f866bcf8efd7e6470cbdbc6ac5d7f6a6ff)
+- Use $font-sizes-map on master font() mixin [`db736ec`](https://github.com/venturehacks/halo/commit/db736eca5d32b0b07f6a10b7b370e7b82f500b50)
+- More fix ambient type declaration [`0207fdb`](https://github.com/venturehacks/halo/commit/0207fdbecc84325c741cabb3626729148712bee3)
+- [bugfix] Box valign; decrease embedded selector specificity [`85aeb6c`](https://github.com/venturehacks/halo/commit/85aeb6c006ddbec7474b23298ce606425565a909)
+- (documentaion tweaks) [`151bb16`](https://github.com/venturehacks/halo/commit/151bb1607e054f3f14726c53fe2c65592674c57d)
+- map-deep-get + Dictionary interface export [`f0dcd26`](https://github.com/venturehacks/halo/commit/f0dcd269dbc3737e86d0367c619dd89a9d8b4d5a)
+- Reorganize main menu [`bd973aa`](https://github.com/venturehacks/halo/commit/bd973aa5dfabac49b97ba1ba53516e22ca3c6bd9)
+- Improve Jest config for module resolution, fix test [`d5b17b0`](https://github.com/venturehacks/halo/commit/d5b17b05022060defbe2c0d05090379dc7333d44)
+- Support `stretch` as `Box` alignment option [`e6fddfd`](https://github.com/venturehacks/halo/commit/e6fddfd47bf1b721984db17effb8ab21a33cd590)
+- Fix ambient type declaration [`7444413`](https://github.com/venturehacks/halo/commit/7444413f4c87b34740c2808f72017ccd5ccfa887)
+- Fix default behavior of `Box` [`c9347e4`](https://github.com/venturehacks/halo/commit/c9347e42e1d611c94002378bdcff0c4ece57ae02)
+- Add automatic text-truncate to PillTag [`6854387`](https://github.com/venturehacks/halo/commit/6854387e4919a7d56c9132b71122138932bc05bb)
+- Inclusivity! [`70653bd`](https://github.com/venturehacks/halo/commit/70653bdfe1fa39f40847c8446d8bc9083e8c9b39)
+
+#### [0.5.11](https://github.com/venturehacks/halo/compare/0.5.10...0.5.11)
 
 > 5 June 2019
 
+- Official Typography. Overhaul Header to rely on Span for type styles [`ccfa850`](https://github.com/venturehacks/halo/commit/ccfa850038e1cf729cffc9731dfecdd8a91038da)
+- Finalized color spectrum, rebuilt swatches, etc. [`a7c1033`](https://github.com/venturehacks/halo/commit/a7c103379df841972f4db942adeb3dccbef60e73)
 - Another try at docs [`aa52980`](https://github.com/venturehacks/halo/commit/aa52980ed655524f41b8c35947f00a48e0e0b150)
 - First try at docs deploy [`0440c7f`](https://github.com/venturehacks/halo/commit/0440c7ffc41fec888b737a7e7392c20438d17dc0)
 - Docz 1.2.0 + props table fixes :tada: [`939ff81`](https://github.com/venturehacks/halo/commit/939ff81464236f5fe5ca4aa006e091f2dd807ef7)
@@ -13,10 +48,12 @@ All notable changes to this project will be documented in this file. Dates are d
 - Another try at docs [`76bb404`](https://github.com/venturehacks/halo/commit/76bb4044590c08f800bcc64e31ee8747405ff106)
 - Another try at docs [`7ba2215`](https://github.com/venturehacks/halo/commit/7ba2215a075823a049ffd58d96a703b915dfda5b)
 - docs maybe works this time [`3a224cf`](https://github.com/venturehacks/halo/commit/3a224cf7475bc54a2a6faa2e695464148862e8ba)
+- Release 0.5.11 [`9f48162`](https://github.com/venturehacks/halo/commit/9f48162f087c7df92cb87d0ce86794b3bfffd3b2)
+- (fix test) [`3b66ea6`](https://github.com/venturehacks/halo/commit/3b66ea6ead102604188d4a760bf2ef945c2916ff)
 - Fix paths for Netlify [`919f025`](https://github.com/venturehacks/halo/commit/919f025e7d44e709fe3e1bedc3bbdf510bac984b)
+- [Avatar] add max-height to img [`b772954`](https://github.com/venturehacks/halo/commit/b772954dd89d8a03d4309e97ea4a1017b3175035)
 - Set theme jekyll-theme-minimal [`6e2982a`](https://github.com/venturehacks/halo/commit/6e2982ab69b9ede1e8fbc14f7cdd2c30b4c35292)
 - Prepare for docs deploy [`7c6f5f2`](https://github.com/venturehacks/halo/commit/7c6f5f22b661454819da8e930fbc5b95203f0c23)
-- [Avatar] add max-height to img [`b772954`](https://github.com/venturehacks/halo/commit/b772954dd89d8a03d4309e97ea4a1017b3175035)
 
 #### [0.5.10](https://github.com/venturehacks/halo/compare/0.5.9...0.5.10)
 
