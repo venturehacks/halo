@@ -13,7 +13,8 @@ export type BoxAlign =
   | 'right'
   | 'normal'
   | 'space-between'
-  | 'space-evenly';
+  | 'space-evenly'
+  | 'stretch';
 
 export interface NegativeSpace {
   top?: number | boolean;
