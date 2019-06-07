@@ -1,0 +1,33 @@
+---
+name: Functions
+menu: Sass
+route: /sass/functions
+---
+
+# Functions
+
+## tempo()
+
+Takes a magnitude parameter and multiplies it times the base Halo spacing unit `8px`. Magnitude cannot be more granular than increments of `0.5`.
+
+
+```scss
+@function tempo($magnitude) {
+  @return 8px * $magnitude;
+}
+```
+
+## grid-cell-width()
+
+Returns the width, in pixels, of an element that is N grid cells wide.
+
+`1 <= $cells <= 24`
+
+```scss
+@function grid-cell-width($cells) {
+  $cell-width: tempo(4); // 32px
+  $gutter-width: tempo(2); // 16px
+  $gutters: $cells - 1;
+  @return ($cells * $cell-width) + ($gutters * $gutter-width);
+}
+```

@@ -7,6 +7,7 @@ $box-flex: (
   normal: normal,
   space-between: space-between,
   space-evenly: space-evenly,
+  stretch: stretch,
 );
 
 @mixin flex-column($fill: false, $align: null, $valign: null, $basis: null) {

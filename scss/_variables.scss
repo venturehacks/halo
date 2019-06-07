@@ -11,7 +11,6 @@
 // families
 $font-family--primary: 'helvetica neue', arial, helvetica, freesans,
   'liberation sans', 'numbus sans l', sans-serif;
-$font-family--secondary: georgia, serif;
 $font-family--serif: georgia, serif;
 $font-family--monospace: Monaco, 'Courier New', monospace;
 $font-family--system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
@@ -20,11 +19,13 @@ $font-family--system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
 
 $font-families: (
   primary: $font-family--primary,
-  secondary: $font-family--secondary,
   serif: $font-family--serif,
   monospace: $font-family--monospace,
   system: $font-family--system,
 );
+
+// transforms
+$text-transforms: (lowercase, uppercase, capitalize, none);
 
 // weights
 $weight--ultralight: 200;
@@ -45,9 +46,20 @@ $weights: (
   heavy: $weight--heavy,
 );
 
-// transforms
-$text-transforms: (lowercase, uppercase, capitalize, none);
+// line heights
+$line-height--default: 1.5;
+$line-height--comfortable: 1.25;
+$line-height--compact: 1.125;
+$line-height--dense: 1.0625;
 
+$line-heights: (
+  default: $line-height--default,
+  comfortable: $line-height--comfortable,
+  compact: $line-height--compact,
+  dense: $line-height--dense,
+);
+
+// preset size + line height combos
 $font-sizes-map: (
   size--2xs: (
     font-size: 11px,
@@ -93,32 +105,6 @@ $font-sizes-map: (
     font-size: 56px,
     line-height: 60px,
   ),
-);
-
-$font-sizes: (
-  size--2xs: map-deep-get($font-sizes-map, size--2xs),
-  size--xs: map-deep-get($font-sizes-map, size--xs),
-  size--sm: map-deep-get($font-sizes-map, size--sm),
-  size--md: map-deep-get($font-sizes-map, size--md),
-  size--lg: map-deep-get($font-sizes-map, size--lg),
-  size--xl: map-deep-get($font-sizes-map, size--xl),
-  size--2xl: map-deep-get($font-sizes-map, size--2xl),
-  size--3xl: map-deep-get($font-sizes-map, size--3xl),
-  size--4xl: map-deep-get($font-sizes-map, size--4xl),
-  size--5xl: map-deep-get($font-sizes-map, size--5xl),
-  size--6xl: map-deep-get($font-sizes-map, size--6xl),
-);
-
-$line-height--default: 1.5;
-$line-height--comfortable: 1.25;
-$line-height--compact: 1.125;
-$line-height--dense: 1.0625;
-
-$line-heights: (
-  default: $line-height--default,
-  comfortable: $line-height--comfortable,
-  compact: $line-height--compact,
-  dense: $line-height--dense,
 );
 
 /**

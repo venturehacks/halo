@@ -17,10 +17,21 @@
     color: $color;
   }
 
-  @if map-has-key($font-sizes, $size) {
-    font-size: map-get($font-sizes, $size);
+  @if $size and map-has-key($font-sizes-map, 'size--' + $size) {
+    font-size: map-deep-get($font-sizes-map, 'size--' + $size, font-size);
+
+    // include matching line-height *unless* we set $line to false`
+    @if $line != false {
+      line-height: map-deep-get($font-sizes-map, 'size--' + $size, line-height);
+    }
   } @else if $size and has-unit($size) {
     font-size: $size;
+  }
+
+  @if map-has-key($line-heights, $line) {
+    line-height: map-get($line-heights, $line);
+  } @else if $line and $size {
+    line-height: $line-height--default; // default line height is 140%
   }
 
   @if map-has-key($weights, $weight) {
@@ -35,12 +46,6 @@
     text-transform: $transform;
   }
 
-  @if map-has-key($line-heights, $line) {
-    line-height: map-get($line-heights, $line);
-  } @else if $line and $size {
-    line-height: $size * 1.4; // default line height is 140%
-  }
-
   @if $spacing and has-unit($spacing) {
     letter-spacing: $spacing;
   }
@@ -51,6 +56,15 @@
 
   @if $truncate {
     @include text-truncate;
+  }
+}
+
+@mixin font-default-link($color: $text-dark--link, $args...) {
+  @include font($color: $color, $args...);
+
+  &:hover,
+  &:focus {
+    text-decoration: underline;
   }
 }
 

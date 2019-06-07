@@ -15,8 +15,6 @@ export default {
       config.resolve.alias.set('~/components', path.join(__dirname, 'src', 'components'));
       config.resolve.alias.set('~/lib', path.join(__dirname, 'src', 'lib'));
     }
-
-    // console.log(config.toString()); process.exit();
   },
   plugins: [
     css({
@@ -45,11 +43,16 @@ export default {
     'Welcome',
     'Colors',
     {
-      name: 'Structure',
-      menu: ['Grid', 'Cell', 'Box']
+      name: 'Core'
     },
     {
-      name: 'Core'
+      name: 'Structure',
+      menu: ['Box', 'Grid', 'Cell']
+    },
+
+    {
+      name: 'Sass',
+      menu: ['Mixins', 'Functions', 'Breakpoints', 'Utility']
     },
   ]
 };

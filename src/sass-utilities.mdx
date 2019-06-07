@@ -1,0 +1,37 @@
+---
+name: Utility
+menu: Sass
+route: /sass/utilities
+---
+
+# Utility
+
+## has-unit()
+
+```scss
+@function has-unit($v) {
+  @return not unitless($v);
+}
+```
+
+## map-deep-get()
+
+```scss
+@function map-deep-get($map, $keys...) {
+  @each $key in $keys {
+    $map: map-get($map, $key);
+  }
+  @return $map;
+}
+```
+
+## strip-unit()
+
+```scss
+// 24px => 24
+@function strip-unit($value) {
+  @return $value / ($value * 0 + 1);
+}
+```
+
+

@@ -1,0 +1,96 @@
+---
+name: Breakpoints
+menu: Sass
+route: /sass/breakpoints
+---
+
+# Breakpoints
+
+In the interest of best practices in responsive design, the handset viewport should be considered first. Developers should strive to apply as few breakpoints as possible. While not prohibited, it is frowed upon to use `*-down` mixins.
+
+### Encouraged breakpoint mixins
+
+- `tablet-up`
+- `desktop-up`
+- `widescreen-up`
+- `superwidescreen-up`
+
+### Discouraged breakpoint mixins
+
+- `*-only`
+- `*-down`
+
+```scss
+// optimized for practicality & readability
+$handset-breakpoint: 400px;
+$tablet-portrait-breakpoint: 720px;
+$desktop-breakpoint: 1136px; // minimum to support the full Halo grid
+$widescreen-breakpoint: 1440px;
+$superwidescreen-breakpoint: 1800px;
+
+@mixin handset-only {
+  @media (max-width: $handset-breakpoint) {
+    @content;
+  }
+}
+
+@mixin tablet-only {
+  @media (min-width: $handset-breakpoint + 1px) and (max-width: $desktop-breakpoint - 1px) {
+    @content;
+  }
+}
+
+@mixin tablet-up {
+  @media (min-width: $tablet-portrait-breakpoint) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media (max-width: $desktop-breakpoint - 1px) {
+    @content;
+  }
+}
+
+@mixin desktop-only {
+  @media (min-width: $desktop-breakpoint) and (max-width: $widescreen-breakpoint - 1px) {
+    @content;
+  }
+}
+
+@mixin desktop-up {
+  @media (min-width: $desktop-breakpoint) {
+    @content;
+  }
+}
+
+@mixin desktop-down {
+  @media (max-width: $widescreen-breakpoint - 1px) {
+    @content;
+  }
+}
+
+@mixin widescreen-only {
+  @media (min-width: $widescreen-breakpoint) and (max-width: $superwidescreen-breakpoint - 1px) {
+    @content;
+  }
+}
+
+@mixin widescreen-up {
+  @media (min-width: $widescreen-breakpoint) {
+    @content;
+  }
+}
+
+@mixin widescreen-down {
+  @media (max-width: $superwidescreen-breakpoint - 1px) {
+    @content;
+  }
+}
+
+@mixin superwidescreen-up {
+  @media (min-width: $superwidescreen-breakpoint) {
+    @content;
+  }
+}
+```

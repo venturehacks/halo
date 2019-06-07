@@ -20,7 +20,7 @@ $grid-cell-count: 24;
 }
 
 .flexColumn {
-  @include flex-column($align: flex-start);
+  @include flex-column($align: left);
 }
 
 .flexRow {
