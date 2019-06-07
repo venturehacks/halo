@@ -58,7 +58,7 @@
   &:hover {
     color: $blue--600;
     border-color: $blue--600;
-    background-color: #ebecee;
+    background-color: #f4f5f7; // ebecee
   }
 
   &:active {
@@ -95,14 +95,14 @@
 
   &:hover {
     color: $white;
-    border-color: $red--700;
-    background-color: $red--700;
+    border-color: $red--600;
+    background-color: $red--600;
   }
 
   &:active {
     color: $white;
-    border-color: $red--700;
-    background-color: $red--700;
+    border-color: $red--600;
+    background-color: $red--600;
     opacity: 0.9;
   }
 }
@@ -126,8 +126,9 @@
   color: $slate--600;
 
   &:hover {
-    border-color: $slate--400;
-    color: $slate--500;
+    border-color: $slate--500;
+    color: $slate--600;
+    background-color: #f4f5f7; // ebecee
   }
 
   &:active {
