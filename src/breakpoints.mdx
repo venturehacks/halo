@@ -8,20 +8,36 @@ route: /sass/breakpoints
 
 In the interest of best practices in responsive design, the handset viewport should be considered first. Developers should strive to apply as few breakpoints as possible. While not prohibited, it is frowed upon to use `*-down` mixins.
 
-### Encouraged breakpoint mixins
+### 👍 Encouraged mixins
 
-- `tablet-up`
-- `desktop-up`
+- **`tablet-up`**
+- **`desktop-up`**
 - `widescreen-up`
 - `superwidescreen-up`
 
-### Discouraged breakpoint mixins
+### 👎 Discouraged mixins
 
 - `*-only`
 - `*-down`
 
+## Usage
+
+Row layout that stacks vertically on constrained viewports.
+
 ```scss
-// optimized for practicality & readability
+.component {
+  @include flex-column;
+
+  @include desktop-up {
+    @include flex-row($valign: stretch);
+  }
+}
+
+```
+
+### Source
+
+```scss
 $handset-breakpoint: 400px;
 $tablet-portrait-breakpoint: 720px;
 $desktop-breakpoint: 1136px; // minimum to support the full Halo grid

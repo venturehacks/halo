@@ -1,10 +1,14 @@
-# Halo :angel:
+# Halo
 
 Halo is our design system. It enables our small group of designers to design and ship faster by institutionalizing key decisions and providing an already established groundwork.
 
 &nbsp;
 
-![Halo color palette preview](https://user-images.githubusercontent.com/194885/54584454-9f899880-49d4-11e9-8238-db144693e0c8.jpg)
+![Halo buttons preview](https://user-images.githubusercontent.com/194885/59124821-8cbc9b00-8915-11e9-9f94-eeb6e1df80f3.png)
+
+&nbsp;
+
+📝 **[Halo Feedback](https://venturehacks.quip.com/JP75A3GbNYua/Halo-Feedback)**
 
 &nbsp;
 
@@ -60,7 +64,7 @@ return (
     <Span muted>muted subtext is bueno</Span>
 
     <Box row>
-      <Button variant="gray">Cancel</Button>
+      <Button variant="secondary">Cancel</Button>
       <Button variant="primary" onClick={() => console.log('OK!')}>
         OK
       </Button>
@@ -71,18 +75,16 @@ return (
 
 #### Scss
 
-> **Note:** mixins + vars that are _actually_ interesting coming soon :)
-
 ```scss
 // single import grants all variables, mixins, etc.
 @import '~halo/scss/halo';
 
 .foo {
-  color: $halo-test-variable;
+  color: $text-dark--aaaa;
 }
 
 .bar {
-  @include halo-test;
+  @include flex-row;
 }
 ```
 
@@ -96,8 +98,9 @@ return (
 | -------------- | -------------- | ------------------------------------------------------------- | :----: |
 | 2019 &nbsp; –  | `v1.0.0`       | CoPro production release                                      |   🌀   |
 | ⋯              | ⋯              | ⋯                                                             |   ⋯    |
-| 2019 April–May | `v0.6.0`       | Typography, Grid                                              |   🔶   |
-| 2019 April     | `v0.5.0`       | Form input components, SVG iconography                        |   🔶   |
+| 2019 July      | `v0.7.0`       | Buttons (final), Iconography, Form input components           |   🔶   |
+| 2019 June      | `v0.6.0`       | Final color palette, type scale                               |   ✅   |
+| 2019 April-May | `v0.5.0`       | Grid, Cell, Label, Badge, Avatar, Tooltip, breakpoints        |   ✅   |
 | 2019 March     | `v0.4.0`       | Box, color palette, scss vars/mixin library export            |   ✅   |
 | 2019 February  | `v0.3.1`       | Header, Span, Paragraph, Button, PillTag                      |   ✅   |
 | 2019 January   | infrastructure | Best-practice configs, introduce strict linting               |   ✅   |
@@ -125,11 +128,14 @@ Design maintains separate release notes and numeric versioning.
 - **Design**
   - Shane Zucker
   - Gearóid O’Rourke
+  - Adam Ruf
   - Lily Chen
   - Stephen Varaday
-- **Dogfood**
-  - Jerry Yu
+  - Chad Whitaker
+- **Technical Feedback**
   - Thomas Hu
+  - Hans Arijanto
+  - Jordan Claassen
 
 &nbsp;
 

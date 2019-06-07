@@ -6,15 +6,7 @@ route: /sass/utilities
 
 # Utility
 
-## has-unit()
-
-```scss
-@function has-unit($v) {
-  @return not unitless($v);
-}
-```
-
-## map-deep-get()
+## map-deep-get
 
 ```scss
 @function map-deep-get($map, $keys...) {
@@ -25,7 +17,15 @@ route: /sass/utilities
 }
 ```
 
-## strip-unit()
+## has-unit
+
+```scss
+@function has-unit($v) {
+  @return not unitless($v);
+}
+```
+
+## strip-unit
 
 ```scss
 // 24px => 24

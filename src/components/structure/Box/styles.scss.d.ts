@@ -4,6 +4,7 @@ declare const styles: {
   readonly "wrap": string;
   readonly "flexColumn": string;
   readonly "flexRow": string;
+  readonly "width100": string;
   readonly "background-black": string;
   readonly "background-white": string;
   readonly "background-text-dark--aaaa": string;

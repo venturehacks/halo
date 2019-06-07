@@ -27,6 +27,10 @@ $grid-cell-count: 24;
   @include flex-row;
 }
 
+.width100 {
+  width: 100%;
+}
+
 @each $name, $color in $colors {
   .background-#{$name} {
     background-color: $color;

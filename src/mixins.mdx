@@ -6,7 +6,7 @@ route: /sass/mixins
 
 # Mixins
 
-## font()
+## font
 
 Configure many typeface properties at once. For each setting, it will only spit out a rule if you provide a non-null value.
 
@@ -28,7 +28,27 @@ the cooresponding rule.
 )
 ```
 
-## font-antialiased()
+
+### Usage
+
+```scss
+.component {
+  @include font($size: 2xl, $color: text-dark--aaa);
+
+  .flashyCode {
+    @include font(
+      $family: monospace,
+      $size: sm,
+      $color: #ccc,
+      $weight: medium,
+      $truncate: true,
+      $antialiased: true,
+    );
+  }
+}
+```
+
+## font-antialiased
 
 ```scss
 @mixin font-antialiased {
@@ -38,19 +58,27 @@ the cooresponding rule.
 ```
 
 
-## text-truncate()
+## text-truncate
 
 ```scss
-// note: requires fixed width container
+// requires fixed width container
 @mixin text-truncate {
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
 }
-
 ```
 
-## flex-column()
+### Usage
+
+```scss
+.boundText {
+  @include text-truncate;
+  max-width: 100px;
+}
+```
+
+## flex-column
 
 Scaffold flexbox layouts quickly. `<Box>` heavily leverages this mixin.
 
@@ -75,12 +103,28 @@ $box-flex: (
 );
 ```
 
-## flex-row()
+### Usage
+
+```scss
+.stackOfComponents {
+  @include flex-column($align: top);
+
+  .rowOfComponents {
+    @include flex-row($align: left, $valign: top);
+
+    .item {
+      flex-basis: 100px;
+    }
+  }
+}
+```
+
+## flex-row
 
 Same as `flex-column()` with the axes swapped. Basically, `justify-content` and `align-items` will swap automatically.
 
 
-## grid-row()
+## grid-row
 
 Style an element as a container for a single row of cells in the 24-column grid.
 
@@ -96,7 +140,27 @@ Style an element as a container for a single row of cells in the 24-column grid.
 }
 ```
 
-## grid-cell()
+### Usage
+
+```scss
+.gridRow {
+  @include grid-row;
+
+  .leftNav {
+    @include grid-cell(4); // 4 cells wide
+  }
+
+  .centerContent {
+    @include grid-cell(16); // 16 cells wide
+  }
+
+  .rightSidebar {
+    @include grid-cell(4); // 4 cells wide
+  }
+}
+```
+
+## grid-cell
 
 Style an element as a grid cell with configurable width and position.
 
@@ -109,17 +173,16 @@ Style an element as a grid cell with configurable width and position.
 ```
 
 
-## border-rounded()
+## border-rounded
 
 ```scss
 @mixin border-rounded($radius: 4px) {
   border-radius: $radius;
 }
-)
 ```
 
 
-## border-circle()
+## border-circle
 
 ```scss
 @mixin border-circle {
