@@ -3,6 +3,12 @@
 @include html-reset;
 
 :global {
+  html,
+  body,
+  button {
+    font-family: $font-family--primary !important;
+  }
+
   // hack for color palette page
   @media (min-width: 920px) {
     div#root {

@@ -33,6 +33,10 @@ export default {
       body: {
         fontFamily: "'Helvetica Neue', Helvetica, Arial, sans-serif",
       },
+      container: {
+        width: ['100%', '100%', 1200],
+        padding: ['20px', '0 40px 40px'],
+      },
       playground: {
         padding: '20px',
       },
