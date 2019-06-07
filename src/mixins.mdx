@@ -1,0 +1,128 @@
+---
+name: Mixins
+menu: Sass
+route: /sass/mixins
+---
+
+# Mixins
+
+## font()
+
+Configure many typeface properties at once. For each setting, it will only spit out a rule if you provide a non-null value.
+
+If a supplied preset key name is invalid for `$family`, `$size`, `$line`, `$weight`, etc,
+the mixin falls back on supplying the literal value to
+the cooresponding rule.
+
+```scss
+@mixin font(
+  $size: null,   // 2xs | xs | sm | md | lg | xl | 2xl | 3xl | 4xl | 5xl | 6xl
+  $line: null,   // default | comfortable | compact | dense
+  $weight: null, // regular | medium | bold
+  $color: null,  // palette color name or hex
+  $family: null, // primary | serif | monospace | system
+  $transform: null, // uppercase | lowercase | capitalize | none
+  $antialiased: null,
+  $spacing: null,
+  $truncate: null
+)
+```
+
+## font-antialiased()
+
+```scss
+@mixin font-antialiased {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+```
+
+
+## text-truncate()
+
+```scss
+// note: requires fixed width container
+@mixin text-truncate {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+
+```
+
+## flex-column()
+
+Scaffold flexbox layouts quickly. `<Box>` heavily leverages this mixin.
+
+```scss
+@mixin flex-column(
+  $align: null,  // key in $box-flex
+  $valign: null, // key in $box-flex
+  $basis: null,  // sets flex-basis
+  $fill: false,  // if true, flex: 1 1 0
+)
+
+$box-flex: (
+  top: flex-start,
+  center: center,
+  bottom: flex-end,
+  left: flex-start,
+  right: flex-end,
+  normal: normal,
+  space-between: space-between,
+  space-evenly: space-evenly,
+  stretch: stretch,
+);
+```
+
+## flex-row()
+
+Same as `flex-column()` with the axes swapped. Basically, `justify-content` and `align-items` will swap automatically.
+
+
+## grid-row()
+
+Style an element as a container for a single row of cells in the 24-column grid.
+
+```scss
+@mixin grid-row {
+  @include flex-row($align: left, $valign: top);
+  width: 100%;
+  flex-wrap: nowrap;
+
+  @include desktop-up {
+    max-width: $desktop-breakpoint; // 1136px
+  }
+}
+```
+
+## grid-cell()
+
+Style an element as a grid cell with configurable width and position.
+
+```scss
+@mixin grid-cell(
+  $cells,          // element width in cells
+  $offset: 0,      // width offset, in cells, from the left side
+  $centered: false // center the element horizontally
+)
+```
+
+
+## border-rounded()
+
+```scss
+@mixin border-rounded($radius: 4px) {
+  border-radius: $radius;
+}
+)
+```
+
+
+## border-circle()
+
+```scss
+@mixin border-circle {
+  border-radius: 50%;
+}
+```
