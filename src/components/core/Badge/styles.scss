@@ -27,8 +27,8 @@ $badge-size: 16px;
   }
 
   &.square {
-    @include border-rounded(2px);
-    padding: 0 3px;
+    @include border-rounded(4px);
+    padding: 0 2px 0 3px;
   }
 
   // colors
