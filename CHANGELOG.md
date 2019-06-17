@@ -2,12 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.6.1](https://github.com/venturehacks/halo/compare/0.6.0...v0.6.1)
+#### [v0.6.2](https://github.com/venturehacks/halo/compare/0.6.1...v0.6.2)
+
+> 17 June 2019
+
+- [module fix] Remove aliased ~ imports [`a2fe2ff`](https://github.com/venturehacks/halo/commit/a2fe2ff8504bc200bb0dcccabdc50eda3aa8c9fb)
+
+#### [0.6.1](https://github.com/venturehacks/halo/compare/0.6.0...0.6.1)
 
 > 17 June 2019
 
 - [Header] offer TextWeight override / sane defaults [`2ae9871`](https://github.com/venturehacks/halo/commit/2ae9871b34215959c3829563b7a95809f9f1a6b0)
 - Fix stupid docz; force Helvetica Neue [`1efba6e`](https://github.com/venturehacks/halo/commit/1efba6ec6b6ead44f0b597367e9a0fdcd83a02e4)
+- Release 0.6.1 [`b2e0a38`](https://github.com/venturehacks/halo/commit/b2e0a387eaa6a00fc54abe95bd87562fb5a1efc5)
 - [Span] implement `weight?: TextWeight` prop [`3ffba10`](https://github.com/venturehacks/halo/commit/3ffba10fbde8808b52eae2d77432e83a786949a7)
 - [Badge] adjust border-radius for Lily [`b544dc9`](https://github.com/venturehacks/halo/commit/b544dc907adc0d8e34b05b64f2a9ca8882ab7e31)
 - inherit font family for Button [`6c0c741`](https://github.com/venturehacks/halo/commit/6c0c741fc56f91573559e553d864d699ead52466)
