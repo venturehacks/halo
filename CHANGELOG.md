@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.6.0](https://github.com/venturehacks/halo/compare/0.5.11...v0.6.0)
+#### [v0.6.1](https://github.com/venturehacks/halo/compare/0.6.0...v0.6.1)
+
+> 17 June 2019
+
+- [Header] offer TextWeight override / sane defaults [`2ae9871`](https://github.com/venturehacks/halo/commit/2ae9871b34215959c3829563b7a95809f9f1a6b0)
+- Fix stupid docz; force Helvetica Neue [`1efba6e`](https://github.com/venturehacks/halo/commit/1efba6ec6b6ead44f0b597367e9a0fdcd83a02e4)
+- [Span] implement `weight?: TextWeight` prop [`3ffba10`](https://github.com/venturehacks/halo/commit/3ffba10fbde8808b52eae2d77432e83a786949a7)
+- [Badge] adjust border-radius for Lily [`b544dc9`](https://github.com/venturehacks/halo/commit/b544dc907adc0d8e34b05b64f2a9ca8882ab7e31)
+- inherit font family for Button [`6c0c741`](https://github.com/venturehacks/halo/commit/6c0c741fc56f91573559e553d864d699ead52466)
+
+#### [0.6.0](https://github.com/venturehacks/halo/compare/0.5.11...0.6.0)
 
 > 7 June 2019
 
@@ -19,9 +29,10 @@ All notable changes to this project will be documented in this file. Dates are d
 - Change tempo scalar to 8px (down from 16px) [`f8461ba`](https://github.com/venturehacks/halo/commit/f8461ba182d856fad66cb6ff365df1e850fc0c6e)
 - Improve documentation of Span and add line height override support [`0ff822d`](https://github.com/venturehacks/halo/commit/0ff822d22d9f3a600a6a3716eceffdc0609a38f3)
 - Kill unused $font-sizes list [`6b5270c`](https://github.com/venturehacks/halo/commit/6b5270c0082edd092ee4ef64fceb1a24fb64e3ec)
+- Release 0.6.0 [`6a6df0f`](https://github.com/venturehacks/halo/commit/6a6df0ff56c9b88c8dc10cbf04c999b73642be55)
 - Documentation for Scss utilities [`a8d699e`](https://github.com/venturehacks/halo/commit/a8d699eac1fa9690eb2e6e239ca38cd19a6bdfa0)
-- Tweak Button colors [`0d9f7e8`](https://github.com/venturehacks/halo/commit/0d9f7e850a2ade8bb8770ee3fa7a53f4f5ca3aa1)
 - Documentation for Scss functions [`a2ce60f`](https://github.com/venturehacks/halo/commit/a2ce60f866bcf8efd7e6470cbdbc6ac5d7f6a6ff)
+- Tweak Button colors [`0d9f7e8`](https://github.com/venturehacks/halo/commit/0d9f7e850a2ade8bb8770ee3fa7a53f4f5ca3aa1)
 - Use $font-sizes-map on master font() mixin [`db736ec`](https://github.com/venturehacks/halo/commit/db736eca5d32b0b07f6a10b7b370e7b82f500b50)
 - More fix ambient type declaration [`0207fdb`](https://github.com/venturehacks/halo/commit/0207fdbecc84325c741cabb3626729148712bee3)
 - [bugfix] Box valign; decrease embedded selector specificity [`85aeb6c`](https://github.com/venturehacks/halo/commit/85aeb6c006ddbec7474b23298ce606425565a909)
@@ -32,8 +43,8 @@ All notable changes to this project will be documented in this file. Dates are d
 - Support `stretch` as `Box` alignment option [`e6fddfd`](https://github.com/venturehacks/halo/commit/e6fddfd47bf1b721984db17effb8ab21a33cd590)
 - Fix ambient type declaration [`7444413`](https://github.com/venturehacks/halo/commit/7444413f4c87b34740c2808f72017ccd5ccfa887)
 - Fix default behavior of `Box` [`c9347e4`](https://github.com/venturehacks/halo/commit/c9347e42e1d611c94002378bdcff0c4ece57ae02)
-- Add automatic text-truncate to PillTag [`6854387`](https://github.com/venturehacks/halo/commit/6854387e4919a7d56c9132b71122138932bc05bb)
 - Inclusivity! [`70653bd`](https://github.com/venturehacks/halo/commit/70653bdfe1fa39f40847c8446d8bc9083e8c9b39)
+- Add automatic text-truncate to PillTag [`6854387`](https://github.com/venturehacks/halo/commit/6854387e4919a7d56c9132b71122138932bc05bb)
 
 #### [0.5.11](https://github.com/venturehacks/halo/compare/0.5.10...0.5.11)
 
