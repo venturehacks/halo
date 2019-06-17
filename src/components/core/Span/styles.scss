@@ -9,6 +9,14 @@
   }
 }
 
+// weights
+
+@each $name, $weight in $weights {
+  .weight--#{$name} {
+    font-weight: $weight;
+  }
+}
+
 // Custom line heights
 
 @each $name, $line-height in $line-heights {

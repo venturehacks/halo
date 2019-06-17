@@ -134,6 +134,7 @@ function Span(props: SpanProps) {
     success,
     uppercase,
     warning,
+    weight,
   } = props;
 
   const textContrast: TextContrast = textContrastForConfiguration(props);
@@ -144,6 +145,7 @@ function Span(props: SpanProps) {
     !hasColorOverride && styles[textContrast],
     size && styles[`size--${size}`],
     lineHeight && styles[`lineHeight--${lineHeight}`],
+    weight && styles[`weight--${weight}`],
     color && styles[color],
     (antialiased || colorScheme === 'light') && styles.antialiased,
     block && styles.block,
