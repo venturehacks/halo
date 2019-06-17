@@ -1,12 +1,12 @@
 import classNames from 'classnames';
 import * as React from 'react';
+
 import {
   TextColorScheme,
   TextContrast,
   TextLineHeight,
   TextSize,
-} from '~/lib/text';
-
+} from '../../../lib/text';
 import { Span } from '../Span';
 
 import * as styles from './styles.scss';

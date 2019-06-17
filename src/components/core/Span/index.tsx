@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import * as React from 'react';
-import { PaletteColor } from '~/lib/colors';
+
+import { PaletteColor } from '../../../lib/colors';
 import {
   TextColorScheme,
   TextContrast,
@@ -8,7 +9,7 @@ import {
   TextSize,
   TextWeight,
   textContrastForConfiguration,
-} from '~/lib/text';
+} from '../../../lib/text';
 
 import * as styles from './styles.scss';
 

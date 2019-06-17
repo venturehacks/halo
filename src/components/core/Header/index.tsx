@@ -1,13 +1,13 @@
 import classNames from 'classnames';
 import * as React from 'react';
-import { PaletteColor } from '~/lib';
+
+import { PaletteColor } from '../../../lib/colors';
 import {
   TextColorScheme,
   TextContrast,
   TextSize,
   TextWeight,
-} from '~/lib/text';
-
+} from '../../../lib/text';
 import { Span } from '../Span';
 
 import * as styles from './styles.scss';
