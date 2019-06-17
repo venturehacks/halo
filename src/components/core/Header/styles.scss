@@ -3,7 +3,6 @@
 .component {
   @include border-box; // TODO: deprecate
   color: $text-dark--aaaa;
-  font-weight: 700;
   margin: 0;
 
   &.flow {

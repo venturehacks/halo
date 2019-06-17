@@ -1,7 +1,12 @@
 import classNames from 'classnames';
 import * as React from 'react';
 import { PaletteColor } from '~/lib';
-import { TextColorScheme, TextContrast, TextSize } from '~/lib/text';
+import {
+  TextColorScheme,
+  TextContrast,
+  TextSize,
+  TextWeight,
+} from '~/lib/text';
 
 import { Span } from '../Span';
 
@@ -57,6 +62,11 @@ export interface HeaderProps {
   contrast?: TextContrast;
 
   /**
+   * Fine control of type weight
+   */
+  weight?: TextWeight;
+
+  /**
    * Fine control of type contrast
    */
   colorScheme?: TextColorScheme;
@@ -106,11 +116,13 @@ function Header(props: HeaderProps) {
     muted,
     size,
     uppercase = false,
+    weight,
     xmuted,
     xxmuted,
   } = props;
 
   const textSize: TextSize = size || textSizeForConfiguration(props);
+  const textWeight: TextWeight = weight || textWeightForConfiguration(props);
   const tagName = tagNameForConfiguration(props);
 
   const classes = classNames(styles.component, flow && styles.flow, className);
@@ -128,6 +140,7 @@ function Header(props: HeaderProps) {
       muted={muted}
       xmuted={xmuted}
       xxmuted={xxmuted}
+      weight={textWeight}
       uppercase={uppercase || props.h6}
     >
       {children}
@@ -165,6 +178,12 @@ function tagNameForConfiguration({ h1, h2, h3, h4, h5, h6, tag }: HeaderProps) {
   if (h6) return 'h6';
 
   return 'h3';
+}
+
+function textWeightForConfiguration({ h6 }: HeaderProps): TextWeight {
+  if (h6) return 'bold';
+
+  return 'medium';
 }
 
 export { Header };
