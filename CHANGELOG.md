@@ -2,11 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.6.3](https://github.com/venturehacks/halo/compare/0.6.2...v0.6.3)
+#### [v0.6.4](https://github.com/venturehacks/halo/compare/0.6.3...v0.6.4)
+
+> 18 June 2019
+
+- [Span] use "score 1" specificity, global selectors on textContrast [`446e3ba`](https://github.com/venturehacks/halo/commit/446e3babed875689f3d1b1c3452529b47363c8b4)
+- [Header] remove automatic font weight boost for h6 [`4ac744f`](https://github.com/venturehacks/halo/commit/4ac744fa646ffaeb590afe3ec017e063b351ac0b)
+
+#### [0.6.3](https://github.com/venturehacks/halo/compare/0.6.2...0.6.3)
 
 > 18 June 2019
 
 - Global classnames workaround until dynamic classname CSS module issue is resolved [`bedbfce`](https://github.com/venturehacks/halo/commit/bedbfcecd7992e7466ae1462feb59ed5588b742b)
+- Release 0.6.3 [`d805135`](https://github.com/venturehacks/halo/commit/d80513540234324ee5c12fc45be7219828c9036b)
 
 #### [0.6.2](https://github.com/venturehacks/halo/compare/0.6.1...0.6.2)
 
