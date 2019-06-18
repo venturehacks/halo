@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.6.4](https://github.com/venturehacks/halo/compare/0.6.3...v0.6.4)
+#### [v0.6.5](https://github.com/venturehacks/halo/compare/0.6.4...v0.6.5)
+
+> 18 June 2019
+
+- [Header] Do not render excessive child DOM element for Span [`8c86510`](https://github.com/venturehacks/halo/commit/8c8651045daa1d8e2d2ddfbe5187d50327f54688)
+
+#### [0.6.4](https://github.com/venturehacks/halo/compare/0.6.3...0.6.4)
 
 > 18 June 2019
 
 - [Span] use "score 1" specificity, global selectors on textContrast [`446e3ba`](https://github.com/venturehacks/halo/commit/446e3babed875689f3d1b1c3452529b47363c8b4)
+- Release 0.6.4 [`762e57f`](https://github.com/venturehacks/halo/commit/762e57f646e516d6cb19ffc0431c32053ddeb325)
 - [Header] remove automatic font weight boost for h6 [`4ac744f`](https://github.com/venturehacks/halo/commit/4ac744fa646ffaeb590afe3ec017e063b351ac0b)
 
 #### [0.6.3](https://github.com/venturehacks/halo/compare/0.6.2...0.6.3)
