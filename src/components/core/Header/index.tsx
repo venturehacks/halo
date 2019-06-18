@@ -116,13 +116,12 @@ function Header(props: HeaderProps) {
     muted,
     size,
     uppercase = false,
-    weight,
+    weight = 'medium',
     xmuted,
     xxmuted,
   } = props;
 
   const textSize: TextSize = size || textSizeForConfiguration(props);
-  const textWeight: TextWeight = weight || textWeightForConfiguration(props);
   const tagName = tagNameForConfiguration(props);
 
   const classes = classNames(styles.component, flow && styles.flow, className);
@@ -140,7 +139,7 @@ function Header(props: HeaderProps) {
       muted={muted}
       xmuted={xmuted}
       xxmuted={xxmuted}
-      weight={textWeight}
+      weight={weight}
       uppercase={uppercase || props.h6}
     >
       {children}
@@ -178,12 +177,6 @@ function tagNameForConfiguration({ h1, h2, h3, h4, h5, h6, tag }: HeaderProps) {
   if (h6) return 'h6';
 
   return 'h3';
-}
-
-function textWeightForConfiguration({ h6 }: HeaderProps): TextWeight {
-  if (h6) return 'bold';
-
-  return 'medium';
 }
 
 export { Header };
