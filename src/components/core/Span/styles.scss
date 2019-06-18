@@ -82,38 +82,34 @@
 
 // color scheme + type contrast
 
-.dark {
-  &:global(.__halo_textContrast_AAAA) {
-    color: $text-dark--aaaa;
-  }
-
-  &:global(.__halo_textContrast_AAA) {
-    color: $text-dark--aaa;
-  }
-
-  &:global(.__halo_textContrast_AA) {
-    color: $text-dark--aa;
-  }
-
-  &:global(.__halo_textContrast_A) {
-    color: $text-dark--a;
-  }
+:global(.__halo_textContrast_dark_AAAA) {
+  color: $text-dark--aaaa;
 }
 
-.light {
-  &:global(.__halo_textContrast_AAAA) {
-    color: $text-light--aaaa;
-  }
+:global(.__halo_textContrast_dark_AAA) {
+  color: $text-dark--aaa;
+}
 
-  &:global(.__halo_textContrast_AAA) {
-    color: $text-light--aaa;
-  }
+:global(.__halo_textContrast_dark_AA) {
+  color: $text-dark--aa;
+}
 
-  &:global(.__halo_textContrast_AA) {
-    color: $text-light--aa;
-  }
+:global(.__halo_textContrast_dark_A) {
+  color: $text-dark--a;
+}
 
-  &:global(.__halo_textContrast_A) {
-    color: $text-light--a;
-  }
+:global(.__halo_textContrast_light_AAAA) {
+  color: $text-light--aaaa;
+}
+
+:global(.__halo_textContrast_light_AAA) {
+  color: $text-light--aaa;
+}
+
+:global(.__halo_textContrast_light_AA) {
+  color: $text-light--aa;
+}
+
+:global(.__halo_textContrast_light_A) {
+  color: $text-light--a;
 }

@@ -142,9 +142,7 @@ function Span(props: SpanProps) {
   const hasColorOverride = success || error || warning || color;
 
   const classes = classNames(
-    colorScheme === 'dark' && styles.dark,
-    colorScheme === 'light' && styles.light,
-    !hasColorOverride && `__halo_textContrast_${textContrast}`,
+    !hasColorOverride && `__halo_textContrast_${colorScheme}_${textContrast}`,
     size && `__halo_fontSizeMap_size--${size}`,
     lineHeight && `__halo_lineHeight_${lineHeight}`,
     weight && `__halo_fontWeight_${weight}`,
