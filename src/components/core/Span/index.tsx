@@ -113,7 +113,7 @@ export interface SpanProps {
    * HTML tag override
    * @default span
    */
-  tag?: 'span' | 'div' | 'p';
+  tag?: 'span' | 'div' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 }
 
 function Span(props: SpanProps) {

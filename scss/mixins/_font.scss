@@ -60,7 +60,12 @@
 }
 
 @mixin font-default-link($color: $text-dark--link, $args...) {
-  @include font($color: $color, $args...);
+  &,
+  &:link,
+  &:visited,
+  &:active {
+    @include font($color: $color, $args...);
+  }
 
   &:hover,
   &:focus {

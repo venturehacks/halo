@@ -126,27 +126,23 @@ function Header(props: HeaderProps) {
 
   const classes = classNames(styles.component, flow && styles.flow, className);
 
-  const componentProps = {
-    className: classes,
-  };
-
-  const formattedContent = (
+  return (
     <Span
+      className={classes}
       color={color}
       colorScheme={colorScheme}
-      size={textSize}
       contrast={contrast}
       muted={muted}
+      size={textSize}
+      tag={tagName}
+      uppercase={uppercase || props.h6}
+      weight={weight}
       xmuted={xmuted}
       xxmuted={xxmuted}
-      weight={weight}
-      uppercase={uppercase || props.h6}
     >
       {children}
     </Span>
   );
-
-  return React.createElement(tagName, componentProps, formattedContent);
 }
 
 function textSizeForConfiguration({
