@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.6.2](https://github.com/venturehacks/halo/compare/0.6.1...v0.6.2)
+#### [v0.6.3](https://github.com/venturehacks/halo/compare/0.6.2...v0.6.3)
+
+> 18 June 2019
+
+- Global classnames workaround until dynamic classname CSS module issue is resolved [`bedbfce`](https://github.com/venturehacks/halo/commit/bedbfcecd7992e7466ae1462feb59ed5588b742b)
+
+#### [0.6.2](https://github.com/venturehacks/halo/compare/0.6.1...0.6.2)
 
 > 17 June 2019
 
 - [module fix] Remove aliased ~ imports [`a2fe2ff`](https://github.com/venturehacks/halo/commit/a2fe2ff8504bc200bb0dcccabdc50eda3aa8c9fb)
+- Release 0.6.2 [`bfa7b62`](https://github.com/venturehacks/halo/commit/bfa7b6253241ca6b2dfe0f472c58def93d59b885)
 
 #### [0.6.1](https://github.com/venturehacks/halo/compare/0.6.0...0.6.1)
 
