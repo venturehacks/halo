@@ -31,16 +31,16 @@ $grid-cell-count: 24;
   width: 100%;
 }
 
-@each $name, $color in $colors {
-  .background-#{$name} {
-    background-color: $color;
-  }
-}
-
 /**
  * TODO: global selectors shouldn't be necessary.
          figure out what the hell is wrong with cssmodules
 **/
+
+@each $name, $color in $colors {
+  :global(.__halo_background_#{$name}) {
+    background-color: $color;
+  }
+}
 
 @each $alignment in $box-alignments {
   // column

@@ -139,7 +139,6 @@ function Box({
     isGenericFlexColumn && styles.flexColumn,
     isGenericFlexRow && styles.flexRow,
     relative && styles.relative,
-    textAlign && styles[`__halo_textAlign_${textAlign}`],
     width === '100%' && styles.width100,
     wrap && styles.wrap,
     isGenericFlexColumn && align && `__halo_column_align_${align}`,
@@ -147,7 +146,8 @@ function Box({
     isGenericFlexRow && align && `__halo_row_align_${align}`,
     isGenericFlexRow && valign && `__halo_row_valign_${valign}`,
     negativeSpaceClasses,
-    background && styles[`background-${background}`],
+    background && `__halo_background_${background}`,
+    textAlign && `__halo_textAlign_${textAlign}`,
   );
 
   return (

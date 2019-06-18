@@ -1,9 +1,14 @@
 @import 'halo';
 
+/**
+* TODO: global selectors shouldn't be necessary.
+        figure out what the hell is wrong with cssmodules
+**/
+
 // Sizes (includes line height)
 
 @each $name, $font-size-and-lh in $font-sizes-map {
-  .#{$name} {
+  :global(.__halo_fontSizeMap_#{$name}) {
     font-size: map-get($font-size-and-lh, font-size);
     line-height: map-get($font-size-and-lh, line-height);
   }
@@ -12,7 +17,7 @@
 // weights
 
 @each $name, $weight in $weights {
-  .weight--#{$name} {
+  :global(.__halo_fontWeight_#{$name}) {
     font-weight: $weight;
   }
 }
@@ -20,8 +25,16 @@
 // Custom line heights
 
 @each $name, $line-height in $line-heights {
-  .lineHeight--#{$name}.lineHeight--#{$name} {
+  :global(.__halo_lineHeight_#{$name}.__halo_lineHeight_#{$name}) {
     line-height: $line-height;
+  }
+}
+
+// custom colors
+
+@each $name, $color in $colors {
+  :global(.__halo_color_#{$name}.__halo_color_#{$name}) {
+    color: $color;
   }
 }
 
@@ -70,45 +83,37 @@
 // color scheme + type contrast
 
 .dark {
-  &.AAAA {
+  &:global(.__halo_textContrast_AAAA) {
     color: $text-dark--aaaa;
   }
 
-  &.AAA {
+  &:global(.__halo_textContrast_AAA) {
     color: $text-dark--aaa;
   }
 
-  &.AA {
+  &:global(.__halo_textContrast_AA) {
     color: $text-dark--aa;
   }
 
-  &.A {
+  &:global(.__halo_textContrast_A) {
     color: $text-dark--a;
   }
 }
 
 .light {
-  &.AAAA {
+  &:global(.__halo_textContrast_AAAA) {
     color: $text-light--aaaa;
   }
 
-  &.AAA {
+  &:global(.__halo_textContrast_AAA) {
     color: $text-light--aaa;
   }
 
-  &.AA {
+  &:global(.__halo_textContrast_AA) {
     color: $text-light--aa;
   }
 
-  &.A {
+  &:global(.__halo_textContrast_A) {
     color: $text-light--a;
-  }
-}
-
-// custom colors
-
-@each $name, $color in $colors {
-  .#{$name}.#{$name} {
-    color: $color;
   }
 }
