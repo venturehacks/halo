@@ -2,11 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.6.5](https://github.com/venturehacks/halo/compare/0.6.4...v0.6.5)
+#### [v0.6.6](https://github.com/venturehacks/halo/compare/0.6.5...v0.6.6)
+
+> 21 June 2019
+
+- [Paragraph] Switch flow prop to apply margin-bottom [`289d795`](https://github.com/venturehacks/halo/commit/289d7954e79bf2a8aa5a82c9cab06fafc7897cbc)
+- [Badge] Invert orange badge for accessibility and good looks [`4a8b4f2`](https://github.com/venturehacks/halo/commit/4a8b4f22b390008aaa15cd4b1e00bf3d11135be1)
+
+#### [0.6.5](https://github.com/venturehacks/halo/compare/0.6.4...0.6.5)
 
 > 18 June 2019
 
 - [Header] Do not render excessive child DOM element for Span [`8c86510`](https://github.com/venturehacks/halo/commit/8c8651045daa1d8e2d2ddfbe5187d50327f54688)
+- Release 0.6.5 [`bfc018f`](https://github.com/venturehacks/halo/commit/bfc018f5553076e4a0b1a106b470c4ea4daf81e0)
 
 #### [0.6.4](https://github.com/venturehacks/halo/compare/0.6.3...0.6.4)
 
