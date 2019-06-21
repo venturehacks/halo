@@ -2,10 +2,11 @@
 
 .component {
   @include border-box; // TODO: deprecate
+  margin-block-start: 0;
+  margin-block-end: 0;
   margin: 0;
+}
 
-  &.flow {
-    margin-block-start: 0;
-    margin-block-end: 2em;
-  }
+.flow {
+  margin-bottom: 2em;
 }
