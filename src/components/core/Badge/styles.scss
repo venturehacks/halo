@@ -51,13 +51,15 @@ $badge-size: 16px;
     background-color: $green--600;
     border-color: $green--100;
   }
+
   &.red {
     background-color: $red--600;
     border-color: $red--100;
   }
 
   &.orange {
-    background-color: $orange--600;
-    border-color: $orange--100;
+    background-color: $orange--200;
+    border-color: $orange--200;
+    color: $orange--600;
   }
 }
