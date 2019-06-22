@@ -2,10 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.6.6](https://github.com/venturehacks/halo/compare/0.6.5...v0.6.6)
+#### [v0.6.7](https://github.com/venturehacks/halo/compare/0.6.6...v0.6.7)
+
+> 22 June 2019
+
+- Paragraph default bottom margin to 1em [`09b7fa4`](https://github.com/venturehacks/halo/commit/09b7fa48a19c5c7709dff3fd9d9135ef829f4b3b)
+- Include font-default-link in Paragraph by default [`cb7a08f`](https://github.com/venturehacks/halo/commit/cb7a08f2863795dcdcd4301a37f73e95f7d081cc)
+
+#### [0.6.6](https://github.com/venturehacks/halo/compare/0.6.5...0.6.6)
 
 > 21 June 2019
 
+- Release 0.6.6 [`144035f`](https://github.com/venturehacks/halo/commit/144035f1b6776846a31ede9653701dbd303abf05)
 - [Paragraph] Switch flow prop to apply margin-bottom [`289d795`](https://github.com/venturehacks/halo/commit/289d7954e79bf2a8aa5a82c9cab06fafc7897cbc)
 - [Badge] Invert orange badge for accessibility and good looks [`4a8b4f2`](https://github.com/venturehacks/halo/commit/4a8b4f22b390008aaa15cd4b1e00bf3d11135be1)
 
