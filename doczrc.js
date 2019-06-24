@@ -56,7 +56,7 @@ export default {
 
     {
       name: 'Sass',
-      menu: ['Mixins', 'Functions', 'Breakpoints', 'Utility']
+      menu: ['Mixins', 'Functions', 'Breakpoints']
     },
   ]
 };
