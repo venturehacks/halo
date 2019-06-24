@@ -2,11 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.6.7](https://github.com/venturehacks/halo/compare/0.6.6...v0.6.7)
+#### [v0.6.8](https://github.com/venturehacks/halo/compare/0.6.7...v0.6.8)
+
+> 24 June 2019
+
+- [Docs] Remove Sass "Utility" page; move entries into "Functions" page [`ec98cb3`](https://github.com/venturehacks/halo/commit/ec98cb3646fc894f7b5d1b4c7e55b0bf324035a8)
+- [Type Scale] Improve size rhythm; make line heights unitless [`6d40645`](https://github.com/venturehacks/halo/commit/6d40645ec927039b7ad9eedf667114ac1bf80eb6)
+
+#### [0.6.7](https://github.com/venturehacks/halo/compare/0.6.6...0.6.7)
 
 > 22 June 2019
 
 - Paragraph default bottom margin to 1em [`09b7fa4`](https://github.com/venturehacks/halo/commit/09b7fa48a19c5c7709dff3fd9d9135ef829f4b3b)
+- Release 0.6.7 [`5e168be`](https://github.com/venturehacks/halo/commit/5e168bef7df3ad3ec95164c3233c1f1f2a20914f)
 - Include font-default-link in Paragraph by default [`cb7a08f`](https://github.com/venturehacks/halo/commit/cb7a08f2863795dcdcd4301a37f73e95f7d081cc)
 
 #### [0.6.6](https://github.com/venturehacks/halo/compare/0.6.5...0.6.6)
