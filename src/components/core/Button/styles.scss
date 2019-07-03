@@ -5,9 +5,10 @@
   @include border-rounded;
   @include font-antialiased;
   border: 1px solid transparent;
+  font-family: inherit;
+  text-align: center;
   text-decoration: none;
   overflow: hidden;
-  font-family: inherit;
 
   & + & {
     margin-left: 0.75em;
@@ -105,6 +106,22 @@
     border-color: $red--600;
     background-color: $red--600;
     opacity: 0.9;
+  }
+}
+
+.success {
+  background-color: $green--400;
+  border-color: $green--400;
+  color: $green--100;
+
+  &:hover {
+    background-color: $green--300;
+    border-color: $green--300;
+  }
+
+  &:active {
+    background-color: $green--300;
+    border-color: $green--300;
   }
 }
 

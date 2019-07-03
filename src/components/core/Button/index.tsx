@@ -15,6 +15,7 @@ export type ButtonVariant =
   | 'secondary'
   | 'warning'
   | 'danger'
+  | 'success'
   | 'gray'
   | 'secondary-gray'
   | 'alternate';
