@@ -2,12 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.6.8](https://github.com/venturehacks/halo/compare/0.6.7...v0.6.8)
+#### [v0.6.9](https://github.com/venturehacks/halo/compare/0.6.8...v0.6.9)
+
+> 9 July 2019
+
+- [Button] Center text by default; 'success' variant [`eeb4808`](https://github.com/venturehacks/halo/commit/eeb4808c12aad0798d554224225a43646f40ed39)
+
+#### [0.6.8](https://github.com/venturehacks/halo/compare/0.6.7...0.6.8)
 
 > 24 June 2019
 
 - [Docs] Remove Sass "Utility" page; move entries into "Functions" page [`ec98cb3`](https://github.com/venturehacks/halo/commit/ec98cb3646fc894f7b5d1b4c7e55b0bf324035a8)
 - [Type Scale] Improve size rhythm; make line heights unitless [`6d40645`](https://github.com/venturehacks/halo/commit/6d40645ec927039b7ad9eedf667114ac1bf80eb6)
+- Release 0.6.8 [`b2d7bf6`](https://github.com/venturehacks/halo/commit/b2d7bf689ca7ccf0c27102f1247e529ddd46c15a)
 
 #### [0.6.7](https://github.com/venturehacks/halo/compare/0.6.6...0.6.7)
 
