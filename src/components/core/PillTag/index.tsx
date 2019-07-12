@@ -12,10 +12,14 @@ export interface PillTagProps {
 
 function PillTag({ children, className, href, onClick }: PillTagProps) {
   const classes = classNames(styles.component, className);
-
+  const isBrowser = !!(
+    (typeof window !== 'undefined' &&
+      window.document && window.document.createElement)
+  )
   if (href) {
     return (
       <a className={classes} href={href}>
+        {isBrowser ? null : <style dangerouslySetInnerHTML={{ __html: styles.css }} />}
         {children}
       </a>
     );
@@ -30,10 +34,11 @@ function PillTag({ children, className, href, onClick }: PillTagProps) {
 
   return (
     <span className={classes} {...buttonProps}>
+      {isBrowser ? null : <style dangerouslySetInnerHTML={{ __html: styles.css }} />}
       {children}
     </span>
   );
 }
 
+
 export { PillTag };
-export default PillTag;

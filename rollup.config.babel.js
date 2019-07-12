@@ -65,6 +65,7 @@ export default {
     }),
     postcss({
       modules: true,
+      inject: false,
       extensions: ['.css', '.sass', '.scss'],
       namedExports: (name) => {
         // converts scss dashes to camelCase:
