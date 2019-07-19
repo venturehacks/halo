@@ -6,7 +6,6 @@ import postcss from 'rollup-plugin-postcss';
 import typescript from 'rollup-plugin-typescript2';
 import builtins from 'rollup-plugin-node-builtins';
 import alias from 'rollup-plugin-alias';
-import gzipSize from 'gzip-size';
 import filesize from 'rollup-plugin-filesize';
 import camelCase from 'camelcase';
 
