@@ -65,7 +65,11 @@ export default {
     }),
     postcss({
       modules: true,
+      extract: path.join(__dirname, 'dist', 'halo.css'),
       extensions: ['.css', '.sass', '.scss'],
+      minimize: {
+        preset: 'default',
+      },
       namedExports: (name) => {
         // converts scss dashes to camelCase:
         // styles.slate--200 => styles.slate200
@@ -88,7 +92,8 @@ export default {
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
       include: 'node_modules/**',
     }),
-    filesize()
+    filesize(),
   ],
   external: ['react', 'react-dom', 'lodash'],
 };
+

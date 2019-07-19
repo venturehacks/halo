@@ -1,14 +1,11 @@
-/**
-* COLOR PALETTE
-*/
+// --------------------
+// COLORS
 
 @import 'colors';
 
-/**
- * TYPEFACES
- */
+// --------------------
+// FAMILY
 
-// families
 $font-family--primary: 'helvetica neue', arial, helvetica, freesans,
   'liberation sans', 'numbus sans l', sans-serif;
 $font-family--serif: georgia, serif;
@@ -24,10 +21,14 @@ $font-families: (
   system: $font-family--system,
 );
 
-// transforms
+// --------------------
+// TRANSFORM
+
 $text-transforms: (lowercase, uppercase, capitalize, none);
 
-// weights
+// --------------------
+// WEIGHT
+
 $weight--ultralight: 200;
 $weight--light: 300;
 $weight--regular: 400;
@@ -46,7 +47,9 @@ $weights: (
   heavy: $weight--heavy,
 );
 
-// line heights
+// --------------------
+// LINE HEIGHT
+
 $line-height--default: 1.5;
 $line-height--comfortable: 1.25;
 $line-height--compact: 1.125;
@@ -59,7 +62,9 @@ $line-heights: (
   dense: $line-height--dense,
 );
 
-// preset size + line height combos
+// --------------------
+// PRESET - SIZE + LINE HEIGHT
+
 $font-sizes-map: (
   size--2xs: (
     font-size: 11px,
@@ -107,9 +112,8 @@ $font-sizes-map: (
   ),
 );
 
-/**
-* Z-INDEX
-*/
+// --------------------
+// Z-INDEX
 
 $z-index--hover: 2;
 $z-index--tooltip: 10;
