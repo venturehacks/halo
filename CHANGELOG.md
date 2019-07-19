@@ -2,11 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.6.9](https://github.com/venturehacks/halo/compare/0.6.8...v0.6.9)
+#### [v0.6.10](https://github.com/venturehacks/halo/compare/0.6.9...v0.6.10)
+
+> 19 July 2019
+
+- Extract and compress CSS to single file [`#21`](https://github.com/venturehacks/halo/pull/21)
+- (remove unused library) [`3c8ae1b`](https://github.com/venturehacks/halo/commit/3c8ae1b15ddc1f8f168a35497c7260b7cb37abd0)
+
+#### [0.6.9](https://github.com/venturehacks/halo/compare/0.6.8...0.6.9)
 
 > 9 July 2019
 
 - [Button] Center text by default; 'success' variant [`eeb4808`](https://github.com/venturehacks/halo/commit/eeb4808c12aad0798d554224225a43646f40ed39)
+- Release 0.6.9 [`9b09a21`](https://github.com/venturehacks/halo/commit/9b09a219bbf20293bf657d3434548dadd76b5540)
 
 #### [0.6.8](https://github.com/venturehacks/halo/compare/0.6.7...0.6.8)
 
