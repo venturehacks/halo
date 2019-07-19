@@ -65,7 +65,7 @@ export default {
     }),
     postcss({
       modules: true,
-      extract: path.join(__dirname, 'dist', 'halo.css'),
+      extract: true,
       extensions: ['.css', '.sass', '.scss'],
       minimize: {
         preset: 'default',
