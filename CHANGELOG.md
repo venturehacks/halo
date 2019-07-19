@@ -2,11 +2,12 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.6.10](https://github.com/venturehacks/halo/compare/0.6.9...v0.6.10)
+#### [v0.6.11](https://github.com/venturehacks/halo/compare/0.6.9...v0.6.11)
 
 > 19 July 2019
 
 - Extract and compress CSS to single file [`#21`](https://github.com/venturehacks/halo/pull/21)
+- Release 0.6.10 [`892ceaf`](https://github.com/venturehacks/halo/commit/892ceaf2e896dad0ab8b02de1908885a55d4a749)
 - (remove unused library) [`3c8ae1b`](https://github.com/venturehacks/halo/commit/3c8ae1b15ddc1f8f168a35497c7260b7cb37abd0)
 
 #### [0.6.9](https://github.com/venturehacks/halo/compare/0.6.8...0.6.9)
