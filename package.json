@@ -7,7 +7,7 @@
   "private": true,
   "main": "dist/halo.js",
   "module": "dist/halo.module.js",
-  "style": "scss/_halo.scss",
+  "style": "dist/halo.css",
   "types": "dist/typings/index.d.ts",
   "scripts": {
     "build": "yarn build:node",

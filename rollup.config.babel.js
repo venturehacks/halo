@@ -6,6 +6,7 @@ import postcss from 'rollup-plugin-postcss';
 import typescript from 'rollup-plugin-typescript2';
 import builtins from 'rollup-plugin-node-builtins';
 import alias from 'rollup-plugin-alias';
+import gzipSize from 'gzip-size';
 import filesize from 'rollup-plugin-filesize';
 import camelCase from 'camelcase';
 
@@ -65,7 +66,11 @@ export default {
     }),
     postcss({
       modules: true,
+      extract: path.join(__dirname, 'dist', 'halo.css'),
       extensions: ['.css', '.sass', '.scss'],
+      minimize: {
+        preset: 'default',
+      },
       namedExports: (name) => {
         // converts scss dashes to camelCase:
         // styles.slate--200 => styles.slate200
@@ -88,7 +93,8 @@ export default {
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
       include: 'node_modules/**',
     }),
-    filesize()
+    filesize(),
   ],
   external: ['react', 'react-dom', 'lodash'],
 };
+
