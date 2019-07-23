@@ -52,8 +52,12 @@
   font-style: italic;
 }
 
+.medium {
+  font-weight: $weight--medium;
+}
+
 .semibold {
-  font-weight: $weight--medium; // aka "medium"
+  font-weight: $weight--semibold;
 }
 
 .bold {
