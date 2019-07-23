@@ -2,17 +2,22 @@
 
 $directions: (top bottom left right);
 $box-alignments: (
-  top center bottom left right normal space-between space-evenly
+  top center bottom left right normal space-between space-evenly space-around
+    stretch
 );
 $text-alignments: (left center right);
 $grid-cell-count: 24;
 
 .component {
   @include border-box; // TODO: deprecate
+}
 
-  &.relative {
-    position: relative;
-  }
+.block {
+  display: block;
+}
+
+.relative {
+  position: relative;
 }
 
 .wrap {
