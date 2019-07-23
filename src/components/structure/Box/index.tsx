@@ -33,6 +33,13 @@ export interface BoxProps {
    * Background color or color palette swatch
    */
   background?: PaletteColor | string;
+
+  /**
+   * Make Box non-flexbox so may be leveraged for convenient, negative space features.
+   * Other flexbox releated props will become no-ops.
+   */
+  block?: boolean;
+
   children?: React.ReactNode;
   className?: string;
   /**
@@ -53,6 +60,7 @@ export interface BoxProps {
    * Use flexbox row flow
    */
   row?: boolean;
+
   textAlign?: 'left' | 'center' | 'right';
   /**
    * Natural alignment of main axis; top | bottom | left | right | normal | space-between | space-evenly | stretch; In column mode, stretch only works for main axis (align). In row mode, stretch only works for cross axis (valign).
@@ -70,6 +78,7 @@ export interface BoxProps {
 }
 
 Box.defaultProps = {
+  block: false,
   column: true,
   margin: 0,
   padding: 0,
@@ -80,6 +89,7 @@ Box.defaultProps = {
 function Box({
   align,
   background,
+  block,
   children,
   className,
   column,
@@ -96,7 +106,7 @@ function Box({
   wrap,
 }: BoxProps) {
   // mutually exclusive: grid vs flexcolumn vs. flexrow
-  const isGridElement = !row && !column;
+  const isGridElement = block || (!row && !column);
   const isGenericFlexColumn = !isGridElement && column && !row;
   const isGenericFlexRow = !isGridElement && row;
 
@@ -141,6 +151,7 @@ function Box({
     relative && styles.relative,
     width === '100%' && styles.width100,
     wrap && styles.wrap,
+    block && styles.block,
     isGenericFlexColumn && align && `__halo_column_align_${align}`,
     isGenericFlexColumn && valign && `__halo_column_valign_${valign}`,
     isGenericFlexRow && align && `__halo_row_align_${align}`,

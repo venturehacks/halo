@@ -9,7 +9,13 @@ export interface TextContrastProps {
 
 export type TextColorScheme = 'dark' | 'light';
 
-export type TextWeight = 'normal' | 'medium' | 'bold';
+export type TextWeight =
+  | 'ultralight'
+  | 'light'
+  | 'normal'
+  | 'medium'
+  | 'semibold'
+  | 'bold';
 
 export type TextSize =
   | '6xl'

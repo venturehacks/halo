@@ -54,16 +54,26 @@ export interface SpanProps {
   block?: boolean;
 
   /**
-   * Convenience for medium weight type
+   * Convenience for 500 weight
    */
-  semibold?: boolean;
-  bold?: boolean;
-  italic?: boolean;
+  medium?: boolean;
 
   /**
-   * Convenience for bold text
+   * Convenience for 600 weight
+   */
+  semibold?: boolean;
+
+  /**
+   * Convenience for 700 weight, same as strong
+   */
+  bold?: boolean;
+
+  /**
+   * Convenience for 700 weight, same as bold
    */
   strong?: boolean;
+
+  italic?: boolean;
 
   children?: React.ReactNode;
   className?: string;
@@ -128,6 +138,7 @@ function Span(props: SpanProps) {
     lineHeight,
     error,
     italic,
+    medium,
     monospace,
     semibold,
     size,
@@ -153,6 +164,7 @@ function Span(props: SpanProps) {
     error && styles.error,
     italic && styles.italic,
     monospace && styles.monospace,
+    medium && styles.medium,
     semibold && styles.semibold,
     strong && styles.bold,
     success && styles.success,
