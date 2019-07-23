@@ -11,7 +11,7 @@ import styles from './styles.scss';
 interface LabelProps {
   className?: string;
   children: React.ReactNode;
-  size: 'xs' | 'sm' | 'md';
+  size?: 'xs' | 'sm' | 'md';
   color?: 'blue' | 'gray' | 'orange' | 'red' | 'purple' | 'green';
 }
 
