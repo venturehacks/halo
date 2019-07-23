@@ -4,6 +4,7 @@ declare const styles: {
   readonly "secondary": string;
   readonly "warning": string;
   readonly "danger": string;
+  readonly "success": string;
   readonly "gray": string;
   readonly "secondaryGray": string;
   readonly "alternate": string;
