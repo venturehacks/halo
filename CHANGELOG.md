@@ -2,12 +2,34 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.6.11](https://github.com/venturehacks/halo/compare/0.6.9...v0.6.11)
+#### [v0.6.12](https://github.com/venturehacks/halo/compare/0.6.11...v0.6.12)
+
+> 25 July 2019
+
+- July 2019 Updates: Label, Box block, smoke tests, variables docum… [`#22`](https://github.com/venturehacks/halo/pull/22)
+- Resolve conflicts [`f558a27`](https://github.com/venturehacks/halo/commit/f558a27e6fce946386eab0ea58296c806b26b039)
+- (exports) [`aed7cd9`](https://github.com/venturehacks/halo/commit/aed7cd931aadda5374eee63fbf47b0014aabb381)
+- (exports) [`f169621`](https://github.com/venturehacks/halo/commit/f16962141a5102e03eac12da72ff6821b9d97b4f)
+- [documentation] Variables sass page added [`a865282`](https://github.com/venturehacks/halo/commit/a865282f7cc3a07fb854354c5ec18a9286f060dd)
+- Import Tiff's enhanced Label from CoPro; add 2x more colors [`e35427c`](https://github.com/venturehacks/halo/commit/e35427c98344761fda2c7dc6d6ae8a748bee47d6)
+- Import Tiff's enhanced Label from CoPro; add 2x more colors [`4612949`](https://github.com/venturehacks/halo/commit/46129492f5eb758597207eda74959802eedcf38d)
+- [test suite] smoke tests for all major components :tada: [`7617d8b`](https://github.com/venturehacks/halo/commit/7617d8bb81f221b843264145822c08186b2ad2ae)
+- Include text pixel sizes in documentation [`4c2bc51`](https://github.com/venturehacks/halo/commit/4c2bc5140ab6d885c7a4a8641a93457208287653)
+- More text weight options, clearer convenience props @thomasrockhu [`81f13b0`](https://github.com/venturehacks/halo/commit/81f13b0e157ff2e3343d8438273f9ec1a19eb9c2)
+- More text weight options, clearer convenience props @thomasrockhu [`b5b3d3f`](https://github.com/venturehacks/halo/commit/b5b3d3f07af96d5d0a65fc0368c54918110e299f)
+- [Box] offer `block` prop to opt-out of flexbox features [`2176d22`](https://github.com/venturehacks/halo/commit/2176d22730e6253539f964a7546e9ae19db591c2)
+- [Label] make `size` optional, default to 'sm' [`1e8f750`](https://github.com/venturehacks/halo/commit/1e8f750b163fa03b8c7aac1c29fb5ad649f50334)
+- [documentation] Nav index update [`5e1178f`](https://github.com/venturehacks/halo/commit/5e1178f2abc2a19abe50857f0329eadc9a74fd2a)
+- Stop build from adding css to dist/dist [`e844fbd`](https://github.com/venturehacks/halo/commit/e844fbd4541f9eca703a58f0e31117db176b9abd)
+- [Box] support `space-around` [`13190cd`](https://github.com/venturehacks/halo/commit/13190cd50c5a13f2715f1a6770c5bb791b64a54b)
+
+#### [0.6.11](https://github.com/venturehacks/halo/compare/0.6.9...0.6.11)
 
 > 19 July 2019
 
 - Extract and compress CSS to single file [`#21`](https://github.com/venturehacks/halo/pull/21)
 - Release 0.6.10 [`892ceaf`](https://github.com/venturehacks/halo/commit/892ceaf2e896dad0ab8b02de1908885a55d4a749)
+- Release 0.6.11 [`b2f99fd`](https://github.com/venturehacks/halo/commit/b2f99fd6b950f96bd9d9b8decb5b76c9b8eb528b)
 - (remove unused library) [`3c8ae1b`](https://github.com/venturehacks/halo/commit/3c8ae1b15ddc1f8f168a35497c7260b7cb37abd0)
 
 #### [0.6.9](https://github.com/venturehacks/halo/compare/0.6.8...0.6.9)
