@@ -10,6 +10,10 @@ import {
   TextWeight,
   textContrastForConfiguration,
 } from '../../../lib/text';
+import {
+  ForwardedRefProps,
+  withForwardedRef,
+} from '../../../lib/withForwardedRef';
 
 import * as styles from './styles.scss';
 
@@ -126,7 +130,7 @@ export interface SpanProps {
   tag?: 'span' | 'div' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 }
 
-function Span(props: SpanProps) {
+function SpanRaw(props: SpanProps & ForwardedRefProps) {
   const {
     antialiased,
     block,
@@ -147,6 +151,7 @@ function Span(props: SpanProps) {
     uppercase,
     warning,
     weight,
+    forwardedRef,
   } = props;
 
   const textContrast: TextContrast = textContrastForConfiguration(props);
@@ -177,10 +182,13 @@ function Span(props: SpanProps) {
 
   const componentProps = {
     className: classes,
+    ref: forwardedRef,
   };
 
   return React.createElement(tagName, componentProps, children);
 }
+
+const Span = withForwardedRef<SpanProps>(SpanRaw);
 
 export { Span };
 
