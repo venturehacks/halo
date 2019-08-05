@@ -1,0 +1,322 @@
+$input-height: 50px !default;
+$input-height--transparent: 48px !default;
+
+// borders
+
+@mixin input-border--focused {
+  box-shadow: 0 0 0 4px $blue--200;
+  outline: none;
+}
+
+@mixin input-border--hover {
+  @include border-rounded;
+  border: 1px solid $blue--500;
+}
+
+// for checkboxes and radios
+@mixin input-border--hover--thick {
+  border: 2px solid $blue--500;
+}
+
+@mixin input-border--warning {
+  @include border-rounded;
+  border: 1px solid $text-dark--warning;
+}
+
+@mixin input-border--slate {
+  @include border-rounded;
+  border: 1px solid $slate--400;
+}
+
+@mixin input-border--transparent {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+// accessible way of hiding the default input
+// https://webaim.org/techniques/css/invisiblecontent/
+
+@mixin hide-default-browser-input {
+  opacity: 0;
+  position: absolute;
+  -webkit-appearance: none;
+  z-index: -2;
+}
+
+// text inputs
+
+@mixin input($size: md, $style: normal) {
+  @include font($size: $size, $color: $slate--900);
+  max-width: 100%;
+  padding: tempo(1.5) tempo(2);
+
+  @if $style == normal {
+    @include input-border--slate;
+    background-color: white;
+  } @else if $style == transparent {
+    @include input-border--transparent;
+    background-color: transparent;
+  }
+
+  &::placeholder {
+    @include input-placeholder($size: $size);
+  }
+
+  &:hover {
+    @if $style == normal {
+      @include input-border--hover;
+    }
+  }
+
+  &:focus {
+    @if $style == normal {
+      @include input-border--hover;
+      @include input-border--focused;
+    }
+  }
+
+  &[disabled] {
+    @include input-disabled;
+  }
+
+  &:-webkit-autofill {
+    box-shadow: 0 0 0 50px white inset;
+    -webkit-text-fill-color: #333;
+  }
+
+  &:-internal-autofill-selected {
+    box-shadow: 0 0 0 50px white inset;
+  }
+}
+
+@mixin input-placeholder($size: md) {
+  @include font($size: $size, $color: $text-dark--a);
+}
+
+@mixin input-disabled {
+  @include font($color: $text-dark--a);
+  background-color: $slate--200;
+  border-color: $slate--300;
+}
+
+// checkboxes and radios
+// note: these should be used on adjacent <input> and <label> elements
+// (but... just use `RawRadio` and `RawCheckbox`)
+
+$checkbox-size: tempo(2.5);
+$radio-size: tempo(2.5);
+
+@mixin input--checkbox-radio {
+  @include hide-default-browser-input;
+
+  & + label::after {
+    content: none;
+  }
+
+  &:checked + label::before,
+  &:hover label::before,
+  &:focus + label::before {
+    @include input-border--hover--thick;
+  }
+
+  &:checked + label::after {
+    content: '';
+  }
+
+  &:focus + label::before {
+    @include input-border--focused;
+  }
+
+  &[disabled] + label {
+    cursor: default;
+  }
+
+  &[disabled] + label::before {
+    @include input-disabled;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+  }
+}
+
+@mixin input-label--checkbox {
+  @include font($size: md);
+  line-height: $checkbox-size;
+  position: relative;
+  display: inline-block;
+  padding-left: tempo(3.5);
+  cursor: pointer;
+
+  &:hover::before {
+    @include input-border--hover--thick;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: inline-block;
+    content: '';
+  }
+
+  // empty checkbox
+  &::before {
+    left: 0;
+    height: $checkbox-size;
+    width: $checkbox-size;
+    @include input-border--slate;
+    background-color: $white;
+  }
+
+  // checkmark
+  &::after {
+    left: 6px;
+    top: 7px;
+    height: 5px;
+    width: 9px;
+    border-left: 2px solid $blue--500;
+    border-bottom: 2px solid $blue--500;
+    transform: rotate(-45deg);
+  }
+}
+
+@mixin input-label--radio {
+  @include font($size: md);
+  line-height: $radio-size;
+  position: relative;
+  display: inline-block;
+  padding-left: tempo(3.5);
+  cursor: pointer;
+
+  &:hover::before {
+    @include input-border--hover--thick;
+  }
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: inline-block;
+    content: '';
+  }
+
+  // empty radio
+  &::before {
+    left: 0;
+    height: $radio-size;
+    width: $radio-size;
+    @include border-circle;
+    border: 1px solid $slate--400;
+    background-color: $white;
+  }
+
+  // selected radio
+  &::after {
+    left: 7px;
+    top: 7px;
+    background-color: $blue--500;
+    width: 6px;
+    height: 6px;
+    @include border-circle;
+  }
+}
+
+@mixin input-react-select {
+  :global {
+    .select__control {
+      @include input;
+      padding: 6px tempo(1) 6px tempo(2);
+      box-shadow: none;
+      width: 100%;
+
+      &:hover {
+        @include input-border--hover;
+      }
+
+      &.select__control--is-focused,
+      &.select__control--menu-is-open.select__control--menu-is-open {
+        @include input-border--hover;
+      }
+      &.select__control--is-focused {
+        @include input-border--focused;
+      }
+      &.select__control--menu-is-open.select__control--menu-is-open {
+        box-shadow: none;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      &.select__control--is-disabled {
+        @include input-disabled;
+      }
+      .select__single-value--is-disabled {
+        @include font($color: $text-dark--a);
+      }
+    }
+
+    .select__placeholder {
+      @include font($size: md, $color: $text-dark--a);
+    }
+
+    .select__indicator,
+    .select__indicator:hover {
+      color: $slate--500;
+    }
+
+    .select__value-container {
+      padding: 0;
+      position: initial;
+      span {
+        /* added in so that label padding for role select field disappears */
+        padding-left: 0;
+      }
+    }
+
+    .select__indicator-separator {
+      display: none;
+    }
+
+    .select__menu {
+      border: 1px solid $blue--500;
+      border-top-color: transparent;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+      margin: 0;
+      overflow: hidden;
+      box-shadow: none;
+      top: calc(100% - 1px);
+    }
+
+    .select__menu-list {
+      padding: 0;
+    }
+
+    .select__option {
+      background-color: $white;
+      padding: tempo(0.5) tempo(2);
+      border-top: 1px solid $blue--200;
+    }
+
+    .select__option:hover,
+    .select__option--is-focused {
+      background-color: $blue--200;
+    }
+
+    .select__option--is-selected {
+      color: $text-dark--aaaa;
+      background-color: $blue--200;
+    }
+
+    .select__option--is-disabled {
+      @include font($color: $text-dark--a);
+    }
+  }
+
+  &.error {
+    :global {
+      .select__control {
+        @include input-border--warning;
+      }
+    }
+  }
+}

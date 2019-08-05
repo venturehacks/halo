@@ -1,0 +1,15 @@
+@import 'halo';
+
+// input
+
+.component {
+  @include input--checkbox-radio;
+}
+
+.asCheckbox {
+  @include input-label--checkbox;
+}
+
+.asRadio {
+  @include input-label--radio;
+}
