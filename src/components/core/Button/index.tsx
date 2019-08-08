@@ -20,7 +20,7 @@ export type ButtonVariant =
   | 'secondary-gray'
   | 'alternate';
 
-export interface ButtonProps {
+export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   /**
    * Main control for button style
    */

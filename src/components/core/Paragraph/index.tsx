@@ -11,7 +11,8 @@ import { Span } from '../Span';
 
 import * as styles from './styles.scss';
 
-export interface ParagraphProps {
+export interface ParagraphProps
+  extends React.HTMLAttributes<HTMLParagraphElement> {
   /**
    * Apply natural 2em bottom margin for document flow
    * @default true

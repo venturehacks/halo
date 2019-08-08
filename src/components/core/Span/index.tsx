@@ -17,7 +17,7 @@ import {
 
 import * as styles from './styles.scss';
 
-export interface SpanProps {
+export interface SpanProps extends React.HTMLAttributes<HTMLSpanElement> {
   /**
    * Type size override
    * @default (pass through)

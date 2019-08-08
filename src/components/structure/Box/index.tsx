@@ -24,7 +24,7 @@ export interface NegativeSpace {
   right?: number | boolean;
 }
 
-export interface BoxProps {
+export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
    * Natural alignment of main axis; top | bottom | left | right | normal | space-between | space-evenly | stretch; In column mode, stretch only works for main axis (align). In row mode, stretch only works for cross axis (valign).
    */

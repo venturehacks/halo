@@ -12,7 +12,7 @@ import { Span } from '../Span';
 
 import * as styles from './styles.scss';
 
-export interface HeaderProps {
+export interface HeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
   className?: string;
 
   /**
