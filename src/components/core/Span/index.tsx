@@ -17,7 +17,11 @@ import {
 
 import * as styles from './styles.scss';
 
-export interface SpanProps extends React.HTMLAttributes<HTMLSpanElement> {
+// type HTMLSpanElementProps = Omit<
+//   React.HTMLAttributes<HTMLParagraphElement>
+// >;
+
+export interface SpanProps extends React.HTMLAttributes<HTMLParagraphElement> {
   /**
    * Type size override
    * @default (pass through)
@@ -152,6 +156,7 @@ function SpanRaw(props: SpanProps & ForwardedRefProps) {
     warning,
     weight,
     forwardedRef,
+    ...spanElementProps
   } = props;
 
   const textContrast: TextContrast = textContrastForConfiguration(props);
@@ -183,6 +188,7 @@ function SpanRaw(props: SpanProps & ForwardedRefProps) {
   const componentProps = {
     className: classes,
     ref: forwardedRef,
+    ...spanElementProps,
   };
 
   return React.createElement(tagName, componentProps, children);

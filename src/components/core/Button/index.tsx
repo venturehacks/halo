@@ -55,7 +55,7 @@ function ButtonRaw({
   size = 'regular',
   type = 'button',
   variant = 'primary',
-  ...other
+  ...buttonElementProps
 }: ButtonProps &
   ForwardedRefProps &
   React.PropsWithoutRef<JSX.IntrinsicElements['button']>) {
@@ -88,7 +88,7 @@ function ButtonRaw({
       onClick={onClick}
       ref={forwardedRef}
       type={type}
-      {...other}
+      {...buttonElementProps}
     >
       {icon} {children}
     </button>

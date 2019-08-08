@@ -6,6 +6,7 @@ declare const styles: {
   readonly "flexColumn": string;
   readonly "flexRow": string;
   readonly "width100": string;
+  readonly "clickable": string;
 };
 export = styles;
 

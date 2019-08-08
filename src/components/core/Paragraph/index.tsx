@@ -11,8 +11,12 @@ import { Span } from '../Span';
 
 import * as styles from './styles.scss';
 
-export interface ParagraphProps
-  extends React.HTMLAttributes<HTMLParagraphElement> {
+type HTMLParagraphElementProps = Omit<
+  React.HTMLAttributes<HTMLParagraphElement>,
+  'color'
+>;
+
+export interface ParagraphProps extends HTMLParagraphElementProps {
   /**
    * Apply natural 2em bottom margin for document flow
    * @default true
@@ -54,6 +58,7 @@ function Paragraph({
   lineHeight = 'default',
   contrast,
   colorScheme,
+  ...paragraphElementProps
 }: ParagraphProps) {
   const classes = classNames(styles.component, flow && styles.flow, className);
 
@@ -65,6 +70,7 @@ function Paragraph({
       contrast={contrast}
       colorScheme={colorScheme}
       lineHeight={lineHeight}
+      {...paragraphElementProps}
     >
       {children}
     </Span>

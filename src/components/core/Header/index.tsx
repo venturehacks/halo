@@ -113,12 +113,20 @@ function Header(props: HeaderProps) {
     colorScheme = 'dark',
     contrast,
     flow = true,
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
     muted,
     size,
+    tag,
     uppercase = false,
     weight = 'medium',
     xmuted,
     xxmuted,
+    ...headerElementProps
   } = props;
 
   const textSize: TextSize = size || textSizeForConfiguration(props);
@@ -139,6 +147,7 @@ function Header(props: HeaderProps) {
       weight={weight}
       xmuted={xmuted}
       xxmuted={xxmuted}
+      {...headerElementProps}
     >
       {children}
     </Span>

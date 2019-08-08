@@ -36,6 +36,10 @@ $grid-cell-count: 24;
   width: 100%;
 }
 
+.clickable {
+  cursor: pointer;
+}
+
 /**
  * TODO: global selectors shouldn't be necessary.
          figure out what the hell is wrong with cssmodules

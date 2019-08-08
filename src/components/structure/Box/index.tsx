@@ -96,6 +96,7 @@ function Box({
   margin,
   maxHeight,
   maxWidth,
+  onClick,
   order,
   padding,
   relative,
@@ -104,6 +105,7 @@ function Box({
   valign,
   width,
   wrap,
+  ...divElementProps
 }: BoxProps) {
   // mutually exclusive: grid vs flexcolumn vs. flexrow
   const isGridElement = block || (!row && !column);
@@ -152,6 +154,7 @@ function Box({
     width === '100%' && styles.width100,
     wrap && styles.wrap,
     block && styles.block,
+    onClick && styles.clickable,
     isGenericFlexColumn && align && `__halo_column_align_${align}`,
     isGenericFlexColumn && valign && `__halo_column_valign_${valign}`,
     isGenericFlexRow && align && `__halo_row_align_${align}`,
@@ -162,7 +165,12 @@ function Box({
   );
 
   return (
-    <div className={classes} style={inlineStyles}>
+    <div
+      className={classes}
+      style={inlineStyles}
+      onClick={onClick}
+      {...divElementProps}
+    >
       {children}
     </div>
   );
