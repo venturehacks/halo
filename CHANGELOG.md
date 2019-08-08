@@ -2,10 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.6.14](https://github.com/venturehacks/halo/compare/0.6.13...v0.6.14)
+#### [v0.6.15](https://github.com/venturehacks/halo/compare/0.6.14...v0.6.15)
 
 > 8 August 2019
 
+- Actually pass down props from React.HTMLAttributes<T> [`9f03b60`](https://github.com/venturehacks/halo/commit/9f03b6071778b68010976f1505ea237066cb55e2)
+
+#### [0.6.14](https://github.com/venturehacks/halo/compare/0.6.13...0.6.14)
+
+> 8 August 2019
+
+- Release 0.6.14 [`f5dd52e`](https://github.com/venturehacks/halo/commit/f5dd52e51cd2951ff0e3876733411c59ded6c2e1)
 - Extend Halo core prop interfaces from React.HTMLAttributes<T> [`8b7f8a8`](https://github.com/venturehacks/halo/commit/8b7f8a898ab5a6ccf834310938552ba25f71d430)
 
 #### [0.6.13](https://github.com/venturehacks/halo/compare/0.6.12...0.6.13)
