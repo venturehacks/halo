@@ -77,7 +77,8 @@ function ButtonRaw({
         onClick={onClick}
         ref={forwardedRef}
       >
-        {icon} {children}
+        {icon && <>{icon} </>}
+        {children}
       </a>
     );
   }
@@ -90,7 +91,8 @@ function ButtonRaw({
       type={type}
       {...buttonElementProps}
     >
-      {icon} {children}
+      {icon && <>{icon} </>}
+      {children}
     </button>
   );
 }
