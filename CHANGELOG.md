@@ -2,11 +2,22 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.6.15](https://github.com/venturehacks/halo/compare/0.6.14...v0.6.15)
+#### [v0.6.16](https://github.com/venturehacks/halo/compare/0.6.15...v0.6.16)
+
+> 22 August 2019
+
+- Button: pass target and rel for anchor buttons [`#23`](https://github.com/venturehacks/halo/pull/23)
+- [pre-commit hook] automatic prettier + linters [`f18c4ee`](https://github.com/venturehacks/halo/commit/f18c4eeb7e69d52f8e5b49a1853b351101dd5405)
+- [Span] Don't propogate invalid props to HTML tag [`01c9dec`](https://github.com/venturehacks/halo/commit/01c9dec631ea6baaacdcfa4ca1a2235dd78cd014)
+- [Button] Don't add extra space unless there is an icon [`aefed15`](https://github.com/venturehacks/halo/commit/aefed15579a1079c0889e33c41fc1633a31ea734)
+- [Label] cursor: default [`f4f1100`](https://github.com/venturehacks/halo/commit/f4f11002983191fe410e389e608b29cd5f4c1019)
+
+#### [0.6.15](https://github.com/venturehacks/halo/compare/0.6.14...0.6.15)
 
 > 8 August 2019
 
 - Actually pass down props from React.HTMLAttributes<T> [`9f03b60`](https://github.com/venturehacks/halo/commit/9f03b6071778b68010976f1505ea237066cb55e2)
+- Release 0.6.15 [`b5e4d97`](https://github.com/venturehacks/halo/commit/b5e4d974b61751bbf8b485bf3cdb52808fdf787f)
 
 #### [0.6.14](https://github.com/venturehacks/halo/compare/0.6.13...0.6.14)
 
