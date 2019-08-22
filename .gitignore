@@ -19,6 +19,8 @@ Gemfile.lock
 /test.rb
 
 .rpt2_cache
+.tsbuildinfo
+tsconfig.tsbuildinfo
 
 ############################################################
 # via bundler gem

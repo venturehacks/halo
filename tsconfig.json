@@ -28,6 +28,7 @@
     "listEmittedFiles": false,
     "listFiles": false,
     "pretty": true,
+    "incremental": true,
     "declaration": true,
     "declarationDir": "./dist/typings/",
     "baseUrl": "./src",

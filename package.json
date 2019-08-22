@@ -79,8 +79,10 @@
     "docz-theme-default": "^1.2.0",
     "enzyme": "^3.7.0",
     "enzyme-adapter-react-16": "^1.7.0",
+    "husky": "^3.0.4",
     "identity-obj-proxy": "^3.0.0",
     "jest": "^23.6.0",
+    "lint-staged": "^9.2.3",
     "lodash": "^4.17.11",
     "node-sass": "^4.11.0",
     "prettier": "^1.15.2",
@@ -126,5 +128,26 @@
   },
   "dependencies": {
     "@tippy.js/react": "^2.1.2"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,graphql,md,markdown}": [
+      "prettier --write",
+      "git add"
+    ],
+    "**/*.{ts,tsx}": [
+      "prettier --write",
+      "tslint --fix",
+      "git add"
+    ],
+    "**/*.{css,scss}": [
+      "prettier --write",
+      "stylelint --fix",
+      "git add"
+    ]
   }
 }
