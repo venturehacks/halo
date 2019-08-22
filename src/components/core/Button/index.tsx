@@ -40,6 +40,8 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   icon?: React.ReactNode;
   /** provide hyperlink by styling <a> anchor link like a button */
   href?: string;
+  target?: '_blank' | '_self' | '_parent' | '_top' | undefined;
+  rel?: string;
   type?: 'submit' | 'button' | 'clear' | 'reset';
   onClick?: EventFunctionT;
 }
@@ -50,6 +52,8 @@ function ButtonRaw({
   emphasis = true,
   forwardedRef,
   href,
+  target,
+  rel,
   icon,
   onClick,
   size = 'regular',
@@ -76,6 +80,8 @@ function ButtonRaw({
         href={href}
         onClick={onClick}
         ref={forwardedRef}
+        target={target}
+        rel={rel}
       >
         {icon && <>{icon} </>}
         {children}
