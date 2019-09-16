@@ -1,0 +1,44 @@
+---
+name: RawRadio
+menu: Form
+route: /form/raw-radio
+---
+
+import { Props, Playground } from 'docz';
+import { Label } from '../Label';
+import { RawRadio } from './';
+import { Box } from '../../structure/Box';
+
+# RawRadio
+
+Raw input fields are designed to be completely controlled by their smarter, form-connected parent. Be sure to provide an `onChange` handler to manually manage the state of `checked`.
+
+<Playground>
+  <Label field="ice-cream" name="One True Ice Cream" supportingText="What's your favorite?" containsFieldGroup>
+    <Box row align="space-between" maxWidth="500px">
+    <RawRadio
+      name="ice-cream"
+      value="chocolate"
+      label="Chocolate"
+      onChange={() => {;}}
+    />
+    <RawRadio
+      name="ice-cream"
+      value="vanilla"
+      label="Vanilla"
+      onChange={() => {;}}
+      checked
+    />
+    <RawRadio
+      name="ice-cream"
+      value="strawberry"
+      label="Strawberry"
+      onChange={() => {;}}
+    />
+    </Box>
+  </Label>
+</Playground>
+
+### Props
+
+<Props of={RawRadio} />

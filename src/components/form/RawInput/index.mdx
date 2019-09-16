@@ -5,25 +5,29 @@ route: /form/raw-input
 ---
 
 import { Props, Playground } from 'docz';
+import { Label } from '../Label';
 import { RawInput } from './';
 import { Box } from '../../structure/Box';
 
 # RawInput
 
+Primarily used for text input and great as a hidden, behind-the-scenes field.
+
+On CoPro we use it to power our autocomplete text fields and tabular data filter text field.
 
 <Playground>
   <Box row align="space-between" maxWidth="500px">
-    <RawInput
-      id={`form-input--foo`}
-      name="foo"
-      maxLength={100}
-      onChange={() => {;}}
-      onBlur={() => {;}}
-      autoFocus
-      disabled={false}
-      placeholder="Your name"
-      type="text"
-    />
+    <Label field="demo" title="Text Input" supportingText="Try me!">
+      <RawInput
+        id={`form-input--foo`}
+        maxLength={100}
+        name="foo"
+        onBlur={() => {;}}
+        onChange={() => {;}}
+        placeholder="Your name"
+        type="text"
+      />
+    </Label>
   </Box>
 </Playground>
 

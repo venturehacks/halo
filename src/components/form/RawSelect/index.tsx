@@ -23,7 +23,7 @@ export default function RawSelect({
   return (
     <select className={classNames(styles.component, className)} {...rest}>
       {options.map(({ value, label }, i) => (
-        <option key={value || i} value={value}>
+        <option key={value || label || i} value={value}>
           {label}
         </option>
       ))}

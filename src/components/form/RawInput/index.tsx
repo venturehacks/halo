@@ -65,7 +65,7 @@ export default function RawInput({
       className={classNames(
         styles.component,
         className,
-        transparent ? styles.transparent : styles.default,
+        transparent ? styles.transparent : styles.normal,
         icon && iconPosition === 'right' && styles.hasIconRight,
         icon && iconPosition === 'left' && styles.hasIconLeft,
       )}

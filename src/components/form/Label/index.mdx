@@ -1,0 +1,33 @@
+---
+name: Label
+menu: Form
+route: /form/label
+---
+
+import { Props, Playground } from 'docz';
+import { RawInput } from '../RawInput';
+import { Label } from './';
+import { Box } from '../../structure/Box';
+
+# Label
+
+Wrap input fields in this component to provide an accessible `<label>`, complete with title and supporting text.
+
+<Playground>
+  <Box row align="space-between" maxWidth="500px">
+    <Label field="foo" title="Name" supportingText="You have one, right?">
+      <RawInput
+        maxLength={100}
+        name="foo"
+        onBlur={() => {;}}
+        onChange={() => {;}}
+        placeholder="Your name"
+        type="text"
+      />
+    </Label>
+  </Box>
+</Playground>
+
+### Props
+
+<Props of={Label} />

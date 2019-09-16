@@ -1,0 +1,46 @@
+---
+name: RawCheckbox
+menu: Form
+route: /form/raw-checkbox
+---
+
+import { Props, Playground } from 'docz';
+import { Label } from '../Label';
+import { RawCheckbox } from './';
+import { Box } from '../../structure/Box';
+
+# RawCheckbox
+
+Raw input fields are designed to be completely controlled by their smarter, form-connected parent. Be sure to provide an `onChange` handler to manually manage the state of `checked`.
+
+<Playground>
+  <Label field="ice-cream" title="Favorite Ice Creams" supportingText="What are your favorites?" containsFieldGroup>
+    <Box row align="space-between" maxWidth="500px">
+    <RawCheckbox
+      name="ice-cream"
+      value="chocolate"
+      label="Chocolate"
+      onChange={() => {;}}
+      checked={false}
+    />
+    <RawCheckbox
+      name="ice-cream"
+      value="vanilla"
+      label="Vanilla"
+      onChange={() => {;}}
+      checked={true}
+    />
+    <RawCheckbox
+      name="ice-cream"
+      value="strawberry"
+      label="Strawberry"
+      onChange={() => {;}}
+      checked={true}
+    />
+    </Box>
+  </Label>
+</Playground>
+
+### Props
+
+<Props of={RawCheckbox} />

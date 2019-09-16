@@ -1,11 +1,11 @@
 @import 'halo';
 
-$icon-container-size: tempo(4.5) !default;
+$rawinput-icon-container-size: tempo(4.5) !default;
 
 .component {
-  @include input;
+  @include border-box;
 
-  &.default {
+  &.normal {
     @include input;
   }
 
@@ -14,11 +14,11 @@ $icon-container-size: tempo(4.5) !default;
   }
 
   &.hasIconRight {
-    padding-right: calc(#{$icon-container-size} + #{tempo(2)});
+    padding-right: calc(#{$rawinput-icon-container-size} + #{tempo(2)});
   }
 
   &.hasIconLeft {
-    padding-left: calc(#{$icon-container-size} + #{tempo(2)});
+    padding-left: calc(#{$rawinput-icon-container-size} + #{tempo(2)});
   }
 
   // prevent visibility of input type for number
@@ -39,8 +39,8 @@ $icon-container-size: tempo(4.5) !default;
 
   .iconContainer {
     @include border-rounded;
-    width: $icon-container-size;
-    height: $icon-container-size;
+    width: $rawinput-icon-container-size;
+    height: $rawinput-icon-container-size;
     position: absolute;
     background-color: $blue--100;
     color: $slate--500;

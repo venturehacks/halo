@@ -7,12 +7,7 @@
   @include input-checkbox;
 }
 
-.asCheckbox {
+.label {
   @include border-box;
   @include input-label--checkbox;
-}
-
-.asRadio {
-  @include border-box;
-  @include input-label--radio;
 }

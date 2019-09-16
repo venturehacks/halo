@@ -4,19 +4,21 @@ import React from 'react';
 import styles from './styles.scss';
 
 interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+  /**
+   * set to true to visually render radios as checkboxes
+   */
+  asCheckbox?: boolean;
   className?: string;
   label: React.ReactNode;
   labelClassName?: string;
   id: string;
-  // set `asCheckbox` to true to visually render radios as checkboxes
-  asCheckbox?: boolean;
 }
 
 RawRadio.defaultProps = {
   asCheckbox: false,
 };
 
-export default function RawRadio({
+function RawRadio({
   className,
   type,
   id,
@@ -45,3 +47,6 @@ export default function RawRadio({
     </>
   );
 }
+
+export { RawRadio };
+export default RawRadio;
