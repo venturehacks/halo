@@ -1,5 +1,9 @@
-$input-height: 50px !default;
-$input-height--transparent: 48px !default;
+@import './space';
+
+$raw-input-height: 50px !default;
+$raw-input-height--transparent: 48px !default;
+$raw-checkbox-size: tempo(2.5) !default;
+$raw-radio-size: tempo(2.5) !default;
 
 // borders
 
@@ -100,14 +104,12 @@ $input-height--transparent: 48px !default;
   border-color: $slate--300;
 }
 
-// checkboxes and radios
-// note: these should be used on adjacent <input> and <label> elements
-// (but... just use `RawRadio` and `RawCheckbox`)
+// alias
+@mixin input-radio($args...) {
+  @include input-checkbox($args...);
+}
 
-$checkbox-size: tempo(2.5);
-$radio-size: tempo(2.5);
-
-@mixin input--checkbox-radio {
+@mixin input-checkbox {
   @include hide-default-browser-input;
 
   & + label::after {
@@ -143,15 +145,11 @@ $radio-size: tempo(2.5);
 
 @mixin input-label--checkbox {
   @include font($size: md);
-  line-height: $checkbox-size;
+  line-height: $raw-checkbox-size;
   position: relative;
   display: inline-block;
   padding-left: tempo(3.5);
   cursor: pointer;
-
-  &:hover::before {
-    @include input-border--hover--thick;
-  }
 
   &::before,
   &::after {
@@ -163,8 +161,8 @@ $radio-size: tempo(2.5);
   // empty checkbox
   &::before {
     left: 0;
-    height: $checkbox-size;
-    width: $checkbox-size;
+    height: $raw-checkbox-size;
+    width: $raw-checkbox-size;
     @include input-border--slate;
     background-color: $white;
   }
@@ -179,19 +177,19 @@ $radio-size: tempo(2.5);
     border-bottom: 2px solid $blue--500;
     transform: rotate(-45deg);
   }
-}
-
-@mixin input-label--radio {
-  @include font($size: md);
-  line-height: $radio-size;
-  position: relative;
-  display: inline-block;
-  padding-left: tempo(3.5);
-  cursor: pointer;
 
   &:hover::before {
     @include input-border--hover--thick;
   }
+}
+
+@mixin input-label--radio {
+  @include font($size: md);
+  line-height: $raw-radio-size;
+  position: relative;
+  display: inline-block;
+  padding-left: tempo(3.5);
+  cursor: pointer;
 
   &::before,
   &::after {
@@ -203,8 +201,8 @@ $radio-size: tempo(2.5);
   // empty radio
   &::before {
     left: 0;
-    height: $radio-size;
-    width: $radio-size;
+    height: $raw-radio-size;
+    width: $raw-radio-size;
     @include border-circle;
     border: 1px solid $slate--400;
     background-color: $white;
@@ -218,6 +216,10 @@ $radio-size: tempo(2.5);
     width: 6px;
     height: 6px;
     @include border-circle;
+  }
+
+  &:hover::before {
+    @include input-border--hover--thick;
   }
 }
 
