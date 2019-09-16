@@ -12,4 +12,3 @@ declare const styles: {
   readonly "green": string;
 };
 export = styles;
-

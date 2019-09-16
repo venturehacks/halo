@@ -8,20 +8,20 @@ import {
 
 import styles from './styles.scss';
 
-interface LabelProps {
+interface FlairProps {
   className?: string;
   children: React.ReactNode;
   size?: 'xs' | 'sm' | 'md';
   color?: 'blue' | 'gray' | 'orange' | 'red' | 'purple' | 'green';
 }
 
-function LabelRaw({
+function FlairRaw({
   children,
   className,
   forwardedRef,
   size = 'sm',
   color = 'blue',
-}: LabelProps & ForwardedRefProps) {
+}: FlairProps & ForwardedRefProps) {
   const classes = classNames(
     styles.component,
     className,
@@ -36,7 +36,7 @@ function LabelRaw({
   );
 }
 
-const Label = withForwardedRef<LabelProps>(LabelRaw);
+const Flair = withForwardedRef<FlairProps>(FlairRaw);
 
-export default Label;
-export { Label };
+export default Flair;
+export { Flair };
