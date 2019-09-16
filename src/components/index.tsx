@@ -3,7 +3,7 @@ export * from './core/Avatar';
 export * from './core/Badge';
 export * from './core/Button';
 export * from './core/Header';
-export * from './core/Label';
+export * from './core/Flair';
 export * from './core/Paragraph';
 export * from './core/PillTag';
 export * from './core/Span';
