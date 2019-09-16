@@ -138,16 +138,16 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,graphql,md,markdown}": [
-      "prettier --write",
+      "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore --write",
       "git add"
     ],
     "**/*.{ts,tsx}": [
-      "prettier --write",
+      "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore --write",
       "tslint --fix",
       "git add"
     ],
     "**/*.{css,scss}": [
-      "prettier --write",
+      "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore --write",
       "stylelint --fix",
       "git add"
     ]

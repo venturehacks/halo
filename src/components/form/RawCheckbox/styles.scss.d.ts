@@ -1,5 +1,6 @@
 declare const styles: {
-  readonly 'component': string;
-  readonly 'label': string;
+  readonly "component": string;
+  readonly "label": string;
 };
 export = styles;
+
