@@ -53,7 +53,10 @@ export default {
       name: 'Structure',
       menu: ['Box', 'Grid', 'Cell']
     },
-
+    {
+      name: 'Form',
+      menu: ['Label', 'RawInput', 'RawCheckbox', 'RawRadio', 'RawSelect', 'RawTextarea', 'FieldErrorMessage']
+    },
     {
       name: 'Sass',
       menu: ['Variables', 'Mixins', 'Functions', 'Breakpoints']
