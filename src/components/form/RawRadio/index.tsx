@@ -3,7 +3,8 @@ import React from 'react';
 
 import styles from './styles.scss';
 
-interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface RawRadioProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
   /**
    * set to true to visually render radios as checkboxes
    */
@@ -26,7 +27,7 @@ function RawRadio({
   labelClassName,
   asCheckbox,
   ...rest
-}: Props) {
+}: RawRadioProps) {
   return (
     <>
       <input
@@ -49,4 +50,3 @@ function RawRadio({
 }
 
 export { RawRadio };
-export default RawRadio;

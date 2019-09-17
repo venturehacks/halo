@@ -26,4 +26,3 @@ function RawCheckbox({ className, type, id, label, ...rest }: Props) {
 }
 
 export { RawCheckbox };
-export default RawCheckbox;

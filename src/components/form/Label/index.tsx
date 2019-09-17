@@ -119,4 +119,3 @@ function hasCheckboxOrRadio(children: React.ReactNode) {
 const Label = withForwardedRef<LabelProps>(LabelRaw);
 
 export { Label };
-export default Label;
