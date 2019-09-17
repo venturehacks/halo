@@ -1,29 +1,44 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { useEffect } from 'react';
 
 import styles from './styles.scss';
 
-interface SelectOption {
+export interface SelectOption {
   label: string;
   value?: string;
+  selected?: boolean;
 }
 
-interface Props extends React.SelectHTMLAttributes<HTMLSelectElement> {
+export interface RawSelectProps
+  extends React.SelectHTMLAttributes<HTMLSelectElement> {
   className?: string;
   children?: React.ReactNode;
   options: SelectOption[];
 }
 
-export default function RawSelect({
+function RawSelect({
   children,
   className,
-  options,
+  options = [],
   ...rest
-}: Props) {
+}: RawSelectProps) {
+  useEffect(() => {
+    const totalSelected = options.reduce(
+      (count, option) => (option.selected ? count + 1 : count),
+      0,
+    );
+    if (totalSelected > 1) {
+      // tslint:disable-next-line: no-console
+      console.warn(
+        `[Halo RawSelect] Only one option may be selected, but ${totalSelected} options are marked as 'selected'.`,
+      );
+    }
+  }, [options]);
+
   return (
     <select className={classNames(styles.component, className)} {...rest}>
-      {options.map(({ value, label }, i) => (
-        <option key={value || label || i} value={value}>
+      {options.map(({ value, label, selected }, i) => (
+        <option key={value || label || i} value={value} selected={!!selected}>
           {label}
         </option>
       ))}
@@ -31,3 +46,5 @@ export default function RawSelect({
     </select>
   );
 }
+
+export { RawSelect };

@@ -1,0 +1,45 @@
+---
+name: RawSelect
+menu: Form
+route: /form/raw-select
+---
+
+import { Props, Playground } from 'docz';
+import { Label } from '../Label';
+import { RawSelect } from './';
+import { Box } from '../../structure/Box';
+
+# RawSelect
+
+Raw input fields are designed to be completely controlled by their smarter, form-connected parent. Be sure to provide an `onChange` handler to manually manage the state `selected` on each option.
+
+### Options
+
+```jsx
+const OPTIONS = [
+  { label: 'Chocolate', value: 'chocolate' },
+  { label: 'Vanilla', value: 'vanilla' },
+  { label: 'Strawberry', value: 'strawberry' },
+];
+```
+
+<Playground>
+  <Label field="ice-cream" title="One True Ice Cream" supportingText="Select your favorite!" containsFieldGroup>
+    <Box row align="space-between" maxWidth="500px">
+    <RawSelect
+      name="ice-cream"
+      value="chocolate"
+      options={[
+        { label: 'Chocolate', value: 'chocolate' },
+        { label: 'Vanilla', value: 'vanilla' },
+        { label: 'Strawberry', value: 'strawberry' },
+      ]}
+      onChange={() => {;}}
+    />
+    </Box>
+  </Label>
+</Playground>
+
+### Props
+
+<Props of={RawSelect} />
