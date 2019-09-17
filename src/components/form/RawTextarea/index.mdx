@@ -1,0 +1,29 @@
+---
+name: RawTextarea
+menu: Form
+route: /form/raw-textarea
+---
+
+import { Props, Playground } from 'docz';
+import { Label } from '../Label';
+import { RawTextarea } from './';
+import { Box } from '../../structure/Box';
+
+# RawTextarea
+
+<Playground>
+  <Box row align="space-between" maxWidth="500px">
+    <Label field="demo" title="Personal Bio" supportingText="Is your life a meme?">
+      <RawTextarea
+        name="bio"
+        placeholder="Tell us about yourself..."
+        rows={5}
+        cols={50}
+      />
+    </Label>
+  </Box>
+</Playground>
+
+### Props
+
+<Props of={RawTextarea} />
