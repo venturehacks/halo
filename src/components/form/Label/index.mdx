@@ -11,15 +11,13 @@ import { Box } from '../../structure/Box';
 
 # Label
 
-Wrap input fields in this component to provide an accessible `<label>`, complete with title and supporting text.
+Wrap input fields in this component to provide an accessible `<label>`, complete with title and supporting text. Unlike the raw form components that must be wrapped or manually wired up to a form library, `Label` works out of the box with no dependencies.
 
 <Playground>
   <Box row align="space-between" maxWidth="500px">
-    <Label field="foo" title="Name" supportingText="You have one, right?">
+    <Label field="name" title="Full name" supportingText="Just tell us!">
       <RawInput
-        maxLength={100}
-        name="foo"
-        onBlur={() => {;}}
+        name="name"
         onChange={() => {;}}
         placeholder="Your name"
         type="text"
