@@ -11,21 +11,44 @@ import { Box } from '../../structure/Box';
 
 # RawInput
 
-Primarily used for text input and great as a hidden, behind-the-scenes field.
+> 📣 All raw inputs expect to be fully controlled by a wrapper component.
+
+Primarily used for text input or great as a hidden, behind-the-scenes field.
 
 On CoPro we use it to power our autocomplete text fields and tabular data filter text field.
 
 <Playground>
-  <Box row align="space-between" maxWidth="500px">
-    <Label field="demo" title="Text Input" supportingText="Try me!">
+  <Box align="stretch" maxWidth="500px">
+    <Label field="foo" title="Text Input" supportingText="width auto">
       <RawInput
-        id={`form-input--foo`}
         maxLength={100}
         name="foo"
-        onBlur={() => {;}}
         onChange={() => {;}}
         placeholder="Your name"
         type="text"
+      />
+    </Label>
+    <Label field="bar" title="Text Input" supportingText="with validation error">
+      <RawInput
+        hasError
+        intrinsicWidth="100%"
+        name="bar"
+        onChange={() => {;}}
+        placeholder="Your name"
+        type="text"
+        value="This is pretty bad"
+      />
+    </Label>
+    <Label field="baz" title="Text Input" supportingText="with critical error">
+      <RawInput
+        errorSeverity="critical"
+        hasError
+        intrinsicWidth="100%"
+        name="baz"
+        onChange={() => {;}}
+        placeholder="Your name"
+        type="text"
+        value="Damn, that was terrible"
       />
     </Label>
   </Box>

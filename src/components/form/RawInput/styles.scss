@@ -3,9 +3,14 @@
 $rawinput-icon-container-size: tempo(4.5) !default;
 
 .component {
-  @include border-box;
+  @include halo-element-base;
+  width: 100%;
 
-  &.normal {
+  &.widthAuto {
+    width: auto;
+  }
+
+  &.bordered {
     @include input;
   }
 
@@ -21,6 +26,16 @@ $rawinput-icon-container-size: tempo(4.5) !default;
     padding-left: calc(#{$rawinput-icon-container-size} + #{tempo(2)});
   }
 
+  &.hasError {
+    &.warning {
+      @include input-border--warning;
+    }
+
+    &.error {
+      @include input-border--error;
+    }
+  }
+
   // prevent visibility of input type for number
   // src: https://stackoverflow.com/questions/3790935/can-i-hide-the-html5-number-input-s-spin-box
   &::-webkit-outer-spin-button,
@@ -28,6 +43,7 @@ $rawinput-icon-container-size: tempo(4.5) !default;
     -webkit-appearance: none;
     margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
   }
+
   &[type='number'] {
     -moz-appearance: textfield; /* Firefox */
   }

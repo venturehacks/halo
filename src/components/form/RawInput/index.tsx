@@ -11,6 +11,12 @@ export interface RawInputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   /**
+   * Outline element in red
+   * @default false
+   */
+  hasError?: boolean;
+  errorSeverity?: 'warning' | 'critical';
+  /**
    * Optional prefix/suffix icon
    */
   icon?: React.ReactNode;
@@ -19,7 +25,10 @@ export interface RawInputProps
    * @default left
    */
   iconPosition?: IconPosition;
-
+  /**
+   * @default 100%
+   */
+  intrinsicWidth?: 'auto' | '100%';
   /**
    * Use transparent style
    * @default false
@@ -46,18 +55,15 @@ export interface RawInputProps
     | 'week';
 }
 
-RawInput.defaultProps = {
-  iconPosition: 'left',
-  type: 'text',
-  transparent: false,
-};
-
 export default function RawInput({
   className,
+  errorSeverity = 'warning',
+  hasError = false,
   icon,
-  iconPosition,
-  transparent,
-  type,
+  iconPosition = 'left',
+  intrinsicWidth = 'auto',
+  transparent = false,
+  type = 'text',
   ...rest
 }: RawInputProps) {
   const input = (
@@ -65,9 +71,13 @@ export default function RawInput({
       className={classNames(
         styles.component,
         className,
-        transparent ? styles.transparent : styles.normal,
+        transparent ? styles.transparent : styles.bordered,
         icon && iconPosition === 'right' && styles.hasIconRight,
         icon && iconPosition === 'left' && styles.hasIconLeft,
+        intrinsicWidth === 'auto' && styles.widthAuto,
+        hasError && styles.hasError,
+        errorSeverity === 'warning' && styles.warning,
+        errorSeverity === 'critical' && styles.error,
       )}
       type={type}
       {...rest}
