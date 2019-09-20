@@ -3,11 +3,11 @@
 // input
 
 .component {
-  @include border-box;
+  @include halo-element-base;
   @include input-checkbox;
 }
 
 .label {
-  @include border-box;
+  @include halo-element-base;
   @include input-label--checkbox;
 }

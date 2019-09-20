@@ -27,6 +27,11 @@ $raw-radio-size: tempo(2.5) !default;
   border: 1px solid $text-dark--warning;
 }
 
+@mixin input-border--error {
+  @include border-rounded;
+  border: 1px solid $text-dark--error;
+}
+
 @mixin input-border--slate {
   @include border-rounded;
   border: 1px solid $slate--400;

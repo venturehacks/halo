@@ -1,7 +1,7 @@
 @import 'halo';
 
 .component {
-  @include border-box; // TODO: deprecate
+  @include halo-element-base; // TODO: deprecate
   @include border-rounded(2px);
   @include flex-column($fill: true);
   align-items: stretch;
