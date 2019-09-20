@@ -15,28 +15,54 @@ Raw input fields are designed to be completely controlled by their smarter, form
 
 <Playground>
   <Label field="ice-cream" title="Favorite Ice Creams" supportingText="What are your favorites?" containsFieldGroup>
-    <Box row align="space-between" maxWidth="500px">
-    <RawCheckbox
-      name="ice-cream"
-      value="chocolate"
-      label="Chocolate"
-      onChange={() => {;}}
-      checked={false}
-    />
-    <RawCheckbox
-      name="ice-cream"
-      value="vanilla"
-      label="Vanilla"
-      onChange={() => {;}}
-      checked={true}
-    />
-    <RawCheckbox
-      name="ice-cream"
-      value="strawberry"
-      label="Strawberry"
-      onChange={() => {;}}
-      checked={true}
-    />
+    <Box row align="space-between" maxWidth="500px" padding>
+      <RawCheckbox
+        name="ice-cream"
+        value="chocolate"
+        label="Chocolate"
+        onChange={() => {;}}
+        checked={false}
+      />
+      <RawCheckbox
+        name="ice-cream"
+        value="vanilla"
+        label="Vanilla"
+        onChange={() => {;}}
+        checked={true}
+      />
+      <RawCheckbox
+        name="ice-cream"
+        value="strawberry"
+        label="Strawberry"
+        onChange={() => {;}}
+        checked={true}
+      />
+    </Box>
+    <Box row align="space-between" maxWidth="500px" padding>
+      <RawCheckbox
+        name="ice-cream"
+        value="chocolate"
+        label="Chocolate"
+        onChange={() => {;}}
+        checked={false}
+        hasError
+      />
+      <RawCheckbox
+        name="ice-cream"
+        value="vanilla"
+        label="Vanilla"
+        onChange={() => {;}}
+        checked={true}
+        hasError
+      />
+      <RawCheckbox
+        name="ice-cream"
+        value="strawberry"
+        label="Strawberry"
+        onChange={() => {;}}
+        checked={true}
+        hasError
+      />
     </Box>
   </Label>
 </Playground>

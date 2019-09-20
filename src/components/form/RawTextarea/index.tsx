@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
+
 import styles from './styles.scss';
 
 export interface RawTextareaProps
@@ -26,7 +28,7 @@ export interface RawTextareaProps
 function RawTextarea({
   className,
   intrinsicWidth,
-  hasError,
+  hasError = false,
   errorSeverity = 'warning',
   ...rest
 }: RawTextareaProps) {
@@ -37,6 +39,7 @@ function RawTextarea({
         className,
         intrinsicWidth === '100%' && styles.width100,
         hasError && styles.hasError,
+        hasError && FORM_FIELD_ERROR_IDENTIFIER,
         errorSeverity === 'warning' && styles.warning,
         errorSeverity === 'critical' && styles.critical,
       )}

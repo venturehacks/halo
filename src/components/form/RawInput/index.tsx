@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import * as React from 'react';
 
+import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 import { Box } from '../../structure/Box';
 
 import * as styles from './styles.scss';
@@ -81,6 +82,7 @@ export default function RawInput({
         icon && iconPosition === 'left' && styles.hasIconLeft,
         intrinsicWidth === 'auto' && styles.widthAuto,
         hasError && styles.hasError,
+        hasError && FORM_FIELD_ERROR_IDENTIFIER,
         errorSeverity === 'warning' && styles.warning,
         errorSeverity === 'critical' && styles.critical,
       )}
