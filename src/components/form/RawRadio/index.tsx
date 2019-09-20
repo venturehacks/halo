@@ -7,6 +7,7 @@ export interface RawRadioProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   /**
    * set to true to visually render radios as checkboxes
+   * @default false
    */
   asCheckbox?: boolean;
   className?: string;
@@ -15,17 +16,13 @@ export interface RawRadioProps
   id: string;
 }
 
-RawRadio.defaultProps = {
-  asCheckbox: false,
-};
-
 function RawRadio({
   className,
   type,
   id,
   label,
   labelClassName,
-  asCheckbox,
+  asCheckbox = false,
   ...rest
 }: RawRadioProps) {
   return (
@@ -39,6 +36,7 @@ function RawRadio({
       <label
         className={classNames(
           labelClassName,
+          styles.label,
           asCheckbox ? styles.asCheckbox : styles.asRadio,
         )}
         htmlFor={id}

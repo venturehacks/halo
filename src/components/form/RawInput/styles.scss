@@ -6,10 +6,6 @@ $rawinput-icon-container-size: tempo(4.5) !default;
   @include halo-element-base;
   width: 100%;
 
-  &.widthAuto {
-    width: auto;
-  }
-
   &.bordered {
     @include input;
   }
@@ -24,16 +20,6 @@ $rawinput-icon-container-size: tempo(4.5) !default;
 
   &.hasIconLeft {
     padding-left: calc(#{$rawinput-icon-container-size} + #{tempo(2)});
-  }
-
-  &.hasError {
-    &.warning {
-      @include input-border--warning;
-    }
-
-    &.error {
-      @include input-border--error;
-    }
   }
 
   // prevent visibility of input type for number

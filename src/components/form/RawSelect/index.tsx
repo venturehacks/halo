@@ -6,7 +6,6 @@ import styles from './styles.scss';
 export interface SelectOption {
   label: string;
   value?: string;
-  selected?: boolean;
 }
 
 export interface RawSelectProps
@@ -14,31 +13,46 @@ export interface RawSelectProps
   className?: string;
   children?: React.ReactNode;
   options: SelectOption[];
+  /**
+   * Since the most common callout is for validation errors, you shouldn't need to customize this.
+   * @default warning
+   */
+  errorSeverity?: 'warning' | 'critical';
+  /**
+   * Call out element that needs attention
+   * @default false
+   */
+  hasError?: boolean;
+  /**
+   * Default width
+   * @default auto
+   */
+  intrinsicWidth?: 'auto' | '100%';
 }
 
 function RawSelect({
   children,
   className,
   options = [],
+  intrinsicWidth = 'auto',
+  hasError = false,
+  errorSeverity = 'warning',
   ...rest
 }: RawSelectProps) {
-  useEffect(() => {
-    const totalSelected = options.reduce(
-      (count, option) => (option.selected ? count + 1 : count),
-      0,
-    );
-    if (totalSelected > 1) {
-      // tslint:disable-next-line: no-console
-      console.warn(
-        `[Halo RawSelect] Only one option may be selected, but ${totalSelected} options are marked as 'selected'.`,
-      );
-    }
-  }, [options]);
-
   return (
-    <select className={classNames(styles.component, className)} {...rest}>
-      {options.map(({ value, label, selected }, i) => (
-        <option key={value || label || i} value={value} selected={!!selected}>
+    <select
+      className={classNames(
+        styles.component,
+        className,
+        intrinsicWidth === '100%' && styles.width100,
+        hasError && styles.hasError,
+        errorSeverity === 'warning' && styles.warning,
+        errorSeverity === 'critical' && styles.critical,
+      )}
+      {...rest}
+    >
+      {options.map(({ value, label }, i) => (
+        <option key={value || label || i} value={value}>
           {label}
         </option>
       ))}

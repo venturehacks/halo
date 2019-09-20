@@ -11,10 +11,14 @@ export interface RawInputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   /**
-   * Outline element in red
+   * Call out element that needs attention
    * @default false
    */
   hasError?: boolean;
+  /**
+   * Since the most common callout is for validation errors, you shouldn't need to customize this.
+   * @default warning
+   */
   errorSeverity?: 'warning' | 'critical';
   /**
    * Optional prefix/suffix icon
@@ -26,6 +30,7 @@ export interface RawInputProps
    */
   iconPosition?: IconPosition;
   /**
+   * Default width
    * @default 100%
    */
   intrinsicWidth?: 'auto' | '100%';
@@ -77,7 +82,7 @@ export default function RawInput({
         intrinsicWidth === 'auto' && styles.widthAuto,
         hasError && styles.hasError,
         errorSeverity === 'warning' && styles.warning,
-        errorSeverity === 'critical' && styles.error,
+        errorSeverity === 'critical' && styles.critical,
       )}
       type={type}
       {...rest}

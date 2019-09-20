@@ -12,13 +12,40 @@ import { Box } from '../../structure/Box';
 # RawTextarea
 
 <Playground>
-  <Box row align="space-between" maxWidth="500px">
-    <Label field="demo" title="Personal Bio" supportingText="Is your life a meme?">
+  <Box block maxWidth="500px">
+    <Label field="bio" title="Textarea" supportingText="Sized by explicit rows and cols">
       <RawTextarea
         name="bio"
         placeholder="Tell us about yourself..."
         rows={5}
-        cols={50}
+        cols={40}
+      />
+    </Label>
+    <Label field="bio-warning" title="Personal Bio" supportingText="with intrinsicWidth = 100%">
+      <RawTextarea
+        name="bio"
+        intrinsicWidth="100%"
+        onChange={() => {;}}
+        value="foo bar baz"
+      />
+    </Label>
+    <Label field="bio-warning" title="Oops" supportingText="with validation error">
+      <RawTextarea
+        name="bio"
+        intrinsicWidth="100%"
+        value="foo bar baz"
+        onChange={() => {;}}
+        hasError
+      />
+    </Label>
+    <Label field="bio-warning" title="Oops" supportingText="with critical error">
+      <RawTextarea
+        name="bio"
+        intrinsicWidth="100%"
+        onChange={() => {;}}
+        value="foo bar baz"
+        errorSeverity="critical"
+        hasError
       />
     </Label>
   </Box>

@@ -17,7 +17,7 @@ export interface LabelProps {
    */
   containsFieldGroup?: boolean;
   /**
-   * Form field this label applies to
+   * Form field this label applies to. This should match the "name" prop on input elements.
    */
   field?: string;
   isRequired?: boolean;

@@ -11,7 +11,7 @@ import { Box } from '../../structure/Box';
 
 # RawSelect
 
-Raw input fields are designed to be completely controlled by their smarter, form-connected parent. Be sure to provide an `onChange` handler to manually manage the state `selected` on each option.
+Raw input fields are designed to be completely controlled by their smarter, form-connected parent. Be sure to provide an `onChange` handler and manually manage the current selected option via `value` prop.
 
 ### Options
 
@@ -28,6 +28,16 @@ const OPTIONS = [
     <Box row align="space-between" maxWidth="500px">
     <RawSelect
       name="ice-cream"
+      value="vanilla"
+      options={[
+        { label: 'Chocolate', value: 'chocolate' },
+        { label: 'Vanilla', value: 'vanilla' },
+        { label: 'Strawberry', value: 'strawberry' },
+      ]}
+      onChange={() => {;}}
+    />
+    <RawSelect
+      name="ice-cream"
       value="chocolate"
       options={[
         { label: 'Chocolate', value: 'chocolate' },
@@ -35,6 +45,19 @@ const OPTIONS = [
         { label: 'Strawberry', value: 'strawberry' },
       ]}
       onChange={() => {;}}
+      hasError
+    />
+    <RawSelect
+      name="ice-cream"
+      value="strawberry"
+      options={[
+        { label: 'Chocolate', value: 'chocolate' },
+        { label: 'Vanilla', value: 'vanilla' },
+        { label: 'Strawberry', value: 'strawberry' },
+      ]}
+      onChange={() => {;}}
+      errorSeverity="critical"
+      hasError
     />
     </Box>
   </Label>

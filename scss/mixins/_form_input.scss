@@ -5,7 +5,112 @@ $raw-input-height--transparent: 48px !default;
 $raw-checkbox-size: tempo(2.5) !default;
 $raw-radio-size: tempo(2.5) !default;
 
-// borders
+// Text inputs
+
+@mixin input($size: md, $style: normal) {
+  @include font($size: $size, $color: $slate--900);
+  max-width: 100%;
+  padding: tempo(1.5) tempo(2);
+
+  @if $style == normal {
+    @include input-border--slate;
+    background-color: white;
+  } @else if $style == transparent {
+    @include input-border--transparent;
+    background-color: transparent;
+  }
+
+  &::placeholder {
+    @include input-placeholder($size: $size);
+  }
+
+  &:hover {
+    @if $style == normal {
+      @include input-border--hover;
+    }
+  }
+
+  &:focus {
+    @if $style == normal {
+      @include input-border--hover;
+      @include input-border--focused;
+    }
+  }
+
+  &[disabled] {
+    @include input--disabled;
+  }
+
+  &:-webkit-autofill {
+    box-shadow: 0 0 0 50px white inset;
+    -webkit-text-fill-color: #333;
+  }
+
+  &:-internal-autofill-selected {
+    box-shadow: 0 0 0 50px white inset;
+  }
+
+  &.widthAuto {
+    width: auto;
+  }
+
+  &.width100 {
+    width: 100%;
+  }
+
+  &.hasError {
+    &.warning {
+      @include input-border--warning;
+    }
+
+    &.critical {
+      @include input-border--error;
+    }
+  }
+}
+
+// Radio + Checkbox
+
+// alias for input-checkbox
+@mixin input-radio($args...) {
+  @include input-checkbox($args...);
+}
+
+@mixin input-checkbox {
+  @include hide-default-browser-input;
+
+  & + label::after {
+    content: none;
+  }
+
+  &:checked + label::before,
+  &:hover label::before,
+  &:focus + label::before {
+    @include input-border--hover--thick;
+  }
+
+  &:checked + label::after {
+    content: '';
+  }
+
+  &:focus + label::before {
+    @include input-border--focused;
+  }
+
+  &[disabled] + label {
+    cursor: default;
+  }
+
+  &[disabled] + label::before {
+    @include input--disabled;
+  }
+
+  &[disabled] {
+    pointer-events: none;
+  }
+}
+
+// Borders
 
 @mixin input-border--focused {
   box-shadow: 0 0 0 4px $blue--200;
@@ -43,110 +148,7 @@ $raw-radio-size: tempo(2.5) !default;
   outline: none;
 }
 
-// accessible way of hiding the default input
-// https://webaim.org/techniques/css/invisiblecontent/
-
-@mixin hide-default-browser-input {
-  opacity: 0;
-  position: absolute;
-  -webkit-appearance: none;
-  z-index: -2;
-}
-
-// text inputs
-
-@mixin input($size: md, $style: normal) {
-  @include font($size: $size, $color: $slate--900);
-  max-width: 100%;
-  padding: tempo(1.5) tempo(2);
-
-  @if $style == normal {
-    @include input-border--slate;
-    background-color: white;
-  } @else if $style == transparent {
-    @include input-border--transparent;
-    background-color: transparent;
-  }
-
-  &::placeholder {
-    @include input-placeholder($size: $size);
-  }
-
-  &:hover {
-    @if $style == normal {
-      @include input-border--hover;
-    }
-  }
-
-  &:focus {
-    @if $style == normal {
-      @include input-border--hover;
-      @include input-border--focused;
-    }
-  }
-
-  &[disabled] {
-    @include input-disabled;
-  }
-
-  &:-webkit-autofill {
-    box-shadow: 0 0 0 50px white inset;
-    -webkit-text-fill-color: #333;
-  }
-
-  &:-internal-autofill-selected {
-    box-shadow: 0 0 0 50px white inset;
-  }
-}
-
-@mixin input-placeholder($size: md) {
-  @include font($size: $size, $color: $text-dark--a);
-}
-
-@mixin input-disabled {
-  @include font($color: $text-dark--a);
-  background-color: $slate--200;
-  border-color: $slate--300;
-}
-
-// alias
-@mixin input-radio($args...) {
-  @include input-checkbox($args...);
-}
-
-@mixin input-checkbox {
-  @include hide-default-browser-input;
-
-  & + label::after {
-    content: none;
-  }
-
-  &:checked + label::before,
-  &:hover label::before,
-  &:focus + label::before {
-    @include input-border--hover--thick;
-  }
-
-  &:checked + label::after {
-    content: '';
-  }
-
-  &:focus + label::before {
-    @include input-border--focused;
-  }
-
-  &[disabled] + label {
-    cursor: default;
-  }
-
-  &[disabled] + label::before {
-    @include input-disabled;
-  }
-
-  &[disabled] {
-    pointer-events: none;
-  }
-}
+// Labels
 
 @mixin input-label--checkbox {
   @include font($size: md);
@@ -228,102 +230,24 @@ $raw-radio-size: tempo(2.5) !default;
   }
 }
 
-@mixin input-react-select {
-  :global {
-    .select__control {
-      @include input;
-      padding: 6px tempo(1) 6px tempo(2);
-      box-shadow: none;
-      width: 100%;
+// Misc
 
-      &:hover {
-        @include input-border--hover;
-      }
+@mixin input-placeholder($size: md) {
+  @include font($size: $size, $color: $text-dark--a);
+}
 
-      &.select__control--is-focused,
-      &.select__control--menu-is-open.select__control--menu-is-open {
-        @include input-border--hover;
-      }
-      &.select__control--is-focused {
-        @include input-border--focused;
-      }
-      &.select__control--menu-is-open.select__control--menu-is-open {
-        box-shadow: none;
-        border-bottom-left-radius: 0;
-        border-bottom-right-radius: 0;
-      }
+@mixin input--disabled {
+  @include font($color: $text-dark--a);
+  background-color: $slate--200;
+  border-color: $slate--300;
+}
 
-      &.select__control--is-disabled {
-        @include input-disabled;
-      }
-      .select__single-value--is-disabled {
-        @include font($color: $text-dark--a);
-      }
-    }
+// accessible way of hiding the default input
+// https://webaim.org/techniques/css/invisiblecontent/
 
-    .select__placeholder {
-      @include font($size: md, $color: $text-dark--a);
-    }
-
-    .select__indicator,
-    .select__indicator:hover {
-      color: $slate--500;
-    }
-
-    .select__value-container {
-      padding: 0;
-      position: initial;
-      span {
-        /* added in so that label padding for role select field disappears */
-        padding-left: 0;
-      }
-    }
-
-    .select__indicator-separator {
-      display: none;
-    }
-
-    .select__menu {
-      border: 1px solid $blue--500;
-      border-top-color: transparent;
-      border-top-left-radius: 0;
-      border-top-right-radius: 0;
-      margin: 0;
-      overflow: hidden;
-      box-shadow: none;
-      top: calc(100% - 1px);
-    }
-
-    .select__menu-list {
-      padding: 0;
-    }
-
-    .select__option {
-      background-color: $white;
-      padding: tempo(0.5) tempo(2);
-      border-top: 1px solid $blue--200;
-    }
-
-    .select__option:hover,
-    .select__option--is-focused {
-      background-color: $blue--200;
-    }
-
-    .select__option--is-selected {
-      color: $text-dark--aaaa;
-      background-color: $blue--200;
-    }
-
-    .select__option--is-disabled {
-      @include font($color: $text-dark--a);
-    }
-  }
-
-  &.error {
-    :global {
-      .select__control {
-        @include input-border--warning;
-      }
-    }
-  }
+@mixin hide-default-browser-input {
+  opacity: 0;
+  position: absolute;
+  -webkit-appearance: none;
+  z-index: -2;
 }

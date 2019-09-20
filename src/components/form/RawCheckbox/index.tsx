@@ -7,9 +7,17 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   id: string;
   label: ReactNode;
+  labelClassName?: string;
 }
 
-function RawCheckbox({ className, type, id, label, ...rest }: Props) {
+function RawCheckbox({
+  className,
+  type,
+  id,
+  label,
+  labelClassName,
+  ...rest
+}: Props) {
   return (
     <>
       <input
@@ -18,7 +26,7 @@ function RawCheckbox({ className, type, id, label, ...rest }: Props) {
         type="checkbox"
         {...rest}
       />
-      <label className={classNames(styles.label, className)} htmlFor={id}>
+      <label className={classNames(labelClassName, styles.label)} htmlFor={id}>
         {label}
       </label>
     </>

@@ -13,3 +13,6 @@
 @import 'mixins/reset';
 @import 'mixins/space';
 @import 'mixins/util';
+
+// vendor support
+@import 'mixins/vendor-support/react-select';
