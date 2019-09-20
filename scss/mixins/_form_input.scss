@@ -14,6 +14,8 @@ $raw-radio-size: tempo(2.5) !default;
 
   @if $style == normal {
     @include input-border--slate;
+    border-width: 1px;
+    border-style: solid;
     background-color: white;
   } @else if $style == transparent {
     @include input-border--transparent;
@@ -84,7 +86,7 @@ $raw-radio-size: tempo(2.5) !default;
   }
 
   &:checked + label::before,
-  &:hover label::before,
+  &:hover + label::before,
   &:focus + label::before {
     @include input-border--hover--thick;
   }
@@ -99,14 +101,34 @@ $raw-radio-size: tempo(2.5) !default;
 
   &[disabled] + label {
     cursor: default;
-  }
 
-  &[disabled] + label::before {
-    @include input--disabled;
+    &::before {
+      @include input--disabled;
+    }
   }
 
   &[disabled] {
     pointer-events: none;
+  }
+
+  &.hasError {
+    &.warning + label {
+      &::after {
+        border-color: $text-dark--warning;
+      }
+      &::before {
+        @include input-border--warning;
+      }
+    }
+
+    &.critical + label {
+      &::after {
+        border-color: $text-dark--warning;
+      }
+      &::before {
+        @include input-border--warning;
+      }
+    }
   }
 }
 
