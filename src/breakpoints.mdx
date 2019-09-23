@@ -40,20 +40,19 @@ Row layout that stacks vertically on constrained viewports.
 ### Source
 
 ```scss
-$handset-breakpoint: 400px;
 $tablet-portrait-breakpoint: 720px;
 $desktop-breakpoint: 1136px; // minimum to support the full Halo grid
 $widescreen-breakpoint: 1440px;
 $superwidescreen-breakpoint: 1800px;
 
 @mixin handset-only {
-  @media (max-width: $handset-breakpoint) {
+  @media (max-width: $tablet-portrait-breakpoint - 1px) {
     @content;
   }
 }
 
 @mixin tablet-only {
-  @media (min-width: $handset-breakpoint + 1px) and (max-width: $desktop-breakpoint - 1px) {
+  @media (min-width: $tablet-portrait-breakpoint) and (max-width: $desktop-breakpoint - 1px) {
     @content;
   }
 }
