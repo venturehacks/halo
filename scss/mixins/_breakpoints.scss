@@ -18,7 +18,7 @@ $superwidescreen-breakpoint: 1800px;
 }
 
 @mixin tablet-up {
-  @media (min-width: $tablet-portrait-breakpoint) {
+  @media (min-width: $handset-breakpoint + 1px) {
     @content;
   }
 }
