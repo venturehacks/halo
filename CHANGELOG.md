@@ -2,13 +2,22 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.6.16](https://github.com/venturehacks/halo/compare/0.6.15...v0.6.16)
+#### [v0.6.17](https://github.com/venturehacks/halo/compare/0.6.16...v0.6.17)
+
+> 23 September 2019
+
+- Fix tablet-up breakpoint and stack grid cells on handset [`#26`](https://github.com/venturehacks/halo/pull/26)
+- [Button] remove overflow: hidden [`#24`](https://github.com/venturehacks/halo/pull/24)
+- [Button] add white background color to alternate variant (needed to look good in Safari) [`08dcb85`](https://github.com/venturehacks/halo/commit/08dcb85f16e086ed022f4deed4c3d732f0dbd15b)
+
+#### [0.6.16](https://github.com/venturehacks/halo/compare/0.6.15...0.6.16)
 
 > 22 August 2019
 
 - Button: pass target and rel for anchor buttons [`#23`](https://github.com/venturehacks/halo/pull/23)
 - [pre-commit hook] automatic prettier + linters [`f18c4ee`](https://github.com/venturehacks/halo/commit/f18c4eeb7e69d52f8e5b49a1853b351101dd5405)
 - [Span] Don't propogate invalid props to HTML tag [`01c9dec`](https://github.com/venturehacks/halo/commit/01c9dec631ea6baaacdcfa4ca1a2235dd78cd014)
+- Release 0.6.16 [`97d2edb`](https://github.com/venturehacks/halo/commit/97d2edb535bd8afd0103b54e4f304a94739695f0)
 - [Button] Don't add extra space unless there is an icon [`aefed15`](https://github.com/venturehacks/halo/commit/aefed15579a1079c0889e33c41fc1633a31ea734)
 - [Label] cursor: default [`f4f1100`](https://github.com/venturehacks/halo/commit/f4f11002983191fe410e389e608b29cd5f4c1019)
 
