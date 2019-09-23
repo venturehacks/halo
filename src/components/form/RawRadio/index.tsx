@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import React from 'react';
+import * as React from 'react';
 
 import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 
@@ -25,6 +25,9 @@ export interface RawRadioProps
   errorSeverity?: 'warning' | 'critical';
   label: React.ReactNode;
   labelClassName?: string;
+  /**
+   * Required for associated <label>
+   */
   id: string;
 }
 

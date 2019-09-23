@@ -17,7 +17,7 @@
       @include font($color: $text-dark--warning);
     }
 
-    &.error {
+    &.critical {
       @include font($color: $text-dark--error);
     }
   }
@@ -33,7 +33,7 @@
       background-color: $orange--100;
     }
 
-    &.error {
+    &.critical {
       @include font($color: $text-dark--error);
       background-color: $red--200;
     }

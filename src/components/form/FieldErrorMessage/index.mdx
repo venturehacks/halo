@@ -16,23 +16,23 @@ Prints a supplied error `message`, styled as a warning or critical error. Typica
 
 <Playground>
   <Box align="stretch" maxWidth="500px">
-    <FieldErrorMessage severity="error" preset="block" message="Critical server error. Please try again." />
-    <FieldErrorMessage severity="warning" preset="block" message="Relatively soft form warning" />
+    <FieldErrorMessage errorSeverity="critical" preset="block" message="Critical server error. Please try again." />
+    <FieldErrorMessage errorSeverity="warning" preset="block" message="Relatively soft form warning" />
 
     <Label field="name" title="Full name">
       <RawInput
         name="name"
-        onChange={() => {;}}
+        onChange={() => {}}
         type="text"
         value="bad name"
       />
-      <FieldErrorMessage severity="warning" message="A good name is required" />
+      <FieldErrorMessage errorSeverity="warning" message="A good name is required" />
     </Label>
 
     <Label field="address" title="Address">
       <RawInput
         name="address"
-        onChange={() => {;}}
+        onChange={() => {}}
         type="text"
         value="123 Wewtlane"
       />

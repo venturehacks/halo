@@ -1,10 +1,10 @@
 import classNames from 'classnames';
-import React from 'react';
+import * as React from 'react';
 
 import styles from './styles.scss';
 
 export type FieldErrorMessagePreset = 'text-only' | 'block';
-export type FieldErrorMessageSeverity = 'warning' | 'error';
+export type FieldErrorMessageSeverity = 'warning' | 'critical';
 
 export interface FieldErrorMessageProps {
   children?: React.ReactNode;
@@ -14,12 +14,12 @@ export interface FieldErrorMessageProps {
   message?: React.ReactNode;
   className?: string;
   /**
-   * 'warning' | 'error'
+   * warning | critical
    * @default warning
    */
-  severity?: FieldErrorMessageSeverity;
+  errorSeverity?: FieldErrorMessageSeverity;
   /**
-   * 'text-only': inline text; 'block': text on dark background severity
+   * text-only = inline text; block = text on dark background
    */
   preset?: FieldErrorMessagePreset;
 }
@@ -27,7 +27,7 @@ export interface FieldErrorMessageProps {
 function FieldErrorMessage({
   children,
   className,
-  severity = 'warning',
+  errorSeverity = 'warning',
   message,
   preset = 'text-only',
 }: FieldErrorMessageProps) {
@@ -35,12 +35,19 @@ function FieldErrorMessage({
     return null;
   }
 
+  if (message && children) {
+    // tslint:disable-next-line: no-console
+    console.warn(
+      `[Halo FieldErrorMessage] expected only 'message' or 'children' prop, but received both.`,
+    );
+  }
+
   return (
     <div
       className={classNames(
         styles.component,
         styles[preset],
-        styles[severity],
+        styles[errorSeverity],
         className,
       )}
     >

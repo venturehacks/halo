@@ -24,6 +24,7 @@
         "~"
       ]
     ],
+    "no-empty": false,
     "no-submodule-imports": [
       true,
       "~"

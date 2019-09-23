@@ -1,11 +1,11 @@
 import classNames from 'classnames';
-import React from 'react';
+import * as React from 'react';
 
 import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 
 import styles from './styles.scss';
 
-export interface SelectOption {
+export interface RawSelectOption {
   label: string;
   value?: string;
 }
@@ -14,7 +14,7 @@ export interface RawSelectProps
   extends React.SelectHTMLAttributes<HTMLSelectElement> {
   className?: string;
   children?: React.ReactNode;
-  options: SelectOption[];
+  options: RawSelectOption[];
   /**
    * Since the most common callout is for validation errors, you shouldn't need to customize this.
    * @default warning

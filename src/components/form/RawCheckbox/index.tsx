@@ -1,11 +1,11 @@
 import classNames from 'classnames';
-import React, { ReactNode } from 'react';
+import * as React from 'react';
 
 import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 
 import styles from './styles.scss';
 
-interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
+interface RawCheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   /**
    * Call out element that needs attention
@@ -17,21 +17,24 @@ interface Props extends React.InputHTMLAttributes<HTMLInputElement> {
    * @default warning
    */
   errorSeverity?: 'warning' | 'critical';
-  id: string;
-  label: ReactNode;
+  label: React.ReactNode;
   labelClassName?: string;
+  /**
+   * Required for associated <label>
+   */
+  id: string;
 }
 
 function RawCheckbox({
   className,
-  type,
+  errorSeverity = 'warning',
+  hasError,
   id,
   label,
   labelClassName,
-  hasError,
-  errorSeverity = 'warning',
+  type,
   ...rest
-}: Props) {
+}: RawCheckboxProps) {
   return (
     <>
       <input
@@ -43,8 +46,8 @@ function RawCheckbox({
           errorSeverity === 'warning' && styles.warning,
           errorSeverity === 'critical' && styles.critical,
         )}
-        id={id}
         type="checkbox"
+        id={id}
         {...rest}
       />
       <label className={classNames(labelClassName, styles.label)} htmlFor={id}>
