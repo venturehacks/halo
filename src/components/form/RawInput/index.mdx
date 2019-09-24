@@ -1,0 +1,66 @@
+---
+name: RawInput
+menu: Form
+route: /form/raw-input
+---
+
+import { Props, Playground } from 'docz';
+import { Label } from '../Label';
+import { RawInput } from './';
+import { Box } from '../../structure/Box';
+
+# RawInput
+
+📣 Raw input fields are designed to be [controlled](https://reactjs.org/docs/forms.html#controlled-components) by their smarter, form-connected parent.
+
+This component is primarily used for simple text input. It's also great as a hidden field that holds the value of a complex frontend component. On CoPro, we use it to power our autocomplete text fields and tabular data filter fields.
+
+<Playground>
+  <Box align="stretch" maxWidth="500px">
+    <Label field="foo" title="Default Behavior">
+      <RawInput />
+    </Label>
+    <Label field="foo" title="Text Input">
+      <RawInput
+        type="text"
+        name="foo"
+        placeholder="Your name"
+        maxLength={100}
+      />
+    </Label>
+    <Label field="bar" title="Email" supportingText="with validation error, intrinsic width = auto">
+      <RawInput
+        type="email"
+        name="bar"
+        onChange={() => {}}
+        value="What is email?"
+        intrinsicWidth="auto"
+        hasError
+      />
+    </Label>
+    <Label field="password" title="Password">
+      <RawInput
+        type="password"
+        name="password"
+        intrinsicWidth="auto"
+        value="abcdefghijk"
+        onChange={() => {}}
+      />
+    </Label>
+    <Label field="phone" title="Number">
+      <RawInput
+        type="number"
+        name="phone"
+        intrinsicWidth="auto"
+        min="10"
+        max="100"
+        value="20"
+        onChange={() => {}}
+      />
+    </Label>
+  </Box>
+</Playground>
+
+### Props
+
+<Props of={RawInput} />

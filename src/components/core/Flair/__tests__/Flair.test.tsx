@@ -1,9 +1,9 @@
 import { render } from 'enzyme';
 import * as React from 'react';
 
-import { Label } from '../index';
+import { Flair } from '../index';
 
 test('Smoke test', () => {
-  const component = render(<Label size="sm">Buy Now</Label>);
+  const component = render(<Flair size="sm">Buy Now</Flair>);
   expect(component.text()).toContain('Buy Now');
 });

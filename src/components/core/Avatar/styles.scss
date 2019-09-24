@@ -9,7 +9,7 @@ $size-large: 80px;
 $size-badge: 16px;
 
 .component {
-  @include border-box; // TODO: deprecate
+  @include halo-element-base; // TODO: deprecate
   position: relative;
 
   // sizes

@@ -1,42 +1,42 @@
 ---
-name: Label
+name: Flair
 menu: Core
 route: /core/label
 ---
 
 import { Props, Playground } from 'docz';
-import { Label } from './'
+import { Flair } from './'
 import { Header } from '../Header';
 import { Box } from '../../structure/Box';
 import '../../../index.scss';
 
-# Label
+# Flair
 
 <Playground>
   <Box margin={{ bottom: 3 }}>
-    <Label>We're Hiring My Dude</Label>
+    <Flair>We're Hiring My Dude</Flair>
   </Box>
 
   <Header h3>Colors</Header>
 
   <Box row margin={{ bottom: 4 }}>
     <Box margin={{ right: 2 }}>
-      <Label color="blue">Blue</Label>
+      <Flair color="blue">Blue</Flair>
     </Box>
     <Box margin={{ right: 2 }}>
-      <Label color="orange">orange</Label>
+      <Flair color="orange">orange</Flair>
     </Box>
     <Box margin={{ right: 2 }}>
-      <Label color="red">red</Label>
+      <Flair color="red">red</Flair>
     </Box>
     <Box margin={{ right: 2 }}>
-      <Label color="purple">purple</Label>
+      <Flair color="purple">purple</Flair>
     </Box>
     <Box margin={{ right: 2 }}>
-      <Label color="green">green</Label>
+      <Flair color="green">green</Flair>
     </Box>
     <Box margin={{ right: 2 }}>
-      <Label color="gray">Gray</Label>
+      <Flair color="gray">Gray</Flair>
     </Box>
   </Box>
 
@@ -44,13 +44,13 @@ import '../../../index.scss';
 
   <Box valign="bottom" row>
     <Box margin={{ right: 2 }}>
-      <Label color="blue" size="xs">xs</Label>
+      <Flair color="blue" size="xs">xs</Flair>
     </Box>
     <Box margin={{ right: 2 }}>
-      <Label color="blue" size="sm">sm</Label>
+      <Flair color="blue" size="sm">sm</Flair>
     </Box>
     <Box margin={{ right: 2 }}>
-      <Label color="blue" size="md">md</Label>
+      <Flair color="blue" size="md">md</Flair>
     </Box>
   </Box>
 
@@ -58,4 +58,4 @@ import '../../../index.scss';
 
 ### Props
 
-<Props of={Label} />
+<Props of={Flair} />

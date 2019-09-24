@@ -4,7 +4,7 @@ Halo is our design system. It enables our small group of designers to design and
 
 &nbsp;
 
-![Halo buttons preview](https://user-images.githubusercontent.com/194885/59124821-8cbc9b00-8915-11e9-9f94-eeb6e1df80f3.png)
+<img src="https://user-images.githubusercontent.com/194885/59124821-8cbc9b00-8915-11e9-9f94-eeb6e1df80f3.png" alt="Halo preview" width="882" />
 
 &nbsp;
 
@@ -34,7 +34,7 @@ Halo is built as a node module. In the future, Halo will be published as a priva
 #### Add dependency
 
 ```bash
-yarn add ssh://git@github.com:venturehacks/halo.git
+yarn add git+https://PERSONAL-ACCESS-TOKEN:x-oauth-basic@github.com/venturehacks/halo#stable
 ```
 
 #### Supply access token
@@ -98,7 +98,13 @@ return (
 | -------------- | -------------- | ------------------------------------------------------------- | :----: |
 | 2019 &nbsp; –  | `v1.0.0`       | CoPro production release                                      |   🌀   |
 | ⋯              | ⋯              | ⋯                                                             |   ⋯    |
-| 2019 July      | `v0.7.0`       | Buttons (final), Iconography, Form input components           |   🔶   |
+| 2019 &nbsp; –  | `v0.9.x`       | HoC library                                                   |   🔶   |
+| 2019 &nbsp; –  | `v0.9.x`       | Themeable root color                                          |   🔶   |
+| 2019 &nbsp; –  | `v0.8.x`       | Component pack                                                |   🔶   |
+| 2019 October   | `v0.8.x`       | Responive Grid + Cell, performance pass                       |   🔶   |
+| 2019 September | `v0.7.0`       | Raw form components                                           |   ✅   |
+| 2019 August    | ⋯              | Pre-commit tooling                                            |   ✅   |
+| 2019 July      | ⋯              | Smoke tests, API iteration                                    |   ✅   |
 | 2019 June      | `v0.6.0`       | Final color palette, type scale                               |   ✅   |
 | 2019 April-May | `v0.5.0`       | Grid, Cell, Label, Badge, Avatar, Tooltip, breakpoints        |   ✅   |
 | 2019 March     | `v0.4.0`       | Box, color palette, scss vars/mixin library export            |   ✅   |
@@ -125,6 +131,8 @@ Design maintains separate release notes and numeric versioning.
 - **Engineering**
   - Drew Lustro
   - Tiffany Wu
+  - Mike Dee
+  - Max Lustig
 - **Design**
   - Shane Zucker
   - Gearóid O’Rourke
@@ -141,9 +149,9 @@ Design maintains separate release notes and numeric versioning.
 
 ## Special Thanks
 
-- Veselin Todorov (tooling)
-- Korbin Hoffman (tooling)
-- Aaron Vinson (ci builds)
+- Veselin Todorov
+- Korbin Hoffman
+- Aaron Vinson
 
 &nbsp;
 

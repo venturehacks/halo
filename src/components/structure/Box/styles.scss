@@ -9,7 +9,7 @@ $text-alignments: (left center right);
 $grid-cell-count: 24;
 
 .component {
-  @include border-box; // TODO: deprecate
+  @include halo-element-base; // TODO: deprecate
 }
 
 .block {

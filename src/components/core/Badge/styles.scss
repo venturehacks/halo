@@ -6,7 +6,7 @@ $badge-size: 16px;
   position: absolute;
   right: -3px;
   top: -2px;
-  @include border-box; // TODO: deprecate
+  @include halo-element-base; // TODO: deprecate
   @include border-circle;
   @include font(
     $size: 9px,

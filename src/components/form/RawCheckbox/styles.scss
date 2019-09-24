@@ -1,0 +1,13 @@
+@import 'halo';
+
+.component {
+  @include halo-element-base;
+  @include input-checkbox;
+}
+
+// Label - larger clickable area is also responsible for rendering checked state
+
+.label {
+  @include halo-element-base;
+  @include input-label--checkbox;
+}

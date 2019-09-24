@@ -1,0 +1,37 @@
+@import 'halo';
+
+.component {
+  @include flex-column;
+
+  &.hasControlChildren {
+    margin-bottom: tempo(4);
+
+    & + div,
+    & + button {
+      margin-top: -#{tempo(2)};
+    }
+  }
+
+  .title {
+    @include font($weight: medium, $color: $slate--900);
+    line-height: 1.25;
+    order: 0;
+    letter-spacing: 0.025em;
+  }
+
+  .supportingText {
+    @include font($size: sm, $color: $text-dark--a);
+    line-height: 1.25;
+    margin-top: tempo(0.5);
+    order: 1;
+  }
+
+  .control {
+    margin-top: tempo(1.5);
+    order: 2;
+  }
+}
+
+.fieldset {
+  border: 0;
+}

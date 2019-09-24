@@ -1,6 +1,6 @@
 @import 'halo';
 
 .component {
-  @include border-box; // TODO: deprecate
+  @include halo-element-base; // TODO: deprecate
   font-weight: 500;
 }

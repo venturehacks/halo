@@ -3,7 +3,7 @@
 $grid-cell-count: 24;
 
 .component {
-  @include border-box; // TODO: deprecate
+  @include halo-element-base; // TODO: deprecate
 
   &.row {
     @include grid-row;

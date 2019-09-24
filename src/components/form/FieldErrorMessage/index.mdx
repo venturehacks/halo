@@ -1,0 +1,58 @@
+---
+name: FieldErrorMessage
+menu: Form
+route: /form/field-error-message
+---
+
+import { Props, Playground } from 'docz';
+import { RawInput } from '../RawInput';
+import { FieldErrorMessage } from './';
+import { Box } from '../../structure/Box';
+import { Label } from '../Label';
+
+# FieldErrorMessage
+
+Prints a supplied error `message`, styled as a warning or critical error. Typically, this component will come directly after an input component. The `block` preset is great for styling critical server error messages.
+
+<Playground>
+  <Box align="stretch" maxWidth="500px">
+    <FieldErrorMessage errorSeverity="critical" preset="block" message="Critical server error. Please try again." />
+    <FieldErrorMessage errorSeverity="warning" preset="block" message="Relatively soft form warning" />
+
+    <Label field="name" title="Full name">
+      <RawInput
+        name="name"
+        onChange={() => {}}
+        type="text"
+        value="bad name"
+      />
+      <FieldErrorMessage errorSeverity="warning" message="A good name is required" />
+    </Label>
+
+    <Label field="address" title="Address">
+      <RawInput
+        name="address"
+        onChange={() => {}}
+        type="text"
+        value="123 Wewtlane"
+      />
+    </Label>
+  </Box>
+</Playground>
+
+### Props
+
+<Props of={FieldErrorMessage} />
+
+### Example with Formik
+
+```jsx
+import { ErrorMessage } from 'formik';
+
+<ErrorMessage
+  name="salaryMax"
+  render={message => <FieldErrorMessage message={message} />}
+/>
+```
+
+

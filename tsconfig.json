@@ -37,16 +37,16 @@
     "jsx": "react",
     "paths": {
       "~/*": [
-        "./*",
-      ],
+        "./*"
+      ]
     },
     "typeRoots": [
       "./node_modules/@types",
-      "./src/types",
+      "./src/types"
     ],
     "lib": [
       "dom",
-      "es2015",
+      "es2015"
     ],
     "plugins": [
       {
@@ -61,11 +61,11 @@
     ]
   },
   "include": [
-    "./src/**/*",
+    "./src/**/*"
   ],
   "exclude": [
     "node_modules/**",
     "**/__tests__/*",
     "dist/**"
-  ],
+  ]
 }

@@ -14,8 +14,14 @@
   @return $map;
 }
 
-@mixin border-box {
+@mixin halo-element-base {
   box-sizing: border-box;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+  &::before,
+  &::after {
+    box-sizing: border-box;
+  }
 
   * {
     box-sizing: border-box;

@@ -1,0 +1,275 @@
+@import './space';
+
+$raw-input-height: 50px !default;
+$raw-input-height--transparent: 48px !default;
+$raw-checkbox-size: tempo(2.5) !default;
+$raw-radio-size: tempo(2.5) !default;
+
+// Text inputs
+
+@mixin input($size: md, $style: normal) {
+  @include font($size: $size, $color: $slate--900);
+  max-width: 100%;
+  padding: tempo(1.5) tempo(2);
+
+  @if $style == normal {
+    @include input-border--slate;
+    border-width: 1px;
+    border-style: solid;
+    background-color: white;
+  } @else if $style == transparent {
+    @include input-border--transparent;
+    background-color: transparent;
+  }
+
+  &::placeholder {
+    @include input-placeholder($size: $size);
+  }
+
+  &:hover {
+    @if $style == normal {
+      @include input-border--hover;
+    }
+  }
+
+  &:focus {
+    @if $style == normal {
+      @include input-border--hover;
+      @include input-border--focused;
+    }
+  }
+
+  &[disabled] {
+    @include input--disabled;
+  }
+
+  &:-webkit-autofill {
+    box-shadow: 0 0 0 50px white inset;
+    -webkit-text-fill-color: #333;
+  }
+
+  &:-internal-autofill-selected {
+    box-shadow: 0 0 0 50px white inset;
+  }
+
+  &.widthAuto {
+    width: auto;
+  }
+
+  &.width100 {
+    width: 100%;
+  }
+
+  &.hasError {
+    &.warning {
+      @include input-border--warning;
+    }
+
+    &.critical {
+      @include input-border--error;
+    }
+  }
+}
+
+// Radio + Checkbox
+
+// alias for input-checkbox
+@mixin input-radio($args...) {
+  @include input-checkbox($args...);
+}
+
+@mixin input-checkbox {
+  @include hide-default-browser-input;
+
+  & + label::after {
+    content: none;
+  }
+
+  &:checked + label::before,
+  &:hover + label::before,
+  &:focus + label::before {
+    @include input-border--hover--thick;
+  }
+
+  &:checked + label::after {
+    content: '';
+  }
+
+  &:focus + label::before {
+    @include input-border--focused;
+  }
+
+  &[disabled] + label {
+    cursor: default;
+
+    &::before {
+      @include input--disabled;
+    }
+  }
+
+  &[disabled] {
+    pointer-events: none;
+  }
+
+  &.hasError {
+    &.warning + label {
+      &::after {
+        border-color: $text-dark--warning;
+      }
+      &::before {
+        @include input-border--warning;
+      }
+    }
+
+    &.critical + label {
+      &::after {
+        border-color: $text-dark--warning;
+      }
+      &::before {
+        @include input-border--warning;
+      }
+    }
+  }
+}
+
+// Borders
+
+@mixin input-border--focused {
+  box-shadow: 0 0 0 4px $blue--200;
+  outline: none;
+}
+
+@mixin input-border--hover {
+  @include border-rounded;
+  border: 1px solid $blue--500;
+}
+
+// for checkboxes and radios
+@mixin input-border--hover--thick {
+  border: 2px solid $blue--500;
+}
+
+@mixin input-border--warning {
+  @include border-rounded;
+  border: 1px solid $text-dark--warning;
+}
+
+@mixin input-border--error {
+  @include border-rounded;
+  border: 1px solid $text-dark--error;
+}
+
+@mixin input-border--slate {
+  @include border-rounded;
+  border: 1px solid $slate--400;
+}
+
+@mixin input-border--transparent {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}
+
+// Labels
+
+@mixin input-label--checkbox {
+  @include font($size: md);
+  line-height: $raw-checkbox-size;
+  position: relative;
+  display: inline-block;
+  padding-left: tempo(3.5);
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: inline-block;
+    content: '';
+  }
+
+  // empty checkbox
+  &::before {
+    left: 0;
+    height: $raw-checkbox-size;
+    width: $raw-checkbox-size;
+    @include input-border--slate;
+    background-color: $white;
+  }
+
+  // checkmark
+  &::after {
+    left: 6px;
+    top: 7px;
+    height: 5px;
+    width: 9px;
+    border-left: 2px solid $blue--500;
+    border-bottom: 2px solid $blue--500;
+    transform: rotate(-45deg);
+  }
+
+  &:hover::before {
+    @include input-border--hover--thick;
+  }
+}
+
+@mixin input-label--radio {
+  @include font($size: md);
+  line-height: $raw-radio-size;
+  position: relative;
+  display: inline-block;
+  padding-left: tempo(3.5);
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    position: absolute;
+    display: inline-block;
+    content: '';
+  }
+
+  // empty radio
+  &::before {
+    left: 0;
+    height: $raw-radio-size;
+    width: $raw-radio-size;
+    @include border-circle;
+    border: 1px solid $slate--400;
+    background-color: $white;
+  }
+
+  // selected radio
+  &::after {
+    left: 7px;
+    top: 7px;
+    background-color: $blue--500;
+    width: 6px;
+    height: 6px;
+    @include border-circle;
+  }
+
+  &:hover::before {
+    @include input-border--hover--thick;
+  }
+}
+
+// Misc
+
+@mixin input-placeholder($size: md) {
+  @include font($size: $size, $color: $text-dark--a);
+}
+
+@mixin input--disabled {
+  @include font($color: $text-dark--a);
+  background-color: $slate--200;
+  border-color: $slate--300;
+}
+
+// accessible way of hiding the default input
+// https://webaim.org/techniques/css/invisiblecontent/
+
+@mixin hide-default-browser-input {
+  opacity: 0;
+  position: absolute;
+  -webkit-appearance: none;
+  z-index: -2;
+}

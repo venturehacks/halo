@@ -1,7 +1,7 @@
 @import 'halo';
 
 .component {
-  @include border-box; // TODO: deprecate
+  @include halo-element-base; // TODO: deprecate
   color: $text-dark--aaaa;
   margin: 0;
 

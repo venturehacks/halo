@@ -3,7 +3,7 @@
 $height: 28px;
 
 .component {
-  @include border-box; // TODO: deprecate
+  @include halo-element-base; // TODO: deprecate
   @include text-truncate;
   display: inline-block;
   box-sizing: border-box;

@@ -21,6 +21,7 @@
     "prepare": "yarn build",
     "prepublishOnly": "yarn test && yarn lint",
     "test": "jest --config jestconfig.json",
+    "test:watch": "jest --config jestconfig.json --watch --onlyChanged",
     "docs:build": "yarn docz:build",
     "docs:dev": "yarn docz:dev",
     "docz:build": "docz build",
@@ -36,7 +37,7 @@
     "prettier": "yarn run prettier:scripts && yarn run prettier:styles && yarn run prettier:other",
     "release": "release-it",
     "tslint:fix": "tslint --fix --project . -t grouped -s node_modules/custom-tslint-formatters/formatters",
-    "tslint:vscode": "tslint --project . --config tslint.json -t vscode -s node_modules/custom-tslint-formatters/formatters",
+    "tslint:vscode": "tslint --project . -t vscode -s node_modules/custom-tslint-formatters/formatters",
     "tslint": "tslint --project . -t grouped -s node_modules/custom-tslint-formatters/formatters",
     "release-major": "release-it major",
     "release-minor": "release-it minor",
@@ -81,6 +82,7 @@
     "enzyme-adapter-react-16": "^1.7.0",
     "husky": "^3.0.4",
     "identity-obj-proxy": "^3.0.0",
+    "idx": "^2.5.6",
     "jest": "^23.6.0",
     "lint-staged": "^9.2.3",
     "lodash": "^4.17.11",
@@ -115,6 +117,7 @@
     "webpack-merge": "^4.2.1"
   },
   "peerDependencies": {
+    "idx": "^2.5.0",
     "lodash": "^4.17.11",
     "react": ">= 16.8.6",
     "react-dom": ">= 16.8.6"
@@ -136,16 +139,16 @@
   },
   "lint-staged": {
     "**/*.{js,jsx,graphql,md,markdown}": [
-      "prettier --write",
+      "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore --write",
       "git add"
     ],
     "**/*.{ts,tsx}": [
-      "prettier --write",
+      "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore --write",
       "tslint --fix",
       "git add"
     ],
     "**/*.{css,scss}": [
-      "prettier --write",
+      "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore --write",
       "stylelint --fix",
       "git add"
     ]

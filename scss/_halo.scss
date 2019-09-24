@@ -8,7 +8,11 @@
 @import 'mixins/breakpoints';
 @import 'mixins/flex';
 @import 'mixins/font';
+@import 'mixins/form_input';
 @import 'mixins/position';
 @import 'mixins/reset';
 @import 'mixins/space';
 @import 'mixins/util';
+
+// vendor support
+@import 'mixins/vendor-support/react-select';
