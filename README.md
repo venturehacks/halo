@@ -4,7 +4,7 @@ Halo is our design system. It enables our small group of designers to design and
 
 &nbsp;
 
-![Halo buttons preview](https://user-images.githubusercontent.com/194885/59124821-8cbc9b00-8915-11e9-9f94-eeb6e1df80f3.png)
+<img src="https://user-images.githubusercontent.com/194885/59124821-8cbc9b00-8915-11e9-9f94-eeb6e1df80f3.png" alt="Halo preview" width="882" />
 
 &nbsp;
 
@@ -34,7 +34,7 @@ Halo is built as a node module. In the future, Halo will be published as a priva
 #### Add dependency
 
 ```bash
-yarn add ssh://git@github.com:venturehacks/halo.git
+yarn add git+https://PERSONAL-ACCESS-TOKEN:x-oauth-basic@github.com/venturehacks/halo#stable
 ```
 
 #### Supply access token
