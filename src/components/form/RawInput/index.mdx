@@ -11,15 +11,16 @@ import { Box } from '../../structure/Box';
 
 # RawInput
 
-> 📣 All raw inputs expect to be fully controlled by a wrapper component.
+📣 Raw input fields are designed to be [controlled](https://reactjs.org/docs/forms.html#controlled-components) by their smarter, form-connected parent.
 
-Primarily used for text input or great as a hidden, behind-the-scenes field.
-
-On CoPro we use it to power our autocomplete text fields and tabular data filter text field.
+This component is primarily used for simple text input. It's also great as a hidden field that holds the value of a complex frontend component. On CoPro, we use it to power our autocomplete text fields and tabular data filter fields.
 
 <Playground>
   <Box align="stretch" maxWidth="500px">
-    <Label field="foo" title="Text Input" supportingText="intrinsic width = 100% (default)">
+    <Label field="foo" title="Default Behavior">
+      <RawInput />
+    </Label>
+    <Label field="foo" title="Text Input">
       <RawInput
         type="text"
         name="foo"
@@ -37,7 +38,7 @@ On CoPro we use it to power our autocomplete text fields and tabular data filter
         hasError
       />
     </Label>
-    <Label field="baz" title="Password">
+    <Label field="password" title="Password">
       <RawInput
         type="password"
         name="password"
@@ -46,10 +47,10 @@ On CoPro we use it to power our autocomplete text fields and tabular data filter
         onChange={() => {}}
       />
     </Label>
-    <Label field="baz" title="Number">
+    <Label field="phone" title="Number">
       <RawInput
         type="number"
-        name="baz"
+        name="phone"
         intrinsicWidth="auto"
         min="10"
         max="100"

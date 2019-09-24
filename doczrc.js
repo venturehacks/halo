@@ -55,7 +55,7 @@ export default {
     },
     {
       name: 'Form',
-      menu: ['Label', 'RawInput', 'RawCheckbox', 'RawRadio', 'RawSelect', 'RawTextarea', 'FieldErrorMessage']
+      menu: ['Label', 'FieldErrorMessage', 'RawInput', 'RawCheckbox', 'RawRadio', 'RawSelect', 'RawTextarea']
     },
     {
       name: 'Sass',

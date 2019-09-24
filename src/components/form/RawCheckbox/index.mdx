@@ -11,10 +11,10 @@ import { Box } from '../../structure/Box';
 
 # RawCheckbox
 
-Raw input fields are designed to be completely controlled by their smarter, form-connected parent. Be sure to provide an `onChange` handler to manually manage the state of `checked`.
+📣 Raw input fields are designed to be [controlled](https://reactjs.org/docs/forms.html#controlled-components) by their smarter, form-connected parent. Be sure to provide an `onChange` handler to manually manage the state of `checked`
 
 <Playground>
-  <Label field="ice-cream" title="Favorite Ice Creams" supportingText="What are your favorites?" containsFieldGroup>
+  <Label field="ice-cream" title="Favorite Ice Creams" containsFieldGroup>
     <Box row align="space-between" maxWidth="500px" padding>
       <RawCheckbox
         name="ice-cream"
@@ -38,6 +38,8 @@ Raw input fields are designed to be completely controlled by their smarter, form
         checked={true}
       />
     </Box>
+  </Label>
+  <Label field="ice-cream" title="Favorite Ice Creams" supportingText="with validation error" containsFieldGroup>
     <Box row align="space-between" maxWidth="500px" padding>
       <RawCheckbox
         name="ice-cream"
