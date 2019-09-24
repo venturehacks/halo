@@ -19,36 +19,42 @@ On CoPro we use it to power our autocomplete text fields and tabular data filter
 
 <Playground>
   <Box align="stretch" maxWidth="500px">
-    <Label field="foo" title="Text Input" supportingText="width auto">
+    <Label field="foo" title="Text Input" supportingText="intrinsic width = 100% (default)">
       <RawInput
-        maxLength={100}
-        name="foo"
-        onChange={() => {}}
-        placeholder="Your name"
         type="text"
+        name="foo"
+        placeholder="Your name"
+        maxLength={100}
       />
     </Label>
-    <Label field="bar" title="Text Input" supportingText="with validation error">
+    <Label field="bar" title="Email" supportingText="with validation error, intrinsic width = auto">
       <RawInput
-        hasError
-        intrinsicWidth="100%"
+        type="email"
         name="bar"
         onChange={() => {}}
-        placeholder="Your name"
-        type="text"
-        value="This is pretty bad"
+        value="What is email?"
+        intrinsicWidth="auto"
+        hasError
       />
     </Label>
-    <Label field="baz" title="Text Input" supportingText="with critical error">
+    <Label field="baz" title="Password">
       <RawInput
-        errorSeverity="critical"
-        hasError
-        intrinsicWidth="100%"
-        name="baz"
+        type="password"
+        name="password"
+        intrinsicWidth="auto"
+        value="abcdefghijk"
         onChange={() => {}}
-        placeholder="Your name"
-        type="text"
-        value="Damn, that was terrible"
+      />
+    </Label>
+    <Label field="baz" title="Number">
+      <RawInput
+        type="number"
+        name="baz"
+        intrinsicWidth="auto"
+        min="10"
+        max="100"
+        value="20"
+        onChange={() => {}}
       />
     </Label>
   </Box>

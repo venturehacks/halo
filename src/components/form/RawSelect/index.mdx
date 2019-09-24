@@ -25,40 +25,28 @@ const OPTIONS = [
 
 <Playground>
   <Label field="ice-cream" title="One True Ice Cream" supportingText="Select your favorite!" containsFieldGroup>
-    <Box row align="space-between" maxWidth="500px">
-    <RawSelect
-      name="ice-cream"
-      value="vanilla"
-      options={[
-        { label: 'Chocolate', value: 'chocolate' },
-        { label: 'Vanilla', value: 'vanilla' },
-        { label: 'Strawberry', value: 'strawberry' },
-      ]}
-      onChange={() => {}}
-    />
-    <RawSelect
-      name="ice-cream"
-      value="chocolate"
-      options={[
-        { label: 'Chocolate', value: 'chocolate' },
-        { label: 'Vanilla', value: 'vanilla' },
-        { label: 'Strawberry', value: 'strawberry' },
-      ]}
-      onChange={() => {}}
-      hasError
-    />
-    <RawSelect
-      name="ice-cream"
-      value="strawberry"
-      options={[
-        { label: 'Chocolate', value: 'chocolate' },
-        { label: 'Vanilla', value: 'vanilla' },
-        { label: 'Strawberry', value: 'strawberry' },
-      ]}
-      onChange={() => {}}
-      errorSeverity="critical"
-      hasError
-    />
+    <Box row align="space-between" maxWidth="350px">
+      <RawSelect
+        name="ice-cream"
+        value="vanilla"
+        options={[
+          { label: 'Chocolate', value: 'chocolate' },
+          { label: 'Vanilla', value: 'vanilla' },
+          { label: 'Strawberry', value: 'strawberry' },
+        ]}
+        onChange={() => {}}
+      />
+      <RawSelect
+        name="ice-cream"
+        value="oops, error"
+        options={[
+          { label: 'Chocolate', value: 'chocolate' },
+          { label: 'Vanilla', value: 'vanilla' },
+          { label: 'Strawberry', value: 'strawberry' },
+        ]}
+        onChange={() => {}}
+        hasError
+      />
     </Box>
   </Label>
 </Playground>

@@ -17,7 +17,7 @@ export interface RawInputProps
    */
   hasError?: boolean;
   /**
-   * Since the most common callout is for validation errors, you shouldn't need to customize this.
+   * Since the most common callout is for validation errors, you shouldn't need to customize this
    * @default warning
    */
   errorSeverity?: 'warning' | 'critical';
@@ -31,7 +31,7 @@ export interface RawInputProps
    */
   iconPosition?: IconPosition;
   /**
-   * Default width
+   * Grows as wide as container by default
    * @default 100%
    */
   intrinsicWidth?: 'auto' | '100%';
@@ -42,8 +42,7 @@ export interface RawInputProps
   transparent?: boolean;
 
   /**
-   * Standard HTML <input> element types.
-   * https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input#Form_%3Cinput%3E_types
+   * Standard HTML <input> element types
    * @default text
    */
   type?:
@@ -67,7 +66,7 @@ export default function RawInput({
   hasError = false,
   icon,
   iconPosition = 'left',
-  intrinsicWidth = 'auto',
+  intrinsicWidth = '100%',
   transparent = false,
   type = 'text',
   ...rest
