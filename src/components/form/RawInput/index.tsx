@@ -16,25 +16,35 @@ export interface RawInputProps
    * @default false
    */
   hasError?: boolean;
+
   /**
    * Since the most common callout is for validation errors, you shouldn't need to customize this
    * @default warning
    */
   errorSeverity?: 'warning' | 'critical';
+
   /**
    * Optional prefix/suffix icon
    */
   icon?: React.ReactNode;
+
   /**
    * left | right
    * @default left
    */
   iconPosition?: IconPosition;
+
   /**
    * Grows as wide as container by default
    * @default 100%
    */
   intrinsicWidth?: 'auto' | '100%';
+
+  /**
+   * Field name
+   */
+  name?: string;
+
   /**
    * Use transparent style
    * @default false

@@ -14,6 +14,10 @@ export interface RawSelectProps
   extends React.SelectHTMLAttributes<HTMLSelectElement> {
   className?: string;
   children?: React.ReactNode;
+  /**
+   * Field name
+   */
+  name?: string;
   options: RawSelectOption[];
   /**
    * Since the most common callout is for validation errors, you shouldn't need to customize this.
