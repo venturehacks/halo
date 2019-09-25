@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.7.0](https://github.com/venturehacks/halo/compare/0.6.17...v0.7.0)
+#### [v0.7.1](https://github.com/venturehacks/halo/compare/0.7.0...v0.7.1)
+
+> 25 September 2019
+
+- Box block default, document exported types [`#27`](https://github.com/venturehacks/halo/pull/27)
+
+#### [0.7.0](https://github.com/venturehacks/halo/compare/0.6.17...0.7.0)
 
 > 25 September 2019
 
 - Form Raw Inputs [`#25`](https://github.com/venturehacks/halo/pull/25)
+- Release 0.7.0 [`fd28c88`](https://github.com/venturehacks/halo/commit/fd28c885041d603f2dbbc7ad8e5eb4395c217560)
 
 #### [0.6.17](https://github.com/venturehacks/halo/compare/0.6.16...0.6.17)
 
@@ -32,7 +39,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 > 8 August 2019
 
-- Actually pass down props from React.HTMLAttributes<T> [`9f03b60`](https://github.com/venturehacks/halo/commit/9f03b6071778b68010976f1505ea237066cb55e2)
+- Actually pass down props from React.HTMLAttributes&lt;T&gt; [`9f03b60`](https://github.com/venturehacks/halo/commit/9f03b6071778b68010976f1505ea237066cb55e2)
 - Release 0.6.15 [`b5e4d97`](https://github.com/venturehacks/halo/commit/b5e4d974b61751bbf8b485bf3cdb52808fdf787f)
 
 #### [0.6.14](https://github.com/venturehacks/halo/compare/0.6.13...0.6.14)
@@ -40,7 +47,7 @@ All notable changes to this project will be documented in this file. Dates are d
 > 8 August 2019
 
 - Release 0.6.14 [`f5dd52e`](https://github.com/venturehacks/halo/commit/f5dd52e51cd2951ff0e3876733411c59ded6c2e1)
-- Extend Halo core prop interfaces from React.HTMLAttributes<T> [`8b7f8a8`](https://github.com/venturehacks/halo/commit/8b7f8a898ab5a6ccf834310938552ba25f71d430)
+- Extend Halo core prop interfaces from React.HTMLAttributes&lt;T&gt; [`8b7f8a8`](https://github.com/venturehacks/halo/commit/8b7f8a898ab5a6ccf834310938552ba25f71d430)
 
 #### [0.6.13](https://github.com/venturehacks/halo/compare/0.6.12...0.6.13)
 
@@ -259,7 +266,7 @@ All notable changes to this project will be documented in this file. Dates are d
 - PillTag hides overflow [`0998dd5`](https://github.com/venturehacks/halo/commit/0998dd533374f74b8344a087f2252559de8a1c47)
 - export BadgeShape [`a333423`](https://github.com/venturehacks/halo/commit/a33342301340c9a3645a9e55659de44d11d72979)
 - Synthetic default import on Avatar seems to break JSX autocomplete [`bdf807e`](https://github.com/venturehacks/halo/commit/bdf807e1fb9c04d0e0031f7900bf55822f776dc1)
-- allowSyntheticDefaultImports > esModuleInterop [`fc084cb`](https://github.com/venturehacks/halo/commit/fc084cbb24f9d45e3794c411eec974a3cf8c61b3)
+- allowSyntheticDefaultImports &gt; esModuleInterop [`fc084cb`](https://github.com/venturehacks/halo/commit/fc084cbb24f9d45e3794c411eec974a3cf8c61b3)
 - Patch synthetic default import compat on jest [`c6c32bd`](https://github.com/venturehacks/halo/commit/c6c32bd86528f72ad50e82643ac6777fc1ea54e1)
 - Do not run prettier on changelog [`67a06c4`](https://github.com/venturehacks/halo/commit/67a06c4f9f17f3e29e71d726b4ec53e190217882)
 
@@ -305,23 +312,23 @@ All notable changes to this project will be documented in this file. Dates are d
 - :art: Halo COLORMAP! [`49a68f1`](https://github.com/venturehacks/halo/commit/49a68f14b72db6f505f552c0897e7d8cbf15df96)
 - remove Formik experiment [`fe9bf45`](https://github.com/venturehacks/halo/commit/fe9bf453962459e4524dd85d001e98c125899014)
 - Replace reset with a mixin [`e6c4760`](https://github.com/venturehacks/halo/commit/e6c4760ad8043d9b7f117b6ef07d5070fce2f0fc)
-- :sparkles: <Avatar /> [`9b5b652`](https://github.com/venturehacks/halo/commit/9b5b652c286cc0c7b784f5bd41ade5f56772fc1e)
-- [1st attempt] Formik-compatible <TextField /> [`ccb5aac`](https://github.com/venturehacks/halo/commit/ccb5aacd4a528a2295214464ece829b852437598)
+- :sparkles: &lt;Avatar /&gt; [`9b5b652`](https://github.com/venturehacks/halo/commit/9b5b652c286cc0c7b784f5bd41ade5f56772fc1e)
+- [1st attempt] Formik-compatible &lt;TextField /&gt; [`ccb5aac`](https://github.com/venturehacks/halo/commit/ccb5aacd4a528a2295214464ece829b852437598)
 - :peach: bump docz version, pray for bugfixes [`6cd252b`](https://github.com/venturehacks/halo/commit/6cd252ba6aa68d9f9fe8cbbac45c484d7c6dd2db)
 - Organization pass [`dc898ca`](https://github.com/venturehacks/halo/commit/dc898ca2220a06e281061e66cb5706c4721aaed3)
 - Docs cleanup [`29546f9`](https://github.com/venturehacks/halo/commit/29546f982fdf9989b2ebe8b066b6b05dc1d89862)
 - Release 0.5.0 [`a7f40a6`](https://github.com/venturehacks/halo/commit/a7f40a679e6dc7696bcde65015e92a04d322dd84)
 - Button v1.1 [`b892cbe`](https://github.com/venturehacks/halo/commit/b892cbe297ab16fb234bcf1ca7513826d9719860)
-- :sparkles: <Badge /> [`a34a85a`](https://github.com/venturehacks/halo/commit/a34a85a112cfe327e997953d346d60360a77d0fb)
+- :sparkles: &lt;Badge /&gt; [`a34a85a`](https://github.com/venturehacks/halo/commit/a34a85a112cfe327e997953d346d60360a77d0fb)
 - Patch all classes to adhere to new tsconfig [`4b784a1`](https://github.com/venturehacks/halo/commit/4b784a18528d93820476d63653135c8b586b8c25)
 - Port + distill platform variables in support of font() [`3b52908`](https://github.com/venturehacks/halo/commit/3b5290855fe50ab82cbbbeaa5ecaee4fd704a668)
 - breakpoints! handset, tablet, desktop, widescreen, superwidescreen [`1abf48f`](https://github.com/venturehacks/halo/commit/1abf48fbe833b4fda106b91fbe2f3adf79b29645)
 - Unified breakpoints [`ee3be34`](https://github.com/venturehacks/halo/commit/ee3be34eafbb1df3d751a8d7d220be16a781aeef)
 - [architecture] sync rollup + tsconfig + docz module resolution [`6501a65`](https://github.com/venturehacks/halo/commit/6501a6540e00b71b1942aedfd721261117764c1f)
-- :sparkles: <Tooltip /> [`6f81f33`](https://github.com/venturehacks/halo/commit/6f81f33c534ebe6b5195d2fd770aae7c5f8a22ab)
+- :sparkles: &lt;Tooltip /&gt; [`6f81f33`](https://github.com/venturehacks/halo/commit/6f81f33c534ebe6b5195d2fd770aae7c5f8a22ab)
 - Bring tsconfig closer in sync with CoPro [`04a9b26`](https://github.com/venturehacks/halo/commit/04a9b26d765a5b18b2d8f0ad458e8c78427e5223)
 - Port robust platform font() mixin [`3372af6`](https://github.com/venturehacks/halo/commit/3372af61d99c4e67a9b004e7b2985ad977232f46)
-- <Label /> :sparkles: [`f8f7ee2`](https://github.com/venturehacks/halo/commit/f8f7ee26ad5382138a21067cc1cc126961198e54)
+- &lt;Label /&gt; :sparkles: [`f8f7ee2`](https://github.com/venturehacks/halo/commit/f8f7ee26ad5382138a21067cc1cc126961198e54)
 - [stylelint] [`775afd5`](https://github.com/venturehacks/halo/commit/775afd57ec19cafe5802bd35a50de1e9ce7b917a)
 - clean up [`832e653`](https://github.com/venturehacks/halo/commit/832e6531d5dd10c155299017f0d356edb21ba79e)
 - Significantly enhance font(); deprecate shorthand mixins [`22c788a`](https://github.com/venturehacks/halo/commit/22c788a713977eacc32c189cf1caa611dcca1d2b)
@@ -403,9 +410,9 @@ All notable changes to this project will be documented in this file. Dates are d
 - Upgrade docz, syntax [`2184642`](https://github.com/venturehacks/halo/commit/2184642de9fc1d4e1af4293ce432730e410acea6)
 - :knife: :gem: destroy evidence of once being rubygem [`3d76748`](https://github.com/venturehacks/halo/commit/3d76748526969c230645dcad475b5a4be9371a69)
 - automatic changelogs [`5137c3b`](https://github.com/venturehacks/halo/commit/5137c3b38f9fb7af48e249351151effc2862d1ec)
-- <ColorSwatch /> 🎨 [`4d4d5cd`](https://github.com/venturehacks/halo/commit/4d4d5cd19266dbb35bfab9ce3d872f50278120db)
+- &lt;ColorSwatch /&gt; 🎨 [`4d4d5cd`](https://github.com/venturehacks/halo/commit/4d4d5cd19266dbb35bfab9ce3d872f50278120db)
 - Overhaul README.md for March 2019 [`6e647f7`](https://github.com/venturehacks/halo/commit/6e647f79290341ac30d0f7d2efcb9d05ac7660b1)
-- <Box /> :sparkles: [`2be7d72`](https://github.com/venturehacks/halo/commit/2be7d721dac6ec4ded313709e2b072cf5a556f20)
+- &lt;Box /&gt; :sparkles: [`2be7d72`](https://github.com/venturehacks/halo/commit/2be7d721dac6ec4ded313709e2b072cf5a556f20)
 - Scss available from node module :100: [`c82ec11`](https://github.com/venturehacks/halo/commit/c82ec1128f191253c90136fba3eb4b772f185cfa)
 - Tune README for release [`4a67386`](https://github.com/venturehacks/halo/commit/4a673869148da141d0726c7da6fd427d4315e2fe)
 - Release 0.4.0 [`1a3e73d`](https://github.com/venturehacks/halo/commit/1a3e73dbc94cb271a48f7e836e1fdb786e8203d8)
@@ -421,7 +428,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 - Updating readme to add proper emoji [`#4`](https://github.com/venturehacks/halo/pull/4)
 - reset.scss [`929e948`](https://github.com/venturehacks/halo/commit/929e948e8058ecf9d59aefb6448f03190147bf57)
-- Add intrinsic props, including `type` to <Button /> [`376ccce`](https://github.com/venturehacks/halo/commit/376ccce0f311f4ac013c7ec1c6274d184baa8b2d)
+- Add intrinsic props, including `type` to &lt;Button /&gt; [`376ccce`](https://github.com/venturehacks/halo/commit/376ccce0f311f4ac013c7ec1c6274d184baa8b2d)
 - default to Helvetica Neue [`8ffb4a2`](https://github.com/venturehacks/halo/commit/8ffb4a285e1f64cff5a74066862687bb1ec4bf81)
 - Release 0.3.1 [`6ed8dcb`](https://github.com/venturehacks/halo/commit/6ed8dcb8ee534d1412cf511267ee1eca38af56d5)
 
@@ -433,17 +440,17 @@ All notable changes to this project will be documented in this file. Dates are d
 - [massive autofix] prettier + stylelint + tslint [`8315fcd`](https://github.com/venturehacks/halo/commit/8315fcdf811d4ffef1c00e3fd52cabac827120cc)
 - :hammer: tons of tooling from Talent SSR [`42680da`](https://github.com/venturehacks/halo/commit/42680daa431afc3e03507fdcbdec31b6200669f8)
 - atsm style defs auto-generation [`054c0bc`](https://github.com/venturehacks/halo/commit/054c0bc097a6781ef81677e05d458c6492725e03)
-- <Header /> <Paragraph /> [`de1fdfe`](https://github.com/venturehacks/halo/commit/de1fdfe0cd306eb89415c9efc874f6239050686a)
-- :sparkles: <PillTag /> [`0b7373e`](https://github.com/venturehacks/halo/commit/0b7373eb1d3bac69af55db17be84c7d6a4214043)
+- &lt;Header /&gt; &lt;Paragraph /&gt; [`de1fdfe`](https://github.com/venturehacks/halo/commit/de1fdfe0cd306eb89415c9efc874f6239050686a)
+- :sparkles: &lt;PillTag /&gt; [`0b7373e`](https://github.com/venturehacks/halo/commit/0b7373eb1d3bac69af55db17be84c7d6a4214043)
 - :recycle: [prettier + tslint] autofix [`5425b11`](https://github.com/venturehacks/halo/commit/5425b11d3c2b6f3f0968439921099efb2f4b3db7)
 - tslint [`9fb7f5f`](https://github.com/venturehacks/halo/commit/9fb7f5f78d9c4e4c83a608098786307aa37d6c6d)
-- <Paragraph /> [`4a15485`](https://github.com/venturehacks/halo/commit/4a15485febf5dbb56877612c773c1ea52c5497d4)
+- &lt;Paragraph /&gt; [`4a15485`](https://github.com/venturehacks/halo/commit/4a15485febf5dbb56877612c773c1ea52c5497d4)
 - `yarn watch` for continuous builds [`de1b2eb`](https://github.com/venturehacks/halo/commit/de1b2eb8a6c988d45342dc7245614d68e8c14bae)
 - [scss] basic flex + antialias lib [`870831b`](https://github.com/venturehacks/halo/commit/870831bc552ecc5b3bf6c100c9a041632462071a)
 - stylelint [`24dac59`](https://github.com/venturehacks/halo/commit/24dac59c51268dab890739b59dd558e577c4c75a)
-- <Button /> `icon` + `gret` variant [`575af89`](https://github.com/venturehacks/halo/commit/575af89d1f7a44b1f73cc386e2b8dd09be7b1719)
+- &lt;Button /&gt; `icon` + `gret` variant [`575af89`](https://github.com/venturehacks/halo/commit/575af89d1f7a44b1f73cc386e2b8dd09be7b1719)
 - [docz config] Sass loading include path [`d4e93b4`](https://github.com/venturehacks/halo/commit/d4e93b49e84063f24b5f10d8798fe1222d4c3c0a)
-- :knife: <Greeter /> [`dda3e2a`](https://github.com/venturehacks/halo/commit/dda3e2ae1ab2a848a107ba647f2e449694762952)
+- :knife: &lt;Greeter /&gt; [`dda3e2a`](https://github.com/venturehacks/halo/commit/dda3e2ae1ab2a848a107ba647f2e449694762952)
 - Don't render generated files by default [`5dd8da5`](https://github.com/venturehacks/halo/commit/5dd8da5da10526c8bec593b7f63059d8a7939a1d)
 - Release 0.3.0 [`fb5d8c7`](https://github.com/venturehacks/halo/commit/fb5d8c7a45e14d999a1a5e44525c15ecaaed4969)
 
@@ -520,7 +527,7 @@ All notable changes to this project will be documented in this file. Dates are d
 - Initial commit: TypeScript, React, Jest, webpack ✅ [`bba6778`](https://github.com/venturehacks/halo/commit/bba6778e884537a904f93758ccf6fa15ab8d92a1)
 - Workin hard towards packaging [`1e8b7ca`](https://github.com/venturehacks/halo/commit/1e8b7ca8460fdb42b6dab08a0a5bbfd87c75d4ee)
 - Improve Typescript structuring, interfaces, and signatures [`e5e4cbc`](https://github.com/venturehacks/halo/commit/e5e4cbc4e0a7095b309e81e6481fd443786eebb5)
-- <Button /> simplistic scaffold [`602086b`](https://github.com/venturehacks/halo/commit/602086babd857b854ddc52a8923c62d448fe6af9)
+- &lt;Button /&gt; simplistic scaffold [`602086b`](https://github.com/venturehacks/halo/commit/602086babd857b854ddc52a8923c62d448fe6af9)
 - Make Halo Sass module available [`5f18bae`](https://github.com/venturehacks/halo/commit/5f18baec5fb4dcbbd0fe71cea2376f790e582f41)
 - Typings for CSS modules [`8ef290d`](https://github.com/venturehacks/halo/commit/8ef290d2bc3638f7f9ed0b1f0798333803a6f2b1)
 - Ensure typings are automatically generated [`23c86d3`](https://github.com/venturehacks/halo/commit/23c86d38ea93b1bc175d48c36fc7699d95def316)
