@@ -2,12 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.6.17](https://github.com/venturehacks/halo/compare/0.6.16...v0.6.17)
+#### [v0.7.0](https://github.com/venturehacks/halo/compare/0.6.17...v0.7.0)
+
+> 25 September 2019
+
+- Form Raw Inputs [`#25`](https://github.com/venturehacks/halo/pull/25)
+
+#### [0.6.17](https://github.com/venturehacks/halo/compare/0.6.16...0.6.17)
 
 > 23 September 2019
 
 - Fix tablet-up breakpoint and stack grid cells on handset [`#26`](https://github.com/venturehacks/halo/pull/26)
 - [Button] remove overflow: hidden [`#24`](https://github.com/venturehacks/halo/pull/24)
+- Release 0.6.17 [`8431c13`](https://github.com/venturehacks/halo/commit/8431c13f059d95ed1e8e3a6448c432dc2cb2b3e9)
 - [Button] add white background color to alternate variant (needed to look good in Safari) [`08dcb85`](https://github.com/venturehacks/halo/commit/08dcb85f16e086ed022f4deed4c3d732f0dbd15b)
 
 #### [0.6.16](https://github.com/venturehacks/halo/compare/0.6.15...0.6.16)
