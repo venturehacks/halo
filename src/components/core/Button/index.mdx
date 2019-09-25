@@ -45,35 +45,14 @@ import '../../../index.scss';
 </Box>
 
 
-### States
+## Exports
 
-<Box row>
-  <Button size="small">initial</Button>
-  &nbsp;
-  <Button size="small" className="_forceHover">:hover</Button>
-  &nbsp;
-  <Button size="small" className="_forceActive">:active</Button>
-</Box>
+```ts
+type ButtonSize = 'large' | 'regular' | 'small' | 'xsmall' | 'inline';
 
-<br />
+type ButtonVariant = 'primary' | 'secondary' | 'warning' | 'danger' | 'success' | 'gray' | 'secondary-gray' | 'alternate';
+```
 
-<Box row>
-  <Button size="small" variant="secondary">initial</Button>
-  &nbsp;
-  <Button size="small" variant="secondary" className="_forceHover">:hover</Button>
-  &nbsp;
-  <Button size="small" variant="secondary" className="_forceActive">:active</Button>
-</Box>
-
-<br />
-
-<Box row>
-  <Button size="small" variant="gray">initial</Button>
-  &nbsp;
-  <Button size="small" variant="gray" className="_forceHover">:hover</Button>
-  &nbsp;
-  <Button size="small" variant="gray" className="_forceActive">:active</Button>
-</Box>
 
 ### Props
 

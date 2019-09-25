@@ -45,7 +45,9 @@ export default {
   },
   menu: [
     'Welcome',
-    'Colors',
+    {
+      name: 'Constants',
+    },
     {
       name: 'Core'
     },

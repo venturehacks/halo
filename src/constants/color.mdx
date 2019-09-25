@@ -1,13 +1,88 @@
 ---
-name: Colors
-route: /colors
+name: Color Palette
+menu: Constants
+route: /constants/color
 ---
 
-import { ColorSwatch } from './components/util/ColorSwatch';
-import { Box } from './components/structure/Box';
-import './index.scss';
+import { ColorSwatch } from '../components/util/ColorSwatch';
+import { Box } from '../components/structure/Box';
+import '../index.scss';
 
 # Color Palette
+
+```ts
+type PaletteColor =
+| 'text-dark--aaaa'
+| 'text-dark--aaa'
+| 'text-dark--aa'
+| 'text-dark--a'
+| 'text-dark--link'
+| 'text-dark--success'
+| 'text-dark--warning'
+| 'text-dark--error'
+| 'text-light--aaaa'
+| 'text-light--aaa'
+| 'text-light--aa'
+| 'text-light--a'
+| 'text-light--link'
+| 'text-light--success'
+| 'text-light--warning'
+| 'text-light--error'
+| 'slate--900'
+| 'slate--800'
+| 'slate--700'
+| 'slate--600'
+| 'slate--500'
+| 'slate--400'
+| 'slate--300'
+| 'slate--200'
+| 'slate--100'
+| 'blue--900'
+| 'blue--800'
+| 'blue--700'
+| 'blue--600'
+| 'blue--500'
+| 'blue--400'
+| 'blue--300'
+| 'blue--200'
+| 'blue--100'
+| 'green--900'
+| 'green--800'
+| 'green--700'
+| 'green--600'
+| 'green--500'
+| 'green--400'
+| 'green--300'
+| 'green--200'
+| 'green--100'
+| 'red--900'
+| 'red--800'
+| 'red--700'
+| 'red--600'
+| 'red--500'
+| 'red--400'
+| 'red--300'
+| 'red--200'
+| 'red--100'
+| 'purple--900'
+| 'purple--800'
+| 'purple--700'
+| 'purple--600'
+| 'purple--500'
+| 'purple--400'
+| 'purple--300'
+| 'purple--200'
+| 'purple--100'
+| 'orange--900'
+| 'orange--800'
+| 'orange--700'
+| 'orange--600'
+| 'orange--500'
+| 'orange--400'
+| 'orange--300'
+| 'orange--200'
+| 'orange--100';
+```
 
 ## Typography
 

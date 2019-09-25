@@ -10,9 +10,6 @@ $grid-cell-count: 24;
 
 .component {
   @include halo-element-base; // TODO: deprecate
-}
-
-.block {
   display: block;
 }
 

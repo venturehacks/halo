@@ -1,18 +1,11 @@
 export type TextContrast = 'A' | 'AA' | 'AAA' | 'AAAA';
 
-export interface TextContrastProps {
-  contrast?: TextContrast;
-  muted?: boolean;
-  xmuted?: boolean;
-  xxmuted?: boolean;
-}
-
 export type TextColorScheme = 'dark' | 'light';
 
 export type TextWeight =
   | 'ultralight'
   | 'light'
-  | 'normal'
+  | 'regular'
   | 'medium'
   | 'semibold'
   | 'bold';
@@ -31,6 +24,13 @@ export type TextSize =
   | '2xs';
 
 export type TextLineHeight = 'default' | 'comfortable' | 'compact' | 'dense';
+
+export interface TextContrastProps {
+  contrast?: TextContrast;
+  muted?: boolean;
+  xmuted?: boolean;
+  xxmuted?: boolean;
+}
 
 export function textContrastForConfiguration({
   muted,

@@ -11,35 +11,65 @@ import '../../../index.scss';
 
 # Box
 
-Use Box to quickly scaffold flexbox layouts.
+Use `Box` to quickly scaffold layouts. By default, `Box` is a standard block element with no flexbox features. Declare flexbox behavior with `row` or `column` props.
+
+### Props `!=` CSS
+
+`Box` props are not meant to replace CSS! It's better practice to rely on these props for convenience and not as a hammer to avoid writing clean CSS. Additionally, `Box` props are not flexible to responsive design. If styling rules are scattered between JSX and CSS, it's difficult to focus on the differences between mobile and desktop.
+
+In general, Halo component API's are meant to save you time, but they're not meant to replace CSS. If you have a lot of element styles, they shouldn't be implemented as Halo component props. If you already took the time to assign a `.customClass`, nearly all styles should live in CSS.
 
 <Playground>
-  <Box row align="space-between" margin={{ bottom: 2 }}>
-    <Button>align</Button>
-    <Button variant='secondary'>space-between</Button>
-    <Button variant='secondary-gray'>of</Button>
-    <Button variant='gray'>content</Button>
-  </Box>
-  <Box row align="right" valign="bottom" margin={{ top: 4 }}>
-    <Button>align</Button>
-    <Button variant='secondary' size="small">right</Button>
-    <Button variant='secondary-gray' size="small">with</Button>
-    <Button variant='gray' size="small">margin</Button>
-    <Button variant='alternate' size="small">{`{{ top: 4 }}`}</Button>
-  </Box>
-  <Box row align="left" valign="top" padding={4}>
-    <Button>align</Button>
-    <Button variant='secondary' size="small">left</Button>
-    <Button variant='secondary-gray' size="small">with</Button>
-    <Button variant='gray' size="small">padding</Button>
-    <Button variant='alternate' size="small">4</Button>
-  </Box>
-  <Box background="green--100" margin={8} padding={4} textAlign="center" onClick={() => window.alert('Hi. I am clickable!')} role="button">
-    Click me :)
+  <Box padding>
+    <Box align="stretch" column>
+      <Box row align="space-between" margin={{ bottom: 2 }} background="orange--100">
+        <Button>align</Button>
+        <Button variant='secondary'>space-between</Button>
+        <Button variant='secondary-gray'>of</Button>
+        <Button variant='gray'>content</Button>
+      </Box>
+      <Box row align="right" valign="bottom" margin={{ top: 1, bottom: 2 }} background="red--100">
+        <Button>align</Button>
+        <Button variant='secondary' size="small">right</Button>
+        <Button variant='secondary-gray' size="small">with</Button>
+        <Button variant='gray' size="small">margin</Button>
+        <Button variant='alternate' size="small">{`{{ top: 1, bottom: 2 }}`}</Button>
+      </Box>
+      <Box row align="left" valign="top" padding={4} background="purple--100">
+        <Button>align</Button>
+        <Button variant='secondary' size="small">left</Button>
+        <Button variant='secondary-gray' size="small">with</Button>
+        <Button variant='gray' size="small">padding</Button>
+        <Button variant='alternate' size="small">4</Button>
+      </Box>
+      <Box background="green--100" margin={4} padding={4} textAlign="center" onClick={() => window.alert('Hi. I am clickable!')} role="button">
+        Click me :)
+      </Box>
+    </Box>
   </Box>
 </Playground>
 
+## Exports
 
+```ts
+type BoxAlign =
+  | 'top'
+  | 'center'
+  | 'bottom'
+  | 'left'
+  | 'right'
+  | 'normal'
+  | 'space-between'
+  | 'space-evenly'
+  | 'stretch';
+
+interface NegativeSpace {
+  top?: number | boolean;
+  bottom?: number | boolean;
+  left?: number | boolean;
+  right?: number | boolean;
+}
+```
 
 ### Props
 
