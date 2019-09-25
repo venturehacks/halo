@@ -26,34 +26,41 @@ export interface NegativeSpace {
 
 export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
-   * Natural alignment of main axis; top | bottom | left | right | normal | space-between | space-evenly | stretch; In column mode, stretch only works for main axis (align). In row mode, stretch only works for cross axis (valign).
+   * Horizontal alignment. top | bottom | left | right | normal | space-between | space-evenly | stretch
    */
   align?: BoxAlign;
+  /**
+   * Vertical alignment. top | bottom | left | right | normal | space-between | space-evenly | stretch
+   */
+  valign?: BoxAlign;
+
   /**
    * Background color or color palette swatch
    */
   background?: PaletteColor | string;
-
-  /**
-   * Make Box non-flexbox so may be leveraged for convenient, negative space features.
-   * Other flexbox releated props will become no-ops.
-   */
-  block?: boolean;
-
   children?: React.ReactNode;
   className?: string;
   /**
-   * Use flexbox column flow (default)
-   * @default true
+   * Use flexbox column flow
+   * @default false
    */
   column?: boolean;
   margin?: number | boolean | NegativeSpace;
-  maxHeight?: number | string;
+  /**
+   * Convenience maximum width. Example: "500px"
+   */
   maxWidth?: number | string;
+  /**
+   * Convenience maximum height. Example: "500px"
+   */
+  maxHeight?: number | string;
+  /**
+   * Flexbox order
+   */
   order?: number;
   padding?: number | boolean | NegativeSpace;
   /**
-   * Adds a CSS layout context
+   * Establishes a new CSS layout context
    */
   relative?: boolean;
   /**
@@ -62,10 +69,7 @@ export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   row?: boolean;
 
   textAlign?: 'left' | 'center' | 'right';
-  /**
-   * Natural alignment of main axis; top | bottom | left | right | normal | space-between | space-evenly | stretch; In column mode, stretch only works for main axis (align). In row mode, stretch only works for cross axis (valign).
-   */
-  valign?: BoxAlign;
+
   /**
    * Convenience to force width to 100%
    */
@@ -77,40 +81,42 @@ export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   wrap?: boolean;
 }
 
-Box.defaultProps = {
-  block: false,
-  column: true,
-  margin: 0,
-  padding: 0,
-  row: false,
-  wrap: false,
-};
-
 function Box({
   align,
   background,
-  block,
   children,
   className,
-  column,
-  margin,
+  column = false,
+  margin = 0,
   maxHeight,
   maxWidth,
   onClick,
   order,
-  padding,
+  padding = 0,
   relative,
-  row,
+  row = false,
   textAlign,
   valign,
   width,
-  wrap,
+  wrap = false,
   ...divElementProps
 }: BoxProps) {
-  // mutually exclusive: grid vs flexcolumn vs. flexrow
-  const isGridElement = block || (!row && !column);
-  const isGenericFlexColumn = !isGridElement && column && !row;
-  const isGenericFlexRow = !isGridElement && row;
+  // mutually exclusive: block vs flex-column vs. flex-row
+  const isBlockElement = !row && !column;
+  const isFlexColumn = !isBlockElement && column && !row;
+  const isFlexRow = !isBlockElement && row && !column;
+
+  if (row && column) {
+    // tslint:disable-next-line: no-console
+    console.warn(`[Halo Box] cannot be both column and row`);
+  }
+
+  if (isBlockElement && (wrap || align || valign || order)) {
+    // tslint:disable-next-line: no-console
+    console.warn(
+      `[Halo Box] flexbox-specific props were provided, but this box is not a flexbox`,
+    );
+  }
 
   // parse 4-direction hashes for padding/margin
   let negativeSpaceClasses: Dictionary<number | boolean> = {};
@@ -148,17 +154,16 @@ function Box({
   const classes = classNames(
     styles.component,
     className,
-    isGenericFlexColumn && styles.flexColumn,
-    isGenericFlexRow && styles.flexRow,
+    isFlexColumn && styles.flexColumn,
+    isFlexRow && styles.flexRow,
     relative && styles.relative,
     width === '100%' && styles.width100,
     wrap && styles.wrap,
-    block && styles.block,
     onClick && styles.clickable,
-    isGenericFlexColumn && align && `__halo_column_align_${align}`,
-    isGenericFlexColumn && valign && `__halo_column_valign_${valign}`,
-    isGenericFlexRow && align && `__halo_row_align_${align}`,
-    isGenericFlexRow && valign && `__halo_row_valign_${valign}`,
+    isFlexColumn && align && `__halo_column_align_${align}`,
+    isFlexColumn && valign && `__halo_column_valign_${valign}`,
+    isFlexRow && align && `__halo_row_align_${align}`,
+    isFlexRow && valign && `__halo_row_valign_${valign}`,
     negativeSpaceClasses,
     background && `__halo_background_${background}`,
     textAlign && `__halo_textAlign_${textAlign}`,
