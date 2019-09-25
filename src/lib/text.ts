@@ -12,7 +12,7 @@ export type TextColorScheme = 'dark' | 'light';
 export type TextWeight =
   | 'ultralight'
   | 'light'
-  | 'normal'
+  | 'regular'
   | 'medium'
   | 'semibold'
   | 'bold';
