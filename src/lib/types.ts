@@ -22,6 +22,3 @@ type StringObjectT = Dictionary<string>;
 type ReactEventT = React.ChangeEvent<any>;
 type ReactDragEventT = React.DragEvent<any>;
 type EventFunctionT = React.ChangeEventHandler<any>;
-
-type ComponentProps<T> = React.ComponentProps<T>;
-type ComponentPropsWithRef<T> = React.ComponentPropsWithRef<T>;
