@@ -49,7 +49,27 @@ In general, Halo component API's are meant to save you time, but they're not mea
   </Box>
 </Playground>
 
+## Exports
 
+```ts
+type BoxAlign =
+  | 'top'
+  | 'center'
+  | 'bottom'
+  | 'left'
+  | 'right'
+  | 'normal'
+  | 'space-between'
+  | 'space-evenly'
+  | 'stretch';
+
+interface NegativeSpace {
+  top?: number | boolean;
+  bottom?: number | boolean;
+  left?: number | boolean;
+  right?: number | boolean;
+}
+```
 
 ### Props
 

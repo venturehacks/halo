@@ -42,7 +42,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
   href?: string;
   target?: '_blank' | '_self' | '_parent' | '_top' | undefined;
   rel?: string;
-  type?: 'submit' | 'button' | 'clear' | 'reset';
+  type?: 'submit' | 'button' | 'reset';
   onClick?: EventFunctionT;
 }
 
