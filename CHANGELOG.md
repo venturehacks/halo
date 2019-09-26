@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.7.1](https://github.com/venturehacks/halo/compare/0.7.0...v0.7.1)
+#### [v0.7.2](https://github.com/venturehacks/halo/compare/0.7.1...v0.7.2)
+
+> 26 September 2019
+
+- 0.7.x Codemods [`#28`](https://github.com/venturehacks/halo/pull/28)
+
+#### [0.7.1](https://github.com/venturehacks/halo/compare/0.7.0...0.7.1)
 
 > 25 September 2019
 
 - Box block default, document exported types [`#27`](https://github.com/venturehacks/halo/pull/27)
+- Release 0.7.1 [`1224f19`](https://github.com/venturehacks/halo/commit/1224f19608afe9db8b2e5c54a6807e03286837d5)
 
 #### [0.7.0](https://github.com/venturehacks/halo/compare/0.6.17...0.7.0)
 
