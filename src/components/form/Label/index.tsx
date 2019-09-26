@@ -58,7 +58,7 @@ function LabelRaw({
   const id = `form-input--${field}`;
 
   const content = (
-    <>
+    <div>
       {title && (
         <div className={styles.title}>
           {title}{' '}
@@ -72,7 +72,7 @@ function LabelRaw({
       {supportingText && (
         <div className={styles.supportingText}>{supportingText}</div>
       )}
-    </>
+    </div>
   );
 
   if (containsFieldGroup) {
