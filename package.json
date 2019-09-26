@@ -84,6 +84,7 @@
     "identity-obj-proxy": "^3.0.0",
     "idx": "^2.5.6",
     "jest": "^23.6.0",
+    "jscodeshift": "^0.6.4",
     "lint-staged": "^9.3.0",
     "lodash": "^4.17.15",
     "node-sass": "^4.11.0",
