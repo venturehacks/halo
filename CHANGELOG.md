@@ -2,11 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.7.2](https://github.com/venturehacks/halo/compare/0.7.1...v0.7.2)
+#### [v0.7.3](https://github.com/venturehacks/halo/compare/0.7.2...v0.7.3)
+
+> 26 September 2019
+
+- [codemod] ErrorLabel =&gt; FieldErrorMessage API [`9bd1eb7`](https://github.com/venturehacks/halo/commit/9bd1eb7c70b12f69611b9d38f951e8441c005916)
+- [RawInput] fix inner Box to use flexbox (instead of new default block) [`5a7dbe0`](https://github.com/venturehacks/halo/commit/5a7dbe065624b4e53e28d39d12f4a4e25e83e8c0)
+
+#### [0.7.2](https://github.com/venturehacks/halo/compare/0.7.1...0.7.2)
 
 > 26 September 2019
 
 - 0.7.x Codemods [`#28`](https://github.com/venturehacks/halo/pull/28)
+- Release 0.7.2 [`6638d4d`](https://github.com/venturehacks/halo/commit/6638d4d2f31e700fc844c7f6aa30f82c260c448d)
 
 #### [0.7.1](https://github.com/venturehacks/halo/compare/0.7.0...0.7.1)
 
