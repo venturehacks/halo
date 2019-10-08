@@ -33,7 +33,7 @@ function Grid({
     styles.component,
     className,
     row && styles.row,
-    !row && centered && styles.centered,
+    centered && styles.centered,
     !row && span && `__halo_cellSpan_${span}`,
     !row && offset && `__halo_cellOffset_${offset}`,
   );
