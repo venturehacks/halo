@@ -11,6 +11,18 @@ $size-badge: 16px;
 .component {
   @include halo-element-base; // TODO: deprecate
   position: relative;
+  border: 1px solid $slate--100;
+  display: flex;
+  align-items: center;
+
+  // shapes
+  &.circle {
+    @include border-circle;
+  }
+
+  &.square {
+    @include border-rounded;
+  }
 
   // sizes
   &.xxsmall {
@@ -41,16 +53,6 @@ $size-badge: 16px;
 
 img.avatar {
   display: block;
-  border: 1px solid $slate--100;
   max-width: 100%;
   max-height: 100%;
-
-  // shapes
-  &.circle {
-    @include border-circle;
-  }
-
-  &.square {
-    @include border-rounded;
-  }
 }
