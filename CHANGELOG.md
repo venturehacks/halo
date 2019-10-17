@@ -2,11 +2,20 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.7.3](https://github.com/venturehacks/halo/compare/0.7.2...v0.7.3)
+#### [v0.7.4](https://github.com/venturehacks/halo/compare/0.7.3...v0.7.4)
+
+> 17 October 2019
+
+- fix avatar overflow [`#30`](https://github.com/venturehacks/halo/pull/30)
+- fix avatar sizing [`#29`](https://github.com/venturehacks/halo/pull/29)
+- [Grid] ensure 'centered' prop applies styles even in row mode [`fbdf438`](https://github.com/venturehacks/halo/commit/fbdf43874c23e1870dd6b859ab790d9831165c16)
+
+#### [0.7.3](https://github.com/venturehacks/halo/compare/0.7.2...0.7.3)
 
 > 26 September 2019
 
 - [codemod] ErrorLabel =&gt; FieldErrorMessage API [`9bd1eb7`](https://github.com/venturehacks/halo/commit/9bd1eb7c70b12f69611b9d38f951e8441c005916)
+- Release 0.7.3 [`e11ecec`](https://github.com/venturehacks/halo/commit/e11ecec6c90fe65e2e610d0504c2272a12910922)
 - [RawInput] fix inner Box to use flexbox (instead of new default block) [`5a7dbe0`](https://github.com/venturehacks/halo/commit/5a7dbe065624b4e53e28d39d12f4a4e25e83e8c0)
 
 #### [0.7.2](https://github.com/venturehacks/halo/compare/0.7.1...0.7.2)
