@@ -133,6 +133,7 @@ Design maintains separate release notes and numeric versioning.
   - Tiffany Wu
   - Mike Dee
   - Max Lustig
+  - Lily Chen
 - **Design**
   - Shane Zucker
   - Gearóid O’Rourke
