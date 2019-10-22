@@ -2,12 +2,20 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.7.4](https://github.com/venturehacks/halo/compare/0.7.3...v0.7.4)
+#### [v0.7.5](https://github.com/venturehacks/halo/compare/0.7.4...v0.7.5)
+
+> 22 October 2019
+
+- fix hidden avatar badge [`#31`](https://github.com/venturehacks/halo/pull/31)
+- add Lily to engineering [`848336f`](https://github.com/venturehacks/halo/commit/848336f2719e2d70dc69a45221ae600b6cb1ab9b)
+
+#### [0.7.4](https://github.com/venturehacks/halo/compare/0.7.3...0.7.4)
 
 > 17 October 2019
 
 - fix avatar overflow [`#30`](https://github.com/venturehacks/halo/pull/30)
 - fix avatar sizing [`#29`](https://github.com/venturehacks/halo/pull/29)
+- Release 0.7.4 [`69c1566`](https://github.com/venturehacks/halo/commit/69c15664744454beda95404295ec5d58d814133b)
 - [Grid] ensure 'centered' prop applies styles even in row mode [`fbdf438`](https://github.com/venturehacks/halo/commit/fbdf43874c23e1870dd6b859ab790d9831165c16)
 
 #### [0.7.3](https://github.com/venturehacks/halo/compare/0.7.2...0.7.3)
