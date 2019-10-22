@@ -48,13 +48,16 @@ function AvatarRaw({
       className={classNames(
         styles.component,
         className,
-        styles[shape],
         styles[size],
+        styles[shape]
       )}
       ref={forwardedRef}
     >
       <img
-        className={styles.avatar}
+        className={classNames(
+          styles.avatar,
+          styles[shape]
+        )}
         src={imageUrl}
         alt={`Avatar for ${name}`}
       />
