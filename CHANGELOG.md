@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.7.5](https://github.com/venturehacks/halo/compare/0.7.4...v0.7.5)
+#### [v0.7.6](https://github.com/venturehacks/halo/compare/0.7.5...v0.7.6)
+
+> 23 October 2019
+
+- avatar hell [`0312ad2`](https://github.com/venturehacks/halo/commit/0312ad26a7a1362096123aa5cd5eb9b3a819b07b)
+
+#### [0.7.5](https://github.com/venturehacks/halo/compare/0.7.4...0.7.5)
 
 > 22 October 2019
 
 - fix hidden avatar badge [`#31`](https://github.com/venturehacks/halo/pull/31)
+- Release 0.7.5 [`64b367c`](https://github.com/venturehacks/halo/commit/64b367c9916be4e76507e440e1398f2b5c5df789)
 - add Lily to engineering [`848336f`](https://github.com/venturehacks/halo/commit/848336f2719e2d70dc69a45221ae600b6cb1ab9b)
 
 #### [0.7.4](https://github.com/venturehacks/halo/compare/0.7.3...0.7.4)
