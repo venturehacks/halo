@@ -13,7 +13,6 @@ $size-badge: 16px;
   position: relative;
   display: flex;
   align-items: center;
-  background-color: $white;
 
   // sizes
   &.xxsmall {
@@ -45,6 +44,7 @@ $size-badge: 16px;
   &.square {
     @include border-rounded;
     border: 1px solid $slate--100;
+    background-color: $white;
   }
 }
 
