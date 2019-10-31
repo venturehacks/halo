@@ -2,10 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.7.6](https://github.com/venturehacks/halo/compare/0.7.5...v0.7.6)
+#### [v0.7.7](https://github.com/venturehacks/halo/compare/0.7.6...v0.7.7)
+
+> 31 October 2019
+
+- fix trueFalseToBoolean helper [`#32`](https://github.com/venturehacks/halo/pull/32)
+
+#### [0.7.6](https://github.com/venturehacks/halo/compare/0.7.5...0.7.6)
 
 > 23 October 2019
 
+- Release 0.7.6 [`f737a3b`](https://github.com/venturehacks/halo/commit/f737a3b30f0f5756342cd60d926b26ecf388e485)
 - avatar hell [`0312ad2`](https://github.com/venturehacks/halo/commit/0312ad26a7a1362096123aa5cd5eb9b3a819b07b)
 
 #### [0.7.5](https://github.com/venturehacks/halo/compare/0.7.4...0.7.5)
