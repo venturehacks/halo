@@ -1,5 +1,7 @@
-// convert only 'true' or 'false' strings to boolean
-// pass other strings through unchanged
+/**
+ * Converts literal 'true' or 'false' strings to boolean values.
+ * Pass other strings through unchanged.
+ */
 export function coerceToBooleanOrPassThrough(str: string): string | boolean {
   switch (str) {
     case 'true':
