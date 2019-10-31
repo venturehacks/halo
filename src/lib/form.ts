@@ -13,6 +13,15 @@ export function coerceToBooleanOrPassThrough(str: string): string | boolean {
   }
 }
 
+/**
+ * (deprecated in 0.8.x) see coerceToBooleanOrPassThrough
+ * Converts literal 'true' or 'false' strings to boolean values.
+ * Pass other strings through unchanged.
+ */
+export function trueFalseToBoolean(str: string): string | boolean {
+  return coerceToBooleanOrPassThrough(str);
+}
+
 export function stringToInteger(str: string | null): number | null {
   if (str === '' || typeof str !== 'string') {
     return null;
