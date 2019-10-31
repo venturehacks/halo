@@ -1,11 +1,13 @@
-export function trueFalseToBoolean(str: string): boolean {
+// convert only 'true' or 'false' strings to boolean
+// pass other strings through unchanged
+export function coerceToBooleanOrPassThrough(str: string): string | boolean {
   switch (str) {
     case 'true':
       return true;
     case 'false':
       return false;
     default:
-      return !!str;
+      return str;
   }
 }
 
