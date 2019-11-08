@@ -1,0 +1,36 @@
+---
+name: Dialog
+menu: Core
+route: /core/dialog
+---
+
+import { Props, Playground } from 'docz';
+import { Dialog } from './'
+import { Header } from '../Header';
+import { Box } from '../../structure/Box';
+import '../../../index.scss';
+
+# Dialog
+
+<Playground>
+  <Box margin={{ bottom: 3 }}>
+    <Dialog>We're Hiring My Dude</Dialog>
+  </Box>
+
+  <Header h3>Colors</Header>
+
+  <Box row>
+
+  </Box>
+
+  <Header h3>Sizes</Header>
+
+  <Box valign="bottom" row>
+
+  </Box>
+
+</Playground>
+
+### Props
+
+<Props of={Dialog} />
