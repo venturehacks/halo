@@ -41,7 +41,8 @@
     "tslint": "tslint --project . -t grouped -s node_modules/custom-tslint-formatters/formatters",
     "release-major": "release-it major",
     "release-minor": "release-it minor",
-    "release-patch": "release-it patch"
+    "release-patch": "release-it patch",
+    "typesync": "typesync"
   },
   "github": {
     "release": true
@@ -114,6 +115,7 @@
     "tslint-config-prettier": "^1.18.0",
     "tslint-react": "^4.1.0",
     "typescript": "^3.6.3",
+    "typesync": "^0.6.1",
     "webpack": "4.28.4",
     "webpack-merge": "^4.2.1"
   },
@@ -121,7 +123,8 @@
     "idx": "^2.5.0",
     "lodash": "^4.17.11",
     "react": ">= 16.8.6",
-    "react-dom": ">= 16.8.6"
+    "react-dom": ">= 16.8.6",
+    "react-modal": "^3.11.1"
   },
   "resolutions": {
     "**/docz-core": "^1.0.3",
