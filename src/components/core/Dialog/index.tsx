@@ -12,10 +12,18 @@ import styles from './styles.scss';
 export type DialogContext = 'inline' | 'modal';
 
 interface DialogProps {
+  /**
+   * Optionally overrride with a button component that supports Halo's Button prop API.
+   * @default HaloButton
+   */
   buttonComponent?: React.ComponentType<HaloButtonProps>;
   children: React.ReactNode;
   className?: string;
   contentPadding?: boolean;
+  /**
+   * If modal context, include drop shadow
+   * @default inline
+   */
   context?: DialogContext;
   onPrimaryButtonClick?: EventFunctionT;
   onSecondaryButtonClick?: EventFunctionT;
@@ -28,8 +36,8 @@ function Dialog({
   buttonComponent,
   children,
   className,
-  contentPadding,
-  context,
+  contentPadding = true,
+  context = 'modal',
   onPrimaryButtonClick,
   onSecondaryButtonClick,
   primaryButtonLabel,
@@ -63,13 +71,21 @@ function Dialog({
       <div className={styles.content}>{children}</div>
       {hasChin && (
         <div className={styles.chin}>
-          {secondaryButtonLabel && onSecondaryButtonClick && (
-            <Button variant="secondary" onClick={onSecondaryButtonClick}>
+          {secondaryButtonLabel && (
+            <Button
+              variant="secondary-gray"
+              size="small"
+              onClick={onSecondaryButtonClick}
+            >
               {secondaryButtonLabel}
             </Button>
           )}
-          {primaryButtonLabel && onPrimaryButtonClick && (
-            <Button variant="primary" onClick={onPrimaryButtonClick}>
+          {primaryButtonLabel && (
+            <Button
+              variant="primary"
+              size="small"
+              onClick={onPrimaryButtonClick}
+            >
               {primaryButtonLabel}
             </Button>
           )}
