@@ -20,7 +20,7 @@
     "clean": "rm -rf ./dist/*",
     "prepare": "yarn build",
     "prepublishOnly": "yarn test && yarn lint",
-    "test": "jest --config jestconfig.json",
+    "test": "jest --config jestconfig.json --runInBand",
     "test:watch": "jest --config jestconfig.json --watch --onlyChanged",
     "docs:build": "yarn docz:build",
     "docs:dev": "yarn docz:dev",
