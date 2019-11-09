@@ -6,36 +6,20 @@ route: /core/dialog
 
 import { Props, Playground } from 'docz';
 import { Dialog } from './'
-import { Header } from '../Header';
-import { Box } from '../../structure/Box';
 import '../../../index.scss';
 
 # Dialog
 
+A UI element to confirm or cancel actions. Easily embeddable within a modal.
+
 <Playground>
-  <Box margin={{ bottom: 10 }}>
-    <Dialog
-      title="Would you like job?"
-      primaryButtonLabel="Okay"
-      secondaryButtonLabel="Nope"
-    >
-      We're hiring, my dude.
-    </Dialog>
-  </Box>
-
-
-  <Header h3></Header>
-
-  <Box row>
-
-  </Box>
-
-  <Header h3>Sizes</Header>
-
-  <Box valign="bottom" row>
-
-  </Box>
-
+  <Dialog
+    title="Would you like job?"
+    primaryButtonLabel="Okay"
+    secondaryButtonLabel="I hate job"
+  >
+    We're hiring, my dude.
+  </Dialog>
 </Playground>
 
 ### Props
