@@ -1,0 +1,27 @@
+---
+name: Dialog
+menu: Core
+route: /core/dialog
+---
+
+import { Props, Playground } from 'docz';
+import { Dialog } from './'
+import '../../../index.scss';
+
+# Dialog
+
+A UI element to confirm or cancel actions; easily embeddable within a modal.
+
+<Playground>
+  <Dialog
+    title="Would you like job?"
+    primaryButtonLabel="Okay"
+    secondaryButtonLabel="I hate job"
+  >
+    We're hiring, my dude.
+  </Dialog>
+</Playground>
+
+### Props
+
+<Props of={Dialog} />
