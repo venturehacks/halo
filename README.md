@@ -110,8 +110,8 @@ return (
 | -------------- | -------------- | ------------------------------------------------------------- | :----: |
 | 2019 &nbsp; –  | `v1.0.0`       | CoPro production release                                      |   🌀   |
 | ⋯              | ⋯              | ⋯                                                             |   ⋯    |
-| 2019 &nbsp; –  | `v0.9.x`       | HoC library                                                   |   🔶   |
-| 2019 &nbsp; –  | `v0.9.x`       | Themeable root color                                          |   🔶   |
+| 2019 &nbsp; –  | `v0.10.x`      | ?                                                             |   🔶   |
+| 2019 &nbsp; –  | `v0.9.x`       | Accessibility audit, themeable,    .halorc.js                 |   🔶   |
 | 2019 &nbsp; –  | `v0.8.x`       | Component pack                                                |   🔶   |
 | 2019 October   | `v0.8.x`       | Responive Grid + Cell, performance pass                       |   🔶   |
 | 2019 September | `v0.7.0`       | Raw form components                                           |   ✅   |
