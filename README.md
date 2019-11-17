@@ -51,6 +51,18 @@ Include your GitHub token so CircleCI can build the application.
 }
 ```
 
+#### Entry point CSS
+
+This distribution payload should only be included in your app *once*. It is necessary to prevent a flash of unstyled content.
+
+```scss
+// main.scss (or similar "layout" file that is only included one time)
+
+:global {
+  @import '~halo/dist/halo.css';
+}
+```
+
 ### Using Halo
 
 #### React
