@@ -5,6 +5,7 @@
     "module": "esnext",
     "moduleResolution": "node",
     "resolveJsonModule": true,
+    "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "allowJs": false,
     "strict": true,
@@ -66,6 +67,7 @@
   "exclude": [
     "node_modules/**",
     "**/__tests__/*",
-    "dist/**"
+    "dist/**",
+    ".docz/**"
   ]
 }

@@ -1,6 +1,6 @@
 module.exports = {
   extends: ['angellist'],
   parserOptions: {
-    project: ['./tsconfig.json'],
+    project: ['./tsconfig.json', './tsconfig.test.json'],
   }
 };
