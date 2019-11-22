@@ -5,7 +5,7 @@ jobs:
     resource_class: medium
     working_directory: ~/halo
     docker:
-    - image: node:12
+    - image: node:10.16.3
     steps:
     - run:
         name: git checkout
