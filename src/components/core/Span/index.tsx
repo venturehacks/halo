@@ -17,16 +17,44 @@ import {
 
 import * as styles from './styles.scss';
 
-// type HTMLSpanElementProps = Omit<
-//   React.HTMLAttributes<HTMLParagraphElement>
-// >;
-
-export interface SpanProps extends React.HTMLAttributes<HTMLParagraphElement> {
+export interface SpanProps extends React.HTMLAttributes<HTMLSpanElement> {
   /**
-   * Type size override
-   * @default (pass through)
+   * Sharpens text. Ideal for light text on dark backgrounds
    */
-  size?: TextSize;
+  antialiased?: boolean;
+
+  /**
+   * Renders as a block-level element
+   */
+  block?: boolean;
+
+  /**
+   * Convenience for 700 weight, same as strong
+   */
+  bold?: boolean;
+
+  children?: React.ReactNode;
+  className?: string;
+  /**
+   * Explicit text color override
+   */
+  color?: PaletteColor;
+  /**
+   * Dark or light text
+   * @default dark
+   */
+  colorScheme?: TextColorScheme;
+  /**
+   * Fine control of type contrast
+   * @default AAAA
+   */
+  contrast?: TextContrast;
+  /**
+   * Red error text
+   */
+  error?: boolean;
+
+  italic?: boolean;
 
   /**
    * Fine control over line height
@@ -35,56 +63,31 @@ export interface SpanProps extends React.HTMLAttributes<HTMLParagraphElement> {
   lineHeight?: TextLineHeight;
 
   /**
-   * Fine control of type contrast
-   * @default AAAA
-   */
-  contrast?: TextContrast;
-
-  /**
-   * Dark or light text
-   * @default dark
-   */
-  colorScheme?: TextColorScheme;
-
-  /**
-   * Fine control of type weight
-   */
-  weight?: TextWeight;
-
-  /**
-   * Explicit text color override
-   */
-  color?: PaletteColor;
-
-  /**
-   * Renders as a block-level element
-   */
-  block?: boolean;
-
-  /**
    * Convenience for 500 weight
    */
   medium?: boolean;
+
+  monospace?: boolean;
+
+  /**
+   * Convenience for contrast AAA typography
+   */
+  muted?: boolean;
 
   /**
    * Convenience for 600 weight
    */
   semibold?: boolean;
-
   /**
-   * Convenience for 700 weight, same as strong
+   * Type size override
+   * @default (pass through)
    */
-  bold?: boolean;
+  size?: TextSize;
 
   /**
    * Convenience for 700 weight, same as bold
    */
   strong?: boolean;
-
-  italic?: boolean;
-
-  children?: React.ReactNode;
-  className?: string;
 
   /**
    * Green successful text
@@ -92,19 +95,23 @@ export interface SpanProps extends React.HTMLAttributes<HTMLParagraphElement> {
   success?: boolean;
 
   /**
+   * HTML tag override
+   * @default span
+   */
+  tag?: 'span' | 'div' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  /**
+   * Tranform text to all capitals
+   */
+  uppercase?: boolean;
+  /**
    * Orange warning text
    */
   warning?: boolean;
 
   /**
-   * Red error text
+   * Fine control of type weight
    */
-  error?: boolean;
-
-  /**
-   * Convenience for contrast AAA typography
-   */
-  muted?: boolean;
+  weight?: TextWeight;
 
   /**
    * Convenience for contrast AA typography
@@ -115,23 +122,6 @@ export interface SpanProps extends React.HTMLAttributes<HTMLParagraphElement> {
    * Convenience for contrast A typography
    */
   xxmuted?: boolean;
-
-  /**
-   * Tranform text to all capitals
-   */
-  uppercase?: boolean;
-  monospace?: boolean;
-
-  /**
-   * Sharpens text. Ideal for light text on dark backgrounds
-   */
-  antialiased?: boolean;
-
-  /**
-   * HTML tag override
-   * @default span
-   */
-  tag?: 'span' | 'div' | 'p' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
 }
 
 function SpanRaw(props: SpanProps & ForwardedRefProps) {

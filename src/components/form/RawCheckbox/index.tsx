@@ -8,21 +8,22 @@ import styles from './styles.scss';
 interface RawCheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   /**
-   * Call out element that needs attention
-   * @default false
-   */
-  hasError?: boolean;
-  /**
    * Since the most common callout is for validation errors, you shouldn't need to customize this.
    * @default warning
    */
   errorSeverity?: 'warning' | 'critical';
+  /**
+   * Call out element that needs attention
+   * @default false
+   */
+  hasError?: boolean;
+  id: string;
+
   label: React.ReactNode;
   labelClassName?: string;
   /**
    * Required for associated <label>
    */
-  id: string;
 }
 
 function RawCheckbox({

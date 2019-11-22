@@ -9,10 +9,10 @@ import {
 import styles from './styles.scss';
 
 interface FlairProps {
-  className?: string;
   children: React.ReactNode;
-  size?: 'xs' | 'sm' | 'md';
+  className?: string;
   color?: 'blue' | 'gray' | 'orange' | 'red' | 'purple' | 'green';
+  size?: 'xs' | 'sm' | 'md';
 }
 
 function FlairRaw({

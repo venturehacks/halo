@@ -13,8 +13,27 @@ import { Span } from '../Span';
 import * as styles from './styles.scss';
 
 export interface HeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
+  children: React.ReactNode;
   className?: string;
+  /**
+   * Explicitly set text to a palette color
+   */
+  color?: PaletteColor;
+  /**
+   * Fine control of type contrast
+   */
+  colorScheme?: TextColorScheme;
 
+  /**
+   * Fine control of type contrast
+   */
+  contrast?: TextContrast;
+
+  /**
+   * include page flow margins
+   * @default true
+   */
+  flow?: boolean;
   /**
    * <h1> preset, 3xl text
    */
@@ -46,10 +65,9 @@ export interface HeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
   h6?: boolean;
 
   /**
-   * include page flow margins
-   * @default true
+   * Convenience for contrast AAA typography
    */
-  flow?: boolean;
+  muted?: boolean;
 
   /**
    * Explicit override over type size
@@ -57,9 +75,14 @@ export interface HeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
   size?: TextSize;
 
   /**
-   * Fine control of type contrast
+   * HTML tag override
+   * @default h3
    */
-  contrast?: TextContrast;
+  tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
+  /**
+   * Capitalize all letters
+   */
+  uppercase?: boolean;
 
   /**
    * Fine control of type weight
@@ -67,42 +90,14 @@ export interface HeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
   weight?: TextWeight;
 
   /**
-   * Fine control of type contrast
-   */
-  colorScheme?: TextColorScheme;
-
-  /**
-   * Explicitly set text to a palette color
-   */
-  color?: PaletteColor;
-
-  /**
-   * Convenience for contrast AAA typography
-   */
-  muted?: boolean;
-
-  /**
-   * Convenience for contrast AA typography
+   * Convenience alias contrast AA typography
    */
   xmuted?: boolean;
 
   /**
-   * Convenience for contrast A typography
+   * Convenience alias contrast A typography
    */
   xxmuted?: boolean;
-
-  /**
-   * Capitalize all letters
-   */
-  uppercase?: boolean;
-
-  /**
-   * HTML tag override
-   * @default h3
-   */
-  tag?: 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6';
-
-  children: React.ReactNode;
 }
 
 function Header(props: HeaderProps) {
