@@ -4,6 +4,5 @@
 docs
 dist
 node_modules
-*.js
 **/*.scss.d.ts
 CHANGELOG.md
