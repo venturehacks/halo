@@ -46,8 +46,8 @@ function RawCheckbox({
           errorSeverity === 'warning' && styles.warning,
           errorSeverity === 'critical' && styles.critical,
         )}
-        type="checkbox"
         id={id}
+        type="checkbox"
         {...rest}
       />
       <label className={classNames(labelClassName, styles.label)} htmlFor={id}>

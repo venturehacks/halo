@@ -5,7 +5,7 @@ import { Label } from '../index';
 
 test('Smoke test', () => {
   const component = render(
-    <Label title="Name" supportingText="Who are you?" />,
+    <Label supportingText="Who are you?" title="Name" />,
   );
 
   expect(component.text()).toContain('Name');

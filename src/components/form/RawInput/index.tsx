@@ -108,13 +108,13 @@ export default function RawInput({
     <div className={styles.wrapper}>
       {input}
       <Box
-        column
-        valign="center"
         align="center"
         className={classNames(
           styles.iconContainer,
           iconPosition === 'right' && styles.hasIconRight,
         )}
+        valign="center"
+        column
       >
         {icon}
       </Box>

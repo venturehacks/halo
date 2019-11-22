@@ -76,12 +76,12 @@ function ButtonRaw({
   if (href) {
     return (
       <a
+        ref={forwardedRef}
         className={buttonClassNames}
         href={href}
         onClick={onClick}
-        ref={forwardedRef}
-        target={target}
         rel={rel}
+        target={target}
       >
         {icon && <>{icon} </>}
         {children}
@@ -91,9 +91,9 @@ function ButtonRaw({
 
   return (
     <button
+      ref={forwardedRef}
       className={buttonClassNames}
       onClick={onClick}
-      ref={forwardedRef}
       type={type}
       {...buttonElementProps}
     >

@@ -64,12 +64,12 @@ function Paragraph({
 
   return (
     <Span
-      tag="p"
       className={classes}
-      size={size}
-      contrast={contrast}
       colorScheme={colorScheme}
+      contrast={contrast}
       lineHeight={lineHeight}
+      size={size}
+      tag="p"
       {...paragraphElementProps}
     >
       {children}

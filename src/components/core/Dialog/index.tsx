@@ -73,18 +73,18 @@ function Dialog({
         <div className={styles.chin}>
           {secondaryButtonLabel && (
             <Button
-              variant="secondary-gray"
-              size="small"
               onClick={onSecondaryButtonClick}
+              size="small"
+              variant="secondary-gray"
             >
               {secondaryButtonLabel}
             </Button>
           )}
           {primaryButtonLabel && (
             <Button
-              variant="primary"
-              size="small"
               onClick={onPrimaryButtonClick}
+              size="small"
+              variant="primary"
             >
               {primaryButtonLabel}
             </Button>

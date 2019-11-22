@@ -6,9 +6,9 @@ import { FieldErrorMessage } from '../index';
 test('Smoke test', () => {
   const component = render(
     <FieldErrorMessage
-      preset="text-only"
       errorSeverity="warning"
       message="Damn, you messed up"
+      preset="text-only"
     />,
   );
 
@@ -17,7 +17,7 @@ test('Smoke test', () => {
 
 test('Smoke test', () => {
   const component = render(
-    <FieldErrorMessage preset="block" errorSeverity="critical">
+    <FieldErrorMessage errorSeverity="critical" preset="block">
       You really messed up
     </FieldErrorMessage>,
   );

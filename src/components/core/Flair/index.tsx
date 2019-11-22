@@ -30,7 +30,7 @@ function FlairRaw({
   );
 
   return (
-    <span className={classes} ref={forwardedRef}>
+    <span ref={forwardedRef} className={classes}>
       {children}
     </span>
   );

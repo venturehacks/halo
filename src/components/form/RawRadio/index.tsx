@@ -53,8 +53,8 @@ function RawRadio({
           errorSeverity === 'warning' && styles.warning,
           errorSeverity === 'critical' && styles.critical,
         )}
-        type="radio"
         id={id}
+        type="radio"
         {...rest}
       />
       <label

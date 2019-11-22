@@ -6,9 +6,9 @@ import { RawInput } from '../index';
 test('Smoke test', () => {
   const component = render(
     <RawInput
-      value="Current value"
-      placeholder="Type your name..."
       onChange={() => {}}
+      placeholder="Type your name..."
+      value="Current value"
     />,
   );
 

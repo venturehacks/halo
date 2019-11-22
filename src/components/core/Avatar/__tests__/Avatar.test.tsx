@@ -6,10 +6,10 @@ import { Avatar } from '../index';
 test('Smoke test', () => {
   const component = render(
     <Avatar
-      imageUrl="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
       badge="DOPE BADGE"
-      size="large"
+      imageUrl="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
       name="Drew"
+      size="large"
     />,
   );
 

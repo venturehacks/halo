@@ -172,8 +172,8 @@ function Box({
   return (
     <div
       className={classes}
-      style={inlineStyles}
       onClick={onClick}
+      style={inlineStyles}
       {...divElementProps}
     >
       {children}
