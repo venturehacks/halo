@@ -18,6 +18,7 @@ export function coerceToBooleanOrPassThrough(str: string): string | boolean {
  * Converts literal 'true' or 'false' strings to boolean values.
  * Pass other strings through unchanged.
  */
+
 export function trueFalseToBoolean(str: string): string | boolean {
   return coerceToBooleanOrPassThrough(str);
 }

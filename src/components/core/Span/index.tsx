@@ -183,6 +183,7 @@ function SpanRaw(props: SpanProps & ForwardedRefProps) {
   const componentProps = {
     className: classes,
     ref: forwardedRef,
+
     ...spanElementProps,
   };
 
