@@ -69,7 +69,7 @@ export function scrollToFieldError(errorFieldKey?: string) {
 
   const errorField = errors[0];
   const errorOffset = errorField.getBoundingClientRect().top;
-  const scrollPosition = container === window ? window.scrollY : 0;
+  const scrollPosition = container === window ? window.pageYOffset : 0;
   const verticalPadding = container === window ? 120 : 0;
   const top = scrollPosition + errorOffset - verticalPadding;
   container.scrollTo({ behavior: 'smooth', left: 0, top });
