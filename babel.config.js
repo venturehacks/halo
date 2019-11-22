@@ -17,9 +17,7 @@ module.exports = {
       ],
     },
     test: {
-      presets: [
-        ['next/babel', { 'preset-env': { modules: 'commonjs' } }],
-      ],
+      presets: [['next/babel', { 'preset-env': { modules: 'commonjs' } }]],
       plugins: ['dynamic-import-node'],
     },
   },

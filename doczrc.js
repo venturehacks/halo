@@ -9,10 +9,16 @@ export default {
   src: path.join(__dirname, 'src'),
   title: 'Halo Design System',
   typescript: true,
-  filterComponents: files => files.filter(filepath => /components\/.*\/*\.(js|jsx|ts|tsx)$/.test(filepath)),
-  onCreateWebpackChain: (config) => {
+  filterComponents: files =>
+    files.filter(filepath =>
+      /components\/.*\/*\.(js|jsx|ts|tsx)$/.test(filepath),
+    ),
+  onCreateWebpackChain: config => {
     if (config.resolve.alias.set) {
-      config.resolve.alias.set('~/components', path.join(__dirname, 'src', 'components'));
+      config.resolve.alias.set(
+        '~/components',
+        path.join(__dirname, 'src', 'components'),
+      );
       config.resolve.alias.set('~/lib', path.join(__dirname, 'src', 'lib'));
     }
   },
@@ -21,9 +27,7 @@ export default {
       preprocessor: 'sass',
       cssmodules: true,
       loaderOpts: {
-        includePaths: [
-          path.resolve(__dirname, 'scss')
-        ]
+        includePaths: [path.resolve(__dirname, 'scss')],
       },
     }),
   ],
@@ -49,19 +53,27 @@ export default {
       name: 'Constants',
     },
     {
-      name: 'Core'
+      name: 'Core',
     },
     {
       name: 'Structure',
-      menu: ['Box', 'Grid', 'Cell']
+      menu: ['Box', 'Grid', 'Cell'],
     },
     {
       name: 'Form',
-      menu: ['Label', 'FieldErrorMessage', 'RawInput', 'RawCheckbox', 'RawRadio', 'RawSelect', 'RawTextarea']
+      menu: [
+        'Label',
+        'FieldErrorMessage',
+        'RawInput',
+        'RawCheckbox',
+        'RawRadio',
+        'RawSelect',
+        'RawTextarea',
+      ],
     },
     {
       name: 'Sass',
-      menu: ['Variables', 'Mixins', 'Functions', 'Breakpoints']
+      menu: ['Variables', 'Mixins', 'Functions', 'Breakpoints'],
     },
-  ]
+  ],
 };

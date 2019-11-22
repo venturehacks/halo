@@ -18,32 +18,32 @@ function transform(fileInfo, api) {
   const specifiers = [];
 
   // find <FieldErrorMessage>'s
-  ast.find(j.JSXOpeningElement, {
-    name: {
-      name: 'FieldErrorMessage'
-    }
-  })
-  .forEach(path => {
-    // find `text="foo"` props
-    j(path)
-      .find(j.JSXIdentifier, {
-        name: 'text'
-      })
-      .forEach(identifierPath => {
-        // change prop name
-        identifierPath.value.name = 'message';
-      });
+  ast
+    .find(j.JSXOpeningElement, {
+      name: {
+        name: 'FieldErrorMessage',
+      },
+    })
+    .forEach(path => {
+      // find `text="foo"` props
+      j(path)
+        .find(j.JSXIdentifier, {
+          name: 'text',
+        })
+        .forEach(identifierPath => {
+          // change prop name
+          identifierPath.value.name = 'message';
+        });
 
-    j(path)
-      .find(j.JSXIdentifier, {
-        name: 'color'
-      })
-      .forEach(identifierPath => {
-        // change prop name
-        identifierPath.value.name = 'errorSeverity';
-      })
-  });
-
+      j(path)
+        .find(j.JSXIdentifier, {
+          name: 'color',
+        })
+        .forEach(identifierPath => {
+          // change prop name
+          identifierPath.value.name = 'errorSeverity';
+        });
+    });
 
   const result = ast.toSource();
 

@@ -21,12 +21,7 @@ const GLOBAL_LIBS = {
   'react-dom': 'ReactDOM',
 };
 
-const EXTERNAL_LIBS = [
-  'classnames',
-  'react',
-  'react-dom',
-  'lodash',
-];
+const EXTERNAL_LIBS = ['classnames', 'react', 'react-dom', 'lodash'];
 
 export default {
   input: './src/index.tsx',
@@ -70,18 +65,19 @@ export default {
       minimize: {
         preset: 'default',
       },
-      namedExports: (name) => {
+      namedExports: name => {
         // converts scss dashes to camelCase:
         // styles.slate--200 => styles.slate200
         return camelCase(name);
       },
       use: [
         [
-          'sass', {
-            includePaths: [path.join(__dirname, 'scss')]
-          }
-        ]
-      ]
+          'sass',
+          {
+            includePaths: [path.join(__dirname, 'scss')],
+          },
+        ],
+      ],
     }),
     typescript(),
     replace({
@@ -96,4 +92,3 @@ export default {
   ],
   external: ['react', 'react-dom', 'lodash'],
 };
-
