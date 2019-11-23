@@ -1,0 +1,42 @@
+@import 'halo';
+
+.component {
+  margin-bottom: tempo(1);
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  .toggleSwitch {
+    :global {
+      .react-switch-handle {
+        // react-switch is dumb
+        // It uses element styling rather than CSS for the handle
+        // So it's basically impossible to override the border
+        // without using !important
+        border: 1px solid $slate--400 !important;
+      }
+
+      .react-switch-bg {
+        border: 1px solid $slate--400;
+      }
+    }
+
+    &.active {
+      :global {
+        .react-switch-handle {
+          border: 1px solid white !important;
+        }
+
+        .react-switch-bg {
+          border: 1px solid $blue--500;
+        }
+      }
+    }
+  }
+
+  .label {
+    @include font($size: sm, $line: comfortable);
+    padding-left: tempo(1);
+  }
+}
