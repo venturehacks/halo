@@ -21,14 +21,15 @@ export interface LabelProps {
    */
   field?: string;
   isRequired?: boolean;
-  /**
-   * Primary description of field
-   */
-  title?: string;
+
   /**
    * Supporting title under title
    */
   supportingText?: string;
+  /**
+   * Primary description of field
+   */
+  title?: string;
 }
 
 function LabelRaw({

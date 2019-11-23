@@ -8,16 +8,18 @@ export type FieldErrorMessageSeverity = 'warning' | 'critical';
 
 export interface FieldErrorMessageProps {
   children?: React.ReactNode;
-  /**
-   * Alternative to `children`. Use this when it would otherwise be versbose wrap the message in a closing tag.
-   */
-  message?: React.ReactNode;
   className?: string;
+
   /**
    * warning | critical
    * @default warning
    */
   errorSeverity?: FieldErrorMessageSeverity;
+
+  /**
+   * Alternative to `children`. Use this when it would otherwise be versbose wrap the message in a closing tag.
+   */
+  message?: React.ReactNode;
   /**
    * text-only = inline text; block = text on dark background
    */

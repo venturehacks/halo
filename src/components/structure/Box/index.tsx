@@ -18,10 +18,10 @@ export type BoxAlign =
   | 'stretch';
 
 export interface NegativeSpace {
-  top?: number | boolean;
   bottom?: number | boolean;
   left?: number | boolean;
   right?: number | boolean;
+  top?: number | boolean;
 }
 
 export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -30,14 +30,10 @@ export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
    */
   align?: BoxAlign;
   /**
-   * Vertical alignment. top | bottom | left | right | normal | space-between | space-evenly | stretch
-   */
-  valign?: BoxAlign;
-
-  /**
    * Background color or color palette swatch
    */
   background?: PaletteColor | string;
+
   children?: React.ReactNode;
   className?: string;
   /**
@@ -47,13 +43,14 @@ export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   column?: boolean;
   margin?: number | boolean | NegativeSpace;
   /**
-   * Convenience maximum width. Example: "500px"
-   */
-  maxWidth?: number | string;
-  /**
    * Convenience maximum height. Example: "500px"
    */
   maxHeight?: number | string;
+  /**
+   * Convenience maximum width. Example: "500px"
+   */
+  maxWidth?: number | string;
+
   /**
    * Flexbox order
    */
@@ -69,7 +66,10 @@ export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   row?: boolean;
 
   textAlign?: 'left' | 'center' | 'right';
-
+  /**
+   * Vertical alignment. top | bottom | left | right | normal | space-between | space-evenly | stretch
+   */
+  valign?: BoxAlign;
   /**
    * Convenience to force width to 100%
    */
@@ -172,8 +172,8 @@ function Box({
   return (
     <div
       className={classes}
-      style={inlineStyles}
       onClick={onClick}
+      style={inlineStyles}
       {...divElementProps}
     >
       {children}

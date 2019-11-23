@@ -3,9 +3,12 @@ module.exports = {
   plugins: ['stylelint-scss'],
   rules: {
     'at-rule-no-unknown': null,
-    'block-closing-brace-newline-after': ['always', {
-      ignoreAtRules: ['if', 'else']
-    }],
+    'block-closing-brace-newline-after': [
+      'always',
+      {
+        ignoreAtRules: ['if', 'else'],
+      },
+    ],
     'declaration-empty-line-before': 'never',
     'max-empty-lines': 1,
     'no-invalid-double-slash-comments': null,

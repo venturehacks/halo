@@ -14,21 +14,22 @@ export interface RawRadioProps
   asCheckbox?: boolean;
   className?: string;
   /**
+   * Since the most common callout is for validation errors, you shouldn't need to customize this.
+   * @default warning
+   */
+  errorSeverity?: 'warning' | 'critical';
+  /**
    * Call out element that needs attention
    * @default false
    */
   hasError?: boolean;
   /**
-   * Since the most common callout is for validation errors, you shouldn't need to customize this.
-   * @default warning
-   */
-  errorSeverity?: 'warning' | 'critical';
-  label: React.ReactNode;
-  labelClassName?: string;
-  /**
    * Required for associated <label>
    */
   id: string;
+
+  label: React.ReactNode;
+  labelClassName?: string;
 }
 
 function RawRadio({
@@ -53,8 +54,8 @@ function RawRadio({
           errorSeverity === 'warning' && styles.warning,
           errorSeverity === 'critical' && styles.critical,
         )}
-        type="radio"
         id={id}
+        type="radio"
         {...rest}
       />
       <label

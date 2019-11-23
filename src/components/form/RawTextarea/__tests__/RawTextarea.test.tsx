@@ -5,7 +5,7 @@ import { RawTextarea } from '../index';
 
 test('Smoke test', () => {
   const component = render(
-    <RawTextarea value="Current value" onChange={() => {}} />,
+    <RawTextarea onChange={() => {}} value="Current value" />,
   );
 
   expect(component.text()).toContain('Current value');

@@ -5,12 +5,7 @@ jobs:
     resource_class: medium
     working_directory: ~/halo
     docker:
-    - image: angellistdev/alist_build_deps:0.30
-      auth:
-        username: circleci0angellist
-        password: $DOCKERHUB_PASSWORD
-      environment:
-        RAILS_ENV: test
+    - image: node:10.16.3
     steps:
     - run:
         name: git checkout
@@ -40,7 +35,7 @@ jobs:
           NODE_ENV: production
     - run:
         name: Tests
-        command: yarn test
+        command: yarn test:ci
     - store_artifacts:
         path: log/test.log
     - store_test_results:

@@ -11,17 +11,17 @@ type IconPosition = 'right' | 'left';
 export interface RawInputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
-  /**
-   * Call out element that needs attention
-   * @default false
-   */
-  hasError?: boolean;
 
   /**
    * Since the most common callout is for validation errors, you shouldn't need to customize this
    * @default warning
    */
   errorSeverity?: 'warning' | 'critical';
+  /**
+   * Call out element that needs attention
+   * @default false
+   */
+  hasError?: boolean;
 
   /**
    * Optional prefix/suffix icon
@@ -108,13 +108,13 @@ export default function RawInput({
     <div className={styles.wrapper}>
       {input}
       <Box
-        column
-        valign="center"
         align="center"
         className={classNames(
           styles.iconContainer,
           iconPosition === 'right' && styles.hasIconRight,
         )}
+        valign="center"
+        column
       >
         {icon}
       </Box>

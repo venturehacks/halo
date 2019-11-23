@@ -19,14 +19,15 @@ export interface RawTextareaProps
    */
   hasError?: boolean;
   /**
-   * Field name
-   */
-  name?: string;
-  /**
    * Default width
    * @default auto
    */
   intrinsicWidth?: 'auto' | '100%';
+
+  /**
+   * Field name
+   */
+  name?: string;
 }
 
 function RawTextarea({

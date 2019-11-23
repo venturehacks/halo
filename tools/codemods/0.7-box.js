@@ -28,45 +28,51 @@ function transform(fileInfo, api) {
   const ast = j(fileInfo.source);
 
   // === STEP 1 ===
-  const addColumnProp = (boxPath) => {
+  const addColumnProp = boxPath => {
     boxPath.node.attributes = [
       ...boxPath.node.attributes,
-      j.jsxAttribute(
-        j.jsxIdentifier('column')
-      )
-    ]
+      j.jsxAttribute(j.jsxIdentifier('column')),
+    ];
   };
 
   // find <Box>'s
-  ast.find(j.JSXOpeningElement, {
-    name: {
-      name: 'Box'
-    }
-  })
-  .forEach(boxPath => {
-    const attributes = j(boxPath.node.attributes);
-    const props = attributes.find(j.JSXIdentifier);
-    // ensure there is no `row` or `block` prop
-    if (props.every(identifierPath => identifierPath.value.name !== 'block' && identifierPath.value.name !== 'row' && identifierPath.value.name !== 'column')) {
-      addColumnProp(boxPath);
-    }
-
-  });
+  ast
+    .find(j.JSXOpeningElement, {
+      name: {
+        name: 'Box',
+      },
+    })
+    .forEach(boxPath => {
+      const attributes = j(boxPath.node.attributes);
+      const props = attributes.find(j.JSXIdentifier);
+      // ensure there is no `row` or `block` prop
+      if (
+        props.every(
+          identifierPath =>
+            identifierPath.value.name !== 'block' &&
+            identifierPath.value.name !== 'row' &&
+            identifierPath.value.name !== 'column',
+        )
+      ) {
+        addColumnProp(boxPath);
+      }
+    });
 
   // === STEP 2 ===
-  const removeBlockProp = (boxPath) => {
+  const removeBlockProp = boxPath => {
     const attributes = j(boxPath.node.attributes);
     const props = attributes.find(j.JSXIdentifier);
     props.filter(propNode => propNode.value.name === 'block').remove();
   };
 
   // find <Box>'s
-  ast.find(j.JSXOpeningElement, {
-    name: {
-      name: 'Box'
-    }
-  })
-  .forEach(removeBlockProp);
+  ast
+    .find(j.JSXOpeningElement, {
+      name: {
+        name: 'Box',
+      },
+    })
+    .forEach(removeBlockProp);
 
   const result = ast.toSource();
   // console.log(result);

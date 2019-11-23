@@ -53,7 +53,7 @@ Include your GitHub token so CircleCI can build the application.
 
 #### Entry point CSS
 
-This distribution payload should only be included in your app *once*. It is necessary to prevent a flash of unstyled content.
+This distribution payload should only be included in your app _once_. It is necessary to prevent a flash of unstyled content.
 
 ```scss
 // main.scss (or similar "layout" file that is only included one time)
@@ -111,7 +111,7 @@ return (
 | 2019 &nbsp; –  | `v1.0.0`       | CoPro production release                                      |   🌀   |
 | ⋯              | ⋯              | ⋯                                                             |   ⋯    |
 | 2019 &nbsp; –  | `v0.10.x`      | ?                                                             |   🔶   |
-| 2019 &nbsp; –  | `v0.9.x`       | Accessibility audit, themeable,    .halorc.js                 |   🔶   |
+| 2019 &nbsp; –  | `v0.9.x`       | Accessibility audit, themeable, .halorc.js                    |   🔶   |
 | 2019 &nbsp; –  | `v0.8.x`       | Component pack                                                |   🔶   |
 | 2019 October   | `v0.8.x`       | Responive Grid + Cell, performance pass                       |   🔶   |
 | 2019 September | `v0.7.0`       | Raw form components                                           |   ✅   |

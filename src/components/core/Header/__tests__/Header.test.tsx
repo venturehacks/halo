@@ -10,7 +10,7 @@ test('Smoke test', () => {
 
 test(`Invalid props don't propagate to HTML tag`, () => {
   const component = render(
-    <Header h6 xxmuted uppercase>
+    <Header h6 uppercase xxmuted>
       Play Tetris
     </Header>,
   );

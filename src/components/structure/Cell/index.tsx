@@ -13,13 +13,13 @@ export interface CellProps extends GridProps {
 }
 
 Cell.defaultProps = {
-  span: 1,
   offset: 0,
+  span: 1,
 };
 
 function Cell({ children, offset, span, ...gridProps }: CellProps) {
   return (
-    <Grid row={false} span={span} offset={offset} {...gridProps}>
+    <Grid offset={offset} row={false} span={span} {...gridProps}>
       {children}
     </Grid>
   );

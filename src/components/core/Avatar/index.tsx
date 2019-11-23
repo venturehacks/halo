@@ -45,18 +45,18 @@ function AvatarRaw({
 
   return (
     <div
+      ref={forwardedRef}
       className={classNames(
         styles.component,
         className,
         styles[size],
         styles[shape],
       )}
-      ref={forwardedRef}
     >
       <img
+        alt={`Avatar for ${name}`}
         className={classNames(styles.avatar, styles[shape])}
         src={imageUrl}
-        alt={`Avatar for ${name}`}
       />
       {badge && <Badge {...badgeOptions}>{badge}</Badge>}
     </div>

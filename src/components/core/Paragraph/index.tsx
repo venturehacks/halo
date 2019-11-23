@@ -17,17 +17,24 @@ type HTMLParagraphElementProps = Omit<
 >;
 
 export interface ParagraphProps extends HTMLParagraphElementProps {
+  children: React.ReactNode;
+  className?: string;
+  /**
+   * Dark or light text
+   * @default dark
+   */
+  colorScheme?: TextColorScheme;
+  /**
+   * Fine control of type contrast
+   * @default AAAA
+   */
+  contrast?: TextContrast;
+
   /**
    * Apply natural 2em bottom margin for document flow
    * @default true
    */
   flow?: boolean;
-
-  /**
-   * Fine control of type size
-   * @default md
-   */
-  size?: TextSize;
 
   /**
    * Overrides line height associated with type `size` prop
@@ -36,18 +43,10 @@ export interface ParagraphProps extends HTMLParagraphElementProps {
   lineHeight?: TextLineHeight;
 
   /**
-   * Fine control of type contrast
-   * @default AAAA
+   * Fine control of type size
+   * @default md
    */
-  contrast?: TextContrast;
-
-  /**
-   * Dark or light text
-   * @default dark
-   */
-  colorScheme?: TextColorScheme;
-  children: React.ReactNode;
-  className?: string;
+  size?: TextSize;
 }
 
 function Paragraph({
@@ -64,12 +63,12 @@ function Paragraph({
 
   return (
     <Span
-      tag="p"
       className={classes}
-      size={size}
-      contrast={contrast}
       colorScheme={colorScheme}
+      contrast={contrast}
       lineHeight={lineHeight}
+      size={size}
+      tag="p"
       {...paragraphElementProps}
     >
       {children}

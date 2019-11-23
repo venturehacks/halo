@@ -22,26 +22,27 @@ function transform(fileInfo, api) {
   const specifiers = [];
 
   // find <Label>'s
-  const result = ast.find(j.JSXOpeningElement, {
-    name: {
-      name: 'Label'
-    }
-  })
-  .forEach(path => {
-    // find `name="foo"` props
-    j(path)
-      .find(j.JSXIdentifier, {
-        name: 'name'
-      })
-      .forEach(identifierPath => {
-        // change prop name
-        identifierPath.value.name = 'title';
-      });
-  }).toSource();
+  const result = ast
+    .find(j.JSXOpeningElement, {
+      name: {
+        name: 'Label',
+      },
+    })
+    .forEach(path => {
+      // find `name="foo"` props
+      j(path)
+        .find(j.JSXIdentifier, {
+          name: 'name',
+        })
+        .forEach(identifierPath => {
+          // change prop name
+          identifierPath.value.name = 'title';
+        });
+    })
+    .toSource();
 
   // console.log(result);
   return result;
-
 }
 
 module.exports = transform;
