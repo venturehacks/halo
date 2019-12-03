@@ -173,11 +173,6 @@ $raw-toggle-switch-knob-size: tempo(3) !default;
     opacity: 0.5;
     cursor: default;
     pointer-events: none;
-
-    &::before,
-    &::after {
-      @include input--disabled;
-    }
   }
 }
 
@@ -220,6 +215,14 @@ $raw-toggle-switch-knob-size: tempo(3) !default;
   // unchecked
   :not(:checked) + &::after {
     content: none;
+  }
+
+  [disabled] + &,
+  [disabled]:checked + & {
+    &::before,
+    &::after {
+      @include input--disabled;
+    }
   }
 
   // warning color
@@ -286,6 +289,13 @@ $raw-toggle-switch-knob-size: tempo(3) !default;
     }
   }
 
+  [disabled]:checked + & {
+    &::before,
+    &::after {
+      color: $blue--500;
+    }
+  }
+
   .hasError.warning + & {
     &::before,
     &::after {
@@ -341,6 +351,14 @@ $raw-toggle-switch-knob-size: tempo(3) !default;
   // unchecked
   :not(:checked) + &::after {
     content: none;
+  }
+
+  [disabled] + &,
+  [disabled]:checked + & {
+    &::before,
+    &::after {
+      @include input--disabled;
+    }
   }
 
   // warning color
