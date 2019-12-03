@@ -17,13 +17,13 @@ interface RawCheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
    * @default false
    */
   hasError?: boolean;
+  /**
+   * Required for associated <label>
+   */
   id: string;
 
   label: React.ReactNode;
   labelClassName?: string;
-  /**
-   * Required for associated <label>
-   */
 }
 
 function RawCheckbox({

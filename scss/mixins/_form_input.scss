@@ -5,6 +5,11 @@ $raw-input-height--transparent: 48px !default;
 $raw-checkbox-size: tempo(2.5) !default;
 $raw-radio-size: tempo(2.5) !default;
 
+// toggle switch
+$raw-toggle-switch-gutter-width: tempo(5) !default;
+$raw-toggle-switch-gutter-height: 14px !default;
+$raw-toggle-switch-knob-size: tempo(3) !default;
+
 // Text inputs
 
 @mixin input($size: md, $style: normal) {
@@ -78,57 +83,11 @@ $raw-radio-size: tempo(2.5) !default;
   @include input-checkbox($args...);
 }
 
-@mixin input-checkbox {
+@mixin input-checkbox($variant: 'checkbox-radio') {
   @include hide-default-browser-input;
-
-  & + label::after {
-    content: none;
-  }
-
-  &:checked + label::before,
-  &:hover + label::before,
-  &:focus + label::before {
-    @include input-border--hover--thick;
-  }
-
-  &:checked + label::after {
-    content: '';
-  }
-
-  &:focus + label::before {
-    @include input-border--focused;
-  }
-
-  &[disabled] + label {
-    cursor: default;
-
-    &::before {
-      @include input--disabled;
-    }
-  }
 
   &[disabled] {
     pointer-events: none;
-  }
-
-  &.hasError {
-    &.warning + label {
-      &::after {
-        border-color: $text-dark--warning;
-      }
-      &::before {
-        @include input-border--warning;
-      }
-    }
-
-    &.critical + label {
-      &::after {
-        border-color: $text-dark--warning;
-      }
-      &::before {
-        @include input-border--warning;
-      }
-    }
   }
 }
 
@@ -172,43 +131,145 @@ $raw-radio-size: tempo(2.5) !default;
 
 // Labels
 
-@mixin input-label--checkbox {
+@mixin input-label--checkbox($variant: 'checkbox-radio') {
   @include font($size: md);
-  line-height: $raw-checkbox-size;
   position: relative;
   display: inline-block;
-  padding-left: tempo(3.5);
   cursor: pointer;
 
   &::before,
   &::after {
+    transform: all 200ms ease;
     position: absolute;
     display: inline-block;
     content: '';
   }
 
-  // empty checkbox
-  &::before {
-    left: 0;
-    height: $raw-checkbox-size;
-    width: $raw-checkbox-size;
-    @include input-border--slate;
-    background-color: $white;
+  [disabled] + &,
+  [disabled]:checked + & {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+
+    &::before,
+    &::after {
+      @include input--disabled;
+    }
   }
 
-  // checkmark
-  &::after {
-    left: 6px;
-    top: 7px;
-    height: 5px;
-    width: 9px;
-    border-left: 2px solid $blue--500;
-    border-bottom: 2px solid $blue--500;
-    transform: rotate(-45deg);
-  }
+  @if $variant == 'checkbox-radio' {
+    padding-left: tempo(3.5);
+    line-height: $raw-checkbox-size;
 
-  &:hover::before {
-    @include input-border--hover--thick;
+    // empty checkbox
+    &::before {
+      left: 0;
+      height: $raw-checkbox-size;
+      width: $raw-checkbox-size;
+      @include input-border--slate;
+      background-color: $white;
+    }
+
+    // checkmark
+    &::after {
+      left: 6px;
+      top: 7px;
+      height: 5px;
+      width: 9px;
+      border-left: 2px solid $blue--500;
+      border-bottom: 2px solid $blue--500;
+      transform: rotate(-45deg);
+    }
+
+    &:hover::before {
+      @include input-border--hover--thick;
+    }
+
+    // checked
+    :checked + &::after {
+      content: ' ';
+    }
+
+    // unchecked
+    :not(:checked) + &::after {
+      content: none;
+    }
+
+    // warning color
+    .hasError.warning + & {
+      &::before,
+      &::after {
+        border-color: $text-dark--warning;
+      }
+    }
+
+    // critical color
+    .hasError.critical + & {
+      &::before,
+      &::after {
+        border-color: $text-dark--warning;
+      }
+    }
+  } @else if ($variant == 'toggle-switch') {
+    padding-left: tempo(6);
+    padding-right: tempo(1);
+    line-height: $raw-toggle-switch-gutter-height - 1px;
+
+    // switch gutter
+    &::before {
+      left: 0;
+      border-radius: 7px;
+      height: $raw-toggle-switch-gutter-height;
+      width: $raw-toggle-switch-gutter-width;
+      background-color: currentColor;
+    }
+
+    // toggle circle nub
+    &::after {
+      left: 0;
+      top: -5px;
+      width: $raw-toggle-switch-knob-size;
+      height: $raw-toggle-switch-knob-size;
+      background-color: $white;
+      @include border-circle;
+      border: 2px solid currentColor;
+    }
+
+    // off (unchecked)
+    :not(:checked) + & {
+      &::before,
+      &::after {
+        color: $slate--500;
+      }
+    }
+
+    // on (checked)
+    :checked + & {
+      &::before,
+      &::after {
+        color: $blue--500;
+      }
+
+      // move knob rightward to indicate 'on' state
+      &::after {
+        left: $raw-toggle-switch-knob-size - tempo(1);
+      }
+    }
+
+    .hasError.warning + & {
+      &::before,
+      &::after {
+        color: $text-dark--warning;
+      }
+    }
+
+    .hasError.critical + &,
+    .hasError.critical:checked + & {
+      &::before,
+      &::after {
+        color: $text-dark--error;
+      }
+    }
   }
 }
 

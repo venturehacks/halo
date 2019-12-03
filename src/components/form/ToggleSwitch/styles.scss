@@ -1,98 +1,15 @@
 @import 'halo';
 
+// hides native browser control, must be adjacent to .label
+
 .component {
-  margin-bottom: tempo(1);
-
-  &:last-of-type {
-    margin-bottom: 0;
-  }
-
-  &.active {
-    &:not(.hasError) {
-      :global {
-        .react-switch-handle {
-          border: 1px solid white !important;
-        }
-
-        .react-switch-bg {
-          border: 1px solid $blue--500;
-        }
-      }
-    }
-
-    &.hasError.warning {
-      :global {
-        .react-switch-handle {
-          border: 1px solid white !important;
-        }
-
-        .react-switch-bg {
-          border: 1px solid $orange--400;
-        }
-      }
-    }
-
-    &.hasError.critical {
-      :global {
-        .react-switch-handle {
-          border: 1px solid white !important;
-        }
-
-        .react-switch-bg {
-          border: 1px solid $red--400;
-        }
-      }
-    }
-  }
-
-  &:not(.active) {
-    &:not(.hasError) {
-      :global {
-        .react-switch-handle {
-          // react-switch is dumb
-          // It uses element styling rather than CSS for the handle
-          // So it's basically impossible to override the border
-          // without using !important
-          border: 1px solid $slate--400 !important;
-        }
-
-        .react-switch-bg {
-          border: 1px solid $slate--400;
-        }
-      }
-    }
-
-    &.hasError.warning {
-      :global {
-        .react-switch-handle {
-          border: 1px solid white !important;
-        }
-
-        .react-switch-bg {
-          border: 1px solid $orange--400;
-        }
-      }
-    }
-
-    &.hasError.critical {
-      :global {
-        .react-switch-handle {
-          border: 1px solid white !important;
-        }
-
-        .react-switch-bg {
-          border: 1px solid $red--400;
-        }
-      }
-    }
-  }
+  @include halo-element-base;
+  @include input-checkbox($variant: 'toggle-switch');
 }
+
+// renders large clickable label and toggle switch as pseudoelements
 
 .label {
-  @include flex-row($valign: center);
-}
-
-.labelContent {
-  @include font($size: sm, $line: comfortable);
-  padding-left: tempo(1);
+  @include halo-element-base;
+  @include input-label--checkbox($variant: 'toggle-switch');
 }

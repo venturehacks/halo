@@ -11,19 +11,36 @@ import { Box } from '../../structure/Box';
 
 # ToggleSwitch
 
+This component is essentially a [RawCheckbox](/form/raw-checkbox) with unique styling.
+
 📣 Raw input fields are designed to be [controlled](https://reactjs.org/docs/forms.html#controlled-components) by their smarter, form-connected parent.
 
-This component is primarily used for simple text input. It's also great as a hidden field that holds the value of a complex frontend component. On CoPro, we use it to power our autocomplete text fields and tabular data filter fields.
 
 <Playground>
   <Box align="stretch" maxWidth="500px">
     <Label title="States">
-      <ToggleSwitch id="foo-unchecked" name="foo" label="unchecked / off" checked={false}  />
-      <ToggleSwitch id="foo" name="foo" label="checked / on" checked />
+      <Box padding>
+        <ToggleSwitch id="foo-unchecked" name="foo" label="off" checked={false}  />
+      </Box>
+      <Box padding>
+        <ToggleSwitch id="foo" name="foo" label="on (checked)" checked />
+      </Box>
     </Label>
-    <Label title="with Error">
-      <ToggleSwitch id="foo-unchecked" name="foo" label="unchecked / off" checked={false} hasError  />
-      <ToggleSwitch id="foo" name="foo" label="checked / on" checked hasError />
+    <Label title="Error" supportingText="validation warning">
+      <Box padding>
+        <ToggleSwitch id="foo-unchecked" name="foo" label="off" checked={false} hasError  />
+      </Box>
+      <Box padding>
+        <ToggleSwitch id="foo" name="foo" label="on" checked hasError />
+      </Box>
+    </Label>
+    <Label title="Disabled">
+      <Box padding>
+        <ToggleSwitch id="foo-unchecked" name="foo" label="off" checked={false} disabled  />
+      </Box>
+      <Box padding>
+        <ToggleSwitch id="foo" name="foo" label="on" checked disabled />
+      </Box>
     </Label>
   </Box>
 </Playground>
