@@ -5,7 +5,7 @@ import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 
 import styles from './styles.scss';
 
-interface RawToggleSwitchProps {
+export interface RawToggleSwitchProps {
   checked?: boolean;
 
   className?: string;
