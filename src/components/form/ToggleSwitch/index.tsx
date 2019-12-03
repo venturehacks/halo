@@ -2,11 +2,11 @@ import classNames from 'classnames';
 import * as React from 'react';
 import Switch, { ReactSwitchProps } from 'react-switch';
 
+import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
+
 import * as styles from './styles.scss';
 
-type IconPosition = 'right' | 'left';
-
-export interface ToggleSwitchProps extends ReactSwitchProps {
+export interface ToggleSwitchProps {
   checked?: boolean;
   className?: string;
 
@@ -35,8 +35,8 @@ export interface ToggleSwitchProps extends ReactSwitchProps {
 export default function ToggleSwitch({
   checked = false,
   className,
-  // errorSeverity = 'warning',
-  // hasError = false,
+  errorSeverity = 'warning',
+  hasError = false,
   id,
   label,
   labelClassName,
@@ -46,33 +46,41 @@ export default function ToggleSwitch({
   height = 14,
   width = 28,
   offColor = '#d2d9e5',
+  onColor = '#dde9f8',
   offHandleColor = '#FFFFFF',
   onHandleColor = '#0F6FFF',
   ...rest
-}: ToggleSwitchProps) {
-  const toggleSwitch = (
-    <Switch
-      checked={checked}
-      checkedIcon={checkedIcon}
-      className={classNames(styles.toggleSwitch, checked && styles.active)}
-      handleDiameter={handleDiameter}
-      height={height}
-      offColor={offColor}
-      offHandleColor={offHandleColor}
-      onHandleColor={onHandleColor}
-      uncheckedIcon={uncheckedIcon}
-      width={width}
-      {...rest}
-    />
-  );
-
-  if (label) {
-    return (
-      <label className={classNames(styles.label, labelClassName)}>
-        {toggleSwitch}
+}: ToggleSwitchProps & ReactSwitchProps) {
+  return (
+    <div
+      className={classNames(
+        styles.component,
+        hasError && styles.hasError,
+        hasError && FORM_FIELD_ERROR_IDENTIFIER,
+        errorSeverity === 'warning' && styles.warning,
+        errorSeverity === 'critical' && styles.critical,
+        checked && styles.active,
+      )}
+    >
+      <label className={classNames(styles.label, labelClassName)} htmlFor={id}>
+        <Switch
+          checked={checked}
+          checkedIcon={checkedIcon}
+          handleDiameter={handleDiameter}
+          height={height}
+          id={id}
+          offColor={offColor}
+          offHandleColor={offHandleColor}
+          onColor={onColor}
+          onHandleColor={onHandleColor}
+          uncheckedIcon={uncheckedIcon}
+          width={width}
+          {...rest}
+        />
+        {label && <span className={styles.labelContent}>{label}</span>}
       </label>
-    );
-  }
+    </div>
+  );
 }
 
 export { ToggleSwitch };

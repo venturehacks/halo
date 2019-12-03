@@ -7,22 +7,8 @@
     margin-bottom: 0;
   }
 
-  .toggleSwitch {
-    :global {
-      .react-switch-handle {
-        // react-switch is dumb
-        // It uses element styling rather than CSS for the handle
-        // So it's basically impossible to override the border
-        // without using !important
-        border: 1px solid $slate--400 !important;
-      }
-
-      .react-switch-bg {
-        border: 1px solid $slate--400;
-      }
-    }
-
-    &.active {
+  &.active {
+    &:not(.hasError) {
       :global {
         .react-switch-handle {
           border: 1px solid white !important;
@@ -33,10 +19,80 @@
         }
       }
     }
+
+    &.hasError.warning {
+      :global {
+        .react-switch-handle {
+          border: 1px solid white !important;
+        }
+
+        .react-switch-bg {
+          border: 1px solid $orange--400;
+        }
+      }
+    }
+
+    &.hasError.critical {
+      :global {
+        .react-switch-handle {
+          border: 1px solid white !important;
+        }
+
+        .react-switch-bg {
+          border: 1px solid $red--400;
+        }
+      }
+    }
   }
 
-  .label {
-    @include font($size: sm, $line: comfortable);
-    padding-left: tempo(1);
+  &:not(.active) {
+    &:not(.hasError) {
+      :global {
+        .react-switch-handle {
+          // react-switch is dumb
+          // It uses element styling rather than CSS for the handle
+          // So it's basically impossible to override the border
+          // without using !important
+          border: 1px solid $slate--400 !important;
+        }
+
+        .react-switch-bg {
+          border: 1px solid $slate--400;
+        }
+      }
+    }
+
+    &.hasError.warning {
+      :global {
+        .react-switch-handle {
+          border: 1px solid white !important;
+        }
+
+        .react-switch-bg {
+          border: 1px solid $orange--400;
+        }
+      }
+    }
+
+    &.hasError.critical {
+      :global {
+        .react-switch-handle {
+          border: 1px solid white !important;
+        }
+
+        .react-switch-bg {
+          border: 1px solid $red--400;
+        }
+      }
+    }
   }
+}
+
+.label {
+  @include flex-row($valign: center);
+}
+
+.labelContent {
+  @include font($size: sm, $line: comfortable);
+  padding-left: tempo(1);
 }

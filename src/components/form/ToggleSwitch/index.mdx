@@ -17,46 +17,13 @@ This component is primarily used for simple text input. It's also great as a hid
 
 <Playground>
   <Box align="stretch" maxWidth="500px">
-    <Label field="foo" title="Default Behavior">
-      <ToggleSwitch />
+    <Label title="States">
+      <ToggleSwitch id="foo-unchecked" name="foo" label="unchecked / off" checked={false}  />
+      <ToggleSwitch id="foo" name="foo" label="checked / on" checked />
     </Label>
-    <Label field="foo" title="Text Input">
-      <ToggleSwitch
-        type="text"
-        name="foo"
-        placeholder="Your name"
-        maxLength={100}
-      />
-    </Label>
-    <Label field="bar" title="Email" supportingText="with validation error, intrinsic width = auto">
-      <ToggleSwitch
-        type="email"
-        name="bar"
-        onChange={() => {}}
-        value="What is email?"
-        intrinsicWidth="auto"
-        hasError
-      />
-    </Label>
-    <Label field="password" title="Password">
-      <ToggleSwitch
-        type="password"
-        name="password"
-        intrinsicWidth="auto"
-        value="abcdefghijk"
-        onChange={() => {}}
-      />
-    </Label>
-    <Label field="phone" title="Number">
-      <ToggleSwitch
-        type="number"
-        name="phone"
-        intrinsicWidth="auto"
-        min="10"
-        max="100"
-        value="20"
-        onChange={() => {}}
-      />
+    <Label title="with Error">
+      <ToggleSwitch id="foo-unchecked" name="foo" label="unchecked / off" checked={false} hasError  />
+      <ToggleSwitch id="foo" name="foo" label="checked / on" checked hasError />
     </Label>
   </Box>
 </Playground>
