@@ -10,6 +10,28 @@ $raw-toggle-switch-gutter-width: tempo(5) !default;
 $raw-toggle-switch-gutter-height: 14px !default;
 $raw-toggle-switch-knob-size: tempo(3) !default;
 
+// Misc
+
+@mixin input-placeholder($size: md) {
+  @include font($size: $size, $color: $text-dark--a);
+}
+
+@mixin input--disabled {
+  @include font($color: $text-dark--a);
+  background-color: $slate--200;
+  border-color: $slate--300;
+}
+
+// accessible way of hiding the default input
+// https://webaim.org/techniques/css/invisiblecontent/
+
+@mixin hide-default-browser-input {
+  opacity: 0;
+  position: absolute;
+  -webkit-appearance: none;
+  z-index: -2;
+}
+
 // Text inputs
 
 @mixin input($size: md, $style: normal) {
@@ -336,26 +358,4 @@ $raw-toggle-switch-knob-size: tempo(3) !default;
       border-color: $text-dark--warning;
     }
   }
-}
-
-// Misc
-
-@mixin input-placeholder($size: md) {
-  @include font($size: $size, $color: $text-dark--a);
-}
-
-@mixin input--disabled {
-  @include font($color: $text-dark--a);
-  background-color: $slate--200;
-  border-color: $slate--300;
-}
-
-// accessible way of hiding the default input
-// https://webaim.org/techniques/css/invisiblecontent/
-
-@mixin hide-default-browser-input {
-  opacity: 0;
-  position: absolute;
-  -webkit-appearance: none;
-  z-index: -2;
 }
