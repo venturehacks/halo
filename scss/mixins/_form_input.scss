@@ -190,6 +190,10 @@ $raw-toggle-switch-knob-size: tempo(3) !default;
       content: ' ';
     }
 
+    :checked + &::before {
+      @include input-border--hover--thick;
+    }
+
     // unchecked
     :not(:checked) + &::after {
       content: none;

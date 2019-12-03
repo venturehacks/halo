@@ -5,10 +5,8 @@ import { ToggleSwitch } from '../index';
 
 test('Smoke test', () => {
   const component = render(
-    <ToggleSwitch id="foo" onChange={() => {}} value="Current value" />,
+    <ToggleSwitch id="foo" label="Current value" onChange={() => {}} />,
   );
 
-  expect(component.val()).toContain('Current value');
-  expect(component.prop('placeholder')).toContain('Type your name...');
-  expect(component.attr('type')).toContain('text'); // text is default
+  expect(component.text()).toContain('Current value');
 });
