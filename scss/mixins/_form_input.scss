@@ -83,7 +83,7 @@ $raw-toggle-switch-knob-size: tempo(3) !default;
   @include input-checkbox($args...);
 }
 
-@mixin input-checkbox($variant: 'checkbox-radio') {
+@mixin input-checkbox {
   @include hide-default-browser-input;
 
   &[disabled] {
@@ -131,15 +131,16 @@ $raw-toggle-switch-knob-size: tempo(3) !default;
 
 // Labels
 
-@mixin input-label--checkbox($variant: 'checkbox-radio') {
+%input-label--base {
   @include font($size: md);
   position: relative;
   display: inline-block;
   cursor: pointer;
+  transition: all 200ms ease;
 
   &::before,
   &::after {
-    transform: all 200ms ease;
+    transition: all 200ms ease;
     position: absolute;
     display: inline-block;
     content: '';
@@ -156,141 +157,133 @@ $raw-toggle-switch-knob-size: tempo(3) !default;
       @include input--disabled;
     }
   }
+}
 
-  @if $variant == 'checkbox-radio' {
-    padding-left: tempo(3.5);
-    line-height: $raw-checkbox-size;
+@mixin input-label--checkbox {
+  @extend %input-label--base;
+  padding-left: tempo(3.5);
+  line-height: $raw-checkbox-size;
 
-    // empty checkbox
-    &::before {
-      left: 0;
-      height: $raw-checkbox-size;
-      width: $raw-checkbox-size;
-      @include input-border--slate;
-      background-color: $white;
-    }
+  // empty checkbox
+  &::before {
+    left: 0;
+    height: $raw-checkbox-size;
+    width: $raw-checkbox-size;
+    @include input-border--slate;
+    background-color: $white;
+  }
 
-    // checkmark
+  // checkmark
+  &::after {
+    left: 6px;
+    top: 7px;
+    height: 5px;
+    width: 9px;
+    border-left: 2px solid $blue--500;
+    border-bottom: 2px solid $blue--500;
+    transform: rotate(-45deg);
+  }
+
+  // hover || checked = thick border
+  &:hover::before,
+  :checked + &::before {
+    @include input-border--hover--thick;
+  }
+
+  // checked
+  :checked + &::after {
+    content: ' ';
+  }
+
+  // unchecked
+  :not(:checked) + &::after {
+    content: none;
+  }
+
+  // warning color
+  .hasError.warning + & {
+    &::before,
     &::after {
-      left: 6px;
-      top: 7px;
-      height: 5px;
-      width: 9px;
-      border-left: 2px solid $blue--500;
-      border-bottom: 2px solid $blue--500;
-      transform: rotate(-45deg);
+      border-color: $text-dark--warning;
     }
+  }
 
-    &:hover::before {
-      @include input-border--hover--thick;
-    }
-
-    // checked
-    :checked + &::after {
-      content: ' ';
-    }
-
-    :checked + &::before {
-      @include input-border--hover--thick;
-    }
-
-    // unchecked
-    :not(:checked) + &::after {
-      content: none;
-    }
-
-    // warning color
-    .hasError.warning + & {
-      &::before,
-      &::after {
-        border-color: $text-dark--warning;
-      }
-    }
-
-    // critical color
-    .hasError.critical + & {
-      &::before,
-      &::after {
-        border-color: $text-dark--warning;
-      }
-    }
-  } @else if ($variant == 'toggle-switch') {
-    padding-left: tempo(6);
-    padding-right: tempo(1);
-    line-height: $raw-toggle-switch-gutter-height - 1px;
-
-    // switch gutter
-    &::before {
-      left: 0;
-      border-radius: 7px;
-      height: $raw-toggle-switch-gutter-height;
-      width: $raw-toggle-switch-gutter-width;
-      background-color: currentColor;
-    }
-
-    // toggle circle nub
+  // critical color
+  .hasError.critical + & {
+    &::before,
     &::after {
-      left: 0;
-      top: -5px;
-      width: $raw-toggle-switch-knob-size;
-      height: $raw-toggle-switch-knob-size;
-      background-color: $white;
-      @include border-circle;
-      border: 2px solid currentColor;
+      border-color: $text-dark--warning;
+    }
+  }
+}
+
+@mixin input-label--toggle-switch {
+  @extend %input-label--base;
+  padding-left: tempo(6);
+  padding-right: tempo(1);
+  line-height: $raw-toggle-switch-gutter-height - 1px;
+
+  // switch gutter
+  &::before {
+    left: 0;
+    border-radius: 7px;
+    height: $raw-toggle-switch-gutter-height;
+    width: $raw-toggle-switch-gutter-width;
+    background-color: currentColor;
+  }
+
+  // toggle circle nub
+  &::after {
+    left: 0;
+    top: -5px;
+    width: $raw-toggle-switch-knob-size;
+    height: $raw-toggle-switch-knob-size;
+    background-color: $white;
+    @include border-circle;
+    border: 2px solid currentColor;
+  }
+
+  // off (unchecked)
+  :not(:checked) + & {
+    &::before,
+    &::after {
+      color: $slate--500;
+    }
+  }
+
+  // on (checked)
+  :checked + & {
+    &::before,
+    &::after {
+      color: $blue--500;
     }
 
-    // off (unchecked)
-    :not(:checked) + & {
-      &::before,
-      &::after {
-        color: $slate--500;
-      }
+    // move knob rightward to indicate 'on' state
+    &::after {
+      left: $raw-toggle-switch-knob-size - tempo(1);
     }
+  }
 
-    // on (checked)
-    :checked + & {
-      &::before,
-      &::after {
-        color: $blue--500;
-      }
-
-      // move knob rightward to indicate 'on' state
-      &::after {
-        left: $raw-toggle-switch-knob-size - tempo(1);
-      }
+  .hasError.warning + & {
+    &::before,
+    &::after {
+      color: $text-dark--warning;
     }
+  }
 
-    .hasError.warning + & {
-      &::before,
-      &::after {
-        color: $text-dark--warning;
-      }
-    }
-
-    .hasError.critical + &,
-    .hasError.critical:checked + & {
-      &::before,
-      &::after {
-        color: $text-dark--error;
-      }
+  .hasError.critical + &,
+  .hasError.critical:checked + & {
+    &::before,
+    &::after {
+      color: $text-dark--error;
     }
   }
 }
 
 @mixin input-label--radio {
-  @include font($size: md);
+  @extend %input-label--base;
   line-height: $raw-radio-size;
-  position: relative;
-  display: inline-block;
   padding-left: tempo(3.5);
-  cursor: pointer;
-
-  &::before,
-  &::after {
-    position: absolute;
-    display: inline-block;
-    content: '';
-  }
 
   // empty radio
   &::before {
@@ -312,8 +305,36 @@ $raw-toggle-switch-knob-size: tempo(3) !default;
     @include border-circle;
   }
 
-  &:hover::before {
+  // hover || checked = thick border
+  &:hover::before,
+  :checked + &::before {
     @include input-border--hover--thick;
+  }
+
+  // checked
+  :checked + &::after {
+    content: ' ';
+  }
+
+  // unchecked
+  :not(:checked) + &::after {
+    content: none;
+  }
+
+  // warning color
+  .hasError.warning + & {
+    &::before,
+    &::after {
+      border-color: $text-dark--warning;
+    }
+  }
+
+  // critical color
+  .hasError.critical + & {
+    &::before,
+    &::after {
+      border-color: $text-dark--warning;
+    }
   }
 }
 
