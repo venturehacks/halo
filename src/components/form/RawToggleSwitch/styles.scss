@@ -4,12 +4,12 @@
 
 .component {
   @include halo-element-base;
-  @include input-checkbox($variant: 'toggle-switch');
+  @include input-checkbox;
 }
 
 // renders large clickable label and toggle switch as pseudoelements
 
 .label {
   @include halo-element-base;
-  @include input-label--checkbox($variant: 'toggle-switch');
+  @include input-label--toggle-switch;
 }

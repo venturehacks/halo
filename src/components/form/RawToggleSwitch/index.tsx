@@ -5,7 +5,7 @@ import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 
 import styles from './styles.scss';
 
-interface ToggleSwitchProps {
+interface RawToggleSwitchProps {
   checked?: boolean;
 
   className?: string;
@@ -42,7 +42,7 @@ interface ToggleSwitchProps {
   >;
 }
 
-function ToggleSwitch({
+function RawToggleSwitch({
   className,
   errorSeverity = 'warning',
   hasError,
@@ -51,7 +51,7 @@ function ToggleSwitch({
   labelClassName,
   type,
   ...rest
-}: ToggleSwitchProps & React.InputHTMLAttributes<HTMLInputElement>) {
+}: RawToggleSwitchProps & React.InputHTMLAttributes<HTMLInputElement>) {
   return (
     <>
       <input
@@ -74,4 +74,4 @@ function ToggleSwitch({
   );
 }
 
-export { ToggleSwitch };
+export { RawToggleSwitch };

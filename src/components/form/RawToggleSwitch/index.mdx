@@ -1,15 +1,15 @@
 ---
-name: ToggleSwitch
+name: RawToggleSwitch
 menu: Form
-route: /form/toggle-switch
+route: /form/raw-toggle-switch
 ---
 
 import { Props, Playground } from 'docz';
 import { Label } from '../Label';
-import { ToggleSwitch } from './';
+import { RawToggleSwitch } from './';
 import { Box } from '../../structure/Box';
 
-# ToggleSwitch
+# RawToggleSwitch
 
 This component is essentially a [RawCheckbox](/form/raw-checkbox) with unique styling.
 
@@ -20,26 +20,26 @@ This component is essentially a [RawCheckbox](/form/raw-checkbox) with unique st
   <Box align="stretch" maxWidth="500px">
     <Label title="States">
       <Box padding>
-        <ToggleSwitch id="foo-unchecked" name="foo" label="off" checked={false}  />
+        <RawToggleSwitch id="foo-unchecked" name="foo" label="off" checked={false}  />
       </Box>
       <Box padding>
-        <ToggleSwitch id="foo" name="foo" label="on (checked)" checked />
+        <RawToggleSwitch id="foo" name="foo" label="on (checked)" checked />
       </Box>
     </Label>
     <Label title="Error" supportingText="validation warning">
       <Box padding>
-        <ToggleSwitch id="foo-unchecked" name="foo" label="off" checked={false} hasError  />
+        <RawToggleSwitch id="foo-unchecked" name="foo" label="off" checked={false} hasError  />
       </Box>
       <Box padding>
-        <ToggleSwitch id="foo" name="foo" label="on" checked hasError />
+        <RawToggleSwitch id="foo" name="foo" label="on" checked hasError />
       </Box>
     </Label>
     <Label title="Disabled">
       <Box padding>
-        <ToggleSwitch id="foo-unchecked" name="foo" label="off" checked={false} disabled  />
+        <RawToggleSwitch id="foo-unchecked" name="foo" label="off" checked={false} disabled  />
       </Box>
       <Box padding>
-        <ToggleSwitch id="foo" name="foo" label="on" checked disabled />
+        <RawToggleSwitch id="foo" name="foo" label="on" checked disabled />
       </Box>
     </Label>
   </Box>
@@ -47,4 +47,4 @@ This component is essentially a [RawCheckbox](/form/raw-checkbox) with unique st
 
 ### Props
 
-<Props of={ToggleSwitch} />
+<Props of={RawToggleSwitch} />
