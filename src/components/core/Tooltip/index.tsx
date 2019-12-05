@@ -1,11 +1,12 @@
 import Tippy, { TippyProps } from '@tippy.js/react';
+import classNames from 'classnames';
 import * as React from 'react';
 
 import styles from './styles.scss';
 
 /*
- * NOTE: If you want to use a component element as a child, ensure you forward
- * the ref to the DOM node:
+ * NOTE: If you want to use a React component as a child,
+ * you must forward the ref!
  *
  * const ThisWillWork = forwardRef((props, ref) => (
  *   <button ref={ref}>Text</button>
@@ -13,22 +14,29 @@ import styles from './styles.scss';
  *
  * function Foo() {
  *   return (
- *     <Tippy content="tooltip">
+ *     <Tooltip content="tooltip">
  *       <ThisWillWork />
- *     </Tippy>
+ *     </Tooltip>
  *   )
  * }
  */
 
-Tooltip.defaultProps = {
-  ...Tippy.defaultProps,
-  className: styles.component,
-  arrow: true,
-  size: 'small',
-};
-
-function Tooltip(props: TippyProps) {
-  return <Tippy {...props} />;
+function Tooltip({
+  arrow = false,
+  className,
+  distance = 12,
+  size = 'small',
+  ...rest
+}: TippyProps) {
+  return (
+    <Tippy
+      arrow={arrow}
+      className={classNames(styles.component, className)}
+      distance={distance}
+      size={size}
+      {...rest}
+    />
+  );
 }
 
 export { Tooltip };

@@ -2,5 +2,8 @@
 
 .component {
   @include halo-element-base; // TODO: deprecate
-  font-weight: 500;
+  @include font($size: xs, $color: white, $line: 14px);
+  @include border-rounded;
+  background-color: $slate--900;
+  padding: tempo(0.5) tempo(1);
 }
