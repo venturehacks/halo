@@ -161,7 +161,8 @@
   },
   "dependencies": {
     "@tippy.js/react": "^2.2.3",
-    "camelcase": "^5.3.1"
+    "camelcase": "^5.3.1",
+    "react-spinners": "^0.6.1"
   },
   "peerDependencies": {
     "idx": "^2.5.0",

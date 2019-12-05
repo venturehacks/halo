@@ -1,0 +1,58 @@
+---
+name: LoadingIndicator
+menu: Core
+route: /core/loading-indicator
+---
+
+import { Props, Playground } from 'docz';
+import { LoadingIndicator } from './'
+import { Header } from '../Header';
+import { Paragraph } from '../Paragraph';
+import { Tooltip } from '../Tooltip';
+import { Box } from '../../structure/Box';
+import '../../../index.scss';
+
+# LoadingIndicator
+
+Use the primary loading indicator for large components and pages.
+
+While it is possible to alter color and size, Halo defaults are preferred.
+
+<Playground>
+  <Box row margin={{ bottom: 8 }}>
+    <Box margin={{ right: 12 }}>
+      <Header h5>Primary</Header>
+      <LoadingIndicator />
+    </Box>
+    <Box margin={{ right: 2 }}>
+      <Header h5>Alternate</Header>
+      <LoadingIndicator alternate />
+    </Box>
+  </Box>
+
+  <Header h5>
+    <Tooltip content="use sparingly! (or never)">
+      <span>Color*</span>
+    </Tooltip>
+  </Header>
+
+  <Box row margin={{ bottom: 4 }}>
+    <Box margin={{ right: 2 }}>
+      <LoadingIndicator color="#666" />
+    </Box>
+    <Box margin={{ right: 6 }}>
+      <LoadingIndicator color="#888" />
+    </Box>
+    <Box margin={{ right: 2 }}>
+      <LoadingIndicator color="#bbb" alternate />
+    </Box>
+    <Box margin={{ right: 2 }}>
+      <LoadingIndicator color="#ddd" alternate />
+    </Box>
+  </Box>
+
+</Playground>
+
+### Props
+
+<Props of={LoadingIndicator} />
