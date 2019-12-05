@@ -5,6 +5,33 @@ $raw-input-height--transparent: 48px !default;
 $raw-checkbox-size: tempo(2.5) !default;
 $raw-radio-size: tempo(2.5) !default;
 
+// toggle switch
+$raw-toggle-switch-gutter-width: tempo(5) !default;
+$raw-toggle-switch-gutter-height: 14px !default;
+$raw-toggle-switch-knob-size: tempo(3) !default;
+
+// Misc
+
+@mixin input-placeholder($size: md) {
+  @include font($size: $size, $color: $text-dark--a);
+}
+
+@mixin input--disabled {
+  @include font($color: $text-dark--a);
+  background-color: $slate--200;
+  border-color: $slate--300;
+}
+
+// accessible way of hiding the default input
+// https://webaim.org/techniques/css/invisiblecontent/
+
+@mixin hide-default-browser-input {
+  opacity: 0;
+  position: absolute;
+  -webkit-appearance: none;
+  z-index: -2;
+}
+
 // Text inputs
 
 @mixin input($size: md, $style: normal) {
@@ -81,54 +108,8 @@ $raw-radio-size: tempo(2.5) !default;
 @mixin input-checkbox {
   @include hide-default-browser-input;
 
-  & + label::after {
-    content: none;
-  }
-
-  &:checked + label::before,
-  &:hover + label::before,
-  &:focus + label::before {
-    @include input-border--hover--thick;
-  }
-
-  &:checked + label::after {
-    content: '';
-  }
-
-  &:focus + label::before {
-    @include input-border--focused;
-  }
-
-  &[disabled] + label {
-    cursor: default;
-
-    &::before {
-      @include input--disabled;
-    }
-  }
-
   &[disabled] {
     pointer-events: none;
-  }
-
-  &.hasError {
-    &.warning + label {
-      &::after {
-        border-color: $text-dark--warning;
-      }
-      &::before {
-        @include input-border--warning;
-      }
-    }
-
-    &.critical + label {
-      &::after {
-        border-color: $text-dark--warning;
-      }
-      &::before {
-        @include input-border--warning;
-      }
-    }
   }
 }
 
@@ -172,20 +153,33 @@ $raw-radio-size: tempo(2.5) !default;
 
 // Labels
 
-@mixin input-label--checkbox {
+%input-label--base {
   @include font($size: md);
-  line-height: $raw-checkbox-size;
   position: relative;
   display: inline-block;
-  padding-left: tempo(3.5);
   cursor: pointer;
+  transition: all 200ms ease;
 
   &::before,
   &::after {
+    transition: all 200ms ease;
     position: absolute;
     display: inline-block;
     content: '';
   }
+
+  [disabled] + &,
+  [disabled]:checked + & {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+  }
+}
+
+@mixin input-label--checkbox {
+  @extend %input-label--base;
+  padding-left: tempo(3.5);
+  line-height: $raw-checkbox-size;
 
   // empty checkbox
   &::before {
@@ -207,25 +201,121 @@ $raw-radio-size: tempo(2.5) !default;
     transform: rotate(-45deg);
   }
 
-  &:hover::before {
+  // hover || checked = thick border
+  &:hover::before,
+  :checked + &::before {
     @include input-border--hover--thick;
+  }
+
+  // checked
+  :checked + &::after {
+    content: ' ';
+  }
+
+  // unchecked
+  :not(:checked) + &::after {
+    content: none;
+  }
+
+  [disabled] + &,
+  [disabled]:checked + & {
+    &::before,
+    &::after {
+      @include input--disabled;
+    }
+  }
+
+  // warning color
+  .hasError.warning + & {
+    &::before,
+    &::after {
+      border-color: $text-dark--warning;
+    }
+  }
+
+  // critical color
+  .hasError.critical + & {
+    &::before,
+    &::after {
+      border-color: $text-dark--warning;
+    }
+  }
+}
+
+@mixin input-label--toggle-switch {
+  @extend %input-label--base;
+  padding-left: tempo(6);
+  padding-right: tempo(1);
+  line-height: $raw-toggle-switch-gutter-height - 1px;
+
+  // switch gutter
+  &::before {
+    left: 0;
+    border-radius: 7px;
+    height: $raw-toggle-switch-gutter-height;
+    width: $raw-toggle-switch-gutter-width;
+    background-color: currentColor;
+  }
+
+  // toggle circle nub
+  &::after {
+    left: 0;
+    top: -5px;
+    width: $raw-toggle-switch-knob-size;
+    height: $raw-toggle-switch-knob-size;
+    background-color: $white;
+    @include border-circle;
+    border: 2px solid currentColor;
+  }
+
+  // off (unchecked)
+  :not(:checked) + & {
+    &::before,
+    &::after {
+      color: $slate--500;
+    }
+  }
+
+  // on (checked)
+  :checked + & {
+    &::before,
+    &::after {
+      color: $blue--500;
+    }
+
+    // move knob rightward to indicate 'on' state
+    &::after {
+      left: $raw-toggle-switch-knob-size - tempo(1);
+    }
+  }
+
+  [disabled]:checked + & {
+    &::before,
+    &::after {
+      color: $blue--500;
+    }
+  }
+
+  .hasError.warning + & {
+    &::before,
+    &::after {
+      color: $text-dark--warning;
+    }
+  }
+
+  .hasError.critical + &,
+  .hasError.critical:checked + & {
+    &::before,
+    &::after {
+      color: $text-dark--error;
+    }
   }
 }
 
 @mixin input-label--radio {
-  @include font($size: md);
+  @extend %input-label--base;
   line-height: $raw-radio-size;
-  position: relative;
-  display: inline-block;
   padding-left: tempo(3.5);
-  cursor: pointer;
-
-  &::before,
-  &::after {
-    position: absolute;
-    display: inline-block;
-    content: '';
-  }
 
   // empty radio
   &::before {
@@ -247,29 +337,43 @@ $raw-radio-size: tempo(2.5) !default;
     @include border-circle;
   }
 
-  &:hover::before {
+  // hover || checked = thick border
+  &:hover::before,
+  :checked + &::before {
     @include input-border--hover--thick;
   }
-}
 
-// Misc
+  // checked
+  :checked + &::after {
+    content: ' ';
+  }
 
-@mixin input-placeholder($size: md) {
-  @include font($size: $size, $color: $text-dark--a);
-}
+  // unchecked
+  :not(:checked) + &::after {
+    content: none;
+  }
 
-@mixin input--disabled {
-  @include font($color: $text-dark--a);
-  background-color: $slate--200;
-  border-color: $slate--300;
-}
+  [disabled] + &,
+  [disabled]:checked + & {
+    &::before,
+    &::after {
+      @include input--disabled;
+    }
+  }
 
-// accessible way of hiding the default input
-// https://webaim.org/techniques/css/invisiblecontent/
+  // warning color
+  .hasError.warning + & {
+    &::before,
+    &::after {
+      border-color: $text-dark--warning;
+    }
+  }
 
-@mixin hide-default-browser-input {
-  opacity: 0;
-  position: absolute;
-  -webkit-appearance: none;
-  z-index: -2;
+  // critical color
+  .hasError.critical + & {
+    &::before,
+    &::after {
+      border-color: $text-dark--warning;
+    }
+  }
 }

@@ -67,6 +67,34 @@ import { Box } from '../../structure/Box';
       />
     </Box>
   </Label>
+  <Label field="ice-cream" title="Disabled" containsFieldGroup>
+    <Box row align="space-between" maxWidth="500px" padding>
+      <RawCheckbox
+        name="ice-cream"
+        value="chocolate"
+        label="Chocolate"
+        onChange={() => {}}
+        checked={false}
+        disabled
+      />
+      <RawCheckbox
+        name="ice-cream"
+        value="vanilla"
+        label="Vanilla"
+        onChange={() => {}}
+        checked
+        disabled
+      />
+      <RawCheckbox
+        name="ice-cream"
+        value="strawberry"
+        label="Strawberry"
+        onChange={() => {}}
+        checked
+        disabled
+      />
+    </Box>
+  </Label>
 </Playground>
 
 ### Props

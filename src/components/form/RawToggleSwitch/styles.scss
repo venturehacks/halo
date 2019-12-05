@@ -1,0 +1,15 @@
+@import 'halo';
+
+// hides native browser control, must be adjacent to .label
+
+.component {
+  @include halo-element-base;
+  @include input-checkbox;
+}
+
+// renders large clickable label and toggle switch as pseudoelements
+
+.label {
+  @include halo-element-base;
+  @include input-label--toggle-switch;
+}
