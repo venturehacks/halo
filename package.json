@@ -188,7 +188,7 @@
       "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore --write",
       "git add"
     ],
-    "**/*.{ts,tsx}": [
+    "**/!(*scss.d).{ts,tsx}": [
       "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore --write",
       "tslint --fix",
       "git add"
