@@ -7,7 +7,7 @@ export interface PillTagProps {
   children?: React.ReactNode;
   className?: string;
   href?: string;
-  onClick?: () => any;
+  onClick?: EventFunctionT;
 }
 
 function PillTag({ children, className, href, onClick }: PillTagProps) {
@@ -36,4 +36,3 @@ function PillTag({ children, className, href, onClick }: PillTagProps) {
 }
 
 export { PillTag };
-export default PillTag;

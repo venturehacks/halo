@@ -1,29 +1,38 @@
 @import 'halo';
 
-$height: 28px;
+$pilltag-height: 28px;
+$pilltag-border-radius: 13px;
 
 .component {
   @include halo-element-base; // TODO: deprecate
   @include text-truncate;
   display: inline-block;
-  box-sizing: border-box;
-  border-radius: $height / 2;
+  border-radius: $pilltag-border-radius;
   border: 1px solid $slate--200;
-  color: $slate--600;
+  color: $text-dark--aaa;
   font-size: 14px;
-  height: $height;
-  line-height: $height - 2px;
+  height: $pilltag-height;
+  line-height: $pilltag-height - 2px;
+  letter-spacing: -0.01px;
   padding: 0 10px;
   text-align: center;
-  margin-bottom: 0.333rem;
-  margin-right: 0.333rem;
+  margin-bottom: 0.5rem;
+  margin-right: 0.5rem;
+
+  &:hover {
+    border-color: $slate--400;
+  }
+
+  &:not(a):hover {
+    cursor: default;
+  }
 
   a,
   a:link,
   a:visited,
   a:hover,
   a:active {
-    color: $slate--600;
+    color: $text-dark--aaa;
     text-decoration: none;
     cursor: pointer;
   }
