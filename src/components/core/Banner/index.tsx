@@ -8,6 +8,7 @@ export type BannerVariant = 'default' | 'warning' | 'error' | 'success';
 export interface BannerProps {
   children?: React.ReactNode;
   className?: string;
+  offerDismiss?: boolean;
   onDismiss?: EventFunctionT;
   variant?: BannerVariant;
 }
@@ -15,6 +16,7 @@ export interface BannerProps {
 function Banner({
   children,
   className,
+  offerDismiss = true,
   onDismiss,
   variant = 'default',
 }: BannerProps) {
@@ -43,7 +45,7 @@ function Banner({
   return (
     <div className={classes}>
       {children}
-      <button onClick={handleDismiss}>(X)</button>
+      {offerDismiss && <button onClick={handleDismiss}>(X)</button>}
       {/* <CloseIcon
       className={styles.closeIcon}
       onClick={onDismiss}
