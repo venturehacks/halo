@@ -12,19 +12,22 @@ $pilltag-border-radius: 13px;
   color: $text-dark--aaa;
   font-size: 14px;
   height: $pilltag-height;
-  line-height: $pilltag-height - 2px;
+  line-height: $pilltag-height;
   letter-spacing: -0.01px;
   padding: 0 10px;
   text-align: center;
-  margin-bottom: 0.5rem;
-  margin-right: 0.5rem;
+  margin-right: tempo(1);
 
-  &:hover {
-    border-color: $slate--400;
+  &:last-child {
+    margin-right: 0;
   }
 
-  &:not(a):hover {
-    cursor: default;
+  &.anchor,
+  &[role='button'] {
+    &:hover {
+      border-color: $slate--400;
+      cursor: pointer;
+    }
   }
 
   a,
