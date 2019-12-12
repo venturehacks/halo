@@ -1,0 +1,71 @@
+@import 'halo';
+
+.component {
+  @include font($size: md, $weight: medium);
+  @include border-rounded;
+  @include font-antialiased;
+  position: relative;
+  margin-bottom: tempo(2);
+  max-height: none;
+  padding: tempo(1.5) tempo(5) tempo(1.5) tempo(3);
+  width: 100%;
+  opacity: 1;
+  transition: all 240ms ease;
+  will-change: height, max-height, opacity, padding, margin;
+  overflow: hidden;
+
+  &.dismissed {
+    max-height: 0;
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    pointer-events: none;
+  }
+
+  // aka "default" - default is a reserved word
+  &.passive {
+    background-color: #385075;
+    color: $white;
+  }
+
+  // variants aka colors
+  &.warning {
+    color: $text-dark--aaaa;
+    background-color: $orange--400;
+  }
+
+  &.error {
+    color: $white;
+    background-color: $red--700;
+  }
+
+  &.success {
+    color: $white;
+    background-color: $green--500;
+  }
+
+  // constrained container width
+  &.constrained {
+    max-width: grid-cell-width(20);
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  // children links
+  a {
+    @include font-default-link($color: currentColor);
+  }
+}
+
+.closeIcon {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  right: tempo(1);
+  transform: translate(-50%, -50%);
+  color: currentColor;
+  opacity: 0.66;
+  &:hover {
+    opacity: 1;
+  }
+}

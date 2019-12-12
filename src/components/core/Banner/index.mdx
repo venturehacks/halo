@@ -1,0 +1,37 @@
+---
+name: Banner
+menu: Core
+route: /core/banner
+---
+
+import { Props, Playground } from 'docz';
+import { Header } from '../Header';
+import { Box } from '../../structure/Box';
+import { Banner } from './'
+import '../../../index.scss';
+
+# Banner
+
+<Playground>
+  <Box maxWidth="550px">
+    <Box margin={{ bottom: 4 }}>
+      <Banner>
+        Find more jobs. Try clearing your filters.
+      </Banner>
+      <Banner variant="warning">
+        Credit Cards
+      </Banner>
+      <Banner variant="error">
+        Developer Tools
+      </Banner>
+      <Banner variant="success">
+        Cloud Infrastructure
+      </Banner>
+    </Box>
+  </Box>
+</Playground>
+
+
+### Props
+
+<Props of={Banner} />

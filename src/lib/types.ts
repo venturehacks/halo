@@ -21,4 +21,4 @@ interface Dictionary<T> {
 type StringObjectT = Dictionary<string>;
 type ReactEventT = React.ChangeEvent<any>;
 type ReactDragEventT = React.DragEvent<any>;
-type EventFunctionT = React.ChangeEventHandler<any>;
+type EventFunctionT = React.EventHandler<any>;
