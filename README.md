@@ -147,11 +147,12 @@ Design maintains separate release notes and numeric versioning.
   - Max Lustig
   - Lily Chen
 - **Design**
+  - Andres Santanilla
   - Shane Zucker
-  - Gearóid O’Rourke
-  - Adam Ruf
   - Lily Chen
   - Stephen Varaday
+  - Adam Ruf
+  - Gearóid O’Rourke
   - Chad Whitaker
 - **Technical Feedback**
   - Thomas Hu
