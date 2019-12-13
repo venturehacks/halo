@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
 import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 

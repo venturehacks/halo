@@ -9,6 +9,15 @@ export default {
   src: path.join(__dirname, 'src'),
   title: 'Halo Design System',
   typescript: true,
+  docgenConfig: {
+    propFilter: prop => {
+      if (prop.parent) {
+        return !prop.parent.fileName.includes('node_modules');
+      }
+
+      return true;
+    },
+  },
   filterComponents: files =>
     files.filter(filepath =>
       /components\/.*\/*\.(js|jsx|ts|tsx)$/.test(filepath),

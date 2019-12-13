@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import idx from 'idx';
-import * as React from 'react';
+import React from 'react';
 
 import { ForwardedRefProps, withForwardedRef } from '../../../lib';
 import { Span } from '../../core/Span';

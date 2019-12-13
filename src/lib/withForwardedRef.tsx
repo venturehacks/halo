@@ -12,7 +12,7 @@
  *     https://github.com/Hotell/blogposts/blob/master/2018-08/react-ts-refs/src/app/06-forwarding-refs-in-hoc.tsx
  */
 
-import * as React from 'react';
+import React from 'react';
 
 export interface ForwardedRefProps {
   forwardedRef?: React.Ref<any>;
