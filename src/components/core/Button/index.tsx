@@ -9,15 +9,31 @@ import {
 
 import * as styles from './styles.scss';
 
-export type ButtonSize = 'large' | 'regular' | 'small' | 'xsmall' | 'inline';
+export type ButtonSize =
+  | 'large'
+  | 'regular'
+  | 'small'
+  | 'xsmall'
+  /**
+   * @deprecated 0.9
+   */
+  | 'inline';
+
 export type ButtonVariant =
   | 'primary'
   | 'secondary'
   | 'warning'
   | 'danger'
   | 'success'
-  | 'gray'
   | 'secondary-gray'
+  | 'clear'
+  /**
+   * @deprecated 0.9
+   */
+  | 'gray'
+  /**
+   *  @deprecated 0.9
+   */
   | 'alternate';
 
 export interface ButtonProps {
@@ -46,6 +62,8 @@ export interface ButtonProps {
    * Main control for button style
    */
   variant?: ButtonVariant;
+
+  width?: '100%';
 }
 
 function ButtonRaw({
@@ -61,6 +79,7 @@ function ButtonRaw({
   size = 'regular',
   type = 'button',
   variant = 'primary',
+  width,
   ...buttonElementProps
 }: ButtonProps &
   React.HTMLAttributes<HTMLButtonElement> &
@@ -73,6 +92,7 @@ function ButtonRaw({
     emphasis && styles.emphasis,
     icon && styles.icon,
     icon && !children && styles.iconOnly,
+    width === '100%' && styles.width100,
     className,
   ]);
 

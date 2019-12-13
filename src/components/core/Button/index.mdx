@@ -7,6 +7,8 @@ route: /core/button
 import { Props, Playground } from 'docz';
 import { Box } from '../../structure/Box';
 import { Button } from './'
+import { Tooltip } from '../Tooltip'
+import { Header } from '../Header'
 import '../../../index.scss';
 
 # Button
@@ -15,42 +17,61 @@ import '../../../index.scss';
   <Box row margin={{ bottom: 2 }}>
     <Button>Primary</Button>
     <Button variant="secondary">Secondary</Button>
+    <Button variant="secondary-gray" emphasis={false}>Secondary Gray</Button>
+    <Button variant="clear">Clear</Button>
+  </Box>
+  <Box margin={{ bottom: 8 }} row>
     <Button variant="warning">Warning</Button>
     <Button variant="danger">Danger</Button>
     <Button variant="success">Success</Button>
   </Box>
-  <Box row>
-    <Button variant="secondary-gray" emphasis={false}>Secondary Gray</Button>
+
+  <Header h4>Sizes</Header>
+  <Box maxWidth="400px" align="space-between" valign="bottom" row>
+    <Button size="large" variant="secondary-gray">Large</Button>
+
+    <Button variant="secondary-gray">Regular</Button>
+
+    <Button size="small" variant="secondary-gray">Small</Button>
+
+    <Button size="xsmall" variant="secondary-gray">Extra small</Button>
+  </Box>
+
+  <Box margin={{ top: 4, bottom: 8 }} row>
+    <Button size="inline" variant="secondary-gray">Inline</Button> {' '}button to apply to this job.
+  </Box>
+  <Box>
+    <div>
+      <Tooltip content="Supported in 0.8, fully deprecated in 0.9" placement="right">
+        <Header h4 inlineBlock>⚠️ Deprecated</Header>
+      </Tooltip>
+    </div>
     <Button variant="gray">Gray</Button>
     <Button variant="alternate" emphasis={false}>alternate</Button>
   </Box>
 </Playground>
 
-### Sizes
-
-<Box row valign="bottom">
-  <Button size="large" variant="secondary-gray">Large 20px</Button>
-  &nbsp;
-  <Button variant="secondary-gray">Regular 16px</Button>
-  &nbsp;
-  <Button size="small" variant="secondary-gray">Small 14px</Button>
-  &nbsp;
-  <Button size="xsmall" variant="secondary-gray">Extra small 12px</Button>
-</Box>
-
-<br />
-
-<Box row>
-  <Button size="inline" variant="secondary-gray">Inline</Button> &nbsp; button to apply.
-</Box>
-
-
 ## Exports
 
 ```ts
-type ButtonSize = 'large' | 'regular' | 'small' | 'xsmall' | 'inline';
-
-type ButtonVariant = 'primary' | 'secondary' | 'warning' | 'danger' | 'success' | 'gray' | 'secondary-gray' | 'alternate';
+type ButtonSize =
+  | 'large'
+  | 'regular'
+  | 'small'
+  | 'xsmall'
+  | 'inline'; // deprecated in 0.9
+```
+```ts
+type ButtonVariant =
+  | 'primary'
+  | 'secondary'
+  | 'warning'
+  | 'danger'
+  | 'success'
+  | 'secondary-gray'
+  | 'clear'
+  | 'gray' // deprecated in 0.9
+  | 'alternate'; // deprecated in 0.9
 ```
 
 
