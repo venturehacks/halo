@@ -6,6 +6,7 @@ route: /core/banner
 
 import { Props, Playground } from 'docz';
 import { Header } from '../Header';
+import { Span } from '../Span';
 import { Box } from '../../structure/Box';
 import { Banner } from './'
 import '../../../index.scss';
@@ -13,21 +14,39 @@ import '../../../index.scss';
 # Banner
 
 <Playground>
-  <Box maxWidth="550px">
+  <Box maxWidth="640px">
+    <Header h4>Static</Header>
     <Box margin={{ bottom: 4 }}>
       <Banner>
-        Find more jobs. Try clearing your filters.
+        Find more jobs. <Span regular>Try clearing your filters.</Span>
       </Banner>
       <Banner variant="warning">
-        Credit Cards
+        Draft Mode. <Span regular>To make public, publish this profile</Span>
       </Banner>
       <Banner variant="error">
-        Developer Tools
+        This profile is banned from Talent. <Span regular>They cannot recruit on AngelList.</Span>
       </Banner>
       <Banner variant="success">
-        Cloud Infrastructure
+        New password saved! <Span regular>Please log in again</Span>
       </Banner>
     </Box>
+
+    <Header h4>Dismissable</Header>
+    <Box margin={{ bottom: 4 }}>
+      <Banner offerDismiss>
+        Find more jobs. <Span regular>Try clearing your filters.</Span>
+      </Banner>
+      <Banner variant="warning" offerDismiss>
+        Draft Mode. <Span regular>To make public, publish this profile</Span>
+      </Banner>
+      <Banner variant="error" offerDismiss>
+        This profile is banned from Talent. <Span regular>They cannot recruit on AngelList.</Span>
+      </Banner>
+      <Banner variant="success" offerDismiss>
+        New password saved! <Span regular>Please log in again</Span>
+      </Banner>
+    </Box>
+
   </Box>
 </Playground>
 

@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import * as React from 'react';
 
+import { CloseThinIcon } from '../../icons';
+
 import * as styles from './styles.scss';
 
 export type BannerVariant = 'default' | 'warning' | 'error' | 'success';
@@ -8,6 +10,10 @@ export type BannerVariant = 'default' | 'warning' | 'error' | 'success';
 export interface BannerProps {
   children?: React.ReactNode;
   className?: string;
+  /**
+   * Expose a close 'x' button. State is managed internally. Use onDismiss to respond to interaction.
+   * @default false
+   */
   offerDismiss?: boolean;
   onDismiss?: EventFunctionT;
   variant?: BannerVariant;
@@ -16,7 +22,7 @@ export interface BannerProps {
 function Banner({
   children,
   className,
-  offerDismiss = true,
+  offerDismiss = false,
   onDismiss,
   variant = 'default',
 }: BannerProps) {
@@ -43,13 +49,15 @@ function Banner({
   );
 
   return (
-    <div className={classes}>
+    <div className={classes} role="alert">
       {children}
-      {offerDismiss && <button onClick={handleDismiss}>(X)</button>}
-      {/* <CloseIcon
-      className={styles.closeIcon}
-      onClick={onDismiss}
-    /> */}
+      {offerDismiss && (
+        <CloseThinIcon
+          className={styles.closeIcon}
+          onClick={handleDismiss}
+          role="button"
+        />
+      )}
     </div>
   );
 }
