@@ -1,13 +1,13 @@
 @import 'halo';
 
 .component {
-  @include font($size: md, $weight: medium);
+  @include font($size: sm, $weight: medium);
   @include border-rounded;
   @include font-antialiased;
   position: relative;
   margin-bottom: tempo(2);
   max-height: none;
-  padding: tempo(1.5) tempo(5) tempo(1.5) tempo(3);
+  padding: tempo(2) tempo(4);
   width: 100%;
   opacity: 1;
   transition: all 240ms ease;
@@ -20,6 +20,10 @@
     margin: 0;
     padding: 0;
     pointer-events: none;
+  }
+
+  &.offerDismiss {
+    padding-right: tempo(5);
   }
 
   // aka "default" - default is a reserved word
@@ -58,15 +62,21 @@
   }
 }
 
-.closeIcon {
+.closeButton {
+  padding: tempo(1);
+  background: transparent;
+  border: 0;
   cursor: pointer;
   position: absolute;
   top: 50%;
-  right: tempo(2);
+  right: 0;
   transform: translate(-50%, -50%);
   color: currentColor;
-  opacity: 0.66;
-  &:hover {
-    opacity: 1;
-  }
+
+  // outline: 1px solid red;
+}
+
+.closeIcon {
+  display: block;
+  color: currentColor;
 }

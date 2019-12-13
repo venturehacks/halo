@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import * as React from 'react';
 
-import { CloseThinIcon } from '../../icons';
+import { CloseIcon, CloseThinIcon } from '../../icons';
 
 import * as styles from './styles.scss';
 
@@ -48,6 +48,7 @@ function Banner({
     styles.component,
     className,
     isDismissed && styles.dismissed,
+    offerDismiss && styles.offerDismiss,
     constrain && styles.constrain,
     variant === 'default' && styles.passive,
     variant === 'error' && styles.error,
@@ -59,11 +60,9 @@ function Banner({
     <div className={classes} role="alert">
       {children}
       {offerDismiss && (
-        <CloseThinIcon
-          className={styles.closeIcon}
-          onClick={handleDismiss}
-          role="button"
-        />
+        <button className={styles.closeButton} onClick={handleDismiss}>
+          <CloseIcon className={styles.closeIcon} />
+        </button>
       )}
     </div>
   );
