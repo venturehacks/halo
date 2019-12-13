@@ -17,6 +17,7 @@ Our tooltip component is a thin wrapper around Tippy, with small tweaks to styli
 
 [Tippy.js Prop API](https://atomiks.github.io/tippyjs/all-props/)
 
+
 <Playground>
   <Header h4>Text</Header>
   <Box margin={{ bottom: 3 }}>
@@ -37,6 +38,24 @@ Our tooltip component is a thin wrapper around Tippy, with small tweaks to styli
     </Tooltip>
   </Box>
 </Playground>
+
+## Custom Components
+
+Likely, you'll want to use a React component as the immediate child to `<Tooltip>`. Be sure to forward the ref!
+
+```tsx
+// will fail if you try to wrap in <Tooltip>:
+const WillNotWork = () => <button>Custom component</button>;
+
+// Technique 1: use provided higher-order-component
+import { withForwardedRef } from 'halo';
+const WorksNow = withForwardedRef<Props>(WillNotWork);
+
+// Technique 2: manually forward the ref
+const ThisWillWork = React.forwardRef((props, ref) => (
+  <button ref={ref}>Text</button>
+));
+```
 
 ### Props
 

@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
 import {
   TextColorScheme,
@@ -16,7 +16,7 @@ type HTMLParagraphElementProps = Omit<
   'color'
 >;
 
-export interface ParagraphProps extends HTMLParagraphElementProps {
+export interface ParagraphProps {
   children: React.ReactNode;
   className?: string;
   /**
@@ -58,7 +58,7 @@ function Paragraph({
   contrast,
   colorScheme,
   ...paragraphElementProps
-}: ParagraphProps) {
+}: ParagraphProps & HTMLParagraphElementProps) {
   const classes = classNames(styles.component, flow && styles.flow, className);
 
   return (

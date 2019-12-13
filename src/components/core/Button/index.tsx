@@ -1,6 +1,6 @@
 import camelCase from 'camelcase';
 import classNames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
 import {
   ForwardedRefProps,
@@ -20,7 +20,7 @@ export type ButtonVariant =
   | 'secondary-gray'
   | 'alternate';
 
-export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps {
   children?: React.ReactNode;
   className?: string;
   /**
@@ -63,6 +63,7 @@ function ButtonRaw({
   variant = 'primary',
   ...buttonElementProps
 }: ButtonProps &
+  React.HTMLAttributes<HTMLButtonElement> &
   ForwardedRefProps &
   React.PropsWithoutRef<JSX.IntrinsicElements['button']>) {
   const buttonClassNames = classNames([

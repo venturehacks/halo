@@ -6,6 +6,7 @@ route: /core/header
 
 import { Playground, Props } from 'docz'
 import { Header } from './'
+import { Tooltip } from '../Tooltip'
 import '../../../index.scss';
 
 # Header
@@ -33,9 +34,11 @@ Semantic headers. Implements a subset of common [text interfaces](/constants/tex
     Headline h5 (sm &middot; 14px)
   </Header>
 
-  <Header h6>
-    Headline h6 (xs &middot; 12px)
-  </Header>
+  <Tooltip content="My tooltip looks good because I'm inline block!" placement="right">
+    <Header h6 inlineBlock>
+      Headline h6 (xs &middot; 12px)
+    </Header>
+  </Tooltip>
 
 </Playground>
 

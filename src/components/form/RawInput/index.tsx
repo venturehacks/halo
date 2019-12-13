@@ -8,8 +8,7 @@ import * as styles from './styles.scss';
 
 type IconPosition = 'right' | 'left';
 
-export interface RawInputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface RawInputProps {
   className?: string;
 
   /**
@@ -70,7 +69,7 @@ export interface RawInputProps
     | 'week';
 }
 
-export default function RawInput({
+function RawInput({
   className,
   errorSeverity = 'warning',
   hasError = false,
@@ -80,7 +79,7 @@ export default function RawInput({
   transparent = false,
   type = 'text',
   ...rest
-}: RawInputProps) {
+}: RawInputProps & React.InputHTMLAttributes<HTMLInputElement>) {
   const input = (
     <input
       className={classNames(
