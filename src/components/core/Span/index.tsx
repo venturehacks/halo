@@ -75,6 +75,11 @@ export interface SpanProps extends React.HTMLAttributes<HTMLSpanElement> {
   muted?: boolean;
 
   /**
+   * Convenience for 400 weight
+   */
+  regular?: boolean;
+
+  /**
    * Convenience for 600 weight
    */
   semibold?: boolean;
@@ -141,6 +146,7 @@ function SpanRaw(props: SpanProps & ForwardedRefProps) {
     medium,
     monospace,
     muted,
+    regular,
     semibold,
     size,
     strong,
@@ -156,9 +162,19 @@ function SpanRaw(props: SpanProps & ForwardedRefProps) {
 
   const textContrast: TextContrast = textContrastForConfiguration(props);
   const hasColorOverride = success || error || warning || color;
+  const applyColorDerivedByContrast = contrast && !hasColorOverride;
+
+  // [warning] mutually exclusive color
+  if (contrast && hasColorOverride) {
+    // tslint:disable-next-line: no-console
+    console.warn(
+      `[Halo] conflicting props provided: 'contrast' cannot coexist with: 'success' 'error' 'warning' 'color'`,
+    );
+  }
 
   const classes = classNames(
-    !hasColorOverride && `__halo_textContrast_${colorScheme}_${textContrast}`,
+    applyColorDerivedByContrast &&
+      `__halo_textContrast_${colorScheme}_${textContrast}`,
     size && `__halo_fontSizeMap_size--${size}`,
     lineHeight && `__halo_lineHeight_${lineHeight}`,
     weight && `__halo_fontWeight_${weight}`,
@@ -169,6 +185,7 @@ function SpanRaw(props: SpanProps & ForwardedRefProps) {
     error && styles.error,
     italic && styles.italic,
     monospace && styles.monospace,
+    regular && styles.regular,
     medium && styles.medium,
     semibold && styles.semibold,
     strong && styles.bold,

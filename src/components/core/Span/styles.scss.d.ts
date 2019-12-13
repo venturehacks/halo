@@ -2,6 +2,7 @@ declare const styles: {
   readonly "block": string;
   readonly "uppercase": string;
   readonly "italic": string;
+  readonly "regular": string;
   readonly "medium": string;
   readonly "semibold": string;
   readonly "bold": string;
