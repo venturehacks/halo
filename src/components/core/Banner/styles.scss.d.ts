@@ -5,7 +5,7 @@ declare const styles: {
   readonly "warning": string;
   readonly "error": string;
   readonly "success": string;
-  readonly "constrained": string;
+  readonly "constrain": string;
   readonly "closeIcon": string;
 };
 export = styles;

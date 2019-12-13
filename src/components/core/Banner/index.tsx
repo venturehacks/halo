@@ -11,6 +11,11 @@ export interface BannerProps {
   children?: React.ReactNode;
   className?: string;
   /**
+   * Constrain maximum width to 20 grid cells wide. This sane default prevents the banner from growing comically wide.
+   * @default true
+   */
+  constrain?: boolean;
+  /**
    * Expose a close 'x' button. State is managed internally. Use onDismiss to respond to interaction.
    * @default false
    */
@@ -22,6 +27,7 @@ export interface BannerProps {
 function Banner({
   children,
   className,
+  constrain,
   offerDismiss = false,
   onDismiss,
   variant = 'default',
@@ -42,6 +48,7 @@ function Banner({
     styles.component,
     className,
     isDismissed && styles.dismissed,
+    constrain && styles.constrain,
     variant === 'default' && styles.passive,
     variant === 'error' && styles.error,
     variant === 'warning' && styles.warning,

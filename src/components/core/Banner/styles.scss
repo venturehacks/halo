@@ -45,7 +45,7 @@
   }
 
   // constrained container width
-  &.constrained {
+  &.constrain {
     max-width: grid-cell-width(20);
     margin-left: auto;
     margin-right: auto;
