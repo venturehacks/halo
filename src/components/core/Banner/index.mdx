@@ -13,21 +13,31 @@ import '../../../index.scss';
 
 # Banner
 
+Used to display a prominent message and related optional actions. They are displayed at the top of the screen and may be either persistent until dismissed or expired after some time. Avoid stacking more than one banner.
+
+```tsx
+export type BannerVariant =
+  | 'default'  // Lowest priority
+  | 'warning'  // Mid priority, "just so you know" type messages
+  | 'error'    // High priority blocker
+  | 'success'; // High priority success
+```
+
 <Playground>
   <Box maxWidth="640px">
-    <Header h4>Static</Header>
+    <Header h4>Static, with inline links</Header>
     <Box margin={{ bottom: 4 }}>
       <Banner>
-        Find more jobs. <Span regular>Try clearing your filters.</Span>
+        Find more jobs. <Span regular><a href="#">Try clearing your filters</a>.</Span>
       </Banner>
       <Banner variant="warning">
-        Draft Mode. <Span regular>To make public, publish this profile</Span>
+        Draft Mode. <Span regular><a href="#">To make public, publish this profile</a>.</Span>
       </Banner>
       <Banner variant="error">
-        This profile is banned from Talent. <Span regular>They cannot recruit on AngelList.</Span>
+        This profile is banned from Talent. <Span regular><a href="#">They cannot recruit on AngelList</a>.</Span>
       </Banner>
       <Banner variant="success">
-        New password saved! <Span regular>Please log in again</Span>
+        New password saved! <Span regular><a href="#">Please log in again</a>.</Span>
       </Banner>
     </Box>
 

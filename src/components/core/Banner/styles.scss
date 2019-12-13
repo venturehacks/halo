@@ -54,6 +54,7 @@
   // children links
   a {
     @include font-default-link($color: currentColor);
+    text-decoration: underline;
   }
 }
 
