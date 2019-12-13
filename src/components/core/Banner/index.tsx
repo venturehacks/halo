@@ -61,7 +61,7 @@ function Banner({
       {children}
       {offerDismiss && (
         <button className={styles.closeButton} onClick={handleDismiss}>
-          <CloseIcon className={styles.closeIcon} />
+          <CloseIcon />
         </button>
       )}
     </div>
