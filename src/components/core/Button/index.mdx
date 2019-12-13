@@ -27,18 +27,14 @@ import '../../../index.scss';
   </Box>
 
   <Header h4>Sizes</Header>
-  <Box maxWidth="400px" align="space-between" valign="bottom" row>
-    <Button size="large" variant="secondary-gray">Large</Button>
+  <Box maxWidth="540px" align="space-between" valign="bottom" margin={{ bottom: 8 }} row>
+    <Button size="large" variant="secondary-gray">Large Button</Button>
 
     <Button variant="secondary-gray">Regular</Button>
 
     <Button size="small" variant="secondary-gray">Small</Button>
 
     <Button size="xsmall" variant="secondary-gray">Extra small</Button>
-  </Box>
-
-  <Box margin={{ top: 4, bottom: 8 }} row>
-    <Button size="inline" variant="secondary-gray">Inline</Button> {' '}button to apply to this job.
   </Box>
   <Box>
     <div>
@@ -48,6 +44,9 @@ import '../../../index.scss';
     </div>
     <Button variant="gray">Gray</Button>
     <Button variant="alternate" emphasis={false}>alternate</Button>
+    <Box margin={{ top: 4 }} row>
+      <Button size="inline" variant="secondary-gray">Inline</Button> {' '}button to apply to this job.
+    </Box>
   </Box>
 </Playground>
 
