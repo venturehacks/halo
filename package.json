@@ -58,6 +58,7 @@
     "@babel/cli": "^7.2.0",
     "@babel/core": "^7.2.0",
     "@babel/node": "^7.2.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
     "@babel/preset-env": "^7.2.0",
     "@babel/preset-react": "^7.0.0",
     "@emotion/core": "^10.0.4",
@@ -120,7 +121,6 @@
     "eslint-plugin-typescript-sort-keys": "0.5.0",
     "husky": "^3.0.5",
     "identity-obj-proxy": "^3.0.0",
-    "idx": "^2.5.6",
     "jest": "^24.9.0",
     "jest-runner-eslint": "^0.7.5",
     "jest-runner-prettier": "^0.3.3",
@@ -165,7 +165,6 @@
     "react-spinners": "^0.6.1"
   },
   "peerDependencies": {
-    "idx": "^2.5.0",
     "lodash": "^4.17.11",
     "react": ">= 16.8.6",
     "react-dom": ">= 16.8.6",

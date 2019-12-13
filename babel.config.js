@@ -2,6 +2,7 @@ module.exports = {
   env: {
     development: {
       presets: ['next/babel'],
+      plugins: ['@babel/plugin-proposal-optional-chaining'],
     },
     production: {
       presets: [
@@ -15,10 +16,14 @@ module.exports = {
           },
         ],
       ],
+      plugins: ['@babel/plugin-proposal-optional-chaining'],
     },
     test: {
       presets: [['next/babel', { 'preset-env': { modules: 'commonjs' } }]],
-      plugins: ['dynamic-import-node'],
+      plugins: [
+        'dynamic-import-node',
+        '@babel/plugin-proposal-optional-chaining',
+      ],
     },
   },
 };

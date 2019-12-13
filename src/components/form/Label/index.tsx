@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import idx from 'idx';
 import React from 'react';
 
 import { ForwardedRefProps, withForwardedRef } from '../../../lib';
@@ -100,8 +99,7 @@ function LabelRaw({
 function hasCheckboxOrRadio(children: React.ReactNode) {
   return React.Children.toArray<React.ReactNode>(children).some(
     (child: any) => {
-      const title =
-        idx(child, _ => _.type.displayName) || idx(child, _ => _.type.title);
+      const title = child?.type?.displayName || child?.type?.title;
 
       if (typeof title !== 'string') {
         return false;
