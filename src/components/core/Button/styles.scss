@@ -171,7 +171,7 @@
 
 .regular {
   font-size: 14px;
-  padding: tempo(1.5) tempo(2) 14px;
+  padding: tempo(1.5) tempo(2);
 
   &:last-of-type {
     padding-left: tempo(5);
@@ -190,7 +190,7 @@
 
 .large {
   font-size: 14px;
-  padding: tempo(2) tempo(5) 18px;
+  padding: tempo(2) tempo(5);
 
   &:last-of-type {
     padding-left: tempo(6);
@@ -204,7 +204,7 @@
 
 .small {
   font-size: 14px;
-  padding: tempo(1) tempo(1.5) 10px;
+  padding: tempo(1) tempo(1.5);
 
   &:last-of-type {
     padding-left: tempo(2);
@@ -223,7 +223,7 @@
 
 .xsmall {
   font-size: 12px;
-  padding: 3px tempo(1) 4px;
+  padding: 3px tempo(1);
 
   &.text {
     padding-left: tempo(1);

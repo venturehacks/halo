@@ -9,7 +9,16 @@ import {
 
 import * as styles from './styles.scss';
 
-export type ButtonSize = 'large' | 'regular' | 'small' | 'xsmall' | 'inline';
+export type ButtonSize =
+  | 'large'
+  | 'regular'
+  | 'small'
+  | 'xsmall'
+  /**
+   * @deprecated 0.9
+   */
+  | 'inline';
+
 export type ButtonVariant =
   | 'primary'
   | 'secondary'
