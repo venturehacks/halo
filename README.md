@@ -108,12 +108,12 @@ return (
 
 | Date           | Milestone      |                                                               | Status |
 | -------------- | -------------- | ------------------------------------------------------------- | :----: |
-| 2019 &nbsp; –  | `v1.0.0`       | CoPro production release                                      |   🌀   |
+| 2020 &nbsp; –  | `v1.0.0`       | ⋯                                                             |   🌀   |
 | ⋯              | ⋯              | ⋯                                                             |   ⋯    |
-| 2019 &nbsp; –  | `v0.10.x`      | ?                                                             |   🔶   |
-| 2019 &nbsp; –  | `v0.9.x`       | Accessibility audit, themeable, .halorc.js                    |   🔶   |
-| 2019 &nbsp; –  | `v0.8.x`       | Component pack                                                |   🔶   |
-| 2019 October   | `v0.8.x`       | Responive Grid + Cell, performance pass                       |   🔶   |
+| 2020 &nbsp; –  | `v0.10.x`      | ?                                                             |   🔶   |
+| 2020 &nbsp; –  | `v0.9.x`       | Accessibility audit, themeable, .halorc.js                    |   🔶   |
+| 2019 &nbsp; –  | `v0.8.x`       | Component pack, robust tooling                                |   ✅   |
+| 2019 October   | `v0.8.x`       | Responive Grid + Cell                                         |   ✅   |
 | 2019 September | `v0.7.0`       | Raw form components                                           |   ✅   |
 | 2019 August    | ⋯              | Pre-commit tooling                                            |   ✅   |
 | 2019 July      | ⋯              | Smoke tests, API iteration                                    |   ✅   |
