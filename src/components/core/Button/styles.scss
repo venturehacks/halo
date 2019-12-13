@@ -6,6 +6,7 @@
   @include font-antialiased;
   border: 1px solid transparent;
   font-family: inherit;
+  line-height: 1;
   text-align: center;
   text-decoration: none;
 
@@ -21,7 +22,7 @@
   &:focus {
     // probably should not turn this off due to accessibility.
     outline: 0;
-    box-shadow: 0 0 0 4px $blue--200;
+    box-shadow: 0 0 0 4px rgba(#06f, 0.25);
   }
 
   &[disabled] {
@@ -129,7 +130,7 @@
   color: $slate--400;
 
   &:hover {
-    background-color: lighten ($slate--100, 10%);
+    background-color: lighten($slate--100, 10%);
   }
 
   &:active {
@@ -153,6 +154,14 @@
   }
 }
 
+.clear {
+  color: $text-dark--aaaa;
+
+  &:hover {
+    background-color: rgba($slate--900, 0.08);
+  }
+}
+
 .alternate {
   color: $slate--500;
   background-color: $white;
@@ -160,28 +169,9 @@
 
 // Sizes
 
-.large {
-  font-size: 20px;
-  padding: tempo(2) tempo(2.5);
-
-  &:last-of-type {
-    padding-left: 40px;
-    padding-right: 40px;
-  }
-
-  &.text {
-    padding-left: tempo(2);
-    padding-right: tempo(2);
-  }
-
-  &.iconOnly {
-    padding: tempo(2.5);
-  }
-}
-
 .regular {
-  font-size: 16px;
-  padding: tempo(0.75 * 2) tempo(2);
+  font-size: 14px;
+  padding: tempo(1.5) tempo(2) 14px;
 
   &:last-of-type {
     padding-left: tempo(5);
@@ -198,9 +188,23 @@
   }
 }
 
+.large {
+  font-size: 14px;
+  padding: tempo(2) tempo(5) 18px;
+
+  &:last-of-type {
+    padding-left: tempo(6);
+    padding-right: tempo(6);
+  }
+
+  &.iconOnly {
+    padding: tempo(2.5);
+  }
+}
+
 .small {
   font-size: 14px;
-  padding: tempo(1) tempo(2);
+  padding: tempo(1) tempo(1.5) 10px;
 
   &:last-of-type {
     padding-left: tempo(2);
@@ -219,7 +223,7 @@
 
 .xsmall {
   font-size: 12px;
-  padding: tempo(0.5) tempo(1);
+  padding: 3px tempo(1) 4px;
 
   &.text {
     padding-left: tempo(1);
@@ -239,8 +243,13 @@
   display: inline-block;
   font-size: inherit;
   padding: tempo(0.5) tempo(1);
+  margin-right: tempo(1);
 }
 
 .icon {
   text-align: center;
+}
+
+.width100 {
+  width: 100%;
 }
