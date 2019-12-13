@@ -8,7 +8,6 @@ declare const styles: {
   readonly "success": string;
   readonly "constrain": string;
   readonly "closeButton": string;
-  readonly "closeIcon": string;
 };
 export = styles;
 
