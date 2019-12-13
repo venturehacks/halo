@@ -10,8 +10,7 @@ export interface RawSelectOption {
   value?: string;
 }
 
-export interface RawSelectProps
-  extends React.SelectHTMLAttributes<HTMLSelectElement> {
+export interface RawSelectProps {
   children?: React.ReactNode;
   className?: string;
   /**
@@ -45,7 +44,7 @@ function RawSelect({
   hasError = false,
   errorSeverity = 'warning',
   ...rest
-}: RawSelectProps) {
+}: RawSelectProps & React.SelectHTMLAttributes<HTMLSelectElement>) {
   return (
     <select
       className={classNames(

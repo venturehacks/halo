@@ -3,6 +3,10 @@ import { mapKeys } from 'lodash';
 import * as React from 'react';
 
 import { PaletteColor } from '../../../lib/colors';
+import {
+  ForwardedRefProps,
+  withForwardedRef,
+} from '../../../lib/withForwardedRef';
 
 import * as styles from './styles.scss';
 
@@ -24,7 +28,7 @@ export interface NegativeSpace {
   top?: number | boolean;
 }
 
-export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface BoxProps {
   /**
    * Horizontal alignment. top | bottom | left | right | normal | space-between | space-evenly | stretch
    */
@@ -81,12 +85,13 @@ export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   wrap?: boolean;
 }
 
-function Box({
+function BoxRaw({
   align,
   background,
   children,
   className,
   column = false,
+  forwardedRef,
   margin = 0,
   maxHeight,
   maxWidth,
@@ -100,7 +105,10 @@ function Box({
   width,
   wrap = false,
   ...divElementProps
-}: BoxProps) {
+}: BoxProps &
+  React.HTMLAttributes<HTMLDivElement> &
+  ForwardedRefProps &
+  React.PropsWithoutRef<JSX.IntrinsicElements['div']>) {
   // mutually exclusive: block vs flex-column vs. flex-row
   const isBlockElement = !row && !column;
   const isFlexColumn = !isBlockElement && column && !row;
@@ -171,6 +179,7 @@ function Box({
 
   return (
     <div
+      ref={forwardedRef}
       className={classes}
       onClick={onClick}
       style={inlineStyles}
@@ -208,5 +217,7 @@ function augmentNegativeSpaceClasses(
 
   return classes;
 }
+
+const Box = withForwardedRef<BoxProps>(BoxRaw);
 
 export { Box };

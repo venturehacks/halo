@@ -17,7 +17,7 @@ import {
 
 import * as styles from './styles.scss';
 
-export interface SpanProps extends React.HTMLAttributes<HTMLSpanElement> {
+export interface SpanProps {
   /**
    * Sharpens text. Ideal for light text on dark backgrounds
    */
@@ -129,7 +129,9 @@ export interface SpanProps extends React.HTMLAttributes<HTMLSpanElement> {
   xxmuted?: boolean;
 }
 
-function SpanRaw(props: SpanProps & ForwardedRefProps) {
+function SpanRaw(
+  props: SpanProps & React.HTMLAttributes<HTMLSpanElement> & ForwardedRefProps,
+) {
   const {
     antialiased,
     block,

@@ -5,8 +5,7 @@ import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 
 import styles from './styles.scss';
 
-export interface RawRadioProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface RawRadioProps {
   /**
    * set to true to visually render radios as checkboxes
    * @default false
@@ -42,7 +41,7 @@ function RawRadio({
   hasError,
   errorSeverity = 'warning',
   ...rest
-}: RawRadioProps) {
+}: RawRadioProps & React.InputHTMLAttributes<HTMLInputElement>) {
   return (
     <>
       <input

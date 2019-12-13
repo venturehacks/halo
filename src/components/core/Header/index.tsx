@@ -8,11 +8,15 @@ import {
   TextSize,
   TextWeight,
 } from '../../../lib/text';
+import {
+  ForwardedRefProps,
+  withForwardedRef,
+} from '../../../lib/withForwardedRef';
 import { Span } from '../Span';
 
 import * as styles from './styles.scss';
 
-export interface HeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
+export interface HeaderProps {
   children: React.ReactNode;
   className?: string;
   /**
@@ -65,6 +69,12 @@ export interface HeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
   h6?: boolean;
 
   /**
+   * Display as inline block; useful when attaching tooltips
+   * @default false
+   */
+  inlineBlock?: boolean;
+
+  /**
    * Convenience for contrast AAA typography
    */
   muted?: boolean;
@@ -100,7 +110,12 @@ export interface HeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
   xxmuted?: boolean;
 }
 
-function Header(props: HeaderProps) {
+function HeaderRaw(
+  props: HeaderProps &
+    React.HTMLAttributes<HTMLHeadingElement> &
+    ForwardedRefProps &
+    React.PropsWithoutRef<JSX.IntrinsicElements['header']>,
+) {
   const {
     children,
     className,
@@ -108,12 +123,14 @@ function Header(props: HeaderProps) {
     colorScheme = 'dark',
     contrast,
     flow = true,
+    forwardedRef,
     h1,
     h2,
     h3,
     h4,
     h5,
     h6,
+    inlineBlock,
     muted,
     size,
     tag,
@@ -127,10 +144,16 @@ function Header(props: HeaderProps) {
   const textSize: TextSize = size || textSizeForConfiguration(props);
   const tagName = tagNameForConfiguration(props);
 
-  const classes = classNames(styles.component, flow && styles.flow, className);
+  const classes = classNames(
+    styles.component,
+    flow && styles.flow,
+    inlineBlock && styles.inlineBlock,
+    className,
+  );
 
   return (
     <Span
+      ref={forwardedRef}
       className={classes}
       color={color}
       colorScheme={colorScheme}
@@ -178,5 +201,7 @@ function tagNameForConfiguration({ h1, h2, h3, h4, h5, h6, tag }: HeaderProps) {
 
   return 'h3';
 }
+
+const Header = withForwardedRef<HeaderProps>(HeaderRaw);
 
 export { Header };

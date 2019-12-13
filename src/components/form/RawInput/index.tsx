@@ -2,14 +2,17 @@ import classNames from 'classnames';
 import * as React from 'react';
 
 import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
+import {
+  ForwardedRefProps,
+  withForwardedRef,
+} from '../../../lib/withForwardedRef';
 import { Box } from '../../structure/Box';
 
 import * as styles from './styles.scss';
 
 type IconPosition = 'right' | 'left';
 
-export interface RawInputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface RawInputProps {
   className?: string;
 
   /**
@@ -70,19 +73,24 @@ export interface RawInputProps
     | 'week';
 }
 
-export default function RawInput({
+function RawInputRaw({
   className,
   errorSeverity = 'warning',
   hasError = false,
+  forwardedRef,
   icon,
   iconPosition = 'left',
   intrinsicWidth = '100%',
   transparent = false,
   type = 'text',
   ...rest
-}: RawInputProps) {
+}: RawInputProps &
+  React.InputHTMLAttributes<HTMLInputElement> &
+  ForwardedRefProps &
+  React.PropsWithoutRef<JSX.IntrinsicElements['input']>) {
   const input = (
     <input
+      ref={forwardedRef}
       className={classNames(
         styles.component,
         className,
@@ -121,5 +129,7 @@ export default function RawInput({
     </div>
   );
 }
+
+const RawInput = withForwardedRef<RawInputProps>(RawInputRaw);
 
 export { RawInput };
