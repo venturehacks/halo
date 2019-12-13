@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import * as React from 'react';
 
-import { CloseIcon, CloseThinIcon } from '../../icons';
+import { CloseIcon } from '../../icons';
 
 import * as styles from './styles.scss';
 
