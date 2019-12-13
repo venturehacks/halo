@@ -2,11 +2,33 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.7.7](https://github.com/venturehacks/halo/compare/0.7.6...v0.7.7)
+#### [v0.8.0](https://github.com/venturehacks/halo/compare/0.7.7...v0.8.0)
+
+> 13 December 2019
+
+- ClearButton + MiniButton [`#46`](https://github.com/venturehacks/halo/pull/46)
+- ClearButton + MiniButton [`#46`](https://github.com/venturehacks/halo/pull/46)
+- Quality of Life Care Package for 0.8 [`#45`](https://github.com/venturehacks/halo/pull/45)
+- Banner [`#44`](https://github.com/venturehacks/halo/pull/44)
+- PillTag - tune to design spec [`#40`](https://github.com/venturehacks/halo/pull/40)
+- LoadingIndicator [`#39`](https://github.com/venturehacks/halo/pull/39)
+- Tooltip [`#38`](https://github.com/venturehacks/halo/pull/38)
+- RawToggleSwitch [`#37`](https://github.com/venturehacks/halo/pull/37)
+- Modern Lint Infrastructure / HALO-30 [`#36`](https://github.com/venturehacks/halo/pull/36)
+- Dialog [`#33`](https://github.com/venturehacks/halo/pull/33)
+- [tooling] ignore scss.d.ts files in lint-staged [`da04ece`](https://github.com/venturehacks/halo/commit/da04ecefbd5697c09b74fe12f03427e514ab5d1d)
+- Update roadmap [`84f0b46`](https://github.com/venturehacks/halo/commit/84f0b46a12fe873c11fea042f9af3fbd13396e32)
+- [docs] add missing 'entry point css' instructions [`e363b8d`](https://github.com/venturehacks/halo/commit/e363b8d263d5523713f6f1ebc071c5dcdd41ef9a)
+- [Button] improve docs [`993ece4`](https://github.com/venturehacks/halo/commit/993ece42a8b4ddab2c244e3cf552d49168738ad4)
+- Roadmap update [`ccde6d7`](https://github.com/venturehacks/halo/commit/ccde6d71ae1cc7ecab23be933f7ab91032b0ac10)
+- Updateroadmap [`a9fa648`](https://github.com/venturehacks/halo/commit/a9fa648c15ee3bbdddb5e80a000c251f17ebb1c1)
+
+#### [0.7.7](https://github.com/venturehacks/halo/compare/0.7.6...0.7.7)
 
 > 31 October 2019
 
 - fix trueFalseToBoolean helper [`#32`](https://github.com/venturehacks/halo/pull/32)
+- Release 0.7.7 [`14a068d`](https://github.com/venturehacks/halo/commit/14a068da29938b9f8279459c97c7ae93856b014c)
 
 #### [0.7.6](https://github.com/venturehacks/halo/compare/0.7.5...0.7.6)
 
