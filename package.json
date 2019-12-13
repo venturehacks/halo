@@ -154,7 +154,7 @@
     "tslint": "5.20.0",
     "tslint-config-prettier": "1.18.0",
     "tslint-react": "4.1.0",
-    "typescript": "^3.6.3",
+    "typescript": "^3.7.3",
     "typesync": "^0.6.1",
     "webpack": "4.28.4",
     "webpack-merge": "^4.2.1"
