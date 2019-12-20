@@ -2,7 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.8.0](https://github.com/venturehacks/halo/compare/0.7.7...v0.8.0)
+#### [v0.8.1](https://github.com/venturehacks/halo/compare/0.8.0...v0.8.1)
+
+> 20 December 2019
+
+- Restore interface extends from React.HTMLAttributes&lt;T&gt; [`911ebdf`](https://github.com/venturehacks/halo/commit/911ebdf93329e19625bb095a4785069d3770a578)
+- Team update [`94bcb7d`](https://github.com/venturehacks/halo/commit/94bcb7d42ec57bb0c0d5ded9cf280238fda454da)
+- [Dialog] actually export component for build :disappointed_relieved: [`b21ae43`](https://github.com/venturehacks/halo/commit/b21ae435b249c4edce8e329f939c75250beebdc7)
+- [README] team update [`fb6935f`](https://github.com/venturehacks/halo/commit/fb6935f7fd892bb1274de77645db48b60ac98260)
+
+#### [0.8.0](https://github.com/venturehacks/halo/compare/0.7.7...0.8.0)
 
 > 13 December 2019
 
@@ -17,6 +26,7 @@ All notable changes to this project will be documented in this file. Dates are d
 - Modern Lint Infrastructure / HALO-30 [`#36`](https://github.com/venturehacks/halo/pull/36)
 - Dialog [`#33`](https://github.com/venturehacks/halo/pull/33)
 - [tooling] ignore scss.d.ts files in lint-staged [`da04ece`](https://github.com/venturehacks/halo/commit/da04ecefbd5697c09b74fe12f03427e514ab5d1d)
+- Release 0.8.0 [`0f67230`](https://github.com/venturehacks/halo/commit/0f67230ec339e06a6fc371c69c21f7b605593cc9)
 - Update roadmap [`84f0b46`](https://github.com/venturehacks/halo/commit/84f0b46a12fe873c11fea042f9af3fbd13396e32)
 - [docs] add missing 'entry point css' instructions [`e363b8d`](https://github.com/venturehacks/halo/commit/e363b8d263d5523713f6f1ebc071c5dcdd41ef9a)
 - [Button] improve docs [`993ece4`](https://github.com/venturehacks/halo/commit/993ece42a8b4ddab2c244e3cf552d49168738ad4)
