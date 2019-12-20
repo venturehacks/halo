@@ -11,7 +11,7 @@ import styles from './styles.scss';
 
 export type DialogContext = 'inline' | 'modal';
 
-interface DialogProps {
+export interface DialogProps {
   /**
    * Optionally overrride with a button component that supports Halo's Button prop API.
    * @default HaloButton
@@ -95,5 +95,4 @@ function Dialog({
   );
 }
 
-export default Dialog;
 export { Dialog };
