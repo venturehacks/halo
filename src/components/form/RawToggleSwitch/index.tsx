@@ -5,7 +5,8 @@ import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 
 import styles from './styles.scss';
 
-export interface RawToggleSwitchProps {
+export interface RawToggleSwitchProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
   checked?: boolean;
 
   className?: string;
@@ -37,9 +38,7 @@ export interface RawToggleSwitchProps {
   /**
    * Required to fully manage this component
    */
-  onChange?: React.ChangeEventHandler<
-    React.InputHTMLAttributes<HTMLInputElement>
-  >;
+  onChange?: React.ChangeEventHandler<HTMLInputElement>;
 }
 
 function RawToggleSwitch({
@@ -51,7 +50,7 @@ function RawToggleSwitch({
   labelClassName,
   type,
   ...rest
-}: RawToggleSwitchProps & React.InputHTMLAttributes<HTMLInputElement>) {
+}: RawToggleSwitchProps) {
   return (
     <>
       <input

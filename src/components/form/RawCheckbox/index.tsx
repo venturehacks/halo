@@ -5,7 +5,7 @@ import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 
 import styles from './styles.scss';
 
-interface RawCheckboxProps {
+interface RawCheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   /**
    * Since the most common callout is for validation errors, you shouldn't need to customize this.
@@ -35,7 +35,7 @@ function RawCheckbox({
   labelClassName,
   type,
   ...rest
-}: RawCheckboxProps & React.InputHTMLAttributes<HTMLInputElement>) {
+}: RawCheckboxProps) {
   return (
     <>
       <input

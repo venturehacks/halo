@@ -4,6 +4,8 @@ import React from 'react';
 
 import styles from './styles.scss';
 
+export type TooltipProps = TippyProps;
+
 /*
  * NOTE: If you want to use a React component as a child,
  * you must forward the ref!
@@ -27,7 +29,7 @@ function Tooltip({
   distance = 12,
   size = 'small',
   ...rest
-}: TippyProps) {
+}: TooltipProps) {
   return (
     <Tippy
       arrow={arrow}

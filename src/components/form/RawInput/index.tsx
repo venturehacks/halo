@@ -8,7 +8,8 @@ import * as styles from './styles.scss';
 
 type IconPosition = 'right' | 'left';
 
-export interface RawInputProps {
+export interface RawInputProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
 
   /**
@@ -79,7 +80,7 @@ function RawInput({
   transparent = false,
   type = 'text',
   ...rest
-}: RawInputProps & React.InputHTMLAttributes<HTMLInputElement>) {
+}: RawInputProps) {
   const input = (
     <input
       className={classNames(

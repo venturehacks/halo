@@ -16,7 +16,7 @@ type HTMLParagraphElementProps = Omit<
   'color'
 >;
 
-export interface ParagraphProps {
+export interface ParagraphProps extends HTMLParagraphElementProps {
   children: React.ReactNode;
   className?: string;
   /**
@@ -58,7 +58,7 @@ function Paragraph({
   contrast,
   colorScheme,
   ...paragraphElementProps
-}: ParagraphProps & HTMLParagraphElementProps) {
+}: ParagraphProps) {
   const classes = classNames(styles.component, flow && styles.flow, className);
 
   return (

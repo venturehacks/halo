@@ -38,5 +38,4 @@ function FlairRaw({
 
 const Flair = withForwardedRef<FlairProps>(FlairRaw);
 
-export default Flair;
 export { Flair };

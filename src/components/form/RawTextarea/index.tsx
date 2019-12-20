@@ -5,7 +5,8 @@ import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 
 import styles from './styles.scss';
 
-export interface RawTextareaProps {
+export interface RawTextareaProps
+  extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   className?: string;
   /**
    * Since the most common callout is for validation errors, you shouldn't need to customize this.
@@ -35,7 +36,7 @@ function RawTextarea({
   hasError = false,
   errorSeverity = 'warning',
   ...rest
-}: RawTextareaProps & React.TextareaHTMLAttributes<HTMLTextAreaElement>) {
+}: RawTextareaProps) {
   return (
     <textarea
       className={classNames(

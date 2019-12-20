@@ -28,7 +28,7 @@ export interface NegativeSpace {
   top?: number | boolean;
 }
 
-export interface BoxProps {
+export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
    * Horizontal alignment. top | bottom | left | right | normal | space-between | space-evenly | stretch
    */
@@ -106,7 +106,6 @@ function BoxRaw({
   wrap = false,
   ...divElementProps
 }: BoxProps &
-  React.HTMLAttributes<HTMLDivElement> &
   ForwardedRefProps &
   React.PropsWithoutRef<JSX.IntrinsicElements['div']>) {
   // mutually exclusive: block vs flex-column vs. flex-row
