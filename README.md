@@ -151,8 +151,9 @@ Design maintains separate release notes and numeric versioning.
   - Shane Zucker
   - Lily Chen
   - Stephen Varaday
-  - Adam Ruf
+  - Lauren Kolm
   - Gearóid O’Rourke
+  - Adam Ruf
   - Chad Whitaker
 - **Technical Feedback**
   - Thomas Hu
