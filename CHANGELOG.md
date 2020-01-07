@@ -2,11 +2,20 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.8.1](https://github.com/venturehacks/halo/compare/0.8.0...v0.8.1)
+#### [v0.8.2](https://github.com/venturehacks/halo/compare/0.8.1...v0.8.2)
+
+> 7 January 2020
+
+- [Button] Remove deprecation notice from 'gray' variant – cc @lllychen [`fad68f7`](https://github.com/venturehacks/halo/commit/fad68f76067e97986f6b0a4f445d34ff490865d6)
+- [Button] apply white bg to 'secondary-gray' variant [`bdb5757`](https://github.com/venturehacks/halo/commit/bdb575702c322c957d21402bf8a7ee5ffdf12ec3)
+- [PillTag] include some bottom margin by default [`85b690d`](https://github.com/venturehacks/halo/commit/85b690dd10f892b600796ec81e1960a3e8c843e5)
+
+#### [0.8.1](https://github.com/venturehacks/halo/compare/0.8.0...0.8.1)
 
 > 20 December 2019
 
 - Restore interface extends from React.HTMLAttributes&lt;T&gt; [`911ebdf`](https://github.com/venturehacks/halo/commit/911ebdf93329e19625bb095a4785069d3770a578)
+- Release 0.8.1 [`6503d1f`](https://github.com/venturehacks/halo/commit/6503d1f74f396e0818abe6169d9c6db4d95688cf)
 - Team update [`94bcb7d`](https://github.com/venturehacks/halo/commit/94bcb7d42ec57bb0c0d5ded9cf280238fda454da)
 - [Dialog] actually export component for build :disappointed_relieved: [`b21ae43`](https://github.com/venturehacks/halo/commit/b21ae435b249c4edce8e329f939c75250beebdc7)
 - [README] team update [`fb6935f`](https://github.com/venturehacks/halo/commit/fb6935f7fd892bb1274de77645db48b60ac98260)
