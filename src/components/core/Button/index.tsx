@@ -27,9 +27,6 @@ export type ButtonVariant =
   | 'success'
   | 'secondary-gray'
   | 'clear'
-  /**
-   * @deprecated 0.9
-   */
   | 'gray'
   /**
    *  @deprecated 0.9
