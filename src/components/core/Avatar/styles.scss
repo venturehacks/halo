@@ -15,6 +15,11 @@ $size-badge: 16px;
   align-items: center;
 
   // sizes
+  &.badge {
+    height: $size-badge;
+    width: $size-badge;
+  }
+
   &.xxsmall {
     height: $size-xxsmall;
     width: $size-xxsmall;
