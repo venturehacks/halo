@@ -11,7 +11,13 @@ import styles from './styles.scss';
 
 export type AvatarShape = 'circle' | 'square';
 
-export type AvatarSize = 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large';
+export type AvatarSize =
+  | 'xxxsmall'
+  | 'xxsmall'
+  | 'xsmall'
+  | 'small'
+  | 'medium'
+  | 'large';
 
 export interface AvatarProps {
   badge?: string | boolean;

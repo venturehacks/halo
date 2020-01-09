@@ -1,6 +1,7 @@
 //
 @import 'halo';
 
+$size-xxxsmall: 16px;
 $size-xxsmall: 24px;
 $size-xsmall: 32px;
 $size-small: 48px;
@@ -15,6 +16,11 @@ $size-badge: 16px;
   align-items: center;
 
   // sizes
+  &.xxxsmall {
+    height: $size-xxxsmall;
+    width: $size-xxxsmall;
+  }
+
   &.xxsmall {
     height: $size-xxsmall;
     width: $size-xxsmall;
