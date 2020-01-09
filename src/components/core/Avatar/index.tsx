@@ -12,7 +12,7 @@ import styles from './styles.scss';
 export type AvatarShape = 'circle' | 'square';
 
 export type AvatarSize =
-  | 'badge'
+  | 'xxxsmall'
   | 'xxsmall'
   | 'xsmall'
   | 'small'
