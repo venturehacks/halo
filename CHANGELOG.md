@@ -2,11 +2,12 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.8.3](https://github.com/venturehacks/halo/compare/0.8.2...v0.8.3)
+#### [0.8.3](https://github.com/venturehacks/halo/compare/0.8.2...0.8.3)
 
 > 9 January 2020
 
 - Enable xxxsmall size for avatars [`#48`](https://github.com/venturehacks/halo/pull/48)
+- Release 0.8.3 [`be92e77`](https://github.com/venturehacks/halo/commit/be92e7796aed9ef7f6e2e24edaf4150d6e2a1df1)
 
 #### [0.8.2](https://github.com/venturehacks/halo/compare/0.8.1...0.8.2)
 
