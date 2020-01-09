@@ -2,10 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.8.2](https://github.com/venturehacks/halo/compare/0.8.1...v0.8.2)
+#### [v0.8.3](https://github.com/venturehacks/halo/compare/0.8.2...v0.8.3)
+
+> 9 January 2020
+
+- Enable xxxsmall size for avatars [`#48`](https://github.com/venturehacks/halo/pull/48)
+
+#### [0.8.2](https://github.com/venturehacks/halo/compare/0.8.1...0.8.2)
 
 > 7 January 2020
 
+- Release 0.8.2 [`24a8628`](https://github.com/venturehacks/halo/commit/24a86287caa0e909fb101e1eee303358a3432dc5)
 - [Button] Remove deprecation notice from 'gray' variant – cc @lllychen [`fad68f7`](https://github.com/venturehacks/halo/commit/fad68f76067e97986f6b0a4f445d34ff490865d6)
 - [Button] apply white bg to 'secondary-gray' variant [`bdb5757`](https://github.com/venturehacks/halo/commit/bdb575702c322c957d21402bf8a7ee5ffdf12ec3)
 - [PillTag] include some bottom margin by default [`85b690d`](https://github.com/venturehacks/halo/commit/85b690dd10f892b600796ec81e1960a3e8c843e5)
