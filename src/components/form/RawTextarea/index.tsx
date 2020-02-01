@@ -28,6 +28,12 @@ export interface RawTextareaProps
    * Field name
    */
   name?: string;
+
+  /**
+   * Use transparent style
+   * @default false
+   */
+  transparent?: boolean;
 }
 
 function RawTextarea({
@@ -35,6 +41,7 @@ function RawTextarea({
   intrinsicWidth,
   hasError = false,
   errorSeverity = 'warning',
+  transparent = false,
   ...rest
 }: RawTextareaProps) {
   return (
@@ -42,6 +49,7 @@ function RawTextarea({
       className={classNames(
         styles.component,
         className,
+        transparent ? styles.transparent : styles.bordered,
         intrinsicWidth === '100%' && styles.width100,
         hasError && styles.hasError,
         hasError && FORM_FIELD_ERROR_IDENTIFIER,

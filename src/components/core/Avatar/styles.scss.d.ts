@@ -1,5 +1,6 @@
 declare const styles: {
   readonly "component": string;
+  readonly "xxxsmall": string;
   readonly "xxsmall": string;
   readonly "xsmall": string;
   readonly "small": string;
