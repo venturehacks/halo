@@ -11,7 +11,6 @@ type IconPosition = 'right' | 'left';
 export interface RawInputProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
-  iconContainerClassName?: string;
 
   /**
    * Since the most common callout is for validation errors, you shouldn't need to customize this
@@ -78,7 +77,6 @@ export interface RawInputProps
 
 function RawInput({
   className,
-  iconContainerClassName,
   errorSeverity = 'warning',
   hasError = false,
   icon,
