@@ -10,6 +10,11 @@ export interface RawSelectOption {
   value?: string;
 }
 
+export interface RawSelectOptgroup {
+  label: string;
+  options: RawSelectOption[];
+}
+
 export interface RawSelectProps
   extends React.SelectHTMLAttributes<HTMLSelectElement> {
   children?: React.ReactNode;
@@ -34,7 +39,7 @@ export interface RawSelectProps
    * Field name
    */
   name?: string;
-  options: RawSelectOption[];
+  options: Array<RawSelectOption | RawSelectOptgroup>;
 }
 
 function RawSelect({
@@ -59,14 +64,35 @@ function RawSelect({
       )}
       {...rest}
     >
-      {options.map(({ value, label }, i) => (
-        <option key={value || label || i} value={value}>
-          {label}
-        </option>
-      ))}
-      {children}
+      {options.map((opt, i) => {
+        if (isOptgroup(opt)) {
+          return (
+            <optgroup label={opt.label}>
+              {opt.options.map(({ label, value }, j) => (
+                <Option key={value || label || j} label={label} value={value} />
+              ))}
+            </optgroup>
+          );
+        }
+
+        return (
+          <Option
+            key={opt.value || opt.label || i}
+            label={opt.label}
+            value={opt.value}
+          />
+        );
+      })}
     </select>
   );
+}
+
+function Option({ label, value }: RawSelectOption) {
+  return <option value={value}>{label}</option>;
+}
+
+function isOptgroup(opt: any): opt is RawSelectOptgroup {
+  return (opt as RawSelectOptgroup).options !== undefined;
 }
 
 export { RawSelect };
