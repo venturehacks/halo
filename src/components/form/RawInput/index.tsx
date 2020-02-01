@@ -29,6 +29,11 @@ export interface RawInputProps
   icon?: React.ReactNode;
 
   /**
+   * className applied to icon container div
+   */
+  iconContainerClassName?: string;
+
+  /**
    * left | right
    * @default left
    */
@@ -75,6 +80,7 @@ function RawInput({
   errorSeverity = 'warning',
   hasError = false,
   icon,
+  iconContainerClassName,
   iconPosition = 'left',
   intrinsicWidth = '100%',
   transparent = false,
@@ -112,6 +118,7 @@ function RawInput({
         className={classNames(
           styles.iconContainer,
           iconPosition === 'right' && styles.hasIconRight,
+          iconContainerClassName,
         )}
         valign="center"
         column
