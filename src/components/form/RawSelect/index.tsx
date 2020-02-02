@@ -69,7 +69,7 @@ function RawSelect({
       {options.map((opt, i) => {
         if (isOptgroup(opt)) {
           return (
-            <optgroup label={opt.label} disabled={opt.disabled}>
+            <optgroup disabled={opt.disabled} label={opt.label}>
               {opt.options.map((option, j) => (
                 <Option
                   key={option.value || option.label || j}
@@ -89,7 +89,7 @@ function RawSelect({
 function Option({ option }: { option: RawSelectOption }) {
   const { value, label, disabled } = option;
   return (
-    <option value={value} disabled={disabled}>
+    <option disabled={disabled} value={value}>
       {label}
     </option>
   );
