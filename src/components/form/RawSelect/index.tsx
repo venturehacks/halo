@@ -6,11 +6,13 @@ import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 import styles from './styles.scss';
 
 export interface RawSelectOption {
+  disabled?: boolean;
   label: string;
   value?: string;
 }
 
 export interface RawSelectOptgroup {
+  disabled?: boolean;
   label: string;
   options: RawSelectOption[];
 }
@@ -67,28 +69,30 @@ function RawSelect({
       {options.map((opt, i) => {
         if (isOptgroup(opt)) {
           return (
-            <optgroup label={opt.label}>
-              {opt.options.map(({ label, value }, j) => (
-                <Option key={value || label || j} label={label} value={value} />
+            <optgroup label={opt.label} disabled={opt.disabled}>
+              {opt.options.map((option, j) => (
+                <Option
+                  key={option.value || option.label || j}
+                  option={option}
+                />
               ))}
             </optgroup>
           );
         }
 
-        return (
-          <Option
-            key={opt.value || opt.label || i}
-            label={opt.label}
-            value={opt.value}
-          />
-        );
+        return <Option key={opt.value || opt.label || i} option={opt} />;
       })}
     </select>
   );
 }
 
-function Option({ label, value }: RawSelectOption) {
-  return <option value={value}>{label}</option>;
+function Option({ option }: { option: RawSelectOption }) {
+  const { value, label, disabled } = option;
+  return (
+    <option value={value} disabled={disabled}>
+      {label}
+    </option>
+  );
 }
 
 function isOptgroup(opt: any): opt is RawSelectOptgroup {
