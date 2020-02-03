@@ -69,7 +69,11 @@ function RawSelect({
       {options.map((opt, i) => {
         if (isOptgroup(opt)) {
           return (
-            <optgroup disabled={opt.disabled} label={opt.label}>
+            <optgroup
+              key={`${opt.label}-${i}`}
+              disabled={opt.disabled}
+              label={opt.label}
+            >
               {opt.options.map((option, j) => (
                 <Option
                   key={option.value || option.label || j}
