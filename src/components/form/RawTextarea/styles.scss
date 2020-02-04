@@ -1,6 +1,13 @@
 @import 'halo';
 
 .component {
-  @include input;
   width: auto;
+
+  &.bordered {
+    @include input;
+  }
+
+  &.transparent {
+    @include input($style: transparent);
+  }
 }

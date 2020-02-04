@@ -6,5 +6,11 @@ module.exports = {
   rules: {
     'import/extensions': 'off',
     '@typescript-eslint/no-empty-function': 'off',
+    '@typescript-eslint/array-type': [
+      'warn',
+      {
+        default: 'array-simple',
+      },
+    ],
   },
 };
