@@ -1,4 +1,3 @@
-import { css } from 'docz-plugin-css';
 import path from 'path';
 import merge from 'webpack-merge';
 
@@ -22,24 +21,24 @@ export default {
     files.filter(filepath =>
       /components\/.*\/*\.(js|jsx|ts|tsx)$/.test(filepath),
     ),
-  onCreateWebpackChain: config => {
-    if (config.resolve.alias.set) {
-      config.resolve.alias.set(
-        '~/components',
-        path.join(__dirname, 'src', 'components'),
-      );
-      config.resolve.alias.set('~/lib', path.join(__dirname, 'src', 'lib'));
-    }
-  },
-  plugins: [
-    css({
-      preprocessor: 'sass',
-      cssmodules: true,
-      loaderOpts: {
-        includePaths: [path.resolve(__dirname, 'scss')],
-      },
-    }),
-  ],
+  // onCreateWebpackChain: config => {
+  //   if (config.resolve.alias.set) {
+  //     config.resolve.alias.set(
+  //       '~/components',
+  //       path.join(__dirname, 'src', 'components'),
+  //     );
+  //     config.resolve.alias.set('~/lib', path.join(__dirname, 'src', 'lib'));
+  //   }
+  // },
+  // plugins: [
+  //   css({
+  //     preprocessor: 'sass',
+  //     cssmodules: true,
+  //     loaderOpts: {
+  //       includePaths: [path.resolve(__dirname, 'scss')],
+  //     },
+  //   }),
+  // ],
   themeConfig: {
     primary: '#0F6FFF',
     styles: {
