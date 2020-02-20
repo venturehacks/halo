@@ -12,15 +12,15 @@ module.exports = {
     {
       resolve: 'gatsby-theme-docz',
       options: {
-        gatsbyRemarkPlugins: [
-          {
-            resolve: 'gatsby-remark-vscode',
-            options: {
-              theme: 'Kimbie Dark',
-              // injectStyles: true,
-            },
-          },
-        ],
+        // gatsbyRemarkPlugins: [
+        //   {
+        //     resolve: 'gatsby-remark-vscode',
+        //     options: {
+        //       theme: 'Kimbie Dark',
+        //       // injectStyles: true,
+        //     },
+        //   },
+        // ],
       },
     },
     'gatsby-transformer-sharp',
