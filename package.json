@@ -14,6 +14,7 @@
     "prepare": "yarn build",
     "build": "yarn build:node",
     "build:node": "tsc && rollup -c rollup.config.babel.js",
+    "build:gatsby": "gatsby build",
     "changelog": "npx auto-changelog --package --commit-limit false  --template ./tools/changelog.compact.hbs",
     "dev": "gatsby develop",
     "serve": "gatsby serve",
