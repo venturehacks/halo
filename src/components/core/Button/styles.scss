@@ -1,5 +1,3 @@
-@import 'halo';
-
 .component {
   @include halo-element-base; // TODO: deprecate
   @include border-rounded;

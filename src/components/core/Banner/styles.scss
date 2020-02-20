@@ -1,5 +1,3 @@
-@import 'halo';
-
 .component {
   @include font($size: sm, $weight: medium);
   @include border-rounded;

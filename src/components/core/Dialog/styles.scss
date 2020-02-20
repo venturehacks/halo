@@ -1,5 +1,3 @@
-@import 'halo';
-
 .component {
   @include border-rounded;
   @include font($size: md);
