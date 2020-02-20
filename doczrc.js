@@ -3,7 +3,6 @@ import merge from 'webpack-merge';
 
 export default {
   debug: true,
-  dest: '/docs',
   notUseSpecifiers: true,
   src: path.join(__dirname, 'src'),
   title: 'Halo Design System',
