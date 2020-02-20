@@ -10,7 +10,7 @@
   "style": "dist/halo.css",
   "types": "dist/typings/index.d.ts",
   "scripts": {
-    "clean": "rm -rf ./dist/*",
+    "clean": "rm -rf ./dist/* && gatsby clean",
     "prepare": "yarn build",
     "build": "yarn build:node",
     "build:node": "tsc && rollup -c rollup.config.babel.js",
