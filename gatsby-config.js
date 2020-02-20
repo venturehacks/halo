@@ -26,8 +26,6 @@ module.exports = {
         // sassRuleTest: /\.global\.scss$/,
         sassRuleModulesTest: /\.scss$/,
         includePaths: ['scss', 'node_modules'],
-        // data: `@import "${__dirname}/scss/halo";`,
-        // useResolveUrlLoader: true,
       },
     },
   ],
