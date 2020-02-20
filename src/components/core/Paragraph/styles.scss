@@ -1,3 +1,5 @@
+@import 'halo';
+
 .component {
   @include halo-element-base; // TODO: deprecate
   margin-block-start: 0;
