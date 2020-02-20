@@ -7,16 +7,6 @@ export default {
   src: path.join(__dirname, 'src'),
   title: 'Halo Design System',
   typescript: true,
-  gatsbyRemarkPlugins: [
-    {
-      resolve: 'gatsby-remark-vscode',
-      // OPTIONAL
-      options: {
-        theme: 'Dark+ (default dark)', // Read on for list of included themes. Also accepts object and function forms.
-        injectStyles: true,
-      },
-    },
-  ],
   docgenConfig: {
     propFilter: prop => {
       if (prop.parent) {

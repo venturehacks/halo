@@ -9,7 +9,20 @@ module.exports = {
         allExtensions: true,
       },
     },
-    'gatsby-theme-docz',
+    {
+      resolve: 'gatsby-theme-docz',
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: 'gatsby-remark-vscode',
+            options: {
+              theme: 'Kimbie Dark',
+              // injectStyles: true,
+            },
+          },
+        ],
+      },
+    },
     'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-alias-imports',
