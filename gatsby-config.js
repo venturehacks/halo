@@ -1,6 +1,6 @@
 const path = require('path');
 
-const config = {
+module.exports = {
   plugins: [
     {
       resolve: `gatsby-plugin-typescript`,
@@ -23,16 +23,11 @@ const config = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        sassRuleTest: /\.global\.scss$/,
+        // sassRuleTest: /\.global\.scss$/,
         sassRuleModulesTest: /\.scss$/,
         includePaths: ['scss', 'node_modules'],
         data: `@import 'halo';`, // automatically import support entry to every file
       },
     },
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // 'gatsby-plugin-offline',
   ],
 };
-
-module.exports = config;

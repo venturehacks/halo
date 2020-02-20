@@ -2,7 +2,7 @@ import path from 'path';
 import merge from 'webpack-merge';
 
 export default {
-  debug: false,
+  debug: true,
   dest: '/docs',
   notUseSpecifiers: true,
   src: path.join(__dirname, 'src'),
