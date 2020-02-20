@@ -122,6 +122,7 @@ function ButtonRaw({
   );
 }
 
-const Button = withForwardedRef<ButtonProps>(ButtonRaw);
+// const Button = withForwardedRef<ButtonProps>(ButtonRaw);
+const Button = ButtonRaw;
 
 export { Button };

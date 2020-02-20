@@ -1,7 +1,16 @@
 const path = require('path');
 
-module.exports = {
+const config = {
   plugins: [
+    {
+      resolve: `gatsby-plugin-typescript`,
+      options: {
+        isTSX: true,
+        allExtensions: true,
+      },
+    },
+    'gatsby-theme-docz',
+    'gatsby-transformer-sharp',
     {
       resolve: 'gatsby-alias-imports',
       options: {
@@ -14,8 +23,17 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        includePaths: [path.resolve(__dirname, 'scss')],
+        sassRuleTest: /\.global\.scss$/,
+        sassRuleModulesTest: /\.scss$/,
+        includePaths: ['scss', 'node_modules'],
+        // data: `@import "${__dirname}/scss/halo";`,
+        // useResolveUrlLoader: true,
       },
     },
+    // this (optional) plugin enables Progressive Web App + Offline functionality
+    // To learn more, visit: https://gatsby.dev/offline
+    // 'gatsby-plugin-offline',
   ],
 };
+
+module.exports = config;
