@@ -103,7 +103,7 @@
     "concurrently": "^4.1.2",
     "cross-env": "^5.2.0",
     "custom-tslint-formatters": "^2.4.0",
-    "docz": "^2.2.0",
+    "docz": "next",
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.14.0",
     "eslint": "6.7.2",
@@ -169,7 +169,8 @@
     "gatsby-plugin-offline": "^3.0.35",
     "gatsby-plugin-sharp": "^2.4.5",
     "gatsby-plugin-typescript": "^2.1.27",
-    "gatsby-theme-docz": "^2.2.0",
+    "gatsby-remark-vscode": "^2.0.2",
+    "gatsby-theme-docz": "next",
     "gatsby-transformer-sharp": "^2.3.14",
     "react-helmet-async": "^1.0.4",
     "react-spinners": "^0.6.1"
