@@ -1,7 +1,11 @@
 import classNames from 'classnames';
 import * as React from 'react';
 
-import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
+import {
+  FORM_FIELD_ERROR_IDENTIFIER,
+  ForwardedRefProps,
+  withForwardedRef,
+} from '../../../lib';
 import { Box } from '../../structure/Box';
 
 import * as styles from './styles.scss';
@@ -75,9 +79,10 @@ export interface RawInputProps
     | 'week';
 }
 
-function RawInput({
+function RawInputRaw({
   className,
   errorSeverity = 'warning',
+  forwardedRef,
   hasError = false,
   icon,
   iconContainerClassName,
@@ -86,9 +91,10 @@ function RawInput({
   transparent = false,
   type = 'text',
   ...rest
-}: RawInputProps) {
+}: RawInputProps & ForwardedRefProps) {
   const input = (
     <input
+      ref={forwardedRef}
       className={classNames(
         styles.component,
         className,
@@ -128,5 +134,7 @@ function RawInput({
     </div>
   );
 }
+
+const RawInput = withForwardedRef<RawInputProps>(RawInputRaw);
 
 export { RawInput };
