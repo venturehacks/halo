@@ -2,11 +2,20 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.8.3](https://github.com/venturehacks/halo/compare/0.8.2...v0.8.3)
+#### [v0.8.6](https://github.com/venturehacks/halo/compare/0.8.5...v0.8.6)
 
-> 9 January 2020
+> 25 February 2020
 
+- forward refs for RawInput [`#53`](https://github.com/venturehacks/halo/pull/53)
+
+#### [0.8.5](https://github.com/venturehacks/halo/compare/0.8.2...0.8.5)
+
+> 4 February 2020
+
+- Improvements to raw form inputs [`#51`](https://github.com/venturehacks/halo/pull/51)
+- new props for RawInput + RawTextarea [`#50`](https://github.com/venturehacks/halo/pull/50)
 - Enable xxxsmall size for avatars [`#48`](https://github.com/venturehacks/halo/pull/48)
+- Release 0.8.3 [`c01e86f`](https://github.com/venturehacks/halo/commit/c01e86f441c365474e5af5e677b67a0a7efd0330)
 
 #### [0.8.2](https://github.com/venturehacks/halo/compare/0.8.1...0.8.2)
 
