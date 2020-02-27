@@ -6,8 +6,6 @@ import { Playground } from 'gatsby-theme-docz/src/components/Playground';
 import { Pre } from 'gatsby-theme-docz/src/components/Pre';
 import { Props } from 'gatsby-theme-docz/src/components/Props';
 
-console.log('USING SHADOWED src/components/index.js');
-
 export default {
   ...headings,
   code: Code,
