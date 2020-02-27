@@ -1,14 +1,14 @@
 # Halo
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/87d1d78b-b9dc-440b-ba5a-90f89afce587/deploy-status)](https://app.netlify.com/sites/halo-design-system/deploys)
-
 Halo is our design system. It enables our small group of designers to design and ship faster by institutionalizing key decisions and providing an already established groundwork.
 
 &nbsp;
 
-<img src="https://user-images.githubusercontent.com/194885/59124821-8cbc9b00-8915-11e9-9f94-eeb6e1df80f3.png" alt="Halo preview" width="882" />
+<img src="https://user-images.githubusercontent.com/194885/75487723-d21d6e80-5963-11ea-8126-035fdd131f94.jpg" alt="Halo preview" width="609" />
 
 &nbsp;
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/87d1d78b-b9dc-440b-ba5a-90f89afce587/deploy-status)](https://app.netlify.com/sites/halo-design-system/deploys)
 
 📝 **[Halo Feedback](https://venturehacks.quip.com/JP75A3GbNYua/Halo-Feedback)**
 
@@ -112,9 +112,10 @@ return (
 | -------------- | -------------- | ------------------------------------------------------------- | :----: |
 | 2020 &nbsp; –  | `v1.0.0`       | ⋯                                                             |   🌀   |
 | ⋯              | ⋯              | ⋯                                                             |   ⋯    |
-| 2020 &nbsp; –  | `v0.10.x`      | ?                                                             |   🔶   |
-| 2020 &nbsp; –  | `v0.9.x`       | Accessibility audit, themeable, .halorc.js                    |   🔶   |
-| 2019 &nbsp; –  | `v0.8.x`       | Component pack, robust tooling                                |   ✅   |
+| 2020 &nbsp; –  | `v0.11.x`      | Component pack                                                |   🔶   |
+| 2020 &nbsp; –  | `v0.10.x`      | Variable negative space, themeable, .halorc.js                |   🔶   |
+| 2020 Februrary | `v0.9.x`       | Docz 2.0                                                      |   ✅   |
+| 2019 December  | `v0.8.x`       | Component pack, robust tooling                                |   ✅   |
 | 2019 October   | `v0.8.x`       | Responive Grid + Cell                                         |   ✅   |
 | 2019 September | `v0.7.0`       | Raw form components                                           |   ✅   |
 | 2019 August    | ⋯              | Pre-commit tooling                                            |   ✅   |

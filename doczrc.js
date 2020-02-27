@@ -7,6 +7,7 @@ export default {
   src: path.join(__dirname, 'src'),
   title: 'Halo Design System',
   typescript: true,
+  repository: 'https://github.com/venturehacks/halo',
   docgenConfig: {
     propFilter: prop => {
       if (prop.parent) {
