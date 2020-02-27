@@ -74,7 +74,7 @@ export default {
         [
           'sass',
           {
-            includePaths: [path.join(__dirname, 'scss')],
+            includePaths: [path.resolve(__dirname, 'scss')],
           },
         ],
       ],

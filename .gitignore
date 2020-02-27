@@ -10,7 +10,6 @@ dist/index.js
 dist
 .cache
 stats.html
-.vscode
 
 *gem
 *swp
@@ -21,6 +20,11 @@ Gemfile.lock
 .rpt2_cache
 .tsbuildinfo
 tsconfig.tsbuildinfo
+
+############################################################
+# Gatsby
+############################################################
+public
 
 ############################################################
 # via bundler gem

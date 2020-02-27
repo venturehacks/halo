@@ -1,22 +1,10 @@
 module.exports = {
   env: {
     development: {
-      presets: ['next/babel'],
-      plugins: ['@babel/plugin-proposal-optional-chaining'],
+      presets: ['babel-preset-gatsby'],
     },
     production: {
-      presets: [
-        [
-          'next/babel',
-          {
-            'preset-env': {
-              corejs: 2,
-              useBuiltIns: 'usage',
-            },
-          },
-        ],
-      ],
-      plugins: ['@babel/plugin-proposal-optional-chaining'],
+      presets: ['babel-preset-gatsby'],
     },
     test: {
       presets: [['next/babel', { 'preset-env': { modules: 'commonjs' } }]],

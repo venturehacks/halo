@@ -7,7 +7,7 @@ route: /core/Span
 import { Props, Playground } from 'docz';
 import { Box } from '../../structure/Box';
 import { Span } from './'
-import '../../../index.scss';
+//
 
 # Span
 
@@ -59,41 +59,46 @@ In general, Halo component API's are meant to save you time, but they're not mea
       <Box padding><Span semibold>semibold</Span></Box>
       <Box padding><Span bold>bold/strong</Span></Box>
     </Box>
+
     <Box row align="space-evenly" background="#f8f8f8" margin={{ bottom: 1 }}>
       <Box padding><Span contrast="AAAA">AAAA contrast</Span></Box>
       <Box padding><Span contrast="AAA">AAA contrast</Span></Box>
       <Box padding><Span contrast="AA">AA contrast</Span></Box>
       <Box padding><Span contrast="A">A contrast</Span></Box>
     </Box>
+
     <Box row align="space-evenly" background="black" margin={{ bottom: 1 }}>
       <Box padding><Span contrast="AAAA" colorScheme="light">AAAA contrast</Span></Box>
       <Box padding><Span contrast="AAA" colorScheme="light">AAA contrast</Span></Box>
       <Box padding><Span contrast="AA" colorScheme="light">AA contrast</Span></Box>
       <Box padding><Span contrast="A" colorScheme="light">A contrast</Span></Box>
     </Box>
+
     <Box row align="space-evenly" margin={{ bottom: 1 }}>
       <Box padding><Span muted>muted</Span></Box>
       <Box padding><Span xmuted>xmuted</Span></Box>
       <Box padding><Span xxmuted>xxmuted</Span></Box>
-
     </Box>
+
     <Box row align="space-evenly" margin={{ bottom: 1 }}>
       <Box padding><Span uppercase>uppercase</Span></Box>
       <Box padding><Span monospace>monospace</Span></Box>
       <Box padding><Span antialiased>antialiased</Span></Box>
     </Box>
+
     <Box row align="space-evenly" margin={{ bottom: 1 }}>
       <Box padding><Span success>success</Span></Box>
       <Box padding><Span warning>warning</Span></Box>
       <Box padding><Span error>error</Span></Box>
-
     </Box>
+
     <Box row align="space-evenly" margin={{ bottom: 1 }}>
       <Box padding><Span color="orange--300">orange--300</Span></Box>
       <Box padding><Span color="red--400">red--400</Span></Box>
       <Box padding><Span color="green--600">green--600</Span></Box>
       <Box padding><Span color="purple--700">purple--700</Span></Box>
     </Box>
+
     <Box row align="space-evenly" valign="bottom" margin={{ bottom: 1 }}>
       <Box padding><Span size="2xs">2xs &middot; 11px</Span></Box>
       <Box padding><Span size="xs">xs &middot; 12px</Span></Box>
@@ -102,11 +107,13 @@ In general, Halo component API's are meant to save you time, but they're not mea
       <Box padding><Span size="lg">lg &middot; 20px</Span></Box>
       <Box padding><Span size="xl">xl &middot; 24px</Span></Box>
     </Box>
+
     <Box row align="space-evenly" valign="bottom" margin={{ bottom: 1 }}>
       <Box padding><Span size="2xl">2xl &middot; 32px</Span></Box>
       <Box padding><Span size="3xl">3xl &middot; 36px</Span></Box>
       <Box padding><Span size="4xl">4xl &middot; 40px</Span></Box>
     </Box>
+
     <Box row align="space-evenly" valign="bottom" margin={{ bottom: 1 }}>
       <Box padding><Span size="5xl">5xl &middot; 48px</Span></Box>
       <Box padding><Span size="6xl">6xl &middot; 56px</Span></Box>
