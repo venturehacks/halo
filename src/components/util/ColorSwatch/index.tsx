@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React, { useCallback, useState } from 'react';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+import CopyToClipboard from 'react-copy-to-clipboard';
 
 import { Color, ColorPalette } from '../../../lib/colors';
 import { Tooltip } from '../../core/Tooltip';
