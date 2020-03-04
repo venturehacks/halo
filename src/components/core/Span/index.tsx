@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import { PaletteColor } from '../../../lib/colors';
+import { Color } from '../../../lib/colors';
 import {
   TextColorScheme,
   TextContrast,
@@ -38,7 +38,7 @@ export interface SpanProps extends React.HTMLAttributes<HTMLSpanElement> {
   /**
    * Explicit text color override
    */
-  color?: PaletteColor;
+  color?: Color;
   /**
    * Dark or light text
    * @default dark

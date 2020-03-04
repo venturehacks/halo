@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import { PaletteColor } from '../../../lib/colors';
+import { Color } from '../../../lib/colors';
 import {
   TextColorScheme,
   TextContrast,
@@ -22,7 +22,7 @@ export interface HeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
   /**
    * Explicitly set text to a palette color
    */
-  color?: PaletteColor;
+  color?: Color;
   /**
    * Fine control of type contrast
    */

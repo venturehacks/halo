@@ -10,6 +10,9 @@
   overflow: hidden;
   text-align: center;
   flex-grow: 1;
+  cursor: pointer;
+  border-radius: 2px;
+  border: 1px solid transparent;
 
   & + & {
     margin-left: tempo(1);
@@ -19,48 +22,64 @@
     margin-left: 0;
   }
 
+  &:focus {
+    outline: 0;
+    border: 1px solid rgba($blue--400, 0.5);
+  }
+
   .color {
     @include border-rounded;
     height: 80px;
     margin-bottom: tempo(1);
     content: ' ';
+    cursor: pointer;
   }
 
-  .name {
+  .hex {
     display: block;
     font-weight: 600;
     font-size: 12px;
     white-space: nowrap;
     word-break: keep-all;
     margin-bottom: tempo(0.5);
+    padding: 2px;
+    border-radius: 2px;
+    cursor: copy;
+
+    &:hover {
+      background-color: $slate--200;
+    }
   }
 
-  .attributes {
+  .variableName {
     @include font(
       $color: slate--600,
       $size: 11px,
       $family: monospace,
       $antialiased: true
     );
+    cursor: copy;
     white-space: nowrap;
     word-break: keep-all;
+
+    &:hover {
+      background-color: $slate--200;
+    }
   }
 
   &.backgroundBlack {
-    color: $white;
-    background-color: $black;
+    color: $text-light--aaa;
+    background-color: $slate--900;
     @include font-antialiased;
   }
 
   &.backgroundWhite {
-    color: $black;
-    border: 1px solid $slate--100;
+    color: $text-dark--aaa;
   }
 }
 
-// enumerate all swatches
 @each $name, $color in $colors {
-  .#{$name} {
+  :global(.halo-colorswatch-#{$name}) {
     .color {
       position: relative;
       background-color: $color;
@@ -76,7 +95,8 @@
         text-align: center;
         line-height: 20px;
         color: darken($color, 70%);
-        content: '#{$color}';
+        content: ' ';
+        pointer-events: none;
         @include border-rounded;
         @include font-antialiased;
         @include font(

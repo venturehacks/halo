@@ -36,7 +36,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
+        sourceMap: true,
         sassRuleModulesTest: /\.scss$/,
+        sassRuleTest: /\.global\.scss$/,
         includePaths: ['scss', 'node_modules'],
       },
     },

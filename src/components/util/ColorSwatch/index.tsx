@@ -1,5 +1,9 @@
 import classNames from 'classnames';
-import React from 'react';
+import React, { useCallback, useState } from 'react';
+import CopyToClipboard from 'react-copy-to-clipboard';
+
+import { Color, ColorPalette } from '../../../lib/colors';
+import { Tooltip } from '../../core/Tooltip';
 
 import * as styles from './styles.scss';
 
@@ -8,35 +12,67 @@ export interface ColorSwatchProps {
   children?: React.ReactNode;
   className?: string;
   color?: string; // force color override
-  name?: string;
   showVariable?: boolean;
-  swatch?: string; // swatch in Halo palette; ex: grey--200
+  swatch?: Color; // swatch in Halo palette; ex: grey--200
 }
 
 function ColorSwatch({
   backgroundColor = 'white',
-  name,
   color,
   swatch,
   className,
   showVariable = true,
 }: ColorSwatchProps) {
+  const [tipMessage, setTipMessage] = useState('Copied!');
+  const handleCopy = useCallback(
+    (text: string) => setTipMessage(`Copied ${text}`),
+    [setTipMessage],
+  );
+
   return (
-    <div
-      className={classNames(
-        styles.component,
-        styles[swatch],
-        backgroundColor === 'white' && showVariable && styles.backgroundWhite,
-        backgroundColor === 'black' && showVariable && styles.backgroundBlack,
-        className,
-      )}
+    <Tooltip
+      content={tipMessage}
+      onShow={instance => {
+        setTimeout(() => {
+          instance.hide();
+        }, 1500);
+      }}
+      trigger="click"
     >
-      <div className={styles.color} style={{ backgroundColor: color }} />
-      <span className={styles.name}>{name}</span>
-      {showVariable && (
-        <div className={styles.attributes}>{swatch ? `$${swatch}` : color}</div>
-      )}
-    </div>
+      <div
+        className={classNames(
+          styles.component,
+          `halo-colorswatch-${swatch}`,
+          backgroundColor === 'white' && showVariable && styles.backgroundWhite,
+          backgroundColor === 'black' && showVariable && styles.backgroundBlack,
+          className,
+        )}
+      >
+        <CopyToClipboard
+          onCopy={handleCopy}
+          text={swatch ? ColorPalette[swatch] : color}
+        >
+          <div className={styles.color} style={{ backgroundColor: color }} />
+        </CopyToClipboard>
+
+        {swatch && (
+          <CopyToClipboard onCopy={handleCopy} text={ColorPalette[swatch]}>
+            <div className={styles.hex}>{ColorPalette[swatch]}</div>
+          </CopyToClipboard>
+        )}
+
+        {showVariable && (
+          <CopyToClipboard
+            onCopy={handleCopy}
+            text={swatch ? `$${swatch}` : color}
+          >
+            <div className={styles.variableName}>
+              {swatch ? `$${swatch}` : color}
+            </div>
+          </CopyToClipboard>
+        )}
+      </div>
+    </Tooltip>
   );
 }
 
