@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import { mapKeys } from 'lodash';
 import React from 'react';
 
-import { PaletteColor } from '../../../lib/colors';
+import { Color } from '../../../lib/colors';
 import {
   ForwardedRefProps,
   withForwardedRef,
@@ -36,7 +36,7 @@ export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
    * Background color or color palette swatch
    */
-  background?: PaletteColor | string;
+  background?: Color | string;
 
   children?: React.ReactNode;
   className?: string;
@@ -154,7 +154,7 @@ function BoxRaw({
   }
 
   if (background) {
-    // TODO: filter PaletteColors
+    // TODO: filter Colors
     inlineStyles.background = background;
   }
 
