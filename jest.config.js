@@ -1,22 +1,30 @@
 // regexp pattern strings, *not* glob patterns!
 // https://jestjs.io/docs/en/configuration#testpathignorepatterns-array-string
 const testPathIgnorePatterns = [
-  '.cache',
+  'CHANGELOG.md',
+  'README.md',
   '.circleci',
-  '.docz',
-  '.next/',
-  '.vscode',
   '.scss.d.ts',
   '/node_modules/',
-  'CHANGELOG.md',
-  'dist/',
   'misc/',
   'test/',
+  // build support
+  '.cache',
+  '.docz',
+  '.next',
+  'dist/',
+  'public/',
+  // compiler
+  '.rpt2_cache',
+  // package
+  'package.json',
+  '.vscode',
 ];
 
 module.exports = {
   verbose: true,
   moduleDirectories: ['<rootDir>/node_modules', '<rootDir>/src'],
+  snapshotSerializers: ['enzyme-to-json/serializer'],
   projects: [
     {
       runner: 'jest-runner-prettier',
@@ -70,14 +78,13 @@ module.exports = {
         '^.+\\.(t|j)sx?$': 'babel-jest',
       },
       testRegex: '(/__tests__/.*|(\\.|/))(test|spec)\\.(t|j)sx?$',
-      moduleFileExtensions: ['ts', 'tsx', 'js', 'mjs', 'jsx', 'json', 'node'],
+      moduleFileExtensions: ['ts', 'tsx', 'js', 'jsx', 'json'],
       moduleNameMapper: {
         '^~/(.*)$': '<rootDir>/src/$1',
         '^.+\\.(css|scss)$': 'identity-obj-proxy',
-        // '\\.(s?css)$': 'empty/object', // NOTE (k1): TypeScript *should* make this a safe transform by ensuring classes and types exist before compiling
       },
       setupFiles: ['<rootDir>/test/jest-setup.ts'],
-
+      snapshotSerializers: ['enzyme-to-json/serializer'],
       testPathIgnorePatterns,
     },
   ].filter(Boolean),
