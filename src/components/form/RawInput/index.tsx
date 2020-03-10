@@ -8,7 +8,7 @@ import {
 } from '../../../lib';
 import { Box } from '../../structure/Box';
 
-import * as styles from './styles.scss';
+import styles from './styles.scss';
 
 type IconPosition = 'right' | 'left';
 

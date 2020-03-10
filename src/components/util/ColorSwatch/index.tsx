@@ -5,7 +5,7 @@ import CopyToClipboard from 'react-copy-to-clipboard';
 import { Color, ColorPalette } from '../../../lib/colors';
 import { Tooltip } from '../../core/Tooltip';
 
-import * as styles from './styles.scss';
+import styles from './styles.scss';
 
 export interface ColorSwatchProps {
   backgroundColor?: 'white' | 'black';
