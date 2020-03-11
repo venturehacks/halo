@@ -9,7 +9,7 @@ import {
 } from '../../../lib/text';
 import { Span } from '../Span';
 
-import * as styles from './styles.scss';
+import styles from './styles.scss';
 
 type HTMLParagraphElementProps = Omit<
   React.HTMLAttributes<HTMLParagraphElement>,

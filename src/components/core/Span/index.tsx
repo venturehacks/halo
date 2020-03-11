@@ -15,7 +15,7 @@ import {
   withForwardedRef,
 } from '../../../lib/withForwardedRef';
 
-import * as styles from './styles.scss';
+import styles from './styles.scss';
 
 export interface SpanProps extends React.HTMLAttributes<HTMLSpanElement> {
   /**
@@ -173,6 +173,7 @@ function SpanRaw(props: SpanProps & ForwardedRefProps) {
   }
 
   const classes = classNames(
+    className,
     applyColorDerivedByContrast &&
       `__halo_textContrast_${colorScheme}_${textContrast}`,
     size && `__halo_fontSizeMap_size--${size}`,
@@ -192,7 +193,6 @@ function SpanRaw(props: SpanProps & ForwardedRefProps) {
     success && styles.success,
     uppercase && styles.uppercase,
     warning && styles.warning,
-    className,
   );
 
   const tagName = tagNameForConfiguration(props);

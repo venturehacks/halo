@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header snapshots h3 contrast AA 1`] = `
+<h3
+  class="component flow __halo_textContrast_dark_AA __halo_fontSizeMap_size--xl __halo_fontWeight_medium"
+>
+  AA
+</h3>
+`;

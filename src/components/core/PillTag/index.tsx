@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import * as styles from './styles.scss';
+import styles from './styles.scss';
 
 export interface PillTagProps {
   children?: React.ReactNode;

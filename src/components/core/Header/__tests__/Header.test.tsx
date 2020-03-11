@@ -3,16 +3,21 @@ import React from 'react';
 
 import { Header } from '../index';
 
-test('Smoke test', () => {
-  const component = render(<Header h1>Play Tetris</Header>);
-  expect(component.text()).toContain('Play Tetris');
-});
+describe('Header', () => {
+  test('smoke', () => {
+    const component = render(<Header h1>Play Tetris</Header>);
+    expect(component.text()).toContain('Play Tetris');
+  });
 
-test(`Invalid props don't propagate to HTML tag`, () => {
-  const component = render(
-    <Header h6 uppercase xxmuted>
-      Play Tetris
-    </Header>,
-  );
-  expect(component.text()).toContain('Play Tetris');
+  describe('snapshots', () => {
+    test(`h3 contrast AA`, () => {
+      const component = render(
+        <Header contrast="AA" h3>
+          AA
+        </Header>,
+      );
+
+      expect(component).toMatchSnapshot();
+    });
+  });
 });

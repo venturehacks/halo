@@ -56,6 +56,8 @@
         "exclude": [
           "node_modules/**/*",
           ".next/**/*",
+          ".docz/**/*",
+          ".cache/**/*",
           "schema*"
         ]
       }
@@ -68,6 +70,7 @@
     "node_modules/**",
     "dist/**",
     ".docz/**",
+    ".cache/**",
     "*.js",
   ]
 }

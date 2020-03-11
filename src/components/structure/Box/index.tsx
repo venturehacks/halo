@@ -8,7 +8,7 @@ import {
   withForwardedRef,
 } from '../../../lib/withForwardedRef';
 
-import * as styles from './styles.scss';
+import styles from './styles.scss';
 
 export type BoxAlign =
   | 'top'

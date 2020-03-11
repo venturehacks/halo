@@ -2,7 +2,6 @@
 
 .component {
   @include halo-element-base; // TODO: deprecate
-  color: $text-dark--aaaa;
   margin: 0;
 
   &.flow {

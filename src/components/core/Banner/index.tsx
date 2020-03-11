@@ -3,7 +3,7 @@ import * as React from 'react';
 
 import { CloseIcon } from '../../icons';
 
-import * as styles from './styles.scss';
+import styles from './styles.scss';
 
 export type BannerVariant = 'default' | 'warning' | 'error' | 'success';
 
