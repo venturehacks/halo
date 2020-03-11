@@ -69,9 +69,6 @@
     "eslint.debug": true,
     "eslint.lintTask.enable": true,
     "eslint.packageManager": "yarn",
-    "eslint.options": {
-      "configFile": "./.eslintrc.js"
-    },
     "eslint.workingDirectories": [{ "mode": "auto" }],
     "eslint.validate": [
       "javascript",

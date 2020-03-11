@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React, { useCallback, useState } from 'react';
+// eslint-disable-next-line import/no-extraneous-dependencies
 import CopyToClipboard from 'react-copy-to-clipboard';
 
 import { Color, ColorPalette } from '../../../lib/colors';
