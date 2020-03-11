@@ -22,7 +22,6 @@ const testPathIgnorePatterns = [
 ];
 
 module.exports = {
-  verbose: true,
   moduleDirectories: ['<rootDir>/node_modules', '<rootDir>/src'],
   snapshotSerializers: ['enzyme-to-json/serializer'],
   projects: [

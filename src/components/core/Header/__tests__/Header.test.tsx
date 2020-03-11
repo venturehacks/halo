@@ -12,7 +12,7 @@ describe('Header', () => {
   describe('snapshots', () => {
     test(`h3 contrast AA`, () => {
       const component = render(
-        <Header h3 contrast="AA">
+        <Header contrast="AA" h3>
           AA
         </Header>,
       );
