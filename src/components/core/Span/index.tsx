@@ -162,7 +162,8 @@ function SpanRaw(props: SpanProps & ForwardedRefProps) {
 
   const textContrast: TextContrast = textContrastForConfiguration(props);
   const hasColorOverride = success || error || warning || color;
-  const applyColorDerivedByContrast = contrast && !hasColorOverride;
+  const applyColorDerivedByContrast =
+    !hasColorOverride && (contrast || muted || xmuted || xxmuted);
 
   // [warning] mutually exclusive color
   if (contrast && hasColorOverride) {
