@@ -43,7 +43,7 @@ export default {
       sourcemap: true,
     },
   ],
-
+  external: EXTERNAL_LIBS,
   plugins: [
     // note: alias not currently used; busted after tsc compilation
     alias({
@@ -90,5 +90,4 @@ export default {
     }),
     filesize(),
   ],
-  external: ['react', 'react-dom', 'lodash'],
 };
