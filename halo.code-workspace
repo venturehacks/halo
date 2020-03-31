@@ -62,32 +62,31 @@
       "**/.DS_Store": true,
       "**/dist": true
     },
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
     "eslint.enable": true,
+    "eslint.debug": true,
     "eslint.lintTask.enable": true,
     "eslint.packageManager": "yarn",
-    "eslint.workingDirectories": [{
-      "directory": ".",
-      "changeProcessCWD": true
-    }],
-    "eslint.validate": [{
-        "language": "javascript",
-        "autoFix": true
-      },
-      {
-        "language": "javascriptreact",
-        "autoFix": true
-      },
-      {
-        "language": "typescript",
-        "autoFix": true
-      },
-      {
-        "language": "typescriptreact",
-        "autoFix": true
-      }
+    "eslint.workingDirectories": [{ "mode": "auto" }],
+    "eslint.validate": [
+      "javascript",
+      "javascriptreact",
+      "typescript",
+      "typescriptreact",
     ],
     "peacock.color": "#5dc9e2",
-    "typescript.tsdk": "node_modules/typescript/lib"
+    "typescript.tsdk": "node_modules/typescript/lib",
+    "[javascript]": {
+      "editor.formatOnSave": true,
+    },
+    "[typescript]": {
+      "editor.formatOnSave": true,
+    },
+    "[typescriptreact]": {
+      "editor.formatOnSave": true,
+    }
   },
   "extensions": {
     "unwantedRecommendations": [
@@ -104,7 +103,6 @@
       "mrmlnc.vscode-scss",
       "ms-vscode.vscode-typescript-tslint-plugin",
       "shd101wyy.markdown-preview-enhanced",
-      "shinnn.stylelint",
       "silvenon.mdx",
       "johnpapa.vscode-peacock",
       "dbaeumer.vscode-eslint"
