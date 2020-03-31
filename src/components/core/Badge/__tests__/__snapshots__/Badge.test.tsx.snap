@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Badge snapshot color blue 1`] = `
+<div
+  class="component blue circle"
+/>
+`;
+
+exports[`Badge snapshot color gray 1`] = `
+<div
+  class="component gray circle"
+/>
+`;
+
+exports[`Badge snapshot color green 1`] = `
+<div
+  class="component green circle"
+/>
+`;
+
+exports[`Badge snapshot shape circle 1`] = `
+<div
+  class="component gray circle"
+/>
+`;
+
+exports[`Badge snapshot shape square 1`] = `
+<div
+  class="component gray square"
+/>
+`;
