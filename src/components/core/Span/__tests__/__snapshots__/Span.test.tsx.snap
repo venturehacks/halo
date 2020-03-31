@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Span snapshots contrast 1`] = `
+<span
+  class="__halo_textContrast_dark_AA"
+>
+  AA
+</span>
+`;
+
+exports[`Span snapshots muted 1`] = `
+<span
+  class="__halo_textContrast_dark_AAA"
+>
+  AAA
+</span>
+`;
+
+exports[`Span snapshots xmuted 1`] = `
+<span
+  class="__halo_textContrast_dark_AA"
+>
+  AA
+</span>
+`;
+
+exports[`Span snapshots xxmuted 1`] = `
+<span
+  class="__halo_textContrast_dark_A"
+>
+  A
+</span>
+`;
