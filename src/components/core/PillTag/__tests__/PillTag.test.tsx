@@ -3,7 +3,7 @@ import React from 'react';
 
 import { PillTag } from '../index';
 
-test('Smoke test', () => {
+test('smoke', () => {
   const component = shallow(<PillTag>PHP</PillTag>);
   expect(component.text()).toEqual('PHP');
 });

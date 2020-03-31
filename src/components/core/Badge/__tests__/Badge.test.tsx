@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Badge } from '../index';
 
-test('Smoke test', () => {
+test('smoke', () => {
   const component = render(<Badge>NICE BADGE</Badge>);
   expect(component.text()).toEqual('NICE BADGE');
 });

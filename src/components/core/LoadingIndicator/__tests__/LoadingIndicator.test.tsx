@@ -3,7 +3,7 @@ import React from 'react';
 
 import { LoadingIndicator } from '../index';
 
-test('Smoke test', () => {
+test('smoke', () => {
   const component = render(<LoadingIndicator />);
   expect(component.text()).toContain('');
 });

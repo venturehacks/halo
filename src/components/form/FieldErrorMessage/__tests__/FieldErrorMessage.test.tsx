@@ -3,7 +3,7 @@ import React from 'react';
 
 import { FieldErrorMessage } from '../index';
 
-test('Smoke test', () => {
+test('smoke', () => {
   const component = render(
     <FieldErrorMessage
       errorSeverity="warning"
@@ -15,7 +15,7 @@ test('Smoke test', () => {
   expect(component.text()).toContain('Damn, you messed up');
 });
 
-test('Smoke test', () => {
+test('smoke', () => {
   const component = render(
     <FieldErrorMessage errorSeverity="critical" preset="block">
       You really messed up

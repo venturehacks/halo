@@ -3,7 +3,7 @@ import React from 'react';
 
 import { RawSelect } from '../index';
 
-test('Smoke test', () => {
+test('smoke', () => {
   const component = render(
     <RawSelect
       options={[

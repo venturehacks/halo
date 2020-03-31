@@ -3,7 +3,7 @@ import React from 'react';
 
 import { RawInput } from '../index';
 
-test('Smoke test', () => {
+test('smoke', () => {
   const component = render(
     <RawInput
       onChange={() => {}}

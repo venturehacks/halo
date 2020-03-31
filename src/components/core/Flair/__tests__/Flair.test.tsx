@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Flair } from '../index';
 
-test('Smoke test', () => {
+test('smoke', () => {
   const component = render(<Flair size="sm">Buy Now</Flair>);
   expect(component.text()).toContain('Buy Now');
 });
