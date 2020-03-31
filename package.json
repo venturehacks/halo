@@ -103,6 +103,7 @@
     "babel-plugin-emotion": "^10.0.4",
     "babel-preset-gatsby": "^0.2.29",
     "chokidar-cli": "^1.2.2",
+    "classnames": "^2.2.6",
     "concurrently": "^4.1.2",
     "cross-env": "^5.2.0",
     "custom-tslint-formatters": "^2.4.0",
