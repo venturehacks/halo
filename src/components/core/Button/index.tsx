@@ -97,6 +97,7 @@ function ButtonRaw({
       <a
         ref={forwardedRef}
         className={buttonClassNames}
+        data-test="Button"
         href={href}
         onClick={onClick}
         rel={rel}
@@ -112,6 +113,7 @@ function ButtonRaw({
     <button
       ref={forwardedRef}
       className={buttonClassNames}
+      data-test="Button"
       onClick={onClick}
       type={type}
       {...buttonElementProps}
