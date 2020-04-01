@@ -25,8 +25,8 @@ export interface DialogProps {
    * @default inline
    */
   context?: DialogContext;
-  onPrimaryButtonClick?: EventFunctionT;
-  onSecondaryButtonClick?: EventFunctionT;
+  onPrimaryButtonClick?: React.MouseEventHandler;
+  onSecondaryButtonClick?: React.MouseEventHandler;
   primaryButtonLabel?: string;
   secondaryButtonLabel?: string;
   title?: string | React.ReactNode;
