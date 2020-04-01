@@ -3,6 +3,7 @@
 exports[`Banner snapshot constrain 1`] = `
 <div
   class="component constrain passive"
+  data-test="Banner"
   role="alert"
 />
 `;
@@ -10,6 +11,7 @@ exports[`Banner snapshot constrain 1`] = `
 exports[`Banner snapshot default 1`] = `
 <div
   class="component passive"
+  data-test="Banner"
   role="alert"
 />
 `;
@@ -17,10 +19,12 @@ exports[`Banner snapshot default 1`] = `
 exports[`Banner snapshot offer dismiss 1`] = `
 <div
   class="component offerDismiss passive"
+  data-test="Banner"
   role="alert"
 >
   <button
     class="closeButton"
+    data-test="Banner-closeButton"
   >
     <svg
       height="10"
@@ -43,6 +47,7 @@ exports[`Banner snapshot offer dismiss 1`] = `
 exports[`Banner snapshot variant error 1`] = `
 <div
   class="component error"
+  data-test="Banner"
   role="alert"
 />
 `;
@@ -50,6 +55,7 @@ exports[`Banner snapshot variant error 1`] = `
 exports[`Banner snapshot variant success 1`] = `
 <div
   class="component success"
+  data-test="Banner"
   role="alert"
 />
 `;
@@ -57,6 +63,7 @@ exports[`Banner snapshot variant success 1`] = `
 exports[`Banner snapshot variant warning 1`] = `
 <div
   class="component warning"
+  data-test="Banner"
   role="alert"
 />
 `;

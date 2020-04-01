@@ -1,5 +1,5 @@
 import classNames from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
 import { CloseIcon } from '../../icons';
 
@@ -57,10 +57,14 @@ function Banner({
   );
 
   return (
-    <div className={classes} role="alert">
+    <div className={classes} data-test="Banner" role="alert">
       {children}
       {offerDismiss && (
-        <button className={styles.closeButton} onClick={handleDismiss}>
+        <button
+          className={styles.closeButton}
+          data-test="Banner-closeButton"
+          onClick={handleDismiss}
+        >
           <CloseIcon />
         </button>
       )}

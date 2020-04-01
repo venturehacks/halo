@@ -1,4 +1,4 @@
-import { render, shallow } from 'enzyme';
+import { mount, render, shallow } from 'enzyme';
 import React from 'react';
 
 import { Banner } from '../index';
@@ -7,6 +7,38 @@ describe('Banner', () => {
   test('smoke', () => {
     const component = shallow(<Banner>PHP</Banner>);
     expect(component.text()).toEqual('PHP');
+  });
+
+  describe('dismiss', () => {
+    test('hides on click', () => {
+      const dismiss = jest.fn();
+      const wrapper = mount(<Banner onDismiss={dismiss} offerDismiss />);
+
+      let component = wrapper.find(`[data-test="Banner"]`);
+      expect(component.hasClass('dismissed')).toBe(false);
+
+      wrapper
+        .find(`[data-test="Banner-closeButton"]`)
+        .last()
+        .simulate('click');
+
+      component = wrapper.find(`[data-test="Banner"]`);
+      expect(component.hasClass('dismissed')).toBe(true);
+    });
+
+    test('callback executes', () => {
+      const dismiss = jest.fn();
+      const wrapper = mount(<Banner onDismiss={dismiss} offerDismiss />);
+
+      expect(dismiss).toBeCalledTimes(0);
+
+      wrapper
+        .find(`[data-test="Banner-closeButton"]`)
+        .last()
+        .simulate('click');
+
+      expect(dismiss).toBeCalledTimes(1);
+    });
   });
 
   describe('snapshot', () => {
