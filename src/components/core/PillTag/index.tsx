@@ -12,7 +12,7 @@ export interface PillTagProps {
    * @default false
    */
   interactive?: boolean;
-  onClick?: EventFunctionT;
+  onClick?: React.MouseEventHandler<HTMLSpanElement>;
 }
 
 function PillTag({

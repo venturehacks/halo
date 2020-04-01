@@ -50,7 +50,7 @@ export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
    */
   href?: string;
   icon?: React.ReactNode;
-  onClick?: EventFunctionT;
+  onClick?: React.MouseEventHandler;
   rel?: string;
   size?: ButtonSize;
   target?: '_blank' | '_self' | '_parent' | '_top' | undefined;

@@ -20,7 +20,7 @@ export interface BannerProps {
    * @default false
    */
   offerDismiss?: boolean;
-  onDismiss?: EventFunctionT;
+  onDismiss?: React.MouseEventHandler<HTMLButtonElement>;
   variant?: BannerVariant;
 }
 
