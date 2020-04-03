@@ -8,10 +8,16 @@ import {
 
 import styles from './styles.scss';
 
-interface FlairProps {
+export interface FlairProps {
   children: React.ReactNode;
   className?: string;
+  /**
+   * @default blue
+   */
   color?: 'blue' | 'gray' | 'orange' | 'red' | 'purple' | 'green';
+  /**
+   * @default sm
+   */
   size?: 'xs' | 'sm' | 'md';
 }
 

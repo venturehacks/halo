@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Flair snapshot color green 1`] = `
+<span
+  class="component green sm"
+>
+  green
+</span>
+`;
+
+exports[`Flair snapshot color orange 1`] = `
+<span
+  class="component orange sm"
+>
+  orange
+</span>
+`;
+
+exports[`Flair snapshot color red 1`] = `
+<span
+  class="component red sm"
+>
+  red
+</span>
+`;
+
+exports[`Flair snapshot default 1`] = `
+<span
+  class="component blue sm"
+>
+  blue default
+</span>
+`;
+
+exports[`Flair snapshot size md 1`] = `
+<span
+  class="component blue md"
+>
+  md size
+</span>
+`;
+
+exports[`Flair snapshot size sm 1`] = `
+<span
+  class="component blue sm"
+>
+  sm size
+</span>
+`;
+
+exports[`Flair snapshot size xs 1`] = `
+<span
+  class="component blue xs"
+>
+  xs size
+</span>
+`;
