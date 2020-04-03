@@ -1,0 +1,10 @@
+@import 'halo';
+
+.component {
+  @include flex-row($align: center, $valign: center);
+  align-self: center;
+  text-align: center;
+  width: 100%;
+  height: grid-cell-width(3);
+  max-height: 100%;
+}
