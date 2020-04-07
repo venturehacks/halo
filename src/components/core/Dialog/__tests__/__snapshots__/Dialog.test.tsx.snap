@@ -1,0 +1,81 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Dialog snapshot default 1`] = `
+<div
+  class="component contextModal paddingDefault"
+  data-test="Dialog"
+>
+  <div
+    class="content"
+  >
+    content
+  </div>
+</div>
+`;
+
+exports[`Dialog snapshot inline context 1`] = `
+<div
+  class="component contextInline paddingDefault"
+  data-test="Dialog"
+>
+  <div
+    class="content"
+  >
+    content
+  </div>
+</div>
+`;
+
+exports[`Dialog snapshot no content padding 1`] = `
+<div
+  class="component contextModal"
+  data-test="Dialog"
+>
+  <div
+    class="content"
+  >
+    content
+  </div>
+</div>
+`;
+
+exports[`Dialog snapshot title + both buttons 1`] = `
+<div
+  class="component contextModal paddingDefault"
+  data-test="Dialog"
+>
+  <div
+    class="title"
+  >
+    <h4
+      class="component __halo_fontSizeMap_size--lg __halo_fontWeight_medium"
+    >
+      Title
+    </h4>
+  </div>
+  <div
+    class="content"
+  >
+    content
+  </div>
+  <div
+    class="chin"
+    data-test="Dialog-chin"
+  >
+    <button
+      class="component secondaryGray small emphasis"
+      data-test="Dialog-secondaryButton"
+      type="button"
+    >
+      Cancel
+    </button>
+    <button
+      class="component primary small emphasis"
+      data-test="Dialog-primaryButton"
+      type="button"
+    >
+      Save
+    </button>
+  </div>
+</div>
+`;

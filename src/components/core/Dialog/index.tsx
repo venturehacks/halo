@@ -19,10 +19,13 @@ export interface DialogProps {
   buttonComponent?: React.ComponentType<HaloButtonProps>;
   children: React.ReactNode;
   className?: string;
+  /**
+   * @default true
+   */
   contentPadding?: boolean;
   /**
    * If modal context, include drop shadow
-   * @default inline
+   * @default modal
    */
   context?: DialogContext;
   onPrimaryButtonClick?: React.MouseEventHandler;
@@ -46,6 +49,7 @@ function Dialog({
 }: DialogProps) {
   const classes = classNames(
     styles.component,
+    context === 'inline' && styles.contextInline,
     context === 'modal' && styles.contextModal,
     contentPadding && styles.paddingDefault,
     className,
@@ -56,7 +60,7 @@ function Dialog({
   const isTitleJSX = typeof title !== 'string';
 
   return (
-    <div className={classes}>
+    <div className={classes} data-test="Dialog">
       {title && (
         <div className={styles.title}>
           {isTitleJSX ? (
@@ -70,9 +74,10 @@ function Dialog({
       )}
       <div className={styles.content}>{children}</div>
       {hasChin && (
-        <div className={styles.chin}>
+        <div className={styles.chin} data-test="Dialog-chin">
           {secondaryButtonLabel && (
             <Button
+              data-test="Dialog-secondaryButton"
               onClick={onSecondaryButtonClick}
               size="small"
               variant="secondary-gray"
@@ -82,6 +87,7 @@ function Dialog({
           )}
           {primaryButtonLabel && (
             <Button
+              data-test="Dialog-primaryButton"
               onClick={onPrimaryButtonClick}
               size="small"
               variant="primary"

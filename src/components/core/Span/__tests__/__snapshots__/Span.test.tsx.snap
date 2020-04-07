@@ -1,6 +1,62 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Span snapshots contrast 1`] = `
+exports[`Span snapshot antialiased 1`] = `
+<span
+  class="antialiased"
+>
+  antialiased
+</span>
+`;
+
+exports[`Span snapshot block 1`] = `
+<div
+  class="block"
+>
+  block
+</div>
+`;
+
+exports[`Span snapshot color error 1`] = `
+<span
+  class="error"
+>
+  error
+</span>
+`;
+
+exports[`Span snapshot color palette color 1`] = `
+<span
+  class="__halo_color_purple--100"
+>
+  purple--100
+</span>
+`;
+
+exports[`Span snapshot color prop collision 1`] = `
+<span
+  class="error"
+>
+  should warn and use 'error' class
+</span>
+`;
+
+exports[`Span snapshot color success 1`] = `
+<span
+  class="success"
+>
+  success
+</span>
+`;
+
+exports[`Span snapshot color warning 1`] = `
+<span
+  class="warning"
+>
+  warning
+</span>
+`;
+
+exports[`Span snapshot derive contrast AA 1`] = `
 <span
   class="__halo_textContrast_dark_AA"
 >
@@ -8,7 +64,7 @@ exports[`Span snapshots contrast 1`] = `
 </span>
 `;
 
-exports[`Span snapshots muted 1`] = `
+exports[`Span snapshot derive contrast muted 1`] = `
 <span
   class="__halo_textContrast_dark_AAA"
 >
@@ -16,7 +72,7 @@ exports[`Span snapshots muted 1`] = `
 </span>
 `;
 
-exports[`Span snapshots xmuted 1`] = `
+exports[`Span snapshot derive contrast xmuted 1`] = `
 <span
   class="__halo_textContrast_dark_AA"
 >
@@ -24,10 +80,82 @@ exports[`Span snapshots xmuted 1`] = `
 </span>
 `;
 
-exports[`Span snapshots xxmuted 1`] = `
+exports[`Span snapshot derive contrast xxmuted 1`] = `
 <span
   class="__halo_textContrast_dark_A"
 >
   A
+</span>
+`;
+
+exports[`Span snapshot semibold 1`] = `
+<span
+  class="semibold"
+>
+  semibold
+</span>
+`;
+
+exports[`Span snapshot size 2xl 1`] = `
+<span
+  class="__halo_fontSizeMap_size--2xl"
+>
+  2xl
+</span>
+`;
+
+exports[`Span snapshot size 2xs 1`] = `
+<span
+  class="__halo_fontSizeMap_size--2xs"
+>
+  2xs
+</span>
+`;
+
+exports[`Span snapshot size lg 1`] = `
+<span
+  class="__halo_fontSizeMap_size--lg"
+>
+  lg
+</span>
+`;
+
+exports[`Span snapshot size sm 1`] = `
+<span
+  class="__halo_fontSizeMap_size--sm"
+>
+  sm
+</span>
+`;
+
+exports[`Span snapshot size xl 1`] = `
+<span
+  class="__halo_fontSizeMap_size--xl"
+>
+  xl
+</span>
+`;
+
+exports[`Span snapshot strong 1`] = `
+<span
+  class="bold"
+>
+  strong
+</span>
+`;
+
+exports[`Span snapshot tag 1`] = `
+<div
+  class=""
+>
+  div tag
+</div>
+`;
+
+exports[`Span snapshot uppercase 1`] = `
+<span
+  class="uppercase"
+>
+  uppercase
 </span>
 `;

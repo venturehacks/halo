@@ -3,7 +3,7 @@ import React from 'react';
 
 import { RawToggleSwitch } from '../index';
 
-test('Smoke test', () => {
+test('smoke', () => {
   const component = render(
     <RawToggleSwitch id="foo" label="Current value" onChange={() => {}} />,
   );

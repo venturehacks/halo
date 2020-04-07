@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Label } from '../index';
 
-test('Smoke test', () => {
+test('smoke', () => {
   const component = render(
     <Label supportingText="Who are you?" title="Name" />,
   );

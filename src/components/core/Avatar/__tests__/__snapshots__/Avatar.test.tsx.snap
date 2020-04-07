@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar snapshots badge label 1`] = `
+<div
+  class="component large circle"
+>
+  <img
+    alt="Avatar for Drew"
+    class="avatar circle"
+    src="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+  />
+  <div
+    class="component gray circle"
+  >
+    Test Badge
+  </div>
+</div>
+`;
+
+exports[`Avatar snapshots badgeColor 1`] = `
+<div
+  class="component large circle"
+>
+  <img
+    alt="Avatar for Drew"
+    class="avatar circle"
+    src="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+  />
+  <div
+    class="component purple circle"
+  >
+    Purple
+  </div>
+</div>
+`;
+
+exports[`Avatar snapshots badgeShape circle [default] 1`] = `
+<div
+  class="component large circle"
+>
+  <img
+    alt="Avatar for Drew"
+    class="avatar circle"
+    src="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+  />
+  <div
+    class="component gray circle"
+  >
+    Test Badge
+  </div>
+</div>
+`;
+
+exports[`Avatar snapshots badgeShape square 1`] = `
+<div
+  class="component large circle"
+>
+  <img
+    alt="Avatar for Drew"
+    class="avatar circle"
+    src="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+  />
+  <div
+    class="component gray square"
+  >
+    Test Badge
+  </div>
+</div>
+`;
+
+exports[`Avatar snapshots shape circle [default] 1`] = `
+<div
+  class="component medium circle"
+>
+  <img
+    alt="Avatar for Drew"
+    class="avatar circle"
+    src="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+  />
+</div>
+`;
+
+exports[`Avatar snapshots shape square 1`] = `
+<div
+  class="component medium square"
+>
+  <img
+    alt="Avatar for Drew"
+    class="avatar square"
+    src="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+  />
+</div>
+`;
+
+exports[`Avatar snapshots size large 1`] = `
+<div
+  class="component large circle"
+>
+  <img
+    alt="Avatar for Drew"
+    class="avatar circle"
+    src="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+  />
+</div>
+`;
+
+exports[`Avatar snapshots size medium [default] 1`] = `
+<div
+  class="component medium circle"
+>
+  <img
+    alt="Avatar for Drew"
+    class="avatar circle"
+    src="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+  />
+</div>
+`;
+
+exports[`Avatar snapshots size xxxsmall 1`] = `
+<div
+  class="component xxxsmall circle"
+>
+  <img
+    alt="Avatar for Drew"
+    class="avatar circle"
+    src="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+  />
+</div>
+`;
