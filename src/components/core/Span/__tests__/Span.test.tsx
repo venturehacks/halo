@@ -84,7 +84,7 @@ describe('Span', () => {
       });
 
       test(`prop collision`, () => {
-        const spy = jest.spyOn(console, 'warn');
+        const spy = jest.spyOn(console, 'warn').mockImplementation(() => {});
         expect(spy).toHaveBeenCalledTimes(0);
         const component = render(
           <Span contrast="AAA" error>
