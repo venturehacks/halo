@@ -2,11 +2,29 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.8.6](https://github.com/venturehacks/halo/compare/0.8.5...v0.8.6)
+#### [v0.9.0](https://github.com/venturehacks/halo/compare/0.8.6...v0.9.0)
+
+> 13 April 2020
+
+- clean up event types [`#60`](https://github.com/venturehacks/halo/pull/60)
+- [Span] fix muted, xmuted, xxmuted prop functionality, add snapsho… [`#58`](https://github.com/venturehacks/halo/pull/58)
+- [package] Linter support upgrade [`#56`](https://github.com/venturehacks/halo/pull/56)
+- [Header] do not apply default text color on base class [`#55`](https://github.com/venturehacks/halo/pull/55)
+- [ColorPalette] Copy on click [`#54`](https://github.com/venturehacks/halo/pull/54)
+- Docz 2.x [`#52`](https://github.com/venturehacks/halo/pull/52)
+- [Span] fix muted, xmuted, xxmuted prop functionality, add snapsho… (#58) [`#57`](https://github.com/venturehacks/halo/issues/57)
+- [Header] do not apply default text color on base class (#55) [`#41`](https://github.com/venturehacks/halo/issues/41)
+- make Label more customizable [`62d4057`](https://github.com/venturehacks/halo/commit/62d405740e8328bc87754380d9a0b86e83dc55d0)
+- add togglePosition prop to RawToggleSwitch [`9a6b839`](https://github.com/venturehacks/halo/commit/9a6b839dd6ee414aa26f4651e816413428087805)
+- make toggle switch ever so slightly smaller (24px -&gt; 20px) [`eb166c2`](https://github.com/venturehacks/halo/commit/eb166c2047157a0ef7fbe3e565d92eaedf58ef22)
+- feedback [`28e4d79`](https://github.com/venturehacks/halo/commit/28e4d79694a66272e808934ef3953137b64afa2f)
+
+#### [0.8.6](https://github.com/venturehacks/halo/compare/0.8.5...0.8.6)
 
 > 25 February 2020
 
 - forward refs for RawInput [`#53`](https://github.com/venturehacks/halo/pull/53)
+- Release 0.8.6 [`b1402bf`](https://github.com/venturehacks/halo/commit/b1402bf69896c1ad2912b115a331931a4ac8b165)
 
 #### [0.8.5](https://github.com/venturehacks/halo/compare/0.8.2...0.8.5)
 
