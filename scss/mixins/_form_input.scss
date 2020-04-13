@@ -314,6 +314,34 @@ $raw-toggle-switch-knob-size: tempo(2.5) !default;
   }
 }
 
+@mixin input-label--toggle-switch--right {
+  @include input-label--toggle-switch;
+  padding-right: tempo(6);
+  padding-left: 0;
+  text-align: right;
+
+  // switch gutter
+  &::before {
+    right: 0;
+    left: auto;
+  }
+
+  // toggle circle nub
+  &::after {
+    right: tempo(2);
+    left: auto;
+  }
+
+  // on (checked)
+  :checked + & {
+    // move knob leftward to indicate 'on' state
+    &::after {
+      right: 0;
+      left: auto;
+    }
+  }
+}
+
 @mixin input-label--radio {
   @extend %input-label--base;
   line-height: $raw-radio-size;

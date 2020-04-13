@@ -13,3 +13,7 @@
   @include halo-element-base;
   @include input-label--toggle-switch;
 }
+
+.toggleRight {
+  @include input-label--toggle-switch--right;
+}
