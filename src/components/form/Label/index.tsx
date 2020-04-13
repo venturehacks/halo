@@ -1,13 +1,18 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import { ForwardedRefProps, withForwardedRef } from '../../../lib';
-import { Span } from '../../core/Span';
+import {
+  Color,
+  ForwardedRefProps,
+  TextWeight,
+  withForwardedRef,
+} from '../../../lib';
+import { Span, SpanProps } from '../../core/Span';
 import { Tooltip } from '../../core/Tooltip';
 
 import styles from './styles.scss';
 
-export interface LabelProps {
+export interface LabelProps extends Pick<SpanProps, 'weight' | 'color'> {
   children?: React.ReactNode;
   className?: string;
   /**
@@ -15,6 +20,7 @@ export interface LabelProps {
    * @default false
    */
   containsFieldGroup?: boolean;
+  controlClassName?: string;
   /**
    * Form field this label applies to. This should match the "name" prop on input elements.
    */
@@ -28,8 +34,14 @@ export interface LabelProps {
   /**
    * Primary description of field
    */
-  title?: string;
+  title?: React.ReactNode;
 }
+
+LabelRaw.defaultProps = {
+  color: 'slate--900' as Color,
+  isRequired: false,
+  weight: 'medium' as TextWeight,
+};
 
 function LabelRaw({
   children,
@@ -37,9 +49,12 @@ function LabelRaw({
   containsFieldGroup,
   field,
   forwardedRef,
-  isRequired = false,
+  isRequired,
   supportingText,
   title,
+  controlClassName,
+  weight,
+  color,
 }: LabelProps & ForwardedRefProps) {
   if (hasCheckboxOrRadio(children) && !containsFieldGroup) {
     return (
@@ -61,7 +76,9 @@ function LabelRaw({
     <div>
       {title && (
         <div className={styles.title}>
-          {title}{' '}
+          <Span color={color} weight={weight}>
+            {title}
+          </Span>{' '}
           {isRequired && (
             <Tooltip content="Required">
               <Span xxmuted>*</Span>
@@ -82,8 +99,12 @@ function LabelRaw({
         className={classNames(classes, styles.fieldset)}
         name={id}
       >
-        <legend>{content}</legend>
-        {children && <div className={styles.control}>{children}</div>}
+        <legend className={styles.legend}>{content}</legend>
+        {children && (
+          <div className={classNames(styles.control, controlClassName)}>
+            {children}
+          </div>
+        )}
       </fieldset>
     );
   }
@@ -91,7 +112,11 @@ function LabelRaw({
   return (
     <label ref={forwardedRef} className={classes} htmlFor={id}>
       {content}
-      {children && <div className={styles.control}>{children}</div>}
+      {children && (
+        <div className={classNames(styles.control, controlClassName)}>
+          {children}
+        </div>
+      )}
     </label>
   );
 }
