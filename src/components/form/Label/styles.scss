@@ -13,10 +13,7 @@
   }
 
   .title {
-    @include font($weight: medium, $color: $slate--900);
-    line-height: 1.25;
     order: 0;
-    letter-spacing: 0.025em;
   }
 
   .supportingText {
@@ -34,4 +31,8 @@
 
 .fieldset {
   border: 0;
+
+  .legend {
+    width: 100%;
+  }
 }

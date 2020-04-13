@@ -5,6 +5,7 @@ declare const styles: {
   readonly "supportingText": string;
   readonly "control": string;
   readonly "fieldset": string;
+  readonly "legend": string;
 };
 export = styles;
 

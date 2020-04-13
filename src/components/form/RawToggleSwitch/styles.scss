@@ -11,5 +11,9 @@
 
 .label {
   @include halo-element-base;
-  @include input-label--toggle-switch;
+  @include input-label--toggle-switch--left;
+}
+
+.toggleRight {
+  @include input-label--toggle-switch--right;
 }

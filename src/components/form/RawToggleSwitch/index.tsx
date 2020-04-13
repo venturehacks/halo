@@ -39,6 +39,12 @@ export interface RawToggleSwitchProps
    * Required to fully manage this component
    */
   onChange?: React.ChangeEventHandler<HTMLInputElement>;
+
+  /**
+   * Position of toggle in relation to label text
+   * @default left
+   */
+  togglePosition?: 'left' | 'right';
 }
 
 function RawToggleSwitch({
@@ -49,6 +55,7 @@ function RawToggleSwitch({
   label,
   labelClassName,
   type,
+  togglePosition,
   ...rest
 }: RawToggleSwitchProps) {
   return (
@@ -66,7 +73,14 @@ function RawToggleSwitch({
         type="checkbox"
         {...rest}
       />
-      <label className={classNames(labelClassName, styles.label)} htmlFor={id}>
+      <label
+        className={classNames(
+          labelClassName,
+          styles.label,
+          togglePosition === 'right' && styles.toggleRight,
+        )}
+        htmlFor={id}
+      >
         {label}
       </label>
     </>
