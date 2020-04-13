@@ -242,7 +242,7 @@ $raw-toggle-switch-knob-size: tempo(2.5) !default;
   }
 }
 
-@mixin input-label--toggle-switch {
+@mixin input-label--toggle-switch--left {
   @extend %input-label--base;
   padding-left: tempo(6);
   padding-right: tempo(1);
@@ -315,7 +315,7 @@ $raw-toggle-switch-knob-size: tempo(2.5) !default;
 }
 
 @mixin input-label--toggle-switch--right {
-  @include input-label--toggle-switch;
+  @include input-label--toggle-switch--left;
   padding-right: tempo(6);
   padding-left: 0;
   text-align: right;
