@@ -8,11 +8,15 @@
 @import 'mixins/breakpoints';
 @import 'mixins/flex';
 @import 'mixins/font';
-@import 'mixins/form_input';
 @import 'mixins/position';
 @import 'mixins/reset';
 @import 'mixins/space';
 @import 'mixins/util';
+
+@import 'mixins/form-inputs/base';
+@import 'mixins/form-inputs/radio_checkbox';
+@import 'mixins/form-inputs/text';
+@import 'mixins/form-inputs/toggle';
 
 // vendor support
 @import 'mixins/vendor-support/react-select';
