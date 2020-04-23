@@ -10,4 +10,8 @@
 .label {
   @include halo-element-base;
   @include input-label--checkbox;
+
+  &.pill {
+    @include input-label--pill;
+  }
 }

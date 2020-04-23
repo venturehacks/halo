@@ -5,7 +5,8 @@ import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 
 import styles from './styles.scss';
 
-interface RawCheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface RawCheckboxProps
+  extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   /**
    * Since the most common callout is for validation errors, you shouldn't need to customize this.
@@ -24,9 +25,16 @@ interface RawCheckboxProps extends React.InputHTMLAttributes<HTMLInputElement> {
 
   label: React.ReactNode;
   labelClassName?: string;
+
+  /**
+   * set to true to render pills
+   * @default false
+   */
+  pill?: boolean;
 }
 
 function RawCheckbox({
+  pill,
   className,
   errorSeverity = 'warning',
   hasError,
@@ -51,7 +59,14 @@ function RawCheckbox({
         type="checkbox"
         {...rest}
       />
-      <label className={classNames(labelClassName, styles.label)} htmlFor={id}>
+      <label
+        className={classNames(
+          labelClassName,
+          styles.label,
+          pill && styles.pill,
+        )}
+        htmlFor={id}
+      >
         {label}
       </label>
     </>
