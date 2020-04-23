@@ -2,11 +2,31 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.8.6](https://github.com/venturehacks/halo/compare/0.8.5...v0.8.6)
+#### [v0.9.1](https://github.com/venturehacks/halo/compare/0.9.0...v0.9.1)
+
+> 23 April 2020
+
+- [RawCheckbox/RawRadio] add pill style [`#62`](https://github.com/venturehacks/halo/pull/62)
+
+#### [v0.9.0](https://github.com/venturehacks/halo/compare/0.8.6...v0.9.0)
+
+- improvements to RawToggleSwitch and Label [`#61`](https://github.com/venturehacks/halo/pull/61)
+- Snapshot Test Suite [`#59`](https://github.com/venturehacks/halo/pull/59)
+- clean up event types [`#60`](https://github.com/venturehacks/halo/pull/60)
+- [Span] fix muted, xmuted, xxmuted prop functionality, add snapsho… [`#58`](https://github.com/venturehacks/halo/pull/58)
+- [package] Linter support upgrade [`#56`](https://github.com/venturehacks/halo/pull/56)
+- [Header] do not apply default text color on base class [`#55`](https://github.com/venturehacks/halo/pull/55)
+- [ColorPalette] Copy on click [`#54`](https://github.com/venturehacks/halo/pull/54)
+- Docz 2.x [`#52`](https://github.com/venturehacks/halo/pull/52)
+- [Span] fix muted, xmuted, xxmuted prop functionality, add snapsho… (#58) [`#57`](https://github.com/venturehacks/halo/issues/57)
+- [Header] do not apply default text color on base class (#55) [`#41`](https://github.com/venturehacks/halo/issues/41)
+
+#### [0.8.6](https://github.com/venturehacks/halo/compare/0.8.5...0.8.6)
 
 > 25 February 2020
 
 - forward refs for RawInput [`#53`](https://github.com/venturehacks/halo/pull/53)
+- Release 0.8.6 [`b1402bf`](https://github.com/venturehacks/halo/commit/b1402bf69896c1ad2912b115a331931a4ac8b165)
 
 #### [0.8.5](https://github.com/venturehacks/halo/compare/0.8.2...0.8.5)
 
