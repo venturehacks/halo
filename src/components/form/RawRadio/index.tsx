@@ -27,15 +27,9 @@ export interface RawRadioProps
    * Required for associated <label>
    */
   id: string;
-
   label: React.ReactNode;
   labelClassName?: string;
-
-  /**
-   * set to true to render pills
-   * @default false
-   */
-  pill?: boolean;
+  variant?: 'plain' | 'pill';
 }
 
 function RawRadio({
@@ -45,7 +39,7 @@ function RawRadio({
   label,
   labelClassName,
   asCheckbox = false,
-  pill = false,
+  variant = 'plain',
   hasError,
   errorSeverity = 'warning',
   ...rest
@@ -70,7 +64,7 @@ function RawRadio({
           labelClassName,
           styles.label,
           asCheckbox ? styles.asCheckbox : styles.asRadio,
-          pill && styles.pill,
+          variant === 'pill' && styles.pill,
         )}
         htmlFor={id}
       >

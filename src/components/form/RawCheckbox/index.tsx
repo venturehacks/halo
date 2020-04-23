@@ -22,19 +22,13 @@ export interface RawCheckboxProps
    * Required for associated <label>
    */
   id: string;
-
   label: React.ReactNode;
   labelClassName?: string;
-
-  /**
-   * set to true to render pills
-   * @default false
-   */
-  pill?: boolean;
+  variant?: 'plain' | 'pill';
 }
 
 function RawCheckbox({
-  pill,
+  variant = 'plain',
   className,
   errorSeverity = 'warning',
   hasError,
@@ -63,7 +57,7 @@ function RawCheckbox({
         className={classNames(
           labelClassName,
           styles.label,
-          pill && styles.pill,
+          variant === 'pill' && styles.pill,
         )}
         htmlFor={id}
       >
