@@ -9,12 +9,16 @@
 
 .label {
   @include halo-element-base;
-}
 
-.asCheckbox {
-  @include input-label--checkbox;
-}
+  &.asCheckbox {
+    @include input-label--checkbox;
+  }
 
-.asRadio {
-  @include input-label--radio;
+  &.asRadio {
+    @include input-label--radio;
+  }
+
+  &.pill {
+    @include input-label--pill;
+  }
 }

@@ -1,0 +1,68 @@
+@import './base';
+
+$raw-input-height: 50px !default;
+$raw-input-height--transparent: 48px !default;
+
+@mixin input($size: md, $style: normal) {
+  @include font($size: $size, $color: $slate--900);
+  max-width: 100%;
+  padding: tempo(1.5) tempo(2);
+
+  @if $style == normal {
+    @include input-border--slate;
+    border-width: 1px;
+    border-style: solid;
+    background-color: white;
+  } @else if $style == transparent {
+    @include input-border--transparent;
+    background-color: transparent;
+  }
+
+  &::placeholder {
+    @include input-placeholder($size: $size);
+  }
+
+  &:hover {
+    @if $style == normal {
+      @include input-border--hover;
+    }
+  }
+
+  &:focus {
+    @if $style == normal {
+      @include input-border--hover;
+      @include input-border--focused;
+    }
+  }
+
+  &[disabled] {
+    @include input--disabled;
+  }
+
+  &:-webkit-autofill {
+    box-shadow: 0 0 0 50px white inset;
+    -webkit-text-fill-color: #333;
+  }
+
+  &:-internal-autofill-selected {
+    box-shadow: 0 0 0 50px white inset;
+  }
+
+  &.widthAuto {
+    width: auto;
+  }
+
+  &.width100 {
+    width: 100%;
+  }
+
+  &.hasError {
+    &.warning {
+      @include input-border--warning;
+    }
+
+    &.critical {
+      @include input-border--error;
+    }
+  }
+}

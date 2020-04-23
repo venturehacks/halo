@@ -8,7 +8,7 @@ import styles from './styles.scss';
 export interface RawRadioProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   /**
-   * set to true to visually render radios as checkboxes
+   * set to true to visually render radio elements as checkboxes
    * @default false
    */
   asCheckbox?: boolean;
@@ -27,9 +27,9 @@ export interface RawRadioProps
    * Required for associated <label>
    */
   id: string;
-
   label: React.ReactNode;
   labelClassName?: string;
+  variant?: 'plain' | 'pill';
 }
 
 function RawRadio({
@@ -39,6 +39,7 @@ function RawRadio({
   label,
   labelClassName,
   asCheckbox = false,
+  variant = 'plain',
   hasError,
   errorSeverity = 'warning',
   ...rest
@@ -63,6 +64,7 @@ function RawRadio({
           labelClassName,
           styles.label,
           asCheckbox ? styles.asCheckbox : styles.asRadio,
+          variant === 'pill' && styles.pill,
         )}
         htmlFor={id}
       >

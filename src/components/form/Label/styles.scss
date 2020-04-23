@@ -5,11 +5,6 @@
 
   &.hasControlChildren {
     margin-bottom: tempo(4);
-
-    & + div,
-    & + button {
-      margin-top: -#{tempo(2)};
-    }
   }
 
   .title {

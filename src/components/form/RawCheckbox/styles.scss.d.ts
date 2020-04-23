@@ -4,6 +4,7 @@ declare const styles: {
   readonly "hasError": string;
   readonly "warning": string;
   readonly "critical": string;
+  readonly "pill": string;
 };
 export = styles;
 
