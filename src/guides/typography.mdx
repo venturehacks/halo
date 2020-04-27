@@ -78,26 +78,32 @@ import { Span } from '../components/core/Span';
 ## Contrast
 
 <Playground>
-  <Paragraph contrast="AAAA">
-    AAAA. Hammock salvia helvetica whatever bespoke wayfarers man bun meditation unicorn, la croix mixtape chambray before they sold out ethical literally. Put a bird on it truffaut meditation, authentic cray irony banh mi four dollar toast cred retro whatever mumblecore messenger bag neutra austin.
-  </Paragraph>
-  <Paragraph contrast="AAA">
-    AAA. Hammock salvia helvetica whatever bespoke wayfarers man bun meditation unicorn, la croix mixtape chambray before they sold out ethical literally. Put a bird on it truffaut meditation, authentic cray irony banh mi four dollar toast cred retro whatever mumblecore messenger bag neutra austin.
-  </Paragraph>
-  <Paragraph contrast="AA">
-    AA. Hammock salvia helvetica whatever bespoke wayfarers man bun meditation unicorn, la croix mixtape chambray before they sold out ethical literally. Put a bird on it truffaut meditation, authentic cray irony banh mi four dollar toast cred retro whatever mumblecore messenger bag neutra austin.
-  </Paragraph>
-  <Paragraph contrast="A">
-    A. Hammock salvia helvetica whatever bespoke wayfarers man bun meditation unicorn, la croix mixtape chambray before they sold out ethical literally. Put a bird on it truffaut meditation, authentic cray irony banh mi four dollar toast cred retro whatever mumblecore messenger bag neutra austin.
-  </Paragraph>
+  <Box maxWidth="600px">
+    <Paragraph contrast="AAAA">
+      <Span monospace semibold block>AAAA</Span>
+      Hammock salvia helvetica whatever bespoke wayfarers man bun meditation unicorn, la croix mixtape chambray before they sold out ethical literally. Put a bird on it truffaut meditation, authentic cray irony banh mi four dollar toast cred retro whatever mumblecore messenger bag neutra austin.
+    </Paragraph>
+    <Paragraph contrast="AAA">
+      <Span monospace semibold block>AAA</Span>
+      Hammock salvia helvetica whatever bespoke wayfarers man bun meditation unicorn, la croix mixtape chambray before they sold out ethical literally. Put a bird on it truffaut meditation, authentic cray irony banh mi four dollar toast cred retro whatever mumblecore messenger bag neutra austin.
+    </Paragraph>
+    <Paragraph contrast="AA">
+      <Span monospace semibold block>AA</Span>
+      Hammock salvia helvetica whatever bespoke wayfarers man bun meditation unicorn, la croix mixtape chambray before they sold out ethical literally. Put a bird on it truffaut meditation, authentic cray irony banh mi four dollar toast cred retro whatever mumblecore messenger bag neutra austin.
+    </Paragraph>
+    <Paragraph contrast="A">
+      <Span monospace semibold block>A</Span>
+      Hammock salvia helvetica whatever bespoke wayfarers man bun meditation unicorn, la croix mixtape chambray before they sold out ethical literally. Put a bird on it truffaut meditation, authentic cray irony banh mi four dollar toast cred retro whatever mumblecore messenger bag neutra austin.
+    </Paragraph>
+  </Box>
 </Playground>
+
 
 <br /><br />
 
 ## Weight
 
 <Playground>
-  <Span weight="ultralight" block>200 ultralight</Span>
   <Span weight="light" block>300 light</Span>
   <Span weight="regular" block>400 regular (default)</Span>
   <Span weight="medium" block>500 medium</Span>
@@ -112,6 +118,54 @@ $weight--regular: 400;
 $weight--medium: 500;
 $weight--semibold: 600;
 $weight--bold: 700;
+$weight--heavy: 800;
+$weights: (
+  ultralight: $weight--ultralight,
+  light: $weight--light,
+  regular: $weight--regular,
+  medium: $weight--medium,
+  semibold: $weight--semibold,
+  bold: $weight--bold,
+  heavy: $weight--heavy,
+);
+```
+
+<br /><br />
+
+## Line Height
+
+> ** ⚠️ Advanced override. Use with caution.**
+
+Generally, you should not override line height. There is a curated line height automatically applied when setting text size.
+
+<Playground>
+  <Box maxWidth="600px">
+    <Paragraph>
+      <strong>Default.</strong> The Paragraph component is ideal for rendering blocks of copy. It offers a narrower subset of features from Span, with stronger default enforcement of type size and line height. By default, it applies a natural document flow bottom margin.
+    </Paragraph>
+    <Paragraph lineHeight="comfortable">
+      <strong>Comfortable.</strong> The Paragraph component is ideal for rendering blocks of copy. It offers a narrower subset of features from Span, with stronger default enforcement of type size and line height. By default, it applies a natural document flow bottom margin.
+    </Paragraph>
+    <Paragraph lineHeight="compact">
+      <strong>Compact.</strong> The Paragraph component is ideal for rendering blocks of copy. It offers a narrower subset of features from Span, with stronger default enforcement of type size and line height. By default, it applies a natural document flow bottom margin.
+    </Paragraph>
+    <Paragraph lineHeight="dense">
+      <strong>Dense.</strong> The Paragraph component is ideal for rendering blocks of copy. It offers a narrower subset of features from Span, with stronger default enforcement of type size and line height. By default, it applies a natural document flow bottom margin.
+    </Paragraph>
+  </Box>
+</Playground>
+
+```scss
+$line-height--default: 1.5;
+$line-height--comfortable: 1.25;
+$line-height--compact: 1.125;
+$line-height--dense: 1.0625;
+$line-heights: (
+  default: $line-height--default,
+  comfortable: $line-height--comfortable,
+  compact: $line-height--compact,
+  dense: $line-height--dense,
+);
 ```
 
 <br /><br />
