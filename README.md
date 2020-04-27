@@ -4,11 +4,11 @@ Halo is our design system. It enables our small group of designers to design and
 
 &nbsp;
 
-[![Build status](https://badge.buildkite.com/71f435fbeaf326479fce6ce41959cf3c7376de8d29367666a7.svg)](https://buildkite.com/angellist/halo) <img src="https://user-images.githubusercontent.com/194885/75487723-d21d6e80-5963-11ea-8126-035fdd131f94.jpg" alt="Halo preview" width="609" />
+<img src="https://user-images.githubusercontent.com/194885/75487723-d21d6e80-5963-11ea-8126-035fdd131f94.jpg" alt="Halo preview" width="609" />
+
+[![Build status](https://badge.buildkite.com/71f435fbeaf326479fce6ce41959cf3c7376de8d29367666a7.svg?branch=master)](https://buildkite.com/angellist/halo) [![Netlify Status](https://api.netlify.com/api/v1/badges/87d1d78b-b9dc-440b-ba5a-90f89afce587/deploy-status)](https://app.netlify.com/sites/halo-design-system/deploys)
 
 &nbsp;
-
-[![Netlify Status](https://api.netlify.com/api/v1/badges/87d1d78b-b9dc-440b-ba5a-90f89afce587/deploy-status)](https://app.netlify.com/sites/halo-design-system/deploys)
 
 📝 **[Halo Feedback](https://venturehacks.quip.com/JP75A3GbNYua/Halo-Feedback)**
 
