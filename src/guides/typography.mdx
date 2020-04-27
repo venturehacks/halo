@@ -1,0 +1,157 @@
+---
+name: Typography
+menu: Guides
+route: /guides/typography
+---
+
+import { Playground } from 'docz';
+import { Box } from '../components/structure/Box';
+import { Paragraph } from '../components/core/Paragraph';
+import { Header } from '../components/core/Header';
+import { Span } from '../components/core/Span';
+
+# Typography
+
+<br />
+
+## Size
+
+<Playground>
+  <Span contrast="A" monospace>2xs</Span>
+  <Paragraph size="2xs">
+    The quick brown fox jumps over the lazy dog.
+  </Paragraph>
+
+  <Span contrast="A" monospace>xs</Span>
+  <Paragraph size="xs">
+    The quick brown fox jumps over the lazy dog.
+  </Paragraph>
+
+  <Span contrast="A" monospace>sm</Span>
+  <Paragraph size="sm">
+    The quick brown fox jumps over the lazy dog.
+  </Paragraph>
+
+  <Span contrast="A" monospace>md</Span>
+  <Paragraph size="md">
+    The quick brown fox jumps over the lazy dog.
+  </Paragraph>
+
+  <Span contrast="A" monospace>lg</Span>
+  <Paragraph size="lg">
+    The quick brown fox jumps over the lazy dog.
+  </Paragraph>
+
+  <Span contrast="A" monospace>xl</Span>
+  <Paragraph size="xl">
+    Stand Out from the Competition
+  </Paragraph>
+
+  <Span contrast="A" monospace>2xl</Span>
+  <Paragraph size="2xl">
+    Stand Out from the Competition
+  </Paragraph>
+
+  <Span contrast="A" monospace>3xl</Span>
+  <Paragraph size="3xl">
+    Stand Out from the Competition
+  </Paragraph>
+
+  <Span contrast="A" monospace>4xl</Span>
+  <Paragraph size="4xl">
+    Stand Out from the Competition
+  </Paragraph>
+
+  <Span contrast="A" monospace>5xl</Span>
+  <Paragraph size="5xl">
+    Stand Out from the Competition
+  </Paragraph>
+
+  <Span contrast="A" monospace>6xl</Span>
+  <Paragraph size="6xl" flow={false}>
+    Stand Out from the Competition
+  </Paragraph>
+</Playground>
+
+<br /><br />
+
+## Contrast
+
+<Playground>
+  <Paragraph contrast="AAAA">
+    AAAA. Hammock salvia helvetica whatever bespoke wayfarers man bun meditation unicorn, la croix mixtape chambray before they sold out ethical literally. Put a bird on it truffaut meditation, authentic cray irony banh mi four dollar toast cred retro whatever mumblecore messenger bag neutra austin.
+  </Paragraph>
+  <Paragraph contrast="AAA">
+    AAA. Hammock salvia helvetica whatever bespoke wayfarers man bun meditation unicorn, la croix mixtape chambray before they sold out ethical literally. Put a bird on it truffaut meditation, authentic cray irony banh mi four dollar toast cred retro whatever mumblecore messenger bag neutra austin.
+  </Paragraph>
+  <Paragraph contrast="AA">
+    AA. Hammock salvia helvetica whatever bespoke wayfarers man bun meditation unicorn, la croix mixtape chambray before they sold out ethical literally. Put a bird on it truffaut meditation, authentic cray irony banh mi four dollar toast cred retro whatever mumblecore messenger bag neutra austin.
+  </Paragraph>
+  <Paragraph contrast="A">
+    A. Hammock salvia helvetica whatever bespoke wayfarers man bun meditation unicorn, la croix mixtape chambray before they sold out ethical literally. Put a bird on it truffaut meditation, authentic cray irony banh mi four dollar toast cred retro whatever mumblecore messenger bag neutra austin.
+  </Paragraph>
+</Playground>
+
+<br /><br />
+
+## Weight
+
+<Playground>
+  <Span weight="ultralight" block>200 ultralight</Span>
+  <Span weight="light" block>300 light</Span>
+  <Span weight="regular" block>400 regular (default)</Span>
+  <Span weight="medium" block>500 medium</Span>
+  <Span weight="semibold" block>600 semibold</Span>
+  <Span weight="bold" block>700 bold</Span>
+</Playground>
+
+```scss
+$weight--ultralight: 200;
+$weight--light: 300;
+$weight--regular: 400;
+$weight--medium: 500;
+$weight--semibold: 600;
+$weight--bold: 700;
+```
+
+<br /><br />
+
+## Sass
+
+Configure many typeface properties at once. For each setting, it will only spit out a rule if you provide a non-null value.
+
+If a supplied preset key name is invalid for `$family`, `$size`, `$line`, `$weight`, etc,
+the mix- falls back on supplying the literal value to
+the cooresponding rule.
+
+```scss
+@mix- font(
+  $size: null,   // 2xs | xs | sm | md | lg | xl | 2xl | 3xl | 4xl | 5xl | 6xl
+  $line: null,   // default | comfortable | compact | dense
+  $weight: null, // ultralight | light | regular | medium | semibold | bold
+  $color: null,  // palette color name or hex
+  $family: null, // primary | serif | monospace | system
+  $transform: null, // uppercase | lowercase | capitalize | none
+  $antialiased: null,
+  $spacing: null,
+  $truncate: null
+)
+```
+
+
+## TypeScript Interfaces
+
+Relied on by `Header` `Paragraph` and `Span`
+
+```ts
+type TextSize = '6xl' | '5xl' | '4xl' | '3xl' | '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs' | '2xs';
+
+type weight = 'ultralight' | 'light' | 'regular' | 'medium' | 'semibold' | 'bold';
+
+type TextContrast = 'A' | 'AA' | 'AAA' | 'AAAA';
+
+type TextLineHeight = 'default' | 'comfortable' | 'compact' | 'dense';
+
+type TextColorScheme = 'dark' | 'light';
+```
+

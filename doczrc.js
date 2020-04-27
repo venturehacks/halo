@@ -28,7 +28,8 @@ export default {
   menu: [
     'Welcome',
     {
-      name: 'Constants',
+      name: 'Guides',
+      menu: ['Typography', 'Color'],
     },
     {
       name: 'Core',
