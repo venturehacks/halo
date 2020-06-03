@@ -2,6 +2,7 @@
 
 .component {
   width: auto;
+  @include font($family: primary);
 
   &.bordered {
     @include input;
