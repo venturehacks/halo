@@ -2,14 +2,29 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.9.1](https://github.com/venturehacks/halo/compare/0.9.0...v0.9.1)
+#### [v0.9.2](https://github.com/venturehacks/halo/compare/0.9.1...v0.9.2)
+
+> 11 June 2020
+
+- set explicit font on RawTextarea [`#69`](https://github.com/venturehacks/halo/pull/69)
+- Remove CircleCI [`#65`](https://github.com/venturehacks/halo/pull/65)
+- Buildkite [`#64`](https://github.com/venturehacks/halo/pull/64)
+- Typography Guide [`#63`](https://github.com/venturehacks/halo/pull/63)
+- [docs] Typography: include px and line height in font sizes [`a19540f`](https://github.com/venturehacks/halo/commit/a19540f86411f89d4206076ee66fa3cee9da0829)
+- (typo) [`30c8db6`](https://github.com/venturehacks/halo/commit/30c8db68c558a6a27850febd69a1b488ad79aeaa)
+- (typo) [`d071f11`](https://github.com/venturehacks/halo/commit/d071f11a8c0c2e99a93a3f9dadb6cbcedeb9d3c7)
+
+#### [0.9.1](https://github.com/venturehacks/halo/compare/v0.9.0...0.9.1)
+
+> 23 April 2020
+
+- Release 0.9.1 [`6b7825f`](https://github.com/venturehacks/halo/commit/6b7825ff05efe655e34358712375ce5a363d810e)
+
+#### [v0.9.0](https://github.com/venturehacks/halo/compare/0.8.6...v0.9.0)
 
 > 23 April 2020
 
 - [RawCheckbox/RawRadio] add pill style [`#62`](https://github.com/venturehacks/halo/pull/62)
-
-#### [v0.9.0](https://github.com/venturehacks/halo/compare/0.8.6...v0.9.0)
-
 - improvements to RawToggleSwitch and Label [`#61`](https://github.com/venturehacks/halo/pull/61)
 - Snapshot Test Suite [`#59`](https://github.com/venturehacks/halo/pull/59)
 - clean up event types [`#60`](https://github.com/venturehacks/halo/pull/60)
