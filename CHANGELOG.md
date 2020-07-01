@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.9.3](https://github.com/venturehacks/halo/compare/0.9.2...v0.9.3)
+#### [v0.9.4](https://github.com/venturehacks/halo/compare/0.9.3...v0.9.4)
+
+> 1 July 2020
+
+- remove tslint-react centric rules [`536a4af`](https://github.com/venturehacks/halo/commit/536a4af849a2dd0d80f2884ff7da4908ec25e224)
+
+#### [0.9.3](https://github.com/venturehacks/halo/compare/0.9.2...0.9.3)
 
 > 1 July 2020
 
 - ESLint 7 + Jest 26 [`#71`](https://github.com/venturehacks/halo/pull/71)
+- Release 0.9.3 [`a69a0f6`](https://github.com/venturehacks/halo/commit/a69a0f665f222c2a26c583da7fb4d6537d26b143)
 
 #### [0.9.2](https://github.com/venturehacks/halo/compare/0.9.1...0.9.2)
 
