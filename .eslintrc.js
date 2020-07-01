@@ -12,5 +12,10 @@ module.exports = {
         default: 'array-simple',
       },
     ],
+    // TODO: new rules from recommended in ESLint 7
+    '@typescript-eslint/explicit-module-boundary-types': 'off', // TODO-research
+    '@typescript-eslint/ban-types': 'off', // TODO-research. {} is a banned type.
+    '@typescript-eslint/ban-ts-comment': 'off', // TODO-enabled in shared config. Annotate ts-ignore's with comment.
+    '@typescript-eslint/no-non-null-asserted-optional-chain': 'off', // TODO-this should be turned on.
   },
 };
