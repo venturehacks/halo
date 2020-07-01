@@ -1,5 +1,6 @@
 require 'buildkite_utils'
 
+STEPS = []
 STEPS << BuildkiteUtils.k8s_step(
   step: :test,
   name: :halo,
