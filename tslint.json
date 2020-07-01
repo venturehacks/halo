@@ -2,7 +2,6 @@
   "defaultSeverity": "error",
   "extends": [
     "tslint:latest",
-    "tslint-react",
     "tslint-config-prettier"
   ],
   "linterOptions": {
@@ -43,9 +42,6 @@
       "allow-pascal-case"
     ],
     "object-literal-sort-keys": false,
-    "jsx-no-lambda": false,
-    "jsx-boolean-value": false,
-    "jsx-no-multiline-js": false,
     "max-line-length": false,
     "ordered-imports": [
       true,
