@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.9.2](https://github.com/venturehacks/halo/compare/0.9.1...v0.9.2)
+#### [v0.9.3](https://github.com/venturehacks/halo/compare/0.9.2...v0.9.3)
+
+> 1 July 2020
+
+- ESLint 7 + Jest 26 [`#71`](https://github.com/venturehacks/halo/pull/71)
+
+#### [0.9.2](https://github.com/venturehacks/halo/compare/0.9.1...0.9.2)
 
 > 11 June 2020
 
@@ -11,6 +17,7 @@ All notable changes to this project will be documented in this file. Dates are d
 - Buildkite [`#64`](https://github.com/venturehacks/halo/pull/64)
 - Typography Guide [`#63`](https://github.com/venturehacks/halo/pull/63)
 - [docs] Typography: include px and line height in font sizes [`a19540f`](https://github.com/venturehacks/halo/commit/a19540f86411f89d4206076ee66fa3cee9da0829)
+- Release 0.9.2 [`a6e3dd2`](https://github.com/venturehacks/halo/commit/a6e3dd2c04a3400429cff92cafefd0e79dc9c1f4)
 - (typo) [`30c8db6`](https://github.com/venturehacks/halo/commit/30c8db68c558a6a27850febd69a1b488ad79aeaa)
 - (typo) [`d071f11`](https://github.com/venturehacks/halo/commit/d071f11a8c0c2e99a93a3f9dadb6cbcedeb9d3c7)
 
