@@ -9,6 +9,8 @@ STEPS << BuildkiteUtils.k8s_step(
   command: 'yarn test',
   depends_on: "build:test:#{NAME}",
   image: BuildkiteUtils.image(NAME, :build),
+  timeout_in_minutes: 20,
+  resources: { requests: { cpu: '2', memory: '2Gi' }, limits: { cpu: '2', memory: '2Gi' } },
 )
 
 BuildkiteUtils.dump!(steps: STEPS)
