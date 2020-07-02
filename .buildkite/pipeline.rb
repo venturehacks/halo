@@ -10,7 +10,7 @@ STEPS << BuildkiteUtils.k8s_step(
   depends_on: "build:build:#{NAME}",
   image: BuildkiteUtils.image(NAME, :build),
   timeout_in_minutes: 20,
-  resources: { requests: { cpu: '2', memory: '2Gi' }, limits: { cpu: '2', memory: '2Gi' } },
+  resources: { requests: { cpu: '2', memory: '4Gi' }, limits: { cpu: '2', memory: '4Gi' } },
 )
 
 BuildkiteUtils.dump!(steps: STEPS)
