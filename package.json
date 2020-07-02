@@ -26,7 +26,7 @@
     "test:dev": "yarn run test:clean && NODE_ENV=test BABEL_ENV=test jest --forceExit --detectOpenHandles --config jest.dev.js",
     "test:dev:watch": "yarn run test:dev --watch --onlyChanged",
     "test:clean": "rimraf ./node_modules/.cache/ && rimraf ./.rpt2_cache && jest --clearCache",
-    "test:ci": "jest --config jest.config.js --runInBand",
+    "test:ci": "NODE_ENV=test BABEL_ENV=test jest --config jest.config.js --runInBand",
     "docs:build": "yarn build:gatsby",
     "export:scss": "atsm -p 'src/**/*.scss'",
     "prettier:other:write": "prettier --write '**/*.{md,markdown}'",
