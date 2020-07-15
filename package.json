@@ -1,6 +1,7 @@
 {
   "name": "halo",
   "version": "0.9.4",
+  "displayName": "Halo Design System",
   "description": "Next-generation design system for AngelList and beyond.",
   "author": "Drew Lustro <drew@angel.co>",
   "license": "UNLICENSED",
