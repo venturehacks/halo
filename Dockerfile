@@ -9,5 +9,5 @@ COPY . /app/
 RUN yarn install
 RUN yarn build
 
-CMD ["yarn", " test:ci"]
+CMD ["yarn", "test:ci"]
 
