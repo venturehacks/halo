@@ -188,7 +188,8 @@
     "lodash": "^4.17.11",
     "react": ">= 16.8.6",
     "react-dom": ">= 16.8.6",
-    "react-modal": "^3.11.1"
+    "react-modal": "^3.11.1",
+    "typescript": "^3.7.3"
   },
   "resolutions": {
     "get-caller-file": "1.0.3"
