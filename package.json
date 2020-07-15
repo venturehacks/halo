@@ -192,7 +192,8 @@
     "typescript": "^3.7.3"
   },
   "resolutions": {
-    "get-caller-file": "1.0.3"
+    "get-caller-file": "1.0.3",
+    "graphql": "14.6.0"
   },
   "engines": {
     "node": ">= 8"
