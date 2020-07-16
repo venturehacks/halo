@@ -156,6 +156,7 @@
 
 .clear {
   color: $text-dark--aaaa;
+  background-color: transparent;
 
   &:hover {
     background-color: rgba($slate--900, 0.08);
