@@ -67,8 +67,8 @@ function LabelRaw({
 
   const classes = classNames(
     styles.component,
-    className,
     children && styles.hasControlChildren,
+    className,
   );
   const id = `form-input--${field}`;
 
