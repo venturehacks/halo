@@ -2,10 +2,20 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.9.4](https://github.com/venturehacks/halo/compare/0.9.3...v0.9.4)
+#### [v0.9.5](https://github.com/venturehacks/halo/compare/0.9.4...v0.9.5)
+
+> 2 September 2020
+
+- Allow overriding of Label styles [`#76`](https://github.com/venturehacks/halo/pull/76)
+- Fix "clear" button background [`#75`](https://github.com/venturehacks/halo/pull/75)
+- [package] move gatsby to devDependencies [`#74`](https://github.com/venturehacks/halo/pull/74)
+- Docker on Buildkite [`#72`](https://github.com/venturehacks/halo/pull/72)
+
+#### [0.9.4](https://github.com/venturehacks/halo/compare/0.9.3...0.9.4)
 
 > 1 July 2020
 
+- Release 0.9.4 [`89d3863`](https://github.com/venturehacks/halo/commit/89d38639ac182c63f06fa23339e5773fd43b6468)
 - remove tslint-react centric rules [`536a4af`](https://github.com/venturehacks/halo/commit/536a4af849a2dd0d80f2884ff7da4908ec25e224)
 
 #### [0.9.3](https://github.com/venturehacks/halo/compare/0.9.2...0.9.3)
