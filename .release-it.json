@@ -19,7 +19,7 @@
     "commitArgs": "-S"
   },
   "npm": {
-    "publish": false,
+    "publish": true,
     "private": true
   }
 }
