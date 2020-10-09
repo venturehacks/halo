@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.9.6](https://github.com/venturehacks/halo/compare/0.9.5...v0.9.6)
+#### [v0.9.7](https://github.com/venturehacks/halo/compare/0.9.6...v0.9.7)
+
+> 9 October 2020
+
+- remove `prepare` script [`411f4db`](https://github.com/venturehacks/halo/commit/411f4db8f573a7f12168c82e6f6af715340bbb3a)
+
+#### [0.9.6](https://github.com/venturehacks/halo/compare/0.9.5...0.9.6)
 
 > 9 October 2020
 
 - prepare for Gemfury publish [`429592e`](https://github.com/venturehacks/halo/commit/429592e7d5f66e3785c50ef1454d80bc6d82c938)
+- Release 0.9.6 [`f16ea0a`](https://github.com/venturehacks/halo/commit/f16ea0a81c6b33913f44c78ae670892b0dfe6e17)
 
 #### [0.9.5](https://github.com/venturehacks/halo/compare/0.9.4...0.9.5)
 
