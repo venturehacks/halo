@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.9.5](https://github.com/venturehacks/halo/compare/0.9.4...v0.9.5)
+#### [v0.9.6](https://github.com/venturehacks/halo/compare/0.9.5...v0.9.6)
+
+> 9 October 2020
+
+- prepare for Gemfury publish [`429592e`](https://github.com/venturehacks/halo/commit/429592e7d5f66e3785c50ef1454d80bc6d82c938)
+
+#### [0.9.5](https://github.com/venturehacks/halo/compare/0.9.4...0.9.5)
 
 > 2 September 2020
 
@@ -10,6 +16,7 @@ All notable changes to this project will be documented in this file. Dates are d
 - Fix "clear" button background [`#75`](https://github.com/venturehacks/halo/pull/75)
 - [package] move gatsby to devDependencies [`#74`](https://github.com/venturehacks/halo/pull/74)
 - Docker on Buildkite [`#72`](https://github.com/venturehacks/halo/pull/72)
+- Release 0.9.5 [`0c93d05`](https://github.com/venturehacks/halo/commit/0c93d052ab0ba27a1879044f13736f42e3dcd2d0)
 
 #### [0.9.4](https://github.com/venturehacks/halo/compare/0.9.3...0.9.4)
 
