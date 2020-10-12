@@ -10,6 +10,10 @@
   "style": "dist/halo.css",
   "types": "dist/typings/index.d.ts",
   "scripts": {
+    "prepublishOnly": "yarn test && yarn run prepublish:duplicate-package && yarn run prepublish:slim-package && yarn run prepublish:regenerate-lock",
+    "prepublish:duplicate-package": "cp package.json package.original.json",
+    "prepublish:slim-package": "cat package.original.json | jq '(.devDependencies | to_entries | map(select(.key | test(\"gatsby|webpack|docz\") | not)) | from_entries) as $x | .devDependencies=$x | .' > package.slim.json",
+    "prepublish:regenerate-lock": "cp -f package.slim.json package.json && yarn install --network-concurrency 1",
     "clean": "rimraf ./dist/* && rimraf ./.rpt2_cache && gatsby clean",
     "build": "yarn build:node",
     "build:node": "tsc && rollup -c rollup.config.babel.js",
@@ -20,7 +24,6 @@
     "watch": "concurrently --kill-others --kill-others-on-fail --names \"HALO:STYLES,HALO:BUILD\" --prefix-colors \"bgBlue.bold,bgMagenta.bold\" --timestamp-format \"YYYY-MM-DD HH:MM\" \"yarn:watch:styles\" \"yarn:watch:build\"",
     "watch:build": "chokidar \"src/**/*.{ts,tsx,scss}\" --command \"yarn build\"",
     "watch:styles": "chokidar \"src/components/**/*.scss\" --command \"yarn run export:scss\"",
-    "prepublishOnly": "yarn test",
     "test": "NODE_ENV=test BABEL_ENV=test jest --config jest.config.js --maxWorkers=16",
     "test:dev": "yarn run test:clean && NODE_ENV=test BABEL_ENV=test jest --forceExit --detectOpenHandles --config jest.dev.js",
     "test:dev:watch": "yarn run test:dev --watch --onlyChanged",
