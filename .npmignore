@@ -9,21 +9,28 @@ test
 tools
 
 # config files
+.gitattributes
 .editorconfig
 .eslintignore
 .eslintrc.js
 .prettierignore
 .prettierrc.js
 .release-it.json
+.sassrc.js
 .yarnrc
 *.tsbuildinfo
+babel.config.js
 Dockerfile
 Dockerfile.dockerignore
+doczrc.js
 gatsby-config.js
 halo.code-workspace
 jest.config.js
 jest.dev.js
+rollup.config.babel.js
+stylelint.config.js
 tsconfig.json
+tsconfig.test.json
 tslint.json
 
 # source code
