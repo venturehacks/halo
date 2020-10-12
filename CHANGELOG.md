@@ -2,10 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.9.10](https://github.com/venturehacks/halo/compare/0.9.9...v0.9.10)
+#### [v0.9.11](https://github.com/venturehacks/halo/compare/0.9.10...v0.9.11)
 
 > 12 October 2020
 
+- tidy up publish scripts [`f525265`](https://github.com/venturehacks/halo/commit/f525265ee76a0b60eab7d6a91bda635a37a6f30a)
+- postpublish: Only reset yarn.lock [`4315293`](https://github.com/venturehacks/halo/commit/431529300be4fb85f5ecb16c0336dc06a124e1ac)
+
+#### [0.9.10](https://github.com/venturehacks/halo/compare/0.9.9...0.9.10)
+
+> 12 October 2020
+
+- Release 0.9.10 [`7297022`](https://github.com/venturehacks/halo/commit/72970220a5c53e93558e5eda521b4db43ca2dfee)
 - Expand npmignore further [`cefad6e`](https://github.com/venturehacks/halo/commit/cefad6e0a5e7670e4ebede66bf604eb693ddb008)
 - Postpublish script [`a4260f6`](https://github.com/venturehacks/halo/commit/a4260f6ecc0cda09cd5823fd0ba692deffab532d)
 
