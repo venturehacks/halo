@@ -2,10 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.9.8](https://github.com/venturehacks/halo/compare/0.9.7...v0.9.8)
+#### [v0.9.9](https://github.com/venturehacks/halo/compare/0.9.8...v0.9.9)
 
 > 12 October 2020
 
+- Robust .npmignore to slim down package [`39619a0`](https://github.com/venturehacks/halo/commit/39619a0dc3be6bea22e66fff28c51e215301c031)
+- Ignore special publish package jsons [`545da0d`](https://github.com/venturehacks/halo/commit/545da0dea2511dfccb9ad3259bb742595288b54a)
+- Do not re-test before publish, it's redundant with our build system [`aff900e`](https://github.com/venturehacks/halo/commit/aff900e58d724bd18cd1d7cb387592bc398966fa)
+
+#### [0.9.8](https://github.com/venturehacks/halo/compare/0.9.7...0.9.8)
+
+> 12 October 2020
+
+- Release 0.9.8 [`df337cc`](https://github.com/venturehacks/halo/commit/df337cca783869d95ae45cdf1334950c576a2240)
 - prepublish scripts that generate an slim package.json [`ffe4019`](https://github.com/venturehacks/halo/commit/ffe4019845e36a90a859c2ef2a02985ce25448f3)
 - Update .release-it.json [`2536461`](https://github.com/venturehacks/halo/commit/2536461f9c21ede346242af339dc9f6a1fa91db3)
 
