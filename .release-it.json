@@ -20,6 +20,6 @@
   },
   "npm": {
     "publish": true,
-    "private": true
+    "private": false
   }
 }
