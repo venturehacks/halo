@@ -15,7 +15,7 @@
     "prepublish:duplicate-package": "cp package.json package.original.json",
     "prepublish:slim-package": "cat package.original.json | jq '(.devDependencies | to_entries | map(select(.key | test(\"gatsby|webpack|docz\") | not)) | from_entries) as $x | .devDependencies=$x | .' > package.slim.json",
     "prepublish:regenerate-lock": "cp -f package.slim.json package.json && yarn install --network-concurrency 1",
-    "postpublish": "rimraf package.original.json package.slim.json && git reset --hard",
+    "postpublish": "rimraf package.original.json package.slim.json && git checkout -- yarn.lock",
     "clean": "rimraf ./dist/* && rimraf ./.rpt2_cache && gatsby clean",
     "build": "yarn build:node",
     "build:node": "tsc && rollup -c rollup.config.babel.js",
