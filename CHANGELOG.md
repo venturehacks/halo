@@ -2,11 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.9.9](https://github.com/venturehacks/halo/compare/0.9.8...v0.9.9)
+#### [v0.9.10](https://github.com/venturehacks/halo/compare/0.9.9...v0.9.10)
+
+> 12 October 2020
+
+- Expand npmignore further [`cefad6e`](https://github.com/venturehacks/halo/commit/cefad6e0a5e7670e4ebede66bf604eb693ddb008)
+- Postpublish script [`a4260f6`](https://github.com/venturehacks/halo/commit/a4260f6ecc0cda09cd5823fd0ba692deffab532d)
+
+#### [0.9.9](https://github.com/venturehacks/halo/compare/0.9.8...0.9.9)
 
 > 12 October 2020
 
 - Robust .npmignore to slim down package [`39619a0`](https://github.com/venturehacks/halo/commit/39619a0dc3be6bea22e66fff28c51e215301c031)
+- Release 0.9.9 [`c001988`](https://github.com/venturehacks/halo/commit/c0019880efb37486fe11faeb96e1a59b4c192c98)
 - Ignore special publish package jsons [`545da0d`](https://github.com/venturehacks/halo/commit/545da0dea2511dfccb9ad3259bb742595288b54a)
 - Do not re-test before publish, it's redundant with our build system [`aff900e`](https://github.com/venturehacks/halo/commit/aff900e58d724bd18cd1d7cb387592bc398966fa)
 
