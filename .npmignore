@@ -1,8 +1,35 @@
-src
+# build directories for docz, gatsby
+.buildkite
+.cache
+.docz
+.vscode
+docs
+public
+test
+tools
+
+# config files
+.editorconfig
+.eslintignore
+.eslintrc.js
+.prettierignore
+.prettierrc.js
+.release-it.json
+.yarnrc
+*.tsbuildinfo
+Dockerfile
+Dockerfile.dockerignore
+gatsby-config.js
+halo.code-workspace
+jest.config.js
+jest.dev.js
 tsconfig.json
 tslint.json
-.prettierrc
 
+# source code
+src
+
+# boilerplate
 .circleci/
 .github/
 .gitignore
