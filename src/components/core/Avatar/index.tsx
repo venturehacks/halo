@@ -63,6 +63,8 @@ function AvatarRaw({
         alt={`Avatar for ${name}`}
         className={classNames(styles.avatar, styles[shape])}
         src={imageUrl}
+        height={IMAGE_SIZES[size]}
+        width={IMAGE_SIZES[size]}
       />
       {badge && <Badge {...badgeOptions}>{badge}</Badge>}
     </div>
@@ -72,3 +74,14 @@ function AvatarRaw({
 const Avatar = withForwardedRef<AvatarProps>(AvatarRaw);
 
 export { Avatar };
+
+// For setting `height` and `width` attributes on `img` tag directly
+// ! Keep in sync with ./styles.scss
+export const IMAGE_SIZES: Record<AvatarSize, number> = {
+  xxxsmall: 16,
+  xxsmall: 24,
+  xsmall: 32,
+  small: 48,
+  medium: 60,
+  large: 80,
+};
