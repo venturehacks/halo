@@ -1,7 +1,7 @@
 import { render } from 'enzyme';
 import React from 'react';
 
-import { Avatar } from '../index';
+import { Avatar, AvatarSize, IMAGE_SIZES } from '../index';
 
 const sharedProps = {
   imageUrl: 'https://avatars1.githubusercontent.com/u/194885?s=120&v=6',
@@ -94,6 +94,20 @@ describe('Avatar', () => {
         );
 
         expect(component).toMatchSnapshot();
+      });
+    });
+
+    describe(`Dimensions`, () => {
+      it(`adds the right height and width to the img tag`, () => {
+        const sizes = Object.keys(IMAGE_SIZES) as AvatarSize[];
+
+        sizes.forEach(size => {
+          const component = render(<Avatar {...sharedProps} size={size} />);
+          const image = component.find('img');
+
+          expect(image.prop('height')).toEqual(IMAGE_SIZES[size].toString());
+          expect(image.prop('width')).toEqual(IMAGE_SIZES[size].toString());
+        });
       });
     });
   });
