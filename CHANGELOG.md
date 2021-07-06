@@ -2,10 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.9.11](https://github.com/venturehacks/halo/compare/0.9.10...v0.9.11)
+#### [v0.9.12](https://github.com/venturehacks/halo/compare/0.9.11...v0.9.12)
+
+> 6 July 2021
+
+- [TC-219] Avatar: Add dimensions to `img` directly [`#85`](https://github.com/venturehacks/halo/pull/85)
+
+#### [0.9.11](https://github.com/venturehacks/halo/compare/0.9.10...0.9.11)
 
 > 12 October 2020
 
+- Release 0.9.11 [`f81d1b8`](https://github.com/venturehacks/halo/commit/f81d1b8d7bc7d4e4de1df2e21e3dd6330182a597)
 - tidy up publish scripts [`f525265`](https://github.com/venturehacks/halo/commit/f525265ee76a0b60eab7d6a91bda635a37a6f30a)
 - postpublish: Only reset yarn.lock [`4315293`](https://github.com/venturehacks/halo/commit/431529300be4fb85f5ecb16c0336dc06a124e1ac)
 
@@ -271,18 +278,18 @@ All notable changes to this project will be documented in this file. Dates are d
 > 25 July 2019
 
 - July 2019 Updates: Label, Box block, smoke tests, variables docum… [`#22`](https://github.com/venturehacks/halo/pull/22)
-- (exports) [`aed7cd9`](https://github.com/venturehacks/halo/commit/aed7cd931aadda5374eee63fbf47b0014aabb381)
+- Release 0.6.12 [`2581db6`](https://github.com/venturehacks/halo/commit/2581db628670d74adeee24a466fd9091fccf61d1)
+- Resolve conflicts [`f558a27`](https://github.com/venturehacks/halo/commit/f558a27e6fce946386eab0ea58296c806b26b039)
 - (exports) [`f169621`](https://github.com/venturehacks/halo/commit/f16962141a5102e03eac12da72ff6821b9d97b4f)
+- (exports) [`aed7cd9`](https://github.com/venturehacks/halo/commit/aed7cd931aadda5374eee63fbf47b0014aabb381)
 - [documentation] Variables sass page added [`a865282`](https://github.com/venturehacks/halo/commit/a865282f7cc3a07fb854354c5ec18a9286f060dd)
-- Import Tiff's enhanced Label from CoPro; add 2x more colors [`e35427c`](https://github.com/venturehacks/halo/commit/e35427c98344761fda2c7dc6d6ae8a748bee47d6)
 - Import Tiff's enhanced Label from CoPro; add 2x more colors [`4612949`](https://github.com/venturehacks/halo/commit/46129492f5eb758597207eda74959802eedcf38d)
+- Import Tiff's enhanced Label from CoPro; add 2x more colors [`e35427c`](https://github.com/venturehacks/halo/commit/e35427c98344761fda2c7dc6d6ae8a748bee47d6)
 - [test suite] smoke tests for all major components :tada: [`7617d8b`](https://github.com/venturehacks/halo/commit/7617d8bb81f221b843264145822c08186b2ad2ae)
 - Include text pixel sizes in documentation [`4c2bc51`](https://github.com/venturehacks/halo/commit/4c2bc5140ab6d885c7a4a8641a93457208287653)
-- More text weight options, clearer convenience props @thomasrockhu [`b5b3d3f`](https://github.com/venturehacks/halo/commit/b5b3d3f07af96d5d0a65fc0368c54918110e299f)
 - More text weight options, clearer convenience props @thomasrockhu [`81f13b0`](https://github.com/venturehacks/halo/commit/81f13b0e157ff2e3343d8438273f9ec1a19eb9c2)
+- More text weight options, clearer convenience props @thomasrockhu [`b5b3d3f`](https://github.com/venturehacks/halo/commit/b5b3d3f07af96d5d0a65fc0368c54918110e299f)
 - [Box] offer `block` prop to opt-out of flexbox features [`2176d22`](https://github.com/venturehacks/halo/commit/2176d22730e6253539f964a7546e9ae19db591c2)
-- Resolve conflicts [`f558a27`](https://github.com/venturehacks/halo/commit/f558a27e6fce946386eab0ea58296c806b26b039)
-- Release 0.6.12 [`2581db6`](https://github.com/venturehacks/halo/commit/2581db628670d74adeee24a466fd9091fccf61d1)
 - [Label] make `size` optional, default to 'sm' [`1e8f750`](https://github.com/venturehacks/halo/commit/1e8f750b163fa03b8c7aac1c29fb5ad649f50334)
 - [documentation] Nav index update [`5e1178f`](https://github.com/venturehacks/halo/commit/5e1178f2abc2a19abe50857f0329eadc9a74fd2a)
 - Stop build from adding css to dist/dist [`e844fbd`](https://github.com/venturehacks/halo/commit/e844fbd4541f9eca703a58f0e31117db176b9abd)
@@ -387,8 +394,8 @@ All notable changes to this project will be documented in this file. Dates are d
 - Kill unused $font-sizes list [`6b5270c`](https://github.com/venturehacks/halo/commit/6b5270c0082edd092ee4ef64fceb1a24fb64e3ec)
 - Release 0.6.0 [`6a6df0f`](https://github.com/venturehacks/halo/commit/6a6df0ff56c9b88c8dc10cbf04c999b73642be55)
 - Documentation for Scss utilities [`a8d699e`](https://github.com/venturehacks/halo/commit/a8d699eac1fa9690eb2e6e239ca38cd19a6bdfa0)
-- Documentation for Scss functions [`a2ce60f`](https://github.com/venturehacks/halo/commit/a2ce60f866bcf8efd7e6470cbdbc6ac5d7f6a6ff)
 - Tweak Button colors [`0d9f7e8`](https://github.com/venturehacks/halo/commit/0d9f7e850a2ade8bb8770ee3fa7a53f4f5ca3aa1)
+- Documentation for Scss functions [`a2ce60f`](https://github.com/venturehacks/halo/commit/a2ce60f866bcf8efd7e6470cbdbc6ac5d7f6a6ff)
 - Use $font-sizes-map on master font() mixin [`db736ec`](https://github.com/venturehacks/halo/commit/db736eca5d32b0b07f6a10b7b370e7b82f500b50)
 - More fix ambient type declaration [`0207fdb`](https://github.com/venturehacks/halo/commit/0207fdbecc84325c741cabb3626729148712bee3)
 - [bugfix] Box valign; decrease embedded selector specificity [`85aeb6c`](https://github.com/venturehacks/halo/commit/85aeb6c006ddbec7474b23298ce606425565a909)
@@ -397,9 +404,9 @@ All notable changes to this project will be documented in this file. Dates are d
 - Reorganize main menu [`bd973aa`](https://github.com/venturehacks/halo/commit/bd973aa5dfabac49b97ba1ba53516e22ca3c6bd9)
 - Improve Jest config for module resolution, fix test [`d5b17b0`](https://github.com/venturehacks/halo/commit/d5b17b05022060defbe2c0d05090379dc7333d44)
 - Support `stretch` as `Box` alignment option [`e6fddfd`](https://github.com/venturehacks/halo/commit/e6fddfd47bf1b721984db17effb8ab21a33cd590)
-- Fix ambient type declaration [`7444413`](https://github.com/venturehacks/halo/commit/7444413f4c87b34740c2808f72017ccd5ccfa887)
-- Fix default behavior of `Box` [`c9347e4`](https://github.com/venturehacks/halo/commit/c9347e42e1d611c94002378bdcff0c4ece57ae02)
 - Inclusivity! [`70653bd`](https://github.com/venturehacks/halo/commit/70653bdfe1fa39f40847c8446d8bc9083e8c9b39)
+- Fix default behavior of `Box` [`c9347e4`](https://github.com/venturehacks/halo/commit/c9347e42e1d611c94002378bdcff0c4ece57ae02)
+- Fix ambient type declaration [`7444413`](https://github.com/venturehacks/halo/commit/7444413f4c87b34740c2808f72017ccd5ccfa887)
 - Add automatic text-truncate to PillTag [`6854387`](https://github.com/venturehacks/halo/commit/6854387e4919a7d56c9132b71122138932bc05bb)
 
 #### [0.5.11](https://github.com/venturehacks/halo/compare/0.5.10...0.5.11)
@@ -520,8 +527,8 @@ All notable changes to this project will be documented in this file. Dates are d
 - Reinstate relative imports (alias was broken on es module build) [`8e43dec`](https://github.com/venturehacks/halo/commit/8e43dec509c65904c14280c5fceadb35e2e4568a)
 - :art: Halo COLORMAP! [`49a68f1`](https://github.com/venturehacks/halo/commit/49a68f14b72db6f505f552c0897e7d8cbf15df96)
 - remove Formik experiment [`fe9bf45`](https://github.com/venturehacks/halo/commit/fe9bf453962459e4524dd85d001e98c125899014)
-- Replace reset with a mixin [`e6c4760`](https://github.com/venturehacks/halo/commit/e6c4760ad8043d9b7f117b6ef07d5070fce2f0fc)
 - :sparkles: &lt;Avatar /&gt; [`9b5b652`](https://github.com/venturehacks/halo/commit/9b5b652c286cc0c7b784f5bd41ade5f56772fc1e)
+- Replace reset with a mixin [`e6c4760`](https://github.com/venturehacks/halo/commit/e6c4760ad8043d9b7f117b6ef07d5070fce2f0fc)
 - [1st attempt] Formik-compatible &lt;TextField /&gt; [`ccb5aac`](https://github.com/venturehacks/halo/commit/ccb5aacd4a528a2295214464ece829b852437598)
 - :peach: bump docz version, pray for bugfixes [`6cd252b`](https://github.com/venturehacks/halo/commit/6cd252ba6aa68d9f9fe8cbbac45c484d7c6dd2db)
 - Organization pass [`dc898ca`](https://github.com/venturehacks/halo/commit/dc898ca2220a06e281061e66cb5706c4721aaed3)
@@ -531,8 +538,8 @@ All notable changes to this project will be documented in this file. Dates are d
 - :sparkles: &lt;Badge /&gt; [`a34a85a`](https://github.com/venturehacks/halo/commit/a34a85a112cfe327e997953d346d60360a77d0fb)
 - Patch all classes to adhere to new tsconfig [`4b784a1`](https://github.com/venturehacks/halo/commit/4b784a18528d93820476d63653135c8b586b8c25)
 - Port + distill platform variables in support of font() [`3b52908`](https://github.com/venturehacks/halo/commit/3b5290855fe50ab82cbbbeaa5ecaee4fd704a668)
-- breakpoints! handset, tablet, desktop, widescreen, superwidescreen [`1abf48f`](https://github.com/venturehacks/halo/commit/1abf48fbe833b4fda106b91fbe2f3adf79b29645)
 - Unified breakpoints [`ee3be34`](https://github.com/venturehacks/halo/commit/ee3be34eafbb1df3d751a8d7d220be16a781aeef)
+- breakpoints! handset, tablet, desktop, widescreen, superwidescreen [`1abf48f`](https://github.com/venturehacks/halo/commit/1abf48fbe833b4fda106b91fbe2f3adf79b29645)
 - [architecture] sync rollup + tsconfig + docz module resolution [`6501a65`](https://github.com/venturehacks/halo/commit/6501a6540e00b71b1942aedfd721261117764c1f)
 - :sparkles: &lt;Tooltip /&gt; [`6f81f33`](https://github.com/venturehacks/halo/commit/6f81f33c534ebe6b5195d2fd770aae7c5f8a22ab)
 - Bring tsconfig closer in sync with CoPro [`04a9b26`](https://github.com/venturehacks/halo/commit/04a9b26d765a5b18b2d8f0ad458e8c78427e5223)
@@ -554,14 +561,14 @@ All notable changes to this project will be documented in this file. Dates are d
 - Fix tests [`7add895`](https://github.com/venturehacks/halo/commit/7add895d58232ddef46b1ac0b40ca688e64b0312)
 - border mixins [`5b2243d`](https://github.com/venturehacks/halo/commit/5b2243d61f1466c66261861c7fbf6f719733c355)
 - z-index variables [`74e4cf7`](https://github.com/venturehacks/halo/commit/74e4cf7158412b6adc07cf6883d814a46908a39f)
-- [typos] [`76c7c4a`](https://github.com/venturehacks/halo/commit/76c7c4a2223525f9bb2f572dc0bbf771442e8f98)
 - [sass func] has-unit [`a660a04`](https://github.com/venturehacks/halo/commit/a660a04472126da22dcb1784a482be0ef7dcb645)
 - Allow radius overload [`440a4da`](https://github.com/venturehacks/halo/commit/440a4da06fe4e15e35b6a1026dbab5e5a84aec1a)
+- [typos] [`76c7c4a`](https://github.com/venturehacks/halo/commit/76c7c4a2223525f9bb2f572dc0bbf771442e8f98)
 - lodash as external dependency to Halo [`0ae2d22`](https://github.com/venturehacks/halo/commit/0ae2d2221fbaafa4eaff31ddc0bd294c97cc6c52)
 - Whoops [`e7101c1`](https://github.com/venturehacks/halo/commit/e7101c11e4d85b0a411ccc7c55341b6ec9dea42a)
-- Add formik as dev dependency [`b21f7c9`](https://github.com/venturehacks/halo/commit/b21f7c982bdb3cb9a2fffb575db049d3f734b849)
 - [stylelint] [`000c8b7`](https://github.com/venturehacks/halo/commit/000c8b7541d1de4153a48f24bb50ca8c4714f8c6)
 - kill generic variables file) [`caf15bb`](https://github.com/venturehacks/halo/commit/caf15bb181877aa13ca5af66d64acd8d1607b0ab)
+- Add formik as dev dependency [`b21f7c9`](https://github.com/venturehacks/halo/commit/b21f7c982bdb3cb9a2fffb575db049d3f734b849)
 
 #### [v0.4.3](https://github.com/venturehacks/halo/compare/v0.4.2...v0.4.3)
 
@@ -590,26 +597,26 @@ All notable changes to this project will be documented in this file. Dates are d
 - Update README.md [`69c8a52`](https://github.com/venturehacks/halo/commit/69c8a52dcd1a1a1a6f1c9181ca0c9eb4e03fe57a)
 - Update README.md [`6644746`](https://github.com/venturehacks/halo/commit/6644746e6ef9c7dc7b986bcb3246c8f9d9270459)
 - x [`5ebe5e2`](https://github.com/venturehacks/halo/commit/5ebe5e21b9b1f205e560b369a3a14dfbed2b94be)
-- Update CHANGELOG.md [`556875f`](https://github.com/venturehacks/halo/commit/556875f4d46815a98bca2bd0702737559a99ef78)
 - Update README.md [`05a4117`](https://github.com/venturehacks/halo/commit/05a41177af0b93e4b017d58d0cffaccdcef17c29)
+- Update CHANGELOG.md [`556875f`](https://github.com/venturehacks/halo/commit/556875f4d46815a98bca2bd0702737559a99ef78)
 - Update README.md [`10a82a3`](https://github.com/venturehacks/halo/commit/10a82a3c8a01f310d8cd09265c46345afc6a61b0)
-- Update README.md [`77cf65a`](https://github.com/venturehacks/halo/commit/77cf65adb2fccc28be3e99fc9c174a643567c174)
-- Update README.md [`75eccbd`](https://github.com/venturehacks/halo/commit/75eccbd6f5226527d2e31e549cc4e757beb9f213)
-- Update README.md [`12c1985`](https://github.com/venturehacks/halo/commit/12c198575db4bc09e694da3c2f910dd36da853b7)
 - Update README.md [`529b6a2`](https://github.com/venturehacks/halo/commit/529b6a230e9fcdbe9723cecfa02073353ca2d9c6)
+- Update README.md [`12c1985`](https://github.com/venturehacks/halo/commit/12c198575db4bc09e694da3c2f910dd36da853b7)
+- Update README.md [`75eccbd`](https://github.com/venturehacks/halo/commit/75eccbd6f5226527d2e31e549cc4e757beb9f213)
+- Update README.md [`77cf65a`](https://github.com/venturehacks/halo/commit/77cf65adb2fccc28be3e99fc9c174a643567c174)
 - Screenshot ✨ [`df85f76`](https://github.com/venturehacks/halo/commit/df85f765a00e3fe56ad5385123d67055d6a981fe)
 - Update README.md [`ba3a765`](https://github.com/venturehacks/halo/commit/ba3a765f177536ec2af46bb9e3390e414b84a597)
 - Update README.md [`92cf635`](https://github.com/venturehacks/halo/commit/92cf6352c8d434b1f6010ac5939ae8d7b09a7e77)
+- Release 0.4.1 [`b7bd5f9`](https://github.com/venturehacks/halo/commit/b7bd5f9188575c02468965082dc22fa35e6f2d4b)
+- Update README.md [`877af23`](https://github.com/venturehacks/halo/commit/877af2368206b520a88341a71874b52d4319658d)
+- Update README.md [`aedfae3`](https://github.com/venturehacks/halo/commit/aedfae31f5680b07c04307912fe9e247d63fbf39)
 - Update README.md [`2e6e70a`](https://github.com/venturehacks/halo/commit/2e6e70a37129aa50fd85ec47afabed074e0d6869)
 - Update README.md [`ebcafb1`](https://github.com/venturehacks/halo/commit/ebcafb10543e832e10bffe0dabf078609d3714b7)
 - Update README.md [`2acfda2`](https://github.com/venturehacks/halo/commit/2acfda267db0ac6399a61f97d8ef2d07bf4671ee)
 - Update README.md [`f400a65`](https://github.com/venturehacks/halo/commit/f400a65902b1cd804c4079046e8378700253d818)
-- Update README.md [`877af23`](https://github.com/venturehacks/halo/commit/877af2368206b520a88341a71874b52d4319658d)
-- Update README.md [`d4ae50d`](https://github.com/venturehacks/halo/commit/d4ae50d852ea1c6d942e71c7fd468b001bb9e4ac)
-- Release 0.4.1 [`b7bd5f9`](https://github.com/venturehacks/halo/commit/b7bd5f9188575c02468965082dc22fa35e6f2d4b)
-- Update README.md [`aedfae3`](https://github.com/venturehacks/halo/commit/aedfae31f5680b07c04307912fe9e247d63fbf39)
-- Update README.md [`dc94d3c`](https://github.com/venturehacks/halo/commit/dc94d3c5847c611ec5548540a4c7509869ea6865)
 - Update README.md [`893f019`](https://github.com/venturehacks/halo/commit/893f01982be6f5293dd2d9afbb1c7e82b50fc17b)
+- Update README.md [`dc94d3c`](https://github.com/venturehacks/halo/commit/dc94d3c5847c611ec5548540a4c7509869ea6865)
+- Update README.md [`d4ae50d`](https://github.com/venturehacks/halo/commit/d4ae50d852ea1c6d942e71c7fd468b001bb9e4ac)
 
 #### [v0.4.0](https://github.com/venturehacks/halo/compare/v0.3.1...v0.4.0)
 
@@ -660,8 +667,8 @@ All notable changes to this project will be documented in this file. Dates are d
 - &lt;Button /&gt; `icon` + `gret` variant [`575af89`](https://github.com/venturehacks/halo/commit/575af89d1f7a44b1f73cc386e2b8dd09be7b1719)
 - [docz config] Sass loading include path [`d4e93b4`](https://github.com/venturehacks/halo/commit/d4e93b49e84063f24b5f10d8798fe1222d4c3c0a)
 - :knife: &lt;Greeter /&gt; [`dda3e2a`](https://github.com/venturehacks/halo/commit/dda3e2ae1ab2a848a107ba647f2e449694762952)
-- Don't render generated files by default [`5dd8da5`](https://github.com/venturehacks/halo/commit/5dd8da5da10526c8bec593b7f63059d8a7939a1d)
 - Release 0.3.0 [`fb5d8c7`](https://github.com/venturehacks/halo/commit/fb5d8c7a45e14d999a1a5e44525c15ecaaed4969)
+- Don't render generated files by default [`5dd8da5`](https://github.com/venturehacks/halo/commit/5dd8da5da10526c8bec593b7f63059d8a7939a1d)
 
 #### [v0.2.8](https://github.com/venturehacks/halo/compare/v0.2.7...v0.2.8)
 
