@@ -3,9 +3,7 @@ module.exports = {
     'README.md',
     {
       menu: 'Versioning',
-      pages: [
-        'docs/versioning/release.md',
-      ],
+      pages: ['docs/versioning/release.md'],
     },
   ],
 };
