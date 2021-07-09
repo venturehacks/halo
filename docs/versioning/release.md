@@ -39,5 +39,5 @@ npm login --registry=https://npm.fury.io/angellist/
 - Git commit, tag and push
 - Run tests
 - Generate CHANGELOG
-- Create a Halo Release on GitHub
+- Create a release in the Halo GitHub repository
 - Publish to NPM/Gemfury
