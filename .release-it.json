@@ -1,16 +1,16 @@
 {
   "hooks": {
     "before:init": "yarn test && yarn build",
-    "after:bump": "yarn changelog --package",
+    "after:bump": "yarn auto-changelog --package --commit-limit false --template ./tools/changelog.compact.hbs",
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },
   "git": {
-    "changelog": "yarn changelog --stdout --unreleased",
-    "commitArgs": ["-S"]
+    "changelog": "yarn changelog --stdout --unreleased --commit-limit false --template ./tools/changelog.compact.hbs",
+    "commitArgs": ["--gpg-sign"]
   },
   "github": {
     "release": true,
-    "releaseNotes": "yarn changelog --stdout --unreleased-only",
+    "releaseNotes": "echo \"${changelog}\" | sed 1,2d",
     "tokenRef": "RELEASE_IT_GITHUB_TOKEN"
   },
   "npm": {

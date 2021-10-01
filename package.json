@@ -20,7 +20,6 @@
     "build": "yarn build:node",
     "build:node": "tsc && rollup -c rollup.config.babel.js",
     "build:gatsby": "gatsby build",
-    "changelog": "yarn auto-changelog --commit-limit false  --template ./tools/changelog.compact.hbs",
     "dev": "gatsby develop",
     "serve": "gatsby serve",
     "watch": "concurrently --kill-others --kill-others-on-fail --names \"HALO:BUILD\" --prefix-colors \"bgMagenta.bold\" --timestamp-format \"YYYY-MM-DD HH:MM\" \"yarn:watch:build\"",
