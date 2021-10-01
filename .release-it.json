@@ -1,7 +1,7 @@
 {
   "hooks": {
     "before:init": "yarn test && yarn build",
-    "after:bump": "yarn auto-changelog --package",
+    "after:bump": "yarn changelog --package",
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },
   "git": {
