@@ -10,6 +10,7 @@
   },
   "github": {
     "release": true,
+    "releaseNotes": "yarn changelog --stdout --starting-version ${version}",
     "tokenRef": "RELEASE_IT_GITHUB_TOKEN"
   },
   "npm": {
