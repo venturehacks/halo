@@ -37,7 +37,7 @@ npm login --registry=https://npm.fury.io/angellist/
 
 ### Step 3. Use [release-it](https://github.com/release-it/release-it) to publish a new version
 
- Depending on the version bump you want to execute, do one of the following:
+Depending on the version bump you want to execute, do one of the following:
 
 - `yarn run release-major`
 - `yarn run release-minor`
