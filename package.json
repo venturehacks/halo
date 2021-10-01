@@ -45,9 +45,9 @@
     "tslint:fix": "tslint --fix --project . -t grouped -s node_modules/custom-tslint-formatters/formatters",
     "tslint:vscode": "tslint --project . -t vscode -s node_modules/custom-tslint-formatters/formatters",
     "tslint": "tslint --project . -t grouped -s node_modules/custom-tslint-formatters/formatters",
-    "release-major": "release-it major",
-    "release-minor": "release-it minor",
-    "release-patch": "release-it patch",
+    "release-major": "release-it major --disable-metrics",
+    "release-minor": "release-it minor --disable-metrics",
+    "release-patch": "release-it patch --disable-metrics",
     "typesync": "typesync"
   },
   "github": {
@@ -145,7 +145,7 @@
     "react-copy-to-clipboard": "^5.0.2",
     "react-dom": "17.0.2",
     "react-test-renderer": "^16.8.6",
-    "release-it": "^10.4.4",
+    "release-it": "14.11.6",
     "rimraf": "^3.0.2",
     "rollup": "^1.26.3",
     "rollup-plugin-alias": "^1.5.1",

@@ -1,25 +1,18 @@
 {
-  "buildCommand": "yarn build",
-  "scripts": {
-    "beforeStart": "yarn test",
-    "beforeStage": "yarn build && yarn run changelog",
-    "afterRelease": "echo Successfully released ${name} v${version} to ${repo.repository}."
-  },
-  "src": {
-    "tagName": "v${version}",
-    "beforeStartCommand": "yarn test",
-    "afterReleaseCommand": "echo Successfully released ${name} v${version} to ${repo.repository}."
+  "hooks": {
+    "before:init": "yarn test",
+    "after:bump": "yarn build && yarn run changelog",
+    "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },
   "git": {
-    "changelog": "git log --pretty=format:\"* %s (%h)\" [REV_RANGE]"
+    "changelog": "git log --pretty=format:\"* %s (%h)\" [REV_RANGE]",
+    "commitArgs": ["-S"]
   },
   "github": {
     "release": true,
-    "tokenRef": "RELEASE_IT_GITHUB_TOKEN",
-    "commitArgs": "-S"
+    "tokenRef": "RELEASE_IT_GITHUB_TOKEN"
   },
   "npm": {
-    "publish": true,
-    "private": false
+    "publish": true
   }
 }
