@@ -2,11 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.9.12](https://github.com/venturehacks/halo/compare/0.9.11...v0.9.12)
+#### [0.10.0](https://github.com/venturehacks/halo/compare/0.9.12...0.10.0)
+
+- [LEV-825] Upgrade Package Release Workflow [`#89`](https://github.com/venturehacks/halo/pull/89)
+- [lev-791] use arm for ci/cd [`#88`](https://github.com/venturehacks/halo/pull/88)
+- React 17 [`#87`](https://github.com/venturehacks/halo/pull/87)
+- Add documentation for version releases [`#86`](https://github.com/venturehacks/halo/pull/86)
+
+#### [0.9.12](https://github.com/venturehacks/halo/compare/0.9.11...0.9.12)
 
 > 6 July 2021
 
 - [TC-219] Avatar: Add dimensions to `img` directly [`#85`](https://github.com/venturehacks/halo/pull/85)
+- Release 0.9.12 [`c9fb920`](https://github.com/venturehacks/halo/commit/c9fb92064b9907bb161697872a943666a872fd8b)
 
 #### [0.9.11](https://github.com/venturehacks/halo/compare/0.9.10...0.9.11)
 
@@ -41,11 +49,28 @@ All notable changes to this project will be documented in this file. Dates are d
 - prepublish scripts that generate an slim package.json [`ffe4019`](https://github.com/venturehacks/halo/commit/ffe4019845e36a90a859c2ef2a02985ce25448f3)
 - Update .release-it.json [`2536461`](https://github.com/venturehacks/halo/commit/2536461f9c21ede346242af339dc9f6a1fa91db3)
 
-#### [0.9.7](https://github.com/venturehacks/halo/compare/0.9.6...0.9.7)
+#### [0.9.7](https://github.com/venturehacks/halo/compare/v0.9.7...0.9.7)
 
 > 9 October 2020
 
+#### [v0.9.7](https://github.com/venturehacks/halo/compare/0.9.6...v0.9.7)
+
+> 12 October 2020
+
+- Robust .npmignore to slim down package [`39619a0`](https://github.com/venturehacks/halo/commit/39619a0dc3be6bea22e66fff28c51e215301c031)
+- Release 0.9.9 [`c001988`](https://github.com/venturehacks/halo/commit/c0019880efb37486fe11faeb96e1a59b4c192c98)
+- Release 0.9.11 [`f81d1b8`](https://github.com/venturehacks/halo/commit/f81d1b8d7bc7d4e4de1df2e21e3dd6330182a597)
+- Release 0.9.10 [`7297022`](https://github.com/venturehacks/halo/commit/72970220a5c53e93558e5eda521b4db43ca2dfee)
+- Release 0.9.8 [`df337cc`](https://github.com/venturehacks/halo/commit/df337cca783869d95ae45cdf1334950c576a2240)
 - Release 0.9.7 [`6287dca`](https://github.com/venturehacks/halo/commit/6287dca2daa16681275ae1f55c7af88058b63ed4)
+- Expand npmignore further [`cefad6e`](https://github.com/venturehacks/halo/commit/cefad6e0a5e7670e4ebede66bf604eb693ddb008)
+- tidy up publish scripts [`f525265`](https://github.com/venturehacks/halo/commit/f525265ee76a0b60eab7d6a91bda635a37a6f30a)
+- Ignore special publish package jsons [`545da0d`](https://github.com/venturehacks/halo/commit/545da0dea2511dfccb9ad3259bb742595288b54a)
+- prepublish scripts that generate an slim package.json [`ffe4019`](https://github.com/venturehacks/halo/commit/ffe4019845e36a90a859c2ef2a02985ce25448f3)
+- Postpublish script [`a4260f6`](https://github.com/venturehacks/halo/commit/a4260f6ecc0cda09cd5823fd0ba692deffab532d)
+- postpublish: Only reset yarn.lock [`4315293`](https://github.com/venturehacks/halo/commit/431529300be4fb85f5ecb16c0336dc06a124e1ac)
+- Do not re-test before publish, it's redundant with our build system [`aff900e`](https://github.com/venturehacks/halo/commit/aff900e58d724bd18cd1d7cb387592bc398966fa)
+- Update .release-it.json [`2536461`](https://github.com/venturehacks/halo/commit/2536461f9c21ede346242af339dc9f6a1fa91db3)
 - remove `prepare` script [`411f4db`](https://github.com/venturehacks/halo/commit/411f4db8f573a7f12168c82e6f6af715340bbb3a)
 
 #### [0.9.6](https://github.com/venturehacks/halo/compare/0.9.5...0.9.6)
@@ -92,11 +117,24 @@ All notable changes to this project will be documented in this file. Dates are d
 - (typo) [`30c8db6`](https://github.com/venturehacks/halo/commit/30c8db68c558a6a27850febd69a1b488ad79aeaa)
 - (typo) [`d071f11`](https://github.com/venturehacks/halo/commit/d071f11a8c0c2e99a93a3f9dadb6cbcedeb9d3c7)
 
-#### [0.9.1](https://github.com/venturehacks/halo/compare/v0.9.0...0.9.1)
+#### [0.9.1](https://github.com/venturehacks/halo/compare/0.9.0...0.9.1)
 
 > 23 April 2020
 
+- [RawCheckbox/RawRadio] add pill style [`#62`](https://github.com/venturehacks/halo/pull/62)
+- improvements to RawToggleSwitch and Label [`#61`](https://github.com/venturehacks/halo/pull/61)
+- Snapshot Test Suite [`#59`](https://github.com/venturehacks/halo/pull/59)
 - Release 0.9.1 [`6b7825f`](https://github.com/venturehacks/halo/commit/6b7825ff05efe655e34358712375ce5a363d810e)
+
+#### [0.9.0](https://github.com/venturehacks/halo/compare/v0.9.0...0.9.0)
+
+> 13 April 2020
+
+- make Label more customizable [`62d4057`](https://github.com/venturehacks/halo/commit/62d405740e8328bc87754380d9a0b86e83dc55d0)
+- add togglePosition prop to RawToggleSwitch [`9a6b839`](https://github.com/venturehacks/halo/commit/9a6b839dd6ee414aa26f4651e816413428087805)
+- Release 0.9.0 [`a58192f`](https://github.com/venturehacks/halo/commit/a58192f875a746fbdec3baa28dc4349bb26e67ea)
+- make toggle switch ever so slightly smaller (24px -&gt; 20px) [`eb166c2`](https://github.com/venturehacks/halo/commit/eb166c2047157a0ef7fbe3e565d92eaedf58ef22)
+- feedback [`28e4d79`](https://github.com/venturehacks/halo/commit/28e4d79694a66272e808934ef3953137b64afa2f)
 
 #### [v0.9.0](https://github.com/venturehacks/halo/compare/0.8.6...v0.9.0)
 
@@ -121,18 +159,30 @@ All notable changes to this project will be documented in this file. Dates are d
 - forward refs for RawInput [`#53`](https://github.com/venturehacks/halo/pull/53)
 - Release 0.8.6 [`b1402bf`](https://github.com/venturehacks/halo/commit/b1402bf69896c1ad2912b115a331931a4ac8b165)
 
-#### [0.8.5](https://github.com/venturehacks/halo/compare/0.8.2...0.8.5)
+#### [0.8.5](https://github.com/venturehacks/halo/compare/0.8.4...0.8.5)
 
-> 4 February 2020
+> 3 February 2020
 
 - Improvements to raw form inputs [`#51`](https://github.com/venturehacks/halo/pull/51)
 - new props for RawInput + RawTextarea [`#50`](https://github.com/venturehacks/halo/pull/50)
-- Enable xxxsmall size for avatars [`#48`](https://github.com/venturehacks/halo/pull/48)
 - Release 0.8.3 [`c01e86f`](https://github.com/venturehacks/halo/commit/c01e86f441c365474e5af5e677b67a0a7efd0330)
+
+#### [0.8.4](https://github.com/venturehacks/halo/compare/0.8.3...0.8.4)
+
+> 9 January 2020
+
+- Release 0.8.4 [`f74e8df`](https://github.com/venturehacks/halo/commit/f74e8df6a06ab70939a880d63281d9a58d060449)
+
+#### [0.8.3](https://github.com/venturehacks/halo/compare/0.8.2...0.8.3)
+
+> 9 January 2020
+
+- Enable xxxsmall size for avatars [`#48`](https://github.com/venturehacks/halo/pull/48)
+- Release 0.8.3 [`be92e77`](https://github.com/venturehacks/halo/commit/be92e7796aed9ef7f6e2e24edaf4150d6e2a1df1)
 
 #### [0.8.2](https://github.com/venturehacks/halo/compare/0.8.1...0.8.2)
 
-> 7 January 2020
+> 6 January 2020
 
 - Release 0.8.2 [`24a8628`](https://github.com/venturehacks/halo/commit/24a86287caa0e909fb101e1eee303358a3432dc5)
 - [Button] Remove deprecation notice from 'gray' variant – cc @lllychen [`fad68f7`](https://github.com/venturehacks/halo/commit/fad68f76067e97986f6b0a4f445d34ff490865d6)
@@ -180,7 +230,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [0.7.6](https://github.com/venturehacks/halo/compare/0.7.5...0.7.6)
 
-> 23 October 2019
+> 22 October 2019
 
 - Release 0.7.6 [`f737a3b`](https://github.com/venturehacks/halo/commit/f737a3b30f0f5756342cd60d926b26ecf388e485)
 - avatar hell [`0312ad2`](https://github.com/venturehacks/halo/commit/0312ad26a7a1362096123aa5cd5eb9b3a819b07b)
@@ -226,7 +276,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [0.7.0](https://github.com/venturehacks/halo/compare/0.6.17...0.7.0)
 
-> 25 September 2019
+> 24 September 2019
 
 - Form Raw Inputs [`#25`](https://github.com/venturehacks/halo/pull/25)
 - Release 0.7.0 [`fd28c88`](https://github.com/venturehacks/halo/commit/fd28c885041d603f2dbbc7ad8e5eb4395c217560)
@@ -260,7 +310,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [0.6.14](https://github.com/venturehacks/halo/compare/0.6.13...0.6.14)
 
-> 8 August 2019
+> 7 August 2019
 
 - Release 0.6.14 [`f5dd52e`](https://github.com/venturehacks/halo/commit/f5dd52e51cd2951ff0e3876733411c59ded6c2e1)
 - Extend Halo core prop interfaces from React.HTMLAttributes&lt;T&gt; [`8b7f8a8`](https://github.com/venturehacks/halo/commit/8b7f8a898ab5a6ccf834310938552ba25f71d430)
@@ -275,7 +325,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [0.6.12](https://github.com/venturehacks/halo/compare/0.6.11...0.6.12)
 
-> 25 July 2019
+> 24 July 2019
 
 - July 2019 Updates: Label, Box block, smoke tests, variables docum… [`#22`](https://github.com/venturehacks/halo/pull/22)
 - Release 0.6.12 [`2581db6`](https://github.com/venturehacks/halo/commit/2581db628670d74adeee24a466fd9091fccf61d1)
@@ -297,7 +347,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [0.6.11](https://github.com/venturehacks/halo/compare/0.6.9...0.6.11)
 
-> 19 July 2019
+> 18 July 2019
 
 - Extract and compress CSS to single file [`#21`](https://github.com/venturehacks/halo/pull/21)
 - Release 0.6.10 [`892ceaf`](https://github.com/venturehacks/halo/commit/892ceaf2e896dad0ab8b02de1908885a55d4a749)
@@ -306,7 +356,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [0.6.9](https://github.com/venturehacks/halo/compare/0.6.8...0.6.9)
 
-> 9 July 2019
+> 8 July 2019
 
 - [Button] Center text by default; 'success' variant [`eeb4808`](https://github.com/venturehacks/halo/commit/eeb4808c12aad0798d554224225a43646f40ed39)
 - Release 0.6.9 [`9b09a21`](https://github.com/venturehacks/halo/commit/9b09a219bbf20293bf657d3434548dadd76b5540)
@@ -321,7 +371,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [0.6.7](https://github.com/venturehacks/halo/compare/0.6.6...0.6.7)
 
-> 22 June 2019
+> 21 June 2019
 
 - Paragraph default bottom margin to 1em [`09b7fa4`](https://github.com/venturehacks/halo/commit/09b7fa48a19c5c7709dff3fd9d9135ef829f4b3b)
 - Release 0.6.7 [`5e168be`](https://github.com/venturehacks/halo/commit/5e168bef7df3ad3ec95164c3233c1f1f2a20914f)
@@ -344,7 +394,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [0.6.4](https://github.com/venturehacks/halo/compare/0.6.3...0.6.4)
 
-> 18 June 2019
+> 17 June 2019
 
 - [Span] use "score 1" specificity, global selectors on textContrast [`446e3ba`](https://github.com/venturehacks/halo/commit/446e3babed875689f3d1b1c3452529b47363c8b4)
 - Release 0.6.4 [`762e57f`](https://github.com/venturehacks/halo/commit/762e57f646e516d6cb19ffc0431c32053ddeb325)
@@ -352,7 +402,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [0.6.3](https://github.com/venturehacks/halo/compare/0.6.2...0.6.3)
 
-> 18 June 2019
+> 17 June 2019
 
 - Global classnames workaround until dynamic classname CSS module issue is resolved [`bedbfce`](https://github.com/venturehacks/halo/commit/bedbfcecd7992e7466ae1462feb59ed5588b742b)
 - Release 0.6.3 [`d805135`](https://github.com/venturehacks/halo/commit/d80513540234324ee5c12fc45be7219828c9036b)
@@ -381,6 +431,8 @@ All notable changes to this project will be documented in this file. Dates are d
 
 - Sass Documentation [`#17`](https://github.com/venturehacks/halo/pull/17)
 - Official Color Palette & Typography Overhaul [`#15`](https://github.com/venturehacks/halo/pull/15)
+- Official Typography. Overhaul Header to rely on Span for type styles [`ccfa850`](https://github.com/venturehacks/halo/commit/ccfa850038e1cf729cffc9731dfecdd8a91038da)
+- Finalized color spectrum, rebuilt swatches, etc. [`a7c1033`](https://github.com/venturehacks/halo/commit/a7c103379df841972f4db942adeb3dccbef60e73)
 - New Button variants; reduce default selector specificity [`9fdcd3a`](https://github.com/venturehacks/halo/commit/9fdcd3a8380aa3ad61fbc2cb3951dcddd3c43b7e)
 - Refactor $font-sizes-map as deep map including size + line height [`598c833`](https://github.com/venturehacks/halo/commit/598c8331b1cc703ed270217a3c1e01d8064636f6)
 - Remove built docs from repository [`6365b5d`](https://github.com/venturehacks/halo/commit/6365b5d11f7ba8097b7a6da2aea9ba710bce5168)
@@ -404,6 +456,7 @@ All notable changes to this project will be documented in this file. Dates are d
 - Reorganize main menu [`bd973aa`](https://github.com/venturehacks/halo/commit/bd973aa5dfabac49b97ba1ba53516e22ca3c6bd9)
 - Improve Jest config for module resolution, fix test [`d5b17b0`](https://github.com/venturehacks/halo/commit/d5b17b05022060defbe2c0d05090379dc7333d44)
 - Support `stretch` as `Box` alignment option [`e6fddfd`](https://github.com/venturehacks/halo/commit/e6fddfd47bf1b721984db17effb8ab21a33cd590)
+- (fix test) [`3b66ea6`](https://github.com/venturehacks/halo/commit/3b66ea6ead102604188d4a760bf2ef945c2916ff)
 - Inclusivity! [`70653bd`](https://github.com/venturehacks/halo/commit/70653bdfe1fa39f40847c8446d8bc9083e8c9b39)
 - Fix default behavior of `Box` [`c9347e4`](https://github.com/venturehacks/halo/commit/c9347e42e1d611c94002378bdcff0c4ece57ae02)
 - Fix ambient type declaration [`7444413`](https://github.com/venturehacks/halo/commit/7444413f4c87b34740c2808f72017ccd5ccfa887)
@@ -413,8 +466,6 @@ All notable changes to this project will be documented in this file. Dates are d
 
 > 5 June 2019
 
-- Official Typography. Overhaul Header to rely on Span for type styles [`ccfa850`](https://github.com/venturehacks/halo/commit/ccfa850038e1cf729cffc9731dfecdd8a91038da)
-- Finalized color spectrum, rebuilt swatches, etc. [`a7c1033`](https://github.com/venturehacks/halo/commit/a7c103379df841972f4db942adeb3dccbef60e73)
 - Another try at docs [`aa52980`](https://github.com/venturehacks/halo/commit/aa52980ed655524f41b8c35947f00a48e0e0b150)
 - First try at docs deploy [`0440c7f`](https://github.com/venturehacks/halo/commit/0440c7ffc41fec888b737a7e7392c20438d17dc0)
 - Docz 1.2.0 + props table fixes :tada: [`939ff81`](https://github.com/venturehacks/halo/commit/939ff81464236f5fe5ca4aa006e091f2dd807ef7)
@@ -423,7 +474,6 @@ All notable changes to this project will be documented in this file. Dates are d
 - Another try at docs [`7ba2215`](https://github.com/venturehacks/halo/commit/7ba2215a075823a049ffd58d96a703b915dfda5b)
 - docs maybe works this time [`3a224cf`](https://github.com/venturehacks/halo/commit/3a224cf7475bc54a2a6faa2e695464148862e8ba)
 - Release 0.5.11 [`9f48162`](https://github.com/venturehacks/halo/commit/9f48162f087c7df92cb87d0ce86794b3bfffd3b2)
-- (fix test) [`3b66ea6`](https://github.com/venturehacks/halo/commit/3b66ea6ead102604188d4a760bf2ef945c2916ff)
 - Fix paths for Netlify [`919f025`](https://github.com/venturehacks/halo/commit/919f025e7d44e709fe3e1bedc3bbdf510bac984b)
 - [Avatar] add max-height to img [`b772954`](https://github.com/venturehacks/halo/commit/b772954dd89d8a03d4309e97ea4a1017b3175035)
 - Set theme jekyll-theme-minimal [`6e2982a`](https://github.com/venturehacks/halo/commit/6e2982ab69b9ede1e8fbc14f7cdd2c30b4c35292)
@@ -431,7 +481,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [0.5.10](https://github.com/venturehacks/halo/compare/0.5.9...0.5.10)
 
-> 7 May 2019
+> 6 May 2019
 
 - Release 0.5.10 [`e8457c4`](https://github.com/venturehacks/halo/commit/e8457c4db259beb17154a241d109728dbb555a92)
 - improve Button xsmall metrics; remove inline Button margin [`e48cff7`](https://github.com/venturehacks/halo/commit/e48cff76345e6e0914f09078791093375bc4d93f)
@@ -460,7 +510,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [0.5.6](https://github.com/venturehacks/halo/compare/0.5.5...0.5.6)
 
-> 30 April 2019
+> 29 April 2019
 
 - Release 0.5.6 [`c4bcdcc`](https://github.com/venturehacks/halo/commit/c4bcdcce3fec65a4a9a9781ddfbb109b828fe3fa)
 - Export ButtonSize + ButtonVariant [`4afafd6`](https://github.com/venturehacks/halo/commit/4afafd6d9a8bde8e41a44c1a148fe7d7be2eaf92)
@@ -468,7 +518,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [0.5.5](https://github.com/venturehacks/halo/compare/0.5.4...0.5.5)
 
-> 30 April 2019
+> 29 April 2019
 
 - Try to resolve withForwardRef HoC destroying props [`da5ff15`](https://github.com/venturehacks/halo/commit/da5ff15863cd2dd53bcb9b29c4570e5b08bd1817)
 - Release 0.5.5 [`823187f`](https://github.com/venturehacks/halo/commit/823187f3ff28de7fef74da52d0fcd00fab852aa4)
@@ -503,7 +553,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [0.5.1](https://github.com/venturehacks/halo/compare/0.5.0...0.5.1)
 
-> 27 April 2019
+> 26 April 2019
 
 - Grid [`#13`](https://github.com/venturehacks/halo/pull/13)
 - Grid + Cell + Box; structure subfolder [`10515c5`](https://github.com/venturehacks/halo/commit/10515c53df79f2962265f3e420e49ffcc1fff4a0)
@@ -515,7 +565,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [0.5.0](https://github.com/venturehacks/halo/compare/v0.4.3...0.5.0)
 
-> 25 April 2019
+> 24 April 2019
 
 - Core Components [`#12`](https://github.com/venturehacks/halo/pull/12)
 - Variables + Mixins (Initial Pass) [`#11`](https://github.com/venturehacks/halo/pull/11)
@@ -620,7 +670,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [v0.4.0](https://github.com/venturehacks/halo/compare/v0.3.1...v0.4.0)
 
-> 19 March 2019
+> 18 March 2019
 
 - Q1 2019 Release [`#5`](https://github.com/venturehacks/halo/pull/5)
 - Upgrade docz, syntax [`2184642`](https://github.com/venturehacks/halo/commit/2184642de9fc1d4e1af4293ce432730e410acea6)
@@ -640,7 +690,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [v0.3.1](https://github.com/venturehacks/halo/compare/v0.3.0...v0.3.1)
 
-> 5 March 2019
+> 4 March 2019
 
 - Updating readme to add proper emoji [`#4`](https://github.com/venturehacks/halo/pull/4)
 - reset.scss [`929e948`](https://github.com/venturehacks/halo/commit/929e948e8058ecf9d59aefb6448f03190147bf57)
@@ -650,7 +700,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [v0.3.0](https://github.com/venturehacks/halo/compare/v0.2.8...v0.3.0)
 
-> 21 February 2019
+> 20 February 2019
 
 - Big semantic component scaffold [`acf15cf`](https://github.com/venturehacks/halo/commit/acf15cf94b8a365000de8e90a53214f4e79f278f)
 - [massive autofix] prettier + stylelint + tslint [`8315fcd`](https://github.com/venturehacks/halo/commit/8315fcdf811d4ffef1c00e3fd52cabac827120cc)
@@ -712,7 +762,7 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [v0.2.4](https://github.com/venturehacks/halo/compare/v0.2.3...v0.2.4)
 
-> 12 December 2018
+> 11 December 2018
 
 - Further cleaning [`b961a5c`](https://github.com/venturehacks/halo/commit/b961a5c93c0b3a72c102bb3ff5c5a914fc228fc2)
 - cleaning package.json [`05717b3`](https://github.com/venturehacks/halo/commit/05717b31e1288e8bbf57755c20b81fd30e79862b)
@@ -721,20 +771,20 @@ All notable changes to this project will be documented in this file. Dates are d
 
 #### [v0.2.3](https://github.com/venturehacks/halo/compare/v0.2.2...v0.2.3)
 
-> 12 December 2018
+> 11 December 2018
 
 - Fix case-sensitive directory name; introduce release-it; clean deps [`f35e336`](https://github.com/venturehacks/halo/commit/f35e336ca11bd058dfaa4b7cddcfb16168b498ab)
 - Release 0.2.3 [`092181c`](https://github.com/venturehacks/halo/commit/092181c508db9991ff78f10074fed70f6d876c0f)
 
 #### [v0.2.2](https://github.com/venturehacks/halo/compare/v0.2.1...v0.2.2)
 
-> 12 December 2018
+> 11 December 2018
 
 - Release 0.2.2 - Provide lib/ to built package [`7540349`](https://github.com/venturehacks/halo/commit/7540349e482595bd345dca1d8f275e5266a652e5)
 
 #### v0.2.1
 
-> 12 December 2018
+> 11 December 2018
 
 - ES6 module build working with rollup [`dfa5145`](https://github.com/venturehacks/halo/commit/dfa5145286193d70204e11da3ca4b908f1101bbd)
 - yarn.lock [`fa72264`](https://github.com/venturehacks/halo/commit/fa722647ae31e72edc3de40fa7f44c67bfcc9d5e)
