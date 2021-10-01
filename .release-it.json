@@ -5,7 +5,7 @@
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },
   "git": {
-    "changelog": "yarn changelog --stdout",
+    "changelog": "git log --pretty=format:\"* %s (%h)\" ${from}...${to}",
     "commitArgs": ["--gpg-sign"]
   },
   "github": {
