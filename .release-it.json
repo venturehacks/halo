@@ -1,15 +1,16 @@
 {
   "hooks": {
-    "before:init": "yarn test",
-    "after:bump": "yarn build && yarn run changelog",
+    "before:init": "yarn test && yarn build",
+    "after:bump": "yarn changelog --package",
     "after:release": "echo Successfully released ${name} v${version} to ${repo.repository}."
   },
   "git": {
-    "changelog": "git log --pretty=format:\"* %s (%h)\" [REV_RANGE]",
+    "changelog": "yarn changelog --stdout --unreleased",
     "commitArgs": ["-S"]
   },
   "github": {
     "release": true,
+    "releaseNotes": "yarn changelog --stdout --unreleased-only",
     "tokenRef": "RELEASE_IT_GITHUB_TOKEN"
   },
   "npm": {
