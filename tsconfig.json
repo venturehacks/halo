@@ -58,7 +58,7 @@
           ".next/**/*",
           ".docz/**/*",
           ".cache/**/*",
-          "schema*"
+          "public/**",
         ]
       }
     ]
@@ -72,6 +72,6 @@
     "dist/**",
     ".docz/**",
     ".cache/**",
-    "*.js",
+    "public/**",
   ]
 }

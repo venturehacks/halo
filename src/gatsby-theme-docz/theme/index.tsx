@@ -4,7 +4,8 @@ import baseTheme from 'gatsby-theme-docz/src/theme/index';
 import { merge } from 'lodash';
 import githubTheme from 'typography-theme-github';
 
-import palenightTheme from './prism/palenight';
+// import palenightTheme from './prism/palenight';
+import github from './prism/github';
 
 const typography = toTheme(githubTheme);
 
@@ -17,10 +18,10 @@ export default merge(baseTheme, typography, {
   },
   fontWeights: {
     body: 400,
-    heading: 600,
     bold: 600,
+    heading: 600,
   },
   prism: {
-    light: palenightTheme,
+    light: github,
   },
 });

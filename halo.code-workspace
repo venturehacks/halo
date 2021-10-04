@@ -1,7 +1,9 @@
 {
-  "folders": [{
-    "path": "."
-  }],
+  "folders": [
+    {
+      "path": "."
+    },
+  ],
   "settings": {
     "workbench.colorCustomizations": {
       "[Panda Syntax]": {
@@ -28,7 +30,13 @@
       "titleBar.inactiveForeground": "#15202b99",
       "statusBar.background": "#5dc9e2",
       "statusBarItem.hoverBackground": "#32bbda",
-      "statusBar.foreground": "#15202b"
+      "statusBar.foreground": "#15202b",
+      "editorGroup.border": "#88d7ea",
+      "panel.border": "#88d7ea",
+      "sash.hoverBorder": "#88d7ea",
+      "sideBar.border": "#88d7ea",
+      "statusBarItem.remoteBackground": "#5dc9e2",
+      "statusBarItem.remoteForeground": "#15202b"
     },
     "search.useIgnoreFiles": true,
     "search.useGlobalIgnoreFiles": true,
