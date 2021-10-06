@@ -19,6 +19,12 @@ export interface FlairProps {
    * @default sm
    */
   size?: 'xs' | 'sm' | 'md';
+
+  /**
+   * Label text transform.
+   * @default uppercase
+   */
+  textTransform?: 'uppercase' | 'none';
 }
 
 function FlairRaw({
@@ -27,10 +33,12 @@ function FlairRaw({
   forwardedRef,
   size = 'sm',
   color = 'blue',
+  textTransform = 'uppercase',
 }: FlairProps & ForwardedRefProps) {
   const classes = classNames(
     styles.component,
     className,
+    textTransform === 'uppercase' && styles.uppercase,
     styles[color],
     styles[size],
   );
