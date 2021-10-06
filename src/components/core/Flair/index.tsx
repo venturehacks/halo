@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
+import { TextSize } from '~/lib';
 
 import {
   ForwardedRefProps,
@@ -18,7 +19,7 @@ export interface FlairProps {
   /**
    * @default sm
    */
-  size?: 'xs' | 'sm' | 'md';
+  size?: Extract<TextSize, '2xs' | 'xs' | 'sm' | 'md' | 'lg'>;
 
   /**
    * Label text transform.
@@ -40,7 +41,12 @@ function FlairRaw({
     className,
     textTransform === 'uppercase' && styles.uppercase,
     styles[color],
-    styles[size],
+    size === '2xs' && styles.size_2xs,
+    size === 'xs' && styles.size_xs,
+    size === 'sm' && styles.size_sm,
+    size === 'md' && styles.size_md,
+    size === 'lg' && styles.size_lg,
+    size === 'xl' && styles.size_xl,
   );
 
   return (

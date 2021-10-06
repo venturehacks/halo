@@ -2,7 +2,7 @@
 
 .component {
   @include border-rounded;
-  @include font($size: 14px, $weight: medium, $spacing: 0.4px);
+  @include font($size: sm, $weight: medium, $spacing: 0.4px);
   padding: tempo(0.5) tempo(1);
   cursor: default;
 }
@@ -13,16 +13,28 @@
 
 // sizes
 
-.xs {
+.size_2xs {
+  @include font($size: 2xs);
+}
+
+.size_xs {
   @include font($size: xs);
 }
 
-.sm {
+.size_sm {
   @include font($size: sm);
 }
 
-.md {
+.size_md {
   @include font($size: md);
+}
+
+.size_lg {
+  @include font($size: lg);
+}
+
+.size_xl {
+  @include font($size: xl);
 }
 
 // colors
