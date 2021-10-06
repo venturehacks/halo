@@ -22,7 +22,7 @@
   &:focus {
     // probably should not turn this off due to accessibility.
     outline: 0;
-    box-shadow: 0 0 0 4px rgba(#06f, 0.25);
+    @include input-border--focused;
   }
 
   &[disabled] {
@@ -174,11 +174,6 @@
   font-size: 14px;
   padding: tempo(1.5) tempo(2);
 
-  &:last-of-type {
-    padding-left: tempo(5);
-    padding-right: tempo(5);
-  }
-
   &.text {
     padding-left: tempo(2);
     padding-right: tempo(2);
@@ -193,11 +188,6 @@
   font-size: 14px;
   padding: tempo(2) tempo(5);
 
-  &:last-of-type {
-    padding-left: tempo(6);
-    padding-right: tempo(6);
-  }
-
   &.iconOnly {
     padding: tempo(2.5);
   }
@@ -206,11 +196,6 @@
 .small {
   font-size: 14px;
   padding: tempo(1) tempo(1.5);
-
-  &:last-of-type {
-    padding-left: tempo(2);
-    padding-right: tempo(2);
-  }
 
   &.text {
     padding-left: tempo(1);
