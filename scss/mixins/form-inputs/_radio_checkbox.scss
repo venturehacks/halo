@@ -186,6 +186,22 @@ $pill-border-radius: tempo(3);
   }
 }
 
+@mixin input-control--center {
+  position: relative;
+
+  &::before {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  // NOTE(drew): we can apply rotation on both radio+checkbox
+  // because rotating a circle 45º means nothing ;)
+  &::after {
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+  }
+}
+
 @mixin input-label--pill {
   border: 1px solid $slate--200;
   border-radius: $pill-border-radius;

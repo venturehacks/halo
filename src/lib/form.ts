@@ -1,3 +1,5 @@
+export type ControlAlignment = 'top' | 'center';
+
 /**
  * Converts literal 'true' or 'false' strings to boolean values.
  * Pass other strings through unchanged.

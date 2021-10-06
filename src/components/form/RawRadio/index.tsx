@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
+import { ControlAlignment, FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 
 import styles from './styles.scss';
 
@@ -13,6 +13,11 @@ export interface RawRadioProps
    */
   asCheckbox?: boolean;
   className?: string;
+  /**
+   * Vertical alignment of radio element
+   * @default top
+   */
+  controlAlignment?: ControlAlignment;
   /**
    * Since the most common callout is for validation errors, you shouldn't need to customize this.
    * @default warning
@@ -40,6 +45,7 @@ function RawRadio({
   labelClassName,
   asCheckbox = false,
   variant = 'plain',
+  controlAlignment = 'top',
   hasError,
   errorSeverity = 'warning',
   ...rest
@@ -65,6 +71,7 @@ function RawRadio({
           styles.label,
           asCheckbox ? styles.asCheckbox : styles.asRadio,
           variant === 'pill' && styles.pill,
+          controlAlignment === 'center' && styles.controlAlignCenter,
         )}
         htmlFor={id}
       >
