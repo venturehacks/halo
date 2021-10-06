@@ -18,10 +18,6 @@
     @warn 'grid-cell-width() parameter $cells must be an integer! (given: #{$cells})';
   }
 
-  @if ($cells > 24) {
-    @warn 'grid-cell-width() parameter $cells cannot be greater than 24! (given: #{$cells})';
-  }
-
   @return ($cells * $cell-width) + ($gutters * $gutter-width);
 }
 
