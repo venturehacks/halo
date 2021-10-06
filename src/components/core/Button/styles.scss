@@ -248,9 +248,8 @@
 }
 
 .hasIcon {
-  @include flex-row($valign: center);
+  @include flex-row($align: center, $valign: center);
   flex-shrink: 0;
-  text-align: center;
 
   .icon {
     fill: currentColor;
