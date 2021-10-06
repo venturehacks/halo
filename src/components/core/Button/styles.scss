@@ -247,8 +247,22 @@
   margin-right: tempo(1);
 }
 
-.icon {
+.hasIcon {
+  @include flex-row($valign: center);
+  flex-shrink: 0;
   text-align: center;
+
+  .icon {
+    fill: currentColor;
+    stroke: currentColor;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding-right: 0.5em; // some space between icon + label
+
+    .iconOnly & {
+      padding-right: 0;
+    }
+  }
 }
 
 .width100 {
