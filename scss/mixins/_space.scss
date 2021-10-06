@@ -3,7 +3,7 @@
 
 @function tempo($magnitude) {
   @if (($magnitude * 2) % 1 != 0) {
-    @warn 'tempo() parameter $magnitude cannot be more granular than increments of 0.5 (given: #{$magnitude})';
+    @error 'tempo() parameter $magnitude cannot be more granular than increments of 0.5 (given: #{$magnitude})';
   }
 
   @return 8px * $magnitude;
