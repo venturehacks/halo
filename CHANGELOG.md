@@ -2,12 +2,20 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [0.11.0](https://github.com/venturehacks/halo/compare/0.10.0...0.11.0)
+
+- [LEV-815 LEV-899] Address Halo Github Issues that do not require Design department support [`#91`](https://github.com/venturehacks/halo/pull/91)
+- Port docz-theme-extended from Talent Docs [`#90`](https://github.com/venturehacks/halo/pull/90)
+
 #### [0.10.0](https://github.com/venturehacks/halo/compare/0.9.12...0.10.0)
+
+> 1 October 2021
 
 - [LEV-825] Upgrade Package Release Workflow [`#89`](https://github.com/venturehacks/halo/pull/89)
 - [lev-791] use arm for ci/cd [`#88`](https://github.com/venturehacks/halo/pull/88)
 - React 17 [`#87`](https://github.com/venturehacks/halo/pull/87)
 - Add documentation for version releases [`#86`](https://github.com/venturehacks/halo/pull/86)
+- Release 0.10.0 [`94912a5`](https://github.com/venturehacks/halo/commit/94912a5f157094c9e6be8189c752da63f6ce8378)
 
 #### [0.9.12](https://github.com/venturehacks/halo/compare/0.9.11...0.9.12)
 
