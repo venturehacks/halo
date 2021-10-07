@@ -33,7 +33,7 @@ export type ButtonVariant =
    */
   | 'alternate';
 
-export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps {
   children?: React.ReactNode;
   className?: string;
   /**
@@ -80,7 +80,7 @@ function ButtonRaw({
   ...buttonElementProps
 }: ButtonProps &
   ForwardedRefProps &
-  React.PropsWithoutRef<JSX.IntrinsicElements['button']>) {
+  React.ButtonHTMLAttributes<HTMLButtonElement>) {
   const buttonClassNames = classNames([
     styles.component,
     styles[camelCase(variant)],

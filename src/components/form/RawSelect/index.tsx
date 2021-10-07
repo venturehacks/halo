@@ -17,8 +17,7 @@ export interface RawSelectOptgroup {
   options: RawSelectOption[];
 }
 
-export interface RawSelectProps
-  extends React.SelectHTMLAttributes<HTMLSelectElement> {
+export interface RawSelectProps {
   children?: React.ReactNode;
   className?: string;
   /**
@@ -41,6 +40,7 @@ export interface RawSelectProps
    * Field name
    */
   name?: string;
+  // tslint:disable-next-line: array-type
   options: Array<RawSelectOption | RawSelectOptgroup>;
 }
 
@@ -52,7 +52,7 @@ function RawSelect({
   hasError = false,
   errorSeverity = 'warning',
   ...rest
-}: RawSelectProps) {
+}: RawSelectProps & React.SelectHTMLAttributes<HTMLSelectElement>) {
   return (
     <select
       className={classNames(

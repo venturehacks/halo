@@ -16,7 +16,7 @@ import { Span } from '../Span';
 
 import styles from './styles.scss';
 
-export interface HeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
+export interface HeaderProps {
   children: React.ReactNode;
   className?: string;
   /**
@@ -113,7 +113,7 @@ export interface HeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
 function HeaderRaw(
   props: HeaderProps &
     ForwardedRefProps &
-    React.PropsWithoutRef<JSX.IntrinsicElements['header']>,
+    React.HTMLAttributes<HTMLHeadingElement>,
 ) {
   const {
     children,

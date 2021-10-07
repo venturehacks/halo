@@ -5,8 +5,7 @@ import { ControlAlignment, FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 
 import styles from './styles.scss';
 
-export interface RawCheckboxProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface RawCheckboxProps {
   className?: string;
   /**
    * Vertical alignment of checkbox element
@@ -43,7 +42,7 @@ function RawCheckbox({
   labelClassName,
   type,
   ...rest
-}: RawCheckboxProps) {
+}: RawCheckboxProps & React.InputHTMLAttributes<HTMLInputElement>) {
   return (
     <>
       <input

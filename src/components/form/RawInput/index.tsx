@@ -12,8 +12,7 @@ import styles from './styles.scss';
 
 type IconPosition = 'right' | 'left';
 
-export interface RawInputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface RawInputProps {
   className?: string;
 
   /**
@@ -91,7 +90,9 @@ function RawInputRaw({
   transparent = false,
   type = 'text',
   ...rest
-}: RawInputProps & ForwardedRefProps) {
+}: RawInputProps &
+  ForwardedRefProps &
+  React.InputHTMLAttributes<HTMLInputElement>) {
   const input = (
     <input
       ref={forwardedRef}
