@@ -26,10 +26,6 @@ export interface LabelProps extends Pick<SpanProps, 'weight' | 'color'> {
    */
   field?: string;
   isRequired?: boolean;
-  /**
-   * Customize color of asterisk when field is required.
-   */
-  isRequiredAsteriskColor?: Color;
 
   /**
    * Supporting title under title
@@ -44,7 +40,6 @@ export interface LabelProps extends Pick<SpanProps, 'weight' | 'color'> {
 LabelRaw.defaultProps = {
   color: 'slate--900' as Color,
   isRequired: false,
-  isRequiredAsteriskColor: 'text-dark--a' as Color,
   weight: 'medium' as TextWeight,
 };
 
@@ -55,7 +50,6 @@ function LabelRaw({
   field,
   forwardedRef,
   isRequired,
-  isRequiredAsteriskColor,
   supportingText,
   title,
   controlClassName,
@@ -87,7 +81,7 @@ function LabelRaw({
           </Span>{' '}
           {isRequired && (
             <Tooltip content="Required">
-              <Span color={isRequiredAsteriskColor}>*</Span>
+              <Span xxmuted>*</Span>
             </Tooltip>
           )}
         </div>
