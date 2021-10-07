@@ -2,7 +2,7 @@
 
 exports[`Flair snapshot color green 1`] = `
 <span
-  class="component green sm"
+  class="component green size_sm"
 >
   green
 </span>
@@ -10,7 +10,7 @@ exports[`Flair snapshot color green 1`] = `
 
 exports[`Flair snapshot color orange 1`] = `
 <span
-  class="component orange sm"
+  class="component orange size_sm"
 >
   orange
 </span>
@@ -18,7 +18,7 @@ exports[`Flair snapshot color orange 1`] = `
 
 exports[`Flair snapshot color red 1`] = `
 <span
-  class="component red sm"
+  class="component red size_sm"
 >
   red
 </span>
@@ -26,7 +26,7 @@ exports[`Flair snapshot color red 1`] = `
 
 exports[`Flair snapshot default 1`] = `
 <span
-  class="component blue sm"
+  class="component blue size_sm"
 >
   blue default
 </span>
@@ -34,7 +34,7 @@ exports[`Flair snapshot default 1`] = `
 
 exports[`Flair snapshot size md 1`] = `
 <span
-  class="component blue md"
+  class="component blue size_md"
 >
   md size
 </span>
@@ -42,7 +42,7 @@ exports[`Flair snapshot size md 1`] = `
 
 exports[`Flair snapshot size sm 1`] = `
 <span
-  class="component blue sm"
+  class="component blue size_sm"
 >
   sm size
 </span>
@@ -50,7 +50,7 @@ exports[`Flair snapshot size sm 1`] = `
 
 exports[`Flair snapshot size xs 1`] = `
 <span
-  class="component blue xs"
+  class="component blue size_xs"
 >
   xs size
 </span>

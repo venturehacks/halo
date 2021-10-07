@@ -86,11 +86,20 @@ function ButtonRaw({
     styles[camelCase(variant)],
     styles[size],
     emphasis && styles.emphasis,
-    icon && styles.icon,
+    icon && styles.hasIcon,
     icon && !children && styles.iconOnly,
     width === '100%' && styles.width100,
     className,
   ]);
+
+  const content = icon ? (
+    <>
+      <span className={styles.icon}>{icon}</span>
+      <span>{children}</span>
+    </>
+  ) : (
+    children
+  );
 
   if (href) {
     return (
@@ -103,8 +112,7 @@ function ButtonRaw({
         rel={rel}
         target={target}
       >
-        {icon && <>{icon} </>}
-        {children}
+        {content}
       </a>
     );
   }
@@ -118,8 +126,7 @@ function ButtonRaw({
       type={type}
       {...buttonElementProps}
     >
-      {icon && <>{icon} </>}
-      {children}
+      {content}
     </button>
   );
 }

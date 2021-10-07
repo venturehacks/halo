@@ -21,4 +21,8 @@
   &.pill {
     @include input-label--pill;
   }
+
+  &.controlAlignCenter {
+    @include input-control--center;
+  }
 }

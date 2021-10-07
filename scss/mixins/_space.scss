@@ -3,7 +3,7 @@
 
 @function tempo($magnitude) {
   @if (($magnitude * 2) % 1 != 0) {
-    @warn 'tempo() parameter $magnitude cannot be more granular than increments of 0.5 (given: #{$magnitude})';
+    @error 'tempo() parameter $magnitude cannot be more granular than increments of 0.5 (given: #{$magnitude})';
   }
 
   @return 8px * $magnitude;
@@ -16,10 +16,6 @@
 
   @if ($cells % 1 != 0) {
     @warn 'grid-cell-width() parameter $cells must be an integer! (given: #{$cells})';
-  }
-
-  @if ($cells > 24) {
-    @warn 'grid-cell-width() parameter $cells cannot be greater than 24! (given: #{$cells})';
   }
 
   @return ($cells * $cell-width) + ($gutters * $gutter-width);

@@ -1,13 +1,18 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
+import { ControlAlignment, FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 
 import styles from './styles.scss';
 
 export interface RawCheckboxProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
+  /**
+   * Vertical alignment of checkbox element
+   * @default top
+   */
+  controlAlignment?: ControlAlignment;
   /**
    * Since the most common callout is for validation errors, you shouldn't need to customize this.
    * @default warning
@@ -30,6 +35,7 @@ export interface RawCheckboxProps
 function RawCheckbox({
   variant = 'plain',
   className,
+  controlAlignment = 'top',
   errorSeverity = 'warning',
   hasError,
   id,
@@ -58,6 +64,7 @@ function RawCheckbox({
           labelClassName,
           styles.label,
           variant === 'pill' && styles.pill,
+          controlAlignment === 'center' && styles.controlAlignCenter,
         )}
         htmlFor={id}
       >
