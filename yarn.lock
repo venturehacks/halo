@@ -3995,6 +3995,11 @@
   dependencies:
     "@babel/types" "^7.0.0"
 
+"@types/babel__preset-env@^7.9.2":
+  version "7.9.2"
+  resolved "https://registry.npmjs.org/@types/babel__preset-env/-/babel__preset-env-7.9.2.tgz#815ad399ff33e4a1be1228e1ecece5f00ce40bea"
+  integrity sha512-epEgKQiqTDZdPgYwtriYK1GVAGcyVZVvvw2UatX3+95mogKGimebApcMEWLF12uhUbNIvX284CSQEavnV/OIgw==
+
 "@types/babel__template@*":
   version "7.0.2"
   resolved "https://registry.yarnpkg.com/@types/babel__template/-/babel__template-7.0.2.tgz#4ff63d6b52eddac1de7b975a5223ed32ecea9307"
@@ -4067,13 +4072,6 @@
   version "0.0.29"
   resolved "https://registry.yarnpkg.com/@types/debug/-/debug-0.0.29.tgz#a1e514adfbd92f03a224ba54d693111dbf1f3754"
   integrity sha1-oeUUrfvZLwOiJLpU1pMRHb8fN1Q=
-
-"@types/enzyme-adapter-react-16@^1.0.3":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@types/enzyme-adapter-react-16/-/enzyme-adapter-react-16-1.0.5.tgz#1bf30a166f49be69eeda4b81e3f24113c8b4e9d5"
-  integrity sha512-K7HLFTkBDN5RyRmU90JuYt8OWEY2iKUn43SDWEoBOXd/PowUWjLZ3Q6qMBiQuZeFYK/TOstaZxsnI0fXoAfLpg==
-  dependencies:
-    "@types/enzyme" "*"
 
 "@types/enzyme-to-json@^1.5.3":
   version "1.5.3"
@@ -4330,10 +4328,24 @@
   dependencies:
     "@types/react" "*"
 
+"@types/react-scrollspy@3.3.4":
+  version "3.3.4"
+  resolved "https://registry.npmjs.org/@types/react-scrollspy/-/react-scrollspy-3.3.4.tgz#60fd2a48e899b5911c8c044844a3fc2d379b7fa2"
+  integrity sha512-nm7JqM1kWmx2wU0YTr4KwyoKedeoHyKpel9dTlQaTaolicFGOAVx5uCWVjf0bXt1zXU1Tk4aKdBWtxrB5Ccnxg==
+  dependencies:
+    "@types/react" "*"
+
 "@types/react-test-renderer@^16.8.6":
   version "16.9.2"
   resolved "https://registry.yarnpkg.com/@types/react-test-renderer/-/react-test-renderer-16.9.2.tgz#e1c408831e8183e5ad748fdece02214a7c2ab6c5"
   integrity sha512-4eJr1JFLIAlWhzDkBCkhrOIWOvOxcCAfQh+jiKg7l/nNZcCIL2MHl2dZhogIFKyHzedVWHaVP1Yydq/Ruu4agw==
+  dependencies:
+    "@types/react" "*"
+
+"@types/react-timeago@4.1.3":
+  version "4.1.3"
+  resolved "https://registry.npmjs.org/@types/react-timeago/-/react-timeago-4.1.3.tgz#957baaa9f8ea98457ee63b6a57b57a616066ba35"
+  integrity sha512-XaaMBzuXLw7lxPPDs/fenlohcf3NDqM5qP4oOL/Meu+Hb1QChW4Igw/SruS1llEqch18RQB3wDTIwvqq4nivvw==
   dependencies:
     "@types/react" "*"
 
