@@ -39,7 +39,7 @@ function FlairRaw({
   const classes = classNames(
     styles.component,
     className,
-    textTransform === 'uppercase' && styles.uppercase,
+    textTransform === 'none' && styles.textTransformNone,
     styles[color],
     // NOTE(drew): 3xs size is not officially in Halo, but
     // it is useful for this type of element

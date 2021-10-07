@@ -6,10 +6,11 @@
   @include font-antialiased;
   padding: tempo(0.5) tempo(1);
   cursor: default;
-}
-
-.uppercase {
   text-transform: uppercase;
+
+  &.textTransformNone {
+    text-transform: none;
+  }
 }
 
 // sizes
