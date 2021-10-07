@@ -18,6 +18,13 @@ Our tooltip component is a thin wrapper around Tippy, with small tweaks to styli
 [Tippy.js Prop API](https://atomiks.github.io/tippyjs/all-props/)
 
 
+### Props
+
+<Props of={Tooltip} />
+
+### Usage
+
+
 <Playground>
   <Header h4>Text</Header>
   <Box margin={{ bottom: 3 }}>
@@ -39,7 +46,7 @@ Our tooltip component is a thin wrapper around Tippy, with small tweaks to styli
   </Box>
 </Playground>
 
-## Custom Components
+## Apply to a custom component
 
 Likely, you'll want to use a React component as the immediate child to `<Tooltip>`. Be sure to forward the ref!
 
@@ -56,7 +63,3 @@ const ThisWillWork = React.forwardRef((props, ref) => (
   <button ref={ref}>Text</button>
 ));
 ```
-
-### Props
-
-<Props of={Tooltip} />

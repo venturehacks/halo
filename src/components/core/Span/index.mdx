@@ -7,49 +7,15 @@ route: /core/Span
 import { Props, Playground } from 'docz';
 import { Box } from '../../structure/Box';
 import { Span } from './'
-//
+
 
 # Span
 
 The convenient text formatter. Implements common [text interfaces](/constants/text).
 
-### Props `!=` CSS
+### Props
 
-In general, Halo component API's are meant to save you time, but they're not meant to replace CSS. If you have a lot of element styles, they shouldn't be implemented as Halo component props. If you already took the time to assign a `.customClass`, nearly all styles should live in CSS.
-
-
-## Do's & Don'ts
-
-✅
-
-```jsx
-<Span block error semibold>Quick error message</Span>
-<Span size="6xl">{emoji}</Span>
-```
-
-❌
-
-```jsx
-// no component feature in use
-<Span>hello</Span>
-
-// better off as <span>
-<Span className={styles.memo} muted italic>
-  already took the time to make .memo, so all styles should live in .memo
-</Span>
-
-// lazy style injection
-<Header h1>
-  <Span color="orange--700" italic>should be a custom class on Header</Span>
-</LinkButton>
-
-// lazy style injection
-<Anchor onClick={onClick} className={styles.specialLink}>
-  <Span color="text-dark--link" size="sm">
-    should be responsibility of Anchor or .specialLink
-  </Span>
-</Anchor>
-```
+<Props of={Span} />
 
 <Playground>
   <div className="docz">
@@ -122,6 +88,37 @@ In general, Halo component API's are meant to save you time, but they're not mea
 </Playground>
 
 
-### Props
 
-<Props of={Span} />
+
+### Do's & Don'ts
+
+✅
+
+```jsx
+<Span block error semibold>Quick error message</Span>
+<Span size="6xl">{emoji}</Span>
+```
+
+❌
+
+```jsx
+// no Span-specific feature in use
+<Span>hello</Span>
+
+// better off as <span>
+<Span className={styles.memo} muted italic>
+  already took the time to make .memo, so all styles should live in .memo
+</Span>
+
+// lazy style injection
+<Header h1>
+  <Span color="orange--700" italic>should be a custom class on Header</Span>
+</LinkButton>
+
+// lazy style injection
+<Anchor onClick={onClick} className={styles.specialLink}>
+  <Span color="text-dark--link" size="sm">
+    should be responsibility of Anchor or .specialLink
+  </Span>
+</Anchor>
+```

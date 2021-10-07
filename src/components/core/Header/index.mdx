@@ -8,40 +8,51 @@ import { Playground, Props } from 'docz'
 import { Header } from './'
 import { Tooltip } from '../Tooltip'
 
-
 # Header
 
 Semantic headers. Implements a subset of common [text interfaces](/constants/text).
 
-<Playground>
-  <Header h1>
-    Primary Headline h1 (4xl &middot; 40px)
-  </Header>
-
-  <Header h2>
-    Secondary Headline h2 (2xl &middot; 32px)
-  </Header>
-
-  <Header h3 muted>
-    Tertiary Headline h3 (xl &middot; 24px)
-  </Header>
-
-  <Header h4 xmuted>
-    Headline h4 (lg &middot; 20px)
-  </Header>
-
-  <Header h5 xxmuted>
-    Headline h5 (sm &middot; 14px)
-  </Header>
-
-  <Tooltip content="My tooltip looks good because I'm inline block!" placement="right">
-    <Header h6 inlineBlock>
-      Headline h6 (xs &middot; 12px)
-    </Header>
-  </Tooltip>
-
-</Playground>
-
 ### Props
 
 <Props of={Header} />
+
+### Usage
+
+<Playground>
+  <Header h1>Primary Headline</Header>
+  h1 &middot; 4xl &middot; 40px
+</Playground>
+
+<br />
+
+<Playground>
+  <Header h2>Secondary Headline</Header>
+  h2 &middot; 2xl &middot; 32px
+</Playground>
+
+<br />
+
+<Playground>
+  <Header h3 muted>Tertiary Headline</Header>
+  h3 &middot;xl &middot; 24px)
+</Playground>
+
+<br />
+
+<Playground>
+  <Header h4 xmuted>Headline</Header>
+  h4 &middot; lg &middot; 20px
+
+  <br /><br />
+
+  <Header h5 xxmuted>Headline</Header>
+  h5 &middot; sm &middot; 14px
+</Playground>
+
+<br />
+
+<Playground>
+  <Tooltip content="My tooltip looks good because I'm inline block!" placement="right">
+    <Header h6 inlineBlock>Headline</Header>
+  </Tooltip>
+</Playground>
