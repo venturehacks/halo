@@ -76,7 +76,8 @@
       "**/dist": true
     },
     "editor.codeActionsOnSave": {
-      "source.fixAll.eslint": true
+      "source.fixAll.eslint": true,
+      "source.fixAll.tslint": true,
     },
     "eslint.debug": true,
     "eslint.lintTask.enable": true,

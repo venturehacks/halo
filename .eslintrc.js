@@ -12,6 +12,15 @@ module.exports = {
         default: 'array-simple',
       },
     ],
+    'import/no-extraneous-dependencies': [
+      'error',
+      {
+        // allow devDependencies in source code
+        devDependencies: true, // allow
+        optionalDependencies: false,
+        peerDependencies: false,
+      },
+    ],
     // TODO: new rules from recommended in ESLint 7
     '@typescript-eslint/explicit-module-boundary-types': 'off', // TODO-research
     '@typescript-eslint/ban-types': 'off', // TODO-research. {} is a banned type.
