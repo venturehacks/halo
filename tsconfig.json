@@ -37,7 +37,7 @@
     "jsx": "react",
     "paths": {
       "~/*": [
-        "./*"
+        "./src/*"
       ]
     },
     "typeRoots": [
