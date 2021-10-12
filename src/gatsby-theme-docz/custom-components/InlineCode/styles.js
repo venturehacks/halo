@@ -5,9 +5,9 @@ export const Container = styled.code`
   display: inline-block;
   background-color: #f3f3f3;
   color: ${({ theme }) => theme.colors.grayDark};
-  font-family: Consolas, monaco, monospace;
-  font-size: 0.85em;
-  letter-spacing: -0.3px;
+  font-family: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono',
+    Consolas, Menlo, monospace;
+  font-size: 0.7em;
   padding: 3px 8px;
   border-radius: 3px;
 `;
