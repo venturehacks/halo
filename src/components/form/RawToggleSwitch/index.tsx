@@ -37,7 +37,7 @@ export interface RawToggleSwitchProps {
   /**
    * Required to fully manage this component
    */
-  onChange?: React.ChangeEventHandler<HTMLInputElement>;
+  onChange?: React.ChangeEventHandler<HTMLInputElement> | (() => void);
 
   /**
    * Position of toggle in relation to label text

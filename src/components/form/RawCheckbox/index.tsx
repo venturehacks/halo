@@ -28,6 +28,7 @@ export interface RawCheckboxProps {
   id: string;
   label: React.ReactNode;
   labelClassName?: string;
+  onChange?: React.ChangeEventHandler<HTMLInputElement> | (() => void);
   variant?: 'plain' | 'pill';
 }
 

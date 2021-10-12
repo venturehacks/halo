@@ -28,6 +28,8 @@ export interface RawTextareaProps {
    */
   name?: string;
 
+  onChange?: React.ChangeEventHandler<HTMLTextAreaElement> | (() => void);
+
   /**
    * Use transparent style
    * @default false

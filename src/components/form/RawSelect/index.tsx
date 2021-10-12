@@ -40,6 +40,7 @@ export interface RawSelectProps {
    * Field name
    */
   name?: string;
+  onChange?: React.ChangeEventHandler<HTMLSelectElement> | (() => void);
   // tslint:disable-next-line: array-type
   options: Array<RawSelectOption | RawSelectOptgroup>;
 }

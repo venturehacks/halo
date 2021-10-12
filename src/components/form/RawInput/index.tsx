@@ -53,12 +53,13 @@ export interface RawInputProps {
    */
   name?: string;
 
+  onChange?: React.ChangeEventHandler<HTMLInputElement> | (() => void);
+
   /**
    * Use transparent style
    * @default false
    */
   transparent?: boolean;
-
   /**
    * Standard HTML <input> element types
    * @default text
