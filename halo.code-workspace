@@ -1,8 +1,13 @@
 {
   "folders": [
     {
+      "name": "Halo",
       "path": "."
     },
+    {
+      "name": "Distribution",
+      "path": "./dist"
+    }
   ],
   "settings": {
     "workbench.colorCustomizations": {
