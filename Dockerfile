@@ -39,7 +39,7 @@ ENV GIT_COMMIT_MESSAGE ''
 COPY --from=base /app/package.json ./
 COPY --from=base /app/yarn.lock ./
 COPY --from=base /app/.yarnrc ./
-COPY --from=base /app/node_modules ./
+COPY --from=base /app/node_modules ./node_modules
 
 # configs
 COPY tsconfig.json tsconfig.test.json rollup.config.babel.js babel.config.js ./
@@ -72,13 +72,13 @@ ENV GIT_COMMIT_MESSAGE ''
 COPY --from=base /app/package.json ./
 COPY --from=base /app/yarn.lock ./
 COPY --from=base /app/.yarnrc ./
-COPY --from=base /app/node_modules ./
+COPY --from=base /app/node_modules ./node_modules
 
 # from build
 COPY --from=build /app/tsconfig.json ./
 COPY --from=build /app/tsconfig.test.json ./
-COPY --from=build /app/src ./
-COPY --from=build /app/scss ./
+COPY --from=build /app/src ./src
+COPY --from=build /app/scss ./scss
 
 # configs
 COPY jest.config.js stylelint.config.js tslint.json .prettierrc.js .prettierignore .scssrc.js .scss-lint.yml ./
