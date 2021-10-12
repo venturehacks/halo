@@ -22,9 +22,20 @@ RUN yarn install || yarn install --network-concurrency 1
 ##### BUILD
 #####
 
-FROM base AS build
+FROM node:14.17.5-alpine AS build
+WORKDIR /app/
 
-COPY --from=base /app/node_modules ./node_modules
+# 'silence' git-related build args to leverage cache
+ARG GIT_COMMIT_SHA
+ENV GIT_COMMIT_SHA ''
+
+ARG GIT_BRANCH
+ENV GIT_BRANCH ''
+
+ARG GIT_COMMIT_MESSAGE
+ENV GIT_COMMIT_MESSAGE ''
+
+COPY --from=base /app/node_modules ./
 COPY tsconfig.json tsconfig.test.json rollup.config.babel.js babel.config.js ./
 COPY src scss ./
 
