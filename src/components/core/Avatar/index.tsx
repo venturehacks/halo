@@ -42,7 +42,10 @@ function AvatarRaw({
   size = 'medium',
   tooltip,
   forwardedRef,
-}: AvatarProps & ForwardedRefProps<HTMLDivElement>) {
+  ...rest
+}: AvatarProps &
+  ForwardedRefProps<HTMLDivElement> &
+  React.HTMLAttributes<HTMLDivElement>) {
   const badgeOptions = {
     color: badgeColor,
     shape: badgeShape,
@@ -58,6 +61,7 @@ function AvatarRaw({
         styles[size],
         styles[shape],
       )}
+      {...rest}
     >
       <img
         alt={`Avatar for ${name}`}
