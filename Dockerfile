@@ -15,9 +15,9 @@ RUN apk add --no-cache git python2 build-base libpng-dev pngquant lcms2-dev bash
   && apk add libimagequant-dev --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main \
   && apk add vips-dev --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
 
-COPY package.json yarn.lock .yarnrc /app/
-
 COPY jest.config.js stylelint.config.js tslint.json .prettierrc.js .prettierignore .sassrc.js .scss-lint.yml /app/
+
+COPY package.json yarn.lock .yarnrc /app/
 
 RUN yarn install || yarn install --network-concurrency 1
 
