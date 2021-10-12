@@ -68,6 +68,9 @@ COPY --from=base /app/node_modules ./node_modules
 # from build
 COPY --from=build /app/tsconfig.json ./tsconfig.json
 COPY --from=build /app/tsconfig.test.json ./tsconfig.test.json
+COPY --from=build /app/src ./src
+COPY --from=build /app/scss ./scss
+
 
 # configs
 COPY jest.config.js stylelint.config.js tslint.json .prettierrc.js .prettierignore .scssrc.js .scss-lint.yml ./
