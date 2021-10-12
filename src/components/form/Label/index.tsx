@@ -55,7 +55,7 @@ function LabelRaw({
   controlClassName,
   weight,
   color,
-}: LabelProps & ForwardedRefProps) {
+}: LabelProps & ForwardedRefProps<HTMLLabelElement>) {
   if (hasCheckboxOrRadio(children) && !containsFieldGroup) {
     return (
       <Span block error>
@@ -95,7 +95,7 @@ function LabelRaw({
   if (containsFieldGroup) {
     return (
       <fieldset
-        ref={forwardedRef}
+        ref={(forwardedRef as unknown) as React.Ref<HTMLFieldSetElement>}
         className={classNames(classes, styles.fieldset)}
         name={id}
       >
@@ -140,6 +140,6 @@ function hasCheckboxOrRadio(children: React.ReactNode) {
   );
 }
 
-const Label = withForwardedRef<LabelProps>(LabelRaw);
+const Label = withForwardedRef<LabelProps, HTMLLabelElement>(LabelRaw);
 
 export { Label };

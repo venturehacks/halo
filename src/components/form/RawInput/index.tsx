@@ -91,7 +91,7 @@ function RawInputRaw({
   type = 'text',
   ...rest
 }: RawInputProps &
-  ForwardedRefProps &
+  ForwardedRefProps<HTMLInputElement> &
   React.InputHTMLAttributes<HTMLInputElement>) {
   const input = (
     <input
@@ -136,6 +136,6 @@ function RawInputRaw({
   );
 }
 
-const RawInput = withForwardedRef<RawInputProps>(RawInputRaw);
+const RawInput = withForwardedRef<RawInputProps, HTMLInputElement>(RawInputRaw);
 
 export { RawInput };

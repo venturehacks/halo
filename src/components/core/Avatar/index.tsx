@@ -42,7 +42,7 @@ function AvatarRaw({
   size = 'medium',
   tooltip,
   forwardedRef,
-}: AvatarProps & ForwardedRefProps) {
+}: AvatarProps & ForwardedRefProps<HTMLDivElement>) {
   const badgeOptions = {
     color: badgeColor,
     shape: badgeShape,
@@ -71,7 +71,7 @@ function AvatarRaw({
   );
 }
 
-const Avatar = withForwardedRef<AvatarProps>(AvatarRaw);
+const Avatar = withForwardedRef<AvatarProps, HTMLDivElement>(AvatarRaw);
 
 export { Avatar };
 
