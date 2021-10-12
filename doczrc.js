@@ -23,9 +23,7 @@ export default {
       // console.log({ prop: props, component });
       if (props.declarations !== undefined && props.declarations.length > 0) {
         const hasPropAdditionalDescription = props.declarations.find(
-          declaration => {
-            return !declaration.fileName.includes('node_modules');
-          },
+          declaration => !declaration.fileName.includes('node_modules'),
         );
 
         return Boolean(hasPropAdditionalDescription);
