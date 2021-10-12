@@ -1,49 +1,51 @@
 import path from 'path';
-import resolve from 'rollup-plugin-node-resolve';
-import commonjs from 'rollup-plugin-commonjs';
-import replace from 'rollup-plugin-replace';
-import postcss from 'rollup-plugin-postcss';
-import typescript from 'rollup-plugin-typescript2';
-import builtins from 'rollup-plugin-node-builtins';
-import alias from 'rollup-plugin-alias';
-import filesize from 'rollup-plugin-filesize';
 import camelCase from 'camelcase';
+
+// 1st party plugins
+import alias from '@rollup/plugin-alias';
+import commonjs from '@rollup/plugin-commonjs';
+import resolve from '@rollup/plugin-node-resolve';
+import replace from '@rollup/plugin-replace';
+import typescript from '@rollup/plugin-typescript';
+
+// 3rd party
+import filesize from 'rollup-plugin-filesize';
+import postcss from 'rollup-plugin-postcss';
+import builtins from 'rollup-plugin-node-builtins';
 
 // @ts-ignore
 import pkg from './package.json';
 
-const LIBRARY_NAME = 'halo';
-
 const GLOBAL_LIBS = {
   classnames: 'classnames',
-  react: 'React',
   lodash: 'lodash',
+  react: 'React',
   'react-dom': 'ReactDOM',
 };
 
 const EXTERNAL_LIBS = ['classnames', 'react', 'react-dom', 'lodash'];
 
 export default {
+  external: EXTERNAL_LIBS,
   input: './src/index.tsx',
   output: [
     {
-      external: EXTERNAL_LIBS,
+      // external: EXTERNAL_LIBS, // deprecated
       file: `${pkg.main}`,
       format: 'umd',
       globals: GLOBAL_LIBS,
-      name: LIBRARY_NAME,
+      name: pkg.name,
       sourcemap: true,
     },
     {
-      external: EXTERNAL_LIBS,
+      // external: EXTERNAL_LIBS, // deprecated
       file: `${pkg.module}`,
       format: 'es',
       globals: GLOBAL_LIBS,
-      name: LIBRARY_NAME,
+      name: pkg.name,
       sourcemap: true,
     },
   ],
-  external: EXTERNAL_LIBS,
   plugins: [
     // note: alias not currently used; busted after tsc compilation
     alias({
@@ -52,19 +54,19 @@ export default {
     }),
     builtins(),
     resolve({
-      mainFields: ['module', 'main'],
       customResolveOptions: {
-        moduleDirectory: 'node_modules',
+        moduleDirectories: ['node_modules'],
       },
       dedupe: ['react', 'react-dom', 'lodash'],
+      mainFields: ['module', 'main'],
     }),
     postcss({
-      modules: true,
-      extract: true,
       extensions: ['.css', '.sass', '.scss'],
+      extract: true,
       minimize: {
         preset: 'default',
       },
+      modules: true,
       namedExports: name => {
         // converts scss dashes to camelCase:
         // styles.slate--200 => styles.slate200
@@ -82,6 +84,7 @@ export default {
     typescript(),
     replace({
       exclude: 'node_modules/**',
+      preventAssignment: true,
       'process.env.NODE_ENV': JSON.stringify('development'),
     }),
     commonjs({
