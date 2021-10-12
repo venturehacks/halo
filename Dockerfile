@@ -17,7 +17,7 @@ RUN apk add --no-cache git python2 build-base libpng-dev pngquant lcms2-dev bash
 
 COPY package.json yarn.lock .yarnrc /app/
 
-COPY jest.config.js stylelint.config.js tslint.json .prettierrc.js .prettierignore .scssrc.js .scss-lint.yml /app/
+COPY jest.config.js stylelint.config.js tslint.json .prettierrc.js .prettierignore .sassrc.js .scss-lint.yml /app/
 
 RUN yarn install || yarn install --network-concurrency 1
 
@@ -77,7 +77,7 @@ COPY --from=base jest.config.js ./
 COPY --from=base stylelint.config.js ./
 COPY --from=base tslint.json ./
 COPY --from=base .prettierrc.js ./
-COPY --from=base .scssrc.js ./
+COPY --from=base .sassrc.js ./
 COPY --from=base .scss-lint.yml ./
 ### deps
 COPY --from=base /app/package.json ./
