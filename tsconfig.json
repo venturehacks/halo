@@ -32,8 +32,7 @@
     "incremental": true,
     "declaration": true,
     "declarationDir": "./dist/typings/",
-    "baseUrl": "./src",
-    "rootDir": "src",
+    "rootDir": "./src",
     "outDir": "./dist",
     "jsx": "react",
     "paths": {
@@ -73,5 +72,6 @@
     ".docz/**",
     ".cache/**",
     "public/**",
+    "src/gatsby-theme-docz/**/*",
   ]
 }
