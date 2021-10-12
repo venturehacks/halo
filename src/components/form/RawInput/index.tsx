@@ -137,6 +137,10 @@ function RawInputRaw({
   );
 }
 
-const RawInput = withForwardedRef<RawInputProps, HTMLInputElement>(RawInputRaw);
+// NOTE(drew): I wonder if we need to go back to `extends ...`
+const RawInput = withForwardedRef<
+  RawInputProps & React.InputHTMLAttributes<HTMLInputElement>,
+  HTMLInputElement
+>(RawInputRaw);
 
 export { RawInput };
