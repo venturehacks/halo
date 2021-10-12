@@ -13,17 +13,7 @@ import { Box } from '../../structure/Box';
 
 📣 Raw input fields are designed to be [controlled](https://reactjs.org/docs/forms.html#controlled-components) by their smarter, form-connected parent. Be sure to provide an `onChange` handler and manually manage the current selected option via `value` prop.
 
-### Options
-
-```jsx
-import { RawSelect, RawSelectOption } from 'halo';
-
-const OPTIONS: RawSelectOption[] = [
-  { label: 'Chocolate', value: 'chocolate' },
-  { label: 'Vanilla', value: 'vanilla' },
-  { label: 'Strawberry', value: 'strawberry' },
-];
-```
+### Usage
 
 <Playground>
   <Label field="ice-cream" title="One True Ice Cream" supportingText="Select your favorite!" containsFieldGroup>
@@ -52,6 +42,18 @@ const OPTIONS: RawSelectOption[] = [
     </Box>
   </Label>
 </Playground>
+
+### Supplying Options
+
+```jsx
+import { RawSelect, RawSelectOption } from 'halo';
+
+const OPTIONS: RawSelectOption[] = [
+  { label: 'Chocolate', value: 'chocolate' },
+  { label: 'Vanilla', value: 'vanilla' },
+  { label: 'Strawberry', value: 'strawberry' },
+];
+```
 
 ### Props
 

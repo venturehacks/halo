@@ -12,9 +12,6 @@ import { Tooltip } from '../Tooltip'
 
 Semantic headers. Implements a subset of common [text interfaces](/constants/text).
 
-### Props
-
-<Props of={Header} />
 
 ### Usage
 
@@ -23,21 +20,15 @@ Semantic headers. Implements a subset of common [text interfaces](/constants/tex
   h1 &middot; 4xl &middot; 40px
 </Playground>
 
-<br />
-
 <Playground>
   <Header h2>Secondary Headline</Header>
   h2 &middot; 2xl &middot; 32px
 </Playground>
 
-<br />
-
 <Playground>
   <Header h3 muted>Tertiary Headline</Header>
   h3 &middot;xl &middot; 24px)
 </Playground>
-
-<br />
 
 <Playground>
   <Header h4 xmuted>Headline</Header>
@@ -49,10 +40,12 @@ Semantic headers. Implements a subset of common [text interfaces](/constants/tex
   h5 &middot; sm &middot; 14px
 </Playground>
 
-<br />
-
 <Playground>
   <Tooltip content="My tooltip looks good because I'm inline block!" placement="right">
     <Header h6 inlineBlock>Headline</Header>
   </Tooltip>
 </Playground>
+
+### Props
+
+<Props of={Header} />

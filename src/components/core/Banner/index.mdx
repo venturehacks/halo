@@ -14,21 +14,6 @@ import { Banner } from './'
 
 Display a prominent message and optional action. Banners are displayed at the top of the screen and may be either persistent until dismissed or expired after some time. Avoid stacking more than one banner.
 
-
-### Props
-
-<Props of={Banner} />
-
-### Exports
-
-```tsx
-export type BannerVariant =
-  | 'default'  // Lowest priority
-  | 'warning'  // Mid priority, "just so you know" type messages
-  | 'error'    // High priority blocker
-  | 'success'; // High priority success
-```
-
 ### Usage
 
 <Playground>
@@ -67,3 +52,16 @@ export type BannerVariant =
   </Box>
 </Playground>
 
+### Props
+
+<Props of={Banner} />
+
+### Exports
+
+```tsx
+export type BannerVariant =
+  | 'default'  // Lowest priority
+  | 'warning'  // Mid priority, "just so you know" type messages
+  | 'error'    // High priority blocker
+  | 'success'; // High priority success
+```

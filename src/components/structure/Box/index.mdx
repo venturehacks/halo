@@ -13,11 +13,7 @@ import { Button } from '../../core/Button';
 
 Use `Box` to quickly scaffold layouts. By default, `Box` is a standard block element with no flexbox features. Declare flexbox behavior with `row` or `column` props.
 
-### Props `!=` CSS
-
-`Box` props are not meant to replace CSS! It's better practice to rely on these props for convenience and not as a hammer to avoid writing clean CSS. Additionally, `Box` props are not flexible to responsive design. If styling rules are scattered between JSX and CSS, it's difficult to focus on the differences between mobile and desktop.
-
-In general, Halo component API's are meant to save you time, but they're not meant to replace CSS. If you have a lot of element styles, they shouldn't be implemented as Halo component props. If you already took the time to assign a `.customClass`, nearly all styles should live in CSS.
+### Usage
 
 <Playground>
   <Box padding>
@@ -49,7 +45,7 @@ In general, Halo component API's are meant to save you time, but they're not mea
   </Box>
 </Playground>
 
-## Exports
+### Exports
 
 ```ts
 type BoxAlign =
