@@ -14,21 +14,23 @@
 
 import React from 'react';
 
-export interface ForwardedRefProps {
-  forwardedRef?: React.Ref<any>;
+export interface ForwardedRefProps<RefElement = HTMLElement> {
+  forwardedRef?: React.Ref<RefElement>;
 }
 
-function withForwardedRef<OriginalProps extends {}>(
-  WrappedComponent: React.ComponentType<OriginalProps>,
+function withForwardedRef<OriginalProps, RefElement = HTMLElement>(
+  WrappedComponent: React.ComponentType<
+    OriginalProps & ForwardedRefProps<RefElement>
+  >,
 ) {
-  function forwardRef(props: OriginalProps, ref: React.Ref<OriginalProps>) {
+  function forwardRef(props: OriginalProps, ref: React.Ref<RefElement>) {
     return <WrappedComponent {...props} forwardedRef={ref} />;
   }
 
   const name = WrappedComponent.displayName || WrappedComponent.name;
   forwardRef.displayName = `withForwardedRef(${name})`;
 
-  return React.forwardRef(forwardRef);
+  return React.forwardRef<RefElement, OriginalProps>(forwardRef);
 }
 
 export { withForwardedRef };
