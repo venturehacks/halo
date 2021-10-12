@@ -45,7 +45,8 @@ COPY --from=base /app/node_modules ./node_modules
 COPY tsconfig.json tsconfig.test.json rollup.config.babel.js babel.config.js ./
 
 # sources
-COPY src scss ./
+COPY src ./src
+COPY scss ./scss
 
 RUN yarn build
 
