@@ -36,10 +36,10 @@ ARG GIT_COMMIT_MESSAGE
 ENV GIT_COMMIT_MESSAGE ''
 
 # from base
-COPY --from=base /app/package.json ./package.json
-COPY --from=base /app/yarn.lock ./yarn.lock
-COPY --from=base /app/.yarnrc ./.yarnrc
-COPY --from=base /app/node_modules ./node_modules
+COPY --from=base /app/package.json ./
+COPY --from=base /app/yarn.lock ./
+COPY --from=base /app/.yarnrc ./
+COPY --from=base /app/node_modules ./
 
 # configs
 COPY tsconfig.json tsconfig.test.json rollup.config.babel.js babel.config.js ./
@@ -69,16 +69,16 @@ ARG GIT_COMMIT_MESSAGE
 ENV GIT_COMMIT_MESSAGE ''
 
 # from base
-COPY --from=base /app/package.json ./package.json
-COPY --from=base /app/yarn.lock ./yarn.lock
-COPY --from=base /app/.yarnrc ./.yarnrc
-COPY --from=base /app/node_modules ./node_modules
+COPY --from=base /app/package.json ./
+COPY --from=base /app/yarn.lock ./
+COPY --from=base /app/.yarnrc ./
+COPY --from=base /app/node_modules ./
 
 # from build
-COPY --from=build /app/tsconfig.json ./tsconfig.json
-COPY --from=build /app/tsconfig.test.json ./tsconfig.test.json
-COPY --from=build /app/src ./src
-COPY --from=build /app/scss ./scss
+COPY --from=build /app/tsconfig.json ./
+COPY --from=build /app/tsconfig.test.json ./
+COPY --from=build /app/src ./
+COPY --from=build /app/scss ./
 
 # configs
 COPY jest.config.js stylelint.config.js tslint.json .prettierrc.js .prettierignore .scssrc.js .scss-lint.yml ./
