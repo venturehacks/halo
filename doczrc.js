@@ -18,29 +18,42 @@ export default {
     'coverage',
   ],
   docgenConfig: {
-    propFilter: prop => {
-      if (prop.parent) {
-        return !prop.parent.fileName.includes('node_modules');
+    propFilter: props => {
+      // NOTE(drew): hrm, I cannot seem to get this output in console
+      // console.log({ prop: props, component });
+      if (props.declarations !== undefined && props.declarations.length > 0) {
+        const hasPropAdditionalDescription = props.declarations.find(
+          declaration => !declaration.fileName.includes('node_modules'),
+        );
+
+        return Boolean(hasPropAdditionalDescription);
+      }
+
+      if (props.parent) {
+        return !props.parent.fileName.includes('node_modules');
       }
 
       return true;
     },
-    searchPatterns: [
-      '**/*.{tsx}',
-      'src/gatsby-theme-docz/custom-components/**/*.{ts,tsx,js,jsx,mjs}',
-      '!**/node_modules',
-      '!**/doczrc.js',
-      '!**/.next',
-      '!**/.cache',
-      '!**/public',
-      '!**/dist',
-      '!**/coverage',
-    ],
   },
-  filterComponents: files =>
-    files.filter(filepath =>
-      /.*components\/.*\/*\.(js|jsx|ts|tsx)$/.test(filepath),
-    ),
+  filterComponents: files => {
+    const filteredFiles = files.filter(filepath => {
+      const isTest = /\.(test|spec)\.(js|jsx|ts|tsx)$/.test(filepath);
+      if (isTest) {
+        return false;
+      }
+
+      const isComponent = /^src\/components\/(core|form|structure)+\/.*\/*\.(ts|tsx)$/.test(
+        filepath,
+      );
+
+      return isComponent;
+    });
+
+    console.log('[Halo] resolved source files:');
+    console.log(filteredFiles);
+    return filteredFiles;
+  },
   themeConfig: {
     primary: '#0F6FFF',
     showPlaygroundEditor: true,

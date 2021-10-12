@@ -12,8 +12,7 @@ import styles from './styles.scss';
 
 type IconPosition = 'right' | 'left';
 
-export interface RawInputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface RawInputProps {
   className?: string;
 
   /**
@@ -54,12 +53,13 @@ export interface RawInputProps
    */
   name?: string;
 
+  onChange?: React.ChangeEventHandler<HTMLInputElement> | (() => void);
+
   /**
    * Use transparent style
    * @default false
    */
   transparent?: boolean;
-
   /**
    * Standard HTML <input> element types
    * @default text
@@ -91,7 +91,9 @@ function RawInputRaw({
   transparent = false,
   type = 'text',
   ...rest
-}: RawInputProps & ForwardedRefProps) {
+}: RawInputProps &
+  ForwardedRefProps<HTMLInputElement> &
+  React.InputHTMLAttributes<HTMLInputElement>) {
   const input = (
     <input
       ref={forwardedRef}
@@ -135,6 +137,10 @@ function RawInputRaw({
   );
 }
 
-const RawInput = withForwardedRef<RawInputProps>(RawInputRaw);
+// NOTE(drew): I wonder if we need to go back to `extends ...`
+const RawInput = withForwardedRef<
+  RawInputProps & React.InputHTMLAttributes<HTMLInputElement>,
+  HTMLInputElement
+>(RawInputRaw);
 
 export { RawInput };

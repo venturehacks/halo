@@ -25,8 +25,8 @@ export const icon = (
 );
 
 export const Container = styled.div`
-  width: 275px;
-  min-width: 275px;
+  width: 200px;
+  min-width: 200px;
   padding-left: 2rem;
 
   @media screen and (max-width: ${breakpoints.desktop}px) {

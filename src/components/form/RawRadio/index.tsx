@@ -5,8 +5,7 @@ import { ControlAlignment, FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 
 import styles from './styles.scss';
 
-export interface RawRadioProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+export interface RawRadioProps {
   /**
    * set to true to visually render radio elements as checkboxes
    * @default false
@@ -34,6 +33,7 @@ export interface RawRadioProps
   id: string;
   label: React.ReactNode;
   labelClassName?: string;
+  onChange?: React.ChangeEventHandler<HTMLInputElement> | (() => void);
   variant?: 'plain' | 'pill';
 }
 
@@ -49,7 +49,7 @@ function RawRadio({
   hasError,
   errorSeverity = 'warning',
   ...rest
-}: RawRadioProps) {
+}: RawRadioProps & React.InputHTMLAttributes<HTMLInputElement>) {
   return (
     <>
       <input

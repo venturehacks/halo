@@ -33,7 +33,7 @@ export type ButtonVariant =
    */
   | 'alternate';
 
-export interface ButtonProps extends React.HTMLAttributes<HTMLButtonElement> {
+export interface ButtonProps {
   children?: React.ReactNode;
   className?: string;
   /**
@@ -79,8 +79,8 @@ function ButtonRaw({
   width,
   ...buttonElementProps
 }: ButtonProps &
-  ForwardedRefProps &
-  React.PropsWithoutRef<JSX.IntrinsicElements['button']>) {
+  ForwardedRefProps<HTMLButtonElement | HTMLAnchorElement> &
+  React.ButtonHTMLAttributes<HTMLButtonElement>) {
   const buttonClassNames = classNames([
     styles.component,
     styles[camelCase(variant)],
@@ -104,7 +104,7 @@ function ButtonRaw({
   if (href) {
     return (
       <a
-        ref={forwardedRef}
+        ref={(forwardedRef as unknown) as React.Ref<HTMLAnchorElement>}
         className={buttonClassNames}
         data-test="Button"
         href={href}
@@ -119,7 +119,7 @@ function ButtonRaw({
 
   return (
     <button
-      ref={forwardedRef}
+      ref={forwardedRef as React.Ref<HTMLButtonElement>}
       className={buttonClassNames}
       data-test="Button"
       onClick={onClick}
@@ -131,6 +131,6 @@ function ButtonRaw({
   );
 }
 
-const Button = withForwardedRef<ButtonProps>(ButtonRaw);
+const Button = withForwardedRef<ButtonProps, HTMLButtonElement>(ButtonRaw);
 
 export { Button };

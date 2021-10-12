@@ -11,12 +11,7 @@ import { Span } from '../Span';
 
 import styles from './styles.scss';
 
-type HTMLParagraphElementProps = Omit<
-  React.HTMLAttributes<HTMLParagraphElement>,
-  'color'
->;
-
-export interface ParagraphProps extends HTMLParagraphElementProps {
+export interface ParagraphProps {
   children: React.ReactNode;
   className?: string;
   /**
@@ -49,7 +44,7 @@ export interface ParagraphProps extends HTMLParagraphElementProps {
   size?: TextSize;
 }
 
-function Paragraph({
+function ParagraphRaw({
   flow = true,
   children,
   className,
@@ -58,7 +53,7 @@ function Paragraph({
   contrast,
   colorScheme,
   ...paragraphElementProps
-}: ParagraphProps) {
+}: ParagraphProps & React.HTMLAttributes<HTMLParagraphElement>) {
   const classes = classNames(styles.component, flow && styles.flow, className);
 
   return (
@@ -69,11 +64,16 @@ function Paragraph({
       lineHeight={lineHeight}
       size={size}
       tag="p"
-      {...paragraphElementProps}
+      {...(paragraphElementProps as Omit<
+        React.HTMLAttributes<HTMLParagraphElement>,
+        'color'
+      >)}
     >
       {children}
     </Span>
   );
 }
 
-export { Paragraph };
+// NOTE(drew): I don't know why react-docgen is so finicky.
+// Sometimes the prop table is correct, other times it is not.
+export { ParagraphRaw as Paragraph };

@@ -15,7 +15,7 @@ export const Container = styled.div`
     th,
     td {
       border-bottom: solid 1px ${({ theme }) => theme.colors.border};
-      padding: 12px 8px;
+      padding: 10px 8px;
       min-height: 68px;
     }
 

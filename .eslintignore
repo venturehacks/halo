@@ -1,9 +1,6 @@
 .cache
-.circleci
 .docz
-docs
+CHANGELOG.md
 dist
 node_modules
-**/*.scss.d.ts
-CHANGELOG.md
-*.tsbuildinfo
+public

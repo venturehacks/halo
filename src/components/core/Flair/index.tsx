@@ -35,7 +35,7 @@ function FlairRaw({
   size = 'sm',
   color = 'blue',
   textTransform = 'uppercase',
-}: FlairProps & ForwardedRefProps) {
+}: FlairProps & ForwardedRefProps<HTMLSpanElement>) {
   const classes = classNames(
     styles.component,
     className,
@@ -59,6 +59,6 @@ function FlairRaw({
   );
 }
 
-const Flair = withForwardedRef<FlairProps>(FlairRaw);
+const Flair = withForwardedRef<FlairProps, HTMLSpanElement>(FlairRaw);
 
 export { Flair };

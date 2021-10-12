@@ -28,7 +28,7 @@ export interface NegativeSpace {
   top?: number | boolean;
 }
 
-export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
+export interface BoxProps {
   /**
    * Horizontal alignment. top | bottom | left | right | normal | space-between | space-evenly | stretch
    */
@@ -106,8 +106,8 @@ function BoxRaw({
   wrap = false,
   ...divElementProps
 }: BoxProps &
-  ForwardedRefProps &
-  React.PropsWithoutRef<JSX.IntrinsicElements['div']>) {
+  ForwardedRefProps<HTMLDivElement> &
+  React.HTMLAttributes<HTMLDivElement>) {
   // mutually exclusive: block vs flex-column vs. flex-row
   const isBlockElement = !row && !column;
   const isFlexColumn = !isBlockElement && column && !row;
@@ -217,6 +217,6 @@ function augmentNegativeSpaceClasses(
   return classes;
 }
 
-const Box = withForwardedRef<BoxProps>(BoxRaw);
+const Box = withForwardedRef<BoxProps, HTMLDivElement>(BoxRaw);
 
 export { Box };
