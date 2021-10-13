@@ -15,9 +15,6 @@ RUN apk add --no-cache git python2 build-base libpng-dev pngquant lcms2-dev bash
   && apk add libimagequant-dev --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main \
   && apk add vips-dev --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
 
-COPY jest.config.js stylelint.config.js tslint.json .prettierrc.js .prettierignore .sassrc.js .scss-lint.yml /app/
-COPY test /app/test
-
 COPY package.json yarn.lock .yarnrc /app/
 
 RUN yarn install || yarn install --network-concurrency 1
@@ -39,14 +36,15 @@ ENV GIT_BRANCH ''
 ARG GIT_COMMIT_MESSAGE
 ENV GIT_COMMIT_MESSAGE ''
 
+# configs
+COPY tsconfig.json tsconfig.test.json rollup.config.babel.js babel.config.js jest.config.js stylelint.config.js tslint.json .prettierrc.js .prettierignore .sassrc.js .scss-lint.yml ./
+COPY test ./test
+
 # from base
 COPY --from=base /app/package.json ./
 COPY --from=base /app/yarn.lock ./
 COPY --from=base /app/.yarnrc ./
 COPY --from=base /app/node_modules ./node_modules
-
-# configs
-COPY tsconfig.json tsconfig.test.json rollup.config.babel.js babel.config.js ./
 
 # sources
 COPY src ./src
@@ -58,8 +56,7 @@ RUN yarn build
 ##### TEST
 #####
 
-FROM base AS test
-
+FROM build AS test
 WORKDIR /app/
 
 # 'silence' git-related build args to leverage cache
@@ -72,10 +69,4 @@ ENV GIT_BRANCH ''
 ARG GIT_COMMIT_MESSAGE
 ENV GIT_COMMIT_MESSAGE ''
 
-# from build
-COPY --from=build /app/tsconfig.json ./
-COPY --from=build /app/tsconfig.test.json ./
-COPY --from=build /app/src ./src
-COPY --from=build /app/scss ./scss
-
-RUN yarn test:ci
+CMD yarn test:ci
