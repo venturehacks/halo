@@ -6,7 +6,7 @@ STEPS << BuildkiteUtils.build_step(name: NAME, target: :build, arch: :arm64)
 STEPS << BuildkiteUtils.k8s_step(
   step: :test,
   name: NAME,
-  command: 'yarn test:ci --maxWorkers=4',
+  command: 'yarn test:ci --maxWorkers=3',
   depends_on: "build:build:#{NAME}:arm64",
   image: BuildkiteUtils.image(NAME, :build, arch: :arm64),
   timeout_in_minutes: 20,
