@@ -16,6 +16,7 @@ RUN apk add --no-cache git python2 build-base libpng-dev pngquant lcms2-dev bash
   && apk add vips-dev --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
 
 COPY jest.config.js stylelint.config.js tslint.json .prettierrc.js .prettierignore .sassrc.js .scss-lint.yml /app/
+COPY test /app/test
 
 COPY package.json yarn.lock .yarnrc /app/
 
@@ -72,13 +73,15 @@ ARG GIT_COMMIT_MESSAGE
 ENV GIT_COMMIT_MESSAGE ''
 
 # from base
-### configs
+### test configs
 COPY --from=base jest.config.js ./
 COPY --from=base stylelint.config.js ./
 COPY --from=base tslint.json ./
 COPY --from=base .prettierrc.js ./
 COPY --from=base .sassrc.js ./
 COPY --from=base .scss-lint.yml ./
+COPY --from=base test ./test
+
 ### deps
 COPY --from=base /app/package.json ./
 COPY --from=base /app/yarn.lock ./
