@@ -30,7 +30,7 @@
     "test:dev:watch": "yarn run test:dev --watch --onlyChanged",
     "test:snapshot-update": "yarn test:dev --updateSnapshot",
     "test:clean": "rimraf ./node_modules/.cache/ && rimraf ./.rpt2_cache && jest --clearCache",
-    "test:ci": "NODE_ENV=test BABEL_ENV=test jest --config jest.config.js --runInBand",
+    "test:ci": "NODE_ENV=test BABEL_ENV=test jest --config jest.config.js",
     "docs:build": "yarn build:gatsby",
     "prettier:other:write": "prettier --write '**/*.{md,markdown}'",
     "prettier:other": "prettier '**/*.{md,markdown}' --list-different",
