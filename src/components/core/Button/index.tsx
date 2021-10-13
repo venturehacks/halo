@@ -41,7 +41,7 @@ export interface ButtonProps {
    */
   disabled?: boolean;
   /**
-   * Bold text
+   * bold text
    * @default true
    */
   emphasis?: boolean;
@@ -49,17 +49,32 @@ export interface ButtonProps {
    * Render as HTML anchor/hyperlink, styled like a button
    */
   href?: string;
+  /**
+   * JSX icon
+   */
   icon?: React.ReactNode;
   onClick?: React.MouseEventHandler;
   rel?: string;
+  /**
+   * Size preset
+   * @default regular
+   */
   size?: ButtonSize;
   target?: '_blank' | '_self' | '_parent' | '_top' | undefined;
+  /**
+   * DOM element type
+   * @default button
+   */
   type?: 'submit' | 'button' | 'reset';
   /**
-   * Main control for button style
+   * Appearance preset
+   * @default primary
    */
   variant?: ButtonVariant;
 
+  /**
+   * Force button to 100% within continaer
+   */
   width?: '100%';
 }
 
