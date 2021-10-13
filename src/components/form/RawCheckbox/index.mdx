@@ -16,68 +16,14 @@ import { Box } from '../../structure/Box';
 ### Usage
 
 <Playground>
-  <Label field="ice-cream" title="Favorite Ice Creams" containsFieldGroup>
-    <Box row align="space-between" maxWidth="500px" padding>
+  <Label field="ice-cream" title="Checkbox" containsFieldGroup>
+    <Box row align="space-between" maxWidth="700px" padding>
       <RawCheckbox
         name="ice-cream"
         value="chocolate"
         label="Chocolate"
         onChange={() => {}}
         checked={false}
-      />
-      <RawCheckbox
-        name="ice-cream"
-        value="vanilla"
-        label="Vanilla"
-        onChange={() => {}}
-        checked={true}
-      />
-      <RawCheckbox
-        name="ice-cream"
-        value="strawberry"
-        label="Strawberry"
-        onChange={() => {}}
-        checked={true}
-      />
-    </Box>
-  </Label>
-  <Label field="ice-cream" title="Favorite Ice Creams" supportingText="with validation error" containsFieldGroup>
-    <Box row align="space-between" maxWidth="500px" padding>
-      <RawCheckbox
-        name="ice-cream"
-        value="chocolate"
-        label="Chocolate"
-        onChange={() => {}}
-        checked={false}
-        hasError
-      />
-      <RawCheckbox
-        name="ice-cream"
-        value="vanilla"
-        label="Vanilla"
-        onChange={() => {}}
-        checked={true}
-        hasError
-      />
-      <RawCheckbox
-        name="ice-cream"
-        value="strawberry"
-        label="Strawberry"
-        onChange={() => {}}
-        checked={true}
-        hasError
-      />
-    </Box>
-  </Label>
-  <Label field="ice-cream" title="Disabled" containsFieldGroup>
-    <Box row align="space-between" maxWidth="500px" padding>
-      <RawCheckbox
-        name="ice-cream"
-        value="chocolate"
-        label="Chocolate"
-        onChange={() => {}}
-        checked={false}
-        disabled
       />
       <RawCheckbox
         name="ice-cream"
@@ -85,9 +31,72 @@ import { Box } from '../../structure/Box';
         label="Vanilla"
         onChange={() => {}}
         checked
-        disabled
       />
       <RawCheckbox
+        name="ice-cream"
+        value="vanilla"
+        label="Validation error"
+        onChange={() => {}}
+        hasError
+        checked
+      />
+      <RawCheckbox
+        name="ice-cream"
+        value="strawberry"
+        label="Strawberry"
+        onChange={() => {}}
+        checked
+        disabled
+      />
+    </Box>
+  </Label>
+  <Label field="ice-cream" title="Pill" containsFieldGroup>
+    <Box row align="space-between" maxWidth="500px" padding>
+      <RawCheckbox
+        variant="pill"
+        name="ice-cream"
+        value="chocolate"
+        label="Chocolate"
+        onChange={() => {}}
+      />
+      <RawCheckbox
+        variant="pill"
+        name="ice-cream"
+        value="vanilla"
+        label="Vanilla"
+        onChange={() => {}}
+        checked
+      />
+      <RawCheckbox
+        variant="pill"
+        name="ice-cream"
+        value="strawberry"
+        label="Strawberry"
+        onChange={() => {}}
+        checked
+        disabled
+      />
+    </Box>
+  </Label>
+  <Label field="ice-cream" title="Toggle Switch" containsFieldGroup>
+    <Box row align="space-between" maxWidth="500px" padding>
+      <RawCheckbox
+        variant="toggle-switch"
+        name="ice-cream"
+        value="chocolate"
+        label="Chocolate"
+        onChange={() => {}}
+      />
+      <RawCheckbox
+        variant="toggle-switch"
+        name="ice-cream"
+        value="vanilla"
+        label="Vanilla"
+        onChange={() => {}}
+        checked
+      />
+      <RawCheckbox
+        variant="toggle-switch"
         name="ice-cream"
         value="strawberry"
         label="Strawberry"
