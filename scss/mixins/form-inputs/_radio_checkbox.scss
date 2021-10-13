@@ -27,8 +27,12 @@ $pill-border-radius: tempo(3);
   z-index: -2;
 }
 
-@mixin input-border--hover--thick {
+@mixin input-border--checked--thick {
   border: 2px solid $blue--500;
+}
+
+@mixin input-border--hover {
+  border-color: $blue--500;
 }
 
 %input-label--base {
@@ -79,10 +83,14 @@ $pill-border-radius: tempo(3);
     transform: rotate(-45deg);
   }
 
-  // hover || checked = thick border
-  &:hover::before,
+  // hover = punchy blue border
+  &:hover::before {
+    @include input-border--hover;
+  }
+
+  // checked = thick border
   :checked + &::before {
-    @include input-border--hover--thick;
+    @include input-border--checked--thick;
   }
 
   // checked
@@ -145,10 +153,14 @@ $pill-border-radius: tempo(3);
     @include border-circle;
   }
 
-  // hover || checked = thick border
-  &:hover::before,
+  // hover = punchy blue border
+  &:hover::before {
+    @include input-border--hover;
+  }
+
+  // checked = thick border
   :checked + &::before {
-    @include input-border--hover--thick;
+    @include input-border--checked--thick;
   }
 
   // checked
@@ -163,6 +175,7 @@ $pill-border-radius: tempo(3);
 
   [disabled] + &,
   [disabled]:checked + & {
+    border-color: $slate--300;
     &::before,
     &::after {
       @include input--disabled;
@@ -225,9 +238,17 @@ $pill-border-radius: tempo(3);
 
   &:hover {
     border-color: $blue--500;
+
+    &::before {
+      @include border-circle;
+    }
   }
 
   :checked + & {
     border-color: $blue--500;
+  }
+
+  [disabled]:checked + & {
+    border-color: $slate--300;
   }
 }

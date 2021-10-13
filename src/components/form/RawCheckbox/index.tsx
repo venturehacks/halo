@@ -8,7 +8,7 @@ import styles from './styles.scss';
 export interface RawCheckboxProps {
   className?: string;
   /**
-   * Vertical alignment of checkbox element
+   * Vertical alignment of checkbox element.
    * @default top
    */
   controlAlignment?: ControlAlignment;
@@ -18,7 +18,7 @@ export interface RawCheckboxProps {
    */
   errorSeverity?: 'warning' | 'critical';
   /**
-   * Call out element that needs attention
+   * Call out element that needs attention.
    * @default false
    */
   hasError?: boolean;
@@ -29,11 +29,11 @@ export interface RawCheckboxProps {
   label: React.ReactNode;
   labelClassName?: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement> | (() => void);
-  variant?: 'plain' | 'pill';
+  variant?: 'checkbox' | 'pill' | 'toggle-switch';
 }
 
 function RawCheckbox({
-  variant = 'plain',
+  variant = 'checkbox',
   className,
   controlAlignment = 'top',
   errorSeverity = 'warning',
@@ -63,7 +63,9 @@ function RawCheckbox({
         className={classNames(
           labelClassName,
           styles.label,
+          (variant === 'checkbox' || variant === 'pill') && styles.checkbox,
           variant === 'pill' && styles.pill,
+          variant === 'toggle-switch' && styles.toggleSwitch,
           controlAlignment === 'center' && styles.controlAlignCenter,
         )}
         htmlFor={id}

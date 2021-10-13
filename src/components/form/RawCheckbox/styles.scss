@@ -9,13 +9,20 @@
 
 .label {
   @include halo-element-base;
-  @include input-label--checkbox;
-
-  &.pill {
-    @include input-label--pill;
-  }
 
   &.controlAlignCenter {
     @include input-control--center;
   }
+}
+
+.checkbox {
+  @include input-label--checkbox;
+}
+
+.pill {
+  @include input-label--pill;
+}
+
+.toggleSwitch {
+  @include input-label--toggle-switch--left;
 }
