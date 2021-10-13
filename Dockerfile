@@ -58,7 +58,7 @@ RUN yarn build
 ##### TEST
 #####
 
-FROM node:14.17.5-alpine AS test
+FROM base AS test
 
 WORKDIR /app/
 
@@ -72,27 +72,10 @@ ENV GIT_BRANCH ''
 ARG GIT_COMMIT_MESSAGE
 ENV GIT_COMMIT_MESSAGE ''
 
-# from base
-### test configs
-COPY --from=base jest.config.js ./
-COPY --from=base stylelint.config.js ./
-COPY --from=base tslint.json ./
-COPY --from=base .prettierrc.js ./
-COPY --from=base .sassrc.js ./
-COPY --from=base .scss-lint.yml ./
-COPY --from=base test ./test
-
-### deps
-COPY --from=base /app/package.json ./
-COPY --from=base /app/yarn.lock ./
-COPY --from=base /app/.yarnrc ./
-COPY --from=base /app/node_modules ./node_modules
-
-
 # from build
 COPY --from=build /app/tsconfig.json ./
 COPY --from=build /app/tsconfig.test.json ./
 COPY --from=build /app/src ./src
 COPY --from=build /app/scss ./scss
 
-CMD yarn test:ci
+RUN yarn test:ci
