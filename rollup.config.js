@@ -81,7 +81,9 @@ export default {
         ],
       ],
     }),
-    typescript(),
+    typescript({
+      outputToFilesystem: true,
+    }),
     replace({
       exclude: 'node_modules/**',
       preventAssignment: true,
