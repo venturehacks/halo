@@ -20,6 +20,7 @@
     "build": "yarn build:node",
     "build:node": "tsc && rollup -c rollup.config.babel.js",
     "build:gatsby": "gatsby build",
+    "build:size-limit": "yarn prepublishOnly && yarn build",
     "changelog": "auto-changelog --commit-limit false --template ./tools/changelog.compact.hbs",
     "dev": "gatsby develop",
     "serve": "gatsby serve",
