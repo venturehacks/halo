@@ -19,7 +19,7 @@
     "prepublish:prepare": "yarn prepublish:duplicate-package && yarn prepublish:module-package && yarn prepublish:override-root-package",
     "clean": "rm -rf ./dist/* && rm -rf ./.rpt2_cache && docz clean && gatsby clean",
     "build": "yarn build:node",
-    "build:node": "tsc && rollup -c rollup.config.babel.js",
+    "build:node": "tsc && rollup -c rollup.config.js",
     "build:gatsby": "gatsby build",
     "install:module-only": "yarn prepublishOnly && cat package.json && yarn install",
     "changelog": "auto-changelog --commit-limit false --template ./tools/changelog.compact.hbs",
