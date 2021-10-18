@@ -2,10 +2,20 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [0.12.0](https://github.com/venturehacks/halo/compare/0.11.0...0.12.0)
+
+- [LEV-911] Merge ToggleSwitch into Checkbox [`#96`](https://github.com/venturehacks/halo/pull/96)
+- [LEV-912] Faster Build via reusable Docker layers [`#93`](https://github.com/venturehacks/halo/pull/93)
+- [LEV-919] Rollup package/plugin family upgrade [`#94`](https://github.com/venturehacks/halo/pull/94)
+- [LEV-900] Consistent Prop table location, detail, package maintenance [`#92`](https://github.com/venturehacks/halo/pull/92)
+
 #### [0.11.0](https://github.com/venturehacks/halo/compare/0.10.0...0.11.0)
+
+> 7 October 2021
 
 - [LEV-815 LEV-899] Address Halo Github Issues that do not require Design department support [`#91`](https://github.com/venturehacks/halo/pull/91)
 - Port docz-theme-extended from Talent Docs [`#90`](https://github.com/venturehacks/halo/pull/90)
+- Release 0.11.0 [`b809622`](https://github.com/venturehacks/halo/commit/b8096228be0fdb3aa01fa2a7886794ddbf8576d5)
 
 #### [0.10.0](https://github.com/venturehacks/halo/compare/0.9.12...0.10.0)
 
