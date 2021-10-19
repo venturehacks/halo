@@ -1,6 +1,116 @@
 {
   "name": "@halo/docs",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT"
+  "private": true,
+  "displayName": "Halo Documentation Site",
+  "description": "Gatsby documentation site for Halo design system.",
+  "author": "Drew Lustro <drew@angel.co>",
+  "license": "UNLICENSED",
+  "main": "public/index.html",
+  "scripts": {
+    "clean": "docz clean && gatsby clean",
+    "build": "gatsby build",
+    "dev": "gatsby develop",
+    "serve": "gatsby serve",
+    "prettier:other:write": "prettier --write '**/*.{md,markdown}'",
+    "prettier:other": "prettier '**/*.{md,markdown}' --list-different",
+    "prettier:scripts:write": "prettier --write '**/*.{js,jsx,ts,tsx}'",
+    "prettier:scripts": "prettier '**/*.{js,jsx,ts,tsx}' --list-different",
+    "prettier:styles:write": "stylelint '**/*.scss' --fix && prettier --write '**/*.{css,scss}'",
+    "prettier:styles": "stylelint '**/*.scss' && prettier '**/*.{css,scss}' --list-different",
+    "prettier:write": "yarn run prettier:scripts:write && yarn run prettier:styles:write && yarn run prettier:other:write",
+    "prettier": "yarn run prettier:scripts && yarn run prettier:styles && yarn run prettier:other",
+    "eslint": "eslint '**/*.ts*' --format codeframe",
+    "eslint:fix": "eslint '**/*.ts*' --format codeframe --fix",
+    "tslint:fix": "tslint --fix --project . -t grouped",
+    "tslint:vscode": "tslint --project . -t vscode",
+    "tslint": "tslint --project . -t grouped",
+    "typesync": "typesync"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/venturehacks/halo.git"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.0",
+    "@babel/core": "^7.2.0",
+    "@babel/node": "^7.2.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.7.5",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/preset-react": "^7.0.0",
+    "@emotion/core": "^10.0.14",
+    "@emotion/styled": "^10.0.14",
+    "@types/webpack": "4.39.8",
+    "@types/webpack-merge": "^4.1.5",
+    "babel-preset-gatsby": "^0.2.29",
+    "docz": "next",
+    "gatsby": "^2.19.18",
+    "gatsby-alias-imports": "^1.0.4",
+    "gatsby-plugin-netlify": "^2.1.32",
+    "gatsby-plugin-offline": "^3.0.35",
+    "gatsby-plugin-sass": "^2.1.28",
+    "gatsby-plugin-sharp": "^2.6.19",
+    "gatsby-plugin-typescript": "^2.1.27",
+    "gatsby-remark-vscode": "^2.0.2",
+    "gatsby-theme-docz": "2.3.3-alpha.0",
+    "gatsby-transformer-sharp": "^2.3.14",
+    "webpack": "4.28.4",
+    "webpack-merge": "^4.2.1"
+  },
+  "dependencies": {
+    "@tippy.js/react": "^2.2.3",
+    "camelcase": "^5.3.1",
+    "react-spinners": "^0.6.1"
+  },
+  "peerDependencies": {
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.11",
+    "react": ">= 17.0.0",
+    "react-dom": ">= 17.0.0",
+    "react-modal": "^3.11.1"
+  },
+  "resolutions": {
+    "get-caller-file": "1.0.3",
+    "node-sass": "4.14.1",
+    "**/node-sass": "4.14.1",
+    "chokidar": "3.4.2",
+    "**/chokidar": "3.4.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "**/*.{js,jsx,graphql,md,markdown}": [
+      "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore --write",
+      "git add"
+    ],
+    "**/!(*scss.d).{ts,tsx}": [
+      "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore --write",
+      "tslint --fix",
+      "git add"
+    ],
+    "**/*.{css,scss}": [
+      "prettier --config ./.prettierrc.js --ignore-path ./.prettierignore --write",
+      "stylelint --fix",
+      "git add"
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 Chrome major versions",
+    "last 2 Firefox major versions",
+    "last 2 Edge major versions",
+    "last 2 Safari major versions",
+    "ie 11",
+    "last 3 Android major versions",
+    "last 3 ChromeAndroid major versions",
+    "last 2 iOS major versions"
+  ]
 }
