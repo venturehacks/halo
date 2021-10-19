@@ -48,7 +48,10 @@
           "**/public/**/*",
         ]
       }
-    ]
+    ],
+    "typeRoots": [
+      "node_modules/@types",
+    ],
   },
   "include": [
     ".eslintrc.js",
