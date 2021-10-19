@@ -19,6 +19,13 @@
     "url": "https://github.com/venturehacks/halo.git"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.175",
+    "@types/prop-types": "^15.7.4",
+    "@types/react": "17.0.30",
+    "@types/react-dom": "17.0.9",
+    "@types/react-modal": "^3.13.1",
+    "@types/webpack": "5.28.0",
+    "@types/webpack-merge": "^5.0.0",
     "babel-preset-gatsby": "^0.2.29",
     "docz": "next",
     "gatsby": "^2.19.18",

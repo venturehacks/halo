@@ -122,7 +122,7 @@ function LabelRaw({
 }
 
 function hasCheckboxOrRadio(children: React.ReactNode) {
-  return React.Children.toArray<React.ReactNode>(children).some(
+  return React.Children.toArray(children).some(
     (child: any) => {
       const title = child?.type?.displayName || child?.type?.title;
 

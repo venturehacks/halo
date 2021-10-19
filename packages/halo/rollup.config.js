@@ -55,7 +55,7 @@ export default {
     builtins(),
     resolve({
       customResolveOptions: {
-        moduleDirectories: ['node_modules'],
+        moduleDirectories: ['node_modules', '../../node_modules'],
       },
       dedupe: ['react', 'react-dom', 'lodash'],
       mainFields: ['module', 'main'],
@@ -85,13 +85,13 @@ export default {
       outputToFilesystem: true,
     }),
     replace({
-      exclude: 'node_modules/**',
+      exclude: ['node_modules/**', '../../node_modules/**'],
       preventAssignment: true,
       'process.env.NODE_ENV': JSON.stringify('development'),
     }),
     commonjs({
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      include: 'node_modules/**',
+      include: ['node_modules/**', '../../node_modules/**'],
     }),
     filesize(),
   ],

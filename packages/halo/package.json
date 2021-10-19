@@ -13,7 +13,7 @@
     "clean": "rm -rf ./dist/*",
     "build": "tsc && rollup -c rollup.config.js",
     "size": "size-limit",
-    "test": "NODE_ENV=test BABEL_ENV=test jest --config jest.config.js --maxWorkers=16",
+    "test": "NODE_ENV=test BABEL_ENV=test jest --config jest.config.js --rootDir ../.. --maxWorkers=16",
     "test:dev": "yarn test:clean && NODE_ENV=test BABEL_ENV=test jest --forceExit --detectOpenHandles --config jest.dev.js",
     "test:dev:watch": "yarn test:dev --watch --onlyChanged",
     "test:snapshot-update": "yarn test:dev --updateSnapshot",
@@ -62,5 +62,11 @@
     "last 3 Android major versions",
     "last 3 ChromeAndroid major versions",
     "last 2 iOS major versions"
-  ]
+  ],
+  "devDependencies": {
+    "@types/lodash": "^4.14.175",
+    "@types/react": "17.0.30",
+    "@types/react-dom": "17.0.9",
+    "@types/react-modal": "^3.13.1"
+  }
 }

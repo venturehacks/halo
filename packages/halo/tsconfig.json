@@ -42,7 +42,8 @@
     },
     "typeRoots": [
       "./node_modules/@types",
-      "./src/types"
+      "./src/types",
+      "../../node_modules/@types",
     ],
     "lib": [
       "dom",
@@ -54,6 +55,7 @@
         "configFile": "./tslint.json",
         "exclude": [
           "node_modules/**/*",
+          "../../node_modules/**/*",
           ".next/**/*",
           ".docz/**/*",
           ".cache/**/*",
@@ -69,6 +71,7 @@
   ],
   "exclude": [
     "node_modules/**",
+    "../../node_modules/**/*",
     "dist/**",
     ".docz/**",
     ".cache/**",
