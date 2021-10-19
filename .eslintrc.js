@@ -1,13 +1,27 @@
+/* eslint-disable sort-keys-fix/sort-keys-fix */
 module.exports = {
   extends: ['angellist'],
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: [
+      './tsconfig.base.json',
       './packages/halo/tsconfig.json',
       './packages/halo/tsconfig.test.json',
     ],
   },
   rules: {
+    '@typescript-eslint/tslint/config': [
+      'error',
+      {
+        rules: {
+          'no-implicit-dependencies': [
+            true,
+            'dev',
+            ['~', 'enzyme', '@wojtekmaj/enzyme-adapter-react-17'],
+          ],
+        },
+      },
+    ],
     'import/extensions': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/array-type': [

@@ -1,40 +1,10 @@
 {
+  "extends": "../../tsconfig.base.json",
   "compileOnSave": false,
   "compilerOptions": {
-    "target": "es2015",
-    "module": "esnext",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "esModuleInterop": true,
-    "allowSyntheticDefaultImports": true,
-    "allowJs": false,
-    "strict": true,
-    "noImplicitAny": false,
-    "noImplicitThis": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "removeComments": false,
-    "preserveConstEnums": true,
-    "inlineSourceMap": true,
-    "skipLibCheck": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "strictNullChecks": false,
-    "strictFunctionTypes": true,
-    "strictPropertyInitialization": false,
-    "alwaysStrict": true,
-    "noImplicitReturns": false,
-    "noFallthroughCasesInSwitch": false,
-    "traceResolution": false,
-    "listEmittedFiles": false,
-    "listFiles": false,
-    "pretty": true,
-    "incremental": true,
-    "declaration": true,
     "declarationDir": "./dist/typings/",
     "rootDir": "./src",
     "outDir": "./dist",
-    "jsx": "react",
     "paths": {
       "~/*": [
         "./src/*"
@@ -43,39 +13,11 @@
     "typeRoots": [
       "./node_modules/@types",
       "./src/types",
-      "../../node_modules/@types",
     ],
-    "lib": [
-      "dom",
-      "es2015"
-    ],
-    "plugins": [
-      {
-        "name": "typescript-tslint-plugin",
-        "configFile": "./tslint.json",
-        "exclude": [
-          "node_modules/**/*",
-          "../../node_modules/**/*",
-          ".next/**/*",
-          ".docz/**/*",
-          ".cache/**/*",
-          "public/**",
-        ]
-      }
-    ]
   },
   "include": [
     "*.js",
     "src/**/*.tsx",
     "src/**/*.ts",
   ],
-  "exclude": [
-    "node_modules/**",
-    "../../node_modules/**/*",
-    "dist/**",
-    ".docz/**",
-    ".cache/**",
-    "public/**",
-    "src/gatsby-theme-docz/**/*",
-  ]
 }
