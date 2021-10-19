@@ -1,7 +1,10 @@
 module.exports = {
   extends: ['angellist'],
   parserOptions: {
-    project: ['./tsconfig.json', './tsconfig.test.json'],
+    project: [
+      './packages/halo/tsconfig.json',
+      './packages/halo/tsconfig.test.json',
+    ],
   },
   rules: {
     'import/extensions': 'off',
