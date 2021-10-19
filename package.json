@@ -1,6 +1,7 @@
 {
-  "name": "halo",
+  "name": "halo-monorepo",
   "version": "0.12.0",
+  "private": true,
   "displayName": "Halo Design System",
   "description": "Next-generation design system for AngelList and beyond.",
   "author": "Drew Lustro <drew@angel.co>",
@@ -9,6 +10,9 @@
   "module": "dist/halo.module.js",
   "style": "dist/halo.css",
   "types": "dist/typings/index.d.ts",
+  "workspaces": [
+    "packages/*"
+  ],
   "scripts": {
     "prepublishOnly": "yarn run prepublish:clean && yarn run prepublish:duplicate-package && yarn run prepublish:slim-package && yarn run prepublish:override-root-package",
     "prepublish:clean": "rimraf package.original.json package.slim.json",

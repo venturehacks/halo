@@ -1,0 +1,6 @@
+{
+  "name": "halo",
+  "version": "0.12.0",
+  "main": "index.js",
+  "license": "MIT"
+}
