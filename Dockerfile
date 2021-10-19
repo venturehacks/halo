@@ -37,7 +37,7 @@ ARG GIT_COMMIT_MESSAGE
 ENV GIT_COMMIT_MESSAGE ''
 
 # configs
-COPY tsconfig.json tsconfig.test.json rollup.config.babel.js babel.config.js jest.config.js .eslintrc.js stylelint.config.js tslint.json .prettierrc.js .prettierignore .sassrc.js .scss-lint.yml ./
+COPY tsconfig.json tsconfig.test.json rollup.config.babel.js babel.config.js jest.config.js .eslintrc.js stylelint.config.js tslint.json .prettierrc.js .prettierignore .sassrc.js ./
 COPY test ./test
 
 # from base

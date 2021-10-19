@@ -42,7 +42,6 @@ src
 .gitignore
 .ruby-version
 .sass-cache
-.scss-lint.yml
 _site
 bin/
 halo.gemspec
