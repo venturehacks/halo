@@ -22,7 +22,8 @@
       "dev",
       [
         "~",
-        "enzyme"
+        "enzyme",
+        "@wojtekmaj/enzyme-adapter-react-17"
       ]
     ],
     "no-empty": false,
