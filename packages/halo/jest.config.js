@@ -74,7 +74,7 @@ module.exports = {
       ],
       testPathIgnorePatterns,
       transform: {
-        '^.+\\.(t|j)sx?$': 'babel-jest',
+        '^.+\\.(t|j)sx?$': ['babel-jest', { rootMode: 'upward' }],
       },
     },
     {
@@ -89,7 +89,7 @@ module.exports = {
       testPathIgnorePatterns,
       testRegex: '(/__tests__/.*|(\\.|/))(test|spec)\\.(t|j)sx?$',
       transform: {
-        '^.+\\.(t|j)sx?$': 'babel-jest',
+        '^.+\\.(t|j)sx?$': ['babel-jest', { rootMode: 'upward' }],
       },
     },
   ].filter(Boolean),
