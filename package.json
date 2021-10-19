@@ -17,7 +17,7 @@
     "dev": "yarn workspace docs dev",
     "test": "yarn workspace halo test",
     "test:ci": "yarn workspace halo test:ci",
-    "prettier": "stylelint '**/*.scss' && prettier --write '**/*.{ts,tsx,js,jsx,css,scss,md,mdx,markdown}'",
+    "prettier:fix": "stylelint '**/*.scss' && prettier --write '**/*.{ts,tsx,js,jsx,css,scss,md,markdown}'",
     "lint": "tslint -t grouped && eslint '**/*.ts*' --format codeframe",
     "lint:fix": "tslint --fix -t grouped && eslint '**/*.ts*' --format codeframe --fix",
     "release:major": "release-it major --disable-metrics",
@@ -165,24 +165,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "lint-staged --relative"
     }
-  },
-  "lint-staged": {
-    "**/*.{js,jsx,graphql,md,markdown}": [
-      "prettier --config ./.prettierrc.js --write",
-      "git add"
-    ],
-    "**/!(*scss.d).{ts,tsx}": [
-      "prettier --config ./.prettierrc.js --ignore-path",
-      "tslint --fix",
-      "git add"
-    ],
-    "**/*.{css,scss}": [
-      "prettier --config ./.prettierrc.js --ignore-path",
-      "stylelint --fix",
-      "git add"
-    ]
   },
   "browserslist": [
     "> 1%",

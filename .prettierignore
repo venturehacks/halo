@@ -1,8 +1,8 @@
-**/.cache
-**/.docz
-**/.rollup.cache
-**/.vscode
-**/CHANGELOG.md
-**/dist
-**/node_modules
-**/public
+**/.cache/**/*
+**/.docz/**/*
+**/.rollup.cache/**/*
+**/.vscode/**/*
+**/CHANGELOG.md/**/*
+**/dist/**/*
+**/node_modules/**/*
+**/public/**/*
