@@ -2,11 +2,11 @@
   "extends": "../halo/tsconfig.json",
   "compilerOptions": {
     "declarationDir": "../halo/dist/typings",
-    "rootDir": "../halo/src",
+    "rootDir": "./src",
     "outDir": "../halo/dist",
     "paths": {
       "~/*": [
-        "src/*"
+        "./src/*"
       ]
     },
     "typeRoots": [

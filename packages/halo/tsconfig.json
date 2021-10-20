@@ -2,11 +2,11 @@
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "declarationDir": "dist/typings",
-    "rootDir": "src",
-    "outDir": "dist",
+    "rootDir": "./src",
+    "outDir": "./dist",
     "paths": {
       "~/*": [
-        "src/*"
+        "./src/*"
       ]
     },
     "typeRoots": [
