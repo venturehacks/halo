@@ -2,12 +2,21 @@
   "folders": [
     {
       "name": "Halo",
+      "path": "./packages/halo"
+    },
+    {
+      "name": "Monorepo Root 🌳",
       "path": "."
     },
     {
-      "name": "Distribution",
-      "path": "./dist"
-    }
+      "name": "Build 📦",
+      "path": "./packages/halo/dist"
+    },
+    {
+      "name": "Documentation Theme 📖",
+      "path": "packages/docs/src/gatsby-theme-docz"
+    },
+
   ],
   "settings": {
     "workbench.colorCustomizations": {
@@ -46,34 +55,51 @@
     "search.useIgnoreFiles": true,
     "search.useGlobalIgnoreFiles": true,
     "search.exclude": {
-      "**/node_modules": true,
-      "**/.next": true,
-      "**/.tmp": true,
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
       "**/.cache": true,
-      "**/.sass-cache": true,
-      "*.graphql": true,
+      "**/.docz": true,
+      "**/.DS_Store": true,
+      "**/.git": true,
+      "**/.rollup.cache": true,
+      "**/dist": true,
+      "**/node_modules": true,
+      "**/public": true,
+      "**/.yarn": true,
       "*.lock": true,
-      "styles.scss.d.ts": true,
-      "*.log": true
+      "*.log": true,
+      "packages/docs/src": true,
+      "packages/halo/*": true,
     },
     "files.watcherExclude": {
       "**/.git/objects/**": true,
       "**/.git/subtree-cache/**": true,
-      "**/node_modules/*/**": true,
-      "**/.next": true,
-      "**/.tmp": true,
       "**/.cache": true,
-      "**/.sass-cache": true
+      "**/.docz": true,
+      "**/.DS_Store": true,
+      "**/.git": true,
+      "**/.rollup.cache": true,
+      "**/.yarn": true,
+      "**/dist": true,
+      "**/node_modules": true,
+      "**/public": true,
+      "packages/docs/src": true,
+      "packages/halo/*": true,
     },
     "files.exclude": {
-      "**/node_modules": true,
-      "**/bower_components": true,
-      "**/.git": true,
-      "**/.svn": true,
-      "**/.hg": true,
-      "**/CVS": true,
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "**/.cache": true,
+      "**/.docz": true,
       "**/.DS_Store": true,
-      "**/dist": true
+      "**/.git": true,
+      "**/.rollup.cache": true,
+      "**/.yarn": true,
+      "**/dist": true,
+      "**/node_modules": true,
+      "**/public": true,
+      "packages/docs/src": true,
+      "packages/halo/*": true,
     },
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true,
