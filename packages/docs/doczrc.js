@@ -4,13 +4,13 @@ import merge from 'webpack-merge';
 export default {
   debug: true,
   notUseSpecifiers: true,
-  src: path.join(__dirname, 'src'),
+  src: '../halo/src',
   title: 'Halo Design System',
   typescript: true,
   repository: 'https://github.com/venturehacks/halo',
   ignore: [
     'node_modules',
-    'node_modules/**/*',
+    // '**/node_modules/**/*',
     'server',
     'pages',
     '.next',
@@ -37,13 +37,14 @@ export default {
     },
   },
   filterComponents: files => {
+    console.log('Found files:', files);
     const filteredFiles = files.filter(filepath => {
       const isTest = /\.(test|spec)\.(js|jsx|ts|tsx)$/.test(filepath);
       if (isTest) {
         return false;
       }
 
-      const isComponent = /^src\/components\/(core|form|structure)+\/.*\/*\.(ts|tsx)$/.test(
+      const isComponent = /^\.\.\/halo\/src\/components\/(core|form|structure)+\/.*\/*\.(ts|tsx)$/.test(
         filepath,
       );
 
