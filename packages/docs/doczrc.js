@@ -7,8 +7,19 @@ export default {
   notUseSpecifiers: true,
   debug: true,
   src: '../halo',
-  // gatsbyRoot: '../halo',
-  ignore: ['node_modules', 'server', 'pages', '.next', '.cache', 'coverage'],
+  // root: '../../', // usually the pwd (packages/docs)
+  // gatsbyRoot: '../halo', // docz will use this for filesystem import instead of `root`
+  ignore: [
+    'node_modules',
+    'server',
+    'pages',
+    '.next',
+    '.cache',
+    'coverage',
+    '*.js',
+    /node_modules/,
+    /dist/,
+  ],
   docgenConfig: {
     propFilter: props => {
       // NOTE(drew): hrm, I cannot seem to get this output in console

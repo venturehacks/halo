@@ -2,21 +2,6 @@ const path = require('path');
 const rootDirectory = path.resolve(__dirname, '../..');
 const haloDirectory = path.resolve(rootDirectory, 'packages/halo');
 
-const sassIncludePaths = [
-  'scss',
-  'node_modules',
-  path.resolve(haloDirectory, 'scss'),
-  path.resolve(haloDirectory, 'node_modules'),
-  path.resolve(rootDirectory, 'node_modules'),
-  path.resolve(__dirname, 'node_modules'),
-];
-
-console.log({
-  rootDirectory,
-  haloDirectory,
-  sassIncludePaths,
-});
-
 module.exports = {
   plugins: [
     {
@@ -39,6 +24,9 @@ module.exports = {
           // '~/lib': path.join(__dirname, 'src', 'lib'),
           '~/components': path.join(haloDirectory, 'src', 'components'),
           '~/lib': path.join(haloDirectory, 'src', 'lib'),
+          // NOTE(drew): unsure why this is necessary, but for some reason
+          // gatsby cannot find 'halo' scss source via includePaths
+          halo: path.join(haloDirectory, 'scss', '_halo.scss'),
         },
       },
     },
@@ -48,7 +36,14 @@ module.exports = {
         sourceMap: true,
         sassRuleModulesTest: /\.scss$/,
         sassRuleTest: /\.global\.scss$/,
-        includePaths: sassIncludePaths,
+        includePaths: [
+          'scss',
+          'node_modules',
+          path.resolve(haloDirectory, 'scss'),
+          path.resolve(haloDirectory, 'node_modules'),
+          path.resolve(rootDirectory, 'node_modules'),
+          path.resolve(__dirname, 'node_modules'),
+        ],
       },
     },
     {

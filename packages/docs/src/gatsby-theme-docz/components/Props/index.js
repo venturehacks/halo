@@ -85,7 +85,7 @@ export const Prop = ({ propName, prop, getPropType, isToggle }) => {
 };
 
 export const Props = componentProps => {
-  const { props, table, getPropType, isToggle } = componentProps;
+  const { props, table, getPropType } = componentProps;
   const entries = Object.entries(props);
 
   console.log('PropsTable');
