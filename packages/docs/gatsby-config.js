@@ -1,6 +1,21 @@
 const path = require('path');
 const rootDirectory = path.resolve(__dirname, '../..');
-const haloDirectory = path.join(rootDirectory, 'packages/halo');
+const haloDirectory = path.resolve(rootDirectory, 'packages/halo');
+
+const sassIncludePaths = [
+  'scss',
+  'node_modules',
+  path.resolve(haloDirectory, 'scss'),
+  path.resolve(haloDirectory, 'node_modules'),
+  path.resolve(rootDirectory, 'node_modules'),
+  path.resolve(__dirname, 'node_modules'),
+];
+
+console.log({
+  rootDirectory,
+  haloDirectory,
+  sassIncludePaths,
+});
 
 module.exports = {
   plugins: [
@@ -20,6 +35,8 @@ module.exports = {
       resolve: 'gatsby-alias-imports',
       options: {
         aliases: {
+          // '~/components': path.join(__dirname, 'src', 'components'),
+          // '~/lib': path.join(__dirname, 'src', 'lib'),
           '~/components': path.join(haloDirectory, 'src', 'components'),
           '~/lib': path.join(haloDirectory, 'src', 'lib'),
         },
@@ -31,11 +48,7 @@ module.exports = {
         sourceMap: true,
         sassRuleModulesTest: /\.scss$/,
         sassRuleTest: /\.global\.scss$/,
-        includePaths: [
-          path.join(haloDirectory, 'scss'),
-          path.join(haloDirectory, 'node_modules'),
-          path.join(rootDirectory, 'node_modules'),
-        ],
+        includePaths: sassIncludePaths,
       },
     },
     {

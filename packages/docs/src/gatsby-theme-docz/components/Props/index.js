@@ -30,13 +30,13 @@ function stripExcessiveUndefinedOnPropType(propType) {
   return propType.replace('| undefined', '');
 }
 
-function propTypeAcceptsUndefined(propType) {
-  if (!propType) {
-    return false;
-  }
+// function propTypeAcceptsUndefined(propType) {
+//   if (!propType) {
+//     return false;
+//   }
 
-  return propType.indexOf('undefined') !== -1;
-}
+//   return propType.indexOf('undefined') !== -1;
+// }
 
 export const Prop = ({ propName, prop, getPropType, isToggle }) => {
   const [showing, setShowing] = useState(isToggle || false);
@@ -84,8 +84,15 @@ export const Prop = ({ propName, prop, getPropType, isToggle }) => {
   );
 };
 
-export const Props = ({ props, table, getPropType, isToggle }) => {
+export const Props = componentProps => {
+  const { props, table, getPropType, isToggle } = componentProps;
   const entries = Object.entries(props);
+
+  console.log('PropsTable');
+  console.log('componentProps', componentProps);
+  console.log('filemeta', componentProps.of.__filemeta);
+  console.log('props', props);
+  console.log('entries', entries);
 
   return (
     <Container>
