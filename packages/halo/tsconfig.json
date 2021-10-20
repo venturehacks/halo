@@ -1,13 +1,12 @@
 {
   "extends": "../../tsconfig.base.json",
-  "compileOnSave": false,
   "compilerOptions": {
-    "declarationDir": "./dist/typings/",
-    "rootDir": "./src",
-    "outDir": "./dist",
+    "declarationDir": "dist/typings",
+    "rootDir": "src",
+    "outDir": "dist",
     "paths": {
       "~/*": [
-        "./src/*"
+        "src/*"
       ]
     },
     "typeRoots": [

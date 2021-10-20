@@ -1,1 +1,22 @@
-../halo/tsconfig.json
+{
+  "extends": "../halo/tsconfig.json",
+  "compilerOptions": {
+    "declarationDir": "../halo/dist/typings",
+    "rootDir": "../halo/src",
+    "outDir": "../halo/dist",
+    "paths": {
+      "~/*": [
+        "src/*"
+      ]
+    },
+    "typeRoots": [
+      "../../node_modules/@types",
+      "../halo/node_modules/@types",
+      "../halo/src/types",
+    ],
+  },
+  "include": [
+    "src/**/*.tsx",
+    "src/**/*.ts",
+  ],
+}
