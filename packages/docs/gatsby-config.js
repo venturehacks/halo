@@ -22,11 +22,6 @@ module.exports = {
         aliases: {
           '~/components': path.join(haloDirectory, 'src', 'components'),
           '~/lib': path.join(haloDirectory, 'src', 'lib'),
-          'gatsby-theme-docz': path.join(
-            haloDirectory,
-            'src',
-            'gatsby-theme-docz',
-          ),
         },
       },
     },

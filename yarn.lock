@@ -4175,6 +4175,28 @@
   dependencies:
     defer-to-connect "^2.0.0"
 
+"@theme-ui/css@0.11.3":
+  version "0.11.3"
+  resolved "https://registry.npmjs.org/@theme-ui/css/-/css-0.11.3.tgz#9962db78b9d60a96b2f6497f858e6baa7aa0f5c5"
+  integrity sha512-b2vRZEc6ZBMYCVFqvSSrWdVbKgSJHOOTMow1czApJjrmZBygkG9DN0/1hgO9spDkmfp/tmRmBzrTlgFlE6pybA==
+  dependencies:
+    "@emotion/react" "^11.1.1"
+    csstype "^3.0.5"
+
+"@theme-ui/typography@^0.11.3":
+  version "0.11.3"
+  resolved "https://registry.npmjs.org/@theme-ui/typography/-/typography-0.11.3.tgz#a3888261cbe8940d02e51eff4d65fa8ef468ca4c"
+  integrity sha512-9Gb1SaB3vTlrl6QISS8/rwABGGDZEWz7343LE4nFc3Zzea6nwz0hkR/ql1j6x6n+D5X5pMuGjSP0QBzklbyf8w==
+  dependencies:
+    "@theme-ui/css" "0.11.3"
+    "@types/compass-vertical-rhythm" "^1.4.1"
+    "@types/modularscale" "^2.0.0"
+    "@types/typography" "^0.16.3"
+    compass-vertical-rhythm "^1.4.5"
+    csstype "^3.0.5"
+    modularscale "^2.0.1"
+    type-fest "^1.0.1"
+
 "@theme-ui/typography@^0.2.5":
   version "0.2.46"
   resolved "https://registry.yarnpkg.com/@theme-ui/typography/-/typography-0.2.46.tgz#24e20989450a35eb715967b99cbfd8fa4291ba17"
@@ -4307,6 +4329,11 @@
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/@types/color-name/-/color-name-1.1.1.tgz#1c1261bbeaa10a8055bbc5d8ab84b7b2afc846a0"
   integrity sha512-rr+OQyAjxze7GgWrSaJwydHStIhHq2lvY3BOC2Mj7KnzI7XK0Uw1TOOdI9lDoajEbSWLiYgoo4f1R51erQfhPQ==
+
+"@types/compass-vertical-rhythm@^1.4.1":
+  version "1.4.2"
+  resolved "https://registry.npmjs.org/@types/compass-vertical-rhythm/-/compass-vertical-rhythm-1.4.2.tgz#3282639f12a67bb5cb7426a922c9549b403e32af"
+  integrity sha512-72lOTOvy785zdTcQNtr/jM69gOyaPGdDdyKBSQMPyxFPpZJVxPMqFOC8b1pL2eMauHVe8UNhG4zhwSURFDLTuA==
 
 "@types/concurrently@^4.1.0":
   version "4.1.0"
@@ -4524,6 +4551,11 @@
   resolved "https://registry.yarnpkg.com/@types/mkdirp/-/mkdirp-0.3.29.tgz#7f2ad7ec55f914482fc9b1ec4bb1ae6028d46066"
   integrity sha1-fyrX7FX5FEgvybHsS7GuYCjUYGY=
 
+"@types/modularscale@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.npmjs.org/@types/modularscale/-/modularscale-2.0.0.tgz#3514f4cf718489a495b6c3a884d70ff581b72b8c"
+  integrity sha512-YxUTFc4P4+uM3QTuWmiqPSR0Gl3hGDBvl+0o/zTJrQTw2OafuIzT4z+aS3myv3J+GdJD6SbCZHUfakSvCyxr2Q==
+
 "@types/node-fetch@2":
   version "2.5.12"
   resolved "https://registry.npmjs.org/@types/node-fetch/-/node-fetch-2.5.12.tgz#8a6f779b1d4e60b7a57fb6fd48d84fb545b9cc66"
@@ -4736,6 +4768,11 @@
   version "0.0.32"
   resolved "https://registry.yarnpkg.com/@types/tmp/-/tmp-0.0.32.tgz#0d3cb31022f8427ea58c008af32b80da126ca4e3"
   integrity sha1-DTyzECL4Qn6ljACK8yuA2hJspOM=
+
+"@types/typography@^0.16.3":
+  version "0.16.4"
+  resolved "https://registry.npmjs.org/@types/typography/-/typography-0.16.4.tgz#ef7e46c6143c869ea78368605e663b3be0a99046"
+  integrity sha512-/dGcnJhnkPVlP1A5wDhRhvfvyqJ9yePHyNKRjcR701vMGjDsTnIN3C+l33blkwijtEoQgN8g1CZhbkks1DyBfw==
 
 "@types/unist@*", "@types/unist@^2.0.0", "@types/unist@^2.0.2":
   version "2.0.3"
@@ -8954,7 +8991,7 @@ csstype@^2.2.0, csstype@^2.5.7:
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-2.6.4.tgz#d585a6062096e324e7187f80e04f92bd0f00e37f"
   integrity sha512-lAJUJP3M6HxFXbqtGRc0iZrdyeN+WzOWeY0q/VnFzI+kqVrYIzC7bWlKqCW7oCIdzoPkvfp82EVvrTlQ8zsWQg==
 
-csstype@^3.0.2:
+csstype@^3.0.2, csstype@^3.0.5:
   version "3.0.9"
   resolved "https://registry.npmjs.org/csstype/-/csstype-3.0.9.tgz#6410af31b26bd0520933d02cbc64fce9ce3fbf0b"
   integrity sha512-rpw6JPxK6Rfg1zLOYCSwle2GFOOsnjmDYDaBwEcwoOg4qlsIVCN789VkBZDJAGi4T07gI4YSutR43t9Zz4Lzuw==
@@ -24413,6 +24450,11 @@ type-fest@^0.8.0, type-fest@^0.8.1:
   resolved "https://registry.yarnpkg.com/type-fest/-/type-fest-0.8.1.tgz#09e249ebde851d3b1e48d27c105444667f17b83d"
   integrity sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
 
+type-fest@^1.0.1:
+  version "1.4.0"
+  resolved "https://registry.npmjs.org/type-fest/-/type-fest-1.4.0.tgz#e9fb813fe3bf1744ec359d55d1affefa76f14be1"
+  integrity sha512-yGSza74xk0UG8k+pLh5oeoYirvIiWo5t0/o3zHHAO2tRDiZcxWP7fywNlXhqb6/r6sWvwi+RsyQMWhVLe4BVuA==
+
 type-is@~1.6.17, type-is@~1.6.18:
   version "1.6.18"
   resolved "https://registry.yarnpkg.com/type-is/-/type-is-1.6.18.tgz#4e552cd05df09467dcbc4ef739de89f2cf37c131"
@@ -24470,6 +24512,13 @@ typography-breakpoint-constants@^0.16.19:
   version "0.16.19"
   resolved "https://registry.yarnpkg.com/typography-breakpoint-constants/-/typography-breakpoint-constants-0.16.19.tgz#e0e89147749562cbb46ce76c47ff0f73372765e7"
   integrity sha512-vXjfV9hwAXIOf5+U5GN137ahBkK+sj1TJu/5ksmP+8XB/D80lmGb/m0nKviWaQ3t7HLrK848VGrFS+6E2vcmVg==
+
+typography-theme-github@^0.16.19:
+  version "0.16.19"
+  resolved "https://registry.npmjs.org/typography-theme-github/-/typography-theme-github-0.16.19.tgz#91842d3e0a92ad952adf6350ede0924d574193e8"
+  integrity sha512-kDfFjbeh2JW3buPub1JUA39AIKQrZhMuEeqJo6P+9c9JOEMLUBPvcHGrNd+wtAuZlVehPbqG6bcW6KAANHrsGw==
+  dependencies:
+    gray-percentage "^2.0.0"
 
 typography-theme-moraga@^0.16.19:
   version "0.16.19"
