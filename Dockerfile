@@ -13,18 +13,17 @@ RUN apk add --no-cache git python2 build-base libpng-dev pngquant lcms2-dev bash
   && apk add libimagequant-dev --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main \
   && apk add vips-dev --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
 
-# 📦 packages/halo
-WORKDIR /app/packages/halo/
-COPY packages/halo/package.json packages/halo/yarn.lock ./
-
-# 📦 packages/docs
-# Documentation Site package (noop until we move out of netlify)
-WORKDIR /app/packages/docs/
-COPY packages/docs/package.json packages/docs/yarn.lock ./
-
 # 🌳 monorepo root
 WORKDIR /app/
 COPY package.json yarn.lock .yarnrc ./
+
+# 📦 packages/halo
+COPY packages/halo/package.json ./packages/halo/
+
+# 📦 packages/docs
+# Documentation Site package (noop until we move out of netlify)
+COPY packages/docs/package.json ./packages/docs/
+
 RUN yarn install || yarn install --network-concurrency 1
 
 #####
@@ -55,7 +54,7 @@ WORKDIR /app/packages/halo/
 COPY packages/halo/*.json packages/halo/*.js ./
 COPY packages/halo/test ./test
 # from base
-COPY --from=base /app/packages/halo/package.json /app/packages/halo/yarn.lock /app/packages/halo/.yarnrc ./
+COPY --from=base /app/packages/halo/package.json ./
 COPY --from=base /app/packages/halo/node_modules ./node_modules
 # sources
 COPY packages/halo/src ./src
