@@ -20,10 +20,18 @@
     "prettier:fix": "stylelint '**/*.scss' && prettier --write '**/*.{ts,tsx,js,jsx,css,scss,md,markdown}'",
     "lint": "tslint -t grouped && eslint '**/*.ts*' --format codeframe",
     "lint:fix": "tslint --fix -t grouped && eslint '**/*.ts*' --format codeframe --fix",
-    "release:major": "release-it major --disable-metrics",
-    "release:minor": "release-it minor --disable-metrics",
-    "release:patch": "release-it patch --disable-metrics",
+    "release": "release-it --npm.publishArgs=\"--registry=https://npm.fury.io/angellist/\" --disable-metrics",
+    "release:major": "yarn release major",
+    "release:minor": "yarn release minor",
+    "release:patch": "yarn release patch",
     "typesync": "typesync"
+  },
+  "npm": {
+    "//": "Monorepo root package. Do not publish to npm/gemfury!",
+    "publish": false
+  },
+  "publishConfig": {
+    "registry": "https://npm.fury.io/angellist/"
   },
   "repository": {
     "type": "git",
