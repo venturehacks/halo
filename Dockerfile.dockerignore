@@ -1,6 +1,11 @@
+**/.build
+**/.cache
+**/.docz
+**/.rollup.cache
+**/.sass-cache
+**/*.tsbuildinfo
+**/dist
 **/node_modules
-dist
-public
-.cache
-.docz
-.rollup.cache
+**/public
+**/rollup.config.js
+**/__tests__

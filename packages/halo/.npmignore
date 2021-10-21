@@ -1,14 +1,16 @@
 # caches
 .cache
+.rollup.cache
 *.tsbuildinfo
 
 # test support
+**/__tests__
 test
 
 # configs
 jest.config.js
 jest.dev.js
-rollup.config.babel.js
+rollup.config.js
 tsconfig.json
 tsconfig.test.json
 
