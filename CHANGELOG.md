@@ -2,12 +2,28 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [v0.13.0](https://github.com/venturehacks/halo/compare/v0.13.0...v0.13.0)
+
+- Improved ignore patterns [`0bfd85e`](https://github.com/venturehacks/halo/commit/0bfd85ef0c671723fec19ebe11b55aa8d184b07f)
+- :package: force use of gemfury registry during publish [`1f71aca`](https://github.com/venturehacks/halo/commit/1f71acaf994b273f4a347d041f3d56ecae63e5fb)
+- Update package.json [`a00023a`](https://github.com/venturehacks/halo/commit/a00023a40d4f3818aa6c7f8daa3b7892e40b7c2c)
+
+#### [v0.13.0](https://github.com/venturehacks/halo/compare/0.12.0...v0.13.0)
+
+> 21 October 2021
+
+- [LEV-950] Monorepository Refactor [`#98`](https://github.com/venturehacks/halo/pull/98)
+- symlink yarnrc [`944e3bb`](https://github.com/venturehacks/halo/commit/944e3bb3bc54042182c258edb5ef03483cee209c)
+
 #### [0.12.0](https://github.com/venturehacks/halo/compare/0.11.0...0.12.0)
+
+> 18 October 2021
 
 - [LEV-911] Merge ToggleSwitch into Checkbox [`#96`](https://github.com/venturehacks/halo/pull/96)
 - [LEV-912] Faster Build via reusable Docker layers [`#93`](https://github.com/venturehacks/halo/pull/93)
 - [LEV-919] Rollup package/plugin family upgrade [`#94`](https://github.com/venturehacks/halo/pull/94)
 - [LEV-900] Consistent Prop table location, detail, package maintenance [`#92`](https://github.com/venturehacks/halo/pull/92)
+- Release 0.12.0 [`5d1d1f6`](https://github.com/venturehacks/halo/commit/5d1d1f6b4cdc803c07ff19268f575f6e7e87542a)
 
 #### [0.11.0](https://github.com/venturehacks/halo/compare/0.10.0...0.11.0)
 
