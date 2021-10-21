@@ -30,14 +30,6 @@ function stripExcessiveUndefinedOnPropType(propType) {
   return propType.replace('| undefined', '');
 }
 
-function propTypeAcceptsUndefined(propType) {
-  if (!propType) {
-    return false;
-  }
-
-  return propType.indexOf('undefined') !== -1;
-}
-
 export const Prop = ({ propName, prop, getPropType, isToggle }) => {
   const [showing, setShowing] = useState(isToggle || false);
   if (!prop.type && !prop.flowType) return null;
@@ -84,7 +76,8 @@ export const Prop = ({ propName, prop, getPropType, isToggle }) => {
   );
 };
 
-export const Props = ({ props, table, getPropType, isToggle }) => {
+export const Props = componentProps => {
+  const { props, table, getPropType } = componentProps;
   const entries = Object.entries(props);
 
   return (

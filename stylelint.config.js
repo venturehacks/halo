@@ -20,8 +20,6 @@ module.exports = {
       },
     ],
     'scss/at-rule-no-unknown': true,
-    'scss/double-slash-comment-inline': null,
-    'scss/double-slash-comment-whitespace-inside': 'always',
     'scss/double-slash-comment-empty-line-before': [
       'always',
       {
@@ -29,8 +27,9 @@ module.exports = {
         ignore: ['between-comments', 'stylelint-commands'],
       },
     ],
+    'scss/double-slash-comment-inline': null,
+    'scss/double-slash-comment-whitespace-inside': 'always',
     'selector-attribute-quotes': 'always',
-    'string-quotes': 'single',
     'selector-pseudo-class-no-unknown': [
       true,
       {
@@ -38,5 +37,6 @@ module.exports = {
       },
     ],
     'selector-pseudo-element-colon-notation': 'double',
+    'string-quotes': 'single',
   },
 };

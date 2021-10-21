@@ -122,22 +122,20 @@ function LabelRaw({
 }
 
 function hasCheckboxOrRadio(children: React.ReactNode) {
-  return React.Children.toArray<React.ReactNode>(children).some(
-    (child: any) => {
-      const title = child?.type?.displayName || child?.type?.title;
+  return React.Children.toArray(children).some((child: any) => {
+    const title = child?.type?.displayName || child?.type?.title;
 
-      if (typeof title !== 'string') {
-        return false;
-      }
+    if (typeof title !== 'string') {
+      return false;
+    }
 
-      return (
-        title &&
-        (title.includes('Checkbox') ||
-          title.includes('Radio') ||
-          title.includes('AtsField'))
-      );
-    },
-  );
+    return (
+      title &&
+      (title.includes('Checkbox') ||
+        title.includes('Radio') ||
+        title.includes('AtsField'))
+    );
+  });
 }
 
 const Label = withForwardedRef<LabelProps, HTMLLabelElement>(LabelRaw);

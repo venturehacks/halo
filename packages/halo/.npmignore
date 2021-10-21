@@ -1,0 +1,19 @@
+# caches
+.cache
+*.tsbuildinfo
+
+# test support
+test
+
+# configs
+jest.config.js
+jest.dev.js
+rollup.config.babel.js
+tsconfig.json
+tsconfig.test.json
+
+# source code
+src
+
+# junk
+.DS_Store

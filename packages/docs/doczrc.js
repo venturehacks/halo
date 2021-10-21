@@ -1,42 +1,51 @@
 import path from 'path';
-import merge from 'webpack-merge';
 
 export default {
-  debug: true,
-  notUseSpecifiers: true,
-  src: path.join(__dirname, 'src'),
   title: 'Halo Design System',
-  typescript: true,
   repository: 'https://github.com/venturehacks/halo',
+  typescript: true,
+  notUseSpecifiers: true,
+  debug: true,
+  src: '../halo',
+  // root: '../../', // usually the pwd (packages/docs)
+  // gatsbyRoot: '../halo', // docz will use this for filesystem import instead of `root`
   ignore: [
     'node_modules',
-    'node_modules/**/*',
     'server',
     'pages',
     '.next',
     '.cache',
     'coverage',
+    '*.js',
+    /node_modules/,
+    /dist/,
   ],
   docgenConfig: {
+    // NOTE(drew): filter out props that come from `node_modules`, such as React.HTMLAttributes<T>, otherwise we get noisy <Props> tables
     propFilter: props => {
-      // NOTE(drew): hrm, I cannot seem to get this output in console
-      // console.log({ prop: props, component });
+      // NOTE(drew): nothing in this function will output to console, unfortunately
       if (props.declarations !== undefined && props.declarations.length > 0) {
-        const hasPropAdditionalDescription = props.declarations.find(
-          declaration => !declaration.fileName.includes('node_modules'),
-        );
+        const useProps = props.declarations.find(declaration => {
+          const isHalo = declaration.fileName.includes('halo');
+          const fromNodeModules = declaration.fileName.includes('node_modules');
+          return isHalo || !fromNodeModules;
+        });
 
-        return Boolean(hasPropAdditionalDescription);
+        return Boolean(useProps);
       }
 
       if (props.parent) {
-        return !props.parent.fileName.includes('node_modules');
+        const isHalo = props.parent.fileName.includes('halo');
+        const fromNodeModules = props.parent.fileName.includes('node_modules');
+        return isHalo || !fromNodeModules;
       }
 
       return true;
     },
   },
   filterComponents: files => {
+    // NOTE(drew): Please leave this sanity debug output
+    console.log('[Halo] Found source component files:', files);
     const filteredFiles = files.filter(filepath => {
       const isTest = /\.(test|spec)\.(js|jsx|ts|tsx)$/.test(filepath);
       if (isTest) {
@@ -47,11 +56,15 @@ export default {
         filepath,
       );
 
-      return isComponent;
+      const isComponentViaAncestor = /^\.\.\/halo\/src\/components\/(core|form|structure)+\/.*\/*\.(ts|tsx)$/.test(
+        filepath,
+      );
+
+      return isComponent || isComponentViaAncestor;
     });
 
-    console.log('[Halo] resolved source files:');
-    console.log(filteredFiles);
+    // NOTE(drew): Please leave this sanity debug output
+    console.log('[Halo] Resolved filtered source files:', filteredFiles);
     return filteredFiles;
   },
   themeConfig: {

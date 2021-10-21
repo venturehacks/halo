@@ -1,6 +1,4 @@
 FROM node:14.17.5-alpine AS base
-WORKDIR /app/
-
 # 'silence' git-related build args to leverage cache
 ARG GIT_COMMIT_SHA
 ENV GIT_COMMIT_SHA ''
@@ -15,16 +13,25 @@ RUN apk add --no-cache git python2 build-base libpng-dev pngquant lcms2-dev bash
   && apk add libimagequant-dev --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main \
   && apk add vips-dev --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
 
-COPY package.json yarn.lock .yarnrc /app/
+# 🌳 monorepo
+WORKDIR /app/
+COPY package.json yarn.lock .yarnrc ./
 
-RUN yarn install || yarn install --network-concurrency 1
+# 📦 packages/halo
+COPY packages/halo/package.json ./packages/halo/
+
+# 📦 packages/docs
+# Documentation Site package (noop until we move out of netlify)
+COPY packages/docs/package.json ./packages/docs/
+
+RUN yarn workspace halo install || \
+    yarn workspace halo install --network-concurrency 1
 
 #####
 ##### BUILD
 #####
 
 FROM node:14.17.5-alpine AS build
-WORKDIR /app/
 
 # 'silence' git-related build args to leverage cache
 ARG GIT_COMMIT_SHA
@@ -36,19 +43,23 @@ ENV GIT_BRANCH $GIT_BRANCH
 ARG GIT_COMMIT_MESSAGE
 ENV GIT_COMMIT_MESSAGE ''
 
-# configs
-COPY tsconfig.json tsconfig.test.json rollup.config.babel.js babel.config.js jest.config.js .eslintrc.js stylelint.config.js tslint.json .prettierrc.js .prettierignore .sassrc.js .scss-lint.yml ./
-COPY test ./test
-
+# 🌳 monorepo
+WORKDIR /app/
+COPY tsconfig.base.json babel.config.js .eslintrc.js stylelint.config.js tslint.json .prettierrc.js .prettierignore ./
 # from base
-COPY --from=base /app/package.json ./
-COPY --from=base /app/yarn.lock ./
-COPY --from=base /app/.yarnrc ./
+COPY --from=base /app/package.json /app/yarn.lock /app/.yarnrc ./
 COPY --from=base /app/node_modules ./node_modules
 
+# 📦 packages/halo
+WORKDIR /app/packages/halo/
+COPY packages/halo/*.json packages/halo/*.js ./
+COPY packages/halo/test ./test
+# from base
+COPY --from=base /app/packages/halo/package.json ./
+COPY --from=base /app/packages/halo/node_modules ./node_modules
 # sources
-COPY src ./src
-COPY scss ./scss
+COPY packages/halo/src ./src
+COPY packages/halo/scss ./scss
 
 RUN yarn build
 

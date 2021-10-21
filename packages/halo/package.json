@@ -1,0 +1,64 @@
+{
+  "name": "halo",
+  "version": "0.12.0",
+  "displayName": "Halo Design System",
+  "description": "Next-generation design system for AngelList and beyond.",
+  "author": "Drew Lustro <drew@angel.co>",
+  "license": "UNLICENSED",
+  "main": "dist/halo.js",
+  "module": "dist/halo.module.js",
+  "style": "dist/halo.css",
+  "types": "dist/typings/index.d.ts",
+  "scripts": {
+    "clean": "rm -rf ./dist/*",
+    "build": "tsc && rollup -c rollup.config.js",
+    "size": "size-limit",
+    "test": "NODE_ENV=test BABEL_ENV=test jest --config jest.config.js --rootDir ../.. --maxWorkers=16",
+    "test:dev": "yarn test:clean && NODE_ENV=test BABEL_ENV=test jest --rootDir ../.. --forceExit --detectOpenHandles --config jest.dev.js",
+    "test:dev:watch": "yarn test:dev --watch --onlyChanged",
+    "test:snapshot-update": "yarn test:dev --updateSnapshot",
+    "test:clean": "rm -rf ./node_modules/.cache/ && jest --clearCache",
+    "test:ci": "NODE_ENV=test BABEL_ENV=test jest --config jest.config.js --rootDir ../..",
+    "typesync": "typesync"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/venturehacks/halo.git"
+  },
+  "dependencies": {
+    "@tippy.js/react": "^2.2.3",
+    "camelcase": "^5.3.1",
+    "react-spinners": "^0.6.1"
+  },
+  "peerDependencies": {
+    "classnames": "^2.2.6",
+    "lodash": "^4.17.11",
+    "react": ">= 17.0.0",
+    "react-dom": ">= 17.0.0",
+    "react-modal": "^3.11.1"
+  },
+  "devDependencies": {
+    "@types/lodash": "4.14.175",
+    "@types/react": "17.0.30",
+    "@types/react-dom": "17.0.9",
+    "@types/react-modal": "^3.13.1"
+  },
+  "resolutions": {
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "engines": {
+    "node": ">= 8"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 Chrome major versions",
+    "last 2 Firefox major versions",
+    "last 2 Edge major versions",
+    "last 2 Safari major versions",
+    "ie 11",
+    "last 3 Android major versions",
+    "last 3 ChromeAndroid major versions",
+    "last 2 iOS major versions"
+  ]
+}

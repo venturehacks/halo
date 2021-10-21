@@ -1,6 +1,9 @@
 import classNames from 'classnames';
 import React, { useCallback, useState } from 'react';
+// NOTE(drew): react-copy-to-clipboard is only used for
+// the documentation site, and thus is only required in devDependencies
 // eslint-disable-next-line import/no-extraneous-dependencies
+// tslint:disable-next-line: no-implicit-dependencies
 import CopyToClipboard from 'react-copy-to-clipboard';
 
 import { Color, ColorPalette } from '../../../lib/colors';

@@ -13,6 +13,3 @@ trim_trailing_whitespace = false
 
 [*.scss]
 indent_size = 2
-
-[*.sass]
-indent_size = 2

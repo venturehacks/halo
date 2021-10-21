@@ -1,4 +1,6 @@
 {
+  "//": "Monorepo root package. Do not publish to npm/gemfury!",
+  "npm": false,
   "hooks": {
     "before:init": "yarn test && yarn build",
     "after:bump": "yarn changelog --package",
@@ -14,7 +16,17 @@
     "web": true,
     "tokenRef": "RELEASE_IT_GITHUB_TOKEN"
   },
-  "npm": {
-    "publish": true
+  "plugins": {
+    "release-it-yarn-workspaces": {
+      "publish": true,
+      "workspaces": [
+        "packages/halo"
+      ],
+      "additionalManifests": {
+        "versionUpdates": [
+          "packages/*/package.json"
+        ]
+      }
+    }
   }
 }
