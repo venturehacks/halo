@@ -25,9 +25,6 @@
     "release:patch": "release-it patch --disable-metrics",
     "typesync": "typesync"
   },
-  "github": {
-    "release": true
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/venturehacks/halo.git"
@@ -139,18 +136,6 @@
     "typescript": "4.4.3",
     "typesync": "^0.6.1"
   },
-  "dependencies": {
-    "@tippy.js/react": "^2.2.3",
-    "camelcase": "^5.3.1",
-    "react-spinners": "^0.6.1"
-  },
-  "peerDependencies": {
-    "classnames": "^2.2.6",
-    "lodash": "^4.17.11",
-    "react": ">= 17.0.0",
-    "react-dom": ">= 17.0.0",
-    "react-modal": "^3.11.1"
-  },
   "resolutions": {
     "get-caller-file": "1.0.3",
     "node-sass": "4.14.1",
@@ -160,13 +145,13 @@
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
-  "engines": {
-    "node": ">= 8"
-  },
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged --relative"
     }
+  },
+  "engines": {
+    "node": ">= 8"
   },
   "browserslist": [
     "> 1%",

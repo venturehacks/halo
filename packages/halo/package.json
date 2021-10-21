@@ -21,9 +21,6 @@
     "test:ci": "NODE_ENV=test BABEL_ENV=test jest --config jest.config.js --rootDir ../..",
     "typesync": "typesync"
   },
-  "github": {
-    "release": true
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/venturehacks/halo.git"
@@ -40,12 +37,13 @@
     "react-dom": ">= 17.0.0",
     "react-modal": "^3.11.1"
   },
+  "devDependencies": {
+    "@types/lodash": "4.14.175",
+    "@types/react": "17.0.30",
+    "@types/react-dom": "17.0.9",
+    "@types/react-modal": "^3.13.1"
+  },
   "resolutions": {
-    "get-caller-file": "1.0.3",
-    "node-sass": "4.14.1",
-    "**/node-sass": "4.14.1",
-    "chokidar": "3.4.2",
-    "**/chokidar": "3.4.2",
     "react": "17.0.2",
     "react-dom": "17.0.2"
   },
@@ -62,11 +60,5 @@
     "last 3 Android major versions",
     "last 3 ChromeAndroid major versions",
     "last 2 iOS major versions"
-  ],
-  "devDependencies": {
-    "@types/lodash": "^4.14.175",
-    "@types/react": "17.0.30",
-    "@types/react-dom": "17.0.9",
-    "@types/react-modal": "^3.13.1"
-  }
+  ]
 }
