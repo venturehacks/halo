@@ -88,12 +88,6 @@ export const Props = componentProps => {
   const { props, table, getPropType } = componentProps;
   const entries = Object.entries(props);
 
-  console.log('PropsTable');
-  console.log('componentProps', componentProps);
-  console.log('filemeta', componentProps.of.__filemeta);
-  console.log('props', props);
-  console.log('entries', entries);
-
   return (
     <Container>
       <table>
