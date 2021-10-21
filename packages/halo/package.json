@@ -14,11 +14,11 @@
     "build": "tsc && rollup -c rollup.config.js",
     "size": "size-limit",
     "test": "NODE_ENV=test BABEL_ENV=test jest --config jest.config.js --rootDir ../.. --maxWorkers=16",
-    "test:dev": "yarn test:clean && NODE_ENV=test BABEL_ENV=test jest --forceExit --detectOpenHandles --config jest.dev.js",
+    "test:dev": "yarn test:clean && NODE_ENV=test BABEL_ENV=test jest --rootDir ../.. --forceExit --detectOpenHandles --config jest.dev.js",
     "test:dev:watch": "yarn test:dev --watch --onlyChanged",
     "test:snapshot-update": "yarn test:dev --updateSnapshot",
     "test:clean": "rm -rf ./node_modules/.cache/ && jest --clearCache",
-    "test:ci": "NODE_ENV=test BABEL_ENV=test jest --config jest.config.js",
+    "test:ci": "NODE_ENV=test BABEL_ENV=test jest --config jest.config.js --rootDir ../..",
     "typesync": "typesync"
   },
   "github": {
