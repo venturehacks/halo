@@ -21,12 +21,11 @@ export default {
     /dist/,
   ],
   docgenConfig: {
+    // NOTE(drew): filter out props that come from `node_modules`, such as React.HTMLAttributes<T>, otherwise we get noisy <Props> tables
     propFilter: props => {
-      // NOTE(drew): hrm, I cannot seem to get this output in console
-      // console.log({ prop: props, component });
+      // NOTE(drew): nothing in this function will output to console, unfortunately
       if (props.declarations !== undefined && props.declarations.length > 0) {
         const useProps = props.declarations.find(declaration => {
-          console.log('declaration:', declaration);
           const isHalo = declaration.fileName.includes('halo');
           const fromNodeModules = declaration.fileName.includes('node_modules');
           return isHalo || !fromNodeModules;
@@ -45,6 +44,7 @@ export default {
     },
   },
   filterComponents: files => {
+    // NOTE(drew): Please leave this sanity debug output
     console.log('[Halo] Found source component files:', files);
     const filteredFiles = files.filter(filepath => {
       const isTest = /\.(test|spec)\.(js|jsx|ts|tsx)$/.test(filepath);
@@ -63,8 +63,8 @@ export default {
       return isComponent || isComponentViaAncestor;
     });
 
-    console.log('[Halo] Resolved filtered source files:');
-    console.log(filteredFiles);
+    // NOTE(drew): Please leave this sanity debug output
+    console.log('[Halo] Resolved filtered source files:', filteredFiles);
     return filteredFiles;
   },
   themeConfig: {

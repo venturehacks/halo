@@ -20,8 +20,6 @@ module.exports = {
       resolve: 'gatsby-alias-imports',
       options: {
         aliases: {
-          // '~/components': path.join(__dirname, 'src', 'components'),
-          // '~/lib': path.join(__dirname, 'src', 'lib'),
           '~/components': path.join(haloDirectory, 'src', 'components'),
           '~/lib': path.join(haloDirectory, 'src', 'lib'),
           // NOTE(drew): unsure why this is necessary, but for some reason
