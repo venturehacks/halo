@@ -21,9 +21,9 @@
     "lint": "tslint -t grouped && eslint '**/*.ts*' --format codeframe",
     "lint:fix": "tslint --fix -t grouped && eslint '**/*.ts*' --format codeframe --fix",
     "release": "release-it --npm.publishArgs=\"--registry=https://npm.fury.io/angellist/\" --disable-metrics",
-    "release:major": "yarn release major",
-    "release:minor": "yarn release minor",
-    "release:patch": "yarn release patch",
+    "release:major": "yarn release --increment=major",
+    "release:minor": "yarn release --increment=minor",
+    "release:patch": "yarn release --increment=patch",
     "typesync": "typesync"
   },
   "npm": {
