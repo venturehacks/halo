@@ -16,7 +16,7 @@ COMMON_TEST_CONFIG = {
   },
 }.freeze
 
-STEPS = [].freeze
+STEPS = []
 
 STEPS << BuildkiteUtils.build_step(name: NAME, target: :build, arch: :arm64)
 
