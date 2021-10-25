@@ -21,8 +21,7 @@ jobs:
             ${{ runner.os }}-yarn-
       - name: Install dependencies
         if: steps.yarn-cache.outputs.cache-hit != 'true'
-        # TODO(drew): annoying that we have to simplify package.json manually due to Gatsby. I'll invert this next.
-        run: yarn install:module-only
+        run: yarn install
       - name: Build module and analyze size
         uses: andresz1/size-limit-action@v1.5.1
         with:
