@@ -2,7 +2,7 @@ name: "size-limit"
 on: pull_request
 jobs:
   "size-limit":
-    name: Size Limit
+    name: compare build
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
