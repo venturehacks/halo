@@ -12,7 +12,7 @@
   "scripts": {
     "changelog": "auto-changelog --commit-limit false --template ./tools/changelog.compact.hbs",
     "build": "yarn workspace halo build",
-    "size:json": "yarn workspace halo size --json | sed '1d' >| datadog-size-limit.json",
+    "size:json": "yarn workspace halo build && yarn workspace halo size --json | sed '1d' >| datadog-size-limit.json",
     "size:report": "yarn size:json && DD_API_KEY=3fd85d19ccdf9eae93727717c2522f51 yarn ts-node bin/ci/datadog-size-limit.ts",
     "build:docs": "yarn workspace docs build",
     "clean": "yarn workspace halo clean && yarn workspace docs clean",
