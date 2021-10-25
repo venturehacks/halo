@@ -7,5 +7,4 @@
 **/dist
 **/node_modules
 **/public
-**/rollup.config.js
 **/__tests__
