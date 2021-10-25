@@ -61,6 +61,7 @@ COPY --from=base /app/packages/halo/node_modules ./node_modules
 COPY packages/halo/src ./src
 COPY packages/halo/scss ./scss
 
+WORKDIR /app/
 RUN yarn build
 
 #####
