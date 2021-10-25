@@ -1,8 +1,11 @@
 name: "size-limit"
-on: pull_request
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, review_requested, ready_for_review]
 jobs:
   "size-limit":
     name: compare build
+    if: github.event.pull_request.draft == false
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
