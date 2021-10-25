@@ -11,6 +11,7 @@
 **/dist
 **/node_modules
 **/public
+**/datadog-size-limit.json
 
 ############################################################
 # .gitignore for node
