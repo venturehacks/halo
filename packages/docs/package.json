@@ -46,7 +46,6 @@
     "webpack-merge": "^4.2.1"
   },
   "dependencies": {
-    "@tippy.js/react": "^2.2.3",
     "camelcase": "^5.3.1",
     "classnames": "^2.2.6",
     "halo": "*",
@@ -54,7 +53,6 @@
     "react": ">= 17.0.0",
     "react-dom": ">= 17.0.0",
     "react-modal": "^3.11.1",
-    "react-spinners": "^0.6.1",
     "@theme-ui/typography": "^0.11.3",
     "typography-theme-github": "^0.16.19"
   },
