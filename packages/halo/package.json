@@ -6,7 +6,7 @@
   "author": "Drew Lustro <drew@angel.co>",
   "license": "UNLICENSED",
   "main": "dist/halo.js",
-  "module": "dist/halo.module.js",
+  "module": "dist/halo.module.mjs",
   "style": "dist/halo.css",
   "types": "dist/typings/index.d.ts",
   "scripts": {
