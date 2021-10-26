@@ -45,7 +45,9 @@ ENV GIT_COMMIT_MESSAGE ''
 
 # 🌳 monorepo
 WORKDIR /app/
-COPY tsconfig.base.json babel.config.js .eslintrc.js stylelint.config.js tslint.json .prettierrc.js .prettierignore ./
+COPY tsconfig.base.json babel.config.js .eslintrc.js stylelint.config.js tslint.json .prettierrc.js .prettierignore .size-limit.js ./
+COPY bin ./bin
+
 # from base
 COPY --from=base /app/package.json /app/yarn.lock /app/.yarnrc ./
 COPY --from=base /app/node_modules ./node_modules
