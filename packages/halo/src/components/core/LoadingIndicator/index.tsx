@@ -1,12 +1,14 @@
 import React from 'react';
 import { ClipLoader, ScaleLoader } from 'react-spinners';
+// tslint:disable-next-line: no-submodule-imports
+import { CommonProps } from 'react-spinners/interfaces';
 
 import styles from './styles.scss';
 
 export type LoadingIndicatorProps = LoadingIndicatorPrimaryVariantProps &
   LoadingIndicatorAlternateVariantProps;
 
-interface LoadingIndicatorCommonProps {
+interface LoadingIndicatorCommonProps extends CommonProps {
   /**
    * Shorthand for setting variant="alternate"
    */
@@ -46,28 +48,24 @@ LoadingIndicator.defaultProps = {
   variant: 'primary',
 };
 
-function LoadingIndicator(props: LoadingIndicatorProps) {
+function LoadingIndicator({
+  alternate,
+  variant,
+  ...props
+}: LoadingIndicatorProps) {
   const { bare } = props;
-  const Component = getComponent(props);
 
-  const indicator = <Component {...props} />;
+  const Component =
+    alternate || variant === 'alternate' ? ClipLoader : ScaleLoader;
+
+  // @ts-ignore
+  const indicator = React.createElement(Component, props);
 
   if (bare) {
     return indicator;
   }
 
   return <div className={styles.component}>{indicator}</div>;
-}
-
-function getComponent({
-  alternate,
-  variant,
-}: LoadingIndicatorProps): React.ComponentType {
-  if (alternate || variant === 'alternate') {
-    return ClipLoader;
-  }
-
-  return ScaleLoader;
 }
 
 export { LoadingIndicator };

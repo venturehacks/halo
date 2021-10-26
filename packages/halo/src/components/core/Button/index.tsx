@@ -1,4 +1,4 @@
-import camelCase from 'camelcase';
+import { camelCase } from 'change-case';
 import classNames from 'classnames';
 import React from 'react';
 

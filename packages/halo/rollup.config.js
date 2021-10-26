@@ -1,5 +1,5 @@
 import path from 'path';
-import camelCase from 'camelcase';
+import { camelCase } from 'change-case';
 import { defineConfig } from 'rollup';
 
 // 1st party plugins
@@ -38,11 +38,19 @@ let analyzePluginIterations = 0;
 export default defineConfig({
   external: EXTERNAL_LIBS,
   input: './src/index.tsx',
+  moduleContext: id => {
+    if (/react-spinners\/esm/.test(id)) {
+      return 'window';
+    }
+
+    return 'undefined';
+  },
   output: [
     {
       file: `${pkg.module}`,
       format: 'es',
       globals: GLOBAL_LIBS,
+      interop: 'auto',
       name: pkg.name,
       sourcemap: true,
     },
@@ -65,7 +73,7 @@ export default defineConfig({
       customResolveOptions: {
         moduleDirectories: ['node_modules', '../../node_modules'],
       },
-      dedupe: ['react', 'react-dom', 'lodash'],
+      dedupe: EXTERNAL_LIBS,
       mainFields: ['module', 'main'],
     }),
     postcss({
@@ -99,12 +107,23 @@ export default defineConfig({
     }),
     commonjs({
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      include: ['node_modules/**', '../../node_modules/**'],
+      include: [
+        'node_modules/**',
+        // '../../node_modules/**',
+        '../../node_modules/tippy.js/**/*',
+        '../../node_modules/@tippyjs/react/**/*',
+        '../../node_modules/react-spinners/**/*',
+        '../../node_modules/@popperjs/**/*',
+        '../../node_modules/hoist-non-react-statics/**/*',
+        '../../node_modules/@emotion/**/*',
+        '../../node_modules/react/**/*',
+      ],
     }),
     analyze({
+      limit: 10, // 10 file limit
       onAnalysis: () => {
         if (analyzePluginIterations > 0) {
-          throw new Error('Skipping 2nd analysis pass.'); // We only want reports on the first output
+          throw new Error('(expected error) skipping 2nd analysis pass...'); // We only want reports on the first output
         }
         analyzePluginIterations++;
       },
