@@ -16,7 +16,6 @@ module.exports = [
   {
     name: 'Typings',
     path: ['packages/halo/dist/typings/**/*.d.ts'],
-    limit: '15 kB',
   },
   {
     name: 'Total',

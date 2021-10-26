@@ -42,7 +42,7 @@ apiInstance
   .submitMetrics(params)
   .then((data: any) => {
     // tslint:disable-next-line: no-console
-    console.log('✅ Pushed metrics to datadog.');
+    console.log('✅  Pushed metrics to datadog.');
     // tslint:disable-next-line: no-console
     console.log(JSON.stringify(data));
   })

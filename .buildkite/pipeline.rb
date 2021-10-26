@@ -27,8 +27,7 @@ STEPS << BuildkiteUtils.k8s_step(
 )
 
 STEPS << BuildkiteUtils.k8s_step(
-  step: :datadog,
-  name: :metrics,
+  name: 'datadog metrics',
   command: 'yarn size:report',
   **COMMON_TEST_CONFIG,
 )
