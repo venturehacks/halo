@@ -12,6 +12,7 @@ import typescript from '@rollup/plugin-typescript';
 import filesize from 'rollup-plugin-filesize';
 import postcss from 'rollup-plugin-postcss';
 import builtins from 'rollup-plugin-node-builtins';
+import analyze from 'rollup-plugin-analyzer';
 
 // @ts-ignore
 import pkg from './package.json';
@@ -25,22 +26,22 @@ const GLOBAL_LIBS = {
 
 const EXTERNAL_LIBS = ['classnames', 'react', 'react-dom', 'lodash'];
 
+let analyzePluginIterations = 0;
+
 export default {
   external: EXTERNAL_LIBS,
   input: './src/index.tsx',
   output: [
     {
-      // external: EXTERNAL_LIBS, // deprecated
-      file: `${pkg.main}`,
-      format: 'umd',
+      file: `${pkg.module}`,
+      format: 'es',
       globals: GLOBAL_LIBS,
       name: pkg.name,
       sourcemap: true,
     },
     {
-      // external: EXTERNAL_LIBS, // deprecated
-      file: `${pkg.module}`,
-      format: 'es',
+      file: `${pkg.main}`,
+      format: 'umd',
       globals: GLOBAL_LIBS,
       name: pkg.name,
       sourcemap: true,
@@ -92,6 +93,15 @@ export default {
     commonjs({
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
       include: ['node_modules/**', '../../node_modules/**'],
+    }),
+    analyze({
+      onAnalysis: () => {
+        if (analyzePluginIterations > 0) {
+          throw new Error('Skipping 2nd analysis pass.'); // We only want reports on the first output
+        }
+        analyzePluginIterations++;
+      },
+      showExports: true,
     }),
     filesize(),
   ],
