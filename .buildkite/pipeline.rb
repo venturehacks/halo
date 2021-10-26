@@ -16,7 +16,9 @@ COMMON_TEST_CONFIG = {
   },
 }.freeze
 
+# rubocop:disable Style/MutableConstant
 STEPS = []
+# rubocop:enable Style/MutableConstant
 
 STEPS << BuildkiteUtils.build_step(name: NAME, target: :build, arch: :arm64)
 
