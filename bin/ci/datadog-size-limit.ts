@@ -10,7 +10,20 @@ interface SizeLimitEntry {
   size: number;
 }
 
-const BUILDKITE_BRANCH = process.env.BUILDKITE_BRANCH || 'master';
+const { BUILDKITE_BRANCH, DD_API_KEY } = process.env;
+
+if (DD_API_KEY == null) {
+  // tslint:disable-next-line: no-console
+  console.error(`DD_API_KEY is required but not set.`);
+  process.exit();
+}
+
+if (BUILDKITE_BRANCH == null) {
+  // tslint:disable-next-line: no-console
+  console.error(`BUILDKITE_BRANCH is required but not set.`);
+  process.exit();
+}
+
 const bundleSizeData = fs.readFileSync(
   './packages/halo/datadog-size-limit.json',
   {
