@@ -59,7 +59,10 @@ function LoadingIndicator(props: LoadingIndicatorProps) {
   return <div className={styles.component}>{indicator}</div>;
 }
 
-function getComponent({ alternate, variant }: LoadingIndicatorProps) {
+function getComponent({
+  alternate,
+  variant,
+}: LoadingIndicatorProps): React.ComponentType {
   if (alternate || variant === 'alternate') {
     return ClipLoader;
   }
