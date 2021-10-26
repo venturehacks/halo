@@ -11,9 +11,12 @@ interface SizeLimitEntry {
 }
 
 const BUILDKITE_BRANCH = process.env.BUILDKITE_BRANCH || 'master';
-const bundleSizeData = fs.readFileSync('datadog-size-limit.json', {
-  encoding: 'utf-8',
-});
+const bundleSizeData = fs.readFileSync(
+  './packages/halo/datadog-size-limit.json',
+  {
+    encoding: 'utf-8',
+  },
+);
 const bundleSize: SizeLimitEntry[] = JSON.parse(bundleSizeData);
 const now = Math.floor(Date.now() / 1000);
 
@@ -28,6 +31,9 @@ const series: Series[] = bundleSize.map(({ name, passed, size }) => ({
     `passed:${passed}`,
   ],
 }));
+
+// tslint:disable-next-line: no-console
+console.log(series);
 
 const configuration = v1.createConfiguration();
 const apiInstance = new v1.MetricsApi(configuration);
