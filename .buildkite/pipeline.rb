@@ -13,6 +13,7 @@ COMMON_TEST_CONFIG = {
   node_selector: { pool: :test, 'kubernetes.io/arch' => 'arm64' },
   env: {
     BUILDKITE_BRANCH: BuildkiteUtils::BRANCH,
+    DD_API_KEY: ENV['DD_API_KEY'],
   },
 }.freeze
 
