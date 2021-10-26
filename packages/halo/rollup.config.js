@@ -1,5 +1,6 @@
 import path from 'path';
 import camelCase from 'camelcase';
+import { defineConfig } from 'rollup';
 
 // 1st party plugins
 import alias from '@rollup/plugin-alias';
@@ -24,11 +25,17 @@ const GLOBAL_LIBS = {
   'react-dom': 'ReactDOM',
 };
 
-const EXTERNAL_LIBS = ['classnames', 'react', 'react-dom', 'lodash'];
+const EXTERNAL_LIBS = [
+  'classnames',
+  'react',
+  'react-dom',
+  'react-modal',
+  'lodash',
+];
 
 let analyzePluginIterations = 0;
 
-export default {
+export default defineConfig({
   external: EXTERNAL_LIBS,
   input: './src/index.tsx',
   output: [
@@ -105,4 +112,4 @@ export default {
     }),
     filesize(),
   ],
-};
+});
