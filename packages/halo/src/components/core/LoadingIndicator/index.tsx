@@ -1,14 +1,12 @@
 import React from 'react';
 import { ClipLoader, ScaleLoader } from 'react-spinners';
-// tslint:disable-next-line: no-submodule-imports
-import { CommonProps } from 'react-spinners/interfaces';
 
 import styles from './styles.scss';
 
 export type LoadingIndicatorProps = LoadingIndicatorPrimaryVariantProps &
   LoadingIndicatorAlternateVariantProps;
 
-interface LoadingIndicatorCommonProps extends CommonProps {
+interface LoadingIndicatorCommonProps {
   /**
    * Shorthand for setting variant="alternate"
    */
