@@ -4,7 +4,6 @@ import { defineConfig } from 'rollup';
 
 // 1st party plugins
 import alias from '@rollup/plugin-alias';
-import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import typescript from '@rollup/plugin-typescript';
@@ -19,18 +18,22 @@ import analyze from 'rollup-plugin-analyzer';
 import pkg from './package.json';
 
 const GLOBAL_LIBS = {
-  classnames: 'classnames',
+  '@tippyjs/react': 'Tippy',
+  'change-case': 'changeCase',
+  classnames: 'classNames',
   lodash: 'lodash',
   react: 'React',
-  'react-dom': 'ReactDOM',
+  'react-spinners': 'reactSpinners',
 };
 
 const EXTERNAL_LIBS = [
+  '@tippyjs/react',
+  'change-case',
   'classnames',
-  'react',
-  'react-dom',
-  'react-modal',
   'lodash',
+  'react-dom',
+  'react-spinners',
+  'react',
 ];
 
 let analyzePluginIterations = 0;
@@ -49,7 +52,6 @@ export default defineConfig({
     {
       file: `${pkg.module}`,
       format: 'es',
-      globals: GLOBAL_LIBS,
       interop: 'auto',
       name: pkg.name,
       sourcemap: true,
@@ -105,29 +107,15 @@ export default defineConfig({
       preventAssignment: true,
       'process.env.NODE_ENV': JSON.stringify('development'),
     }),
-    commonjs({
-      extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      include: [
-        'node_modules/**',
-        // '../../node_modules/**',
-        '../../node_modules/tippy.js/**/*',
-        '../../node_modules/@tippyjs/react/**/*',
-        '../../node_modules/react-spinners/**/*',
-        '../../node_modules/@popperjs/**/*',
-        '../../node_modules/hoist-non-react-statics/**/*',
-        '../../node_modules/@emotion/**/*',
-        '../../node_modules/react/**/*',
-      ],
-    }),
     analyze({
-      limit: 10, // 10 file limit
+      limit: 20, // 20 file limit
       onAnalysis: () => {
         if (analyzePluginIterations > 0) {
           throw new Error('(expected error) skipping 2nd analysis pass...'); // We only want reports on the first output
         }
         analyzePluginIterations++;
       },
-      showExports: true,
+      // showExports: true, // which named exports are used?
     }),
     filesize(),
   ],
