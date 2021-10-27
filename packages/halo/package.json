@@ -1,14 +1,19 @@
 {
   "name": "halo",
   "version": "0.13.0",
+  "type": "module",
+  "module": "dist/esm/halo.mjs",
+  "main": "dist/cjs/halo.cjs",
+  "style": "dist/esm/halo.css",
+  "types": "dist/typings/index.d.ts",
+  "exports": {
+    "import": "./dist/esm/shalo.mjs",
+    "require": "./dist/cjs/halo.cjs"
+  },
   "displayName": "Halo Design System",
   "description": "Next-generation design system for AngelList and beyond.",
   "author": "Drew Lustro <drew@angel.co>",
   "license": "UNLICENSED",
-  "main": "dist/halo.js",
-  "module": "dist/halo.module.mjs",
-  "style": "dist/halo.css",
-  "types": "dist/typings/index.d.ts",
   "scripts": {
     "clean": "rm -rf ./dist/*",
     "build": "tsc && rollup -c rollup.config.js",
