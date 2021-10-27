@@ -8,7 +8,7 @@ module.exports = [
   {
     name: 'ES6',
     path: [
-      'packages/halo/dist/halo.module.js',
+      'packages/halo/dist/halo.module.mjs',
       'packages/halo/dist/halo.module.css',
     ],
     limit: '100 kB',

@@ -1,9 +1,9 @@
 import path from 'path';
-import camelCase from 'camelcase';
+import { camelCase } from 'change-case';
+import { defineConfig } from 'rollup';
 
 // 1st party plugins
 import alias from '@rollup/plugin-alias';
-import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import typescript from '@rollup/plugin-typescript';
@@ -12,35 +12,53 @@ import typescript from '@rollup/plugin-typescript';
 import filesize from 'rollup-plugin-filesize';
 import postcss from 'rollup-plugin-postcss';
 import builtins from 'rollup-plugin-node-builtins';
+import analyze from 'rollup-plugin-analyzer';
 
 // @ts-ignore
 import pkg from './package.json';
 
 const GLOBAL_LIBS = {
-  classnames: 'classnames',
+  '@tippyjs/react': 'Tippy',
+  'change-case': 'changeCase',
+  classnames: 'classNames',
   lodash: 'lodash',
   react: 'React',
-  'react-dom': 'ReactDOM',
+  'react-spinners': 'reactSpinners',
 };
 
-const EXTERNAL_LIBS = ['classnames', 'react', 'react-dom', 'lodash'];
+const EXTERNAL_LIBS = [
+  '@tippyjs/react',
+  'change-case',
+  'classnames',
+  'lodash',
+  'react-dom',
+  'react-spinners',
+  'react',
+];
 
-export default {
+let analyzePluginIterations = 0;
+
+export default defineConfig({
   external: EXTERNAL_LIBS,
   input: './src/index.tsx',
+  moduleContext: id => {
+    if (/react-spinners\/esm/.test(id)) {
+      return 'window';
+    }
+
+    return 'undefined';
+  },
   output: [
     {
-      // external: EXTERNAL_LIBS, // deprecated
-      file: `${pkg.main}`,
-      format: 'umd',
-      globals: GLOBAL_LIBS,
+      file: `${pkg.module}`,
+      format: 'es',
+      interop: 'auto',
       name: pkg.name,
       sourcemap: true,
     },
     {
-      // external: EXTERNAL_LIBS, // deprecated
-      file: `${pkg.module}`,
-      format: 'es',
+      file: `${pkg.main}`,
+      format: 'umd',
       globals: GLOBAL_LIBS,
       name: pkg.name,
       sourcemap: true,
@@ -57,7 +75,7 @@ export default {
       customResolveOptions: {
         moduleDirectories: ['node_modules', '../../node_modules'],
       },
-      dedupe: ['react', 'react-dom', 'lodash'],
+      dedupe: EXTERNAL_LIBS,
       mainFields: ['module', 'main'],
     }),
     postcss({
@@ -89,10 +107,16 @@ export default {
       preventAssignment: true,
       'process.env.NODE_ENV': JSON.stringify('development'),
     }),
-    commonjs({
-      extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      include: ['node_modules/**', '../../node_modules/**'],
+    analyze({
+      limit: 20, // 20 file limit
+      onAnalysis: () => {
+        if (analyzePluginIterations > 0) {
+          throw new Error('(expected error) skipping 2nd analysis pass...'); // We only want reports on the first output
+        }
+        analyzePluginIterations++;
+      },
+      // showExports: true, // which named exports are used?
     }),
     filesize(),
   ],
-};
+});
