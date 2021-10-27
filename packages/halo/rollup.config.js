@@ -4,7 +4,6 @@ import { defineConfig } from 'rollup';
 
 // 1st party plugins
 import alias from '@rollup/plugin-alias';
-import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import typescript from '@rollup/plugin-typescript';
@@ -108,12 +107,8 @@ export default defineConfig({
       preventAssignment: true,
       'process.env.NODE_ENV': JSON.stringify('development'),
     }),
-    commonjs({
-      extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      include: ['node_modules/**', '../../node_modules/**'],
-    }),
     analyze({
-      limit: 10, // 10 file limit
+      limit: 20, // 20 file limit
       onAnalysis: () => {
         if (analyzePluginIterations > 0) {
           throw new Error('(expected error) skipping 2nd analysis pass...'); // We only want reports on the first output
