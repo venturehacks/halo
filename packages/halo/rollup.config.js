@@ -19,18 +19,22 @@ import analyze from 'rollup-plugin-analyzer';
 import pkg from './package.json';
 
 const GLOBAL_LIBS = {
-  classnames: 'classnames',
+  '@tippyjs/react': 'Tippy',
+  'change-case': 'changeCase',
+  classnames: 'classNames',
   lodash: 'lodash',
   react: 'React',
-  'react-dom': 'ReactDOM',
+  'react-spinners': 'reactSpinners',
 };
 
 const EXTERNAL_LIBS = [
+  '@tippyjs/react',
+  'change-case',
   'classnames',
-  'react',
-  'react-dom',
-  'react-modal',
   'lodash',
+  'react-dom',
+  'react-spinners',
+  'react',
 ];
 
 let analyzePluginIterations = 0;
@@ -49,7 +53,6 @@ export default defineConfig({
     {
       file: `${pkg.module}`,
       format: 'es',
-      globals: GLOBAL_LIBS,
       interop: 'auto',
       name: pkg.name,
       sourcemap: true,
@@ -107,17 +110,7 @@ export default defineConfig({
     }),
     commonjs({
       extensions: ['.js', '.jsx', '.ts', '.tsx'],
-      include: [
-        'node_modules/**',
-        // '../../node_modules/**',
-        '../../node_modules/tippy.js/**/*',
-        '../../node_modules/@tippyjs/react/**/*',
-        '../../node_modules/react-spinners/**/*',
-        '../../node_modules/@popperjs/**/*',
-        '../../node_modules/hoist-non-react-statics/**/*',
-        '../../node_modules/@emotion/**/*',
-        '../../node_modules/react/**/*',
-      ],
+      include: ['node_modules/**', '../../node_modules/**'],
     }),
     analyze({
       limit: 10, // 10 file limit
@@ -127,7 +120,7 @@ export default defineConfig({
         }
         analyzePluginIterations++;
       },
-      showExports: true,
+      // showExports: true, // which named exports are used?
     }),
     filesize(),
   ],
