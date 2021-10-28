@@ -4,7 +4,6 @@ import { camelCase } from 'change-case';
 import { defineConfig } from 'rollup';
 
 // 1st party plugins
-import alias from '@rollup/plugin-alias';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import typescript from '@rollup/plugin-typescript';
@@ -73,11 +72,6 @@ export default defineConfig({
     },
   ],
   plugins: [
-    // note: alias not currently used; busted after tsc compilation
-    alias({
-      resolve: ['.tsx', '.ts', '.jsx', '.js'],
-      '~': path.join(__dirname, 'src'),
-    }),
     builtins(),
     resolve({
       customResolveOptions: {
@@ -110,7 +104,6 @@ export default defineConfig({
     }),
     typescript({
       outputToFilesystem: true,
-      tsconfig: './tsconfig.json',
     }),
     replace({
       exclude: ['node_modules/**', '../../node_modules/**'],
