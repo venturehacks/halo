@@ -2,10 +2,24 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [v0.13.0](https://github.com/venturehacks/halo/compare/v0.13.0...v0.13.0)
+#### [0.14.0](https://github.com/venturehacks/halo/compare/0.13.0...0.14.0)
+
+- [LEV-910] Tree-Shaking Preparation 🌳 [`#103`](https://github.com/venturehacks/halo/pull/103)
+- [LEV-909] Slim Module Pass A – Analysis, Tree Shakable Dependencies [`#101`](https://github.com/venturehacks/halo/pull/101)
+- [LEV-921] Push bundle size metrics to Datadog [`#100`](https://github.com/venturehacks/halo/pull/100)
+- [LEV-949] Size-limit integration [`#97`](https://github.com/venturehacks/halo/pull/97)
+- Create .size-limit.js [`4d3253d`](https://github.com/venturehacks/halo/commit/4d3253d27a9779dda30fe2decc483f33139f6c35)
+- Revert "Enable size-limit workflow on master commits" [`2855c3a`](https://github.com/venturehacks/halo/commit/2855c3a7fc83f2c723cd72f92532c302aff4eb32)
+- Enable size-limit workflow on master commits [`5954a9c`](https://github.com/venturehacks/halo/commit/5954a9ce91fb052f4a74b0e9b43a148b3c220a1a)
+- :package: sideEffects: false [`c2f4945`](https://github.com/venturehacks/halo/commit/c2f494574bb7ed4c3e9acb8238f11de6e3341548)
+
+#### [0.13.0](https://github.com/venturehacks/halo/compare/v0.13.0...0.13.0)
+
+> 21 October 2021
 
 - Improved ignore patterns [`0bfd85e`](https://github.com/venturehacks/halo/commit/0bfd85ef0c671723fec19ebe11b55aa8d184b07f)
 - :package: force use of gemfury registry during publish [`1f71aca`](https://github.com/venturehacks/halo/commit/1f71acaf994b273f4a347d041f3d56ecae63e5fb)
+- Release 0.13.0 [`eadffce`](https://github.com/venturehacks/halo/commit/eadffce4aed97b34ae0c1bba713f28c1f2181b41)
 - Update package.json [`a00023a`](https://github.com/venturehacks/halo/commit/a00023a40d4f3818aa6c7f8daa3b7892e40b7c2c)
 
 #### [v0.13.0](https://github.com/venturehacks/halo/compare/0.12.0...v0.13.0)
