@@ -50,7 +50,7 @@ export default defineConfig({
       file: `${pkg.module}`,
       // TREE SHAKING
       // NOTE(drew): experiencing issues with this
-      //
+      // https://github.com/rollup/plugins/issues/287
       // dir: `dist/esm`,
       // NOTE(drew): might be necessary for tree shaking, not sure.
       // preserveModules: true
@@ -60,7 +60,6 @@ export default defineConfig({
       file: `${pkg.main}`,
       format: 'umd',
       globals: GLOBAL_LIBS,
-
       sourcemap: true,
     },
   ],
