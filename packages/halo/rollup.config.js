@@ -1,3 +1,4 @@
+/* eslint-disable sort-keys-fix/sort-keys-fix */
 import path from 'path';
 import { camelCase } from 'change-case';
 import { defineConfig } from 'rollup';
@@ -50,17 +51,24 @@ export default defineConfig({
   },
   output: [
     {
-      file: `${pkg.module}`,
-      format: 'es',
-      interop: 'auto',
       name: pkg.name,
+      format: 'esm',
+      interop: 'auto',
       sourcemap: true,
+      file: `${pkg.module}`,
+      // TREE SHAKING
+      // NOTE(drew): experiencing issues with this
+      //
+      // dir: `dist/esm`,
+      // NOTE(drew): might be necessary for tree shaking, not sure.
+      // preserveModules: true
     },
     {
+      name: pkg.name,
       file: `${pkg.main}`,
       format: 'umd',
       globals: GLOBAL_LIBS,
-      name: pkg.name,
+
       sourcemap: true,
     },
   ],
@@ -77,6 +85,7 @@ export default defineConfig({
       },
       dedupe: EXTERNAL_LIBS,
       mainFields: ['module', 'main'],
+      extensions: ['.mjs', '.js'],
     }),
     postcss({
       extensions: ['.css', '.sass', '.scss'],
@@ -101,6 +110,7 @@ export default defineConfig({
     }),
     typescript({
       outputToFilesystem: true,
+      tsconfig: './tsconfig.json',
     }),
     replace({
       exclude: ['node_modules/**', '../../node_modules/**'],

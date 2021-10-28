@@ -16,7 +16,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "clean": "rm -rf ./dist/*",
-    "build": "tsc && rollup -c rollup.config.js",
+    "build": "tsc --emitDeclarationOnly && rollup -c rollup.config.js",
     "size": "size-limit",
     "size:json": "size-limit --json >| datadog-size-limit.json",
     "test": "NODE_ENV=test BABEL_ENV=test jest --config jest.config.js --rootDir ../.. --maxWorkers=16",

@@ -30,7 +30,6 @@
     "listFiles": false,
     "pretty": true,
     "incremental": true,
-    "declaration": true,
     "jsx": "react",
     "lib": [
       "dom",
@@ -59,11 +58,11 @@
     "./ci/**/*.ts"
   ],
   "exclude": [
-    "**/node_modules/**",
-    "**/dist/**",
-    "**/.docz/**",
-    "**/.cache/**",
-    "**/public/**",
+    "**/node_modules/**/*",
+    "**/dist/**/*",
+    "**/.docz/**/*",
+    "**/.cache/**/*",
+    "**/public/**/*",
     "**/src/gatsby-theme-docz/**/*",
   ]
 }
