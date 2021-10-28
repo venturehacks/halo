@@ -25,6 +25,8 @@
     "src/**/*.ts",
   ],
   "exclude": [
+    "jest.config.js",
+    "jest.dev.js",
     "**/__tests__/**/*",
     "node_modules/**/*",
     ".rollup.cache",

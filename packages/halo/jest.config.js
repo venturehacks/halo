@@ -1,24 +1,18 @@
-// regexp pattern strings, *not* glob patterns!
-// https://jestjs.io/docs/en/configuration#testpathignorepatterns-array-string
 const testPathIgnorePatterns = [
-  'CHANGELOG.md',
-  'README.md',
-  // development
-  '.vscode',
-  // dependencies
-  '/node_modules/',
-  '/test//',
-  // build support
   '.cache',
   '.docz',
   '.next',
+  '.vscode',
+  '/node_modules/',
+  '/test/',
+  'CHANGELOG.md',
   'dist',
-  'public',
-  // package
   'package.json',
+  'public',
+  'README.md',
 ];
 
-export default {
+module.exports = {
   moduleDirectories: [
     '<rootDir>/node_modules',
     '<rootDir>/packages/halo/node_modules',
