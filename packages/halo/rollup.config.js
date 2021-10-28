@@ -1,9 +1,9 @@
+/* eslint-disable sort-keys-fix/sort-keys-fix */
 import path from 'path';
 import { camelCase } from 'change-case';
 import { defineConfig } from 'rollup';
 
 // 1st party plugins
-import alias from '@rollup/plugin-alias';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import typescript from '@rollup/plugin-typescript';
@@ -41,35 +41,29 @@ let analyzePluginIterations = 0;
 export default defineConfig({
   external: EXTERNAL_LIBS,
   input: './src/index.tsx',
-  moduleContext: id => {
-    if (/react-spinners\/esm/.test(id)) {
-      return 'window';
-    }
-
-    return 'undefined';
-  },
   output: [
     {
-      file: `${pkg.module}`,
-      format: 'es',
-      interop: 'auto',
       name: pkg.name,
+      format: 'esm',
+      interop: 'auto',
       sourcemap: true,
+      file: `${pkg.module}`,
+      // TREE SHAKING
+      // NOTE(drew): experiencing issues with this
+      // https://github.com/rollup/plugins/issues/287
+      // dir: `dist/esm`,
+      // NOTE(drew): might be necessary for tree shaking, not sure.
+      // preserveModules: true
     },
     {
+      name: pkg.name,
       file: `${pkg.main}`,
       format: 'umd',
       globals: GLOBAL_LIBS,
-      name: pkg.name,
       sourcemap: true,
     },
   ],
   plugins: [
-    // note: alias not currently used; busted after tsc compilation
-    alias({
-      resolve: ['.tsx', '.ts', '.jsx', '.js'],
-      '~': path.join(__dirname, 'src'),
-    }),
     builtins(),
     resolve({
       customResolveOptions: {
@@ -77,6 +71,7 @@ export default defineConfig({
       },
       dedupe: EXTERNAL_LIBS,
       mainFields: ['module', 'main'],
+      extensions: ['.mjs', '.js'],
     }),
     postcss({
       extensions: ['.css', '.sass', '.scss'],

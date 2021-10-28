@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`LoadingIndicator snapshot alternate 1`] = `
-<div
-  class="css-d7kzs7"
+<span
+  class="css-1v6ckp3"
 />
 `;
 
@@ -10,30 +10,30 @@ exports[`LoadingIndicator snapshot default component wrapping 1`] = `
 <div
   class="component"
 >
-  <div
-    class="css-d7kzs7"
+  <span
+    class="css-1v6ckp3"
   />
 </div>
 `;
 
 exports[`LoadingIndicator snapshot primary 1`] = `
-<div
-  class="css-0"
+<span
+  class="css-1xdhyk6"
 >
-  <div
+  <span
     class="css-9lxfgy"
   />
-  <div
+  <span
     class="css-malg2r"
   />
-  <div
+  <span
     class="css-1piacs6"
   />
-  <div
+  <span
     class="css-jm3i4v"
   />
-  <div
+  <span
     class="css-1bnq1ww"
   />
-</div>
+</span>
 `;

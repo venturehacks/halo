@@ -116,7 +116,7 @@
       "typescriptreact",
     ],
     "peacock.color": "#5dc9e2",
-    "typescript.tsdk": "node_modules/typescript/lib",
+    "typescript.tsdk": "Monorepo Root 🌳/node_modules/typescript/lib",
     "[javascript]": {
       "editor.formatOnSave": true,
     },

@@ -1,10 +1,12 @@
 {
   "extends": "./tsconfig",
   "compilerOptions": {
+    "types": ["jest"],
     "strictNullChecks": false,
   },
   "include": [
     "./test/**/*",
     "./src/**/*.test.tsx",
   ],
+  "exclude": [],
 }
