@@ -1,3 +1,4 @@
+/* eslint-disable sort-keys-fix/sort-keys-fix */
 /**
  * Separate jest config file used for package task
  * yarn run test:dev
@@ -28,7 +29,7 @@ const testPathIgnorePatterns = [
   '.vscode',
 ];
 
-module.exports = {
+export default {
   verbose: true,
   moduleDirectories: ['<rootDir>/node_modules', '<rootDir>/src'],
   snapshotSerializers: ['enzyme-to-json/serializer'],

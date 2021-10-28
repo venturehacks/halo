@@ -18,7 +18,7 @@ const testPathIgnorePatterns = [
   'package.json',
 ];
 
-module.exports = {
+export default {
   moduleDirectories: [
     '<rootDir>/node_modules',
     '<rootDir>/packages/halo/node_modules',
