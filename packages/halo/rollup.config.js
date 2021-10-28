@@ -41,13 +41,6 @@ let analyzePluginIterations = 0;
 export default defineConfig({
   external: EXTERNAL_LIBS,
   input: './src/index.tsx',
-  moduleContext: id => {
-    if (/react-spinners\/esm/.test(id)) {
-      return 'window';
-    }
-
-    return 'undefined';
-  },
   output: [
     {
       name: pkg.name,
