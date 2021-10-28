@@ -18,4 +18,6 @@ tsconfig.test.json
 src
 
 # junk
+datadog-size-limit.json
 .DS_Store
+*.log
