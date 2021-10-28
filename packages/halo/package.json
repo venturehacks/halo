@@ -2,6 +2,7 @@
   "name": "halo",
   "version": "0.13.0",
   "type": "commonjs",
+  "sideEffects": false,
   "module": "dist/esm/halo.mjs",
   "main": "dist/cjs/halo.cjs",
   "style": "dist/esm/halo.css",
