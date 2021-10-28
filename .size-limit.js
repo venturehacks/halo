@@ -2,12 +2,18 @@
 module.exports = [
   {
     name: 'CommonJS',
-    path: ['packages/halo/dist/cjs/*'],
+    path: [
+      'packages/halo/dist/cjs/halo.cjs',
+      'packages/halo/dist/cjs/halo.css',
+    ],
     limit: '100 kB',
   },
   {
     name: 'ES6',
-    path: ['packages/halo/dist/esm/*'],
+    path: [
+      'packages/halo/dist/esm/**/*.mjs',
+      'packages/halo/dist/esm/halo.css',
+    ],
     limit: '100 kB',
   },
   {
