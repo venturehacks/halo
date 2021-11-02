@@ -2,12 +2,20 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [0.14.1](https://github.com/venturehacks/halo/compare/0.14.0...0.14.1)
+
+- :package: remove ESM-compatibility special fields [`d32c3dd`](https://github.com/venturehacks/halo/commit/d32c3dd82d7618896460290d87ba9e6d0ad5412b)
+- [npmignore] exclude more junk [`ffc9caf`](https://github.com/venturehacks/halo/commit/ffc9caf2269df63e691099e3e014a0dc57764b45)
+
 #### [0.14.0](https://github.com/venturehacks/halo/compare/0.13.0...0.14.0)
+
+> 28 October 2021
 
 - [LEV-910] Tree-Shaking Preparation 🌳 [`#103`](https://github.com/venturehacks/halo/pull/103)
 - [LEV-909] Slim Module Pass A – Analysis, Tree Shakable Dependencies [`#101`](https://github.com/venturehacks/halo/pull/101)
 - [LEV-921] Push bundle size metrics to Datadog [`#100`](https://github.com/venturehacks/halo/pull/100)
 - [LEV-949] Size-limit integration [`#97`](https://github.com/venturehacks/halo/pull/97)
+- Release 0.14.0 [`99e33b4`](https://github.com/venturehacks/halo/commit/99e33b42c0bcd12ed36d78c7cabd3b20e084a9f3)
 - Create .size-limit.js [`4d3253d`](https://github.com/venturehacks/halo/commit/4d3253d27a9779dda30fe2decc483f33139f6c35)
 - Revert "Enable size-limit workflow on master commits" [`2855c3a`](https://github.com/venturehacks/halo/commit/2855c3a7fc83f2c723cd72f92532c302aff4eb32)
 - Enable size-limit workflow on master commits [`5954a9c`](https://github.com/venturehacks/halo/commit/5954a9ce91fb052f4a74b0e9b43a148b3c220a1a)
