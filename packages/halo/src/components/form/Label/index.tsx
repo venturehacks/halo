@@ -12,7 +12,10 @@ import { Tooltip } from '../../core/Tooltip';
 
 import styles from './styles.scss';
 
-export interface LabelProps extends Pick<SpanProps, 'weight' | 'color'> {
+type LabelPropsBase = Pick<SpanProps, 'weight' | 'color'> &
+  Omit<React.HTMLAttributes<HTMLLabelElement>, 'title'>;
+
+export interface LabelProps extends LabelPropsBase {
   children?: React.ReactNode;
   className?: string;
   /**
@@ -55,6 +58,7 @@ function LabelRaw({
   controlClassName,
   weight,
   color,
+  ...rest
 }: LabelProps & ForwardedRefProps<HTMLLabelElement>) {
   if (hasCheckboxOrRadio(children) && !containsFieldGroup) {
     return (
@@ -110,7 +114,7 @@ function LabelRaw({
   }
 
   return (
-    <label ref={forwardedRef} className={classes} htmlFor={id}>
+    <label ref={forwardedRef} className={classes} htmlFor={id} {...rest}>
       {content}
       {children && (
         <div className={classNames(styles.control, controlClassName)}>
