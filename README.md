@@ -16,41 +16,35 @@ Halo is our design system. It enables our small group of designers to design and
 
 ## Quickstart
 
-### Explore Halo
+### Dependencies
 
-View living documentation and browse code.
+```sh
+brew install vips
+```
+
+### Checkout code, run documentation site
 
 ```bash
 git clone git@github.com:venturehacks/halo.git
 cd halo
 yarn
-yarn run dev
+yarn dev
 ```
 
-### Install Halo in a project
+## Project Installation
 
-[Generate a Github personal access token](https://github.com/settings/tokens) so that your project can read this repository.
+### `.yarnrc`
 
-Halo is built as a node module. In the future, Halo will be published as a private module so that we do not leak Github tokens.
+Adopting Halo in a project requires use of the gemfury registry.
 
-#### Add dependency
+```gitignore
+registry "https://npm.fury.io/angellist/"
+```
+
+### Add Halo dependency
 
 ```bash
-yarn add git+https://PERSONAL-ACCESS-TOKEN:x-oauth-basic@github.com/venturehacks/halo#stable
-```
-
-#### Supply access token
-
-Include your GitHub token so CircleCI can build the application.
-
-```json
-// package.json
-{
-  "private": true,
-  "dependencies": {
-    "halo": "git+https://PERSONAL-ACCESS-TOKEN:x-oauth-basic@github.com/venturehacks/halo#stable"
-  }
-}
+yarn add halo@v0.14.2
 ```
 
 #### Entry point CSS
@@ -61,7 +55,7 @@ This distribution payload should only be included in your app _once_. It is nece
 // main.scss (or similar "layout" file that is only included one time)
 
 :global {
-  @import '~halo/dist/halo.css';
+  @import 'halo/dist/esm/halo.css';
 }
 ```
 
@@ -91,7 +85,7 @@ return (
 
 ```scss
 // single import grants all variables, mixins, etc.
-@import '~halo/scss/halo';
+@import 'halo/scss/halo';
 
 .foo {
   color: $text-dark--aaaa;
