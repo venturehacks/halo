@@ -2,9 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [0.14.3](https://github.com/venturehacks/halo/compare/0.14.2...0.14.3)
+
+- [Button] use extends React.ButtonHTMLAttributes [`f4f98d4`](https://github.com/venturehacks/halo/commit/f4f98d4f8344afc8e2472934993af00726b38860)
+- [Tooltip] leave size implementation note [`e716b95`](https://github.com/venturehacks/halo/commit/e716b95e670537de0d197e511482ab33aeecfd6e)
+
 #### [0.14.2](https://github.com/venturehacks/halo/compare/0.14.1...0.14.2)
 
+> 2 November 2021
+
 - [components] restore `extends React.HTMLAttributes&lt;T&gt;` pattern [`ab2e705`](https://github.com/venturehacks/halo/commit/ab2e7051432feb796e27de2d65671c68c04ca298)
+- Release 0.14.2 [`769f35a`](https://github.com/venturehacks/halo/commit/769f35a84f2d1304f918964051b8a0729a7d2b36)
 - [Box] switch interface back to extends React.HTMLAttributes [`c458466`](https://github.com/venturehacks/halo/commit/c458466fb5c0876d69e7e81fd287a46722b3e112)
 - [Tooltip] make distance, size deprecated props `never` [`7773e12`](https://github.com/venturehacks/halo/commit/7773e126e2839791c39a48d127a363dc17280e3b)
 
