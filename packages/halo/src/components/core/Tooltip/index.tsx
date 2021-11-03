@@ -8,11 +8,11 @@ export interface TooltipProps extends TippyProps {
   /**
    * @deprecated `distance` is unsupported since popper@2.x. Use offset instead.
    */
-  distance?: number;
+  distance?: never;
   /**
    * @deprecated `size` is unsupported since popper@2.x. Use CSS instead.
    */
-  size?: number;
+  size?: never;
 }
 
 /*
