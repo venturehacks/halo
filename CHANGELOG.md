@@ -2,8 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [0.14.2](https://github.com/venturehacks/halo/compare/0.14.1...0.14.2)
+
+- [components] restore `extends React.HTMLAttributes&lt;T&gt;` pattern [`ab2e705`](https://github.com/venturehacks/halo/commit/ab2e7051432feb796e27de2d65671c68c04ca298)
+- [Box] switch interface back to extends React.HTMLAttributes [`c458466`](https://github.com/venturehacks/halo/commit/c458466fb5c0876d69e7e81fd287a46722b3e112)
+- [Tooltip] make distance, size deprecated props `never` [`7773e12`](https://github.com/venturehacks/halo/commit/7773e126e2839791c39a48d127a363dc17280e3b)
+
 #### [0.14.1](https://github.com/venturehacks/halo/compare/0.14.0...0.14.1)
 
+> 2 November 2021
+
+- Release 0.14.1 [`1d52d92`](https://github.com/venturehacks/halo/commit/1d52d92ab7e8575d3997f14b4af3af406845a9ed)
 - :package: remove ESM-compatibility special fields [`d32c3dd`](https://github.com/venturehacks/halo/commit/d32c3dd82d7618896460290d87ba9e6d0ad5412b)
 - [npmignore] exclude more junk [`ffc9caf`](https://github.com/venturehacks/halo/commit/ffc9caf2269df63e691099e3e014a0dc57764b45)
 
