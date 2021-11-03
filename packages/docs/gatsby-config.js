@@ -34,14 +34,16 @@ module.exports = {
         sourceMap: true,
         sassRuleModulesTest: /\.scss$/,
         sassRuleTest: /\.global\.scss$/,
-        includePaths: [
-          'scss',
-          'node_modules',
-          path.resolve(haloDirectory, 'scss'),
-          path.resolve(haloDirectory, 'node_modules'),
-          path.resolve(rootDirectory, 'node_modules'),
-          path.resolve(__dirname, 'node_modules'),
-        ],
+        sassOptions: {
+          includePaths: [
+            'scss',
+            'node_modules',
+            path.resolve(haloDirectory, 'scss'),
+            path.resolve(haloDirectory, 'node_modules'),
+            path.resolve(rootDirectory, 'node_modules'),
+            path.resolve(__dirname, 'node_modules'),
+          ],
+        },
       },
     },
     {

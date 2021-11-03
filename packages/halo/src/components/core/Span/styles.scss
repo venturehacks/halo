@@ -8,7 +8,7 @@
 // Sizes (includes line height)
 
 @each $name, $font-size-and-lh in $font-sizes-map {
-  :global(.__halo_fontSizeMap_#{$name}) {
+  :global(.__halo_fontSizeMap_#{'' + $name}) {
     font-size: map-get($font-size-and-lh, font-size);
     line-height: map-get($font-size-and-lh, line-height);
   }
@@ -17,7 +17,7 @@
 // weights
 
 @each $name, $weight in $weights {
-  :global(.__halo_fontWeight_#{$name}) {
+  :global(.__halo_fontWeight_#{'' + $name}) {
     font-weight: $weight;
   }
 }
@@ -25,7 +25,7 @@
 // Custom line heights
 
 @each $name, $line-height in $line-heights {
-  :global(.__halo_lineHeight_#{$name}.__halo_lineHeight_#{$name}) {
+  :global(.__halo_lineHeight_#{'' + $name}.__halo_lineHeight_#{'' + $name}) {
     line-height: $line-height;
   }
 }
@@ -33,7 +33,7 @@
 // custom colors
 
 @each $name, $color in $colors {
-  :global(.__halo_color_#{$name}.__halo_color_#{$name}) {
+  :global(.__halo_color_#{'' + $name}.__halo_color_#{'' + $name}) {
     color: $color;
   }
 }
