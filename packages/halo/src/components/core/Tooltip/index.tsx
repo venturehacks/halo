@@ -10,9 +10,10 @@ export interface TooltipProps extends TippyProps {
    */
   distance?: never;
   /**
-   * @deprecated `size` is unsupported since popper@2.x. Use CSS instead.
+   * NOTE(drew): temporarily unimplemented.
+   * https://venturehacks.atlassian.net/browse/LEV-1055
    */
-  size?: never;
+  size?: 'sm' | 'md' | 'lg';
 }
 
 /*
