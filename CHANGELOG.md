@@ -2,8 +2,15 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [0.14.4](https://github.com/venturehacks/halo/compare/0.14.3...0.14.4)
+
+- `RawRadio` correct hover state border radius [`9009018`](https://github.com/venturehacks/halo/commit/90090188b7ce4b822e3ee6d481b277321cbb90f2)
+
 #### [0.14.3](https://github.com/venturehacks/halo/compare/0.14.2...0.14.3)
 
+> 3 November 2021
+
+- Release 0.14.3 [`a0a0c39`](https://github.com/venturehacks/halo/commit/a0a0c39265e16f394ac05abc2d968458b2221cd5)
 - [Button] use extends React.ButtonHTMLAttributes [`f4f98d4`](https://github.com/venturehacks/halo/commit/f4f98d4f8344afc8e2472934993af00726b38860)
 - [Tooltip] leave size implementation note [`e716b95`](https://github.com/venturehacks/halo/commit/e716b95e670537de0d197e511482ab33aeecfd6e)
 
