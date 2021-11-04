@@ -156,6 +156,7 @@ $pill-border-radius: tempo(3);
   // hover = punchy blue border
   &:hover::before {
     @include input-border--hover;
+    @include border-circle;
   }
 
   // checked = thick border
