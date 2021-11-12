@@ -13,9 +13,12 @@ import filesize from 'rollup-plugin-filesize';
 import postcss from 'rollup-plugin-postcss';
 import builtins from 'rollup-plugin-node-builtins';
 import analyze from 'rollup-plugin-analyzer';
+import svgr from '@svgr/rollup';
 
 // @ts-ignore
 import pkg from './package.json';
+
+const svgoConfig = require('../../svgo.config.js');
 
 const GLOBAL_LIBS = {
   '@tippyjs/react': 'Tippy',
@@ -96,6 +99,9 @@ export default defineConfig({
     }),
     typescript({
       outputToFilesystem: true,
+    }),
+    svgr({
+      svgoConfig,
     }),
     replace({
       exclude: ['node_modules/**', '../../node_modules/**'],
