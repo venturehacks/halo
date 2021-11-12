@@ -18,6 +18,7 @@ import svgr from '@svgr/rollup';
 // @ts-ignore
 import pkg from './package.json';
 
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const svgoConfig = require('../../svgo.config.js');
 
 const GLOBAL_LIBS = {
