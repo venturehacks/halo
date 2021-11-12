@@ -1,18 +1,17 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
+
+const presets = ['babel-preset-gatsby', '@babel/preset-typescript'];
+
 module.exports = {
   env: {
     development: {
-      presets: ['babel-preset-gatsby'],
+      presets,
     },
     production: {
-      presets: ['babel-preset-gatsby'],
+      presets,
     },
     test: {
-      presets: [['next/babel', { 'preset-env': { modules: 'commonjs' } }]],
-      plugins: [
-        'dynamic-import-node',
-        '@babel/plugin-proposal-optional-chaining',
-      ],
+      presets,
     },
   },
 };
