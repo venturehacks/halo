@@ -27,22 +27,22 @@
         @include input--disabled;
       }
       .select__single-value--is-disabled {
-        @include font($color: $text-dark--a);
+        @include font($color: text-dark--a);
       }
     }
 
     .select__placeholder {
-      @include font($size: md, $color: $text-dark--a);
+      @include font($size: md, $color: text-dark--a);
     }
 
     .select__indicator,
     .select__indicator:hover {
       color: $slate--500;
+      padding: tempo(0.5);
     }
 
     .select__value-container {
       padding: 0;
-      position: initial;
       span {
         /* added in so that label padding for role select field disappears */
         padding-left: 0;
