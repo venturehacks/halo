@@ -37,7 +37,6 @@
     "gatsby-plugin-sharp": "^2.6.19",
     "gatsby-plugin-typescript": "^2.1.27",
     "gatsby-plugin-react-svg": "2.1.2",
-    "gatsby-remark-vscode": "^2.0.2",
     "gatsby-theme-docz": "2.3.3-alpha.0",
     "gatsby-transformer-sharp": "^2.3.14",
     "prop-types": "^15.6.2",
