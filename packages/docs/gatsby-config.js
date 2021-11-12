@@ -31,17 +31,19 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        sourceMap: true,
         sassRuleModulesTest: /\.scss$/,
         sassRuleTest: /\.global\.scss$/,
-        includePaths: [
-          'scss',
-          'node_modules',
-          path.resolve(haloDirectory, 'scss'),
-          path.resolve(haloDirectory, 'node_modules'),
-          path.resolve(rootDirectory, 'node_modules'),
-          path.resolve(__dirname, 'node_modules'),
-        ],
+        sassOptions: {
+          sourceMap: true,
+          includePaths: [
+            'scss',
+            'node_modules',
+            path.resolve(haloDirectory, 'scss'),
+            path.resolve(haloDirectory, 'node_modules'),
+            path.resolve(rootDirectory, 'node_modules'),
+            path.resolve(__dirname, 'node_modules'),
+          ],
+        },
       },
     },
     {

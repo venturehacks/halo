@@ -34,7 +34,7 @@
     "gatsby-alias-imports": "^1.0.4",
     "gatsby-plugin-netlify": "^2.1.32",
     "gatsby-plugin-offline": "^3.0.35",
-    "gatsby-plugin-sass": "^2.1.28",
+    "gatsby-plugin-sass": "3.0.0",
     "gatsby-plugin-sharp": "^2.6.19",
     "gatsby-plugin-typescript": "^2.1.27",
     "gatsby-remark-vscode": "^2.0.2",
