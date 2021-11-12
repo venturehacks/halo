@@ -2,8 +2,15 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [0.14.5](https://github.com/venturehacks/halo/compare/0.14.4...0.14.5)
+
+- Correct failing text overflow on react-select mixin [`#105`](https://github.com/venturehacks/halo/pull/105)
+
 #### [0.14.4](https://github.com/venturehacks/halo/compare/0.14.3...0.14.4)
 
+> 4 November 2021
+
+- Release 0.14.4 [`c30b34e`](https://github.com/venturehacks/halo/commit/c30b34ef48cda99a140dc51b1ddfca235dcbb9bc)
 - `RawRadio` correct hover state border radius [`9009018`](https://github.com/venturehacks/halo/commit/90090188b7ce4b822e3ee6d481b277321cbb90f2)
 
 #### [0.14.3](https://github.com/venturehacks/halo/compare/0.14.2...0.14.3)
@@ -45,20 +52,15 @@ All notable changes to this project will be documented in this file. Dates are d
 - Enable size-limit workflow on master commits [`5954a9c`](https://github.com/venturehacks/halo/commit/5954a9ce91fb052f4a74b0e9b43a148b3c220a1a)
 - :package: sideEffects: false [`c2f4945`](https://github.com/venturehacks/halo/commit/c2f494574bb7ed4c3e9acb8238f11de6e3341548)
 
-#### [0.13.0](https://github.com/venturehacks/halo/compare/v0.13.0...0.13.0)
-
-> 21 October 2021
-
-- Improved ignore patterns [`0bfd85e`](https://github.com/venturehacks/halo/commit/0bfd85ef0c671723fec19ebe11b55aa8d184b07f)
-- :package: force use of gemfury registry during publish [`1f71aca`](https://github.com/venturehacks/halo/commit/1f71acaf994b273f4a347d041f3d56ecae63e5fb)
-- Release 0.13.0 [`eadffce`](https://github.com/venturehacks/halo/commit/eadffce4aed97b34ae0c1bba713f28c1f2181b41)
-- Update package.json [`a00023a`](https://github.com/venturehacks/halo/commit/a00023a40d4f3818aa6c7f8daa3b7892e40b7c2c)
-
-#### [v0.13.0](https://github.com/venturehacks/halo/compare/0.12.0...v0.13.0)
+#### [0.13.0](https://github.com/venturehacks/halo/compare/0.12.0...0.13.0)
 
 > 21 October 2021
 
 - [LEV-950] Monorepository Refactor [`#98`](https://github.com/venturehacks/halo/pull/98)
+- Improved ignore patterns [`0bfd85e`](https://github.com/venturehacks/halo/commit/0bfd85ef0c671723fec19ebe11b55aa8d184b07f)
+- :package: force use of gemfury registry during publish [`1f71aca`](https://github.com/venturehacks/halo/commit/1f71acaf994b273f4a347d041f3d56ecae63e5fb)
+- Release 0.13.0 [`eadffce`](https://github.com/venturehacks/halo/commit/eadffce4aed97b34ae0c1bba713f28c1f2181b41)
+- Update package.json [`a00023a`](https://github.com/venturehacks/halo/commit/a00023a40d4f3818aa6c7f8daa3b7892e40b7c2c)
 - symlink yarnrc [`944e3bb`](https://github.com/venturehacks/halo/commit/944e3bb3bc54042182c258edb5ef03483cee209c)
 
 #### [0.12.0](https://github.com/venturehacks/halo/compare/0.11.0...0.12.0)
@@ -129,28 +131,11 @@ All notable changes to this project will be documented in this file. Dates are d
 - prepublish scripts that generate an slim package.json [`ffe4019`](https://github.com/venturehacks/halo/commit/ffe4019845e36a90a859c2ef2a02985ce25448f3)
 - Update .release-it.json [`2536461`](https://github.com/venturehacks/halo/commit/2536461f9c21ede346242af339dc9f6a1fa91db3)
 
-#### [0.9.7](https://github.com/venturehacks/halo/compare/v0.9.7...0.9.7)
+#### [0.9.7](https://github.com/venturehacks/halo/compare/0.9.6...0.9.7)
 
 > 9 October 2020
 
-#### [v0.9.7](https://github.com/venturehacks/halo/compare/0.9.6...v0.9.7)
-
-> 12 October 2020
-
-- Robust .npmignore to slim down package [`39619a0`](https://github.com/venturehacks/halo/commit/39619a0dc3be6bea22e66fff28c51e215301c031)
-- Release 0.9.9 [`c001988`](https://github.com/venturehacks/halo/commit/c0019880efb37486fe11faeb96e1a59b4c192c98)
-- Release 0.9.11 [`f81d1b8`](https://github.com/venturehacks/halo/commit/f81d1b8d7bc7d4e4de1df2e21e3dd6330182a597)
-- Release 0.9.10 [`7297022`](https://github.com/venturehacks/halo/commit/72970220a5c53e93558e5eda521b4db43ca2dfee)
-- Release 0.9.8 [`df337cc`](https://github.com/venturehacks/halo/commit/df337cca783869d95ae45cdf1334950c576a2240)
 - Release 0.9.7 [`6287dca`](https://github.com/venturehacks/halo/commit/6287dca2daa16681275ae1f55c7af88058b63ed4)
-- Expand npmignore further [`cefad6e`](https://github.com/venturehacks/halo/commit/cefad6e0a5e7670e4ebede66bf604eb693ddb008)
-- tidy up publish scripts [`f525265`](https://github.com/venturehacks/halo/commit/f525265ee76a0b60eab7d6a91bda635a37a6f30a)
-- Ignore special publish package jsons [`545da0d`](https://github.com/venturehacks/halo/commit/545da0dea2511dfccb9ad3259bb742595288b54a)
-- prepublish scripts that generate an slim package.json [`ffe4019`](https://github.com/venturehacks/halo/commit/ffe4019845e36a90a859c2ef2a02985ce25448f3)
-- Postpublish script [`a4260f6`](https://github.com/venturehacks/halo/commit/a4260f6ecc0cda09cd5823fd0ba692deffab532d)
-- postpublish: Only reset yarn.lock [`4315293`](https://github.com/venturehacks/halo/commit/431529300be4fb85f5ecb16c0336dc06a124e1ac)
-- Do not re-test before publish, it's redundant with our build system [`aff900e`](https://github.com/venturehacks/halo/commit/aff900e58d724bd18cd1d7cb387592bc398966fa)
-- Update .release-it.json [`2536461`](https://github.com/venturehacks/halo/commit/2536461f9c21ede346242af339dc9f6a1fa91db3)
 - remove `prepare` script [`411f4db`](https://github.com/venturehacks/halo/commit/411f4db8f573a7f12168c82e6f6af715340bbb3a)
 
 #### [0.9.6](https://github.com/venturehacks/halo/compare/0.9.5...0.9.6)
