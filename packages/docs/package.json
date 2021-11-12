@@ -27,7 +27,6 @@
     "@types/react": "17.0.30",
     "@types/react-dom": "17.0.9",
     "@types/webpack": "5.28.0",
-    "@types/webpack-merge": "5.0.0",
     "babel-preset-gatsby": "0.12.3",
     "docz": "next",
     "gatsby": "^2.19.18",
@@ -43,7 +42,7 @@
     "gatsby-transformer-sharp": "^2.3.14",
     "prop-types": "^15.6.2",
     "webpack": "4.28.4",
-    "webpack-merge": "^4.2.1"
+    "webpack-merge": "5.8.0"
   },
   "dependencies": {
     "@theme-ui/typography": "^0.11.3",
@@ -59,8 +58,8 @@
   },
   "resolutions": {
     "get-caller-file": "1.0.3",
-    "node-sass": "5.0.0",
-    "**/node-sass": "5.0.0",
+    "node-sass": "6.0.1",
+    "**/node-sass": "6.0.1",
     "chokidar": "3.4.2",
     "**/chokidar": "3.4.2",
     "react": "17.0.2",
