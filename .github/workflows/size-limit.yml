@@ -21,7 +21,7 @@ jobs:
             packages/halo/node_modules
             packages/docs/node_modules
             ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock', './.yarnrc', './.github/workflows/size-limit.yml', './package.json', './packages/*/package.json') }}
+          key: ${{ runner.os }}-yarn-${{ hashFiles('./yarn.lock') }}-config-${{ hashFiles('./.yarnrc', './.github/workflows/size-limit.yml', './package.json', './packages/*/package.json') }}
           restore-keys: |
             ${{ runner.os }}-yarn-
       - name: Install dependencies
