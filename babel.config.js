@@ -1,18 +1,23 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
+const presets = ['babel-preset-gatsby', '@babel/preset-typescript'];
+
+const svgoConfig = require('./svgo.config.js');
+
+const plugins = [['inline-react-svg', { svgo: svgoConfig }]];
+
 module.exports = {
   env: {
     development: {
-      presets: ['babel-preset-gatsby'],
+      presets,
+      plugins,
     },
     production: {
-      presets: ['babel-preset-gatsby'],
+      presets,
+      plugins,
     },
     test: {
-      presets: [['next/babel', { 'preset-env': { modules: 'commonjs' } }]],
-      plugins: [
-        'dynamic-import-node',
-        '@babel/plugin-proposal-optional-chaining',
-      ],
+      presets,
+      plugins,
     },
   },
 };
