@@ -2,9 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [0.15.0](https://github.com/venturehacks/halo/compare/0.14.5...0.15.0)
+
+- Node 16 support [`#109`](https://github.com/venturehacks/halo/pull/109)
+- Iconography support [`#108`](https://github.com/venturehacks/halo/pull/108)
+- Node 15 / Apple Silicon Support [`#107`](https://github.com/venturehacks/halo/pull/107)
+
 #### [0.14.5](https://github.com/venturehacks/halo/compare/0.14.4...0.14.5)
 
+> 11 November 2021
+
 - Correct failing text overflow on react-select mixin [`#105`](https://github.com/venturehacks/halo/pull/105)
+- Release 0.14.5 [`a5e1bff`](https://github.com/venturehacks/halo/commit/a5e1bff0865cf63faf85bc2c21b5eb422d84e24e)
 
 #### [0.14.4](https://github.com/venturehacks/halo/compare/0.14.3...0.14.4)
 
