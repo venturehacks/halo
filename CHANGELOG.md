@@ -2,9 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [0.15.2](https://github.com/venturehacks/halo/compare/0.15.1...0.15.2)
+
+- one more padding-left/right hotfix for Track [`7c0f82d`](https://github.com/venturehacks/halo/commit/7c0f82d4b5c58786d0dbfe0e219e6cc513f3eb98)
+
 #### [0.15.1](https://github.com/venturehacks/halo/compare/0.15.0...0.15.1)
 
+> 17 November 2021
+
 - [react-select mixin] remove explicit padding [`#112`](https://github.com/venturehacks/halo/pull/112)
+- Release 0.15.1 [`61891f4`](https://github.com/venturehacks/halo/commit/61891f4f37a9c7008ec4edaac798578437f476e9)
 
 #### [0.15.0](https://github.com/venturehacks/halo/compare/0.14.5...0.15.0)
 
