@@ -74,16 +74,16 @@
 
 .gray {
   background-color: $slate--100;
-  border-color: $text-dark-aaa;
-  color: $text-dark-aaa;
+  border-color: $text-dark--aaa;
+  color: $text-dark--aaa;
 
   &:active {
     background-color: $slate--200;
   }
 
   &:disabled {
-    border-color: $text-dark-a;
-    color: $text-dark-a;
+    border-color: $text-dark--a;
+    color: $text-dark--a;
   }
 }
 
@@ -98,8 +98,8 @@
 
   &:disabled {
     background-color: $slate--100;
-    border-color: $slate-100;
-    color: $slate-500;
+    border-color: $slate--100;
+    color: $slate--500;
   }
 }
 
