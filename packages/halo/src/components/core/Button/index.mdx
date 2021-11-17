@@ -18,36 +18,15 @@ import { Header } from '../Header'
   <Box row margin={{ bottom: 2 }}>
     <Button>Primary</Button>
     <Button variant="secondary">Secondary</Button>
-    <Button variant="secondary-gray" emphasis={false}>Secondary Gray</Button>
     <Button variant="gray">Gray</Button>
-    <Button variant="clear">Clear</Button>
-  </Box>
-  <Box margin={{ bottom: 8 }} row>
-    <Button variant="warning">Warning</Button>
-    <Button variant="danger">Danger</Button>
-    <Button variant="success">Success</Button>
+    <Button variant="destructive">Destructive</Button>
   </Box>
 
   <Header h4>Sizes</Header>
-  <Box maxWidth="540px" align="space-between" valign="bottom" margin={{ bottom: 8 }} row>
-    <Button size="large" variant="secondary-gray">Large Button</Button>
-
-    <Button variant="secondary-gray">Regular</Button>
-
-    <Button size="small" variant="secondary-gray">Small</Button>
-
-    <Button size="xsmall" variant="secondary-gray">Extra small</Button>
-  </Box>
-  <Box>
-    <div>
-      <Tooltip content="Supported in 0.8, fully deprecated in 0.9" placement="right">
-        <Header h4 inlineBlock>⚠️ Deprecated</Header>
-      </Tooltip>
-    </div>
-    <Button variant="alternate" emphasis={false}>alternate</Button>
-    <Box margin={{ top: 4 }} row>
-      <Button size="inline" variant="secondary-gray">Inline</Button> {' '}button to apply to this job.
-    </Box>
+  <Box maxWidth="540px" align="space-between" valign="bottom" margin={{ bottom: 2 }} row>
+    <Button size="sm">sm</Button>
+    <Button size="md" variant="secondary">md</Button>
+    <Button size="lg" variant="gray">lg</Button>
   </Box>
 </Playground>
 
@@ -55,22 +34,26 @@ import { Header } from '../Header'
 
 ```ts
 type ButtonSize =
-  | 'large'
-  | 'regular'
-  | 'small'
-  | 'xsmall'
+  | 'sm'
+  | 'md'
+  | 'lg'
+  | 'large' // deprecated in 0.15
+  | 'regular' // deprecated in 0.15
+  | 'small' // deprecated in 0.15
+  | 'xsmall' // deprecated in 0.15
   | 'inline'; // deprecated in 0.9
 ```
 ```ts
 type ButtonVariant =
-  | 'primary'
+  | 'primary' 
   | 'secondary'
-  | 'warning'
-  | 'danger'
-  | 'success'
-  | 'secondary-gray'
-  | 'clear'
-  | 'gray' // deprecated in 0.9
+  | 'gray'
+  | 'desctructive'
+  | 'warning' // deprecated in 0.15
+  | 'danger' // deprecated in 0.15
+  | 'success' // deprecated in 0.15
+  | 'secondary-gray' // deprecated in 0.15
+  | 'clear' // deprecated in 0.15
   | 'alternate'; // deprecated in 0.9
 ```
 

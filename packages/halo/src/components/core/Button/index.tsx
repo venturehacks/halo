@@ -14,7 +14,7 @@ export type ButtonSize =
   | 'md'
   | 'lg'
   /**
-   * @deprecated 0.15
+   * @deprecated 0.15 (all below)
    */
   | 'large'
   | 'regular'
@@ -28,7 +28,7 @@ export type ButtonVariant =
   | 'gray'
   | 'destructive'
   /**
-   * @deprecated 0.15
+   * @deprecated 0.15 (all below)
    */
   | 'warning'
   | 'danger'
