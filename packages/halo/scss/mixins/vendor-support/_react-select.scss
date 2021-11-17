@@ -41,7 +41,8 @@
     }
 
     .select__value-container {
-      padding: 0;
+      padding-left: 0;
+      padding-right: 0;
       span {
         /* added in so that label padding for role select field disappears */
         padding-left: 0;
