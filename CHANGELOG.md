@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [0.15.1](https://github.com/venturehacks/halo/compare/0.15.0...0.15.1)
+
+- [react-select mixin] remove explicit padding [`#112`](https://github.com/venturehacks/halo/pull/112)
+
 #### [0.15.0](https://github.com/venturehacks/halo/compare/0.14.5...0.15.0)
+
+> 12 November 2021
 
 - Node 16 support [`#109`](https://github.com/venturehacks/halo/pull/109)
 - Iconography support [`#108`](https://github.com/venturehacks/halo/pull/108)
 - Node 15 / Apple Silicon Support [`#107`](https://github.com/venturehacks/halo/pull/107)
+- Release 0.15.0 [`265c736`](https://github.com/venturehacks/halo/commit/265c736ceb99af330ac305744e3055b4e4f80130)
 
 #### [0.14.5](https://github.com/venturehacks/halo/compare/0.14.4...0.14.5)
 

@@ -1,6 +1,6 @@
 {
   "name": "halo-monorepo",
-  "version": "0.15.0",
+  "version": "0.15.1",
   "private": true,
   "displayName": "Halo Design System Monorepo",
   "description": "Monorepo containing Halo module sources and documentation site.",
