@@ -35,20 +35,19 @@
 // Colors
 
 .primary {
-  background-color: $blue--500;
-  border-color: $blue--500;
+  background-color: $primary-dark;
+  border-color: $primary-dark;
   color: $white;
 
   &:hover {
-    color: $white;
-    border-color: $blue--600;
     background-color: $blue--600;
+    border-color: $blue--600;
   }
 
-  &:active {
-    color: $white;
-    border-color: $blue--300;
+  &:active,
+  &:disabled {
     background-color: $blue--300;
+    border-color: $blue--300;
   }
 }
 
@@ -58,18 +57,119 @@
   color: $blue--500;
 
   &:hover {
-    color: $blue--600;
-    border-color: $blue--600;
-    background-color: #f4f5f7; // ebecee
+    background-color: $slate--100;
   }
 
   &:active {
-    color: $blue--400;
-    border-color: $blue--300;
     background-color: #ebecee;
-    opacity: 0.9;
+    border-color: $blue--400;
+    color: $blue--400;
+  }
+
+  &:disabled {
+    border-color: $blue--300;
+    color: $blue--300;
   }
 }
+
+.gray {
+  background-color: $slate--100;
+  border-color: $text-dark-aaa;
+  color: $text-dark-aaa;
+
+  &:active {
+    background-color: $slate--200;
+  }
+
+  &:disabled {
+    border-color: $text-dark-a;
+    color: $text-dark-a;
+  }
+}
+
+.destructive {
+  background-color: $red--100;
+  border-color: $red--100;
+  color: $text-light--error;
+
+  &:hover {
+    background-color: $red--200;
+  }
+
+  &:disabled {
+    background-color: $slate--100;
+    border-color: $slate-100;
+    color: $slate-500;
+  }
+}
+
+// Sizes
+
+.sm {
+  font-size: 14px;
+
+  &.text {
+    padding: 7px tempo(1.5) tempo tempo(1.5);
+  }
+
+  &.iconOnly {
+    padding: tempo(2);
+  }
+}
+
+.md {
+  font-size: 14px;
+
+  &.text {
+    padding: 11px tempo(2) tempo(1.5) tempo(2);
+  }
+
+  &.iconOnly {
+    padding: tempo(2.5);
+  }
+}
+
+.lg {
+  font-size: 14px;
+
+  &.text {
+    padding: 15px tempo(5) tempo(2) tempo(5);
+  }
+
+  &.iconOnly {
+    padding: tempo(4);
+  }
+}
+
+// Others
+
+.hasIcon {
+  @include flex-row($align: center, $valign: center);
+  flex-shrink: 0;
+
+  .icon {
+    fill: currentColor;
+    stroke: currentColor;
+    flex-shrink: 0;
+    flex-grow: 0;
+    padding-right: 0.5em; // some space between icon + label
+
+    .iconOnly & {
+      padding-right: 0;
+    }
+
+    .rightIcon & {
+      padding-left: 0.5em; // some space between icon + label
+      padding-right: 0;
+    }
+  }
+}
+
+.width100 {
+  width: 100%;
+}
+
+// DEPRECATED BELOW THIS
 
 .warning {
   background-color: $orange--400;
@@ -125,19 +225,6 @@
   }
 }
 
-.gray {
-  background-color: $slate--100;
-  color: $slate--400;
-
-  &:hover {
-    background-color: lighten($slate--100, 10%);
-  }
-
-  &:active {
-    background-color: $slate--200;
-  }
-}
-
 .secondaryGray {
   background-color: $white;
   border-color: $slate--500;
@@ -167,8 +254,6 @@
   color: $slate--500;
   background-color: $white;
 }
-
-// Sizes
 
 .regular {
   font-size: 14px;
@@ -230,25 +315,4 @@
   font-size: inherit;
   padding: tempo(0.5) tempo(1);
   margin-right: tempo(1);
-}
-
-.hasIcon {
-  @include flex-row($align: center, $valign: center);
-  flex-shrink: 0;
-
-  .icon {
-    fill: currentColor;
-    stroke: currentColor;
-    flex-shrink: 0;
-    flex-grow: 0;
-    padding-right: 0.5em; // some space between icon + label
-
-    .iconOnly & {
-      padding-right: 0;
-    }
-  }
-}
-
-.width100 {
-  width: 100%;
 }

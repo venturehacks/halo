@@ -113,6 +113,7 @@ function ButtonRaw({
     styles[size],
     emphasis && styles.emphasis,
     icon && styles.hasIcon,
+    iconPosition === 'right' && styles.rightIcon,
     icon && !children && styles.iconOnly,
     width === '100%' && styles.width100,
     className,
