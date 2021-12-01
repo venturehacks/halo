@@ -107,10 +107,7 @@
 
 .sm {
   font-size: 14px;
-
-  &.text {
-    padding: 7px tempo(1.5) tempo tempo(1.5);
-  }
+  padding: 7px tempo(1.5) tempo(1) tempo(1.5);
 
   &.iconOnly {
     padding: tempo(2);
@@ -119,10 +116,7 @@
 
 .md {
   font-size: 14px;
-
-  &.text {
-    padding: 11px tempo(2) tempo(1.5) tempo(2);
-  }
+  padding: 11px tempo(2) tempo(1.5) tempo(2);
 
   &.iconOnly {
     padding: tempo(2.5);
@@ -131,10 +125,7 @@
 
 .lg {
   font-size: 14px;
-
-  &.text {
-    padding: 15px tempo(5) tempo(2) tempo(5);
-  }
+  padding: 15px tempo(5) tempo(2) tempo(5);
 
   &.iconOnly {
     padding: tempo(4);
