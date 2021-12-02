@@ -1,37 +1,40 @@
 import classNames from 'classnames';
 import React from 'react';
 
-export interface TabGroupProps<T> {
+export interface TabGroupProps<T, TabComponentProps extends React.AnchorHTMLAttributes<HTMLAnchorElement>> {
   children?: React.ReactNode;
   className?: string;
-  onTabClick?: (() => void) | ((tab: Tab<T>) => void);
-  renderTab?:
-    (props: Omit<Tab<T>, 'label'> ) => JSX.Element;
-  tabs: Tab<T>[];
+  onTabClick?: (() => void) | ((tab: Tab<T, TabComponentProps>) => void);
+  tabComponent?: React.ComponentType<TabComponentProps>;
+  tabs: Tab<T, TabComponentProps>[];
   variant?: 'normal' | 'no-margin' | 'pills';
 }
 
-export interface Tab<T> extends React.HTMLAttributes<HTMLAnchorElement> {
+interface TabAnchorProps<T> extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   active?: boolean;
-  disabled?: boolean;
   attentionIndicator?: boolean;
   className?: string;
+  disabled?: boolean;
   flair?: string | number; // flair to display beside tab name
   label: string;
   value?: T;
-  ['data-test']?: string;
 }
+
+export type Tab<
+  T,
+  TabComponentProps,
+> = Omit<TabComponentProps, keyof TabAnchorProps<T>> & TabAnchorProps<T>;
 
 import styles from './styles.scss';
 
-export function TabGroup<T = string>({
+export function TabGroup<T = string, TabComponentProps = any>({
   className,
   onTabClick,
   tabs,
   variant,
   children,
-  renderTab,
-}: TabGroupProps<T>) {
+  tabComponent: TabComponent,
+}: TabGroupProps<T, TabComponentProps>) {
   return (
     <nav
       className={classNames(
@@ -41,33 +44,38 @@ export function TabGroup<T = string>({
         variant === 'pills' && styles.pills,
       )}
     >
-      {tabs.map((tab: Tab<T>) => (
-        renderTab({
-          disabled: tab.disabled,
-          onClick: onTabClick ? () => onTabClick(tab) : undefined,
-          'data-test': `TabGroup-Tab--${tab.label}`,
-          className: classNames(
+      {tabs.map((tab: Tab<T, TabComponentProps>) => (
+        <TabComponent
+          key={tab.label}
+          aria-label={tab.label}
+          className={classNames(
             tab.className,
             tab.active && styles.active,
-          ),
-          children: (
-            <React.Fragment key={tab.label}>
-              {tab.label}
-              {tab.flair != null && (
-                <span className={styles.flair}>
-                  {typeof tab.flair === 'number'
-                    ? Intl.NumberFormat(undefined, { minimumIntegerDigits: 1, maximumFractionDigits: 0 }).format(tab.flair)
-                    : tab.flair}
-                </span>
-              )}
-              {tab.attentionIndicator && (
-                <div className={styles.badgeContainer}>
-                  <div className={styles.badge}> </div>
-                </div>
-              )}
-          </React.Fragment>
-          )
-        })))}
+          )}
+          data-test={`TabGroup-Tab--${tab.label}`}
+          disabled={tab.disabled}
+          onClick={onTabClick ? () => onTabClick(tab) : undefined}
+          params={tab.params}
+          route={tab.route}
+          track={tab.track}
+        >
+          <>
+          {tab.label}
+          {tab.flair != null && (
+            <span className={styles.flair}>
+              {typeof tab.flair === 'number'
+                ? formatNumberCompact(tab.flair)
+                : tab.flair}
+            </span>
+          )}
+          {tab.badge && (
+            <div className={styles.badgeContainer}>
+              <div className={styles.badge}> </div>
+            </div>
+          )}
+          </>
+        </Anchor>
+      ))}
       {children}
     </nav>
 }
