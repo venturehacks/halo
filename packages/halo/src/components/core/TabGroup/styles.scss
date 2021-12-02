@@ -1,0 +1,115 @@
+@import 'halo';
+
+.component.component {
+  @include flex-row;
+  min-height: unset;
+  width: 100%;
+  margin-bottom: tempo(2);
+  max-width: 100%;
+  overflow-x: auto;
+
+  @include tablet-up {
+    margin-bottom: tempo(2.5);
+    overflow-x: unset;
+  }
+
+  a {
+    @include font($color: text-dark--aa, $weight: regular);
+    @include flex-row($valign: center);
+    padding-bottom: tempo(1);
+    border-bottom: 2px solid transparent;
+    flex-shrink: 0;
+    position: relative;
+
+    &,
+    &:visited,
+    &:link {
+      text-decoration: none;
+    }
+
+    &:hover {
+      @include font($color: text-dark--link);
+      border-bottom-color: $blue--200;
+      text-decoration: none;
+    }
+
+    &.active {
+      color: $text-dark--aaaa;
+      border-bottom: 2px solid $slate--700;
+    }
+
+    .flair {
+      @include font($color: text-light--a, $size: 2xs);
+      @include border-rounded;
+      margin-left: tempo(1);
+      background-color: $blue--100;
+      padding: 2px 4px;
+    }
+  }
+
+  a + a {
+    margin-left: tempo(2);
+
+    @include tablet-up {
+      margin-left: tempo(3);
+    }
+  }
+
+  &.noMargin {
+    margin: 0;
+  }
+
+  &.pills {
+    @include border-rounded;
+    @include flex-row($valign: center);
+    border: 1px solid $slate--200;
+
+    a {
+      @include font($size: sm, $color: text-light--aaa);
+      @include flex-row($align: center, $valign: center);
+      border: none;
+      flex-grow: 1;
+      margin: 0;
+      padding: tempo(1) 0;
+
+      &:not(:last-of-type) {
+        border-right: 1px solid $slate--200;
+      }
+
+      &.active {
+        background-color: $blue--200;
+        color: $slate--700;
+        cursor: initial;
+
+        &:hover {
+          background-color: $blue--200;
+        }
+      }
+
+      &:hover {
+        background-color: $slate--200;
+      }
+
+      @include desktop-up {
+        padding: tempo(0.5) 0;
+      }
+    }
+  }
+
+  .badgeContainer {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .badge {
+    @include flex-row($valign: center, $align: center);
+    @include border-circle;
+    width: tempo(1);
+    height: tempo(1);
+    position: relative;
+    top: 0;
+    background-color: $red--600;
+    right: -100%;
+  }
+}
