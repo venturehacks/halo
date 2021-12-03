@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Box, BoxProps } from '../Box';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export interface GridProps extends BoxProps {
   centered?: boolean;

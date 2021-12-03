@@ -9,7 +9,7 @@ import {
 } from '../../../lib/text';
 import { Span } from '../Span';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export interface ParagraphProps {
   children: React.ReactNode;

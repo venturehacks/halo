@@ -7,7 +7,7 @@ import {
 } from '../../../lib/withForwardedRef';
 import { Badge, BadgeColor, BadgeShape } from '../Badge';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export type AvatarShape = 'circle' | 'square';
 
@@ -80,7 +80,7 @@ const Avatar = withForwardedRef<AvatarProps, HTMLDivElement>(AvatarRaw);
 export { Avatar };
 
 // For setting `height` and `width` attributes on `img` tag directly
-// ! Keep in sync with ./styles.scss
+// ! Keep in sync with ./styles.module.scss
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 export const IMAGE_SIZES: Record<AvatarSize, number> = {
   xxxsmall: 16,

@@ -2,7 +2,7 @@ import Tippy, { TippyProps } from '@tippyjs/react';
 import classNames from 'classnames';
 import React from 'react';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export interface TooltipProps extends TippyProps {
   /**

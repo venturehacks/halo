@@ -102,6 +102,11 @@
       "source.fixAll.eslint": true,
       "source.fixAll.tslint": true,
     },
+    "editor.quickSuggestions": {
+      "strings": true,
+      "other": true,
+    },
+    "css.validate": false,
     "eslint.debug": true,
     "eslint.lintTask.enable": true,
     "eslint.packageManager": "yarn",
@@ -122,7 +127,17 @@
     },
     "[typescriptreact]": {
       "editor.formatOnSave": true,
-    }
+    },
+    "tailwindCSS.includeLanguages": {
+      "typescript": "javascript",
+      "typescriptreact": "javascript",
+    },
+    "tailwindCSS.experimental.classRegex": [
+      // NOTE(drew): not working so far.
+      ["classNames\\(([^)]*)\\)", "'([^']*)'", "'([^']*)'"],
+      ["classNames\\(([^)]*)\\)", "'([^']*)'"],
+      [":(?:.|\n)*?[\"'`]([^\"'`]*).*?,"],
+    ],
   },
   "extensions": {
     "unwantedRecommendations": [

@@ -58,6 +58,7 @@
     "./ci/**/*.ts"
   ],
   "exclude": [
+    "**/*.config.js",
     "**/node_modules/**/*",
     "**/dist/**/*",
     "**/.docz/**/*",

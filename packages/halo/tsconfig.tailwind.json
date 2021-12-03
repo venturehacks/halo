@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig",
+  "compilerOptions": {
+    "module": "CommonJS",
+    "strictNullChecks": false,
+    "rootDir": ".",
+    "declaration": false,
+    "declarationDir": null,
+    "outDir": ".",
+    "sourceMap": false,
+    "inlineSourceMap": false,
+  },
+  "include": [
+    "./tailwind.config.ts"
+  ],
+  "exclude": [],
+}

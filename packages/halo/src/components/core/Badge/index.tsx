@@ -3,7 +3,7 @@ import React from 'react';
 
 import { Tooltip } from '../Tooltip';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export type BadgeColor =
   | 'blue'

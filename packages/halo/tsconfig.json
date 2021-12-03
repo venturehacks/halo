@@ -4,6 +4,7 @@
     "rootDir": "src",
     "declaration": true,
     "declarationDir": "dist/typings",
+    "tsBuildInfoFile": ".rollup.cache/.tsbuildinfo",
     // TREE-SHAKING
     // https://github.com/rollup/plugins/issues/247#issuecomment-663230846
     // "outDir": "dist/esm",
@@ -25,7 +26,7 @@
     "src/**/*.ts",
   ],
   "exclude": [
-    "jest.config.js",
+    "src/tw.ts",
     "jest.dev.js",
     "**/__tests__/**/*",
     "node_modules/**/*",

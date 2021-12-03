@@ -2,7 +2,26 @@ module.exports = {
   extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
   plugins: ['stylelint-scss'],
   rules: {
-    'at-rule-no-unknown': null,
+    'at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: [
+          'function',
+          'if',
+          'else',
+          'each',
+          'error',
+          'include',
+          'use',
+          'mixin',
+          'apply',
+          'tailwind',
+          'screen',
+          'extend',
+          'for',
+        ],
+      },
+    ],
     'block-closing-brace-newline-after': [
       'always',
       {
@@ -19,7 +38,26 @@ module.exports = {
         ignore: ['inside-block'],
       },
     ],
-    'scss/at-rule-no-unknown': true,
+    'scss/at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: [
+          'function',
+          'if',
+          'else',
+          'each',
+          'error',
+          'include',
+          'use',
+          'mixin',
+          'apply',
+          'tailwind',
+          'screen',
+          'extend',
+          'for',
+        ],
+      },
+    ],
     'scss/double-slash-comment-empty-line-before': [
       'always',
       {
