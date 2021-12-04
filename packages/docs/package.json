@@ -40,6 +40,9 @@
     "gatsby-theme-docz": "2.3.3-alpha.0",
     "gatsby-transformer-sharp": "^2.3.14",
     "prop-types": "^15.6.2",
+    "tailwindcss": "2.2.19",
+    "autoprefixer": "10.4.0",
+    "postcss": "8.4.4",
     "webpack": "4.28.4",
     "webpack-merge": "5.8.0"
   },

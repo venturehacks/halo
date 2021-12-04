@@ -31,8 +31,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-sass',
       options: {
-        sassRuleModulesTest: /\.scss$/,
-        sassRuleTest: /\.global\.scss$/,
+        sassRuleModulesTest: /\.module\.scss$/,
+        sassRuleTest: /\.scss$/,
         sassOptions: {
           sourceMap: true,
           includePaths: [
@@ -44,6 +44,11 @@ module.exports = {
             path.resolve(__dirname, 'node_modules'),
           ],
         },
+        postCssPlugins: [
+          require('tailwindcss')(
+            path.join(haloDirectory, 'tailwind.config.js'),
+          ),
+        ],
       },
     },
     {

@@ -1,5 +1,7 @@
 import React from 'react';
 
+import '../../src/tailwind.scss';
+
 import styles from './styles.module.scss';
 
 interface Props {

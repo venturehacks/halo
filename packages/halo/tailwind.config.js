@@ -90,6 +90,7 @@ const colors = {
 
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
+  // prefix: '',
   // or 'media' or 'class'
   corePlugins: {
     // we have our own style reset
@@ -100,7 +101,7 @@ module.exports = {
   mode: 'jit',
   plugins: [],
   purge: {
-    content: ['src/**/*.tsx', 'dist/**/*.mjs'],
+    content: ['src/**/*.tsx', 'src/**/*.mdx', 'dist/**/*.mjs'],
     options: {
       keyframes: true,
     },
