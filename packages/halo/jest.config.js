@@ -44,16 +44,16 @@ module.exports = {
       ],
       testPathIgnorePatterns,
     },
-    {
-      displayName: 'stylelint',
-      moduleFileExtensions: ['css', 'scss'],
-      runner: 'jest-runner-stylelint',
-      testMatch: [
-        '<rootDir>/packages/halo/**/*.css',
-        '<rootDir>/packages/halo/**/*.scss',
-      ],
-      testPathIgnorePatterns,
-    },
+    // {
+    //   displayName: 'stylelint',
+    //   moduleFileExtensions: ['css', 'scss'],
+    //   runner: 'jest-runner-stylelint',
+    //   testMatch: [
+    //     '<rootDir>/packages/halo/**/*.css',
+    //     '<rootDir>/packages/halo/**/*.scss',
+    //   ],
+    //   testPathIgnorePatterns,
+    // },
     {
       displayName: 'eslint',
       moduleFileExtensions: ['ts', 'tsx'],
