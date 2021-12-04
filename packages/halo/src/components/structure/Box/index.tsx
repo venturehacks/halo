@@ -8,8 +8,6 @@ import {
   withForwardedRef,
 } from '../../../lib/withForwardedRef';
 
-import styles from './styles.module.scss';
-
 export type BoxAlign =
   | 'top'
   | 'center'
@@ -19,6 +17,7 @@ export type BoxAlign =
   | 'normal'
   | 'space-between'
   | 'space-evenly'
+  | 'space-around'
   | 'stretch';
 
 export interface NegativeSpace {
@@ -157,21 +156,15 @@ function BoxRaw({
   }
 
   const classes = classNames(
-    styles.component,
     className,
-    isFlexColumn && styles.flexColumn,
-    isFlexRow && styles.flexRow,
-    relative && styles.relative,
-    width === '100%' && styles.width100,
-    wrap && styles.wrap,
-    onClick && styles.clickable,
-    isFlexColumn && align && `__halo_col_align_${align}`,
-    isFlexColumn && valign && `__halo_col_valign_${valign}`,
-    isFlexRow && align && `__halo_row_align_${align}`,
-    isFlexRow && valign && `__halo_row_valign_${valign}`,
+    flexAlignmentClassNames(align, valign, isFlexColumn, isFlexRow),
+    relative && 'relative',
+    width === '100%' && 'w-full',
+    wrap && 'flex-wrap',
+    onClick && 'cursor-pointer',
     negativeSpaceClasses,
-    background && `__halo_background_${background}`,
-    textAlign && `__halo_textAlign_${textAlign}`,
+    background && `bg-${background.replace('--', '-')}`,
+    textAlign && `text-${textAlign}`,
   );
 
   return (
@@ -187,6 +180,99 @@ function BoxRaw({
   );
 }
 
+// NOTE(drew): Function is ugly af. Will replace.
+function flexAlignmentClassNames(
+  align?: BoxAlign,
+  valign?: BoxAlign,
+  column?: boolean,
+  row?: boolean,
+) {
+  const classes = [];
+  if (column) {
+    classes.push('flex', 'flex-col');
+    switch (
+      align // cross-axis (items)
+    ) {
+      case 'left':
+        classes.push('items-start');
+        break;
+      case 'right':
+        classes.push('items-end');
+        break;
+      case 'center':
+        classes.push('items-center');
+        break;
+      case 'stretch':
+        classes.push('items-stretch');
+        break;
+    }
+    switch (
+      valign // main axis (justify)
+    ) {
+      case 'top':
+        classes.push('justify-start');
+        break;
+      case 'bottom':
+        classes.push('justify-end');
+        break;
+      case 'center':
+        classes.push('justify-center');
+        break;
+      case 'space-between':
+        classes.push('justify-between');
+        break;
+      case 'space-evenly':
+        classes.push('justify-evenly');
+        break;
+      case 'space-around':
+        classes.push('justify-around');
+        break;
+    }
+  } else if (row) {
+    classes.push('flex', 'flex-row');
+    switch (
+      valign // cross-axis (items)
+    ) {
+      case 'top':
+        classes.push('items-start');
+        break;
+      case 'bottom':
+        classes.push('items-end');
+        break;
+      case 'center':
+        classes.push('items-center');
+        break;
+      case 'stretch':
+        classes.push('items-stretch');
+        break;
+    }
+    switch (
+      align // main axis (justify)
+    ) {
+      case 'left':
+        classes.push('justify-start');
+        break;
+      case 'right':
+        classes.push('justify-end');
+        break;
+      case 'center':
+        classes.push('justify-center');
+        break;
+      case 'space-between':
+        classes.push('justify-between');
+        break;
+      case 'space-evenly':
+        classes.push('justify-evenly');
+        break;
+      case 'space-around':
+        classes.push('justify-around');
+        break;
+    }
+  }
+
+  return classes.join(' ');
+}
+
 function augmentNegativeSpaceClasses(
   classes: Dictionary<number | boolean>,
   space: NegativeSpace | number | boolean,
@@ -195,7 +281,10 @@ function augmentNegativeSpaceClasses(
   if (typeof space === 'object') {
     return {
       ...classes,
-      ...mapKeys(space, (value, key) => `__halo_${metric}_${key}_${value}`),
+      ...mapKeys(
+        space,
+        (magnitude, direction) => `${metric[0]}${direction[0]}-${magnitude}`,
+      ),
     };
   } else if (
     (typeof space === 'number' || typeof space === 'boolean') &&
@@ -204,10 +293,7 @@ function augmentNegativeSpaceClasses(
     return {
       ...classes,
       ...{
-        [`__halo_${metric}_top_${Number(space)}`]: true,
-        [`__halo_${metric}_bottom_${Number(space)}`]: true,
-        [`__halo_${metric}_left_${Number(space)}`]: true,
-        [`__halo_${metric}_right_${Number(space)}`]: true,
+        [`${metric[0]}-${space}`]: true,
       },
     };
   }
