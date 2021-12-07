@@ -2,7 +2,7 @@
 
 exports[`Button snapshot default 1`] = `
 <button
-  class="component primary regular emphasis"
+  class="component primary sm emphasis"
   data-test="Button"
   type="button"
 />
@@ -10,55 +10,39 @@ exports[`Button snapshot default 1`] = `
 
 exports[`Button snapshot no emphasis 1`] = `
 <button
-  class="component primary regular"
+  class="component primary sm"
   data-test="Button"
   type="button"
 />
 `;
 
-exports[`Button snapshot size large 1`] = `
+exports[`Button snapshot size lg 1`] = `
 <button
-  class="component primary large emphasis"
+  class="component primary lg emphasis"
   data-test="Button"
   type="button"
 />
 `;
 
-exports[`Button snapshot size regular 1`] = `
+exports[`Button snapshot size md 1`] = `
 <button
-  class="component primary regular emphasis"
+  class="component primary md emphasis"
   data-test="Button"
   type="button"
 />
 `;
 
-exports[`Button snapshot size small 1`] = `
+exports[`Button snapshot size sm 1`] = `
 <button
-  class="component primary small emphasis"
+  class="component primary sm emphasis"
   data-test="Button"
   type="button"
 />
 `;
 
-exports[`Button snapshot size xsmall 1`] = `
+exports[`Button snapshot variant destructive 1`] = `
 <button
-  class="component primary xsmall emphasis"
-  data-test="Button"
-  type="button"
-/>
-`;
-
-exports[`Button snapshot variant clear 1`] = `
-<button
-  class="component clear regular emphasis"
-  data-test="Button"
-  type="button"
-/>
-`;
-
-exports[`Button snapshot variant danger 1`] = `
-<button
-  class="component danger regular emphasis"
+  class="component destructive sm emphasis"
   data-test="Button"
   type="button"
 />
@@ -66,7 +50,7 @@ exports[`Button snapshot variant danger 1`] = `
 
 exports[`Button snapshot variant gray 1`] = `
 <button
-  class="component gray regular emphasis"
+  class="component gray sm emphasis"
   data-test="Button"
   type="button"
 />
@@ -74,7 +58,7 @@ exports[`Button snapshot variant gray 1`] = `
 
 exports[`Button snapshot variant primary 1`] = `
 <button
-  class="component primary regular emphasis"
+  class="component primary sm emphasis"
   data-test="Button"
   type="button"
 />
@@ -82,31 +66,7 @@ exports[`Button snapshot variant primary 1`] = `
 
 exports[`Button snapshot variant secondary 1`] = `
 <button
-  class="component secondary regular emphasis"
-  data-test="Button"
-  type="button"
-/>
-`;
-
-exports[`Button snapshot variant secondary-gray 1`] = `
-<button
-  class="component secondaryGray regular emphasis"
-  data-test="Button"
-  type="button"
-/>
-`;
-
-exports[`Button snapshot variant success 1`] = `
-<button
-  class="component success regular emphasis"
-  data-test="Button"
-  type="button"
-/>
-`;
-
-exports[`Button snapshot variant warning 1`] = `
-<button
-  class="component warning regular emphasis"
+  class="component secondary sm emphasis"
   data-test="Button"
   type="button"
 />
@@ -114,7 +74,7 @@ exports[`Button snapshot variant warning 1`] = `
 
 exports[`Button snapshot width 100% 1`] = `
 <button
-  class="component primary regular emphasis width100"
+  class="component primary sm emphasis width100"
   data-test="Button"
   type="button"
 />
