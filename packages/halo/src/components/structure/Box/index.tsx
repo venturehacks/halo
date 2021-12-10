@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import { mapKeys } from 'lodash';
 import React from 'react';
 
 import { Color } from '../../../lib/colors';
@@ -151,29 +150,14 @@ function BoxRaw({
   const isFlexRow = !isBlockElement && row && !column;
 
   if (row && column) {
-    // tslint:disable-next-line: no-console
     console.warn(`[Halo Box] cannot be both column and row`);
   }
 
   if (isBlockElement && (wrap || align || valign || order)) {
-    // tslint:disable-next-line: no-console
     console.warn(
       `[Halo Box] flexbox-specific props were provided, but this box is not a flexbox`,
     );
   }
-
-  // parse 4-direction hashes for padding/margin
-  let negativeSpaceClasses: Dictionary<number | boolean> = {};
-  negativeSpaceClasses = augmentNegativeSpaceClasses(
-    negativeSpaceClasses,
-    margin,
-    'margin',
-  );
-  negativeSpaceClasses = augmentNegativeSpaceClasses(
-    negativeSpaceClasses,
-    padding,
-    'padding',
-  );
 
   // inline styles for order, etc.
   const inlineStyles: Dictionary<string | number> = {};
@@ -191,7 +175,6 @@ function BoxRaw({
   }
 
   if (background) {
-    // TODO: filter Colors
     inlineStyles.background = background;
   }
 
@@ -203,11 +186,17 @@ function BoxRaw({
     isFlexRow && 'flex flex-row',
     isFlexRow && align && FLEX_ALIGNMENT_MAP.row.align[align],
     isFlexRow && valign && FLEX_ALIGNMENT_MAP.row.valign[valign],
+    // NOTE(drew): These might work or might not: order, maxWidth, maxHeight, background
+    order && `order-${order}`,
+    maxWidth && `max-w-[${maxWidth}]`,
+    maxHeight && `max-h-[${maxHeight}]`,
+    background && `bg-[${background}]`,
     relative && 'relative',
     width === '100%' && 'w-full',
     wrap && 'flex-wrap',
     onClick && 'cursor-pointer',
-    negativeSpaceClasses,
+    augmentNegativeSpaceClasses(padding, 'padding'),
+    augmentNegativeSpaceClasses(margin, 'margin'),
     background && `bg-${background.replace('--', '-')}`,
     textAlign && `text-${textAlign}`,
   );
@@ -226,31 +215,20 @@ function BoxRaw({
 }
 
 function augmentNegativeSpaceClasses(
-  classes: Dictionary<number | boolean>,
   space: NegativeSpace | number | boolean,
   metric: 'padding' | 'margin',
 ) {
-  if (typeof space === 'object') {
-    return {
-      ...classes,
-      ...mapKeys(
-        space,
-        (magnitude, direction) => `${metric[0]}${direction[0]}-${magnitude}`,
-      ),
-    };
-  } else if (
-    (typeof space === 'number' || typeof space === 'boolean') &&
-    space
-  ) {
-    return {
-      ...classes,
-      ...{
-        [`${metric[0]}-${space}`]: true,
-      },
-    };
+  if (space && (typeof space === 'number' || typeof space === 'boolean')) {
+    return `${metric[0]}-${space}`;
   }
 
-  return classes;
+  if (typeof space === 'object') {
+    return Object.keys(space)
+      .map(direction => `${metric[0]}${direction[0]}-${space[direction]}`)
+      .join(' ');
+  }
+
+  return ``;
 }
 
 const Box = withForwardedRef<BoxProps, HTMLDivElement>(BoxRaw);
