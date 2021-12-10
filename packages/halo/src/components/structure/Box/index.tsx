@@ -84,6 +84,46 @@ export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   wrap?: boolean;
 }
 
+/* eslint-disable sort-keys-fix/sort-keys-fix */
+const FLEX_ALIGNMENT_MAP: Record<
+  'row' | 'column',
+  Record<'align' | 'valign', Dictionary<string>>
+> = {
+  column: {
+    align: {
+      left: 'items-start',
+      right: 'items-end',
+      center: 'items-center',
+      stretch: 'items-stretch',
+    },
+    valign: {
+      top: 'justify-start',
+      bottom: 'justify-end',
+      center: 'justify-center',
+      'space-between': 'justify-between',
+      'space-evenly': 'justify-evenly',
+      'space-around': 'justify-around',
+    },
+  },
+  row: {
+    valign: {
+      top: 'items-start',
+      bottom: 'items-end',
+      center: 'items-center',
+      stretch: 'items-stretch',
+    },
+    align: {
+      left: 'justify-start',
+      right: 'justify-end',
+      center: 'justify-center',
+      'space-between': 'justify-between',
+      'space-evenly': 'justify-evenly',
+      'space-around': 'justify-around',
+    },
+  },
+};
+/* eslint-enable sort-keys-fix/sort-keys-fix */
+
 function BoxRaw({
   align,
   background,
@@ -157,7 +197,12 @@ function BoxRaw({
 
   const classes = classNames(
     className,
-    flexAlignmentClassNames(align, valign, isFlexColumn, isFlexRow),
+    isFlexColumn && 'flex flex-col',
+    isFlexColumn && align && FLEX_ALIGNMENT_MAP.column.align[align],
+    isFlexColumn && valign && FLEX_ALIGNMENT_MAP.column.valign[valign],
+    isFlexRow && 'flex flex-row',
+    isFlexRow && align && FLEX_ALIGNMENT_MAP.row.align[align],
+    isFlexRow && valign && FLEX_ALIGNMENT_MAP.row.valign[valign],
     relative && 'relative',
     width === '100%' && 'w-full',
     wrap && 'flex-wrap',
@@ -178,99 +223,6 @@ function BoxRaw({
       {children}
     </div>
   );
-}
-
-// NOTE(drew): Function is ugly af. Will replace.
-function flexAlignmentClassNames(
-  align?: BoxAlign,
-  valign?: BoxAlign,
-  column?: boolean,
-  row?: boolean,
-) {
-  const classes = [];
-  if (column) {
-    classes.push('flex', 'flex-col');
-    switch (
-      align // cross-axis (items)
-    ) {
-      case 'left':
-        classes.push('items-start');
-        break;
-      case 'right':
-        classes.push('items-end');
-        break;
-      case 'center':
-        classes.push('items-center');
-        break;
-      case 'stretch':
-        classes.push('items-stretch');
-        break;
-    }
-    switch (
-      valign // main axis (justify)
-    ) {
-      case 'top':
-        classes.push('justify-start');
-        break;
-      case 'bottom':
-        classes.push('justify-end');
-        break;
-      case 'center':
-        classes.push('justify-center');
-        break;
-      case 'space-between':
-        classes.push('justify-between');
-        break;
-      case 'space-evenly':
-        classes.push('justify-evenly');
-        break;
-      case 'space-around':
-        classes.push('justify-around');
-        break;
-    }
-  } else if (row) {
-    classes.push('flex', 'flex-row');
-    switch (
-      valign // cross-axis (items)
-    ) {
-      case 'top':
-        classes.push('items-start');
-        break;
-      case 'bottom':
-        classes.push('items-end');
-        break;
-      case 'center':
-        classes.push('items-center');
-        break;
-      case 'stretch':
-        classes.push('items-stretch');
-        break;
-    }
-    switch (
-      align // main axis (justify)
-    ) {
-      case 'left':
-        classes.push('justify-start');
-        break;
-      case 'right':
-        classes.push('justify-end');
-        break;
-      case 'center':
-        classes.push('justify-center');
-        break;
-      case 'space-between':
-        classes.push('justify-between');
-        break;
-      case 'space-evenly':
-        classes.push('justify-evenly');
-        break;
-      case 'space-around':
-        classes.push('justify-around');
-        break;
-    }
-  }
-
-  return classes.join(' ');
 }
 
 function augmentNegativeSpaceClasses(
