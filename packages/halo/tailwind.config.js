@@ -96,6 +96,14 @@ module.exports = {
     // we have our own style reset
     // could move to tailwinds but would require a full style audit :X
     preflight: false,
+    // safelist
+    margin: true,
+    padding: true,
+    textAlign: true,
+    backgroundColor: true,
+    flex: true,
+    justifyContent: true,
+    alignItems: true,
   },
   darkMode: false,
   plugins: [],
