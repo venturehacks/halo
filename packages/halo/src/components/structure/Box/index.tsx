@@ -219,7 +219,7 @@ function augmentNegativeSpaceClasses(
   metric: 'padding' | 'margin',
 ) {
   if (space && (typeof space === 'number' || typeof space === 'boolean')) {
-    return `${metric[0]}-${space}`;
+    return `${metric[0]}-${Number(space) * 2}`; // Halo magnitude is 2x Tailwind
   }
 
   if (typeof space === 'object') {
