@@ -2,16 +2,12 @@
 
 $grid-cell-count: 24;
 
-.component {
-  @include halo-element-base; // TODO: deprecate
+.row {
+  @include grid-row;
+}
 
-  &.row {
-    @include grid-row;
-  }
-
-  &.centered {
-    @include grid-cell-centered;
-  }
+.centered {
+  @include grid-cell-centered;
 }
 
 // dynamic indexed classnames must be global

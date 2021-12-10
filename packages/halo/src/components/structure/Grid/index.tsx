@@ -1,3 +1,12 @@
+/**
+ * Tailwind note: Want to convert this component
+ * as a final errand. Our "grid" is a flexbox used
+ * as a grid, not an actual CSS grid.
+ *
+ * Conversely, Tailwind "grid" refers to CSS grid.
+ * We should probably converge on that.
+ */
+
 import classNames from 'classnames';
 import React from 'react';
 
@@ -30,7 +39,6 @@ function Grid({
   ...boxProps
 }: GridProps) {
   const classes = classNames(
-    styles.component,
     className,
     row && styles.row,
     centered && styles.centered,
