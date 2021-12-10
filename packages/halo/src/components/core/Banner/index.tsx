@@ -5,7 +5,10 @@ import { CloseIcon } from '../../icons';
 
 import styles from './styles.module.scss';
 
-export type BannerVariant = 'default' | 'warning' | 'error' | 'success';
+export type BannerVariant = 'notice' | 'success' | 'error' | 'fatal' | 'info';
+
+export const bannerClassNameBase =
+  'text-md font-medium rounded relative p-4 mb-2 border-solid border-slate-700 border-0 border-t-4 w-full bg-blue-100 shadow-sm flex flex-row justify-start overflow-hidden';
 
 export interface BannerProps {
   children?: React.ReactNode;
@@ -27,10 +30,9 @@ export interface BannerProps {
 function Banner({
   children,
   className,
-  constrain,
   offerDismiss = false,
   onDismiss,
-  variant = 'default',
+  variant = 'notice',
 }: BannerProps) {
   const [isDismissed, setIsDismissed] = React.useState(false);
 
@@ -46,22 +48,30 @@ function Banner({
 
   const classes = classNames(
     styles.component,
+    bannerClassNameBase,
     className,
-    isDismissed && styles.dismissed,
-    offerDismiss && styles.offerDismiss,
-    constrain && styles.constrain,
-    variant === 'default' && styles.passive,
-    variant === 'error' && styles.error,
-    variant === 'warning' && styles.warning,
-    variant === 'success' && styles.success,
+    isDismissed && 'max-h-0 opacity-0 m-0 p-0 pointer-events-none',
+    // offerDismiss && 'pr-10',
+    // constrain && styles.constrain,
+    variant === 'notice' && 'border-orange-300',
+    variant === 'error' && 'border-red-600',
+    variant === 'success' && 'border-green-500',
   );
 
   return (
     <div className={classes} data-test="Banner" role="alert">
-      {children}
+      {/* <aside className="mr-4 mt-1">
+        <CloseIcon className={classNames(variant === 'error' && 'block')}/>
+        <WarningTriangleIcon
+          className={classNames(variant === 'notice' && 'block')}
+        />
+        <CheckmarkIcon className={classNames(variant === 'success' && 'block')} />
+        <InfoIcon className={classNames(variant === 'info' && 'block')} />
+      </aside> */}
+      <div className="flex-1">{children}</div>
       {offerDismiss && (
         <button
-          className={styles.closeButton}
+          className="text-sm pl-2"
           data-test="Banner-closeButton"
           onClick={handleDismiss}
         >
