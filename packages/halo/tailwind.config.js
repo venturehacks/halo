@@ -98,7 +98,6 @@ module.exports = {
     preflight: false,
   },
   darkMode: false,
-  mode: 'jit',
   plugins: [],
   purge: {
     content: ['src/**/*.tsx', 'src/**/*.mdx', 'dist/**/*.mjs'],
