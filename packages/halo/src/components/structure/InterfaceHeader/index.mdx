@@ -1,0 +1,37 @@
+---
+name: InterfaceHeader
+menu: Structure
+route: /structure/interface-header
+---
+
+import { Playground, Props } from 'docz'
+import { InterfaceHeader } from './'
+
+# InterfaceHeader
+
+Divides application sections into a uniform hierarchy. This component is deliberately inflexible, and customization is discouraged. Lacks embedded padding &amp; margin.
+
+Compare to [Header](/core/header), which is appropriate for longform body copy.
+
+
+### Usage
+
+<Playground>
+  <InterfaceHeader primary>Primary</InterfaceHeader>
+</Playground>
+
+<Playground>
+  <InterfaceHeader secondary>Secondary</InterfaceHeader>
+</Playground>
+
+<Playground>
+  <InterfaceHeader tertiary>Tertiary</InterfaceHeader>
+</Playground>
+
+<Playground>
+  <InterfaceHeader micro>Micro</InterfaceHeader>
+</Playground>
+
+### Props
+
+<Props of={InterfaceHeader} />
