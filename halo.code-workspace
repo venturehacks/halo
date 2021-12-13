@@ -16,7 +16,6 @@
       "name": "Documentation Theme 📖",
       "path": "packages/docs/src/gatsby-theme-docz"
     },
-
   ],
   "settings": {
     "workbench.colorCustomizations": {
@@ -112,7 +111,6 @@
     "eslint.debug": true,
     "eslint.lintTask.enable": true,
     "eslint.packageManager": "yarn",
-    "eslint.workingDirectories": [{ "mode": "auto" }],
     "eslint.validate": [
       "javascript",
       "javascriptreact",
@@ -128,6 +126,12 @@
       "editor.formatOnSave": true,
     },
     "[typescriptreact]": {
+      "editor.formatOnSave": true,
+    },
+    "[markdown]": {
+      "editor.formatOnSave": true,
+    },
+    "[markdownreact]": {
       "editor.formatOnSave": true,
     },
     "tailwindCSS.includeLanguages": {
