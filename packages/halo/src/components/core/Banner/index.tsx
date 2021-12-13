@@ -80,8 +80,6 @@ function Banner({
           children
         )}
       </div>
-      {/* @include font($size: sm);
-  padding-left: tempo(2); */}
       {offerDismiss && (
         <button
           className="text-sm pl-2 bg-transparent border-0 cursor-pointer text-dark-link font-normal"
