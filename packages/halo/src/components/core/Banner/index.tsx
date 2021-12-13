@@ -3,14 +3,13 @@ import React from 'react';
 
 import { CloseIcon } from '../../icons';
 
-import styles from './styles.module.scss';
-
-export type BannerVariant = 'notice' | 'success' | 'error' | 'fatal' | 'info';
+export type BannerVariant = 'info' | 'warning' | 'success' | 'error';
 
 export const bannerClassNameBase =
-  'text-md font-medium rounded relative p-4 mb-2 border-solid border-slate-700 border-0 border-t-4 w-full bg-blue-100 shadow-sm flex flex-row justify-start overflow-hidden';
+  'text-md font-medium rounded relative p-4 mb-2 border-solid border-0 border-t-4 w-full bg-blue-100 shadow-sm flex flex-row justify-start items-center overflow-hidden';
 
 export interface BannerProps {
+  byline?: string;
   children?: React.ReactNode;
   className?: string;
   /**
@@ -28,11 +27,13 @@ export interface BannerProps {
 }
 
 function Banner({
+  byline,
   children,
   className,
+  constrain = true,
   offerDismiss = false,
   onDismiss,
-  variant = 'notice',
+  variant = 'info',
 }: BannerProps) {
   const [isDismissed, setIsDismissed] = React.useState(false);
 
@@ -47,35 +48,47 @@ function Banner({
   );
 
   const classes = classNames(
-    styles.component,
     bannerClassNameBase,
     className,
-    isDismissed && 'max-h-0 opacity-0 m-0 p-0 pointer-events-none',
-    // offerDismiss && 'pr-10',
-    // constrain && styles.constrain,
-    variant === 'notice' && 'border-orange-300',
+    constrain && 'max-w-screen-desktop',
+    isDismissed && 'max-h-0 opacity-0 m-0 p-0 pointer-events-none dismissed',
+    variant === 'info' && 'border-slate-700',
+    variant === 'warning' && 'border-orange-300',
     variant === 'error' && 'border-red-600',
     variant === 'success' && 'border-green-500',
   );
 
   return (
     <div className={classes} data-test="Banner" role="alert">
-      {/* <aside className="mr-4 mt-1">
-        <CloseIcon className={classNames(variant === 'error' && 'block')}/>
-        <WarningTriangleIcon
+      <aside className="mr-2 mt-1 ml-1">
+        {variant === 'error' && (
+          <CloseIcon className="block text-red-700 w-4 h-4 mt-0.5" />
+        )}
+        {/* <WarningTriangleIcon
           className={classNames(variant === 'notice' && 'block')}
-        />
-        <CheckmarkIcon className={classNames(variant === 'success' && 'block')} />
-        <InfoIcon className={classNames(variant === 'info' && 'block')} />
-      </aside> */}
-      <div className="flex-1">{children}</div>
+        /> */}
+        {/* <CheckmarkIcon className={classNames(variant === 'success' && 'block')} /> */}
+        {/* <InfoIcon className={classNames(variant === 'info' && 'block')} /> */}
+      </aside>
+      <div className="flex-1">
+        {byline ? (
+          <div>
+            {children}
+            <div className="font-medium text-xs text-dark-aa">{byline}</div>
+          </div>
+        ) : (
+          children
+        )}
+      </div>
+      {/* @include font($size: sm);
+  padding-left: tempo(2); */}
       {offerDismiss && (
         <button
-          className="text-sm pl-2"
+          className="text-sm pl-2 bg-transparent border-0 cursor-pointer text-dark-link font-normal"
           data-test="Banner-closeButton"
           onClick={handleDismiss}
         >
-          <CloseIcon />
+          Dismiss
         </button>
       )}
     </div>
