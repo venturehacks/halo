@@ -186,7 +186,7 @@ function BoxRaw({
     isFlexRow && 'flex flex-row',
     isFlexRow && align && FLEX_ALIGNMENT_MAP.row.align[align],
     isFlexRow && valign && FLEX_ALIGNMENT_MAP.row.valign[valign],
-    // NOTE(drew): These might work or might not: order, maxWidth, maxHeight, background
+    // TODO(drew): restore inline styles or remove prop
     order && `order-${order}`,
     maxWidth && `max-w-[${maxWidth}]`,
     maxHeight && `max-h-[${maxHeight}]`,
@@ -197,6 +197,7 @@ function BoxRaw({
     onClick && 'cursor-pointer',
     augmentNegativeSpaceClasses(padding, 'padding'),
     augmentNegativeSpaceClasses(margin, 'margin'),
+    // TODO(drew): restore inline styles or remove prop
     background && `bg-${background.replace('--', '-')}`,
     textAlign && `text-${textAlign}`,
   );
