@@ -21,6 +21,6 @@ module.exports = [
   },
   {
     name: 'Total',
-    path: ['packages/halo/dist/**/*'],
+    path: ['packages/halo/dist/**/*', '!packages/halo/dist/**/*d.ts'],
   },
 ];
