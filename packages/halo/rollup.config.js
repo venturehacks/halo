@@ -13,6 +13,7 @@ import filesize from 'rollup-plugin-filesize';
 import postcss from 'rollup-plugin-postcss';
 import builtins from 'rollup-plugin-node-builtins';
 import analyze from 'rollup-plugin-analyzer';
+import copy from 'rollup-plugin-copy';
 import svgr from '@svgr/rollup';
 import tailwindcss from 'tailwindcss';
 
@@ -110,6 +111,9 @@ export default defineConfig({
       exclude: ['node_modules/**', '../../node_modules/**'],
       preventAssignment: true,
       'process.env.NODE_ENV': JSON.stringify('development'),
+    }),
+    copy({
+      targets: [{ src: './tailwind.config.js', dest: 'dist/' }],
     }),
     analyze({
       limit: 20, // 20 file limit
