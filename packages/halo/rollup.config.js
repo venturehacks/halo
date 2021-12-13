@@ -13,6 +13,7 @@ import filesize from 'rollup-plugin-filesize';
 import postcss from 'rollup-plugin-postcss';
 import builtins from 'rollup-plugin-node-builtins';
 import analyze from 'rollup-plugin-analyzer';
+import del from 'rollup-plugin-delete';
 import copy from 'rollup-plugin-copy';
 import svgr from '@svgr/rollup';
 import tailwindcss from 'tailwindcss';
@@ -114,6 +115,12 @@ export default defineConfig({
     }),
     copy({
       targets: [{ src: './tailwind.config.js', dest: 'dist/' }],
+    }),
+    // clear out duplicate CSS bundle in CommonJS folder
+    del({
+      targets: path.resolve(__dirname, 'dist', 'cjs', 'halo.css'),
+      hook: 'writeBundle',
+      verbose: true,
     }),
     analyze({
       limit: 20, // 20 file limit
