@@ -13,9 +13,6 @@
 **/public
 **/datadog-size-limit.json
 
-# Tailwind config is built with typescript
-# **/tailwind.config.js
-
 ############################################################
 # .gitignore for node
 ############################################################
