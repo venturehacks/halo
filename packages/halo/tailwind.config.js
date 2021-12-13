@@ -90,7 +90,7 @@ const colors = {
 
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
-  mode: 'jit',
+  // mode: 'jit',
   // or 'media' or 'class'
   corePlugins: {
     // we have our own style reset
