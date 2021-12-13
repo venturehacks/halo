@@ -16,7 +16,6 @@
       "name": "Documentation Theme 📖",
       "path": "packages/docs/src/gatsby-theme-docz"
     },
-
   ],
   "settings": {
     "workbench.colorCustomizations": {
@@ -63,7 +62,9 @@
       "**/dist": true,
       "**/node_modules": true,
       "packages/docs/src": true,
-      "packages/halo/*": true,
+      "packages/halo/[^t]*": true,
+      "packages/halo/t[^a]*": true,
+      "!packages/halo/tailwind.config.js": true,
       // "**/public": true, // disabled so that local gatsby builds show up in project explorer: Monorepo Root/packages/docs/public
     },
     "search.exclude": {
@@ -102,10 +103,14 @@
       "source.fixAll.eslint": true,
       "source.fixAll.tslint": true,
     },
+    "editor.quickSuggestions": {
+      "strings": true,
+      "other": true,
+    },
+    "css.validate": false,
     "eslint.debug": true,
     "eslint.lintTask.enable": true,
     "eslint.packageManager": "yarn",
-    "eslint.workingDirectories": [{ "mode": "auto" }],
     "eslint.validate": [
       "javascript",
       "javascriptreact",
@@ -122,7 +127,24 @@
     },
     "[typescriptreact]": {
       "editor.formatOnSave": true,
-    }
+    },
+    "[markdown]": {
+      "editor.formatOnSave": true,
+    },
+    "[markdownreact]": {
+      "editor.formatOnSave": true,
+    },
+    "tailwindCSS.includeLanguages": {
+      "typescript": "javascript",
+      "typescriptreact": "javascript",
+    },
+    "tailwindCSS.validate": true,
+    "tailwindCSS.experimental.classRegex": [
+      // NOTE(drew): not working so far.
+      ["classNames\\(([^)]*)\\)", "'([^']*)'", "'([^']*)'"],
+      ["classNames\\(([^)]*)\\)", "'([^']*)'"],
+      [":(?:.|\n)*?[\"'`]([^\"'`]*).*?,"],
+    ],
   },
   "extensions": {
     "unwantedRecommendations": [

@@ -1,7 +1,7 @@
 import React from 'react';
 import { ClipLoader, ScaleLoader } from 'react-spinners';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export type LoadingIndicatorProps = LoadingIndicatorPrimaryVariantProps &
   LoadingIndicatorAlternateVariantProps;

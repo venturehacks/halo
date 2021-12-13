@@ -2,7 +2,7 @@
 @import 'breakpoints';
 
 @function tempo($magnitude) {
-  @if (($magnitude * 2) % 1 != 0) {
+  @if ($magnitude * 2) % 1 != 0 {
     @error 'tempo() parameter $magnitude cannot be more granular than increments of 0.5 (given: #{$magnitude})';
   }
 
@@ -14,7 +14,7 @@
   $gutter-width: tempo(2); // 16px
   $gutters: $cells - 1;
 
-  @if ($cells % 1 != 0) {
+  @if $cells % 1 != 0 {
     @warn 'grid-cell-width() parameter $cells must be an integer! (given: #{$cells})';
   }
 

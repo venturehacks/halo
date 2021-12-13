@@ -14,7 +14,7 @@ import {
 } from '../../../lib/withForwardedRef';
 import { Span } from '../Span';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export interface HeaderProps extends React.HTMLAttributes<HTMLHeadingElement> {
   children: React.ReactNode;

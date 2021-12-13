@@ -10,7 +10,7 @@ import {
 import { Span, SpanProps } from '../../core/Span';
 import { Tooltip } from '../../core/Tooltip';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 type LabelPropsBase = Pick<SpanProps, 'weight' | 'color'> &
   Omit<React.HTMLAttributes<HTMLLabelElement>, 'title'>;

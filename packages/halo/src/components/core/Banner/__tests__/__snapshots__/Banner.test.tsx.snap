@@ -2,32 +2,66 @@
 
 exports[`Banner snapshot constrain 1`] = `
 <div
-  class="component constrain passive"
+  class="text-md font-medium rounded relative p-4 mb-2 border-solid border-0 border-t-4 w-full bg-blue-100 shadow-sm flex flex-row justify-start items-center overflow-hidden max-w-screen-desktop border-slate-700"
   data-test="Banner"
   role="alert"
-/>
+>
+  <aside
+    class="mr-2 mt-1 ml-1"
+  />
+  <div
+    class="flex-1"
+  />
+</div>
 `;
 
 exports[`Banner snapshot default 1`] = `
 <div
-  class="component passive"
+  class="text-md font-medium rounded relative p-4 mb-2 border-solid border-0 border-t-4 w-full bg-blue-100 shadow-sm flex flex-row justify-start items-center overflow-hidden max-w-screen-desktop border-slate-700"
   data-test="Banner"
   role="alert"
-/>
+>
+  <aside
+    class="mr-2 mt-1 ml-1"
+  />
+  <div
+    class="flex-1"
+  />
+</div>
 `;
 
 exports[`Banner snapshot offer dismiss 1`] = `
 <div
-  class="component offerDismiss passive"
+  class="text-md font-medium rounded relative p-4 mb-2 border-solid border-0 border-t-4 w-full bg-blue-100 shadow-sm flex flex-row justify-start items-center overflow-hidden max-w-screen-desktop border-slate-700"
   data-test="Banner"
   role="alert"
 >
+  <aside
+    class="mr-2 mt-1 ml-1"
+  />
+  <div
+    class="flex-1"
+  />
   <button
-    class="closeButton"
+    class="text-sm pl-2 bg-transparent border-0 cursor-pointer text-dark-link font-normal"
     data-test="Banner-closeButton"
   >
+    Dismiss
+  </button>
+</div>
+`;
+
+exports[`Banner snapshot variant error 1`] = `
+<div
+  class="text-md font-medium rounded relative p-4 mb-2 border-solid border-0 border-t-4 w-full bg-blue-100 shadow-sm flex flex-row justify-start items-center overflow-hidden max-w-screen-desktop border-red-600"
+  data-test="Banner"
+  role="alert"
+>
+  <aside
+    class="mr-2 mt-1 ml-1"
+  >
     <svg
-      class="haloIcon"
+      class="block text-red-700 w-4 h-4 mt-0.5"
       viewBox="0 0 10 10"
     >
       <path
@@ -35,30 +69,39 @@ exports[`Banner snapshot offer dismiss 1`] = `
         fill="currentColor"
       />
     </svg>
-  </button>
+  </aside>
+  <div
+    class="flex-1"
+  />
 </div>
-`;
-
-exports[`Banner snapshot variant error 1`] = `
-<div
-  class="component error"
-  data-test="Banner"
-  role="alert"
-/>
 `;
 
 exports[`Banner snapshot variant success 1`] = `
 <div
-  class="component success"
+  class="text-md font-medium rounded relative p-4 mb-2 border-solid border-0 border-t-4 w-full bg-blue-100 shadow-sm flex flex-row justify-start items-center overflow-hidden max-w-screen-desktop border-green-500"
   data-test="Banner"
   role="alert"
-/>
+>
+  <aside
+    class="mr-2 mt-1 ml-1"
+  />
+  <div
+    class="flex-1"
+  />
+</div>
 `;
 
 exports[`Banner snapshot variant warning 1`] = `
 <div
-  class="component warning"
+  class="text-md font-medium rounded relative p-4 mb-2 border-solid border-0 border-t-4 w-full bg-blue-100 shadow-sm flex flex-row justify-start items-center overflow-hidden max-w-screen-desktop border-orange-300"
   data-test="Banner"
   role="alert"
-/>
+>
+  <aside
+    class="mr-2 mt-1 ml-1"
+  />
+  <div
+    class="flex-1"
+  />
+</div>
 `;

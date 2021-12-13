@@ -16,11 +16,11 @@ module.exports = [
     limit: '20 kB',
   },
   {
-    name: 'Typings',
-    path: ['packages/halo/dist/typings/**/*.d.ts'],
+    name: 'Total',
+    path: ['packages/halo/dist/**/*', '!packages/halo/dist/**/*d.ts'],
   },
   {
-    name: 'Total',
-    path: ['packages/halo/dist/**/*'],
+    name: 'Typings',
+    path: ['packages/halo/dist/typings/**/*.d.ts'],
   },
 ];

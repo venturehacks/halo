@@ -3,7 +3,7 @@ import React from 'react';
 
 import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export interface RawSelectOption {
   disabled?: boolean;
@@ -43,7 +43,7 @@ export interface RawSelectProps
   name?: string;
   onChange?: React.ChangeEventHandler<HTMLSelectElement> | (() => void);
   // tslint:disable-next-line: array-type
-  options: Array<RawSelectOption | RawSelectOptgroup>;
+  options: (RawSelectOption | RawSelectOptgroup)[];
 }
 
 function RawSelect({
