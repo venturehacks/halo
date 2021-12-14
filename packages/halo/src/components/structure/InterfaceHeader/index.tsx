@@ -56,10 +56,11 @@ function InterfaceHeaderRaw({
     <header
       ref={forwardedRef}
       className={classNames(
-        (page || level === 'page') && 'text-xl font-normal text-slate-800',
-        (panel || level === 'panel') && 'text-lg font-medium text-dark-aaa',
-        (section || level === 'section') && 'text-md font-medium text-dark-aaa',
-        (micro || level === 'micro') && 'text-xs font-medium text-dark-aa',
+        (page || level === 'page') && 'text-xl text-slate-800',
+        (panel || level === 'panel') && 'text-lg text-dark-aaa',
+        (section || level === 'section') && 'text-md text-dark-aaa',
+        (micro || level === 'micro') && 'text-xs text-dark-aa',
+        'font-normal',
         className,
       )}
       {...rest}
