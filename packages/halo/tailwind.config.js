@@ -108,7 +108,7 @@ module.exports = {
   darkMode: false,
   plugins: [],
   purge: {
-    content: ['src/**/*.tsx', 'src/**/*.mdx', 'dist/**/*.mjs'],
+    content: ['src/**/*.{tsx,jsx,mdx}', 'dist/**/*.mjs'],
     options: {
       keyframes: true,
     },
