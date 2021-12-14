@@ -15,7 +15,7 @@
     {
       "name": "Documentation Theme 📖",
       "path": "packages/docs/src/gatsby-theme-docz"
-    },
+    }
   ],
   "settings": {
     "workbench.colorCustomizations": {
@@ -64,7 +64,7 @@
       "packages/docs/src": true,
       "packages/halo/[^t]*": true,
       "packages/halo/t[^a]*": true,
-      "!packages/halo/tailwind.config.js": true,
+      "!packages/halo/tailwind.config.js": true
       // "**/public": true, // disabled so that local gatsby builds show up in project explorer: Monorepo Root/packages/docs/public
     },
     "search.exclude": {
@@ -82,7 +82,7 @@
       "*.lock": true,
       "*.log": true,
       "packages/docs/src": true,
-      "packages/halo/*": true,
+      "packages/halo/*": true
     },
     "files.watcherExclude": {
       "**/.git/objects/**": true,
@@ -97,15 +97,15 @@
       "**/node_modules": true,
       "**/public": true,
       "packages/docs/src": true,
-      "packages/halo/*": true,
+      "packages/halo/*": true
     },
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true,
-      "source.fixAll.tslint": true,
+      "source.fixAll.tslint": true
     },
     "editor.quickSuggestions": {
       "strings": true,
-      "other": true,
+      "other": true
     },
     "css.validate": false,
     "eslint.debug": true,
@@ -115,41 +115,40 @@
       "javascript",
       "javascriptreact",
       "typescript",
-      "typescriptreact",
+      "typescriptreact"
     ],
     "peacock.color": "#5dc9e2",
     "typescript.tsdk": "Monorepo Root 🌳/node_modules/typescript/lib",
     "[javascript]": {
-      "editor.formatOnSave": true,
+      "editor.formatOnSave": true
     },
     "[typescript]": {
-      "editor.formatOnSave": true,
+      "editor.formatOnSave": true
     },
     "[typescriptreact]": {
-      "editor.formatOnSave": true,
+      "editor.formatOnSave": true
     },
     "[markdown]": {
-      "editor.formatOnSave": true,
+      "editor.formatOnSave": true
     },
     "[markdownreact]": {
-      "editor.formatOnSave": true,
+      "editor.formatOnSave": true
     },
     "tailwindCSS.includeLanguages": {
       "typescript": "javascript",
-      "typescriptreact": "javascript",
+      "typescriptreact": "javascript"
     },
     "tailwindCSS.validate": true,
     "tailwindCSS.experimental.classRegex": [
       // NOTE(drew): not working so far.
       ["classNames\\(([^)]*)\\)", "'([^']*)'", "'([^']*)'"],
       ["classNames\\(([^)]*)\\)", "'([^']*)'"],
-      [":(?:.|\n)*?[\"'`]([^\"'`]*).*?,"],
+      [":(?:.|\n)*?[\"'`]([^\"'`]*).*?,"]
     ],
+    "editor.formatOnSave": true
   },
   "extensions": {
-    "unwantedRecommendations": [
-      "eg2.tslint"
-    ],
+    "unwantedRecommendations": ["eg2.tslint"],
     "recommendations": [
       "aaron-bond.better-comments",
       "artdiniz.quitcontrol-vscode",
