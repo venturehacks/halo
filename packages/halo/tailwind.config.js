@@ -95,7 +95,7 @@ module.exports = {
   corePlugins: {
     // we have our own style reset
     // could move to tailwinds but would require a full style audit :X
-    preflight: false,
+    preflight: true,
     // safelist
     margin: true,
     padding: true,

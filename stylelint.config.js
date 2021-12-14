@@ -53,6 +53,7 @@ module.exports = {
           'use',
           'mixin',
           'apply',
+          'layer',
           'tailwind',
           'screen',
           'extend',
