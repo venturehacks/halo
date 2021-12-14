@@ -108,6 +108,8 @@
       "other": true
     },
     "css.validate": false,
+    "scss.validate": false,
+    "stylelint.enable": true,
     "eslint.debug": true,
     "eslint.lintTask.enable": true,
     "eslint.packageManager": "yarn",
@@ -161,6 +163,7 @@
       "ms-vscode.vscode-typescript-tslint-plugin",
       "shd101wyy.markdown-preview-enhanced",
       "silvenon.mdx",
+      "stylelint.vscode-stylelint",
       "johnpapa.vscode-peacock",
       "dbaeumer.vscode-eslint"
     ]
