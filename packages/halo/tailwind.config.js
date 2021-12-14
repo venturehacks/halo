@@ -95,7 +95,7 @@ module.exports = {
   corePlugins: {
     // we have our own style reset
     // could move to tailwinds but would require a full style audit :X
-    preflight: false,
+    preflight: true,
     // safelist
     margin: true,
     padding: true,
@@ -108,7 +108,7 @@ module.exports = {
   darkMode: false,
   plugins: [],
   purge: {
-    content: ['src/**/*.tsx', 'src/**/*.mdx', 'dist/**/*.mjs'],
+    content: ['src/**/*.{tsx,jsx,mdx}', 'dist/**/*.mjs'],
     options: {
       keyframes: true,
     },

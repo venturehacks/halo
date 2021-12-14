@@ -15,6 +15,11 @@ export interface InterfaceHeaderProps
   className?: string;
   level?: InterfaceHeaderLevel;
   /**
+   * Include negative space under header.
+   * @default false
+   */
+  flow?: boolean;
+  /**
    * Optional shorthand for level="page"
    * @default false
    */
@@ -45,6 +50,7 @@ function InterfaceHeaderRaw({
   panel,
   section,
   micro,
+  flow,
   forwardedRef,
   ...rest
 }: InterfaceHeaderProps & ForwardedRefProps<HTMLHeadingElement>) {
@@ -61,6 +67,7 @@ function InterfaceHeaderRaw({
         (section || level === 'section') && 'text-md text-dark-aaa',
         (micro || level === 'micro') && 'text-xs text-dark-aa',
         'font-normal',
+        flow && 'mb-4',
         className,
       )}
       {...rest}

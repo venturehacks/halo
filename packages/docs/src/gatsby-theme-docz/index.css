@@ -1,3 +1,5 @@
+/* NOTE(drew): File is working w/ Tailwind era */
+
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 
 /* @import '~halo/dist/halo.css'; */
@@ -11,7 +13,13 @@ div[data-testid='live-preview'] h4:not(:first-child) {
 }
 
 div[data-testid='playground'] {
+  margin-top: 1em !important;
   margin-bottom: 3em !important;
+}
+
+div[data-testid='playground'] > div:nth-child(2) {
+  max-height: 33vh;
+  overflow: auto;
 }
 
 .tippy-popper {
