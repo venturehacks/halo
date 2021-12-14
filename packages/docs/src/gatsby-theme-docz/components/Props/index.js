@@ -85,17 +85,17 @@ export const Props = componentProps => {
       <table>
         <thead>
           <tr>
-            <th width="17%">Name</th>
-            <th width="25%">Type</th>
+            <th width="22%">Name</th>
+            <th width="30%">Type</th>
             <th width="9%">Default</th>
             <th width="9%">Required</th>
-            <th width="40%">Description</th>
+            <th width="30%">Description</th>
           </tr>
         </thead>
         <tbody>
           {entries.map(([key, prop]) => (
             <tr key={key}>
-              <td>
+              <td className="font-mono text-xs">
                 {key}
                 {prop.required ? '' : '?'}
               </td>
@@ -109,8 +109,8 @@ export const Props = componentProps => {
                   <InlineCode>{getDefaultValue(prop)}</InlineCode>
                 )}
               </td>
-              <td>{prop.required ? '✅' : ''}</td>
-              <td>{prop.description}</td>
+              <td className="text-center">{prop.required ? '✅' : ''}</td>
+              <td className="text-dark-aa">{prop.description}</td>
             </tr>
           ))}
         </tbody>
