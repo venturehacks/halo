@@ -17,6 +17,8 @@
     "clean": "yarn workspace halo clean && yarn workspace docs clean",
     "dev": "yarn workspace docs dev",
     "test": "yarn workspace halo test",
+    "test:dev": "yarn workspace halo test:dev",
+    "test:dev:watch": "yarn workspace halo test:dev:watch",
     "test:ci": "yarn workspace halo test:ci",
     "prettier:fix": "stylelint --fix '**/*.scss' && prettier --write '**/*.{ts,tsx,js,jsx,css,scss,md,markdown}'",
     "lint": "tslint -t grouped && eslint '**/*.ts*' --format codeframe",
