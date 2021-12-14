@@ -1,4 +1,5 @@
 // core
+export * from './core/Attribute';
 export * from './core/Avatar';
 export * from './core/Badge';
 export * from './core/Banner';
