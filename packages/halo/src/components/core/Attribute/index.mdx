@@ -13,15 +13,15 @@ import { Box } from '../../structure/Box';
 
 Vertical key-value / term-definition. Produces [`<dt><dd>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt) pair.
 
-Be sure to wrap in `Attribute.List` to grant best semantics. Wrap is required for size adjustment.
+Be sure to wrap in `AttributeList` to grant best semantics. Wrap is required for size adjustment.
 
 ### Usage
 
 <Playground>
-  <Attribute.List>
+  <AttributeList>
     <Attribute name="Term" value="Definition" />
     <Attribute name="Key" value="Value" />
-  </Attribute.List>
+  </AttributeList>
 </Playground>
 
 ### Size
@@ -31,34 +31,34 @@ Be sure to wrap in `Attribute.List` to grant best semantics. Wrap is required fo
 <Box align="space-between" padding={{ left: 4, right : 4 }} maxWidth="700px" row>
   <div>
     <InterfaceHeader section flow>Extra small</InterfaceHeader>
-    <Attribute.List size="xs">
+    <AttributeList size="xs">
       <Attribute name="Term" value="Definition" />
       <Attribute name="Key" value="Value" />
-    </Attribute.List>
+    </AttributeList>
   </div>
 
   <div>
     <InterfaceHeader section flow>Small</InterfaceHeader>
-    <Attribute.List size="sm">
+    <AttributeList size="sm">
       <Attribute name="Term" value="Definition" />
       <Attribute name="Key" value="Value" />
-    </Attribute.List>
+    </AttributeList>
   </div>
 
   <div>
     <InterfaceHeader section flow>Medium</InterfaceHeader>
-    <Attribute.List size="md">
+    <AttributeList size="md">
       <Attribute name="Term" value="Definition" />
       <Attribute name="Key" value="Value" />
-    </Attribute.List>
+    </AttributeList>
   </div>
 
   <div>
     <InterfaceHeader section flow>Large</InterfaceHeader>
-    <Attribute.List size="lg">
+    <AttributeList size="lg">
       <Attribute name="Term" value="Definition" />
       <Attribute name="Key" value="Value" />
-    </Attribute.List>
+    </AttributeList>
   </div>
 </Box>
 
@@ -69,8 +69,8 @@ Be sure to wrap in `Attribute.List` to grant best semantics. Wrap is required fo
 <Props of={Attribute} />
 
 
-# Attribute.List
+# AttributeList
 
 ### Props
 
-<Props of={Attribute.List} />
+<Props of={AttributeList} />

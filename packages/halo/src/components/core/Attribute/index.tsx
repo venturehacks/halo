@@ -49,7 +49,7 @@ export interface AttributeListProps
   size?: AttributeSize;
 }
 
-function List({
+function AttributeList({
   children,
   size = 'sm',
   className,
@@ -75,13 +75,8 @@ function List({
   );
 }
 
-List.displayName = 'Attribute.List';
-
 const Attribute = withForwardedRef<AttributeProps, HTMLDivElement>(
   AttributeRaw,
 );
 
-// @ts-ignore
-Attribute.List = List;
-
-export { Attribute };
+export { Attribute, AttributeList };
