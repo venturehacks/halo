@@ -6,29 +6,29 @@ import {
   withForwardedRef,
 } from '../../../lib/withForwardedRef';
 
-type InterfaceHeaderLevel = 'primary' | 'secondary' | 'tertiary' | 'micro';
+type InterfaceHeaderLevel = 'page' | 'panel' | 'section' | 'micro';
 
 /* eslint-disable typescript-sort-keys/interface */
 export interface InterfaceHeaderProps
   extends React.HTMLAttributes<HTMLHeadingElement> {
   children: React.ReactNode;
   className?: string;
-  level: InterfaceHeaderLevel;
+  level?: InterfaceHeaderLevel;
   /**
-   * Optional shorthand for level="primary"
+   * Optional shorthand for level="page"
    * @default false
    */
-  primary?: boolean;
+  page?: boolean;
   /**
-   * Optional shorthand for level="secondary"
+   * Optional shorthand for level="panel"
    * @default false
    */
-  secondary?: boolean;
+  panel?: boolean;
   /**
-   * Optional shorthand for level="tertiary"
+   * Optional shorthand for level="section"
    * @default false
    */
-  tertiary?: boolean;
+  section?: boolean;
   /**
    * Optional shorthand for level="micro"
    * @default false
@@ -41,22 +41,24 @@ function InterfaceHeaderRaw({
   className,
   children,
   level,
-  primary,
-  secondary,
-  tertiary,
+  page,
+  panel,
+  section,
   micro,
+  forwardedRef,
   ...rest
 }: InterfaceHeaderProps & ForwardedRefProps<HTMLHeadingElement>) {
+  if (!level && !page && !panel && !section && !micro) {
+    throw new Error('[Halo InterfaceHeader] must specify `level`');
+  }
+
   return (
     <header
+      ref={forwardedRef}
       className={classNames(
-        ' ',
-        (primary || level === 'primary') &&
-          'text-xl font-normal text-slate-800',
-        (secondary || level === 'secondary') &&
-          'text-lg font-medium text-dark-aaa',
-        (tertiary || level === 'tertiary') &&
-          'text-md font-medium text-dark-aaa',
+        (page || level === 'page') && 'text-xl font-normal text-slate-800',
+        (panel || level === 'panel') && 'text-lg font-medium text-dark-aaa',
+        (section || level === 'section') && 'text-md font-medium text-dark-aaa',
         (micro || level === 'micro') && 'text-xs font-medium text-dark-aa',
         className,
       )}
