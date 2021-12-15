@@ -4,7 +4,7 @@ import React from 'react';
 import { Avatar, AvatarSize, IMAGE_SIZES } from '../index';
 
 const sharedProps = {
-  imageUrl: 'https://avatars1.githubusercontent.com/u/194885?s=120&v=6',
+  imageUrl: 'https://avatars1.githubusercontent.com/u/194885',
   name: 'Drew',
 };
 
