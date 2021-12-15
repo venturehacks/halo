@@ -24,6 +24,10 @@
   h6 {
     @apply text-2xs font-medium mb-1;
   }
+
+  hr {
+    @apply border-slate-300 my-6;
+  }
 }
 @tailwind components;
 @tailwind utilities;

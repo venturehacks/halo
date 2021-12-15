@@ -8,7 +8,7 @@ exports[`Avatar snapshots badge label 1`] = `
     alt="Avatar for Drew"
     class="avatar circle"
     height="80"
-    src="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+    src="https://avatars1.githubusercontent.com/u/194885"
     width="80"
   />
   <div
@@ -27,7 +27,7 @@ exports[`Avatar snapshots badgeColor 1`] = `
     alt="Avatar for Drew"
     class="avatar circle"
     height="80"
-    src="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+    src="https://avatars1.githubusercontent.com/u/194885"
     width="80"
   />
   <div
@@ -46,7 +46,7 @@ exports[`Avatar snapshots badgeShape circle [default] 1`] = `
     alt="Avatar for Drew"
     class="avatar circle"
     height="80"
-    src="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+    src="https://avatars1.githubusercontent.com/u/194885"
     width="80"
   />
   <div
@@ -65,7 +65,7 @@ exports[`Avatar snapshots badgeShape square 1`] = `
     alt="Avatar for Drew"
     class="avatar circle"
     height="80"
-    src="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+    src="https://avatars1.githubusercontent.com/u/194885"
     width="80"
   />
   <div
@@ -84,7 +84,7 @@ exports[`Avatar snapshots shape circle [default] 1`] = `
     alt="Avatar for Drew"
     class="avatar circle"
     height="60"
-    src="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+    src="https://avatars1.githubusercontent.com/u/194885"
     width="60"
   />
 </div>
@@ -98,7 +98,7 @@ exports[`Avatar snapshots shape square 1`] = `
     alt="Avatar for Drew"
     class="avatar square"
     height="60"
-    src="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+    src="https://avatars1.githubusercontent.com/u/194885"
     width="60"
   />
 </div>
@@ -112,7 +112,7 @@ exports[`Avatar snapshots size large 1`] = `
     alt="Avatar for Drew"
     class="avatar circle"
     height="80"
-    src="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+    src="https://avatars1.githubusercontent.com/u/194885"
     width="80"
   />
 </div>
@@ -126,7 +126,7 @@ exports[`Avatar snapshots size medium [default] 1`] = `
     alt="Avatar for Drew"
     class="avatar circle"
     height="60"
-    src="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+    src="https://avatars1.githubusercontent.com/u/194885"
     width="60"
   />
 </div>
@@ -140,7 +140,7 @@ exports[`Avatar snapshots size xxxsmall 1`] = `
     alt="Avatar for Drew"
     class="avatar circle"
     height="16"
-    src="https://avatars1.githubusercontent.com/u/194885?s=120&v=6"
+    src="https://avatars1.githubusercontent.com/u/194885"
     width="16"
   />
 </div>
