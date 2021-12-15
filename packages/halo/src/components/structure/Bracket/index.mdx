@@ -1,0 +1,42 @@
+---
+name: Bracket
+menu: Structure
+route: /structure/bracket
+---
+
+import { Playground, Props } from 'docz';
+import { Bracket } from './';
+import { InterfaceHeader } from '../../structure/InterfaceHeader';
+import { Box } from '../../structure/Box';
+import { Avatar } from '../../core/Avatar';
+import { Button } from '../../core/Button';
+
+# Bracket
+
+Component that isolates its first or last child from remaining children. Smart responsive defaults.
+
+### Usage
+
+<Playground>
+  <Bracket>
+    <Avatar
+      size="large"
+      imageUrl="https://avatars1.githubusercontent.com/u/194885"
+    />
+    <span className="text-dark-a text-sm">Isolate first child (default)</span>
+    <Button>Resend code</Button>
+  </Bracket>
+  <hr />
+  <Bracket isolate="last-child">
+    <Avatar
+      size="large"
+      imageUrl="https://avatars1.githubusercontent.com/u/194885"
+    />
+    <span className="text-dark-a text-sm">Isolate last child</span>
+    <Button>Resend code</Button>
+  </Bracket>
+</Playground>
+
+### Props
+
+<Props of={Bracket} />

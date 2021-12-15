@@ -1,0 +1,40 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bracket snapshot gap 1`] = `
+<div
+  class="flex flex-col md:flex-row md:items-center component isolateFirstChild gap-6"
+>
+  <span>
+    Label
+  </span>
+  <button>
+    Click me
+  </button>
+</div>
+`;
+
+exports[`Bracket snapshot isolate last child 1`] = `
+<div
+  class="flex flex-col md:flex-row md:items-center component isolateLastChild gap-4"
+>
+  <span>
+    Label
+  </span>
+  <button>
+    Click me
+  </button>
+</div>
+`;
+
+exports[`Bracket snapshot smoke 1`] = `
+<div
+  class="flex flex-col md:flex-row md:items-center component isolateFirstChild gap-4"
+>
+  <span>
+    Label
+  </span>
+  <button>
+    Click me
+  </button>
+</div>
+`;

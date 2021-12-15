@@ -14,6 +14,7 @@ export * from './core/Span';
 export * from './core/Tooltip';
 // structure
 export * from './structure/Box';
+export * from './structure/Bracket';
 export * from './structure/Cell';
 export * from './structure/Grid';
 export * from './structure/InterfaceHeader';
