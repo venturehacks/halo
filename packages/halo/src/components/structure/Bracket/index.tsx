@@ -17,6 +17,10 @@ export interface BracketProps extends React.HTMLAttributes<HTMLDivElement> {
    * @default first-child
    */
   isolate?: 'first-child' | 'last-child';
+  /**
+   * Negative space magnitude between children
+   * @default 4
+   */
   gap?: '0' | '2' | '4' | '6' | '8';
 }
 /* eslint-enable typescript-sort-keys/interface */
