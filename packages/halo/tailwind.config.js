@@ -107,12 +107,6 @@ module.exports = {
   },
   darkMode: false,
   plugins: [],
-  purge: {
-    content: ['src/**/*.{tsx,jsx,mdx}', 'dist/**/*.mjs'],
-    options: {
-      keyframes: true,
-    },
-  },
   theme: {
     colors: {
       blue: {
