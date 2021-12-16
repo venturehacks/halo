@@ -1,3 +1,5 @@
+const path = require('path');
+
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 const colors = {
   // dark text on light background
@@ -108,7 +110,10 @@ module.exports = {
   darkMode: false,
   plugins: [],
   purge: {
-    content: ['src/**/*.{tsx,jsx,mdx}', 'dist/**/*.mjs'],
+    content: [
+      path.join(__dirname, 'src/**/*.{tsx,jsx,mdx}'),
+      path.join(__dirname, 'dist/**/*.mjs'),
+    ],
     options: {
       keyframes: true,
     },
