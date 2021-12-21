@@ -27,7 +27,7 @@ module.exports = {
     '@typescript-eslint/array-type': [
       'warn',
       {
-        default: 'array-simple',
+        default: 'array',
       },
     ],
     // NOTE(drew):

@@ -7,7 +7,7 @@ import {
 } from '../Button';
 import { Header } from '../Header';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export type DialogContext = 'inline' | 'modal';
 

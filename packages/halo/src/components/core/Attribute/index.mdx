@@ -1,0 +1,76 @@
+---
+name: Attribute
+menu: Core
+route: /core/attribute
+---
+
+import { Playground, Props } from 'docz';
+import { Attribute, AttributeList } from './';
+import { InterfaceHeader } from '../../structure/InterfaceHeader';
+import { Box } from '../../structure/Box';
+
+# Attribute
+
+Vertical key-value / term-definition. Produces [`<dt><dd>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt) pair.
+
+Be sure to wrap in `AttributeList` to grant best semantics. Wrap is required for size adjustment.
+
+### Usage
+
+<Playground>
+  <AttributeList>
+    <Attribute name="Term" value="Definition" />
+    <Attribute name="Key" value="Value" />
+  </AttributeList>
+</Playground>
+
+### Size
+
+<Playground>
+
+<Box align="space-between" padding={{ left: 4, right : 4 }} maxWidth="700px" row>
+  <div>
+    <InterfaceHeader section flow>Extra small</InterfaceHeader>
+    <AttributeList size="xs">
+      <Attribute name="Term" value="Definition" />
+      <Attribute name="Key" value="Value" />
+    </AttributeList>
+  </div>
+
+  <div>
+    <InterfaceHeader section flow>Small</InterfaceHeader>
+    <AttributeList size="sm">
+      <Attribute name="Term" value="Definition" />
+      <Attribute name="Key" value="Value" />
+    </AttributeList>
+  </div>
+
+  <div>
+    <InterfaceHeader section flow>Medium</InterfaceHeader>
+    <AttributeList size="md">
+      <Attribute name="Term" value="Definition" />
+      <Attribute name="Key" value="Value" />
+    </AttributeList>
+  </div>
+
+  <div>
+    <InterfaceHeader section flow>Large</InterfaceHeader>
+    <AttributeList size="lg">
+      <Attribute name="Term" value="Definition" />
+      <Attribute name="Key" value="Value" />
+    </AttributeList>
+  </div>
+</Box>
+
+</Playground>
+
+### Props
+
+<Props of={Attribute} />
+
+
+# AttributeList
+
+### Props
+
+<Props of={AttributeList} />

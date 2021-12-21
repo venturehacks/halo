@@ -13,6 +13,7 @@
   },
   "jsRules": {},
   "rules": {
+    "no-console": [true, "log"],
     "interface-name": [
       true,
       "never-prefix"

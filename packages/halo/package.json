@@ -18,7 +18,7 @@
     "test:dev": "yarn test:clean && NODE_ENV=test BABEL_ENV=test jest --rootDir ../.. --forceExit --detectOpenHandles --config jest.dev.js",
     "test:dev:watch": "yarn test:dev --watch --onlyChanged",
     "test:snapshot-update": "NODE_ENV=test BABEL_ENV=test yarn jest --rootDir ../.. --forceExit --detectOpenHandles --config jest.dev.js --updateSnapshot",
-    "test:clean": "rm -rf ../../node_modules/.cache/ && jest --clearCache",
+    "test:clean": "rm -rf ../../node_modules/.cache/ && jest --clearCache --rootDir ../..",
     "test:ci": "NODE_ENV=test BABEL_ENV=test jest --config jest.config.js --rootDir ../..",
     "typesync": "typesync"
   },

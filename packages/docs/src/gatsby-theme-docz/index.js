@@ -64,7 +64,7 @@ const themeConfig = merge(defaultConfig, {
   styles: {
     root: {
       fontFamily: `'Source Sans Pro', 'Roboto', sans-serif`,
-      fontSize: '18px',
+      fontSize: '16px',
       color: 'text',
       bg: 'background',
     },

@@ -8,7 +8,7 @@
 // Sizes (includes line height)
 
 @each $name, $font-size-and-lh in $font-sizes-map {
-  :global(.__halo_fontSizeMap_#{'' + $name}) {
+  :global(._h_fsm_#{'' + $name}) {
     font-size: map-get($font-size-and-lh, font-size);
     line-height: map-get($font-size-and-lh, line-height);
   }
@@ -17,7 +17,7 @@
 // weights
 
 @each $name, $weight in $weights {
-  :global(.__halo_fontWeight_#{'' + $name}) {
+  :global(._h_fontWeight_#{'' + $name}) {
     font-weight: $weight;
   }
 }
@@ -25,7 +25,7 @@
 // Custom line heights
 
 @each $name, $line-height in $line-heights {
-  :global(.__halo_lineHeight_#{'' + $name}.__halo_lineHeight_#{'' + $name}) {
+  :global(._h_lineHeight_#{'' + $name}._h_lineHeight_#{'' + $name}) {
     line-height: $line-height;
   }
 }
@@ -33,7 +33,7 @@
 // custom colors
 
 @each $name, $color in $colors {
-  :global(.__halo_color_#{'' + $name}.__halo_color_#{'' + $name}) {
+  :global(._h_color_#{'' + $name}._h_color_#{'' + $name}) {
     color: $color;
   }
 }
@@ -90,34 +90,34 @@
 
 // color scheme + type contrast
 
-:global(.__halo_textContrast_dark_AAAA) {
+:global(._h_textContrast_dark_AAAA) {
   color: $text-dark--aaaa;
 }
 
-:global(.__halo_textContrast_dark_AAA) {
+:global(._h_textContrast_dark_AAA) {
   color: $text-dark--aaa;
 }
 
-:global(.__halo_textContrast_dark_AA) {
+:global(._h_textContrast_dark_AA) {
   color: $text-dark--aa;
 }
 
-:global(.__halo_textContrast_dark_A) {
+:global(._h_textContrast_dark_A) {
   color: $text-dark--a;
 }
 
-:global(.__halo_textContrast_light_AAAA) {
+:global(._h_textContrast_light_AAAA) {
   color: $text-light--aaaa;
 }
 
-:global(.__halo_textContrast_light_AAA) {
+:global(._h_textContrast_light_AAA) {
   color: $text-light--aaa;
 }
 
-:global(.__halo_textContrast_light_AA) {
+:global(._h_textContrast_light_AA) {
   color: $text-light--aa;
 }
 
-:global(.__halo_textContrast_light_A) {
+:global(._h_textContrast_light_A) {
   color: $text-light--a;
 }

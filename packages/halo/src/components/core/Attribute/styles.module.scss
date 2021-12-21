@@ -1,0 +1,25 @@
+@import 'halo';
+
+.xs {
+  dd {
+    @apply mb-2;
+  }
+}
+
+.sm {
+  dd {
+    @apply mb-2;
+  }
+}
+
+.md {
+  dd {
+    @apply mb-3;
+  }
+}
+
+.lg {
+  dd {
+    @apply mb-4;
+  }
+}

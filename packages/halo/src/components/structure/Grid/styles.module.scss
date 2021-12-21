@@ -1,0 +1,22 @@
+@import 'halo';
+
+$grid-cell-count: 24;
+
+.row {
+  @include grid-row;
+}
+
+.centered {
+  @include grid-cell-centered;
+}
+
+// dynamic indexed classnames must be global
+@for $c from 1 through $grid-cell-count {
+  :global(._h_cellSpan_#{'' + $c}) {
+    @include grid-cell($c);
+  }
+
+  :global(._h_cellOffset_#{'' + $c}) {
+    @include grid-cell-offset($c);
+  }
+}

@@ -3,7 +3,7 @@ const testPathIgnorePatterns = [
   '.docz',
   '.next',
   '.vscode',
-  '/node_modules/',
+  'node_modules',
   '/test/',
   'CHANGELOG.md',
   'dist',

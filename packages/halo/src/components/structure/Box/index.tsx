@@ -1,5 +1,4 @@
 import classNames from 'classnames';
-import { mapKeys } from 'lodash';
 import React from 'react';
 
 import { Color } from '../../../lib/colors';
@@ -7,8 +6,6 @@ import {
   ForwardedRefProps,
   withForwardedRef,
 } from '../../../lib/withForwardedRef';
-
-import styles from './styles.scss';
 
 export type BoxAlign =
   | 'top'
@@ -19,6 +16,7 @@ export type BoxAlign =
   | 'normal'
   | 'space-between'
   | 'space-evenly'
+  | 'space-around'
   | 'stretch';
 
 export interface NegativeSpace {
@@ -85,6 +83,46 @@ export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   wrap?: boolean;
 }
 
+/* eslint-disable sort-keys-fix/sort-keys-fix */
+const FLEX_ALIGNMENT_MAP: Record<
+  'row' | 'column',
+  Record<'align' | 'valign', Dictionary<string>>
+> = {
+  column: {
+    align: {
+      left: 'items-start',
+      right: 'items-end',
+      center: 'items-center',
+      stretch: 'items-stretch',
+    },
+    valign: {
+      top: 'justify-start',
+      bottom: 'justify-end',
+      center: 'justify-center',
+      'space-between': 'justify-between',
+      'space-evenly': 'justify-evenly',
+      'space-around': 'justify-around',
+    },
+  },
+  row: {
+    valign: {
+      top: 'items-start',
+      bottom: 'items-end',
+      center: 'items-center',
+      stretch: 'items-stretch',
+    },
+    align: {
+      left: 'justify-start',
+      right: 'justify-end',
+      center: 'justify-center',
+      'space-between': 'justify-between',
+      'space-evenly': 'justify-evenly',
+      'space-around': 'justify-around',
+    },
+  },
+};
+/* eslint-enable sort-keys-fix/sort-keys-fix */
+
 function BoxRaw({
   align,
   background,
@@ -112,29 +150,14 @@ function BoxRaw({
   const isFlexRow = !isBlockElement && row && !column;
 
   if (row && column) {
-    // tslint:disable-next-line: no-console
     console.warn(`[Halo Box] cannot be both column and row`);
   }
 
   if (isBlockElement && (wrap || align || valign || order)) {
-    // tslint:disable-next-line: no-console
     console.warn(
       `[Halo Box] flexbox-specific props were provided, but this box is not a flexbox`,
     );
   }
-
-  // parse 4-direction hashes for padding/margin
-  let negativeSpaceClasses: Dictionary<number | boolean> = {};
-  negativeSpaceClasses = augmentNegativeSpaceClasses(
-    negativeSpaceClasses,
-    margin,
-    'margin',
-  );
-  negativeSpaceClasses = augmentNegativeSpaceClasses(
-    negativeSpaceClasses,
-    padding,
-    'padding',
-  );
 
   // inline styles for order, etc.
   const inlineStyles: Dictionary<string | number> = {};
@@ -152,26 +175,31 @@ function BoxRaw({
   }
 
   if (background) {
-    // TODO: filter Colors
     inlineStyles.background = background;
   }
 
   const classes = classNames(
-    styles.component,
     className,
-    isFlexColumn && styles.flexColumn,
-    isFlexRow && styles.flexRow,
-    relative && styles.relative,
-    width === '100%' && styles.width100,
-    wrap && styles.wrap,
-    onClick && styles.clickable,
-    isFlexColumn && align && `__halo_column_align_${align}`,
-    isFlexColumn && valign && `__halo_column_valign_${valign}`,
-    isFlexRow && align && `__halo_row_align_${align}`,
-    isFlexRow && valign && `__halo_row_valign_${valign}`,
-    negativeSpaceClasses,
-    background && `__halo_background_${background}`,
-    textAlign && `__halo_textAlign_${textAlign}`,
+    isFlexColumn && 'flex flex-col',
+    isFlexColumn && align && FLEX_ALIGNMENT_MAP.column.align[align],
+    isFlexColumn && valign && FLEX_ALIGNMENT_MAP.column.valign[valign],
+    isFlexRow && 'flex flex-row',
+    isFlexRow && align && FLEX_ALIGNMENT_MAP.row.align[align],
+    isFlexRow && valign && FLEX_ALIGNMENT_MAP.row.valign[valign],
+    // TODO(drew): restore inline styles or remove prop
+    order && `order-${order}`,
+    maxWidth && `max-w-[${maxWidth}]`,
+    maxHeight && `max-h-[${maxHeight}]`,
+    background && `bg-[${background}]`,
+    relative && 'relative',
+    width === '100%' && 'w-full',
+    wrap && 'flex-wrap',
+    onClick && 'cursor-pointer',
+    augmentNegativeSpaceClasses(padding, 'padding'),
+    augmentNegativeSpaceClasses(margin, 'margin'),
+    // TODO(drew): restore inline styles or remove prop
+    background && `bg-${background.replace('--', '-')}`,
+    textAlign && `text-${textAlign}`,
   );
 
   return (
@@ -188,31 +216,20 @@ function BoxRaw({
 }
 
 function augmentNegativeSpaceClasses(
-  classes: Dictionary<number | boolean>,
   space: NegativeSpace | number | boolean,
   metric: 'padding' | 'margin',
 ) {
-  if (typeof space === 'object') {
-    return {
-      ...classes,
-      ...mapKeys(space, (value, key) => `__halo_${metric}_${key}_${value}`),
-    };
-  } else if (
-    (typeof space === 'number' || typeof space === 'boolean') &&
-    space
-  ) {
-    return {
-      ...classes,
-      ...{
-        [`__halo_${metric}_top_${Number(space)}`]: true,
-        [`__halo_${metric}_bottom_${Number(space)}`]: true,
-        [`__halo_${metric}_left_${Number(space)}`]: true,
-        [`__halo_${metric}_right_${Number(space)}`]: true,
-      },
-    };
+  if (space && (typeof space === 'number' || typeof space === 'boolean')) {
+    return `${metric[0]}-${Number(space) * 2}`; // Halo magnitude is 2x Tailwind
   }
 
-  return classes;
+  if (typeof space === 'object') {
+    return Object.keys(space)
+      .map(direction => `${metric[0]}${direction[0]}-${space[direction]}`)
+      .join(' ');
+  }
+
+  return ``;
 }
 
 const Box = withForwardedRef<BoxProps, HTMLDivElement>(BoxRaw);

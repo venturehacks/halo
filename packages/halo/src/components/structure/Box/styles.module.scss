@@ -43,45 +43,45 @@ $grid-cell-count: 24;
 **/
 
 @each $name, $color in $colors {
-  :global(.__halo_background_#{'' + $name}) {
+  :global(._h_background_#{'' + $name}) {
     background-color: $color;
   }
 }
 
 @each $alignment in $box-alignments {
   // column
-  :global(.__halo_column_align_#{'' + $alignment}) {
+  :global(._h_col_align_#{'' + $alignment}) {
     align-items: map-get($box-flex, $alignment);
   }
 
-  :global(.__halo_column_valign_#{'' + $alignment}) {
+  :global(._h_col_valign_#{'' + $alignment}) {
     justify-content: map-get($box-flex, $alignment);
   }
 
   // row
-  :global(.__halo_row_align_#{'' + $alignment}) {
+  :global(._h_row_align_#{'' + $alignment}) {
     justify-content: map-get($box-flex, $alignment);
   }
 
-  :global(.__halo_row_valign_#{'' + $alignment}) {
+  :global(._h_row_valign_#{'' + $alignment}) {
     align-items: map-get($box-flex, $alignment);
   }
 }
 
-@for $i from 1 through 20 {
+@for $i from 1 through 10 {
   @each $d in $directions {
-    :global(.__halo_padding_#{'' + $d}_#{'' + $i}) {
+    :global(._h_padding_#{'' + $d}_#{'' + $i}) {
       padding-#{'' + $d}: tempo($i);
     }
 
-    :global(.__halo_margin_#{'' + $d}_#{'' + $i}) {
+    :global(._h_margin_#{'' + $d}_#{'' + $i}) {
       margin-#{'' + $d}: tempo($i);
     }
   }
 }
 
 @each $t in $text-alignments {
-  :global(.__halo_textAlign_#{'' + $t}) {
+  :global(._h_textAlign_#{'' + $t}) {
     text-align: $t;
   }
 }

@@ -1,0 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Attribute snapshot smoke 1`] = `
+<div>
+  <dt
+    class="font-medium text-dark-aaaa"
+  >
+    Recruiting contact
+  </dt>
+  <dd
+    class="font-normal text-dark-aaa"
+  >
+    Drew Lustro
+  </dd>
+</div>
+`;
+
+exports[`AttributeList snapshot lg 1`] = `
+<dl
+  class="text-lg lg"
+>
+  <div>
+    <dt
+      class="font-medium text-dark-aaaa"
+    >
+      key
+    </dt>
+    <dd
+      class="font-normal text-dark-aaa"
+    >
+      value
+    </dd>
+  </div>
+  <div>
+    <dt
+      class="font-medium text-dark-aaaa"
+    >
+      term
+    </dt>
+    <dd
+      class="font-normal text-dark-aaa"
+    >
+      definition
+    </dd>
+  </div>
+</dl>
+`;
+
+exports[`AttributeList snapshot md 1`] = `
+<dl
+  class="text-md md"
+>
+  <div>
+    <dt
+      class="font-medium text-dark-aaaa"
+    >
+      key
+    </dt>
+    <dd
+      class="font-normal text-dark-aaa"
+    >
+      value
+    </dd>
+  </div>
+  <div>
+    <dt
+      class="font-medium text-dark-aaaa"
+    >
+      term
+    </dt>
+    <dd
+      class="font-normal text-dark-aaa"
+    >
+      definition
+    </dd>
+  </div>
+</dl>
+`;
+
+exports[`AttributeList snapshot sm [default] 1`] = `
+<dl
+  class="text-sm sm"
+>
+  <div>
+    <dt
+      class="font-medium text-dark-aaaa"
+    >
+      key
+    </dt>
+    <dd
+      class="font-normal text-dark-aaa"
+    >
+      value
+    </dd>
+  </div>
+  <div>
+    <dt
+      class="font-medium text-dark-aaaa"
+    >
+      term
+    </dt>
+    <dd
+      class="font-normal text-dark-aaa"
+    >
+      definition
+    </dd>
+  </div>
+</dl>
+`;
+
+exports[`AttributeList snapshot xs  1`] = `
+<dl
+  class="text-xs xs"
+>
+  <div>
+    <dt
+      class="font-medium text-dark-aaaa"
+    >
+      key
+    </dt>
+    <dd
+      class="font-normal text-dark-aaa"
+    >
+      value
+    </dd>
+  </div>
+  <div>
+    <dt
+      class="font-medium text-dark-aaaa"
+    >
+      term
+    </dt>
+    <dd
+      class="font-normal text-dark-aaa"
+    >
+      definition
+    </dd>
+  </div>
+</dl>
+`;

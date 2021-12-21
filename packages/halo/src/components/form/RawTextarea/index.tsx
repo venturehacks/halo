@@ -3,7 +3,7 @@ import React from 'react';
 
 import { FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export interface RawTextareaProps
   extends React.TextareaHTMLAttributes<HTMLTextAreaElement> {

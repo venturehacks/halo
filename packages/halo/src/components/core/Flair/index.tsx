@@ -7,7 +7,7 @@ import {
   withForwardedRef,
 } from '../../../lib/withForwardedRef';
 
-import styles from './styles.scss';
+import styles from './styles.module.scss';
 
 export interface FlairProps {
   children: React.ReactNode;

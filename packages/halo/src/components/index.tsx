@@ -1,4 +1,5 @@
 // core
+export * from './core/Attribute';
 export * from './core/Avatar';
 export * from './core/Badge';
 export * from './core/Banner';
@@ -13,8 +14,10 @@ export * from './core/Span';
 export * from './core/Tooltip';
 // structure
 export * from './structure/Box';
+export * from './structure/Bracket';
 export * from './structure/Cell';
 export * from './structure/Grid';
+export * from './structure/InterfaceHeader';
 // form
 export * from './form/FieldErrorMessage';
 export * from './form/Label';

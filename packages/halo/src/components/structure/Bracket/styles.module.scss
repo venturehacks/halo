@@ -1,0 +1,25 @@
+@import 'halo';
+
+.component {
+  > * {
+    @apply flex-initial;
+  }
+
+  &.isolateFirstChild {
+    @apply md:justify-end;
+
+    // pull first element left
+    > *:first-child {
+      @apply md:mr-auto;
+    }
+  }
+
+  &.isolateLastChild {
+    @apply md:justify-start;
+
+    // push last element right
+    > *:last-child {
+      @apply md:ml-auto;
+    }
+  }
+}

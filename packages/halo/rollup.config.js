@@ -13,7 +13,10 @@ import filesize from 'rollup-plugin-filesize';
 import postcss from 'rollup-plugin-postcss';
 import builtins from 'rollup-plugin-node-builtins';
 import analyze from 'rollup-plugin-analyzer';
+import del from 'rollup-plugin-delete';
+import copy from 'rollup-plugin-copy';
 import svgr from '@svgr/rollup';
+import tailwindcss from 'tailwindcss';
 
 // @ts-ignore
 import pkg from './package.json';
@@ -77,13 +80,17 @@ export default defineConfig({
       mainFields: ['module', 'main'],
       extensions: ['.mjs', '.js'],
     }),
+    typescript({
+      outputToFilesystem: true,
+    }),
     postcss({
       extensions: ['.css', '.sass', '.scss'],
       extract: true,
       minimize: {
         preset: 'default',
       },
-      modules: true,
+      plugins: [tailwindcss('./tailwind.config.js')],
+      autoModules: true,
       namedExports: name => {
         // converts scss dashes to camelCase:
         // styles.slate--200 => styles.slate200
@@ -98,9 +105,6 @@ export default defineConfig({
         ],
       ],
     }),
-    typescript({
-      outputToFilesystem: true,
-    }),
     svgr({
       svgoConfig,
     }),
@@ -108,6 +112,15 @@ export default defineConfig({
       exclude: ['node_modules/**', '../../node_modules/**'],
       preventAssignment: true,
       'process.env.NODE_ENV': JSON.stringify('development'),
+    }),
+    copy({
+      targets: [{ src: './tailwind.config.js', dest: 'dist/' }],
+    }),
+    // clear out duplicate CSS bundle in CommonJS folder
+    del({
+      targets: path.resolve(__dirname, 'dist', 'cjs', 'halo.css'),
+      hook: 'writeBundle',
+      verbose: true,
     }),
     analyze({
       limit: 20, // 20 file limit
