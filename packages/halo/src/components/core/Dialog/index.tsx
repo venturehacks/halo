@@ -79,8 +79,8 @@ function Dialog({
             <Button
               data-test="Dialog-secondaryButton"
               onClick={onSecondaryButtonClick}
-              size="small"
-              variant="secondary-gray"
+              size="sm"
+              variant="secondary"
             >
               {secondaryButtonLabel}
             </Button>
@@ -89,7 +89,7 @@ function Dialog({
             <Button
               data-test="Dialog-primaryButton"
               onClick={onPrimaryButtonClick}
-              size="small"
+              size="sm"
               variant="primary"
             >
               {primaryButtonLabel}
