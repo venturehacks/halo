@@ -9,33 +9,14 @@ import {
 
 import styles from './styles.scss';
 
-export type ButtonSize =
-  | 'sm'
-  | 'md'
-  | 'lg'
-  /**
-   * @deprecated 0.15 (all below)
-   */
-  | 'large'
-  | 'regular'
-  | 'small'
-  | 'xsmall'
-  | 'inline';
+export type ButtonSize = 'sm' | 'md' | 'lg';
 
 export type ButtonVariant =
   | 'primary'
   | 'secondary'
   | 'gray'
   | 'destructive'
-  /**
-   * @deprecated 0.15 (all below)
-   */
-  | 'warning'
-  | 'danger'
-  | 'success'
-  | 'secondary-gray'
-  | 'clear'
-  | 'alternate';
+  | 'clear'; // TODO
 
 export type IconPosition = 'left' | 'right';
 

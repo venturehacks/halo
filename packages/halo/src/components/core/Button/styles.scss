@@ -103,6 +103,15 @@
   }
 }
 
+.clear {
+  color: $text-dark--aaaa;
+  background-color: transparent;
+
+  &:hover {
+    background-color: rgba($slate--900, 0.08);
+  }
+}
+
 // Sizes
 
 .sm {
@@ -158,152 +167,4 @@
 
 .width100 {
   width: 100%;
-}
-
-// DEPRECATED BELOW THIS
-
-.warning {
-  background-color: $orange--400;
-  border-color: $orange--400;
-  color: #0d0b22;
-
-  &:hover {
-    color: #0d0b22;
-    border-color: $orange--400;
-    background-color: #df9a3b;
-  }
-
-  &:active {
-    color: #0d0b22;
-    border-color: $orange--400;
-    background-color: #ebecee;
-    opacity: 0.9;
-  }
-}
-
-.danger {
-  background-color: $red--500;
-  border-color: $red--500;
-  color: $white;
-
-  &:hover {
-    color: $white;
-    border-color: $red--600;
-    background-color: $red--600;
-  }
-
-  &:active {
-    color: $white;
-    border-color: $red--600;
-    background-color: $red--600;
-    opacity: 0.9;
-  }
-}
-
-.success {
-  background-color: $green--400;
-  border-color: $green--400;
-  color: $green--100;
-
-  &:hover {
-    background-color: $green--300;
-    border-color: $green--300;
-  }
-
-  &:active {
-    background-color: $green--300;
-    border-color: $green--300;
-  }
-}
-
-.secondaryGray {
-  background-color: $white;
-  border-color: $slate--500;
-  color: $slate--600;
-
-  &:hover {
-    border-color: $slate--500;
-    color: $slate--600;
-    background-color: #f4f5f7; // ebecee
-  }
-
-  &:active {
-    background-color: $slate--100;
-  }
-}
-
-.clear {
-  color: $text-dark--aaaa;
-  background-color: transparent;
-
-  &:hover {
-    background-color: rgba($slate--900, 0.08);
-  }
-}
-
-.alternate {
-  color: $slate--500;
-  background-color: $white;
-}
-
-.regular {
-  font-size: 14px;
-  padding: tempo(1.5) tempo(2);
-
-  &.text {
-    padding-left: tempo(2);
-    padding-right: tempo(2);
-  }
-
-  &.iconOnly {
-    padding: tempo(2);
-  }
-}
-
-.large {
-  font-size: 14px;
-  padding: tempo(2) tempo(5);
-
-  &.iconOnly {
-    padding: tempo(2.5);
-  }
-}
-
-.small {
-  font-size: 14px;
-  padding: tempo(1) tempo(1.5);
-
-  &.text {
-    padding-left: tempo(1);
-    padding-right: tempo(1);
-  }
-
-  &.iconOnly {
-    padding: tempo(1);
-  }
-}
-
-.xsmall {
-  font-size: 12px;
-  padding: 3px tempo(1);
-
-  &.text {
-    padding-left: tempo(1);
-    padding-right: tempo(1);
-  }
-
-  &.iconOnly {
-    padding: tempo(1);
-  }
-}
-
-.emphasis {
-  font-weight: $weight--bold;
-}
-
-.inline {
-  display: inline-block;
-  font-size: inherit;
-  padding: tempo(0.5) tempo(1);
-  margin-right: tempo(1);
 }
