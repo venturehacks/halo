@@ -108,7 +108,7 @@
   background-color: transparent;
 
   &:hover {
-    background-color: rgba($slate--900, 0.08);
+    @include font($weight: bold);
   }
 }
 

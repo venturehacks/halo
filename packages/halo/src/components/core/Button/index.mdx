@@ -15,11 +15,22 @@ import { Header } from '../Header'
 ### Usage
 
 <Playground>
+  <Header h4>Variants</Header>
   <Box row margin={{ bottom: 2 }}>
     <Button>Primary</Button>
     <Button variant="secondary">Secondary</Button>
     <Button variant="gray">Gray</Button>
     <Button variant="destructive">Destructive</Button>
+    <Button variant="clear">Clear</Button>
+  </Box>
+
+  <Header h4>Disabled Variants</Header>
+  <Box row margin={{ bottom: 2 }}>
+    <Button disabled>Primary</Button>
+    <Button variant="secondary" disabled>Secondary</Button>
+    <Button variant="gray" disabled>Gray</Button>
+    <Button variant="destructive" disabled>Destructive</Button>
+    <Button variant="clear" disabled>Clear</Button>
   </Box>
 
   <Header h4>Sizes</Header>

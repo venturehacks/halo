@@ -16,7 +16,7 @@ export type ButtonVariant =
   | 'secondary'
   | 'gray'
   | 'destructive'
-  | 'clear'; // TODO
+  | 'clear';
 
 export type IconPosition = 'left' | 'right';
 
