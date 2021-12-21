@@ -40,6 +40,14 @@ exports[`Button snapshot size sm 1`] = `
 />
 `;
 
+exports[`Button snapshot variant clear 1`] = `
+<button
+  class="component clear sm emphasis"
+  data-test="Button"
+  type="button"
+/>
+`;
+
 exports[`Button snapshot variant destructive 1`] = `
 <button
   class="component destructive sm emphasis"

@@ -78,6 +78,11 @@ describe('Button', () => {
         const component = render(<Button variant="destructive" />);
         expect(component).toMatchSnapshot();
       });
+
+      test('clear', () => {
+        const component = render(<Button variant="clear" />);
+        expect(component).toMatchSnapshot();
+      });
     });
   });
 });
