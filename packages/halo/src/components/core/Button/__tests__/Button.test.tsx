@@ -42,23 +42,18 @@ describe('Button', () => {
     });
 
     describe('size', () => {
-      test('xsmall', () => {
-        const component = render(<Button size="xsmall" />);
+      test('sm', () => {
+        const component = render(<Button size="sm" />);
         expect(component).toMatchSnapshot();
       });
 
-      test('small', () => {
-        const component = render(<Button size="small" />);
+      test('md', () => {
+        const component = render(<Button size="md" />);
         expect(component).toMatchSnapshot();
       });
 
-      test('regular', () => {
-        const component = render(<Button size="regular" />);
-        expect(component).toMatchSnapshot();
-      });
-
-      test('large', () => {
-        const component = render(<Button size="large" />);
+      test('lg', () => {
+        const component = render(<Button size="lg" />);
         expect(component).toMatchSnapshot();
       });
     });
@@ -74,33 +69,18 @@ describe('Button', () => {
         expect(component).toMatchSnapshot();
       });
 
-      test('warning', () => {
-        const component = render(<Button variant="warning" />);
+      test('gray', () => {
+        const component = render(<Button variant="gray" />);
         expect(component).toMatchSnapshot();
       });
 
-      test('danger', () => {
-        const component = render(<Button variant="danger" />);
-        expect(component).toMatchSnapshot();
-      });
-
-      test('success', () => {
-        const component = render(<Button variant="success" />);
-        expect(component).toMatchSnapshot();
-      });
-
-      test('secondary-gray', () => {
-        const component = render(<Button variant="secondary-gray" />);
+      test('destructive', () => {
+        const component = render(<Button variant="destructive" />);
         expect(component).toMatchSnapshot();
       });
 
       test('clear', () => {
         const component = render(<Button variant="clear" />);
-        expect(component).toMatchSnapshot();
-      });
-
-      test('gray', () => {
-        const component = render(<Button variant="gray" />);
         expect(component).toMatchSnapshot();
       });
     });

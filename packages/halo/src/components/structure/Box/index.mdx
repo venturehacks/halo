@@ -21,22 +21,22 @@ Use `Box` to quickly scaffold layouts. By default, `Box` is a standard block ele
       <Box row align="space-between" margin={{ bottom: 2 }} background="orange--100">
         <Button>align</Button>
         <Button variant='secondary'>space-between</Button>
-        <Button variant='secondary-gray'>of</Button>
-        <Button variant='gray'>content</Button>
+        <Button variant='gray'>of</Button>
+        <Button variant='destructive'>content</Button>
       </Box>
       <Box row align="right" valign="bottom" margin={{ top: 1, bottom: 2 }} background="red--100">
         <Button>align</Button>
-        <Button variant='secondary' size="small">right</Button>
-        <Button variant='secondary-gray' size="small">with</Button>
-        <Button variant='gray' size="small">margin</Button>
-        <Button variant='alternate' size="small">{`{{ top: 1, bottom: 2 }}`}</Button>
+        <Button variant='secondary'>right</Button>
+        <Button variant='secondary'>with</Button>
+        <Button variant='gray'>margin</Button>
+        <Button variant='destructive'>{`{{ top: 1, bottom: 2 }}`}</Button>
       </Box>
       <Box row align="left" valign="top" padding={4} background="purple--100">
         <Button>align</Button>
-        <Button variant='secondary' size="small">left</Button>
-        <Button variant='secondary-gray' size="small">with</Button>
-        <Button variant='gray' size="small">padding</Button>
-        <Button variant='alternate' size="small">4</Button>
+        <Button variant='secondary'>left</Button>
+        <Button variant='secondary'>with</Button>
+        <Button variant='gray'>padding</Button>
+        <Button variant='destructive'>4</Button>
       </Box>
       <Box background="green--100" margin={4} padding={4} textAlign="center" onClick={() => window.alert('Hi. I am clickable!')} role="button">
         Click me :)

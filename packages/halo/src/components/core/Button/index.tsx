@@ -9,29 +9,16 @@ import {
 
 import styles from './styles.module.scss';
 
-export type ButtonSize =
-  | 'large'
-  | 'regular'
-  | 'small'
-  | 'xsmall'
-  /**
-   * @deprecated 0.9
-   */
-  | 'inline';
+export type ButtonSize = 'sm' | 'md' | 'lg';
 
 export type ButtonVariant =
   | 'primary'
   | 'secondary'
-  | 'warning'
-  | 'danger'
-  | 'success'
-  | 'secondary-gray'
-  | 'clear'
   | 'gray'
-  /**
-   *  @deprecated 0.9
-   */
-  | 'alternate';
+  | 'destructive'
+  | 'clear';
+
+export type IconPosition = 'left' | 'right';
 
 export interface ButtonProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
@@ -54,11 +41,16 @@ export interface ButtonProps
    * JSX icon
    */
   icon?: React.ReactNode;
+  /**
+   * Icon position relative to the content
+   * @default left
+   */
+  iconPosition?: IconPosition;
   onClick?: React.MouseEventHandler;
   rel?: string;
   /**
    * Size preset
-   * @default regular
+   * @default sm
    */
   size?: ButtonSize;
   target?: '_blank' | '_self' | '_parent' | '_top' | undefined;
@@ -88,8 +80,9 @@ function ButtonRaw({
   target,
   rel,
   icon,
+  iconPosition = 'left',
   onClick,
-  size = 'regular',
+  size = 'sm',
   type = 'button',
   variant = 'primary',
   width,
@@ -101,6 +94,7 @@ function ButtonRaw({
     styles[size],
     emphasis && styles.emphasis,
     icon && styles.hasIcon,
+    iconPosition === 'right' && styles.rightIcon,
     icon && !children && styles.iconOnly,
     width === '100%' && styles.width100,
     className,
@@ -108,8 +102,9 @@ function ButtonRaw({
 
   const content = icon ? (
     <>
-      <span className={styles.icon}>{icon}</span>
+      {iconPosition === 'left' && <span className={styles.icon}>{icon}</span>}
       <span>{children}</span>
+      {iconPosition === 'right' && <span className={styles.icon}>{icon}</span>}
     </>
   ) : (
     children

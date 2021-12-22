@@ -26,6 +26,9 @@ $text-light--success: #009c5e;
 $text-light--warning: #c56e09;
 $text-light--error: #ee2531;
 
+// COMPONENTS
+$button--primary: #0a6cff;
+
 // SPECTRUM
 
 // slate
@@ -114,6 +117,7 @@ $colors: (
   text-light--success: $text-light--success,
   text-light--warning: $text-light--warning,
   text-light--error: $text-light--error,
+  button--primary: $button--primary,
   slate--900: $slate--900,
   slate--800: $slate--800,
   slate--700: $slate--700,
