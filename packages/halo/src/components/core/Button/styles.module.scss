@@ -77,7 +77,8 @@
   border-color: $text-dark--aaa;
   color: $text-dark--aaa;
 
-  &:active {
+  &:active,
+  &:hover {
     background-color: $slate--200;
   }
 
