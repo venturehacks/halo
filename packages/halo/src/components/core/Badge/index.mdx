@@ -18,16 +18,42 @@ Single character colored badge to decorate an element.
 <Playground>
   <Box row>
     <Box relative margin={{ right: 2 }}>
-      <PillTag>Cool</PillTag>
-      <Badge color="purple">A</Badge>
+      <PillTag>square, sm, top</PillTag>
+      <Badge color="purple" shape="square">ABC</Badge>
     </Box>
     <Box relative margin={{ right: 2 }}>
-      <PillTag>Badges</PillTag>
-      <Badge color="blue" shape="square">B</Badge>
+      <PillTag>square, sm, bottom</PillTag>
+      <Badge color="purple" position="bottom" shape="square">DEF</Badge>
+    </Box>
+  </Box>
+  <Box row padding={{ top: 2 }}>
+    <Box relative margin={{ right: 2 }}>
+      <PillTag>square, md, top</PillTag>
+      <Badge color="blue" shape="square" size="md">RST</Badge>
     </Box>
     <Box relative margin={{ right: 2 }}>
-      <PillTag>Dude</PillTag>
-      <Badge color="orange" tooltip="wow, sick badge">C</Badge>
+      <PillTag>square, md, bottom</PillTag>
+      <Badge color="blue" position="bottom" shape="square" size="md">XYZ</Badge>
+    </Box>
+  </Box>
+  <Box row padding={{ top: 2 }}>
+    <Box relative margin={{ right: 2 }}>
+      <PillTag>circle, sm, top</PillTag>
+      <Badge color="red" size="sm">A</Badge>
+    </Box>
+    <Box relative margin={{ right: 2 }}>
+      <PillTag>circle, sm, bottom</PillTag>
+      <Badge color="red" position="bottom">B</Badge>
+    </Box>
+  </Box>
+  <Box row padding={{ top: 2 }}>
+    <Box relative margin={{ right: 2 }}>
+      <PillTag>circle, md, top</PillTag>
+      <Badge color="orange" size="md">LMN</Badge>
+    </Box>
+    <Box relative margin={{ right: 2 }}>
+      <PillTag>circle, md, bottom</PillTag>
+      <Badge color="orange" position="bottom" size="md">OPQ</Badge>
     </Box>
   </Box>
 </Playground>

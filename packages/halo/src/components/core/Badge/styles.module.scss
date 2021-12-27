@@ -1,11 +1,10 @@
 @import 'halo';
 
-$badge-size: 16px;
+$size-sm: 16px;
+$size-md: 24px;
 
 .component {
   position: absolute;
-  right: -3px;
-  top: -2px;
   @include halo-element-base; // TODO: deprecate
   @include border-circle;
   @include font(
@@ -17,13 +16,11 @@ $badge-size: 16px;
     $line: 9px
   );
   border: 1px solid $slate--100;
-  height: $badge-size;
   text-align: center;
 
   // shapes
   &.circle {
     @include border-circle;
-    width: $badge-size;
   }
 
   &.square {
@@ -61,5 +58,37 @@ $badge-size: 16px;
     background-color: $orange--200;
     border-color: $orange--200;
     color: $orange--600;
+  }
+
+  // sizes
+  &.sm {
+    height: $size-sm;
+    min-width: $size-sm;
+    left: calc(100% - #{tempo(2.5)});
+
+    // positions
+    &.bottom {
+      bottom: tempo(1);
+    }
+
+    &.top {
+      top: -#{tempo(0.5)};
+    }
+  }
+
+  &.md {
+    height: $size-md;
+    min-width: $size-md;
+    padding-top: tempo(0.5);
+    left: calc(100% - #{$size-md});
+
+    // positions
+    &.bottom {
+      bottom: 0;
+    }
+
+    &.top {
+      top: -#{tempo(1)};
+    }
   }
 }
