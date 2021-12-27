@@ -13,9 +13,18 @@ import { Box } from '../../structure/Box';
 ### Usage
 
 <Playground>
-  <Box row align="space-between" maxWidth="500px">
+  <h4> Badge on `top` </h4>
+  <Box row align="space-between" maxWidth="500px" padding={{ right: 2 }}>
     <Avatar
-      size="large"
+      size="xl"
+      badge="XL"
+      badgeColor="orange"
+      tooltip="Always a C+ student"
+      imageUrl="https://avatars1.githubusercontent.com/u/194885"
+    />
+
+    <Avatar
+      size="lg"
       badge="L"
       badgeColor="blue"
       tooltip="Always a C+ student"
@@ -23,7 +32,7 @@ import { Box } from '../../structure/Box';
     />
 
     <Avatar
-      size="medium"
+      size="md"
       badge="M"
       badgeColor="green"
       tooltip="Always a C+ student"
@@ -31,7 +40,7 @@ import { Box } from '../../structure/Box';
     />
 
     <Avatar
-      size="small"
+      size="sm"
       badge="S"
       badgeColor="purple"
       tooltip="Always a C+ student"
@@ -39,9 +48,57 @@ import { Box } from '../../structure/Box';
     />
 
     <Avatar
-      size="xsmall"
+      size="xs"
       badge="XS"
       badgeColor="red"
+      tooltip="Always a C+ student"
+      imageUrl="https://avatars1.githubusercontent.com/u/194885"
+    />
+  </Box>
+
+  <h4> Badge on the `bottom` </h4>
+  <Box row align="space-between" maxWidth="500px" padding={{ right: 2 }}>
+    <Avatar
+      size="xl"
+      badge="XL"
+      badgeColor="orange"
+      badgePosition="bottom"
+      tooltip="Always a C+ student"
+      imageUrl="https://avatars1.githubusercontent.com/u/194885"
+    />
+
+    <Avatar
+      size="lg"
+      badge="L"
+      badgeColor="blue"
+      badgePosition="bottom"
+      tooltip="Always a C+ student"
+      imageUrl="https://avatars1.githubusercontent.com/u/194885"
+    />
+
+    <Avatar
+      size="md"
+      badge="M"
+      badgeColor="green"
+      badgePosition="bottom"
+      tooltip="Always a C+ student"
+      imageUrl="https://avatars1.githubusercontent.com/u/194885"
+    />
+
+    <Avatar
+      size="sm"
+      badge="S"
+      badgeColor="purple"
+      badgePosition="bottom"
+      tooltip="Always a C+ student"
+      imageUrl="https://avatars1.githubusercontent.com/u/194885"
+    />
+
+    <Avatar
+      size="xs"
+      badge="XS"
+      badgeColor="red"
+      badgePosition="bottom"
       tooltip="Always a C+ student"
       imageUrl="https://avatars1.githubusercontent.com/u/194885"
     />
@@ -53,7 +110,7 @@ import { Box } from '../../structure/Box';
 ```ts
 type AvatarShape = 'circle' | 'square';
 
-type AvatarSize = 'xxxsmall' | 'xxsmall' | 'xsmall' | 'small' | 'medium' | 'large';
+type AvatarSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 ```
 
 ### Props

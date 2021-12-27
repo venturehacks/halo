@@ -1,12 +1,10 @@
 @import 'halo';
 
-$size-xxxsmall: 16px;
-$size-xxsmall: 24px;
-$size-xsmall: 32px;
-$size-small: 48px;
-$size-medium: 60px;
-$size-large: 80px;
-$size-badge: 16px;
+$size-xs: 24px;
+$size-sm: 32px;
+$size-md: 48px;
+$size-lg: 72px;
+$size-xl: 112px;
 
 .component {
   @include halo-element-base; // TODO: deprecate
@@ -15,34 +13,29 @@ $size-badge: 16px;
   align-items: center;
 
   // sizes
-  &.xxxsmall {
-    height: $size-xxxsmall;
-    width: $size-xxxsmall;
+  &.xs {
+    height: $size-xs;
+    width: $size-xs;
   }
 
-  &.xxsmall {
-    height: $size-xxsmall;
-    width: $size-xxsmall;
+  &.sm {
+    height: $size-sm;
+    width: $size-sm;
   }
 
-  &.xsmall {
-    height: $size-xsmall;
-    width: $size-xsmall;
+  &.md {
+    height: $size-md;
+    width: $size-md;
   }
 
-  &.small {
-    height: $size-small;
-    width: $size-small;
+  &.lg {
+    height: $size-lg;
+    width: $size-lg;
   }
 
-  &.medium {
-    height: $size-medium;
-    width: $size-medium;
-  }
-
-  &.large {
-    height: $size-large;
-    width: $size-large;
+  &.xl {
+    height: $size-xl;
+    width: $size-xl;
   }
 
   // shapes
