@@ -2,146 +2,162 @@
 
 exports[`Avatar snapshots badge label 1`] = `
 <div
-  class="component large circle"
+  class="component lg circle"
 >
   <img
     alt="Avatar for Drew"
     class="avatar circle"
-    height="80"
+    height="72"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="80"
+    width="72"
   />
   <div
-    class="component gray top circle sm"
+    class="badge"
   >
-    Test Badge
+    <div
+      class="component gray top circle md"
+    >
+      Test Badge
+    </div>
   </div>
 </div>
 `;
 
 exports[`Avatar snapshots badgeColor 1`] = `
 <div
-  class="component large circle"
+  class="component lg circle"
 >
   <img
     alt="Avatar for Drew"
     class="avatar circle"
-    height="80"
+    height="72"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="80"
+    width="72"
   />
   <div
-    class="component purple top circle sm"
+    class="badge"
   >
-    Purple
+    <div
+      class="component purple top circle md"
+    >
+      Purple
+    </div>
   </div>
 </div>
 `;
 
 exports[`Avatar snapshots badgeShape circle [default] 1`] = `
 <div
-  class="component large circle"
+  class="component lg circle"
 >
   <img
     alt="Avatar for Drew"
     class="avatar circle"
-    height="80"
+    height="72"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="80"
+    width="72"
   />
   <div
-    class="component gray top circle sm"
+    class="badge"
   >
-    Test Badge
+    <div
+      class="component gray top circle md"
+    >
+      Test Badge
+    </div>
   </div>
 </div>
 `;
 
 exports[`Avatar snapshots badgeShape square 1`] = `
 <div
-  class="component large circle"
+  class="component lg circle"
 >
   <img
     alt="Avatar for Drew"
     class="avatar circle"
-    height="80"
+    height="72"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="80"
+    width="72"
   />
   <div
-    class="component gray top square sm"
+    class="badge"
   >
-    Test Badge
+    <div
+      class="component gray top square md"
+    >
+      Test Badge
+    </div>
   </div>
 </div>
 `;
 
 exports[`Avatar snapshots shape circle [default] 1`] = `
 <div
-  class="component medium circle"
+  class="component md circle"
 >
   <img
     alt="Avatar for Drew"
     class="avatar circle"
-    height="60"
+    height="48"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="60"
+    width="48"
   />
 </div>
 `;
 
 exports[`Avatar snapshots shape square 1`] = `
 <div
-  class="component medium square"
+  class="component md square"
 >
   <img
     alt="Avatar for Drew"
     class="avatar square"
-    height="60"
+    height="48"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="60"
+    width="48"
   />
 </div>
 `;
 
-exports[`Avatar snapshots size large 1`] = `
+exports[`Avatar snapshots size lg 1`] = `
 <div
-  class="component large circle"
+  class="component lg circle"
 >
   <img
     alt="Avatar for Drew"
     class="avatar circle"
-    height="80"
+    height="72"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="80"
+    width="72"
   />
 </div>
 `;
 
-exports[`Avatar snapshots size medium [default] 1`] = `
+exports[`Avatar snapshots size md [default] 1`] = `
 <div
-  class="component medium circle"
+  class="component md circle"
 >
   <img
     alt="Avatar for Drew"
     class="avatar circle"
-    height="60"
+    height="48"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="60"
+    width="48"
   />
 </div>
 `;
 
-exports[`Avatar snapshots size xxxsmall 1`] = `
+exports[`Avatar snapshots size xs 1`] = `
 <div
-  class="component xxxsmall circle"
+  class="component xs circle"
 >
   <img
     alt="Avatar for Drew"
     class="avatar circle"
-    height="16"
+    height="24"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="16"
+    width="24"
   />
 </div>
 `;
