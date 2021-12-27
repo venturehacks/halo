@@ -2,30 +2,54 @@
 
 exports[`Badge snapshot color blue 1`] = `
 <div
-  class="component blue circle"
+  class="component blue top circle sm"
 />
 `;
 
 exports[`Badge snapshot color gray 1`] = `
 <div
-  class="component gray circle"
+  class="component gray top circle sm"
 />
 `;
 
 exports[`Badge snapshot color green 1`] = `
 <div
-  class="component green circle"
+  class="component green top circle sm"
+/>
+`;
+
+exports[`Badge snapshot position bottom 1`] = `
+<div
+  class="component gray bottom circle sm"
+/>
+`;
+
+exports[`Badge snapshot position top 1`] = `
+<div
+  class="component gray top circle sm"
 />
 `;
 
 exports[`Badge snapshot shape circle 1`] = `
 <div
-  class="component gray circle"
+  class="component gray top circle sm"
 />
 `;
 
 exports[`Badge snapshot shape square 1`] = `
 <div
-  class="component gray square"
+  class="component gray top square sm"
+/>
+`;
+
+exports[`Badge snapshot size size 1`] = `
+<div
+  class="component gray top circle md"
+/>
+`;
+
+exports[`Badge snapshot size sm 1`] = `
+<div
+  class="component gray top circle sm"
 />
 `;

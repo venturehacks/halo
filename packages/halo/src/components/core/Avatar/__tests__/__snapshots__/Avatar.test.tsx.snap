@@ -12,7 +12,7 @@ exports[`Avatar snapshots badge label 1`] = `
     width="80"
   />
   <div
-    class="component gray circle"
+    class="component gray top circle sm"
   >
     Test Badge
   </div>
@@ -31,7 +31,7 @@ exports[`Avatar snapshots badgeColor 1`] = `
     width="80"
   />
   <div
-    class="component purple circle"
+    class="component purple top circle sm"
   >
     Purple
   </div>
@@ -50,7 +50,7 @@ exports[`Avatar snapshots badgeShape circle [default] 1`] = `
     width="80"
   />
   <div
-    class="component gray circle"
+    class="component gray top circle sm"
   >
     Test Badge
   </div>
@@ -69,7 +69,7 @@ exports[`Avatar snapshots badgeShape square 1`] = `
     width="80"
   />
   <div
-    class="component gray square"
+    class="component gray top square sm"
   >
     Test Badge
   </div>
