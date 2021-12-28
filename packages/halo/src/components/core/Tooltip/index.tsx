@@ -9,10 +9,6 @@ export interface TooltipProps extends TippyProps {
    * @deprecated `distance` is unsupported since popper@2.x. Use offset instead.
    */
   distance?: never;
-  /**
-   * NOTE(drew): temporarily unimplemented.
-   * https://venturehacks.atlassian.net/browse/LEV-1055
-   */
   size?: 'sm' | 'md' | 'lg';
 }
 
@@ -39,13 +35,13 @@ function Tooltip({
   arrow = false,
   className,
   distance,
-  size,
+  size = 'md',
   ...rest
 }: TooltipProps) {
   return (
     <Tippy
       arrow={arrow}
-      className={classNames(styles.component, className)}
+      className={classNames([styles.component, className, styles[size]])}
       {...rest}
     />
   );

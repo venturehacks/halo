@@ -23,8 +23,18 @@ Our tooltip component is a thin wrapper around Tippy, with small tweaks to styli
 
 <Playground>
   <Box margin={{ bottom: 3 }}>
-    <Tooltip content="Pop a tooltip above">
-      <Span>🖲 Hover</Span>
+    <Tooltip content="Pop a small tooltip above" size="sm">
+      <Span>🖲 Hover [sm]</Span>
+    </Tooltip>
+  </Box>
+  <Box margin={{ bottom: 3 }}>
+    <Tooltip content="Pop a medium tooltip above">
+      <Span>🖲 Hover [md]</Span>
+    </Tooltip>
+  </Box>
+  <Box margin={{ bottom: 3 }}>
+    <Tooltip content="Pop a large tooltip above" size="lg">
+      <Span>🖲 Hover [lg]</Span>
     </Tooltip>
   </Box>
   <Box margin={{ bottom: 3 }}>

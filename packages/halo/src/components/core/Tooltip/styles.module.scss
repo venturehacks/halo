@@ -7,3 +7,15 @@
   background-color: $slate--900;
   padding: tempo(0.5) tempo(1);
 }
+
+// Sizes
+
+.sm {
+  padding: 0.1875rem 0.375rem;
+  font-size: 0.75rem;
+}
+
+.lg {
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+}
