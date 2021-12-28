@@ -30,9 +30,6 @@ $text-light--success: #009c5e;
 $text-light--warning: #c56e09;
 $text-light--error: #ee2531;
 
-// COMPONENTS
-$button--primary: #0a6cff;
-
 // SPECTRUM
 
 // slate
@@ -105,6 +102,8 @@ $orange--100: #fff9e7 !default;
 $colors: (
   black: $black,
   white: $white,
+  primary--dark: $primary--dark,
+  primary--light: $primary--light,
   text-dark--aaaa: $text-dark--aaaa,
   text-dark--aaa: $text-dark--aaa,
   text-dark--aa: $text-dark--aa,
@@ -121,7 +120,6 @@ $colors: (
   text-light--success: $text-light--success,
   text-light--warning: $text-light--warning,
   text-light--error: $text-light--error,
-  button--primary: $button--primary,
   slate--900: $slate--900,
   slate--800: $slate--800,
   slate--700: $slate--700,
