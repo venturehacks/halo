@@ -1,0 +1,47 @@
+@import 'halo';
+
+$size-sm: tempo(1.5);
+$size-md: tempo(2);
+
+.component {
+  @include border-circle;
+  text-align: center;
+
+  // sizes
+  &.sm {
+    width: $size-sm;
+    @include font($size: 8px, $color: white);
+
+    &.circle {
+      height: $size-sm;
+    }
+
+    &.oval {
+      height: calc(#{$size-sm} * 1.2);
+      @include font($size: 9px);
+    }
+  }
+
+  &.md {
+    width: $size-md;
+    @include font($size: 10px, $color: white);
+
+    &.circle {
+      height: $size-md;
+    }
+
+    &.oval {
+      height: calc(#{$size-md} * 1.2);
+      @include font($size: 11px);
+    }
+  }
+
+  // colors
+  &.red {
+    background-color: $red--600;
+  }
+
+  &.orange {
+    background-color: $orange--600;
+  }
+}

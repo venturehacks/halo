@@ -1,0 +1,59 @@
+---
+name: AttentionIndicator
+menu: Core
+route: /core/attentionIndicator
+---
+
+import { Props, Playground } from 'docz';
+import { AttentionIndicator } from './'
+import { Box } from '../../structure/Box';
+import { Header } from '../Header'
+
+# AttentionIndicator
+
+Blah blah blah
+
+### Usage
+
+<Playground>
+  <Header h4>Circle</Header>
+  <Box column>
+    <Box row margin={{ bottom: 2 }}>
+      <AttentionIndicator color="red" />
+    </Box>
+    <Box row margin={{ bottom: 2 }}>
+      <AttentionIndicator color="red" displayCount={1} />
+    </Box>
+    <Box margin={{ bottom: 2 }}>
+      <AttentionIndicator color="orange" size="md" />
+    </Box>
+    <Box margin={{ bottom: 2 }}>
+      <AttentionIndicator color="orange" displayCount={20} size="md" />
+    </Box>
+  </Box>
+
+  <Header h4>Oval</Header>
+  <Box column>
+    <Box margin={{ bottom: 2 }}>
+      <AttentionIndicator color="red" shape="oval"displayCount={3} />
+    </Box>
+    <Box margin={{ bottom: 2 }}>
+      <AttentionIndicator color="red" shape="oval" />
+    </Box>
+    <Box margin={{ bottom: 2 }}>
+      <AttentionIndicator color="orange" shape="oval" size="md" displayCount={40} />
+    </Box>
+  </Box>
+</Playground>
+
+### Exports
+
+```ts
+type BadgeColor = 'orange' | 'red';
+
+type BadgeShape = 'circle' | 'oval';
+```
+
+### Props
+
+<Props of={AttentionIndicator} />
