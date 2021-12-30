@@ -60,9 +60,9 @@ function Banner({
 
   return (
     <div className={classes} data-test="Banner" role="alert">
-      <aside className="mr-2 mt-1 ml-1">
+      <aside className="mr-2 ml-1">
         {variant === 'error' && (
-          <CloseIcon className="block text-red-700 w-4 h-4 mt-0.5" />
+          <CloseIcon className="block text-red-700 w-2.5 h-2.5" />
         )}
         {/* <WarningTriangleIcon
           className={classNames(variant === 'notice' && 'block')}
