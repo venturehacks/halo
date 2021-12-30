@@ -32,6 +32,11 @@ function AttentionIndicator({
   shape = 'circle',
   size = 'sm',
 }: AttentionIndicatorProps) {
+  let displayString: any = displayCount;
+  if (displayString && displayString > 99) {
+    displayString = '99+';
+  }
+
   return (
     <div
       className={classNames(
@@ -42,8 +47,12 @@ function AttentionIndicator({
         className,
       )}
     >
-      {icon && { icon }}
-      {displayCount && <>{displayCount}</>}
+      {icon && (
+        <div className={classNames(styles.icon, styles[shape], styles[size])}>
+          {icon}
+        </div>
+      )}
+      {displayString && <>{displayString}</>}
     </div>
   );
 }

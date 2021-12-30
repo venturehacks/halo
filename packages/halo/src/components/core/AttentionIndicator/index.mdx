@@ -7,11 +7,12 @@ route: /core/attentionIndicator
 import { Props, Playground } from 'docz';
 import { AttentionIndicator } from './'
 import { Box } from '../../structure/Box';
+import { CloseIcon } from '../../icons';
 import { Header } from '../Header'
 
 # AttentionIndicator
 
-Blah blah blah
+An attention badge that can be used to indicate a count or with an icon.
 
 ### Usage
 
@@ -19,29 +20,84 @@ Blah blah blah
   <Header h4>Circle</Header>
   <Box column>
     <Box row margin={{ bottom: 2 }}>
-      <AttentionIndicator color="red" />
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="red" />
+      </Box>
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="red" displayCount={1} />
+      </Box>
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="red" displayCount={10} />
+      </Box>
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="red" displayCount={100} />
+      </Box>
     </Box>
     <Box row margin={{ bottom: 2 }}>
-      <AttentionIndicator color="red" displayCount={1} />
-    </Box>
-    <Box margin={{ bottom: 2 }}>
-      <AttentionIndicator color="orange" size="md" />
-    </Box>
-    <Box margin={{ bottom: 2 }}>
-      <AttentionIndicator color="orange" displayCount={20} size="md" />
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="orange" size="md"/>
+      </Box>
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="orange" size="md" displayCount={1} />
+      </Box>
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="orange" size="md" displayCount={10} />
+      </Box>
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="orange" size="md" displayCount={100} />
+      </Box>
     </Box>
   </Box>
 
   <Header h4>Oval</Header>
   <Box column>
-    <Box margin={{ bottom: 2 }}>
-      <AttentionIndicator color="red" shape="oval"displayCount={3} />
+    <Box row margin={{ bottom: 2 }}>
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="red" shape="oval" />
+      </Box>
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="red" shape="oval" displayCount={1} />
+      </Box>
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="red" shape="oval" displayCount={10} />
+      </Box>
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="red" shape="oval" displayCount={100} />
+      </Box>
     </Box>
-    <Box margin={{ bottom: 2 }}>
-      <AttentionIndicator color="red" shape="oval" />
+    <Box row margin={{ bottom: 2 }}>
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="orange" shape="oval" size="md" />
+      </Box>
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="orange" shape="oval" size="md" displayCount={1} />
+      </Box>
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="orange" shape="oval" size="md" displayCount={10} />
+      </Box>
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="orange" shape="oval" size="md" displayCount={100} />
+      </Box>
     </Box>
-    <Box margin={{ bottom: 2 }}>
-      <AttentionIndicator color="orange" shape="oval" size="md" displayCount={40} />
+  </Box>
+
+  <Header h4>With an icon</Header>
+  <Box column>
+    <Box row margin={{ bottom: 2 }}>
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="red" icon={<CloseIcon />} />
+      </Box>
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="orange" shape="oval" icon={<CloseIcon />} />
+      </Box>
+    </Box>
+    <Box row margin={{ bottom: 2 }}>
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="red" size="md" icon={<CloseIcon />} />
+      </Box>
+      <Box padding={{ right: 2 }}>
+        <AttentionIndicator color="orange" size="md" shape="oval" icon={<CloseIcon />} />
+      </Box>
     </Box>
   </Box>
 </Playground>
@@ -49,9 +105,11 @@ Blah blah blah
 ### Exports
 
 ```ts
-type BadgeColor = 'orange' | 'red';
+type AttentionIndicatorColor = 'orange' | 'red';
 
-type BadgeShape = 'circle' | 'oval';
+type AttentionIndicatorShape = 'circle' | 'oval';
+
+type AttentionIndicatorSize = 'sm' | 'md';
 ```
 
 ### Props

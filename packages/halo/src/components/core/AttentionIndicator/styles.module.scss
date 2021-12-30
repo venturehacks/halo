@@ -1,47 +1,85 @@
 @import 'halo';
 
-$size-sm: tempo(1.5);
-$size-md: tempo(2);
+$size-sm: 12px;
+$size-md: 16px;
 
 .component {
-  @include border-circle;
   text-align: center;
 
-  // sizes
-  &.sm {
-    width: $size-sm;
-    @include font($size: 8px, $color: white);
+  &.circle {
+    @include border-circle;
+    line-height: 2;
 
-    &.circle {
+    &.sm {
       height: $size-sm;
     }
 
-    &.oval {
-      height: calc(#{$size-sm} * 1.2);
-      @include font($size: 9px);
+    &.md {
+      height: $size-md;
     }
+  }
+
+  &.oval {
+    line-height: 2.5;
+
+    &.sm {
+      @include border-rounded(6px);
+      height: 15px;
+    }
+
+    &.md {
+      @include border-rounded(8px);
+      height: 20px;
+    }
+  }
+
+  &.sm {
+    @include font($color: white, $size: 6px, $weight: bold);
+    width: $size-sm;
   }
 
   &.md {
+    @include font($color: white, $size: 8px, $weight: bold);
     width: $size-md;
-    @include font($size: 10px, $color: white);
-
-    &.circle {
-      height: $size-md;
-    }
-
-    &.oval {
-      height: calc(#{$size-md} * 1.2);
-      @include font($size: 11px);
-    }
   }
 
-  // colors
   &.red {
     background-color: $red--600;
   }
 
   &.orange {
     background-color: $orange--600;
+  }
+
+  .icon {
+    display: block;
+    margin: auto;
+
+    &.sm {
+      width: 6px;
+      height: 6px;
+
+      &.circle {
+        padding-top: 3px;
+      }
+
+      &.oval {
+        padding-top: 4px;
+      }
+    }
+
+    &.md {
+      width: 8px;
+      height: 8px;
+      padding-top: 6px;
+
+      &.circle {
+        padding-top: 4px;
+      }
+
+      &.oval {
+        padding-top: 6px;
+      }
+    }
   }
 }
