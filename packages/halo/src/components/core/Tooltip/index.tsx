@@ -2,8 +2,6 @@ import Tippy, { TippyProps } from '@tippyjs/react';
 import classNames from 'classnames';
 import React from 'react';
 
-import styles from './styles.module.scss';
-
 export interface TooltipProps extends TippyProps {
   /**
    * @deprecated `distance` is unsupported since popper@2.x. Use offset instead.
@@ -39,7 +37,6 @@ function Tooltip({
   ...rest
 }: TooltipProps) {
   const classes = classNames(
-    styles.component,
     className,
     size === 'sm' && 'text-2xs',
     size === 'md' && 'text-xs',
