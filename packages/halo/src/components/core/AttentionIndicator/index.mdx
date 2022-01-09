@@ -18,88 +18,40 @@ An attention badge that can be used to indicate a count or with an icon.
 
 <Playground>
   <Header h4>Circle</Header>
-  <Box column>
-    <Box row margin={{ bottom: 2 }}>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="red" />
-      </Box>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="red" displayCount={1} />
-      </Box>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="red" displayCount={10} />
-      </Box>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="red" displayCount={100} />
-      </Box>
-    </Box>
-    <Box row margin={{ bottom: 2 }}>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="orange" size="md"/>
-      </Box>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="orange" size="md" displayCount={1} />
-      </Box>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="orange" size="md" displayCount={10} />
-      </Box>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="orange" size="md" displayCount={100} />
-      </Box>
-    </Box>
-  </Box>
+  <div className="flex flex-col">
+    <div className="flex flex-row items-start gap-3 mb-2">
+      <AttentionIndicator color="red" />
+      <AttentionIndicator color="red" displayCount={1} />
+      <AttentionIndicator color="red" displayCount={10} />
+      <AttentionIndicator color="red" displayCount={100} />
+      <AttentionIndicator color="red" icon={<CloseIcon />} />
+    </div>
+    <div className="flex flex-row items-start gap-2">
+      <AttentionIndicator color="orange" size="md" />
+      <AttentionIndicator color="orange" size="md" displayCount={1} />
+      <AttentionIndicator color="orange" size="md" displayCount={10} />
+      <AttentionIndicator color="orange" size="md" displayCount={100} />
+      <AttentionIndicator color="orange" size="md" icon={<CloseIcon />} />
+    </div>
+  </div>
 
   <Header h4>Oval</Header>
-  <Box column>
-    <Box row margin={{ bottom: 2 }}>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="red" shape="oval" />
-      </Box>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="red" shape="oval" displayCount={1} />
-      </Box>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="red" shape="oval" displayCount={10} />
-      </Box>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="red" shape="oval" displayCount={100} />
-      </Box>
-    </Box>
-    <Box row margin={{ bottom: 2 }}>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="orange" shape="oval" size="md" />
-      </Box>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="orange" shape="oval" size="md" displayCount={1} />
-      </Box>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="orange" shape="oval" size="md" displayCount={10} />
-      </Box>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="orange" shape="oval" size="md" displayCount={100} />
-      </Box>
-    </Box>
-  </Box>
-
-  <Header h4>With an icon</Header>
-  <Box column>
-    <Box row margin={{ bottom: 2 }}>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="red" icon={<CloseIcon />} />
-      </Box>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="orange" shape="oval" icon={<CloseIcon />} />
-      </Box>
-    </Box>
-    <Box row margin={{ bottom: 2 }}>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="red" size="md" icon={<CloseIcon />} />
-      </Box>
-      <Box padding={{ right: 2 }}>
-        <AttentionIndicator color="orange" size="md" shape="oval" icon={<CloseIcon />} />
-      </Box>
-    </Box>
-  </Box>
+  <div className="flex flex-col">
+    <div className="flex flex-row items-start gap-3 mb-2">
+      <AttentionIndicator color="red" shape="oval" />
+      <AttentionIndicator color="red" shape="oval" displayCount={1} />
+      <AttentionIndicator color="red" shape="oval" displayCount={10} />
+      <AttentionIndicator color="red" shape="oval" displayCount={100} />
+      <AttentionIndicator color="red" shape="oval" icon={<CloseIcon />} />
+    </div>
+    <div className="flex flex-row items-start gap-2">
+      <AttentionIndicator color="orange" shape="oval" size="md" />
+      <AttentionIndicator color="orange" shape="oval" size="md" displayCount={1} />
+      <AttentionIndicator color="orange" shape="oval" size="md" displayCount={10} />
+      <AttentionIndicator color="orange" shape="oval" size="md" displayCount={100} />
+      <AttentionIndicator color="orange" shape="oval" size="md" icon={<CloseIcon />} />
+    </div>
+  </div>
 </Playground>
 
 ### Exports
