@@ -17,6 +17,12 @@ describe('Avatar', () => {
 
   describe('snapshots', () => {
     describe('size', () => {
+      test(`xxs`, () => {
+        const component = render(<Avatar {...sharedProps} size="xxs" />);
+
+        expect(component).toMatchSnapshot();
+      });
+
       test(`xs`, () => {
         const component = render(<Avatar {...sharedProps} size="xs" />);
 

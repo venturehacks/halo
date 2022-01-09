@@ -161,3 +161,17 @@ exports[`Avatar snapshots size xs 1`] = `
   />
 </div>
 `;
+
+exports[`Avatar snapshots size xxs 1`] = `
+<div
+  class="component xxs circle"
+>
+  <img
+    alt="Avatar for Drew"
+    class="avatar circle"
+    height="16"
+    src="https://avatars1.githubusercontent.com/u/194885"
+    width="16"
+  />
+</div>
+`;

@@ -1,5 +1,6 @@
 @import 'halo';
 
+$size-xxs: 16px;
 $size-xs: 24px;
 $size-sm: 32px;
 $size-md: 48px;
@@ -13,6 +14,11 @@ $size-xl: 112px;
   align-items: center;
 
   // sizes
+  &.xxs {
+    height: $size-xxs;
+    width: $size-xxs;
+  }
+
   &.xs {
     height: $size-xs;
     width: $size-xs;

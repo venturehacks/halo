@@ -17,7 +17,7 @@ import styles from './styles.module.scss';
 
 export type AvatarShape = 'circle' | 'square';
 
-export type AvatarSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+export type AvatarSize = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 export interface AvatarProps {
   badge?: string | boolean | React.ReactNode;
@@ -57,6 +57,8 @@ function AvatarRaw({
     tooltip,
   };
   const isBadgeJSX = typeof badge !== 'boolean' && typeof badge !== 'string';
+  // 'xxs' avatars are too small to have a badge
+  const showBadge = badge && size !== 'xxs';
 
   return (
     <div
@@ -76,7 +78,7 @@ function AvatarRaw({
         src={imageUrl}
         width={IMAGE_SIZES[size]}
       />
-      {badge && (
+      {showBadge && (
         <div className={styles.badge}>
           {isBadgeJSX ? badge : <Badge {...badgeOptions}>{badge}</Badge>}
         </div>
@@ -93,6 +95,7 @@ export { Avatar };
 // ! Keep in sync with ./styles.module.scss
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 export const IMAGE_SIZES: Record<AvatarSize, number> = {
+  xxs: 16,
   xs: 24,
   sm: 32,
   md: 48,
