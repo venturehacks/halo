@@ -34,7 +34,7 @@ $size-md: 16px;
   }
 
   &.sm {
-    @include font($color: white, $size: 6px, $weight: bold);
+    @include font($color: white, $size: 6px);
     width: $size-sm;
   }
 
