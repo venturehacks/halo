@@ -41,7 +41,7 @@ function Tooltip({
   return (
     <Tippy
       arrow={arrow}
-      className={classNames([styles.component, className, styles[size]])}
+      className={classNames(styles.component, className, styles[size])}
       {...rest}
     />
   );
