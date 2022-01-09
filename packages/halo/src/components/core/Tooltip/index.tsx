@@ -38,13 +38,19 @@ function Tooltip({
   size = 'md',
   ...rest
 }: TooltipProps) {
-  return (
-    <Tippy
-      arrow={arrow}
-      className={classNames(styles.component, className, styles[size])}
-      {...rest}
-    />
+  const classes = classNames(
+    styles.component,
+    className,
+    size === 'sm' && 'text-2xs',
+    size === 'md' && 'text-xs',
+    size === 'lg' && 'text-md',
+    'bg-slate-900',
+    'py-1 px-2',
+    'rounded',
+    'text-white',
   );
+
+  return <Tippy arrow={arrow} className={classes} {...rest} />;
 }
 
 export { Tooltip };
