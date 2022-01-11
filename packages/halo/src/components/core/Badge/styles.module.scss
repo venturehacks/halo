@@ -64,16 +64,7 @@ $size-md: 24px;
   &.sm {
     height: $size-sm;
     min-width: $size-sm;
-    left: calc(100% - #{tempo(2.5)});
-
-    // positions
-    &.bottom {
-      bottom: tempo(1);
-    }
-
-    &.top {
-      top: -#{tempo(0.5)};
-    }
+    right: -2px;
   }
 
   &.md {
@@ -81,14 +72,14 @@ $size-md: 24px;
     min-width: $size-md;
     padding-top: tempo(0.5);
     left: calc(100% - #{$size-md});
+  }
 
-    // positions
-    &.bottom {
-      bottom: 0;
-    }
+  // positions
+  &.bottom {
+    bottom: 0;
+  }
 
-    &.top {
-      top: -#{tempo(1)};
-    }
+  &.top {
+    top: -#{tempo(0.5)};
   }
 }

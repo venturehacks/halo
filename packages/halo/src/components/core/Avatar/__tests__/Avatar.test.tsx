@@ -10,27 +10,33 @@ const sharedProps = {
 
 describe('Avatar', () => {
   test('smoke', () => {
-    const component = render(<Avatar {...sharedProps} size="large" />);
+    const component = render(<Avatar {...sharedProps} size="sm" />);
 
     expect(component.html()).toContain('<img');
   });
 
   describe('snapshots', () => {
     describe('size', () => {
-      test(`xxxsmall`, () => {
-        const component = render(<Avatar {...sharedProps} size="xxxsmall" />);
+      test(`xxs`, () => {
+        const component = render(<Avatar {...sharedProps} size="xxs" />);
 
         expect(component).toMatchSnapshot();
       });
 
-      test(`medium [default]`, () => {
-        const component = render(<Avatar {...sharedProps} size="medium" />);
+      test(`xs`, () => {
+        const component = render(<Avatar {...sharedProps} size="xs" />);
 
         expect(component).toMatchSnapshot();
       });
 
-      test(`large`, () => {
-        const component = render(<Avatar {...sharedProps} size="large" />);
+      test(`md [default]`, () => {
+        const component = render(<Avatar {...sharedProps} size="md" />);
+
+        expect(component).toMatchSnapshot();
+      });
+
+      test(`lg`, () => {
+        const component = render(<Avatar {...sharedProps} size="lg" />);
 
         expect(component).toMatchSnapshot();
       });
@@ -38,13 +44,13 @@ describe('Avatar', () => {
 
     describe('shape', () => {
       test(`circle [default]`, () => {
-        const component = render(<Avatar {...sharedProps} size="medium" />);
+        const component = render(<Avatar {...sharedProps} size="md" />);
 
         expect(component).toMatchSnapshot();
       });
       test(`square`, () => {
         const component = render(
-          <Avatar {...sharedProps} shape="square" size="medium" />,
+          <Avatar {...sharedProps} shape="square" size="md" />,
         );
 
         expect(component).toMatchSnapshot();
@@ -53,7 +59,7 @@ describe('Avatar', () => {
 
     test(`badge label`, () => {
       const component = render(
-        <Avatar {...sharedProps} badge="Test Badge" size="large" />,
+        <Avatar {...sharedProps} badge="Test Badge" size="lg" />,
       );
 
       expect(component.text()).toContain('Test Badge');
@@ -66,7 +72,7 @@ describe('Avatar', () => {
           {...sharedProps}
           badge="Purple"
           badgeColor="purple"
-          size="large"
+          size="lg"
         />,
       );
 
@@ -77,7 +83,7 @@ describe('Avatar', () => {
     describe(`badgeShape`, () => {
       test(`circle [default]`, () => {
         const component = render(
-          <Avatar {...sharedProps} badge="Test Badge" size="large" />,
+          <Avatar {...sharedProps} badge="Test Badge" size="lg" />,
         );
 
         expect(component).toMatchSnapshot();
@@ -89,7 +95,7 @@ describe('Avatar', () => {
             {...sharedProps}
             badge="Test Badge"
             badgeShape="square"
-            size="large"
+            size="lg"
           />,
         );
 
