@@ -8,10 +8,11 @@ $size-md: 16px;
   top: 0;
   right: 0;
   text-align: center;
+  padding: 2px;
+  line-height: 1;
 
   &.circle {
     @include border-circle;
-    line-height: 2;
 
     &.sm {
       height: $size-sm;
@@ -23,27 +24,27 @@ $size-md: 16px;
   }
 
   &.rounded-rectangle {
-    line-height: 2.5;
-
     &.sm {
-      @include border-rounded(6px);
+      @include border-rounded(4px);
       height: 15px;
+      padding-top: 3px;
     }
 
     &.md {
-      @include border-rounded(8px);
+      @include border-rounded(6px);
       height: 20px;
+      line-height: 1.5;
     }
   }
 
   &.sm {
-    @include font($color: white, $size: 6px);
-    width: $size-sm;
+    @include font($color: white, $size: 8px);
+    min-width: $size-sm;
   }
 
   &.md {
-    @include font($color: white, $size: 8px, $weight: bold);
-    width: $size-md;
+    @include font($color: white, $size: 10px, $weight: bold);
+    min-width: $size-md;
   }
 
   &.red {
@@ -61,27 +62,19 @@ $size-md: 16px;
     &.sm {
       width: 6px;
       height: 6px;
-
-      &.circle {
-        padding-top: 3px;
-      }
-
-      &.rounded-rectangle {
-        padding-top: 4px;
-      }
+      padding-top: 1px;
     }
 
     &.md {
       width: 8px;
       height: 8px;
-      padding-top: 6px;
 
       &.circle {
-        padding-top: 4px;
+        padding-top: 2px;
       }
 
       &.rounded-rectangle {
-        padding-top: 6px;
+        padding-top: 4px;
       }
     }
   }
