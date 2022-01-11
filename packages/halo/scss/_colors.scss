@@ -5,27 +5,27 @@ $black: #000;
 // TYPOGRAPHY
 
 // dark text on light background
-$primary--dark: #0f6fff;
+$brand-primary--dark: #0f6fff;
 
 $text-dark--aaaa: #050c26;
 $text-dark--aaa: #525769;
 $text-dark--aa: #717584;
 $text-dark--a: #9194a0;
 
-$text-dark--link: $primary--dark;
+$text-dark--link: $brand-primary--dark;
 $text-dark--success: #008562;
 $text-dark--warning: #ac6600;
 $text-dark--error: #cc033e;
 
 // light text on dark background
-$primary--light: #1a75ff;
+$brand-primary--light: #1a75ff;
 
 $text-light--aaaa: #fff;
 $text-light--aaa: #9b9da8;
 $text-light--aa: #777b89;
 $text-light--a: #5a5e70;
 
-$text-light--link: $primary--light;
+$text-light--link: $brand-primary--light;
 $text-light--success: #009c5e;
 $text-light--warning: #c56e09;
 $text-light--error: #ee2531;
@@ -102,8 +102,8 @@ $orange--100: #fff9e7 !default;
 $colors: (
   black: $black,
   white: $white,
-  primary--dark: $primary--dark,
-  primary--light: $primary--light,
+  brand-primary--dark: $brand-primary--dark,
+  brand-primary--light: $brand-primary--light,
   text-dark--aaaa: $text-dark--aaaa,
   text-dark--aaa: $text-dark--aaa,
   text-dark--aa: $text-dark--aa,

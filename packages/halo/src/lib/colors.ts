@@ -1,7 +1,7 @@
 /* eslint-disable sort-keys-fix/sort-keys-fix */
 export type Color =
-  | 'primary--dark'
-  | 'primary--light'
+  | 'brand-primary--dark'
+  | 'brand-primary--light'
   | 'text-dark--aaaa'
   | 'text-dark--aaa'
   | 'text-dark--aa'
@@ -75,7 +75,7 @@ export type Color =
 
 export const ColorPalette: Record<Color, string> = {
   // dark text on light background
-  'primary--dark': '#0f6fff',
+  'brand-primary--dark': '#0f6fff',
   'text-dark--aaaa': '#050c26',
   'text-dark--aaa': '#525769',
   'text-dark--aa': '#717584',
@@ -86,7 +86,7 @@ export const ColorPalette: Record<Color, string> = {
   'text-dark--error': '#cc033e',
 
   // light text on dark background
-  'primary--light': '#1a75ff',
+  'brand-primary--light': '#1a75ff',
   'text-light--aaaa': '#fff',
   'text-light--aaa': '#9b9da8',
   'text-light--aa': '#777b89',
