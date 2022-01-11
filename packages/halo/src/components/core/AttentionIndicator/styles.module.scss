@@ -4,6 +4,9 @@ $size-sm: 12px;
 $size-md: 16px;
 
 .component {
+  position: absolute;
+  top: 0;
+  right: 0;
   text-align: center;
 
   &.circle {
