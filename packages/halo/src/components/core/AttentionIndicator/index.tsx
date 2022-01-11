@@ -16,7 +16,7 @@ export interface AttentionIndicatorProps {
   /**
    * The count displayed on the indicator
    */
-  displayCount?: number;
+  count?: number;
   /**
    * JSX icon rendered within the indicator
    */
@@ -28,12 +28,12 @@ export interface AttentionIndicatorProps {
 function AttentionIndicator({
   className,
   color = 'red',
-  displayCount,
+  count,
   icon,
   shape = 'circle',
   size = 'sm',
 }: AttentionIndicatorProps) {
-  let displayString: any = displayCount;
+  let displayString: any = count;
   if (displayString && displayString > 99) {
     displayString = '99+';
   }
