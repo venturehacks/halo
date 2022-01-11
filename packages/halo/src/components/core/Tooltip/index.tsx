@@ -2,17 +2,11 @@ import Tippy, { TippyProps } from '@tippyjs/react';
 import classNames from 'classnames';
 import React from 'react';
 
-import styles from './styles.module.scss';
-
 export interface TooltipProps extends TippyProps {
   /**
    * @deprecated `distance` is unsupported since popper@2.x. Use offset instead.
    */
   distance?: never;
-  /**
-   * NOTE(drew): temporarily unimplemented.
-   * https://venturehacks.atlassian.net/browse/LEV-1055
-   */
   size?: 'sm' | 'md' | 'lg';
 }
 
@@ -39,16 +33,21 @@ function Tooltip({
   arrow = false,
   className,
   distance,
-  size,
+  size = 'md',
   ...rest
 }: TooltipProps) {
-  return (
-    <Tippy
-      arrow={arrow}
-      className={classNames(styles.component, className)}
-      {...rest}
-    />
+  const classes = classNames(
+    className,
+    size === 'sm' && 'text-2xs',
+    size === 'md' && 'text-xs',
+    size === 'lg' && 'text-md',
+    'bg-slate-900',
+    'py-1 px-2',
+    'rounded',
+    'text-white',
   );
+
+  return <Tippy arrow={arrow} className={classes} {...rest} />;
 }
 
 export { Tooltip };
