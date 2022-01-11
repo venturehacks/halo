@@ -23,8 +23,10 @@ describe('AttentionIndicator', () => {
         expect(component).toMatchSnapshot();
       });
 
-      test('oval', () => {
-        const component = render(<AttentionIndicator shape="oval" />);
+      test('rounded-rectangle', () => {
+        const component = render(
+          <AttentionIndicator shape="rounded-rectangle" />,
+        );
         expect(component).toMatchSnapshot();
       });
     });

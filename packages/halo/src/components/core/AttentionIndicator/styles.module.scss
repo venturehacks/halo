@@ -19,7 +19,7 @@ $size-md: 16px;
     }
   }
 
-  &.oval {
+  &.rounded-rectangle {
     line-height: 2.5;
 
     &.sm {
@@ -63,7 +63,7 @@ $size-md: 16px;
         padding-top: 3px;
       }
 
-      &.oval {
+      &.rounded-rectangle {
         padding-top: 4px;
       }
     }
@@ -77,7 +77,7 @@ $size-md: 16px;
         padding-top: 4px;
       }
 
-      &.oval {
+      &.rounded-rectangle {
         padding-top: 6px;
       }
     }

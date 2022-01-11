@@ -35,21 +35,21 @@ An attention badge that can be used to indicate a count or with an icon.
     </div>
   </div>
 
-  <Header h4>Oval</Header>
+  <Header h4>Rounded Rectangle</Header>
   <div className="flex flex-col">
     <div className="flex flex-row items-start gap-3 mb-2">
-      <AttentionIndicator color="red" shape="oval" />
-      <AttentionIndicator color="red" shape="oval" displayCount={1} />
-      <AttentionIndicator color="red" shape="oval" displayCount={10} />
-      <AttentionIndicator color="red" shape="oval" displayCount={100} />
-      <AttentionIndicator color="red" shape="oval" icon={<CloseIcon />} />
+      <AttentionIndicator color="red" shape="rounded-rectangle" />
+      <AttentionIndicator color="red" shape="rounded-rectangle" displayCount={1} />
+      <AttentionIndicator color="red" shape="rounded-rectangle" displayCount={10} />
+      <AttentionIndicator color="red" shape="rounded-rectangle" displayCount={100} />
+      <AttentionIndicator color="red" shape="rounded-rectangle" icon={<CloseIcon />} />
     </div>
     <div className="flex flex-row items-start gap-2">
-      <AttentionIndicator color="orange" shape="oval" size="md" />
-      <AttentionIndicator color="orange" shape="oval" size="md" displayCount={1} />
-      <AttentionIndicator color="orange" shape="oval" size="md" displayCount={10} />
-      <AttentionIndicator color="orange" shape="oval" size="md" displayCount={100} />
-      <AttentionIndicator color="orange" shape="oval" size="md" icon={<CloseIcon />} />
+      <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" />
+      <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" displayCount={1} />
+      <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" displayCount={10} />
+      <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" displayCount={100} />
+      <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" icon={<CloseIcon />} />
     </div>
   </div>
 
@@ -60,7 +60,7 @@ An attention badge that can be used to indicate a count or with an icon.
       <div className="text-2xs"> Messages </div>
     </div>
     <div className="pt-2">
-      <AttentionIndicator color="orange" shape="oval" size="md" displayCount={10} />
+      <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" displayCount={10} />
     </div>
   </div>
 </Playground>
@@ -70,7 +70,7 @@ An attention badge that can be used to indicate a count or with an icon.
 ```ts
 type AttentionIndicatorColor = 'orange' | 'red';
 
-type AttentionIndicatorShape = 'circle' | 'oval';
+type AttentionIndicatorShape = 'circle' | 'rounded-rectangle';
 
 type AttentionIndicatorSize = 'sm' | 'md';
 ```

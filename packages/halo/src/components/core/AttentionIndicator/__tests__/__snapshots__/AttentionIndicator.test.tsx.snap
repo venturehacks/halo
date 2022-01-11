@@ -2,36 +2,36 @@
 
 exports[`AttentionIndicator snapshot color orange 1`] = `
 <div
-  class="component orange circle sm"
+  class="component orange sm circle"
 />
 `;
 
 exports[`AttentionIndicator snapshot color red 1`] = `
 <div
-  class="component red circle sm"
+  class="component red sm circle"
 />
 `;
 
 exports[`AttentionIndicator snapshot shape circle 1`] = `
 <div
-  class="component red circle sm"
+  class="component red sm circle"
 />
 `;
 
-exports[`AttentionIndicator snapshot shape oval 1`] = `
+exports[`AttentionIndicator snapshot shape rounded-rectangle 1`] = `
 <div
-  class="component red oval sm"
+  class="component red sm roundedRectangle"
 />
 `;
 
 exports[`AttentionIndicator snapshot size md 1`] = `
 <div
-  class="component red circle md"
+  class="component red md circle"
 />
 `;
 
 exports[`AttentionIndicator snapshot size sm 1`] = `
 <div
-  class="component red circle sm"
+  class="component red sm circle"
 />
 `;

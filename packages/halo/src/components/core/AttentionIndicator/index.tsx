@@ -1,11 +1,12 @@
 import classNames from 'classnames';
+import { camelCase } from 'lodash';
 import React from 'react';
 
 import styles from './styles.module.scss';
 
 export type AttentionIndicatorColor = 'orange' | 'red';
 
-export type AttentionIndicatorShape = 'circle' | 'oval';
+export type AttentionIndicatorShape = 'circle' | 'rounded-rectangle';
 
 export type AttentionIndicatorSize = 'sm' | 'md';
 
@@ -37,18 +38,20 @@ function AttentionIndicator({
     displayString = '99+';
   }
 
+  const shapeClass = styles[camelCase(shape)];
+
   return (
     <div
       className={classNames(
         styles.component,
         styles[color],
-        styles[shape],
         styles[size],
+        shapeClass,
         className,
       )}
     >
       {icon && (
-        <div className={classNames(styles.icon, styles[shape], styles[size])}>
+        <div className={classNames(styles.icon, styles[size], shapeClass)}>
           {icon}
         </div>
       )}
