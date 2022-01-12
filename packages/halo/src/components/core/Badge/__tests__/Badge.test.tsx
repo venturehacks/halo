@@ -27,6 +27,18 @@ describe('Badge', () => {
       });
     });
 
+    describe('position', () => {
+      test('top', () => {
+        const component = render(<Badge />);
+        expect(component).toMatchSnapshot();
+      });
+
+      test('bottom', () => {
+        const component = render(<Badge position="bottom" />);
+        expect(component).toMatchSnapshot();
+      });
+    });
+
     describe('shape', () => {
       test('circle', () => {
         const component = render(<Badge />);
@@ -35,6 +47,18 @@ describe('Badge', () => {
 
       test('square', () => {
         const component = render(<Badge shape="square" />);
+        expect(component).toMatchSnapshot();
+      });
+    });
+
+    describe('size', () => {
+      test('sm', () => {
+        const component = render(<Badge />);
+        expect(component).toMatchSnapshot();
+      });
+
+      test('size', () => {
+        const component = render(<Badge size="md" />);
         expect(component).toMatchSnapshot();
       });
     });
