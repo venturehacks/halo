@@ -16,46 +16,48 @@ Single character colored badge to decorate an element.
 ### Usage
 
 <Playground>
-  <Box row>
-    <Box relative margin={{ right: 2 }}>
-      <PillTag>square, sm, top</PillTag>
-      <Badge color="purple" shape="square">ABC</Badge>
-    </Box>
-    <Box relative margin={{ right: 2 }}>
-      <PillTag>square, sm, bottom</PillTag>
-      <Badge color="purple" position="bottom" shape="square">DEF</Badge>
-    </Box>
-  </Box>
-  <Box row padding={{ top: 2 }}>
-    <Box relative margin={{ right: 2 }}>
-      <PillTag>square, md, top</PillTag>
-      <Badge color="blue" shape="square" size="md">RST</Badge>
-    </Box>
-    <Box relative margin={{ right: 2 }}>
-      <PillTag>square, md, bottom</PillTag>
-      <Badge color="blue" position="bottom" shape="square" size="md">XYZ</Badge>
-    </Box>
-  </Box>
-  <Box row padding={{ top: 2 }}>
-    <Box relative margin={{ right: 2 }}>
-      <PillTag>circle, sm, top</PillTag>
-      <Badge color="red" size="sm">A</Badge>
-    </Box>
-    <Box relative margin={{ right: 2 }}>
-      <PillTag>circle, sm, bottom</PillTag>
-      <Badge color="red" position="bottom">B</Badge>
-    </Box>
-  </Box>
-  <Box row padding={{ top: 2 }}>
-    <Box relative margin={{ right: 2 }}>
-      <PillTag>circle, md, top</PillTag>
+  <div className="flex flex-col ml-3">
+    <div className="flex flex-row items-start gap-6 mb-5 mr-5">
+      <div className="relative">
+        <PillTag className="mr-4">square, sm, top</PillTag>
+        <Badge color="purple" shape="square">ABC</Badge>
+      </div>
+      <div className="relative">
+        <PillTag className="mr-4">square, sm, bottom</PillTag>
+        <Badge color="purple" position="bottom" shape="square">DEF</Badge>
+      </div>
+    </div>
+    <div className="flex flex-row items-start gap-6 mb-5 mr-5">
+      <div className="relative">
+        <PillTag className="mr-4">square, md, top</PillTag>
+        <Badge color="blue" shape="square" size="md">RST</Badge>
+      </div>
+      <div className="relative">
+        <PillTag className="mr-4">square, md, bottom</PillTag>
+        <Badge color="blue" position="bottom" shape="square" size="md">XYZ</Badge>
+      </div>
+    </div>
+    <div className="flex flex-row items-start gap-6 mb-5 mr-4">
+      <div className="relative">
+        <PillTag className="mr-1">circle, sm, top</PillTag>
+        <Badge color="red" size="sm">A</Badge>
+      </div>
+      <div className="relative">
+        <PillTag className="mr-1">circle, sm, bottom</PillTag>
+        <Badge color="red" position="bottom">B</Badge>
+      </div>
+    </div>
+    <div className="flex flex-row items-start gap-6 mb-5 mr-5">
+      <div className="relative">
+        <PillTag className="mr-4">circle, md, top</PillTag>
       <Badge color="orange" size="md">LMN</Badge>
-    </Box>
-    <Box relative margin={{ right: 2 }}>
-      <PillTag>circle, md, bottom</PillTag>
-      <Badge color="orange" position="bottom" size="md">OPQ</Badge>
-    </Box>
-  </Box>
+      </div>
+      <div className="relative">
+        <PillTag className="mr-4">circle, md, bottom</PillTag>
+        <Badge color="orange" position="bottom" size="md">OPQ</Badge>
+      </div>
+    </div>
+  </div>
 </Playground>
 
 ### Exports
