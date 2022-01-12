@@ -1,0 +1,37 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AttentionIndicator snapshot color orange 1`] = `
+<div
+  class="component orange sm circle"
+/>
+`;
+
+exports[`AttentionIndicator snapshot color red 1`] = `
+<div
+  class="component red sm circle"
+/>
+`;
+
+exports[`AttentionIndicator snapshot shape circle 1`] = `
+<div
+  class="component red sm circle"
+/>
+`;
+
+exports[`AttentionIndicator snapshot shape rounded-rectangle 1`] = `
+<div
+  class="component red sm roundedRectangle"
+/>
+`;
+
+exports[`AttentionIndicator snapshot size md 1`] = `
+<div
+  class="component red md circle"
+/>
+`;
+
+exports[`AttentionIndicator snapshot size sm 1`] = `
+<div
+  class="component red sm circle"
+/>
+`;

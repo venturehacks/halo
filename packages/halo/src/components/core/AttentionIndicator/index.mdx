@@ -1,0 +1,116 @@
+---
+name: AttentionIndicator
+menu: Core
+route: /core/attentionIndicator
+---
+
+import { Props, Playground } from 'docz';
+import { AttentionIndicator } from './'
+import { Box } from '../../structure/Box';
+import { ChatBubbleIcon, CloseIcon } from '../../icons';
+import { Header } from '../Header'
+
+# AttentionIndicator
+
+An attention badge that can be used to indicate a count or with an icon.
+
+### Usage
+
+<Playground>
+  <Header h4>Circle</Header>
+  <div className="flex flex-col ml-3">
+    <div className="flex flex-row items-start gap-6 mb-5">
+      <div className="relative">
+        <AttentionIndicator color="red" />
+      </div>
+      <div className="relative">
+        <AttentionIndicator color="red" count={1} />
+      </div>
+      <div className="relative">
+        <AttentionIndicator color="red" count={10} />
+      </div>
+      <div className="relative">
+        <AttentionIndicator color="red" count={100} />
+      </div>
+      <div className="relative">
+        <AttentionIndicator color="red" icon={<CloseIcon />} />
+      </div>
+    </div>
+    <div className="flex flex-row items-start gap-6 ml-1">
+      <div className="relative">
+        <AttentionIndicator color="orange" size="md" />
+      </div>
+      <div className="relative">
+        <AttentionIndicator color="orange" size="md" count={1} />
+      </div>
+      <div className="relative">
+        <AttentionIndicator color="orange" size="md" count={10} />
+      </div>
+      <div className="relative">
+        <AttentionIndicator color="orange" size="md" count={100} />
+      </div>
+      <div className="relative">
+        <AttentionIndicator color="orange" size="md" icon={<CloseIcon />} />
+      </div>
+    </div>
+  </div>
+
+  <Header h4>Rounded Rectangle</Header>
+  <div className="flex flex-col ml-3">
+    <div className="flex flex-row items-start gap-6 mb-5">
+      <div className="relative">
+        <AttentionIndicator color="red" shape="rounded-rectangle" />
+      </div>
+      <div className="relative">
+        <AttentionIndicator color="red" shape="rounded-rectangle" count={1} />
+      </div>
+      <div className="relative">
+        <AttentionIndicator color="red" shape="rounded-rectangle" count={10} />
+      </div>
+      <div className="relative">
+        <AttentionIndicator color="red" shape="rounded-rectangle" count={100} />
+      </div>
+      <div className="relative">
+        <AttentionIndicator color="red" shape="rounded-rectangle" icon={<CloseIcon />} />
+      </div>
+    </div>
+    <div className="flex flex-row items-start gap-6 ml-1">
+      <div className="relative">
+        <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" />
+      </div>
+      <div className="relative">
+        <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" count={1} />
+      </div>
+      <div className="relative">
+        <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" count={10} />
+      </div>
+      <div className="relative">
+        <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" count={100} />
+      </div>
+      <div className="relative">
+        <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" icon={<CloseIcon />} />
+      </div>
+    </div>
+  </div>
+
+  <Header h4>Example Usage</Header>
+  <div className="relative flex flex-col h-16 w-16 p-2">
+    <ChatBubbleIcon />
+    <div className="text-2xs w-12"> Messages </div>
+    <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" count={10} />
+  </div>
+</Playground>
+
+### Exports
+
+```ts
+type AttentionIndicatorColor = 'orange' | 'red';
+
+type AttentionIndicatorShape = 'circle' | 'rounded-rectangle';
+
+type AttentionIndicatorSize = 'sm' | 'md';
+```
+
+### Props
+
+<Props of={AttentionIndicator} />
