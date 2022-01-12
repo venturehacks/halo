@@ -7,7 +7,7 @@ exports[`Banner snapshot constrain 1`] = `
   role="alert"
 >
   <aside
-    class="mr-2 mt-1 ml-1"
+    class="mr-2 ml-1"
   />
   <div
     class="flex-1"
@@ -22,7 +22,7 @@ exports[`Banner snapshot default 1`] = `
   role="alert"
 >
   <aside
-    class="mr-2 mt-1 ml-1"
+    class="mr-2 ml-1"
   />
   <div
     class="flex-1"
@@ -37,7 +37,7 @@ exports[`Banner snapshot offer dismiss 1`] = `
   role="alert"
 >
   <aside
-    class="mr-2 mt-1 ml-1"
+    class="mr-2 ml-1"
   />
   <div
     class="flex-1"
@@ -58,12 +58,14 @@ exports[`Banner snapshot variant error 1`] = `
   role="alert"
 >
   <aside
-    class="mr-2 mt-1 ml-1"
+    class="mr-2 ml-1"
   >
     <svg
-      class="block text-red-700 w-4 h-4 mt-0.5"
+      class="block text-red-700 w-2.5 h-2.5"
+      preserveAspectRatio="none"
       viewBox="0 0 10 10"
     >
+      &gt;
       <path
         d="M9.802 2.108a.675.675 0 0 0 0-.955L8.847.198a.675.675 0 0 0-.956 0L5.08 3.01a.113.113 0 0 1-.159 0L2.108.198a.675.675 0 0 0-.955 0l-.955.955a.675.675 0 0 0 0 .955L3.01 4.92a.113.113 0 0 1 0 .16L.198 7.892a.675.675 0 0 0 0 .955l.955.955a.675.675 0 0 0 .955 0L4.92 6.99a.113.113 0 0 1 .16 0l2.81 2.812a.675.675 0 0 0 .956 0l.955-.955a.675.675 0 0 0 0-.955L6.99 5.08a.113.113 0 0 1 0-.16l2.812-2.812z"
         fill="currentColor"
@@ -83,7 +85,7 @@ exports[`Banner snapshot variant success 1`] = `
   role="alert"
 >
   <aside
-    class="mr-2 mt-1 ml-1"
+    class="mr-2 ml-1"
   />
   <div
     class="flex-1"
@@ -98,7 +100,7 @@ exports[`Banner snapshot variant warning 1`] = `
   role="alert"
 >
   <aside
-    class="mr-2 mt-1 ml-1"
+    class="mr-2 ml-1"
   />
   <div
     class="flex-1"

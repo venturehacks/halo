@@ -1,0 +1,81 @@
+@import 'halo';
+
+$size-sm: 12px;
+$size-md: 16px;
+
+.component {
+  position: absolute;
+  top: 0;
+  right: 0;
+  text-align: center;
+  padding: 2px;
+  line-height: 1;
+
+  &.circle {
+    @include border-circle;
+
+    &.sm {
+      height: $size-sm;
+    }
+
+    &.md {
+      height: $size-md;
+    }
+  }
+
+  &.rounded-rectangle {
+    &.sm {
+      @include border-rounded(4px);
+      height: 15px;
+      padding-top: 3px;
+    }
+
+    &.md {
+      @include border-rounded(6px);
+      height: 20px;
+      line-height: 1.5;
+    }
+  }
+
+  &.sm {
+    @include font($color: white, $size: 8px);
+    min-width: $size-sm;
+  }
+
+  &.md {
+    @include font($color: white, $size: 10px, $weight: bold);
+    min-width: $size-md;
+  }
+
+  &.red {
+    background-color: $red--600;
+  }
+
+  &.orange {
+    background-color: $orange--600;
+  }
+
+  .icon {
+    display: block;
+    margin: auto;
+
+    &.sm {
+      width: 6px;
+      height: 6px;
+      padding-top: 1px;
+    }
+
+    &.md {
+      width: 8px;
+      height: 8px;
+
+      &.circle {
+        padding-top: 2px;
+      }
+
+      &.rounded-rectangle {
+        padding-top: 4px;
+      }
+    }
+  }
+}
