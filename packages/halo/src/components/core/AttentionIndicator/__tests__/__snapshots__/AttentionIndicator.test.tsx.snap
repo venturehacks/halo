@@ -2,36 +2,36 @@
 
 exports[`AttentionIndicator snapshot color orange 1`] = `
 <div
-  class="component orange sm circle"
+  class="absolute leading-none p-0.5 right-0 text-center text-white top-0 bg-orange-600 h-3 min-w-3 text-4xs rounded-full"
 />
 `;
 
 exports[`AttentionIndicator snapshot color red 1`] = `
 <div
-  class="component red sm circle"
+  class="absolute leading-none p-0.5 right-0 text-center text-white top-0 bg-red-600 h-3 min-w-3 text-4xs rounded-full"
 />
 `;
 
 exports[`AttentionIndicator snapshot shape circle 1`] = `
 <div
-  class="component red sm circle"
+  class="absolute leading-none p-0.5 right-0 text-center text-white top-0 bg-red-600 h-3 min-w-3 text-4xs rounded-full"
 />
 `;
 
 exports[`AttentionIndicator snapshot shape rounded-rectangle 1`] = `
 <div
-  class="component red sm roundedRectangle"
+  class="absolute leading-none p-0.5 right-0 text-center text-white top-0 bg-red-600 h-3 min-w-3 text-4xs font-bold leading-normal rounded-md h-4 pt-0.5"
 />
 `;
 
 exports[`AttentionIndicator snapshot size md 1`] = `
 <div
-  class="component red md circle"
+  class="absolute leading-none p-0.5 right-0 text-center text-white top-0 bg-red-600 h-4 min-w-4 text-3xs font-bold rounded-full"
 />
 `;
 
 exports[`AttentionIndicator snapshot size sm 1`] = `
 <div
-  class="component red sm circle"
+  class="absolute leading-none p-0.5 right-0 text-center text-white top-0 bg-red-600 h-3 min-w-3 text-4xs rounded-full"
 />
 `;
