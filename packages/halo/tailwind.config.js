@@ -214,9 +214,13 @@ module.exports = {
     },
 
     extend: {
+      lineHeight: {
+        'extra-tight': '0.75',
+      },
       minWidth: {
         '3': '12px',
         '4': '16px',
+        '6': '24px',
       },
       width: {
         fit: 'fit-content',
