@@ -1,7 +1,6 @@
 @import 'halo';
 
 .component {
-  @include halo-element-base; // TODO: deprecate
   margin-block-start: 0;
   margin-block-end: 0;
   margin: 0;
@@ -9,8 +8,4 @@
   a {
     @include font-default-link;
   }
-}
-
-.flow {
-  margin-bottom: 1em;
 }
