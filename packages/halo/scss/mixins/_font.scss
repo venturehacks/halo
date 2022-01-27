@@ -59,7 +59,7 @@
   }
 }
 
-@mixin font-default-link($color: $text-dark-link, $args...) {
+@mixin font-default-link($color: $dark-link, $args...) {
   &,
   &:link,
   &:visited,

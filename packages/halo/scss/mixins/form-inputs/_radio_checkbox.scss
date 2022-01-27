@@ -115,7 +115,7 @@ $pill-border-radius: tempo(3);
   .hasError.warning + & {
     &::before,
     &::after {
-      border-color: $text-dark-warning;
+      border-color: $dark-warning;
     }
   }
 
@@ -123,7 +123,7 @@ $pill-border-radius: tempo(3);
   .hasError.critical + & {
     &::before,
     &::after {
-      border-color: $text-dark-warning;
+      border-color: $dark-warning;
     }
   }
 }
@@ -187,7 +187,7 @@ $pill-border-radius: tempo(3);
   .hasError.warning + & {
     &::before,
     &::after {
-      border-color: $text-dark-warning;
+      border-color: $dark-warning;
     }
   }
 
@@ -195,7 +195,7 @@ $pill-border-radius: tempo(3);
   .hasError.critical + & {
     &::before,
     &::after {
-      border-color: $text-dark-warning;
+      border-color: $dark-warning;
     }
   }
 }

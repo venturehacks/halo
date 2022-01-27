@@ -80,12 +80,12 @@
     }
 
     .select__option-is-selected {
-      color: $text-dark-aaaa;
+      color: $dark-aaaa;
       background-color: $blue-200;
     }
 
     .select__option-is-disabled {
-      @include font($color: $text-dark-a);
+      @include font($color: $dark-a);
     }
   }
 

@@ -1,11 +1,11 @@
 @import '../space';
 
 @mixin input-placeholder($size: md) {
-  @include font($size: $size, $color: $text-dark-a);
+  @include font($size: $size, $color: $dark-a);
 }
 
 @mixin input-disabled {
-  @include font($color: $text-dark-a);
+  @include font($color: $dark-a);
   background-color: $slate-200;
   border-color: $slate-300;
 }
@@ -22,12 +22,12 @@
 
 @mixin input-border-warning {
   @include border-rounded;
-  border: 1px solid $text-dark-warning;
+  border: 1px solid $dark-warning;
 }
 
 @mixin input-border-error {
   @include border-rounded;
-  border: 1px solid $text-dark-error;
+  border: 1px solid $dark-error;
 }
 
 @mixin input-border-slate {

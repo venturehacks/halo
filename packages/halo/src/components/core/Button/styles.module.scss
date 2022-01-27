@@ -74,8 +74,8 @@
 
 .gray {
   background-color: $slate-100;
-  border-color: $text-dark-aaa;
-  color: $text-dark-aaa;
+  border-color: $dark-aaa;
+  color: $dark-aaa;
 
   &:active,
   &:hover {
@@ -83,15 +83,15 @@
   }
 
   &:disabled {
-    border-color: $text-dark-a;
-    color: $text-dark-a;
+    border-color: $dark-a;
+    color: $dark-a;
   }
 }
 
 .destructive {
   background-color: $red-100;
   border-color: $red-100;
-  color: $text-light-error;
+  color: $light-error;
 
   &:hover {
     background-color: $red-200;
@@ -105,7 +105,7 @@
 }
 
 .clear {
-  color: $text-dark-aaaa;
+  color: $dark-aaaa;
   background-color: transparent;
 
   &:hover {

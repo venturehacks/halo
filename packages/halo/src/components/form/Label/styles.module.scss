@@ -12,7 +12,7 @@
   }
 
   .supportingText {
-    @include font($size: sm, $color: $text-dark-a);
+    @include font($size: sm, $color: $dark-a);
     line-height: 1.25;
     margin-top: tempo(0.5);
     order: 1;

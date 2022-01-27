@@ -9,7 +9,7 @@ $pilltag-border-radius: 13px;
   display: inline-block;
   border-radius: $pilltag-border-radius;
   border: 1px solid $slate-200;
-  color: $text-dark-aaa;
+  color: $dark-aaa;
   font-size: 14px;
   height: $pilltag-height;
   line-height: $pilltag-height;
@@ -36,7 +36,7 @@ $pilltag-border-radius: 13px;
   a:visited,
   a:hover,
   a:active {
-    color: $text-dark-aaa;
+    color: $dark-aaa;
     text-decoration: none;
     cursor: pointer;
   }

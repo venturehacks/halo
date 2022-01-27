@@ -68,13 +68,13 @@
   }
 
   &.backgroundBlack {
-    color: $text-light-aaa;
+    color: $light-aaa;
     background-color: $slate-900;
     @include font-antialiased;
   }
 
   &.backgroundWhite {
-    color: $text-dark-aaa;
+    color: $dark-aaa;
   }
 }
 

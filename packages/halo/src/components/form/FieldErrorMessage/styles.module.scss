@@ -14,11 +14,11 @@
     }
 
     &.warning {
-      @include font($color: $text-dark-warning);
+      @include font($color: $dark-warning);
     }
 
     &.critical {
-      @include font($color: $text-dark-error);
+      @include font($color: $dark-error);
     }
   }
 
@@ -29,12 +29,12 @@
     margin-bottom: tempo(2);
 
     &.warning {
-      @include font($color: $text-dark-warning);
+      @include font($color: $dark-warning);
       background-color: $orange-100;
     }
 
     &.critical {
-      @include font($color: $text-dark-error);
+      @include font($color: $dark-error);
       background-color: $red-200;
     }
   }

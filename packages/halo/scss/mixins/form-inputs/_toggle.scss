@@ -63,7 +63,7 @@ $raw-toggle-switch-knob-size: tempo(2.5) !default;
   .hasError.warning + & {
     &::before,
     &::after {
-      color: $text-dark-warning;
+      color: $dark-warning;
     }
   }
 
@@ -71,7 +71,7 @@ $raw-toggle-switch-knob-size: tempo(2.5) !default;
   .hasError.critical:checked + & {
     &::before,
     &::after {
-      color: $text-dark-error;
+      color: $dark-error;
     }
   }
 }
