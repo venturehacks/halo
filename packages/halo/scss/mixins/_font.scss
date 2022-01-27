@@ -31,7 +31,7 @@
   @if map-has-key($line-heights, $line) {
     line-height: map-get($line-heights, $line);
   } @else if $line and $size {
-    line-height: $line-height--default; // default line height is 140%
+    line-height: $line-height-default; // default line height is 140%
   }
 
   @if map-has-key($weights, $weight) {
@@ -59,7 +59,7 @@
   }
 }
 
-@mixin font-default-link($color: $text-dark--link, $args...) {
+@mixin font-default-link($color: $text-dark-link, $args...) {
   &,
   &:link,
   &:visited,

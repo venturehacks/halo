@@ -14,11 +14,11 @@
     }
 
     &.warning {
-      @include font($color: $text-dark--warning);
+      @include font($color: $text-dark-warning);
     }
 
     &.critical {
-      @include font($color: $text-dark--error);
+      @include font($color: $text-dark-error);
     }
   }
 
@@ -29,13 +29,13 @@
     margin-bottom: tempo(2);
 
     &.warning {
-      @include font($color: $text-dark--warning);
-      background-color: $orange--100;
+      @include font($color: $text-dark-warning);
+      background-color: $orange-100;
     }
 
     &.critical {
-      @include font($color: $text-dark--error);
-      background-color: $red--200;
+      @include font($color: $text-dark-error);
+      background-color: $red-200;
     }
   }
 }

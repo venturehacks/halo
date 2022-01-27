@@ -11,18 +11,18 @@
   @include halo-element-base;
 
   &.controlAlignCenter {
-    @include input-control--center;
+    @include input-control-center;
   }
 }
 
 .checkbox {
-  @include input-label--checkbox;
+  @include input-label-checkbox;
 }
 
 .pill {
-  @include input-label--pill;
+  @include input-label-pill;
 }
 
 .toggleSwitch {
-  @include input-label--toggle-switch--left;
+  @include input-label-toggle-switch-left;
 }

@@ -17,7 +17,7 @@ export interface ColorSwatchProps {
   className?: string;
   color?: string; // force color override
   showVariable?: boolean;
-  swatch?: Color; // swatch in Halo palette; ex: grey--200
+  swatch?: Color; // swatch in Halo palette; ex: grey-200
 }
 
 function ColorSwatch({

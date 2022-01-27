@@ -24,7 +24,7 @@
 
   &:focus {
     outline: 0;
-    border: 1px solid rgba($blue--400, 0.5);
+    border: 1px solid rgba($blue-400, 0.5);
   }
 
   .color {
@@ -47,13 +47,13 @@
     cursor: copy;
 
     &:hover {
-      background-color: $slate--200;
+      background-color: $slate-200;
     }
   }
 
   .variableName {
     @include font(
-      $color: slate--600,
+      $color: slate-600,
       $size: 11px,
       $family: monospace,
       $antialiased: true
@@ -63,18 +63,18 @@
     word-break: keep-all;
 
     &:hover {
-      background-color: $slate--200;
+      background-color: $slate-200;
     }
   }
 
   &.backgroundBlack {
-    color: $text-light--aaa;
-    background-color: $slate--900;
+    color: $text-light-aaa;
+    background-color: $slate-900;
     @include font-antialiased;
   }
 
   &.backgroundWhite {
-    color: $text-dark--aaa;
+    color: $text-dark-aaa;
   }
 }
 

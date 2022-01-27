@@ -94,7 +94,7 @@ return (
 @import '~halo/scss/halo';
 
 .foo {
-  color: $text-dark--aaaa;
+  color: $text-dark-aaaa;
 }
 
 .bar {

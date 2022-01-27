@@ -64,7 +64,7 @@ describe('Span', () => {
 
     describe('color', () => {
       test(`palette color`, () => {
-        const component = render(<Span color="purple--100">purple--100</Span>);
+        const component = render(<Span color="purple-100">purple-100</Span>);
         expect(component).toMatchSnapshot();
       });
 

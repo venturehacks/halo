@@ -7,37 +7,37 @@
       width: 100%;
 
       &:hover {
-        @include input-border--hover;
+        @include input-border-hover;
       }
 
-      &.select__control--is-focused,
-      &.select__control--menu-is-open.select__control--menu-is-open {
-        @include input-border--hover;
+      &.select__control-is-focused,
+      &.select__control-menu-is-open.select__control-menu-is-open {
+        @include input-border-hover;
       }
-      &.select__control--is-focused {
-        @include input-border--focused;
+      &.select__control-is-focused {
+        @include input-border-focused;
       }
-      &.select__control--menu-is-open.select__control--menu-is-open {
+      &.select__control-menu-is-open.select__control-menu-is-open {
         box-shadow: none;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
       }
 
-      &.select__control--is-disabled {
-        @include input--disabled;
+      &.select__control-is-disabled {
+        @include input-disabled;
       }
-      .select__single-value--is-disabled {
-        @include font($color: text-dark--a);
+      .select__single-value-is-disabled {
+        @include font($color: text-dark-a);
       }
     }
 
     .select__placeholder {
-      @include font($size: md, $color: text-dark--a);
+      @include font($size: md, $color: text-dark-a);
     }
 
     .select__indicator,
     .select__indicator:hover {
-      color: $slate--500;
+      color: $slate-500;
     }
 
     .select__value-container {
@@ -54,7 +54,7 @@
     }
 
     .select__menu {
-      border: 1px solid $blue--500;
+      border: 1px solid $blue-500;
       border-top-color: transparent;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
@@ -71,28 +71,28 @@
     .select__option {
       background-color: $white;
       padding: tempo(0.5) tempo(2);
-      border-top: 1px solid $blue--200;
+      border-top: 1px solid $blue-200;
     }
 
     .select__option:hover,
-    .select__option--is-focused {
-      background-color: $blue--200;
+    .select__option-is-focused {
+      background-color: $blue-200;
     }
 
-    .select__option--is-selected {
-      color: $text-dark--aaaa;
-      background-color: $blue--200;
+    .select__option-is-selected {
+      color: $text-dark-aaaa;
+      background-color: $blue-200;
     }
 
-    .select__option--is-disabled {
-      @include font($color: $text-dark--a);
+    .select__option-is-disabled {
+      @include font($color: $text-dark-a);
     }
   }
 
   &.error {
     :global {
       .select__control {
-        @include input-border--warning;
+        @include input-border-warning;
       }
     }
   }

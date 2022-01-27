@@ -22,7 +22,7 @@
   &:focus {
     // probably should not turn this off due to accessibility.
     outline: 0;
-    @include input-border--focused;
+    @include input-border-focused;
   }
 
   &[disabled] {
@@ -35,77 +35,77 @@
 // Colors
 
 .primary {
-  background-color: $brand-primary--dark;
-  border-color: $brand-primary--dark;
+  background-color: $brand-primary-dark;
+  border-color: $brand-primary-dark;
   color: $white;
 
   &:hover {
-    background-color: $blue--600;
-    border-color: $blue--600;
+    background-color: $blue-600;
+    border-color: $blue-600;
   }
 
   &:active,
   &:disabled {
-    background-color: $blue--300;
-    border-color: $blue--300;
+    background-color: $blue-300;
+    border-color: $blue-300;
   }
 }
 
 .secondary {
   background-color: $white;
-  border-color: $blue--500;
-  color: $blue--500;
+  border-color: $blue-500;
+  color: $blue-500;
 
   &:hover {
-    background-color: $slate--100;
+    background-color: $slate-100;
   }
 
   &:active {
     background-color: #ebecee;
-    border-color: $blue--400;
-    color: $blue--400;
+    border-color: $blue-400;
+    color: $blue-400;
   }
 
   &:disabled {
-    border-color: $blue--300;
-    color: $blue--300;
+    border-color: $blue-300;
+    color: $blue-300;
   }
 }
 
 .gray {
-  background-color: $slate--100;
-  border-color: $text-dark--aaa;
-  color: $text-dark--aaa;
+  background-color: $slate-100;
+  border-color: $text-dark-aaa;
+  color: $text-dark-aaa;
 
   &:active,
   &:hover {
-    background-color: $slate--200;
+    background-color: $slate-200;
   }
 
   &:disabled {
-    border-color: $text-dark--a;
-    color: $text-dark--a;
+    border-color: $text-dark-a;
+    color: $text-dark-a;
   }
 }
 
 .destructive {
-  background-color: $red--100;
-  border-color: $red--100;
-  color: $text-light--error;
+  background-color: $red-100;
+  border-color: $red-100;
+  color: $text-light-error;
 
   &:hover {
-    background-color: $red--200;
+    background-color: $red-200;
   }
 
   &:disabled {
-    background-color: $slate--100;
-    border-color: $slate--100;
-    color: $slate--500;
+    background-color: $slate-100;
+    border-color: $slate-100;
+    color: $slate-500;
   }
 }
 
 .clear {
-  color: $text-dark--aaaa;
+  color: $text-dark-aaaa;
   background-color: transparent;
 
   &:hover {

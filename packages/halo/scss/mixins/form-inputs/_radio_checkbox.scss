@@ -27,15 +27,15 @@ $pill-border-radius: tempo(3);
   z-index: -2;
 }
 
-@mixin input-border--checked--thick {
-  border: 2px solid $blue--500;
+@mixin input-border-checked--thick {
+  border: 2px solid $blue-500;
 }
 
-@mixin input-border--hover {
-  border-color: $blue--500;
+@mixin input-border-hover {
+  border-color: $blue-500;
 }
 
-%input-label--base {
+%input-label-base {
   @include font($size: md);
   position: relative;
   display: inline-block;
@@ -58,8 +58,8 @@ $pill-border-radius: tempo(3);
   }
 }
 
-@mixin input-label--checkbox {
-  @extend %input-label--base;
+@mixin input-label-checkbox {
+  @extend %input-label-base;
   padding-left: tempo(3.5);
   line-height: $raw-checkbox-size;
 
@@ -68,7 +68,7 @@ $pill-border-radius: tempo(3);
     left: 0;
     height: $raw-checkbox-size;
     width: $raw-checkbox-size;
-    @include input-border--slate;
+    @include input-border-slate;
     background-color: $white;
   }
 
@@ -78,19 +78,19 @@ $pill-border-radius: tempo(3);
     top: 7px;
     height: 5px;
     width: 9px;
-    border-left: 2px solid $blue--500;
-    border-bottom: 2px solid $blue--500;
+    border-left: 2px solid $blue-500;
+    border-bottom: 2px solid $blue-500;
     transform: rotate(-45deg);
   }
 
   // hover = punchy blue border
   &:hover::before {
-    @include input-border--hover;
+    @include input-border-hover;
   }
 
   // checked = thick border
   :checked + &::before {
-    @include input-border--checked--thick;
+    @include input-border-checked--thick;
   }
 
   // checked
@@ -107,7 +107,7 @@ $pill-border-radius: tempo(3);
   [disabled]:checked + & {
     &::before,
     &::after {
-      @include input--disabled;
+      @include input-disabled;
     }
   }
 
@@ -115,7 +115,7 @@ $pill-border-radius: tempo(3);
   .hasError.warning + & {
     &::before,
     &::after {
-      border-color: $text-dark--warning;
+      border-color: $text-dark-warning;
     }
   }
 
@@ -123,13 +123,13 @@ $pill-border-radius: tempo(3);
   .hasError.critical + & {
     &::before,
     &::after {
-      border-color: $text-dark--warning;
+      border-color: $text-dark-warning;
     }
   }
 }
 
-@mixin input-label--radio {
-  @extend %input-label--base;
+@mixin input-label-radio {
+  @extend %input-label-base;
   line-height: $raw-radio-size;
   padding-left: tempo(3.5);
 
@@ -139,7 +139,7 @@ $pill-border-radius: tempo(3);
     height: $raw-radio-size;
     width: $raw-radio-size;
     @include border-circle;
-    border: 1px solid $slate--400;
+    border: 1px solid $slate-400;
     background-color: $white;
   }
 
@@ -147,7 +147,7 @@ $pill-border-radius: tempo(3);
   &::after {
     left: 7px;
     top: 7px;
-    background-color: $blue--500;
+    background-color: $blue-500;
     width: 6px;
     height: 6px;
     @include border-circle;
@@ -155,13 +155,13 @@ $pill-border-radius: tempo(3);
 
   // hover = punchy blue border
   &:hover::before {
-    @include input-border--hover;
+    @include input-border-hover;
     @include border-circle;
   }
 
   // checked = thick border
   :checked + &::before {
-    @include input-border--checked--thick;
+    @include input-border-checked--thick;
   }
 
   // checked
@@ -176,10 +176,10 @@ $pill-border-radius: tempo(3);
 
   [disabled] + &,
   [disabled]:checked + & {
-    border-color: $slate--300;
+    border-color: $slate-300;
     &::before,
     &::after {
-      @include input--disabled;
+      @include input-disabled;
     }
   }
 
@@ -187,7 +187,7 @@ $pill-border-radius: tempo(3);
   .hasError.warning + & {
     &::before,
     &::after {
-      border-color: $text-dark--warning;
+      border-color: $text-dark-warning;
     }
   }
 
@@ -195,12 +195,12 @@ $pill-border-radius: tempo(3);
   .hasError.critical + & {
     &::before,
     &::after {
-      border-color: $text-dark--warning;
+      border-color: $text-dark-warning;
     }
   }
 }
 
-@mixin input-control--center {
+@mixin input-control-center {
   position: relative;
 
   &::before {
@@ -216,8 +216,8 @@ $pill-border-radius: tempo(3);
   }
 }
 
-@mixin input-label--pill {
-  border: 1px solid $slate--200;
+@mixin input-label-pill {
+  border: 1px solid $slate-200;
   border-radius: $pill-border-radius;
   padding: 10px tempo(2.5) 10px 38px;
 
@@ -238,7 +238,7 @@ $pill-border-radius: tempo(3);
   }
 
   &:hover {
-    border-color: $blue--500;
+    border-color: $blue-500;
 
     &::before {
       @include border-circle;
@@ -246,10 +246,10 @@ $pill-border-radius: tempo(3);
   }
 
   :checked + & {
-    border-color: $blue--500;
+    border-color: $blue-500;
   }
 
   [disabled]:checked + & {
-    border-color: $slate--300;
+    border-color: $slate-300;
   }
 }
