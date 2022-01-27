@@ -51,32 +51,32 @@
 // colors
 
 .blue {
-  @include font($color: blue--600);
-  background: rgba($blue--200, 0.77);
+  @include font($color: blue-600);
+  background: rgba($blue-200, 0.77);
 }
 
 .gray,
 .slate {
-  @include font($color: slate--600);
-  background: rgba($slate--200, 0.77);
+  @include font($color: slate-600);
+  background: rgba($slate-200, 0.77);
 }
 
 .orange {
-  @include font($color: orange--600);
-  background-color: rgba($orange--200, 0.77);
+  @include font($color: orange-600);
+  background-color: rgba($orange-200, 0.77);
 }
 
 .red {
-  @include font($color: red--600);
-  background-color: $red--200;
+  @include font($color: red-600);
+  background-color: $red-200;
 }
 
 .purple {
-  @include font($color: purple--600);
-  background-color: rgba($purple--200, 0.77);
+  @include font($color: purple-600);
+  background-color: rgba($purple-200, 0.77);
 }
 
 .green {
-  @include font($color: green--600);
-  background-color: $green--200;
+  @include font($color: green-600);
+  background-color: $green-200;
 }

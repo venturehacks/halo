@@ -18,7 +18,7 @@ exports[`Span snapshot block 1`] = `
 
 exports[`Span snapshot color error 1`] = `
 <span
-  class="error"
+  class="text-dark-error"
 >
   error
 </span>
@@ -26,15 +26,15 @@ exports[`Span snapshot color error 1`] = `
 
 exports[`Span snapshot color palette color 1`] = `
 <span
-  class="__halo_color_purple--100"
+  class="text-purple-100"
 >
-  purple--100
+  purple-100
 </span>
 `;
 
 exports[`Span snapshot color prop collision 1`] = `
 <span
-  class="error"
+  class="text-dark-error"
 >
   should warn and use 'error' class
 </span>
@@ -42,7 +42,7 @@ exports[`Span snapshot color prop collision 1`] = `
 
 exports[`Span snapshot color success 1`] = `
 <span
-  class="success"
+  class="text-dark-success"
 >
   success
 </span>
@@ -50,7 +50,7 @@ exports[`Span snapshot color success 1`] = `
 
 exports[`Span snapshot color warning 1`] = `
 <span
-  class="warning"
+  class="text-dark-warning"
 >
   warning
 </span>
@@ -58,7 +58,7 @@ exports[`Span snapshot color warning 1`] = `
 
 exports[`Span snapshot derive contrast AA 1`] = `
 <span
-  class="__halo_textContrast_dark_AA"
+  class="text-dark-aa"
 >
   AA
 </span>
@@ -66,7 +66,7 @@ exports[`Span snapshot derive contrast AA 1`] = `
 
 exports[`Span snapshot derive contrast muted 1`] = `
 <span
-  class="__halo_textContrast_dark_AAA"
+  class="text-dark-aaa"
 >
   AAA
 </span>
@@ -74,7 +74,7 @@ exports[`Span snapshot derive contrast muted 1`] = `
 
 exports[`Span snapshot derive contrast xmuted 1`] = `
 <span
-  class="__halo_textContrast_dark_AA"
+  class="text-dark-aa"
 >
   AA
 </span>
@@ -82,7 +82,7 @@ exports[`Span snapshot derive contrast xmuted 1`] = `
 
 exports[`Span snapshot derive contrast xxmuted 1`] = `
 <span
-  class="__halo_textContrast_dark_A"
+  class="text-dark-a"
 >
   A
 </span>
@@ -90,7 +90,7 @@ exports[`Span snapshot derive contrast xxmuted 1`] = `
 
 exports[`Span snapshot semibold 1`] = `
 <span
-  class="semibold"
+  class="font-semibold"
 >
   semibold
 </span>
@@ -98,7 +98,7 @@ exports[`Span snapshot semibold 1`] = `
 
 exports[`Span snapshot size 2xl 1`] = `
 <span
-  class="__halo_fontSizeMap_size--2xl"
+  class="text-2xl"
 >
   2xl
 </span>
@@ -106,7 +106,7 @@ exports[`Span snapshot size 2xl 1`] = `
 
 exports[`Span snapshot size 2xs 1`] = `
 <span
-  class="__halo_fontSizeMap_size--2xs"
+  class="text-2xs"
 >
   2xs
 </span>
@@ -114,7 +114,7 @@ exports[`Span snapshot size 2xs 1`] = `
 
 exports[`Span snapshot size lg 1`] = `
 <span
-  class="__halo_fontSizeMap_size--lg"
+  class="text-lg"
 >
   lg
 </span>
@@ -122,7 +122,7 @@ exports[`Span snapshot size lg 1`] = `
 
 exports[`Span snapshot size sm 1`] = `
 <span
-  class="__halo_fontSizeMap_size--sm"
+  class=""
 >
   sm
 </span>
@@ -130,7 +130,7 @@ exports[`Span snapshot size sm 1`] = `
 
 exports[`Span snapshot size xl 1`] = `
 <span
-  class="__halo_fontSizeMap_size--xl"
+  class="text-xl"
 >
   xl
 </span>
@@ -138,7 +138,7 @@ exports[`Span snapshot size xl 1`] = `
 
 exports[`Span snapshot strong 1`] = `
 <span
-  class="bold"
+  class="font-bold"
 >
   strong
 </span>

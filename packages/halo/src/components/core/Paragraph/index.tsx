@@ -54,7 +54,7 @@ function ParagraphRaw({
   colorScheme,
   ...paragraphElementProps
 }: ParagraphProps & React.HTMLAttributes<HTMLParagraphElement>) {
-  const classes = classNames(styles.component, flow && styles.flow, className);
+  const classes = classNames(styles.component, flow && 'mb-4', className);
 
   return (
     <Span

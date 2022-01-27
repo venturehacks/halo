@@ -41,7 +41,7 @@ export interface LabelProps extends LabelPropsBase {
 }
 
 LabelRaw.defaultProps = {
-  color: 'slate--900' as Color,
+  color: 'slate-900' as Color,
   isRequired: false,
   weight: 'medium' as TextWeight,
 };

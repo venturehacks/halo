@@ -47,7 +47,7 @@ $size-xl: 112px;
   // shapes
   &.square {
     @include border-rounded;
-    border: 1px solid $slate--100;
+    border: 1px solid $slate-100;
     background-color: $white;
   }
 }
@@ -60,6 +60,6 @@ img.avatar {
   // shapes
   &.circle {
     @include border-circle;
-    border: 1px solid $slate--100;
+    border: 1px solid $slate-100;
   }
 }
