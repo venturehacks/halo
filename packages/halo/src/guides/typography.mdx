@@ -1,5 +1,5 @@
 ---
-name: Typography
+name: Body Typography
 menu: Guides
 route: /guides/typography
 ---
@@ -10,13 +10,13 @@ import { Paragraph } from '../components/core/Paragraph';
 import { Header } from '../components/core/Header';
 import { Span } from '../components/core/Span';
 
-# Typography
+# Body Typography
+
+Suitable for long, continuous written content, such as editorial or blog posts.
 
 <br />
 
 ## Size
-
-> **Legend:** Halo size &middot; pixel size &middot; curated line height
 
 <Playground>
   <Span contrast="A" monospace>2xs &middot; 11px &middot; 1.45</Span>
@@ -114,21 +114,17 @@ import { Span } from '../components/core/Span';
 </Playground>
 
 ```scss
-$weight--ultralight: 200;
-$weight--light: 300;
-$weight--regular: 400;
-$weight--medium: 500;
-$weight--semibold: 600;
-$weight--bold: 700;
-$weight--heavy: 800;
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
 $weights: (
-  ultralight: $weight--ultralight,
-  light: $weight--light,
-  regular: $weight--regular,
-  medium: $weight--medium,
-  semibold: $weight--semibold,
-  bold: $weight--bold,
-  heavy: $weight--heavy,
+  light: $weight-light,
+  regular: $weight-regular,
+  medium: $weight-medium,
+  semibold: $weight-semibold,
+  bold: $weight-bold,
 );
 ```
 
@@ -151,22 +147,19 @@ Generally, you should not override line height. There is a curated line height a
     <Paragraph lineHeight="compact">
       <strong>Compact.</strong> The Paragraph component is ideal for rendering blocks of copy. It offers a narrower subset of features from Span, with stronger default enforcement of type size and line height. By default, it applies a natural document flow bottom margin.
     </Paragraph>
-    <Paragraph lineHeight="dense">
-      <strong>Dense.</strong> The Paragraph component is ideal for rendering blocks of copy. It offers a narrower subset of features from Span, with stronger default enforcement of type size and line height. By default, it applies a natural document flow bottom margin.
-    </Paragraph>
   </Box>
 </Playground>
 
 ```scss
-$line-height--default: 1.5;
-$line-height--comfortable: 1.25;
-$line-height--compact: 1.125;
-$line-height--dense: 1.0625;
+$line-height-default: 1.5;
+$line-height-comfortable: 1.25;
+$line-height-compact: 1.125;
+$line-height-dense: 1.0625;
 $line-heights: (
-  default: $line-height--default,
-  comfortable: $line-height--comfortable,
-  compact: $line-height--compact,
-  dense: $line-height--dense,
+  default: $line-height-default,
+  comfortable: $line-height-comfortable,
+  compact: $line-height-compact,
+  dense: $line-height-dense,
 );
 ```
 
@@ -183,8 +176,8 @@ the cooresponding rule.
 ```scss
 @mixin font(
   $size: null,   // 2xs | xs | sm | md | lg | xl | 2xl | 3xl | 4xl | 5xl | 6xl
-  $line: null,   // default | comfortable | compact | dense
-  $weight: null, // ultralight | light | regular | medium | semibold | bold
+  $line: null,   // default | comfortable | compact
+  $weight: null, // light | regular | medium | semibold | bold
   $color: null,  // palette color name or hex
   $family: null, // primary | serif | monospace | system
   $transform: null, // uppercase | lowercase | capitalize | none
@@ -195,18 +188,18 @@ the cooresponding rule.
 ```
 
 
-## TypeScript Interfaces
+## TypeScript
 
 Relied on by `Header` `Paragraph` and `Span`
 
 ```ts
 type TextSize = '6xl' | '5xl' | '4xl' | '3xl' | '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs' | '2xs';
 
-type TextWeight = 'ultralight' | 'light' | 'regular' | 'medium' | 'semibold' | 'bold';
+type TextWeight = 'light' | 'regular' | 'medium' | 'semibold' | 'bold';
 
 type TextContrast = 'A' | 'AA' | 'AAA' | 'AAAA';
 
-type TextLineHeight = 'default' | 'comfortable' | 'compact' | 'dense';
+type TextLineHeight = 'default' | 'comfortable' | 'compact';
 
 type TextColorScheme = 'dark' | 'light';
 ```

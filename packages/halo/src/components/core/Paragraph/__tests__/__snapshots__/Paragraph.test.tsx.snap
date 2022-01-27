@@ -2,7 +2,7 @@
 
 exports[`Paragraph snapshot contrast 1`] = `
 <p
-  class="component flow __halo_textContrast_dark_A __halo_fontSizeMap_size--md __halo_lineHeight_default"
+  class="component mb-4 text-dark-a text-md leading-normal"
 >
   single A
 </p>
@@ -10,7 +10,7 @@ exports[`Paragraph snapshot contrast 1`] = `
 
 exports[`Paragraph snapshot flow 1`] = `
 <p
-  class="component __halo_fontSizeMap_size--md __halo_lineHeight_default"
+  class="component text-md leading-normal"
 >
   no flow
 </p>
@@ -18,7 +18,7 @@ exports[`Paragraph snapshot flow 1`] = `
 
 exports[`Paragraph snapshot line height override 1`] = `
 <p
-  class="component flow __halo_fontSizeMap_size--xs __halo_lineHeight_dense"
+  class="component mb-4 text-xs"
 >
   dense line height override
 </p>
@@ -26,7 +26,7 @@ exports[`Paragraph snapshot line height override 1`] = `
 
 exports[`Paragraph snapshot size 1`] = `
 <p
-  class="component flow __halo_fontSizeMap_size--2xl __halo_lineHeight_default"
+  class="component mb-4 text-2xl leading-normal"
 >
   size 2xl
 </p>

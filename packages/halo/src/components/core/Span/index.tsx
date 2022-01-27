@@ -15,8 +15,6 @@ import {
   withForwardedRef,
 } from '../../../lib/withForwardedRef';
 
-import styles from './styles.module.scss';
-
 export interface SpanProps {
   /**
    * Sharpens text. Ideal for light text on dark backgrounds
@@ -139,7 +137,6 @@ function SpanRaw(
     children,
     className,
     color,
-    colorScheme = 'dark',
     contrast,
     error,
     forwardedRef,
@@ -162,7 +159,7 @@ function SpanRaw(
     ...spanElementProps
   } = props;
 
-  const textContrast: TextContrast = textContrastForConfiguration(props);
+  const colorFromContrastSettings = textContrastForConfiguration(props);
   const hasColorOverride = success || error || warning || color;
   const applyColorDerivedByContrast =
     !hasColorOverride && (contrast || muted || xmuted || xxmuted);
@@ -177,25 +174,44 @@ function SpanRaw(
 
   const classes = classNames(
     className,
-    applyColorDerivedByContrast &&
-      `__halo_textContrast_${colorScheme}_${textContrast}`,
-    size && `__halo_fontSizeMap_size--${size}`,
-    lineHeight && `__halo_lineHeight_${lineHeight}`,
-    weight && `__halo_fontWeight_${weight}`,
-    color && `__halo_color_${color}`,
-    (antialiased || colorScheme === 'light') && styles.antialiased,
-    block && styles.block,
-    bold && styles.bold,
-    error && styles.error,
-    italic && styles.italic,
-    monospace && styles.monospace,
-    regular && styles.regular,
-    medium && styles.medium,
-    semibold && styles.semibold,
-    strong && styles.bold,
-    success && styles.success,
-    uppercase && styles.uppercase,
-    warning && styles.warning,
+    applyColorDerivedByContrast && colorFromContrastSettings,
+    // TODO(drew): force inclusion of these rules so we can remove
+    // these conditional expressions (save kb)
+    size === '2xs' && 'text-2xs',
+    size === 'xs' && 'text-xs',
+    size === 'md' && 'text-md',
+    size === 'lg' && 'text-lg',
+    size === 'xl' && 'text-xl',
+    size === '2xl' && 'text-2xl',
+    size === '3xl' && 'text-3xl',
+    size === '4xl' && 'text-4xl',
+    size === '5xl' && 'text-5xl',
+    size === '6xl' && 'text-6xl',
+    // TODO(drew): declare our own tailwind enum for line height
+    // so these class names don't need to be mapped
+    lineHeight === 'default' && 'leading-normal', // 1.5
+    lineHeight === 'comfortable' && 'leading-snug', // 1.375
+    lineHeight === 'compact' && 'leading-tight', // 1.25
+    // TODO(drew): same force inclusion of rules to simplify
+    weight === 'light' && 'font-light',
+    weight === 'regular' && 'font-normal',
+    weight === 'medium' && 'font-medium',
+    weight === 'semibold' && 'font-semibold',
+    weight === 'bold' && 'font-bold',
+    color && `text-${color}`,
+    antialiased && 'antialiased',
+    block && 'block',
+    bold && 'font-bold',
+    italic && 'italic',
+    monospace && 'font-mono',
+    regular && 'font-normal',
+    medium && 'font-medium',
+    semibold && 'font-semibold',
+    strong && 'font-bold',
+    uppercase && 'uppercase',
+    error && 'text-dark-error',
+    success && 'text-dark-success',
+    warning && 'text-dark-warning',
   );
 
   const tagName = tagNameForConfiguration(props);

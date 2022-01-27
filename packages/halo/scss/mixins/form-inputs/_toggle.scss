@@ -4,8 +4,8 @@ $raw-toggle-switch-gutter-width: tempo(4.5) !default;
 $raw-toggle-switch-gutter-height: 12px !default;
 $raw-toggle-switch-knob-size: tempo(2.5) !default;
 
-@mixin input-label--toggle-switch--left {
-  @extend %input-label--base;
+@mixin input-label-toggle-switch-left {
+  @extend %input-label-base;
   padding-left: tempo(6);
   padding-right: tempo(1);
   line-height: $raw-toggle-switch-gutter-height - 1px;
@@ -36,7 +36,7 @@ $raw-toggle-switch-knob-size: tempo(2.5) !default;
   :not(:checked) + & {
     &::before,
     &::after {
-      color: $slate--500;
+      color: $slate-500;
     }
   }
 
@@ -44,7 +44,7 @@ $raw-toggle-switch-knob-size: tempo(2.5) !default;
   :checked + & {
     &::before,
     &::after {
-      color: $blue--500;
+      color: $blue-500;
     }
 
     // move knob rightward to indicate 'on' state
@@ -56,14 +56,14 @@ $raw-toggle-switch-knob-size: tempo(2.5) !default;
   [disabled]:checked + & {
     &::before,
     &::after {
-      color: $blue--500;
+      color: $blue-500;
     }
   }
 
   .hasError.warning + & {
     &::before,
     &::after {
-      color: $text-dark--warning;
+      color: $dark-warning;
     }
   }
 
@@ -71,13 +71,13 @@ $raw-toggle-switch-knob-size: tempo(2.5) !default;
   .hasError.critical:checked + & {
     &::before,
     &::after {
-      color: $text-dark--error;
+      color: $dark-error;
     }
   }
 }
 
-@mixin input-label--toggle-switch--right {
-  @include input-label--toggle-switch--left;
+@mixin input-label-toggle-switch-right {
+  @include input-label-toggle-switch-left;
   padding-right: tempo(6);
   padding-left: 0;
   text-align: right;

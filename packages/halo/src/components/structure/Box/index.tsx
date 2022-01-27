@@ -198,7 +198,7 @@ function BoxRaw({
     augmentNegativeSpaceClasses(padding, 'padding'),
     augmentNegativeSpaceClasses(margin, 'margin'),
     // TODO(drew): restore inline styles or remove prop
-    background && `bg-${background.replace('--', '-')}`,
+    background && `bg-${background}`,
     textAlign && `text-${textAlign}`,
   );
 

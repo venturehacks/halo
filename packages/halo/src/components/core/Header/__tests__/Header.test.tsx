@@ -35,9 +35,7 @@ describe('Header', () => {
     });
 
     test('palette color', () => {
-      const component = render(
-        <Header color="red--100">red--100 color</Header>,
-      );
+      const component = render(<Header color="red-100">red-100 color</Header>);
 
       expect(component).toMatchSnapshot();
     });

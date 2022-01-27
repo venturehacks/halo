@@ -11,18 +11,18 @@
   @include halo-element-base;
 
   &.asCheckbox {
-    @include input-label--checkbox;
+    @include input-label-checkbox;
   }
 
   &.asRadio {
-    @include input-label--radio;
+    @include input-label-radio;
   }
 
   &.pill {
-    @include input-label--pill;
+    @include input-label-pill;
   }
 
   &.controlAlignCenter {
-    @include input-control--center;
+    @include input-control-center;
   }
 }
