@@ -48,7 +48,8 @@ exports[`Dialog snapshot title + both buttons 1`] = `
     class="title"
   >
     <h4
-      class="component __halo_fontSizeMap_size--lg __halo_fontWeight_medium"
+      class="component text-lg font-medium"
+      colorscheme="dark"
     >
       Title
     </h4>

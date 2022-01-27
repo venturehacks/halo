@@ -2,7 +2,8 @@
 
 exports[`Header snapshot flow 1`] = `
 <h3
-  class="component __halo_fontSizeMap_size--xl __halo_fontWeight_medium"
+  class="component text-xl font-medium"
+  colorscheme="dark"
 >
   no flow
 </h3>
@@ -10,7 +11,8 @@ exports[`Header snapshot flow 1`] = `
 
 exports[`Header snapshot h3 contrast AA 1`] = `
 <h3
-  class="component flow __halo_textContrast_dark_AA __halo_fontSizeMap_size--xl __halo_fontWeight_medium"
+  class="component flow text-dark-aa text-xl font-medium"
+  colorscheme="dark"
 >
   AA
 </h3>
@@ -18,7 +20,8 @@ exports[`Header snapshot h3 contrast AA 1`] = `
 
 exports[`Header snapshot inline block 1`] = `
 <h3
-  class="component flow inlineBlock __halo_fontSizeMap_size--xl __halo_fontWeight_medium"
+  class="component flow inlineBlock text-xl font-medium"
+  colorscheme="dark"
 >
   inline block
 </h3>
@@ -26,15 +29,17 @@ exports[`Header snapshot inline block 1`] = `
 
 exports[`Header snapshot palette color 1`] = `
 <h3
-  class="component flow __halo_fontSizeMap_size--xl __halo_fontWeight_medium __halo_color_red--100"
+  class="component flow text-xl font-medium text-red-100"
+  colorscheme="dark"
 >
-  red--100 color
+  red-100 color
 </h3>
 `;
 
 exports[`Header snapshot size override 1`] = `
 <h4
-  class="component flow __halo_fontSizeMap_size--2xl __halo_fontWeight_medium"
+  class="component flow text-2xl font-medium"
+  colorscheme="dark"
 >
   2xl should override h4
 </h4>
@@ -42,7 +47,8 @@ exports[`Header snapshot size override 1`] = `
 
 exports[`Header snapshot tag override 1`] = `
 <h1
-  class="component flow __halo_fontSizeMap_size--lg __halo_fontWeight_medium"
+  class="component flow text-lg font-medium"
+  colorscheme="dark"
 >
   h1 should win over h4
 </h1>

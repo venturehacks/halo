@@ -93,7 +93,7 @@ export default defineConfig({
       autoModules: true,
       namedExports: name => {
         // converts scss dashes to camelCase:
-        // styles.slate--200 => styles.slate200
+        // styles.slate-200 => styles.slate200
         return camelCase(name);
       },
       use: [
