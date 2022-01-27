@@ -27,7 +27,7 @@ $pill-border-radius: tempo(3);
   z-index: -2;
 }
 
-@mixin input-border-checked--thick {
+@mixin input-border-checked-thick {
   border: 2px solid $blue-500;
 }
 
@@ -90,7 +90,7 @@ $pill-border-radius: tempo(3);
 
   // checked = thick border
   :checked + &::before {
-    @include input-border-checked--thick;
+    @include input-border-checked-thick;
   }
 
   // checked
@@ -161,7 +161,7 @@ $pill-border-radius: tempo(3);
 
   // checked = thick border
   :checked + &::before {
-    @include input-border-checked--thick;
+    @include input-border-checked-thick;
   }
 
   // checked

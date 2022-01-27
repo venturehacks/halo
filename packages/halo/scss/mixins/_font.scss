@@ -17,12 +17,12 @@
     color: $color;
   }
 
-  @if $size and map-has-key($font-sizes-map, 'size--' + $size) {
-    font-size: map-deep-get($font-sizes-map, 'size--' + $size, font-size);
+  @if $size and map-has-key($font-sizes-map, 'size-' + $size) {
+    font-size: map-deep-get($font-sizes-map, 'size-' + $size, font-size);
 
     // include matching line-height *unless* we set $line to false`
     @if $line != false {
-      line-height: map-deep-get($font-sizes-map, 'size--' + $size, line-height);
+      line-height: map-deep-get($font-sizes-map, 'size-' + $size, line-height);
     }
   } @else if $size and has-unit($size) {
     font-size: $size;
