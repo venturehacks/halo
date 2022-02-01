@@ -15,26 +15,26 @@ import { Box } from '../components/structure/Box';
   {/* dark text on light */}
   <Box row align="space-between" margin={{ bottom: 1 }} width="100%">
     <ColorSwatch swatch="dark-brand" />
-    <ColorSwatch swatch="text-dark-aaaa" />
-    <ColorSwatch swatch="text-dark-aaa" />
-    <ColorSwatch swatch="text-dark-aa" />
-    <ColorSwatch swatch="text-dark-a" />
-    <ColorSwatch swatch="text-dark-link" />
-    <ColorSwatch swatch="text-dark-success" />
-    <ColorSwatch swatch="text-dark-warning" />
-    <ColorSwatch swatch="text-dark-error" />
+    <ColorSwatch swatch="dark-aaaa" />
+    <ColorSwatch swatch="dark-aaa" />
+    <ColorSwatch swatch="dark-aa" />
+    <ColorSwatch swatch="dark-a" />
+    <ColorSwatch swatch="dark-link" />
+    <ColorSwatch swatch="dark-success" />
+    <ColorSwatch swatch="dark-warning" />
+    <ColorSwatch swatch="dark-error" />
   </Box>
   {/* light text on dark */}
   <Box row align="space-between" margin={{ bottom: 1 }} width="100%">
     <ColorSwatch swatch="light-brand" backgroundColor="black" />
-    <ColorSwatch swatch="text-light-aaaa" backgroundColor="black" />
-    <ColorSwatch swatch="text-light-aaa" backgroundColor="black" />
-    <ColorSwatch swatch="text-light-aa" backgroundColor="black" />
-    <ColorSwatch swatch="text-light-a" backgroundColor="black" />
-    <ColorSwatch swatch="text-light-link" backgroundColor="black" />
-    <ColorSwatch swatch="text-light-success" backgroundColor="black" />
-    <ColorSwatch swatch="text-light-warning" backgroundColor="black" />
-    <ColorSwatch swatch="text-light-error" backgroundColor="black" />
+    <ColorSwatch swatch="light-aaaa" backgroundColor="black" />
+    <ColorSwatch swatch="light-aaa" backgroundColor="black" />
+    <ColorSwatch swatch="light-aa" backgroundColor="black" />
+    <ColorSwatch swatch="light-a" backgroundColor="black" />
+    <ColorSwatch swatch="light-link" backgroundColor="black" />
+    <ColorSwatch swatch="light-success" backgroundColor="black" />
+    <ColorSwatch swatch="light-warning" backgroundColor="black" />
+    <ColorSwatch swatch="light-error" backgroundColor="black" />
   </Box>
 </Box>
 
@@ -120,22 +120,22 @@ import { Box } from '../components/structure/Box';
 
 ```ts
 export type Color =
-  | 'text-dark-aaaa'
-  | 'text-dark-aaa'
-  | 'text-dark-aa'
-  | 'text-dark-a'
-  | 'text-dark-link'
-  | 'text-dark-success'
-  | 'text-dark-warning'
-  | 'text-dark-error'
-  | 'text-light-aaaa'
-  | 'text-light-aaa'
-  | 'text-light-aa'
-  | 'text-light-a'
-  | 'text-light-link'
-  | 'text-light-success'
-  | 'text-light-warning'
-  | 'text-light-error'
+  | 'dark-aaaa'
+  | 'dark-aaa'
+  | 'dark-aa'
+  | 'dark-a'
+  | 'dark-link'
+  | 'dark-success'
+  | 'dark-warning'
+  | 'dark-error'
+  | 'light-aaaa'
+  | 'light-aaa'
+  | 'light-aa'
+  | 'light-a'
+  | 'light-link'
+  | 'light-success'
+  | 'light-warning'
+  | 'light-error'
   | 'slate-900'
   | 'slate-800'
   | 'slate-700'
@@ -193,24 +193,24 @@ export type Color =
 
 export const ColorPalette: Record<Color, string> = {
   // dark text on light background
-  'text-dark-aaaa': '#050c26',
-  'text-dark-aaa': '#525769',
-  'text-dark-aa': '#717584',
-  'text-dark-a': '#9194a0',
-  'text-dark-link': '#0a6cff',
-  'text-dark-success': '#008562',
-  'text-dark-warning': '#ac6600',
-  'text-dark-error': '#cc033e',
+  'dark-aaaa': '#050c26',
+  'dark-aaa': '#525769',
+  'dark-aa': '#717584',
+  'dark-a': '#9194a0',
+  'dark-link': '#0a6cff',
+  'dark-success': '#008562',
+  'dark-warning': '#ac6600',
+  'dark-error': '#cc033e',
 
   // light text on dark background
-  'text-light-aaaa': '#fff',
-  'text-light-aaa': '#9b9da8',
-  'text-light-aa': '#777b89',
-  'text-light-a': '#5a5e70',
-  'text-light-link': '#1a75ff',
-  'text-light-success': '#009c5e',
-  'text-light-warning': '#c56e09',
-  'text-light-error': '#ee2531',
+  'light-aaaa': '#fff',
+  'light-aaa': '#9b9da8',
+  'light-aa': '#777b89',
+  'light-a': '#5a5e70',
+  'light-link': '#1a75ff',
+  'light-success': '#009c5e',
+  'light-warning': '#c56e09',
+  'light-error': '#ee2531',
 
   // SPECTRUM
   // slate
