@@ -135,6 +135,7 @@ function SpanRaw(
     block,
     bold,
     children,
+    colorScheme,
     className,
     color,
     contrast,
