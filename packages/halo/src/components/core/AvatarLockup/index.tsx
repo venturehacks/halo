@@ -32,18 +32,20 @@ function AvatarLockupRaw({
   React.HTMLAttributes<HTMLDivElement>) {
   const classnames = classNames(
     className,
-    'flex items-center gap-2',
-    (orientation === 'left' || orientation === 'right') && 'flex-row',
+    'flex gap-2 text-left',
+    (orientation === 'left' || orientation === 'right') &&
+      'flex-row items-center',
     orientation === 'top' && 'flex-col',
-    size === 'sm' && 'h-12',
-    size === 'md' && 'h-16 gap-3',
-    size === 'lg' && 'h-22 gap-4',
+    size === 'sm' && 'gap-1 text-sm',
+    size === 'md' && 'gap-3 text-md font-medium',
+    size === 'lg' && 'gap-4 text-lg font-medium',
   );
 
   return (
     <div className={classnames} {...rest}>
+      {orientation === 'right' && children}
       <Avatar imageUrl={imageUrl} size={size} />
-      {children}
+      {orientation !== 'right' && children}
     </div>
   );
 }

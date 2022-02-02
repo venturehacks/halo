@@ -1,25 +1,56 @@
 ---
 name: AvatarLockup
 menu: Core
-route: /core/avatarlockup
+route: /core/avatarLockup
 ---
 
 import { Props, Playground } from 'docz';
 import { AvatarLockup } from './';
 import { Box } from '../../structure/Box';
-import { Bracket } from '../../structure/Bracket';
+import { Cell } from '../../structure/Cell';
 
 # AvatarLockup
 
 ### Usage
 
 <Playground>
-  <Box row align="space-between" maxWidth="500px" padding={{ right: 2 }}>
-    <AvatarLockup
-      size="sm"
-      imageUrl="https://avatars1.githubusercontent.com/u/194885"
-    >
-      <Bracket> Vishal Jeet </Bracket>
+  <Box>
+    <h4> Small </h4>
+    <AvatarLockup size="sm" imageUrl="https://avatars.githubusercontent.com/u/56262247" >
+      <Cell>Vishal Jeet</Cell>
+    </AvatarLockup>
+
+    <h4> Medium with byline </h4>
+    <AvatarLockup size="md" imageUrl="https://avatars.githubusercontent.com/u/56262247" >
+      <Box>
+        <Cell>Vishal Jeet</Cell>
+        <Cell class="text-sm font-normal">AngelList</Cell>
+      </Box>
+    </AvatarLockup>
+
+    <h4> Large with more info</h4>
+    <AvatarLockup size="lg" imageUrl="https://avatars.githubusercontent.com/u/56262247" >
+      <Box>
+        <Cell class="font-bold">Vishal Jeet</Cell>
+        <Cell class="text-sm font-normal">10 years of exp · New York City · Remote Only</Cell>
+        <Cell class="text-xs text-dark-aa font-light">May require a US work visa</Cell>
+      </Box>
+    </AvatarLockup>
+
+    <h4> Avatar to the right </h4>
+    <AvatarLockup orientation="right" imageUrl="https://avatars.githubusercontent.com/u/56262247">
+      <Box>
+        <Cell>Vishal Jeet</Cell>
+        <Cell class="text-sm font-normal">AngelList</Cell>
+      </Box>
+    </AvatarLockup>
+
+    <h4> Avatar on top </h4>
+    <AvatarLockup orientation="top" imageUrl="https://avatars.githubusercontent.com/u/56262247">
+      <Box>
+        <Cell>Vishal Jeet</Cell>
+        <Cell class="text-sm font-normal">AngelList</Cell>
+      </Box>
     </AvatarLockup>
   </Box>
 </Playground>
