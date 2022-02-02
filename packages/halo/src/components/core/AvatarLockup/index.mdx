@@ -1,0 +1,37 @@
+---
+name: AvatarLockup
+menu: Core
+route: /core/avatarlockup
+---
+
+import { Props, Playground } from 'docz';
+import { AvatarLockup } from './';
+import { Box } from '../../structure/Box';
+import { Bracket } from '../../structure/Bracket';
+
+# AvatarLockup
+
+### Usage
+
+<Playground>
+  <Box row align="space-between" maxWidth="500px" padding={{ right: 2 }}>
+    <AvatarLockup
+      size="sm"
+      imageUrl="https://avatars1.githubusercontent.com/u/194885"
+    >
+      <Bracket> Vishal Jeet </Bracket>
+    </AvatarLockup>
+  </Box>
+</Playground>
+
+### Exports
+
+```ts
+type AvatarLockupOrientation = 'left' | 'right' | 'top-left' | 'top-right';
+
+type AvatarLockupSize = 'sm' | 'md' | 'lg';
+```
+
+### Props
+
+<Props of={AvatarLockup} />
