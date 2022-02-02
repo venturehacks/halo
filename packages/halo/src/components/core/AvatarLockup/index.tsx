@@ -15,8 +15,8 @@ export interface AvatarLockupProps {
   children: React.ReactNode;
   className?: string;
   imageUrl: string;
-  orientation: AvatarLockupOrientation;
-  size: AvatarLockupSize;
+  orientation?: AvatarLockupOrientation;
+  size?: AvatarLockupSize;
 }
 
 function AvatarLockupRaw({

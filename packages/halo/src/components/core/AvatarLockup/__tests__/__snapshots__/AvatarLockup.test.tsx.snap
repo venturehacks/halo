@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Avatar snapshots orientation left [default] 1`] = `
+<div
+  class="flex gap-2 text-left flex-row items-center gap-3 text-md font-medium"
+>
+  <div
+    class="component md circle"
+  >
+    <img
+      class="avatar circle"
+      height="48"
+      src="https://avatars.githubusercontent.com/u/56262247"
+      width="48"
+    />
+  </div>
+  Vishal
+</div>
+`;
+
+exports[`Avatar snapshots orientation right 1`] = `
+<div
+  class="flex gap-2 text-left flex-row items-center gap-3 text-md font-medium"
+>
+  Vishal
+  <div
+    class="component md circle"
+  >
+    <img
+      class="avatar circle"
+      height="48"
+      src="https://avatars.githubusercontent.com/u/56262247"
+      width="48"
+    />
+  </div>
+</div>
+`;
+
+exports[`Avatar snapshots orientation top 1`] = `
+<div
+  class="flex gap-2 text-left flex-col gap-3 text-md font-medium"
+>
+  <div
+    class="component md circle"
+  >
+    <img
+      class="avatar circle"
+      height="48"
+      src="https://avatars.githubusercontent.com/u/56262247"
+      width="48"
+    />
+  </div>
+  Vishal
+</div>
+`;
+
+exports[`Avatar snapshots size lg 1`] = `
+<div
+  class="flex gap-2 text-left flex-row items-center gap-4 text-lg font-medium"
+>
+  <div
+    class="component lg circle"
+  >
+    <img
+      class="avatar circle"
+      height="72"
+      src="https://avatars.githubusercontent.com/u/56262247"
+      width="72"
+    />
+  </div>
+  Vishal
+</div>
+`;
+
+exports[`Avatar snapshots size md [default] 1`] = `
+<div
+  class="flex gap-2 text-left flex-row items-center gap-3 text-md font-medium"
+>
+  <div
+    class="component md circle"
+  >
+    <img
+      class="avatar circle"
+      height="48"
+      src="https://avatars.githubusercontent.com/u/56262247"
+      width="48"
+    />
+  </div>
+  Vishal
+</div>
+`;
+
+exports[`Avatar snapshots size sm 1`] = `
+<div
+  class="flex gap-2 text-left flex-row items-center gap-1 text-sm"
+>
+  <div
+    class="component sm circle"
+  >
+    <img
+      class="avatar circle"
+      height="32"
+      src="https://avatars.githubusercontent.com/u/56262247"
+      width="32"
+    />
+  </div>
+  Vishal
+</div>
+`;
