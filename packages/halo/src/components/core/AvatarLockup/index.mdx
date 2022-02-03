@@ -6,53 +6,60 @@ route: /core/avatar-lockup
 
 import { Props, Playground } from 'docz';
 import { AvatarLockup } from './';
-import { Box } from '../../structure/Box';
-import { Cell } from '../../structure/Cell';
 
 # AvatarLockup
 
 ### Usage
 
 <Playground>
-  <Box>
+  <div>
     <h4> Small </h4>
-    <AvatarLockup size="sm" imageUrl="https://avatars.githubusercontent.com/u/56262247" >
-      <Cell>Vishal Jeet</Cell>
-    </AvatarLockup>
+    <AvatarLockup
+      imageUrl="https://avatars.githubusercontent.com/u/56262247"
+      size="sm"
+      title="Vishal Jeet"
+    />
 
-    <h4> Medium with byline </h4>
-    <AvatarLockup size="md" imageUrl="https://avatars.githubusercontent.com/u/56262247" >
-      <Box>
-        <Cell>Vishal Jeet</Cell>
-        <Cell className="text-sm font-normal">AngelList</Cell>
-      </Box>
-    </AvatarLockup>
+    <h4> Small (with byline) </h4>
+    <AvatarLockup
+      imageUrl="https://avatars.githubusercontent.com/u/56262247"
+      size="sm"
+      title="Vishal Jeet"
+      byline="AngelList"
+    />
 
-    <h4> Large with more info</h4>
+    <h4> Medium </h4>
+    <AvatarLockup
+      imageUrl="https://avatars.githubusercontent.com/u/56262247"
+      title="Vishal Jeet"
+      byline="AngelList"
+    />
+
+    <h4> Medium (avatar to the right) </h4>
+    <AvatarLockup
+      imageUrl="https://avatars.githubusercontent.com/u/56262247"
+      orientation="right"
+      title="Vishal Jeet"
+      byline="AngelList"
+    />
+
+    <h4> Medium (avatar on top) </h4>
+    <AvatarLockup
+      imageUrl="https://avatars.githubusercontent.com/u/56262247"
+      orientation="top"
+      title="Vishal Jeet"
+      byline="AngelList"
+    />
+
+    <h4> Large (with children)</h4>
     <AvatarLockup size="lg" imageUrl="https://avatars.githubusercontent.com/u/56262247" >
-      <Box>
-        <Cell className="font-bold">Vishal Jeet</Cell>
-        <Cell className="text-sm font-normal">10 years of exp · New York City · Remote Only</Cell>
-        <Cell className="text-xs text-dark-aa font-light">May require a US work visa</Cell>
-      </Box>
+      <div>
+        <p className="font-bold">Vishal Jeet</p>
+        <p className="text-sm font-normal">10 years of exp · New York City · Remote Only</p>
+        <p className="text-xs text-dark-aa font-light">May require a US work visa</p>
+      </div>
     </AvatarLockup>
-
-    <h4> Avatar to the right </h4>
-    <AvatarLockup orientation="right" imageUrl="https://avatars.githubusercontent.com/u/56262247">
-      <Box>
-        <Cell>Vishal Jeet</Cell>
-        <Cell className="text-sm font-normal">AngelList</Cell>
-      </Box>
-    </AvatarLockup>
-
-    <h4> Avatar on top </h4>
-    <AvatarLockup orientation="top" imageUrl="https://avatars.githubusercontent.com/u/56262247">
-      <Box>
-        <Cell>Vishal Jeet</Cell>
-        <Cell className="text-sm font-normal">AngelList</Cell>
-      </Box>
-    </AvatarLockup>
-  </Box>
+  </div>
 </Playground>
 
 ### Exports
