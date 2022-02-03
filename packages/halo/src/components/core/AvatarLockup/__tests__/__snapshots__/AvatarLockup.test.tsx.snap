@@ -2,7 +2,7 @@
 
 exports[`Avatar snapshots orientation left [default] 1`] = `
 <div
-  class="flex gap-2 text-left flex-row items-center gap-3 text-md font-medium"
+  class="flex gap-2 text-left flex-row items-center gap-3"
 >
   <div
     class="component md circle"
@@ -20,7 +20,7 @@ exports[`Avatar snapshots orientation left [default] 1`] = `
 
 exports[`Avatar snapshots orientation right 1`] = `
 <div
-  class="flex gap-2 text-left flex-row items-center gap-3 text-md font-medium"
+  class="flex gap-2 text-left flex-row items-center gap-3"
 >
   Vishal
   <div
@@ -38,7 +38,7 @@ exports[`Avatar snapshots orientation right 1`] = `
 
 exports[`Avatar snapshots orientation top 1`] = `
 <div
-  class="flex gap-2 text-left flex-col gap-3 text-md font-medium"
+  class="flex gap-2 text-left flex-col gap-3"
 >
   <div
     class="component md circle"
@@ -56,7 +56,7 @@ exports[`Avatar snapshots orientation top 1`] = `
 
 exports[`Avatar snapshots size lg 1`] = `
 <div
-  class="flex gap-2 text-left flex-row items-center gap-4 text-lg font-medium"
+  class="flex gap-2 text-left flex-row items-center gap-4"
 >
   <div
     class="component lg circle"
@@ -74,7 +74,7 @@ exports[`Avatar snapshots size lg 1`] = `
 
 exports[`Avatar snapshots size md [default] 1`] = `
 <div
-  class="flex gap-2 text-left flex-row items-center gap-3 text-md font-medium"
+  class="flex gap-2 text-left flex-row items-center gap-3"
 >
   <div
     class="component md circle"
@@ -92,7 +92,7 @@ exports[`Avatar snapshots size md [default] 1`] = `
 
 exports[`Avatar snapshots size sm 1`] = `
 <div
-  class="flex gap-2 text-left flex-row items-center gap-1 text-sm"
+  class="flex gap-2 text-left flex-row items-center gap-1"
 >
   <div
     class="component sm circle"
