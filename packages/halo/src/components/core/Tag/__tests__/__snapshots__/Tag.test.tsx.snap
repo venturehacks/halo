@@ -1,0 +1,53 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tag snapshot color gray 1`] = `
+<span
+  class="mr-2 last:mr-0 bg-slate-200 bg-opacity-77 text-slate-600 rounded-md text-md min-w-6 px-3 py-2"
+/>
+`;
+
+exports[`Tag snapshot color red 1`] = `
+<span
+  class="mr-2 last:mr-0 bg-red-200 text-red-600 rounded-md text-md min-w-6 px-3 py-2"
+/>
+`;
+
+exports[`Tag snapshot plain 1`] = `
+<span
+  class="mr-2 last:mr-0 bg-blue-200 bg-opacity-77 text-blue-600 rounded-md text-md min-w-6 px-3 py-2"
+>
+  plain
+</span>
+`;
+
+exports[`Tag snapshot shape pill 1`] = `
+<span
+  class="mr-2 last:mr-0 bg-blue-200 bg-opacity-77 text-blue-600 rounded-full text-md min-w-6 px-3 py-2"
+/>
+`;
+
+exports[`Tag snapshot shape rectangle 1`] = `
+<span
+  class="mr-2 last:mr-0 bg-blue-200 bg-opacity-77 text-blue-600 rounded-md text-md min-w-6 px-3 py-2"
+/>
+`;
+
+exports[`Tag snapshot size md 1`] = `
+<span
+  class="mr-2 last:mr-0 bg-blue-200 bg-opacity-77 text-blue-600 rounded-md text-md min-w-6 px-3 py-2"
+/>
+`;
+
+exports[`Tag snapshot size sm 1`] = `
+<span
+  class="mr-2 last:mr-0 bg-blue-200 bg-opacity-77 text-blue-600 rounded-md text-xs min-w-4 px-2 py-1.5"
+/>
+`;
+
+exports[`Tag snapshot with children 1`] = `
+<span
+  class="mr-2 last:mr-0 bg-blue-200 bg-opacity-77 text-blue-600 rounded-md text-md min-w-6 px-3 py-2"
+>
+  with children
+</span>
+`;
