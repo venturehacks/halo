@@ -226,8 +226,9 @@ module.exports = {
     },
   },
   variants: {
-    extend: {},
-    margin: ['last'],
+    extend: {
+      margin: ['last'],
+    },
   },
 };
 
