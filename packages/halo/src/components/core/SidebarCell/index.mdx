@@ -10,7 +10,7 @@ import { SidebarCell } from './';
 
 # SidebarCell
 
-Display a prominent message and optional action. SidebarCells are displayed at the top of the screen and may be either persistent until dismissed or expired after some time. Avoid stacking more than one SidebarCell.
+Common pattern throughout Recruit products. Cell supports fixed title, byline, and arbirary slots for header and chin (JSX children).
 
 ### Usage
 
@@ -20,31 +20,31 @@ Display a prominent message and optional action. SidebarCells are displayed at t
       title="Account Executive"
       byline="California, Utah, Colorado, Remote"
       header="Last edit: 7 days ago"
-      onClick={() => alert('SidebarCell click!')}
-      onStarClick={() => alert('SidebarCell#onStarClick click!')}
+      onClick={() => alert('onClick')}
+      onStarClick={() => alert('onStarClick')}
       isActive
     />
     <SidebarCell
       title="Head of Product"
       byline="Europe, United States, Remote"
       header="Last edit: 1 month ago"
-      onClick={() => alert('SidebarCell click!')}
-      onStarClick={() => alert('SidebarCell#onStarClick click!')}
+      onClick={() => alert('onClick')}
+      onStarClick={() => alert('onStarClick')}
       isStarred
     />
     <SidebarCell
       title="Strategic Project Manager"
       byline="United States, Remote"
       header="Last edit: 2 days ago"
-      onClick={() => alert('SidebarCell click!')}
-      onStarClick={() => alert('SidebarCell#onStarClick click!')}
+      onClick={() => alert('onClick')}
+      onStarClick={() => alert('onStarClick')}
     />
     <SidebarCell
       title="Super Long Copywriter Head of Overflow"
       byline="United States, Remote"
-      header="Last edit: 2 days ago"
-      onClick={() => alert('SidebarCell click!')}
-      onStarClick={() => alert('SidebarCell#onStarClick click!')}
+      header="Last edit: 1 year ago"
+      onClick={() => alert('onClick')}
+      onStarClick={() => alert('onStarClick')}
     />
   </div>
 </Playground>

@@ -1,5 +1,11 @@
 @import 'halo';
 
+.component {
+  &:last-child {
+    border: 0;
+  }
+}
+
 .active {
   position: relative;
   font-weight: $weight-medium;

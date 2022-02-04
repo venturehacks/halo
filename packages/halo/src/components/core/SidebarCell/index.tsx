@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 import { Bracket } from '~/components';
+import { StarFillIcon, StarOutlineIcon } from '~/components/icons';
 
 import styles from './styles.module.scss';
 
@@ -55,6 +56,7 @@ function SidebarCell({
     <div
       className={classNames(
         'flex flex-col justify-start content-start px-6 py-4 border-b border-slate-200 hover:bg-slate-300 rounded cursor-pointer',
+        styles.component,
         className,
       )}
       data-test="SidebarCell"
@@ -77,7 +79,7 @@ function SidebarCell({
             }}
             role="switch"
           >
-            {isStarred ? 'unstar' : 'star'}
+            {isStarred ? <StarFillIcon /> : <StarOutlineIcon />}
           </button>
         </Bracket>
       ) : (
