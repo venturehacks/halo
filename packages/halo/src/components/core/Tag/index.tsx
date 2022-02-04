@@ -15,28 +15,26 @@ export type TagSize = 'sm' | 'md';
 
 export interface TagProps {
   /**
-   * Can be used to override the elements rendered within the tag. Mutually exclusive with text.
+   * used to override the rendered elements. Mutually exclusive with label.
    */
   children?: React.ReactNode;
   className?: string;
   color?: TagColor;
   /**
-   * The icon that will be displayed on the left side of the tag.
+   * icon displayed at start of tag
    */
   icon?: React.ReactNode;
+  /**
+   * text rendered inside the tag
+   */
+  label?: string;
   onClick?: React.MouseEventHandler<HTMLSpanElement>;
   /**
-   * Can be used to display a 'x' close icon on the tag and add a handler for the functionality.
-   * @type {React.MouseEventHandler<HTMLSpanElement>}
+   * displays a 'x' icon and adds event handler
    */
   onClose?: React.MouseEventHandler<HTMLSpanElement>;
   shape?: TagShape;
   size?: TagSize;
-  /**
-   * The text value that will be rendered with the tag.
-   * @type {string}
-   */
-  text?: string;
 }
 
 function TagRaw({
@@ -49,7 +47,7 @@ function TagRaw({
   onClose,
   shape = 'rectangle',
   size = 'md',
-  text,
+  label,
   ...rest
 }: TagProps & ForwardedRefProps<HTMLSpanElement>) {
   const componentClassnames = classNames(
@@ -69,7 +67,7 @@ function TagRaw({
 
   const iconClassnames = classNames(
     'inline-block',
-    text && 'mr-1',
+    label && 'mr-1',
     size === 'sm' && 'w-2.5 h-2.5',
     size === 'md' && 'w-3 h-3',
   );
@@ -85,7 +83,7 @@ function TagRaw({
     : {};
 
   // will only render children if no text has been provided.
-  const renderChildren = children && !text;
+  const renderChildren = children && !label;
 
   return (
     <span
@@ -95,7 +93,7 @@ function TagRaw({
       {...rest}
     >
       {icon && <span className={iconClassnames}> {icon} </span>}
-      {text && text}
+      {label && label}
       {renderChildren && children}
       {onClose && (
         <CloseIcon

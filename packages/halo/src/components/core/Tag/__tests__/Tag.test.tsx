@@ -5,13 +5,13 @@ import { Tag } from '../index';
 
 describe('Tag', () => {
   test('smoke', () => {
-    const component = render(<Tag text="PHP" />);
+    const component = render(<Tag label="PHP" />);
     expect(component.text()).toEqual('PHP');
   });
 
   test('click callback on tag', () => {
     const callback = jest.fn();
-    const wrapper = mount(<Tag onClick={callback} text="click me" />);
+    const wrapper = mount(<Tag label="click me" onClick={callback} />);
 
     expect(callback).toHaveBeenCalledTimes(0);
     wrapper.simulate('click');
@@ -20,7 +20,7 @@ describe('Tag', () => {
 
   test('click close button', () => {
     const callback = jest.fn();
-    const wrapper = mount(<Tag onClose={callback} text="I can be closed" />);
+    const wrapper = mount(<Tag label="I can be closed" onClose={callback} />);
 
     expect(callback).toHaveBeenCalledTimes(0);
     wrapper.find('svg').simulate('click');
@@ -29,7 +29,7 @@ describe('Tag', () => {
 
   describe('snapshot', () => {
     test('plain', () => {
-      const component = render(<Tag text="plain" />);
+      const component = render(<Tag label="plain" />);
       expect(component).toMatchSnapshot();
     });
 
