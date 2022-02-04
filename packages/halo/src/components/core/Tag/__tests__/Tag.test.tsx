@@ -38,7 +38,7 @@ describe('Tag', () => {
 
     // parent onClick should not trigger onClose
     wrapper.simulate('click');
-    expect(closeCallback).toHaveBeenCalledTimes(0);
+    expect(closeCallback).toHaveBeenCalledTimes(1);
     expect(tagCallback).toHaveBeenCalledTimes(1);
   });
 
@@ -79,7 +79,17 @@ describe('Tag', () => {
     });
 
     describe('size', () => {
-      test('sm', () => {
+      test('2xs', () => {
+        const component = render(<Tag size="2xs" />);
+        expect(component).toMatchSnapshot();
+      });
+
+      test('xs', () => {
+        const component = render(<Tag size="xs" />);
+        expect(component).toMatchSnapshot();
+      });
+
+      test('sm [default]', () => {
         const component = render(<Tag size="sm" />);
         expect(component).toMatchSnapshot();
       });

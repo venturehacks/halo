@@ -41,7 +41,7 @@ export interface TagProps {
    */
   shape?: TagShape;
   /**
-   * @default md
+   * @default sm
    */
   size?: TagSize;
 }
