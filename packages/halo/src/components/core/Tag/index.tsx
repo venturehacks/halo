@@ -11,7 +11,7 @@ export type TagColor = 'blue' | 'gray' | 'green' | 'orange' | 'purple' | 'red';
 
 export type TagShape = 'pill' | 'rectangle';
 
-export type TagSize = 'sm' | 'md';
+export type TagSize = '2xs' | 'xs' | 'sm' | 'md';
 
 export interface TagProps {
   /**
@@ -55,13 +55,13 @@ function TagRaw({
   onClick,
   onClose,
   shape = 'rectangle',
-  size = 'md',
+  size = 'sm',
   label,
   ...rest
 }: TagProps & ForwardedRefProps<HTMLSpanElement>) {
   const componentClassnames = classNames(
     className,
-    'mr-2 last:mr-0',
+    'inline-flex flex-row items-center mr-2 last:mr-0',
     color === 'blue' && 'bg-blue-200 bg-opacity-77 text-blue-600',
     color === 'gray' && 'bg-slate-200 bg-opacity-77 text-slate-600',
     color === 'green' && 'bg-green-200 text-green-600',
@@ -70,18 +70,17 @@ function TagRaw({
     color === 'red' && 'bg-red-200 text-red-600',
     shape === 'pill' && 'rounded-full',
     shape === 'rectangle' && 'rounded-md',
-    size === 'sm' && 'text-xs min-w-4 px-2 py-1.5',
-    size === 'md' && 'text-md min-w-6 px-3 py-2',
+    size === '2xs' && 'gap-0.5 text-4xs h-4 px-1.5 py-1',
+    size === 'xs' && 'gap-1 text-2xs h-6 px-2 py-1',
+    size === 'sm' && 'gap-1.5 text-xs h-8 px-3 py-2',
+    size === 'md' && 'gap-2 text-md h-10 px-3 py-2',
   );
-
   const iconClassnames = classNames(
-    'inline-block',
-    label && 'mr-1',
-    size === 'sm' && 'w-2.5 h-2.5',
-    size === 'md' && 'w-3 h-3',
+    size === '2xs' && 'w-1.5 h-1.5',
+    size === 'xs' && 'w-2 h-2',
+    size === 'sm' && 'w-3 h-3',
+    size === 'md' && 'w-4 h-4',
   );
-
-  const closeIconClassnames = classNames(iconClassnames, 'ml-2 mb-0.5');
 
   const onClickProps = onClick
     ? {
@@ -101,12 +100,12 @@ function TagRaw({
       {...onClickProps}
       {...rest}
     >
-      {icon && <span className={iconClassnames}> {icon} </span>}
+      {icon && <span className={iconClassnames}>{icon}</span>}
       {label && label}
       {renderChildren && children}
       {onClose && (
         <CloseIcon
-          className={closeIconClassnames}
+          className={iconClassnames}
           onClick={e => {
             e.stopPropagation();
             onClose(e);
