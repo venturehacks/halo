@@ -9,7 +9,7 @@ describe('Tag', () => {
     expect(component.text()).toEqual('PHP');
   });
 
-  test('click callback on tag', () => {
+  test('tag callback', () => {
     const callback = jest.fn();
     const wrapper = mount(<Tag label="click me" onClick={callback} />);
 
@@ -18,13 +18,28 @@ describe('Tag', () => {
     expect(callback).toHaveBeenCalledTimes(1);
   });
 
-  test('click close button', () => {
-    const callback = jest.fn();
-    const wrapper = mount(<Tag label="I can be closed" onClose={callback} />);
+  test('close button callback', () => {
+    const tagCallback = jest.fn();
+    const closeCallback = jest.fn();
+    const wrapper = mount(
+      <Tag
+        label="I can be closed"
+        onClick={tagCallback}
+        onClose={closeCallback}
+      />,
+    );
 
-    expect(callback).toHaveBeenCalledTimes(0);
-    wrapper.find('svg').simulate('click');
-    expect(callback).toHaveBeenCalledTimes(1);
+    const closeButton = wrapper.find('svg');
+
+    // clicking on close button should not run parent onClick
+    closeButton.simulate('click');
+    expect(closeCallback).toHaveBeenCalledTimes(1);
+    expect(tagCallback).toHaveBeenCalledTimes(0);
+
+    // parent onClick should not trigger onClose
+    wrapper.simulate('click');
+    expect(closeCallback).toHaveBeenCalledTimes(0);
+    expect(tagCallback).toHaveBeenCalledTimes(1);
   });
 
   describe('snapshot', () => {

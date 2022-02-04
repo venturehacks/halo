@@ -107,8 +107,12 @@ function TagRaw({
       {onClose && (
         <CloseIcon
           className={closeIconClassnames}
-          onClick={onClose}
+          onClick={e => {
+            e.stopPropagation();
+            onClose(e);
+          }}
           role="button"
+          tabIndex={0}
         />
       )}
     </span>
