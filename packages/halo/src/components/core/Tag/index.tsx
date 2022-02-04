@@ -19,6 +19,9 @@ export interface TagProps {
    */
   children?: React.ReactNode;
   className?: string;
+  /**
+   * @default blue
+   */
   color?: TagColor;
   /**
    * icon displayed at start of tag
@@ -33,7 +36,13 @@ export interface TagProps {
    * displays a 'x' icon and adds event handler
    */
   onClose?: React.MouseEventHandler<HTMLSpanElement>;
+  /**
+   * @default rectangle
+   */
   shape?: TagShape;
+  /**
+   * @default md
+   */
   size?: TagSize;
 }
 
