@@ -62,11 +62,11 @@ function TagRaw({
   const componentClassnames = classNames(
     className,
     'inline-flex flex-row items-center mr-2 last:mr-0',
-    color === 'blue' && 'bg-blue-200 bg-opacity-77 text-blue-600',
-    color === 'gray' && 'bg-slate-200 bg-opacity-77 text-slate-600',
+    color === 'blue' && 'bg-blue-100 bg-opacity-75 text-dark-aaaa',
+    color === 'gray' && 'bg-slate-100 bg-opacity-75 text-dark-aaa',
     color === 'green' && 'bg-green-200 text-green-600',
-    color === 'orange' && 'bg-orange-200 bg-opacity-77 text-orange-600',
-    color === 'purple' && 'bg-purple-200 bg-opacity-77 text-purple-600',
+    color === 'orange' && 'bg-orange-200 bg-opacity-75 text-orange-600',
+    color === 'purple' && 'bg-purple-200 bg-opacity-75 text-purple-600',
     color === 'red' && 'bg-red-200 text-red-600',
     shape === 'pill' && 'rounded-full',
     shape === 'rectangle' && 'rounded-md',
@@ -105,7 +105,7 @@ function TagRaw({
       {renderChildren && children}
       {onClose && (
         <CloseIcon
-          className={iconClassnames}
+          className={classNames(iconClassnames, 'opacity-50')}
           onClick={e => {
             e.stopPropagation();
             onClose(e);
