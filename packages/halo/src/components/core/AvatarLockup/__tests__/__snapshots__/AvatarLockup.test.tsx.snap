@@ -5,16 +5,21 @@ exports[`Avatar snapshots orientation left [default] 1`] = `
   class="flex gap-2 text-left flex-row items-center gap-3"
 >
   <div
-    class="component md circle"
+    class="component order-1 md circle"
   >
     <img
+      alt="Avatar"
       class="avatar circle"
       height="48"
       src="https://avatars.githubusercontent.com/u/56262247"
       width="48"
     />
   </div>
-  Vishal
+  <div
+    class="order-2"
+  >
+    Vishal
+  </div>
 </div>
 `;
 
@@ -22,16 +27,21 @@ exports[`Avatar snapshots orientation right 1`] = `
 <div
   class="flex gap-2 text-left flex-row items-center gap-3"
 >
-  Vishal
   <div
-    class="component md circle"
+    class="component order-3 md circle"
   >
     <img
+      alt="Avatar"
       class="avatar circle"
       height="48"
       src="https://avatars.githubusercontent.com/u/56262247"
       width="48"
     />
+  </div>
+  <div
+    class="order-2"
+  >
+    Vishal
   </div>
 </div>
 `;
@@ -41,16 +51,21 @@ exports[`Avatar snapshots orientation top 1`] = `
   class="flex gap-2 text-left flex-col gap-3"
 >
   <div
-    class="component md circle"
+    class="component order-1 md circle"
   >
     <img
+      alt="Avatar"
       class="avatar circle"
       height="48"
       src="https://avatars.githubusercontent.com/u/56262247"
       width="48"
     />
   </div>
-  Vishal
+  <div
+    class="order-2"
+  >
+    Vishal
+  </div>
 </div>
 `;
 
@@ -59,16 +74,21 @@ exports[`Avatar snapshots size lg 1`] = `
   class="flex gap-2 text-left flex-row items-center gap-4"
 >
   <div
-    class="component lg circle"
+    class="component order-1 lg circle"
   >
     <img
+      alt="Avatar"
       class="avatar circle"
       height="72"
       src="https://avatars.githubusercontent.com/u/56262247"
       width="72"
     />
   </div>
-  Vishal
+  <div
+    class="order-2"
+  >
+    Vishal
+  </div>
 </div>
 `;
 
@@ -77,16 +97,21 @@ exports[`Avatar snapshots size md [default] 1`] = `
   class="flex gap-2 text-left flex-row items-center gap-3"
 >
   <div
-    class="component md circle"
+    class="component order-1 md circle"
   >
     <img
+      alt="Avatar"
       class="avatar circle"
       height="48"
       src="https://avatars.githubusercontent.com/u/56262247"
       width="48"
     />
   </div>
-  Vishal
+  <div
+    class="order-2"
+  >
+    Vishal
+  </div>
 </div>
 `;
 
@@ -95,15 +120,20 @@ exports[`Avatar snapshots size sm 1`] = `
   class="flex gap-2 text-left flex-row items-center gap-1"
 >
   <div
-    class="component sm circle"
+    class="component order-1 sm circle"
   >
     <img
+      alt="Avatar"
       class="avatar circle"
       height="32"
       src="https://avatars.githubusercontent.com/u/56262247"
       width="32"
     />
   </div>
-  Vishal
+  <div
+    class="order-2"
+  >
+    Vishal
+  </div>
 </div>
 `;
