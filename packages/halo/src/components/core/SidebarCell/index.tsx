@@ -13,17 +13,17 @@ export interface SidebarCellProps extends React.HTMLAttributes<HTMLDivElement> {
   children?: React.ReactNode;
   className?: string;
   /**
-   * Appears above title, extra small muted type.
+   * Appears above title, 2xs muted type.
    */
   header?: React.ReactNode;
   /**
-   * Active cell makes title medium, shows active dot on left of title.
+   * Active cell makes title medium, adds 'active' dot left of title.
    */
   isActive?: boolean;
   isStarred?: boolean;
   onClick: React.MouseEventHandler<HTMLDivElement>;
   /**
-   * Renders StarIcon button adjacent to title.
+   * Renders star button adjacent to title.
    */
   onStarClick?: React.MouseEventHandler<HTMLButtonElement>;
   title: string;
@@ -46,15 +46,16 @@ function SidebarCell({
       className={classNames(
         'text-sm',
         isActive && styles.active,
-        onStarClick && 'max-w-80',
+        onStarClick ? 'max-w-80' : 'max-w-full',
       )}
     >
-      <div className={classNames('truncate')}>{title}</div>
+      <div className="truncate">{title}</div>
     </div>
   );
 
   return (
     <div
+      aria-label={title}
       className={classNames(
         'flex flex-col justify-start content-start px-6 py-4 border-b border-slate-200 hover:bg-slate-300 rounded cursor-pointer',
         styles.component,
