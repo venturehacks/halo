@@ -1,0 +1,12 @@
+@import 'halo';
+
+.active {
+  position: relative;
+  font-weight: $weight-medium;
+
+  &::before {
+    content: '•'; // middot
+    position: absolute;
+    left: -tempo(2);
+  }
+}
