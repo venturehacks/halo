@@ -49,7 +49,6 @@ exports[`Dialog snapshot title + both buttons 1`] = `
   >
     <h4
       class="component text-lg font-medium"
-      colorscheme="dark"
     >
       Title
     </h4>
