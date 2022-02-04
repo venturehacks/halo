@@ -5,7 +5,6 @@ import {
   ForwardedRefProps,
   withForwardedRef,
 } from '../../../lib/withForwardedRef';
-import { Box } from '../../structure/Box';
 import { Avatar } from '../Avatar';
 
 export type AvatarLockupOrientation = 'left' | 'right' | 'top';
@@ -65,26 +64,29 @@ function AvatarLockupRaw({
     size === 'lg' && 'text-md font-normal',
   );
 
+  // using 'order-x' css to implement orientation
+  const contentOrdering = 'order-2';
+  const avatarOrdering = orientation === 'right' ? 'order-3' : 'order-1';
+
   // should either render the children OR title + byline, not both.
   const hasChildren = children && !byline && !title;
 
   const content = (
-    <>
+    <div className={contentOrdering}>
       {hasChildren && children}
       {!hasChildren && (
-        <Box>
+        <div>
           <div className={titleClassnames}>{title}</div>
-          <div className={bylineClassnames}>{byline}</div>
-        </Box>
+          {byline && <div className={bylineClassnames}>{byline}</div>}
+        </div>
       )}
-    </>
+    </div>
   );
 
   return (
     <div className={componentClassnames} {...rest}>
-      {orientation === 'right' && content}
-      <Avatar imageUrl={imageUrl} size={size} />
-      {orientation !== 'right' && content}
+      <Avatar className={avatarOrdering} imageUrl={imageUrl} size={size} />
+      {content}
     </div>
   );
 }
