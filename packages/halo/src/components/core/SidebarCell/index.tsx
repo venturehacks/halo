@@ -5,7 +5,7 @@ import { StarFillIcon, StarOutlineIcon } from '~/components/icons';
 
 import styles from './styles.module.scss';
 
-export interface SidebarCellProps {
+export interface SidebarCellProps extends React.HTMLAttributes<HTMLDivElement> {
   byline: string;
   /**
    * Arbitrary content that appears underneath title/byline.
@@ -39,6 +39,7 @@ function SidebarCell({
   isStarred,
   onStarClick,
   title,
+  ...divElementProps
 }: SidebarCellProps) {
   const titleLabel = (
     <div
@@ -63,6 +64,7 @@ function SidebarCell({
       onClick={onClick}
       role="menuitem"
       tabIndex={0}
+      {...divElementProps}
     >
       {header && <Bracket className="text-2xs text-dark-a">{header}</Bracket>}
 
