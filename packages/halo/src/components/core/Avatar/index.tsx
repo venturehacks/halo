@@ -72,7 +72,7 @@ function AvatarRaw({
       {...rest}
     >
       <img
-        alt={name && `Avatar for ${name}`}
+        alt={name ? `Avatar for ${name}` : 'Avatar'}
         className={classNames(styles.avatar, styles[shape])}
         height={IMAGE_SIZES[size]}
         src={imageUrl}
