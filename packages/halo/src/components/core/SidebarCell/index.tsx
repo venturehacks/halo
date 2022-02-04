@@ -37,12 +37,17 @@ function SidebarCell({
   onClick,
   isStarred,
   onStarClick,
-
   title,
 }: SidebarCellProps) {
   const titleLabel = (
-    <div className={classNames('text-sm', isActive && styles.active)}>
-      <span className="truncate">{title}</span>
+    <div
+      className={classNames(
+        'text-sm',
+        isActive && styles.active,
+        onStarClick && 'max-w-80',
+      )}
+    >
+      <div className={classNames('truncate')}>{title}</div>
     </div>
   );
 

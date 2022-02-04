@@ -7,6 +7,6 @@
   &::before {
     content: '•'; // middot
     position: absolute;
-    left: -tempo(2);
+    left: tempo(-2);
   }
 }
