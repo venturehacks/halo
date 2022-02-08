@@ -1,0 +1,216 @@
+---
+name: Tag
+menu: Core
+route: /core/tag
+---
+
+import { Props, Playground } from 'docz';
+import { Header } from '../Header';
+import { ChatBubbleIcon } from '../../icons';
+import { Box } from '../../structure/Box';
+import { Tag } from './'
+
+
+# Tag
+
+Can be used in lieu of a PillTag or Flair
+
+### Usage
+
+<Playground>
+  <div>
+    <Box margin={{ bottom: 4 }}>
+      <Header h5>2xs</Header>
+      <Tag
+        color="red"
+        size="sm"
+        label="Red Tag"
+        size="2xs"
+      />
+      <Tag
+        color="gray"
+        shape="pill"
+        size="sm"
+        label="Gray Pill Tag"
+        size="2xs"
+      />
+      <Tag
+        icon={<ChatBubbleIcon />}
+        shape="pill"
+        size="sm"
+        label="Blue Pill Tag with icon"
+        size="2xs"
+      />
+      <Tag
+        color="green"
+        onClose={() => {alert("close clicked!")}}
+        size="sm"
+        label="Green Tag with clickable close icon"
+        size="2xs"
+      />
+      <Tag
+        color="purple"
+        onClick={() => {alert("tag clicked!")}}
+        size="sm"
+        label="Clickable tag!"
+        size="2xs"
+      />
+      <Tag
+        color="orange"
+        icon={<ChatBubbleIcon />}
+        size="2xs"
+      />
+    </Box>
+
+    <Box margin={{ bottom: 4 }}>
+      <Header h5>xs</Header>
+      <Tag
+        color="red"
+        size="sm"
+        label="Red Tag"
+        size="xs"
+      />
+      <Tag
+        color="gray"
+        shape="pill"
+        size="sm"
+        label="Gray Pill Tag"
+        size="xs"
+      />
+      <Tag
+        icon={<ChatBubbleIcon />}
+        shape="pill"
+        size="sm"
+        label="Blue Pill Tag with icon"
+        size="xs"
+      />
+      <Tag
+        color="green"
+        onClose={() => {alert("close clicked!")}}
+        size="sm"
+        label="Green Tag with clickable close icon"
+        size="xs"
+      />
+      <Tag
+        color="purple"
+        onClick={() => {alert("tag clicked!")}}
+        size="sm"
+        label="Clickable tag!"
+        size="xs"
+      />
+      <Tag
+        color="orange"
+        icon={<ChatBubbleIcon />}
+        size="xs"
+      />
+    </Box>
+
+    <Box margin={{ bottom: 4 }}>
+      <Header h5>sm</Header>
+      <Tag
+        color="red"
+        label="Red Tag"
+      />
+      <Tag
+        color="gray"
+        shape="pill"
+        label="Gray Pill Tag"
+      />
+      <Tag
+        icon={<ChatBubbleIcon />}
+        shape="pill"
+        label="Blue Pill Tag with icon"
+      />
+      <Tag
+        color="green"
+        onClose={() => {alert("close clicked!")}}
+        label="Green Tag with clickable close icon"
+      />
+      <Tag
+        color="purple"
+        onClick={() => {alert("tag clicked!")}}
+        label="Clickable tag!"
+      />
+      <Tag
+        color="orange"
+        icon={<ChatBubbleIcon />}
+      />
+    </Box>
+
+    <Box margin={{ bottom: 4 }}>
+      <Header h5>md</Header>
+      <Tag
+        color="red"
+        label="Red Tag"
+        size="md"
+      />
+      <Tag
+        color="gray"
+        shape="pill"
+        label="Gray Pill Tag"
+        size="md"
+      />
+      <Tag
+        icon={<ChatBubbleIcon />}
+        shape="pill"
+        label="Blue Pill Tag with icon"
+        size="md"
+      />
+      <Tag
+        color="green"
+        onClose={() => {alert("close clicked!")}}
+        label="Green Tag with clickable close icon"
+        size="md"
+      />
+      <Tag
+        color="purple"
+        onClick={() => {alert("tag clicked!")}}
+        label="Clickable tag!"
+        size="md"
+      />
+      <Tag
+        color="orange"
+        icon={<ChatBubbleIcon />}
+        size="md"
+      />
+    </Box>
+
+    <Box margin={{ bottom: 4 }}>
+      <Header h5>Custom Content</Header>
+      <Tag onClose={() => {alert("close clicked!")}} size="sm" >
+        <span className="text-xs">Software Engineer</span>
+        <span className="text-2xs font-light">Primary</span>
+      </Tag>
+      <Tag
+        onClose={() => {alert("close clicked!")}}
+        onClick={() => {alert("tag clicked!")}}
+        color="gray"
+        shape="pill"
+        size="md"
+      >
+        <span className="text-sm text-dark-aaa">Software Engineer</span>
+        <span className="text-xs text-dark-aaa font-light">Primary</span>
+      </Tag>
+    </Box>
+  </div>
+</Playground>
+
+### Exports
+
+```ts
+type TagColor =
+  | 'blue'
+  | 'gray'
+  | 'green'
+  | 'orange'
+  | 'purple'
+  | 'red';
+
+type TagShape = 'pill' | 'rectangle';
+
+type TagSize = '2xs' | 'xs' | 'sm' | 'md';
+```
+
+### Props
+
+<Props of={Tag} />

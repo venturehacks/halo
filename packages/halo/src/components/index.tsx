@@ -12,6 +12,7 @@ export * from './core/LoadingIndicator';
 export * from './core/Paragraph';
 export * from './core/PillTag';
 export * from './core/Span';
+export * from './core/Tag';
 export * from './core/Tooltip';
 // structure
 export * from './structure/Box';
