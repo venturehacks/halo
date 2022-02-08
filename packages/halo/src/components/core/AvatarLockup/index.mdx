@@ -1,0 +1,75 @@
+---
+name: AvatarLockup
+menu: Core
+route: /core/avatar-lockup
+---
+
+import { Props, Playground } from 'docz';
+import { AvatarLockup } from './';
+
+# AvatarLockup
+
+### Usage
+
+<Playground>
+  <div>
+    <h4> Small </h4>
+    <AvatarLockup
+      imageUrl="https://avatars.githubusercontent.com/u/56262247"
+      size="sm"
+      title="Vishal Jeet"
+    />
+
+    <h4> Small (with byline) </h4>
+    <AvatarLockup
+      imageUrl="https://avatars.githubusercontent.com/u/56262247"
+      size="sm"
+      title="Vishal Jeet"
+      byline="AngelList"
+    />
+
+    <h4> Medium </h4>
+    <AvatarLockup
+      imageUrl="https://avatars.githubusercontent.com/u/56262247"
+      title="Vishal Jeet"
+      byline="AngelList"
+    />
+
+    <h4> Medium (avatar to the right) </h4>
+    <AvatarLockup
+      imageUrl="https://avatars.githubusercontent.com/u/56262247"
+      orientation="right"
+      title="Vishal Jeet"
+      byline="AngelList"
+    />
+
+    <h4> Medium (avatar on top) </h4>
+    <AvatarLockup
+      imageUrl="https://avatars.githubusercontent.com/u/56262247"
+      orientation="top"
+      title="Vishal Jeet"
+      byline="AngelList"
+    />
+
+    <h4> Large (with children)</h4>
+    <AvatarLockup size="lg" imageUrl="https://avatars.githubusercontent.com/u/56262247" >
+      <div>
+        <p className="font-bold">Vishal Jeet</p>
+        <p className="text-sm font-normal">10 years of exp · New York City · Remote Only</p>
+        <p className="text-xs text-dark-aa font-light">May require a US work visa</p>
+      </div>
+    </AvatarLockup>
+  </div>
+</Playground>
+
+### Exports
+
+```ts
+type AvatarLockupOrientation = 'left' | 'right' | 'top';
+
+type AvatarLockupSize = 'sm' | 'md' | 'lg';
+```
+
+### Props
+
+<Props of={AvatarLockup} />

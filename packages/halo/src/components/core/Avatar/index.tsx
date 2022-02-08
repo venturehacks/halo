@@ -26,7 +26,7 @@ export interface AvatarProps {
   badgeShape?: BadgeShape;
   className?: string;
   imageUrl: string;
-  name: string;
+  name?: string;
   shape?: AvatarShape;
   size: AvatarSize;
   tooltip?: string;
@@ -72,7 +72,7 @@ function AvatarRaw({
       {...rest}
     >
       <img
-        alt={`Avatar for ${name}`}
+        alt={name ? `Avatar for ${name}` : 'Avatar'}
         className={classNames(styles.avatar, styles[shape])}
         height={IMAGE_SIZES[size]}
         src={imageUrl}

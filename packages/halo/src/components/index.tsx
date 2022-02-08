@@ -1,6 +1,7 @@
 // core
 export * from './core/Attribute';
 export * from './core/Avatar';
+export * from './core/AvatarLockup';
 export * from './core/Badge';
 export * from './core/Banner';
 export * from './core/Button';
