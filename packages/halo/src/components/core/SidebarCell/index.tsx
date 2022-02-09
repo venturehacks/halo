@@ -53,6 +53,14 @@ function SidebarCell({
     </div>
   );
 
+  const onClickProps = onClick
+    ? {
+        onClick,
+        role: 'menuitem',
+        tabIndex: 0,
+      }
+    : {};
+
   return (
     <div
       aria-label={title}
@@ -62,9 +70,7 @@ function SidebarCell({
         className,
       )}
       data-test="SidebarCell"
-      onClick={onClick}
-      role="menuitem"
-      tabIndex={0}
+      {...onClickProps}
       {...divElementProps}
     >
       {header && <Bracket className="text-2xs text-dark-a">{header}</Bracket>}
