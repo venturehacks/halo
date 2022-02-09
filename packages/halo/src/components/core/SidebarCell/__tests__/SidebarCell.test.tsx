@@ -1,19 +1,19 @@
 import { mount, render, shallow } from 'enzyme';
 import React from 'react';
 
-import { SidebarCell } from '../index';
+import { SidebarCell, SidebarCellProps } from '../index';
 
-const basicProps = {
+const basicProps: SidebarCellProps = {
   byline: 'California, Utah, Colorado, Remote',
-  isActive: true,
-  onClick: () => alert('onClick'),
+  isSelected: true,
   title: 'Account Executive',
 };
 
-const completeProps = {
+const completeProps: SidebarCellProps = {
   ...basicProps,
   header: 'Last edit: 7 days ago',
   isStarred: true,
+  onClick: () => alert('onClick'),
   onStarClick: () => alert('onStarClick'),
 };
 
@@ -78,7 +78,7 @@ describe('SidebarCell', () => {
 
   describe('snapshot', () => {
     test('active', () => {
-      const component = render(<SidebarCell {...basicProps} isActive />);
+      const component = render(<SidebarCell {...basicProps} isSelected />);
       expect(component).toMatchSnapshot();
     });
     test('starred', () => {

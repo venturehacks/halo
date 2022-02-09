@@ -17,11 +17,11 @@ export interface SidebarCellProps extends React.HTMLAttributes<HTMLDivElement> {
    */
   header?: React.ReactNode;
   /**
-   * Active cell makes title medium, adds 'active' dot left of title.
+   * Selected cell makes title medium, adds 'selected' dot left of title.
    */
-  isActive?: boolean;
+  isSelected?: boolean;
   isStarred?: boolean;
-  onClick: React.MouseEventHandler<HTMLDivElement>;
+  onClick?: React.MouseEventHandler<HTMLDivElement>;
   /**
    * Renders star button adjacent to title.
    */
@@ -30,7 +30,7 @@ export interface SidebarCellProps extends React.HTMLAttributes<HTMLDivElement> {
 }
 
 function SidebarCell({
-  isActive,
+  isSelected,
   byline,
   children,
   className,
@@ -45,7 +45,7 @@ function SidebarCell({
     <div
       className={classNames(
         'text-sm',
-        isActive && styles.active,
+        isSelected && styles.selected,
         onStarClick ? 'max-w-80' : 'max-w-full',
       )}
     >
