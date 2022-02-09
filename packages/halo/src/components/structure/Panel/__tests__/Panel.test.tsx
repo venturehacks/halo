@@ -12,10 +12,11 @@ describe('Panel', () => {
   test('title', () => {
     const component = render(
       <Panel className="gap-10" title="Title">
-        className
+        Content
       </Panel>,
     );
-    expect(component.hasClass('gap-10')).toBeTruthy();
+    expect(component.text()).toContain('Title');
+    expect(component.text()).toContain('Content');
   });
 
   test('className', () => {
@@ -23,7 +24,7 @@ describe('Panel', () => {
     expect(component.hasClass('gap-10')).toBeTruthy();
   });
 
-  test('negativeSpace', () => {
+  test('negativeSpace sets appropriate padding', () => {
     const component = render(
       <Panel negativeSpace="sm">Small negative space</Panel>,
     );
