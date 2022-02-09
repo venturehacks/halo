@@ -2,7 +2,7 @@
 
 exports[`InterfaceHeader snapshot micro 1`] = `
 <header
-  class="text-xs text-dark-aa font-normal"
+  class="text-xs text-dark-aa font-medium antialiased"
 >
   Ideal next opportunity
 </header>
@@ -10,7 +10,7 @@ exports[`InterfaceHeader snapshot micro 1`] = `
 
 exports[`InterfaceHeader snapshot page 1`] = `
 <header
-  class="text-xl text-slate-800 font-normal"
+  class="text-xl text-slate-800 font-medium antialiased"
 >
   General Settings
 </header>
@@ -18,7 +18,7 @@ exports[`InterfaceHeader snapshot page 1`] = `
 
 exports[`InterfaceHeader snapshot panel 1`] = `
 <header
-  class="text-lg text-dark-aaa font-normal"
+  class="text-lg text-dark-aaa font-medium antialiased"
 >
   Unbiased Sourcing
 </header>
@@ -26,7 +26,7 @@ exports[`InterfaceHeader snapshot panel 1`] = `
 
 exports[`InterfaceHeader snapshot section 1`] = `
 <header
-  class="text-md text-dark-aaa font-normal"
+  class="text-md text-dark-aaa font-medium antialiased"
 >
   Diversity
 </header>
