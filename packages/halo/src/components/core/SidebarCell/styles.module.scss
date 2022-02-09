@@ -4,6 +4,14 @@
   &:last-child {
     border: 0;
   }
+
+  // do not underline text when ancestor is anchor <a>
+  a:link &,
+  a:hover &,
+  a:active &,
+  a:focus & {
+    text-decoration: none;
+  }
 }
 
 .selected {
