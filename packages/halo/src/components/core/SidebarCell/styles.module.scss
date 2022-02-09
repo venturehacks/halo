@@ -1,0 +1,26 @@
+@import 'halo';
+
+.component {
+  &:last-child {
+    border: 0;
+  }
+
+  // do not underline text when ancestor is anchor <a>
+  a:link &,
+  a:hover &,
+  a:active &,
+  a:focus & {
+    text-decoration: none;
+  }
+}
+
+.selected {
+  position: relative;
+  font-weight: $weight-medium;
+
+  &::before {
+    content: '•'; // middot
+    position: absolute;
+    left: tempo(-2);
+  }
+}

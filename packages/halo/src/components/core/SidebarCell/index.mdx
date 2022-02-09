@@ -1,0 +1,54 @@
+---
+name: SidebarCell
+menu: Core
+route: /core/sidebar-cell
+---
+
+import { Props, Playground } from 'docz';
+import { Header } from '../Header';
+import { SidebarCell } from './';
+
+# SidebarCell
+
+Common pattern throughout Recruit products. Cell supports fixed title, byline, and arbitrary slots for header and chin (JSX children).
+
+### Usage
+
+<Playground>
+  <div className="max-w-xs bg-blue-100">
+    <SidebarCell
+      title="Account Executive"
+      byline="California, Utah, Colorado, Remote"
+      header="Last edit: 7 days ago"
+      onClick={() => alert('onClick')}
+      onStarClick={() => alert('onStarClick')}
+      isActive
+    />
+    <SidebarCell
+      title="Head of Product"
+      byline="Europe, United States, Remote"
+      header="Last edit: 1 month ago"
+      onClick={() => alert('onClick')}
+      onStarClick={() => alert('onStarClick')}
+      isStarred
+    />
+    <SidebarCell
+      title="Strategic Project Manager"
+      byline="United States, Remote"
+      header="Last edit: 2 days ago"
+      onClick={() => alert('onClick')}
+      onStarClick={() => alert('onStarClick')}
+    />
+    <SidebarCell
+      title="Super Long Copywriter Head of Overflow"
+      byline="United States, Remote"
+      header="Last edit: 1 year ago"
+      onClick={() => alert('onClick')}
+      onStarClick={() => alert('onStarClick')}
+    />
+  </div>
+</Playground>
+
+### Props
+
+<Props of={SidebarCell} />
