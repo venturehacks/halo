@@ -21,7 +21,7 @@ exports[`Panel snapshot title 1`] = `
   class="flex flex-col border-t border-slate-100 rounded shadow-md bg-white max-w-3xl p-8 pt-6"
 >
   <header
-    class="text-lg text-dark-aaa font-medium antialiased mb-4"
+    class="text-dark-aaaa font-medium antialiased text-lg mb-4"
   >
     General Settings
   </header>
