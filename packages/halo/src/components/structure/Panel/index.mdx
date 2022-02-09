@@ -1,0 +1,42 @@
+---
+name: Panel
+menu: Structure
+route: /structure/panel
+---
+
+import { Props, Playground } from 'docz';
+import { Bracket } from '../Bracket';
+import { AvatarLockup } from '../../core/AvatarLockup';
+import { Button } from '../../core/Button';
+import { Panel } from './';
+
+# Panel
+
+Simple flex column container pattern with negative space preset.
+
+### Usage
+
+<Playground>
+  <div className="max-w-lg">
+    <Panel title="Account Contacts" className="gap-6">
+      <Bracket>
+        <AvatarLockup
+          imageUrl="https://avatars1.githubusercontent.com/u/194885"
+          title="Drew Lustro"
+        />
+        <Button variant="gray">Edit</Button>
+      </Bracket>
+      <Bracket>
+        <AvatarLockup
+          imageUrl="https://avatars1.githubusercontent.com/u/56262247"
+          title="Vishal Jeet"
+        />
+        <Button variant="gray">Edit</Button>
+      </Bracket>
+    </Panel>
+  </div>
+</Playground>
+
+### Props
+
+<Props of={Panel} />

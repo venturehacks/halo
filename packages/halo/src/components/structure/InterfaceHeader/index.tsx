@@ -66,7 +66,8 @@ function InterfaceHeaderRaw({
         (panel || level === 'panel') && 'text-lg text-dark-aaa',
         (section || level === 'section') && 'text-md text-dark-aaa',
         (micro || level === 'micro') && 'text-xs text-dark-aa',
-        'font-normal',
+        'font-medium',
+        'antialiased',
         flow && 'mb-4',
         className,
       )}

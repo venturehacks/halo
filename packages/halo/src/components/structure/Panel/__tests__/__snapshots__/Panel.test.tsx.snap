@@ -1,0 +1,30 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Panel snapshot fully loaded props 1`] = `
+<div
+  class="flex flex-col border-t border-slate-100 rounded shadow-md bg-white max-w-3xl p-6 pt-4 mb-4 gap-4"
+>
+  Fully loaded props
+</div>
+`;
+
+exports[`Panel snapshot smoke 1`] = `
+<div
+  class="flex flex-col border-t border-slate-100 rounded shadow-md bg-white max-w-3xl p-8 pt-6"
+>
+  Content
+</div>
+`;
+
+exports[`Panel snapshot title 1`] = `
+<div
+  class="flex flex-col border-t border-slate-100 rounded shadow-md bg-white max-w-3xl p-8 pt-6"
+>
+  <header
+    class="text-lg text-dark-aaa font-medium antialiased mb-4"
+  >
+    General Settings
+  </header>
+  Content
+</div>
+`;

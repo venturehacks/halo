@@ -45,7 +45,7 @@ function AvatarLockupRaw({
 }: AvatarLockupProps & ForwardedRefProps<HTMLDivElement>) {
   const componentClassnames = classNames(
     className,
-    'flex',
+    'flex antialiased',
     (orientation === 'left' || orientation === 'right') &&
       'flex-row items-center',
     orientation === 'top' && 'flex-col',

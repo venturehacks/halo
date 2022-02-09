@@ -21,6 +21,7 @@ export * from './structure/Bracket';
 export * from './structure/Cell';
 export * from './structure/Grid';
 export * from './structure/InterfaceHeader';
+export * from './structure/Panel';
 // form
 export * from './form/FieldErrorMessage';
 export * from './form/Label';

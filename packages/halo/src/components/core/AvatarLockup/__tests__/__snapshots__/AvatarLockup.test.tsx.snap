@@ -2,7 +2,7 @@
 
 exports[`Avatar snapshots orientation left [default] 1`] = `
 <div
-  class="flex flex-row items-center gap-3"
+  class="flex antialiased flex-row items-center gap-3"
 >
   <div
     class="component order-1 md circle"
@@ -25,7 +25,7 @@ exports[`Avatar snapshots orientation left [default] 1`] = `
 
 exports[`Avatar snapshots orientation right 1`] = `
 <div
-  class="flex flex-row items-center gap-3"
+  class="flex antialiased flex-row items-center gap-3"
 >
   <div
     class="component order-3 md circle"
@@ -48,7 +48,7 @@ exports[`Avatar snapshots orientation right 1`] = `
 
 exports[`Avatar snapshots orientation top 1`] = `
 <div
-  class="flex flex-col gap-3"
+  class="flex antialiased flex-col gap-3"
 >
   <div
     class="component order-1 md circle"
@@ -71,7 +71,7 @@ exports[`Avatar snapshots orientation top 1`] = `
 
 exports[`Avatar snapshots size lg 1`] = `
 <div
-  class="flex flex-row items-center gap-4"
+  class="flex antialiased flex-row items-center gap-4"
 >
   <div
     class="component order-1 lg circle"
@@ -94,7 +94,7 @@ exports[`Avatar snapshots size lg 1`] = `
 
 exports[`Avatar snapshots size md [default] 1`] = `
 <div
-  class="flex flex-row items-center gap-3"
+  class="flex antialiased flex-row items-center gap-3"
 >
   <div
     class="component order-1 md circle"
@@ -117,7 +117,7 @@ exports[`Avatar snapshots size md [default] 1`] = `
 
 exports[`Avatar snapshots size sm 1`] = `
 <div
-  class="flex flex-row items-center gap-1"
+  class="flex antialiased flex-row items-center gap-1"
 >
   <div
     class="component order-1 sm circle"
