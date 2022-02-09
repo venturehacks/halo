@@ -44,7 +44,7 @@ function Panel({
       {...divElementProps}
     >
       {title && (
-        <InterfaceHeader title={title} flow={!hasGapClassName} section />
+        <InterfaceHeader flow={!hasGapClassName} title={title} section />
       )}
       {children}
     </div>
