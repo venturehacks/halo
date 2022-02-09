@@ -6,16 +6,19 @@ import { InterfaceHeader } from '../index';
 describe('InterfaceHeader', () => {
   test('smoke', () => {
     const component = render(
-      <InterfaceHeader page>General Settings</InterfaceHeader>,
+      <InterfaceHeader
+        byline="Customize your stuff!"
+        title="General Settings"
+        page
+      />,
     );
     expect(component.text()).toContain('General Settings');
+    expect(component.text()).toContain('Customize your stuff!');
   });
 
   test('className', () => {
     const component = render(
-      <InterfaceHeader className="mb-10" page>
-        General Settings
-      </InterfaceHeader>,
+      <InterfaceHeader className="mb-10" title="General Settings" page />,
     );
     expect(component.hasClass('mb-10')).toBeTruthy();
   });
@@ -23,44 +26,52 @@ describe('InterfaceHeader', () => {
   describe('lacking hierarhcy', () => {
     test('throws exception ', () => {
       expect(() =>
-        render(
-          <InterfaceHeader>This should throw an exception</InterfaceHeader>,
-        ),
+        render(<InterfaceHeader title="This should throw an exception" />),
       ).toThrow();
     });
   });
 
   describe('snapshot', () => {
-    test('page', () => {
+    test('byline', () => {
       const component = render(
-        <InterfaceHeader page>General Settings</InterfaceHeader>,
+        <InterfaceHeader byline="Byline" title="Title" page />,
       );
 
       expect(component).toMatchSnapshot();
     });
 
-    test('panel', () => {
-      const component = render(
-        <InterfaceHeader panel>Unbiased Sourcing</InterfaceHeader>,
-      );
+    describe('hierarchy', () => {
+      test('page', () => {
+        const component = render(
+          <InterfaceHeader title="General Settings" page />,
+        );
 
-      expect(component).toMatchSnapshot();
-    });
+        expect(component).toMatchSnapshot();
+      });
 
-    test('section', () => {
-      const component = render(
-        <InterfaceHeader section>Diversity</InterfaceHeader>,
-      );
+      test('section', () => {
+        const component = render(
+          <InterfaceHeader title="Unbiased Sourcing" section />,
+        );
 
-      expect(component).toMatchSnapshot();
-    });
+        expect(component).toMatchSnapshot();
+      });
 
-    test('micro', () => {
-      const component = render(
-        <InterfaceHeader micro>Ideal next opportunity</InterfaceHeader>,
-      );
+      test('subdivision', () => {
+        const component = render(
+          <InterfaceHeader title="Diversity" subdivision />,
+        );
 
-      expect(component).toMatchSnapshot();
+        expect(component).toMatchSnapshot();
+      });
+
+      test('mini', () => {
+        const component = render(
+          <InterfaceHeader title="Ideal next opportunity" mini />,
+        );
+
+        expect(component).toMatchSnapshot();
+      });
     });
   });
 });

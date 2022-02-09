@@ -13,23 +13,34 @@ Divides application sections into a uniform hierarchy. This component is deliber
 
 Compare to [Header](/core/header), which is appropriate for longform body copy.
 
-
 ### Usage
 
 <Playground>
-  <InterfaceHeader page>Page header</InterfaceHeader>
+  <InterfaceHeader title="Page" byline="Connect to a payroll partner" page />
 </Playground>
 
 <Playground>
-  <InterfaceHeader panel>Panel header</InterfaceHeader>
+  <InterfaceHeader
+    title="Section"
+    byline="Create a profile, post jobs, find candidates."
+    section
+  />
 </Playground>
 
 <Playground>
-  <InterfaceHeader section>Section header</InterfaceHeader>
+  <InterfaceHeader
+    title="Subdivision"
+    byline="Email and notification preferences"
+    subdivision
+  />
 </Playground>
 
 <Playground>
-  <InterfaceHeader micro>Micro header</InterfaceHeader>
+  <InterfaceHeader
+    title="Mini"
+    byline="Maecenas sed diam eget risus varius"
+    mini
+  />
 </Playground>
 
 ### Props
