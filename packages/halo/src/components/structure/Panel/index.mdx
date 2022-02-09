@@ -5,7 +5,6 @@ route: /structure/panel
 ---
 
 import { Props, Playground } from 'docz';
-import { InterfaceHeader } from '../InterfaceHeader';
 import { Bracket } from '../Bracket';
 import { AvatarLockup } from '../../core/AvatarLockup';
 import { Button } from '../../core/Button';
@@ -19,8 +18,7 @@ Simple flex column container pattern with negative space preset.
 
 <Playground>
   <div className="max-w-lg">
-    <Panel className="gap-8">
-      <InterfaceHeader panel>Account Contacts</InterfaceHeader>
+    <Panel title="Account Contacts" className="gap-6">
       <Bracket>
         <AvatarLockup
           imageUrl="https://avatars1.githubusercontent.com/u/194885"

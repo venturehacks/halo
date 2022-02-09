@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
+import { InterfaceHeader } from '~/components';
 
 export interface PanelProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;
@@ -14,6 +15,10 @@ export interface PanelProps extends React.HTMLAttributes<HTMLDivElement> {
    * @default md
    */
   negativeSpace?: 'sm' | 'md';
+  /**
+   * Panel title. If you need full visual control, omit title and just use children.
+   */
+  title?: string;
 }
 
 function Panel({
@@ -21,8 +26,11 @@ function Panel({
   children,
   className,
   negativeSpace = 'md',
+  title,
   ...divElementProps
 }: PanelProps) {
+  const hasGapClassName = className?.includes('gap-');
+
   return (
     <div
       className={classNames(
@@ -35,6 +43,11 @@ function Panel({
       )}
       {...divElementProps}
     >
+      {title && (
+        <InterfaceHeader flow={!hasGapClassName} panel>
+          {title}
+        </InterfaceHeader>
+      )}
       {children}
     </div>
   );

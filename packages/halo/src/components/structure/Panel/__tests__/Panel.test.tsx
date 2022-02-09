@@ -5,8 +5,17 @@ import { Panel } from '../index';
 
 describe('Panel', () => {
   test('smoke', () => {
-    const component = render(<Panel>General Settings</Panel>);
-    expect(component.text()).toContain('General Settings');
+    const component = render(<Panel>Content</Panel>);
+    expect(component.text()).toContain('Content');
+  });
+
+  test('title', () => {
+    const component = render(
+      <Panel className="gap-10" title="Title">
+        className
+      </Panel>,
+    );
+    expect(component.hasClass('gap-10')).toBeTruthy();
   });
 
   test('className', () => {
@@ -29,7 +38,13 @@ describe('Panel', () => {
 
   describe('snapshot', () => {
     test('smoke', () => {
-      const component = render(<Panel>General Settings</Panel>);
+      const component = render(<Panel>Content</Panel>);
+
+      expect(component).toMatchSnapshot();
+    });
+
+    test('title', () => {
+      const component = render(<Panel title="General Settings">Content</Panel>);
 
       expect(component).toMatchSnapshot();
     });
