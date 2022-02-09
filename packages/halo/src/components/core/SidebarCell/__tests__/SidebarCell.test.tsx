@@ -81,8 +81,14 @@ describe('SidebarCell', () => {
       const component = render(<SidebarCell {...basicProps} isSelected />);
       expect(component).toMatchSnapshot();
     });
+
     test('starred', () => {
       const component = render(<SidebarCell {...basicProps} isStarred />);
+      expect(component).toMatchSnapshot();
+    });
+
+    test('accessibility attributes from onClick', () => {
+      const component = render(<SidebarCell {...completeProps} />);
       expect(component).toMatchSnapshot();
     });
 
