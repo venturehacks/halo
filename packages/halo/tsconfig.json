@@ -24,6 +24,8 @@
     "*.js",
     "src/**/*.tsx",
     "src/**/*.ts",
+    "support/**/*.ts",
+    "support/**/*.js", "support/icon-documentation-generate.tsx",
   ],
   "exclude": [
     "jest.dev.js",
@@ -35,5 +37,10 @@
     ".cache/**/*",
     "public/**/*",
     "src/gatsby-theme-docz/**/*",
-  ]
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs"
+    }
+  }
 }
