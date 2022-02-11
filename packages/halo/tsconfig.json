@@ -24,7 +24,6 @@
     "*.js",
     "src/**/*.tsx",
     "src/**/*.ts",
-    "support/**/*.ts",
   ],
   "exclude": [
     "jest.dev.js",
@@ -39,7 +38,14 @@
   ],
   "ts-node": {
     "compilerOptions": {
-      "module": "commonjs"
-    }
+      "module": "commonjs",
+      "declaration": false,
+    },
+    "include": [
+      "*.js",
+      "src/**/*.tsx",
+      "src/**/*.ts",
+      "support/**/*.ts",
+    ],
   }
 }
