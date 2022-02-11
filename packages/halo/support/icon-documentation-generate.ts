@@ -1,36 +1,26 @@
 const fs = require('fs');
 const _ = require('lodash');
 
-const fileContent = fs.readFileSync(
-  `${__dirname}/../src/components/icons/index.tsx`,
-  'utf8',
-);
+const fileContent = fs.readFileSync(`${__dirname}/../src/components/icons/index.tsx`, 'utf8');
 
 console.log('File contents are:');
 console.log(fileContent);
 
 const iconNameRegex = /([A-Za-z0-9]+)Icon/gi;
-
 const matches = [...fileContent.matchAll(iconNameRegex)];
-
-console.log('matches: ', matches);
-
 const iconNames = _.uniq(matches.map(m => m[0])).sort();
 
-console.log('icon names');
+console.log('Icons found:')
 console.log(iconNames);
 
-const iconImport = `import { ${iconNames.join(', ')} } from './';`;
 
-const iconDocs = iconNames
-  .map(
-    icon =>
-      `<div className="flex flex-col items-center border rounded border-slate-300">
+const iconImport = `import { ${iconNames.join(', ')} } from './';`
+
+const iconDocs = iconNames.map(icon =>
+  `<div className="flex flex-col items-center border rounded border-slate-300">
   <div className="p-4 mb-2"><${icon} /></div>
   <span className="font-medium text-sm">${icon}</span>
-</div>`,
-  )
-  .join('\n');
+</div>`).join('\n')
 
 const documentation = `---
 name: Icons
@@ -47,11 +37,8 @@ ${iconImport}
   ${iconDocs}
 
 </div>
-`;
+`
 
-fs.writeFileSync(
-  `${__dirname}/../src/components/icons/index.mdx`,
-  documentation,
-);
+fs.writeFileSync(`${__dirname}/../src/components/icons/index.mdx`, documentation);
 
 console.log('✅ Generated icon mdx.');
