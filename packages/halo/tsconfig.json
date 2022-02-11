@@ -25,7 +25,6 @@
     "src/**/*.tsx",
     "src/**/*.ts",
     "support/**/*.ts",
-    "support/**/*.js", "support/icon-documentation-generate.tsx",
   ],
   "exclude": [
     "jest.dev.js",

@@ -12,6 +12,7 @@
   "scripts": {
     "clean": "rm -rf ./dist/*",
     "build": "tsc --emitDeclarationOnly && rollup -c rollup.config.js",
+    "icons": "ts-node support/icon-index-generate.ts",
     "size": "size-limit",
     "size:json": "size-limit --json >| datadog-size-limit.json",
     "test": "NODE_ENV=test BABEL_ENV=test jest --config jest.config.js --rootDir ../.. --maxWorkers=16",
