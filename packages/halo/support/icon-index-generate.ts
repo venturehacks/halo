@@ -1,9 +1,16 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable no-console */
 /**
+ * Halo Iconset Documentation Generator
+ *
  * Reads icon directory and generates two sources:
  * (1) Icon export index: central list of default export => named export
  * (2) Documentation MDX: visual grid of icons shown on Halo docs website
+ *
+ * Usage:
+ *
+ * yarn icons
+ *
  */
 
 const fs = require('fs');
