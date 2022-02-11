@@ -1,6 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
-import { InterfaceHeader } from '~/components';
+
+import { InterfaceHeader } from '../InterfaceHeader';
 
 export interface PanelProps extends React.HTMLAttributes<HTMLDivElement> {
   children: React.ReactNode;

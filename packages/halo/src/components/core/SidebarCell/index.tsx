@@ -1,7 +1,8 @@
 import classNames from 'classnames';
 import React from 'react';
-import { Bracket } from '~/components';
-import { StarOutlineIcon, StarSolidIcon } from '~/components/icons';
+
+import { StarOutlineIcon, StarSolidIcon } from '../../icons';
+import { Bracket } from '../../structure/Bracket';
 
 import styles from './styles.module.scss';
 
