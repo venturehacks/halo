@@ -7,7 +7,7 @@ route: /core/attentionIndicator
 import { Props, Playground } from 'docz';
 import { AttentionIndicator } from './'
 import { Box } from '../../structure/Box';
-import { ChatBubbleIcon, CloseIcon } from '../../icons';
+import { BookmarkOutlineIcon, CloseIcon } from '../../icons';
 import { Header } from '../Header'
 
 # AttentionIndicator
@@ -95,7 +95,7 @@ An attention badge that can be used to indicate a count or with an icon.
 
   <Header h4>Example Usage</Header>
   <div className="relative flex flex-col h-16 w-16 p-2">
-    <ChatBubbleIcon />
+    <BookmarkOutlineIcon />
     <div className="text-2xs w-12"> Messages </div>
     <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" count={10} />
   </div>
