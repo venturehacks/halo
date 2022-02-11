@@ -13,6 +13,7 @@ export { default as ChevronUpIcon } from './ChevronUpIcon.svg';
 export { default as CloseIcon } from './CloseIcon.svg';
 export { default as CompanyIcon } from './CompanyIcon.svg';
 export { default as FacebookIcon } from './FacebookIcon.svg';
+export { default as FacebookSolidIcon } from './FacebookSolidIcon.svg';
 export { default as GiftIcon } from './GiftIcon.svg';
 export { default as GlobeIcon } from './GlobeIcon.svg';
 export { default as InstagramIcon } from './InstagramIcon.svg';
