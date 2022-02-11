@@ -9,6 +9,8 @@
  *
  * Usage:
  *
+ * ts-node support/icon-index-generate.ts
+ * == or ==
  * yarn icons
  *
  */
