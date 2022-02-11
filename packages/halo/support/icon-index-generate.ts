@@ -66,4 +66,4 @@ ${iconImport}
 
 fs.writeFileSync(DOCUMENTATION_PATH, documentation);
 
-console.log('✅  Icons documentation mdx geneated.');
+console.log('✅  Icons documentation mdx generated.');
