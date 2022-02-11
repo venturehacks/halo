@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 import { Bracket } from '~/components';
-import { StarFillIcon, StarOutlineIcon } from '~/components/icons';
+import { StarOutlineIcon, StarSolidIcon } from '~/components/icons';
 
 import styles from './styles.module.scss';
 
@@ -88,7 +88,7 @@ function SidebarCell({
             }}
             role="switch"
           >
-            {isStarred ? <StarFillIcon /> : <StarOutlineIcon />}
+            {isStarred ? <StarSolidIcon /> : <StarOutlineIcon />}
           </button>
         </Bracket>
       ) : (

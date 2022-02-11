@@ -28,7 +28,7 @@ describe('SidebarCell', () => {
   test('complete', () => {
     const component = shallow(<SidebarCell {...completeProps} />);
     expect(component.text()).toEqual(
-      'Last edit: 7 days agoAccount Executive<StarFillIcon />California, Utah, Colorado, Remote',
+      'Last edit: 7 days agoAccount Executive<StarSolidIcon />California, Utah, Colorado, Remote',
     );
   });
 
@@ -37,7 +37,7 @@ describe('SidebarCell', () => {
       <SidebarCell {...completeProps}>Posted by: foobar</SidebarCell>,
     );
     expect(component.text()).toEqual(
-      'Last edit: 7 days agoAccount Executive<StarFillIcon />California, Utah, Colorado, RemotePosted by: foobar',
+      'Last edit: 7 days agoAccount Executive<StarSolidIcon />California, Utah, Colorado, RemotePosted by: foobar',
     );
   });
 
