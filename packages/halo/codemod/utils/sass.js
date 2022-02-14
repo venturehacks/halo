@@ -2,6 +2,7 @@ const fs = require('fs');
 const postcss = require('postcss');
 const { getTailwindUtils } = require('tailwind-mappings');
 
+const CONSOLE_RED = '\x1b[31m%s\x1b[0m';
 const TEMPO_VAL_PX = 8;
 
 function getTailwindPropertiesForClass(fileName, className) {
@@ -20,7 +21,7 @@ function getTailwindPropertiesForClass(fileName, className) {
   );
 
   if (matchingNodes.length === 0) {
-    console.log(`No matching nodes were found for the css class: ${className}`);
+    console.log(CONSOLE_RED, `COULD NOT FIND CSS FOR '.${className}'`);
     return;
   }
 
@@ -49,15 +50,11 @@ function getTailwindPropertiesForClass(fileName, className) {
       const tailwindVal = getTailwindUtils(transformedDecl);
 
       if (tailwindVal === '') {
-        console.log(
-          `COULD NOT TRANSFORM '${cssDeclarationToString(transformedDecl)}'`,
-        );
+        logTransformationError(transformedDecl);
       }
       return tailwindVal;
     } catch (error) {
-      console.log(
-        `COULD NOT TRANSFORM '${cssDeclarationToString(transformedDecl)}'`,
-      );
+      logTransformationError(transformedDecl);
       return '';
     }
   });
@@ -65,8 +62,11 @@ function getTailwindPropertiesForClass(fileName, className) {
   return tailwindClasses.filter(c => c !== '');
 }
 
-function cssDeclarationToString(declaration) {
-  return `${declaration.prop}: ${declaration.value}`;
+function logTransformationError(declaration) {
+  console.log(
+    CONSOLE_RED,
+    `COULD NOT TRANSFORM '${declaration.prop}: ${declaration.value}'`,
+  );
 }
 
 function extractCssDeclarations(classNode) {
@@ -75,18 +75,9 @@ function extractCssDeclarations(classNode) {
   }
 
   // TODO: how do we handle inner classes?
-
   // TODO: how do we deal with mixins?
 
   return classNode.nodes.filter(node => node.type === 'decl');
 }
-
-// const ruleNodes = nodes.filter(node => node.type === 'rule');
-// let selectors = ruleNodes.map(r => r.selector);
-// ruleNodes.forEach(ruleNode => {
-//   selectors = selectors.concat(extractCssSelectors(ruleNode.nodes));
-// });
-
-// return selectors;
 
 export { getTailwindPropertiesForClass };
