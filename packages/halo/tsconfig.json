@@ -35,5 +35,17 @@
     ".cache/**/*",
     "public/**/*",
     "src/gatsby-theme-docz/**/*",
-  ]
+  ],
+  "ts-node": {
+    "compilerOptions": {
+      "module": "commonjs",
+      "declaration": false,
+    },
+    "include": [
+      "*.js",
+      "src/**/*.tsx",
+      "src/**/*.ts",
+      "support/**/*.ts",
+    ],
+  }
 }

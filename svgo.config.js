@@ -20,6 +20,12 @@ module.exports = {
       },
     },
     {
+      name: 'convertColors',
+      params: {
+        currentColor: true,
+      },
+    },
+    {
       name: 'removeRasterImages',
     },
     {

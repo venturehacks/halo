@@ -13,7 +13,6 @@
   },
   "jsRules": {},
   "rules": {
-    "no-console": [true, "log"],
     "interface-name": [
       true,
       "never-prefix"
@@ -50,6 +49,8 @@
     ],
     "object-literal-sort-keys": false,
     "max-line-length": false,
+    "no-var-requires": false,
+    "no-console": false,
     "ordered-imports": [
       true,
       {
