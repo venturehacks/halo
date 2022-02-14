@@ -4,8 +4,7 @@ const { getTailwindUtils } = require('tailwind-mappings');
 
 const TEMPO_VAL_PX = 8;
 
-function getCssForClass(fileName, className) {
-  console.log(`Getting css code for: ${fileName}`);
+function getTailwindPropertiesForClass(fileName, className) {
   const parsedCss = postcss.parse(fs.readFileSync(fileName));
 
   const fileConstants = {};
@@ -48,14 +47,26 @@ function getCssForClass(fileName, className) {
         transformedDecl.value = `${pixelVal}px`;
       }
       const tailwindVal = getTailwindUtils(transformedDecl);
+
+      if (tailwindVal === '') {
+        console.log(
+          `COULD NOT TRANSFORM '${cssDeclarationToString(transformedDecl)}'`,
+        );
+      }
       return tailwindVal;
     } catch (error) {
-      console.log(`Error during transformation: ${error}`);
+      console.log(
+        `COULD NOT TRANSFORM '${cssDeclarationToString(transformedDecl)}'`,
+      );
       return '';
     }
   });
 
-  return tailwindClasses;
+  return tailwindClasses.filter(c => c !== '');
+}
+
+function cssDeclarationToString(declaration) {
+  return `${declaration.prop}: ${declaration.value}`;
 }
 
 function extractCssDeclarations(classNode) {
@@ -78,4 +89,4 @@ function extractCssDeclarations(classNode) {
 
 // return selectors;
 
-export { getCssForClass };
+export { getTailwindPropertiesForClass };

@@ -1,7 +1,7 @@
 const path = require('path');
 
 import { getCssClassnames, CSS_FILENAME } from '../codemod/utils/react';
-import { getCssForClass } from '../codemod/utils/sass';
+import { getTailwindPropertiesForClass } from '../codemod/utils/sass';
 
 export default (fileInfo, api) => {
   console.log(`Running codemod for file: ${fileInfo.path}`);
@@ -11,6 +11,20 @@ export default (fileInfo, api) => {
 
   const fileDirectory = path.dirname(fileInfo.path);
   const cssFilename = path.join(fileDirectory, CSS_FILENAME);
-  const cssData = getCssForClass(cssFilename, cssClasses[0]);
-  console.log(`Found css data: ${cssData}`);
+
+  const cssToTailwind = {};
+  cssClasses.forEach(className => {
+    console.log(`Transforming css for class: '.${className}'`);
+    const tailwindProps = getTailwindPropertiesForClass(cssFilename, className);
+    cssToTailwind[className] = tailwindProps;
+  });
+
+  console.log('---------------------------------------');
+  console.log('------- TAILWIND TRANSFOMATION --------');
+  console.log('---------------------------------------');
+  Object.keys(cssToTailwind).forEach(className => {
+    if (cssToTailwind[className]) {
+      console.log(`'.${className}' => "${cssToTailwind[className].join(' ')}"`);
+    }
+  });
 };
