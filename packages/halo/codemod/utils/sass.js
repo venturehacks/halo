@@ -6,9 +6,10 @@ const CONSOLE_RED = '\x1b[31m%s\x1b[0m';
 const TEMPO_VAL_PX = 8;
 
 function getTailwindPropertiesForClass(fileName, className) {
-  // TODO: need to remove all single line comments because parser cannot handle them
-
-  const parsedCss = postcss.parse(fs.readFileSync(fileName));
+  // need to remove all single line comments because parser cannot handle them
+  const cssSource = fs.readFileSync(fileName).toString();
+  const cssWithoutComments = cssSource.replace(/\/\/.*/, '');
+  const parsedCss = postcss.parse(cssWithoutComments);
 
   const fileConstants = {};
   parsedCss.nodes
