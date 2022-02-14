@@ -12,6 +12,8 @@ export default (fileInfo, api) => {
   const cssClasses = getCssClassnames(fileInfo.source, api.jscodeshift);
   console.log(CONSOLE_YELLOW, `Found css references for: ${cssClasses}`);
 
+  // TODO: dedupe classnames
+
   const fileDirectory = path.dirname(fileInfo.path);
   const cssFilename = path.join(fileDirectory, CSS_FILENAME);
 
