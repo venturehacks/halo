@@ -192,8 +192,5 @@
     "last 3 Android major versions",
     "last 3 ChromeAndroid major versions",
     "last 2 iOS major versions"
-  ],
-  "dependencies": {
-    "tailwind-mappings": "^1.5.6"
-  }
+  ]
 }
