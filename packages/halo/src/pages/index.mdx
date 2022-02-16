@@ -3,68 +3,46 @@ name: Welcome
 route: /
 ---
 
+import { Bracket } from '../components/structure/Bracket';
+
 # Halo
 
-Halo is our design system. It enables our small group of designers to design and ship faster by institutionalizing key decisions and providing an already established groundwork.
+<Bracket gap="6" className="max-w-2xl mb-8">
+  <div>
+    Halo is our design system. It enables product teams to ship rapidly by reducing decisions made during the development process.
+  </div>
+  <div className="flex-none">
+    <a target="_blank" href="https://buildkite.com/angellist/halo"><img src="https://badge.buildkite.com/71f435fbeaf326479fce6ce41959cf3c7376de8d29367666a7.svg?branch=master" /></a>
+
+    <a target="_blank" href="https://app.netlify.com/sites/halo-design-system/deploys"><img src="https://api.netlify.com/api/v1/badges/87d1d78b-b9dc-440b-ba5a-90f89afce587/deploy-status" /></a>
+  </div>
+</Bracket>
 
 &nbsp;
 
-<img
-  src="https://user-images.githubusercontent.com/194885/75487723-d21d6e80-5963-11ea-8126-035fdd131f94.jpg"
-  alt="Halo preview"
-  width="609"
-/>
-
-[![Build status](https://badge.buildkite.com/71f435fbeaf326479fce6ce41959cf3c7376de8d29367666a7.svg?branch=master)](https://buildkite.com/angellist/halo) [![Netlify Status](https://api.netlify.com/api/v1/badges/87d1d78b-b9dc-440b-ba5a-90f89afce587/deploy-status)](https://app.netlify.com/sites/halo-design-system/deploys)
-
-&nbsp;
-
-📝 **[Halo Feedback](https://venturehacks.quip.com/JP75A3GbNYua/Halo-Feedback)**
 
 &nbsp;
 
 ## Quickstart
 
-### Explore Halo
+### Explore
 
-View living documentation and browse code.
+Run living documentation, browse code.
 
 ```bash
 git clone git@github.com:venturehacks/halo.git
 cd halo
-yarn
-yarn run dev
+yarn install
+yarn dev
 ```
 
-### Install Halo in a project
+### Installation
 
-[Generate a Github personal access token](https://github.com/settings/tokens) so that your project can read this repository.
 
-Halo is built as a node module. In the future, Halo will be published as a private module so that we do not leak Github tokens.
 
-#### Add dependency
+#### CSS entry point
 
-```bash
-yarn add git+https://PERSONAL-ACCESS-TOKEN:x-oauth-basic@github.com/venturehacks/halo#stable
-```
-
-#### Supply access token
-
-Include your GitHub token so CircleCI can build the application.
-
-```json
-// package.json
-{
-  "private": true,
-  "dependencies": {
-    "halo": "git+https://PERSONAL-ACCESS-TOKEN:x-oauth-basic@github.com/venturehacks/halo#stable"
-  }
-}
-```
-
-#### Entry point CSS
-
-This distribution payload should only be included in your app _once_. It is necessary to prevent a flash of unstyled content.
+Halo offers one CSS entrypoint. Include it in your application _once_.
 
 ```scss
 // main.scss (or similar "layout" file that is only included one time)
@@ -74,7 +52,7 @@ This distribution payload should only be included in your app _once_. It is nece
 }
 ```
 
-### Using Halo
+### Usage
 
 #### React
 
@@ -136,50 +114,37 @@ return (
 | 2019 January   | infrastructure | Best-practice configs, introduce strict linting               |   ✅   |
 | 2018 November  | inception      | Project skeleton; built with TypeScript, React, Jest, webpack |   ✅   |
 
-&nbsp;
-
-### Design Releases
-
-This repo lags behind design; it's constantly "catching up" to the latest release of sketch files.
-
-Design maintains separate release notes and numeric versioning.
-
-- [Design: Halo Release Notes](https://venturehacks.quip.com/zb36AxAbZnBi/Halo-Design-Release-Notes)
-- [Design: Halo README](https://venturehacks.quip.com/zb36AxAbZnBi/Halo-Design-Release-Notes)
-- [Why we need a design system](https://venturehacks.quip.com/brjDAYTIUyqO/A-design-system-for-AngelList)
+<br />
 
 &nbsp;
 
-## Team
+## Active Team
 
 - **Engineering**
   - Drew Lustro
+  - Vishal Jeet
+- **Design**
+  - Cristian Valdes
+
+&nbsp;
+
+<br />
+
+## Past Contributions
+
+- **Engineering**
   - Tiffany Wu
   - Mike Dee
   - Max Lustig
-  - Lily Chen
 - **Design**
   - Andres Santanilla
   - Shane Zucker
   - Lily Chen
   - Stephen Varaday
-  - Adam Ruf
-  - Gearóid O’Rourke
-  - Chad Whitaker
-- **Technical Feedback**
-  - Thomas Hu
-  - Hans Arijanto
-  - Jordan Claassen
 
 &nbsp;
 
-## Special Thanks
-
-- Veselin Todorov
-- Korbin Hoffman
-- Aaron Vinson
-
-&nbsp;
+<br />
 
 <img
   src="https://user-images.githubusercontent.com/194885/54588593-b2a26580-49e0-11e9-99c2-8a702f69747a.gif"

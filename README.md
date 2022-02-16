@@ -1,6 +1,6 @@
 # Halo
 
-Halo is our design system. It enables our small group of designers to design and ship faster by institutionalizing key decisions and providing an already established groundwork.
+Halo is our design system. It enables product teams to ship rapidly by reducing decisions made during the development process.
 
 &nbsp;
 
