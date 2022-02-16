@@ -7,15 +7,6 @@
   max-width: grid-cell-width(10);
   min-height: grid-cell-width(5);
   border: 1px solid #f2f4f7;
-
-  &.contextInline {
-    box-shadow: inherit;
-  }
-
-  &.contextModal {
-    box-shadow: 0 -2px 10px 0 rgba(196, 207, 223, 0.33),
-      0 0 1px 0 rgba(0, 12, 32, 0.02), 4px 12px 20px 0 rgba(3, 17, 38, 0.11);
-  }
 }
 
 .title {

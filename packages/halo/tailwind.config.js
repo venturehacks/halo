@@ -153,7 +153,6 @@ module.exports = {
         '3xs': '5rem',
       },
     },
-
     fontSize: {
       '2xl': ['32px', '1.125'],
       '2xs': ['11px', '1.45'],
@@ -223,6 +222,17 @@ module.exports = {
 
       superwidescreen: '1800px',
       xxl: '1800px',
+    },
+
+    boxShadow: {
+      DEFAULT:
+        '0 2px 6px rgba(3, 17, 38, 0.1071), 0 0 1px rgba(0, 12, 32, 0.04)',
+      sm: '0 2px 6px rgba(3, 17, 38, 0.1071), 0 0 1px rgba(0, 12, 32, 0.04)',
+      md:
+        '2px 5px 8px rgba(3, 17, 38, 0.1071), 0 0 1px 0 rgba(0, 12, 32, 0.04)',
+      lg: '2px 8px 16px rgba(3, 17, 38, 0.1071), 0 0 1px rgba(0, 12, 32, 0.02)',
+      xl:
+        '4px 12px 20px rgba(3, 17, 38, 0.1071), 0 0 1px rgba(0, 12, 32, 0.02)',
     },
     zIndex: {
       hover: 2,
