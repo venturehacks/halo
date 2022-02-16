@@ -64,8 +64,23 @@
       "packages/docs/src": true,
       "packages/halo/[^t]*": true,
       "packages/halo/t[^a]*": true,
-      "!packages/halo/tailwind.config.js": true
-      // "**/public": true, // disabled so that local gatsby builds show up in project explorer: Monorepo Root/packages/docs/public
+    },
+    "files.watcherExclude": {
+      "**/.git/objects/**": true,
+      "**/.git/subtree-cache/**": true,
+      "**/.cache": true,
+      "**/.docz": true,
+      "**/.DS_Store": true,
+      "**/.git": true,
+      "**/.rollup.cache": true,
+      "**/.yarn": true,
+      "**/dist": true,
+      "**/node_modules": true,
+      "packages/docs/src": true,
+      "packages/halo/[^t]*": true,
+      "packages/halo/t[^a]*": true,
+      "packages/halo/dist": true,
+      "**/public": true,
     },
     "search.exclude": {
       "**/.git/objects/**": true,
@@ -82,22 +97,9 @@
       "*.lock": true,
       "*.log": true,
       "packages/docs/src": true,
-      "packages/halo/*": true
-    },
-    "files.watcherExclude": {
-      "**/.git/objects/**": true,
-      "**/.git/subtree-cache/**": true,
-      "**/.cache": true,
-      "**/.docz": true,
-      "**/.DS_Store": true,
-      "**/.git": true,
-      "**/.rollup.cache": true,
-      "**/.yarn": true,
-      "**/dist": true,
-      "**/node_modules": true,
-      "**/public": true,
-      "packages/docs/src": true,
-      "packages/halo/*": true
+      "packages/halo/*": true,
+      "packages/halo/tailwind.config.js": true,
+      "Build/tailwind.config.js": true,
     },
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true,
@@ -144,8 +146,8 @@
     "tailwindCSS.validate": true,
     "tailwindCSS.experimental.classRegex": [
       // NOTE(drew): not working so far.
-      ["classNames\\(([^)]*)\\)", "'([^']*)'"],
       ["classNames\\(([^)]*)\\)", "'([^']*)'", "'([^']*)'"],
+      ["classNames\\(([^)]*)\\)", "'([^']*)'"],
       [":(?:.|\n)*?[\"'`]([^\"'`]*).*?,"]
     ],
     "editor.formatOnSave": true
