@@ -50,7 +50,7 @@ function Dialog({
   const classes = classNames(
     styles.component,
     context === 'inline' && styles.contextInline,
-    context === 'modal' && styles.contextModal,
+    context === 'modal' && 'shadow-sm',
     contentPadding && styles.paddingDefault,
     className,
   );
