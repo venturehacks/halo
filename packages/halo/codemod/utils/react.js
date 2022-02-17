@@ -25,9 +25,13 @@ function getCssClassnames(source, jscodeshiftApi) {
   const cssClassesReferenced = [];
   root
     .find(j.MemberExpression, { object: { name: importLocalName } })
-    .forEach(nodePath =>
-      cssClassesReferenced.push(nodePath.node.property.name),
-    );
+    .forEach(nodePath => {
+      const cssClassname = nodePath.node.property.name;
+      // ensure classnames are deduped
+      if (!cssClassesReferenced.includes(cssClassname)) {
+        cssClassesReferenced.push(cssClassname);
+      }
+    });
 
   return cssClassesReferenced;
 }
