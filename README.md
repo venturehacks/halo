@@ -18,7 +18,7 @@ git clone git@github.com:venturehacks/halo.git
 cd halo
 
 # dependencies
-yarn install
+yarn
 
 # VSCode (optional)
 open halo.code-workspace
