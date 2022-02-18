@@ -4,6 +4,10 @@ import React from 'react';
 import { InterfaceHeader } from '../InterfaceHeader';
 
 export interface PanelProps extends React.HTMLAttributes<HTMLDivElement> {
+  /**
+   * Panel byline. If you need full visual control, omit title and just use children.
+   */
+  byline?: string;
   children: React.ReactNode;
   className?: string;
   /**
@@ -28,6 +32,7 @@ function Panel({
   className,
   negativeSpace = 'md',
   title,
+  byline,
   ...divElementProps
 }: PanelProps) {
   const hasGapClassName = className?.includes('gap-');
@@ -45,7 +50,12 @@ function Panel({
       {...divElementProps}
     >
       {title && (
-        <InterfaceHeader flow={!hasGapClassName} title={title} section />
+        <InterfaceHeader
+          byline={byline}
+          flow={!hasGapClassName}
+          title={title}
+          section
+        />
       )}
       {children}
     </div>
