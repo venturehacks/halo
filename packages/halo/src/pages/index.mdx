@@ -4,6 +4,9 @@ route: /
 ---
 
 import { Bracket } from '../components/structure/Bracket';
+import { Panel } from '../components/structure/Panel';
+import { AvatarLockup } from '../components/core/AvatarLockup';
+import { Button } from '../components/core/Button';
 
 # Halo
 
@@ -120,7 +123,7 @@ Halo requires one CSS entry point. Include _once_ in your application.
 import { Panel, Bracket, AvatarLockup, Button } from 'halo';
 
 return (
-  <Panel title="Welcome to AngelList" byline="Talent is our talent.">
+  <Panel title="Welcome to AngelList" byline="Talent is our talent." className="gap-6 max-w-lg">
     <Bracket>
       <AvatarLockup
         imageUrl="https://avatars1.githubusercontent.com/u/194885"
@@ -138,6 +141,23 @@ return (
   </Panel>
 );
 ```
+
+<Panel title="Welcome to AngelList" byline="Talent is our talent." className="gap-6 max-w-lg mb-12">
+  <Bracket>
+    <AvatarLockup
+      imageUrl="https://avatars1.githubusercontent.com/u/194885"
+      title="Drew"
+    />
+    <Button variant="gray">Invite</Button>
+  </Bracket>
+  <Bracket>
+    <AvatarLockup
+      imageUrl="https://avatars1.githubusercontent.com/u/56262247"
+      title="Vishal"
+    />
+    <Button variant="gray">Invite</Button>
+  </Bracket>
+</Panel>
 
 &nbsp;
 
