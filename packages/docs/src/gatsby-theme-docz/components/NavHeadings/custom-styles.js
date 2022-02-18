@@ -39,11 +39,13 @@ export const Container = styled.div`
 `;
 
 export const Heading = styled.h4`
+  font-size: 14px;
   margin: 0 0 0.5rem 0;
   padding: 0 1.25rem;
   color: ${({ theme }) => theme.colors.gray2};
 
   > svg {
+    display: inline-block;
     vertical-align: -10%;
     fill: ${({ theme }) => theme.colors.gray2};
     margin-right: 0.5rem;

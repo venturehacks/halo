@@ -2,11 +2,11 @@
 
 @layer base {
   h1 {
-    @apply text-2xl font-medium mb-4;
+    @apply text-2xl font-medium mb-6;
   }
 
   h2 {
-    @apply text-xl font-medium mb-3;
+    @apply text-xl font-medium mb-4;
   }
 
   h3 {
@@ -28,6 +28,12 @@
   hr {
     @apply border-slate-300 my-6;
   }
+
+  pre.prism-code {
+    @apply mt-2;
+    @apply mb-10;
+  }
 }
+
 @tailwind components;
 @tailwind utilities;
