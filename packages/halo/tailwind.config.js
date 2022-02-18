@@ -206,7 +206,6 @@ module.exports = {
       80: '320px',
       96: '384px',
     },
-    // TODO would be nice if this was accessible via halo
     screens: {
       handset: '719px',
       sm: '719px',
