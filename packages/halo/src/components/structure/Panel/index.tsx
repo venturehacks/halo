@@ -4,6 +4,10 @@ import React from 'react';
 import { InterfaceHeader } from '../InterfaceHeader';
 
 export interface PanelProps extends React.HTMLAttributes<HTMLDivElement> {
+  /**
+   * Panel byline. If you need full visual control, omit title and just use children.
+   */
+  byline?: string;
   children: React.ReactNode;
   className?: string;
   /**
@@ -28,14 +32,17 @@ function Panel({
   className,
   negativeSpace = 'md',
   title,
+  byline,
   ...divElementProps
 }: PanelProps) {
   const hasGapClassName = className?.includes('gap-');
+  const hasMaxWidthClassName = className?.includes('max-w-');
 
   return (
     <div
       className={classNames(
-        'flex flex-col border-t border-slate-100 rounded shadow-md bg-white max-w-3xl',
+        'flex flex-col border-t border-slate-100 rounded shadow-md bg-white',
+        !hasMaxWidthClassName && 'max-w-3xl',
         negativeSpace === 'sm' && 'p-6 pt-4',
         negativeSpace === 'md' && 'p-8 pt-6',
         flow && negativeSpace === 'sm' && 'mb-4',
@@ -45,7 +52,12 @@ function Panel({
       {...divElementProps}
     >
       {title && (
-        <InterfaceHeader flow={!hasGapClassName} title={title} section />
+        <InterfaceHeader
+          byline={byline}
+          flow={!hasGapClassName}
+          title={title}
+          section
+        />
       )}
       {children}
     </div>

@@ -22,6 +22,10 @@ const Theme = ({ children }) => {
   );
 };
 
+const fontFamily = `-apple-system, BlinkMacSystemFont, 'Source Sans Pro', 'Segoe UI', 'Roboto', sans-serif`;
+const monospaceFontFamily =
+  "'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace";
+
 const themeConfig = merge(defaultConfig, {
   initialColorMode: 'light',
   colors: {
@@ -63,27 +67,27 @@ const themeConfig = merge(defaultConfig, {
   boxShadow: '0 3px 7px 0 rgba(105, 111, 132, 0.1)',
   styles: {
     root: {
-      fontFamily: `'Source Sans Pro', 'Roboto', sans-serif`,
+      fontFamily,
       fontSize: '16px',
       color: 'text',
       bg: 'background',
     },
     h1: {
-      fontFamily: 'inherit',
+      fontFamily,
     },
     h2: {
-      fontFamily: 'inherit',
+      fontFamily,
     },
     h3: {
-      fontFamily: 'inherit',
+      fontFamily,
     },
     code: {
-      fontFamily: 'Consolas, monaco, monospace',
+      fontFamily: monospaceFontFamily,
     },
     inlineCode: {
       position: 'relative',
       display: 'inline-block',
-      fontFamily: 'Consolas, monaco, monospace',
+      fontFamily: monospaceFontFamily,
       backgroundColor: defaultConfig.colors.blockquote.bg,
       color: defaultConfig.colors.grayDark,
       fontSize: '0.85em',
@@ -115,6 +119,7 @@ const themeConfig = merge(defaultConfig, {
     },
     hr: {
       margin: '3rem 0 !important',
+      borderColor: '#c0c0c0',
     },
   },
 });

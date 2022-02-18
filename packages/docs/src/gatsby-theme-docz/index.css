@@ -2,8 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 
-/* @import '~halo/dist/halo.css'; */
-
 div[data-testid='live-preview'] {
   font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
@@ -20,6 +18,10 @@ div[data-testid='playground'] {
 div[data-testid='playground'] > div:nth-child(2) {
   max-height: 33vh;
   overflow: auto;
+}
+
+div[data-testid='code'] {
+  margin-bottom: 32px;
 }
 
 .tippy-popper {
