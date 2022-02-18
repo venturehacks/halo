@@ -4,92 +4,139 @@ Halo is our design system. It enables product teams to ship rapidly by reducing 
 
 &nbsp;
 
-<img src="https://user-images.githubusercontent.com/194885/75487723-d21d6e80-5963-11ea-8126-035fdd131f94.jpg" alt="Halo preview" width="609" />
-
 [![Build status](https://badge.buildkite.com/71f435fbeaf326479fce6ce41959cf3c7376de8d29367666a7.svg?branch=master)](https://buildkite.com/angellist/halo) [![Netlify Status](https://api.netlify.com/api/v1/badges/87d1d78b-b9dc-440b-ba5a-90f89afce587/deploy-status)](https://app.netlify.com/sites/halo-design-system/deploys)
 
 &nbsp;
 
-📝 **[Halo Feedback](https://venturehacks.quip.com/JP75A3GbNYua/Halo-Feedback)**
+## Develop
+
+### Documentation
+
+```bash
+# checkout code
+git clone git@github.com:venturehacks/halo.git
+cd halo
+
+# dependencies
+yarn install
+
+# VSCode (optional)
+open halo.code-workspace
+
+# Gatsby development server
+yarn dev
+```
 
 &nbsp;
 
-## Quickstart
-
-### Explore Halo
-
-View living documentation and browse code.
+### Test
 
 ```bash
-git clone git@github.com:venturehacks/halo.git
-cd halo
-yarn
-yarn run dev
+# run entire suite (jest)
+yarn test
+
+# unit tests only (no linters, etc.)
+yarn test:dev
+
+# author new unit test iteratively (watch new/changed tests)
+yarn test:dev:watch
+
+# update jest snapshots
+yarn test:snapshot-update
 ```
 
-### Install Halo in a project
-
-[Generate a Github personal access token](https://github.com/settings/tokens) so that your project can read this repository.
-
-Halo is built as a node module. In the future, Halo will be published as a private module so that we do not leak Github tokens.
-
-#### Add dependency
+### Build
 
 ```bash
-yarn add git+https://PERSONAL-ACCESS-TOKEN:x-oauth-basic@github.com/venturehacks/halo#stable
+# compile Halo module (rollup)
+yarn build
+
+# gatsby documentation site
+yarn build:docs
+
+# generate icons documentation from SVGs [src/components/icons]
+yarn icons
+
+# clean cache, working directories
+yarn clean
 ```
 
-#### Supply access token
+### Lint
 
-Include your GitHub token so CircleCI can build the application.
+```bash
+# lint with autofix (tslint + eslint)
+yarn lint:fix
 
-```json
-// package.json
-{
-  "private": true,
-  "dependencies": {
-    "halo": "git+https://PERSONAL-ACCESS-TOKEN:x-oauth-basic@github.com/venturehacks/halo#stable"
-  }
-}
+# format with prettier
+yarn pretttier:fix
 ```
 
-#### Entry point CSS
+### Release
 
-This distribution payload should only be included in your app _once_. It is necessary to prevent a flash of unstyled content.
+```bash
+# Patch release (safe, non-breaking changes, bugfixes)
+# 1.0.0 => 1.0.1
+yarn release:patch
+
+# Minor release (breaking changes, significant features)
+# 1.0.0 => 1.1.0
+yarn release:patch
+```
+
+&nbsp;
+
+<br />
+
+## Installation
+
+Halo requires one CSS entry point. Include _once_ in your application.
 
 ```scss
-// main.scss (or similar "layout" file that is only included one time)
+// main.scss (or similar "layout" file that is included once)
 
 :global {
-  @import '~halo/dist/halo.css';
+  @import 'halo/dist/esm/halo.css';
 }
 ```
 
-### Using Halo
+&nbsp;
 
-#### React
+<br />
+
+## Usage
+
+### React / JSX
 
 ```tsx
-import { Box, Button, Header, Span } from 'halo';
+import { Panel, Bracket, AvatarLockup, Button } from 'halo';
 
 return (
-  <Box>
-    <Header h1>Title is Wow</Header>
-    <Span muted>muted subtext is bueno</Span>
-
-    <Box row>
-      <Button variant="secondary">Cancel</Button>
-      <Button variant="primary" onClick={() => console.log('OK!')}>
-        OK
-      </Button>
-    </Box>
-  </Box>
+  <Panel title="Welcome to AngelList" byline="Talent is our talent.">
+    <Bracket>
+      <AvatarLockup
+        imageUrl="https://avatars1.githubusercontent.com/u/194885"
+        title="Drew"
+      />
+      <Button variant="gray">Invite</Button>
+    </Bracket>
+    <Bracket>
+      <AvatarLockup
+        imageUrl="https://avatars1.githubusercontent.com/u/56262247"
+        title="Vishal"
+      />
+      <Button variant="gray">Invite</Button>
+    </Bracket>
+  </Panel>
 );
 ```
 
-#### Scss
+&nbsp;
+
+### Scss
 
 ```scss
+// styles/_base.scss
+
 // single import grants all variables, mixins, etc.
 @import '~halo/scss/halo';
 
@@ -104,73 +151,40 @@ return (
 
 &nbsp;
 
-&nbsp;
-
-## Roadmap
-
-| Date           | Milestone      |                                                               | Status |
-| -------------- | -------------- | ------------------------------------------------------------- | :----: |
-| 2020 &nbsp; –  | `v1.0.0`       | ⋯                                                             |   🌀   |
-| ⋯              | ⋯              | ⋯                                                             |   ⋯    |
-| 2020 &nbsp; –  | `v0.11.x`      | Component pack                                                |   🔶   |
-| 2020 &nbsp; –  | `v0.10.x`      | Variable negative space, themeable, .halorc.js                |   🔶   |
-| 2020 Februrary | `v0.9.x`       | Docz 2.0                                                      |   ✅   |
-| 2019 December  | `v0.8.x`       | Component pack, robust tooling                                |   ✅   |
-| 2019 October   | `v0.8.x`       | Responive Grid + Cell                                         |   ✅   |
-| 2019 September | `v0.7.0`       | Raw form components                                           |   ✅   |
-| 2019 August    | ⋯              | Pre-commit tooling                                            |   ✅   |
-| 2019 July      | ⋯              | Smoke tests, API iteration                                    |   ✅   |
-| 2019 June      | `v0.6.0`       | Final color palette, type scale                               |   ✅   |
-| 2019 April-May | `v0.5.0`       | Grid, Cell, Label, Badge, Avatar, Tooltip, breakpoints        |   ✅   |
-| 2019 March     | `v0.4.0`       | Box, color palette, scss vars/mixin library export            |   ✅   |
-| 2019 February  | `v0.3.1`       | Header, Span, Paragraph, Button, PillTag                      |   ✅   |
-| 2019 January   | infrastructure | Best-practice configs, introduce strict linting               |   ✅   |
-| 2018 November  | inception      | Project skeleton; built with TypeScript, React, Jest, webpack |   ✅   |
-
-&nbsp;
-
-### Design Releases
-
-This repo lags behind design; it's constantly "catching up" to the latest release of sketch files.
-
-Design maintains separate release notes and numeric versioning.
-
-- [Design: Halo Release Notes](https://venturehacks.quip.com/zb36AxAbZnBi/Halo-Design-Release-Notes)
-- [Design: Halo README](https://venturehacks.quip.com/zb36AxAbZnBi/Halo-Design-Release-Notes)
-- [Why we need a design system](https://venturehacks.quip.com/brjDAYTIUyqO/A-design-system-for-AngelList)
-
-&nbsp;
+<br />
 
 ## Team
 
 - **Engineering**
   - Drew Lustro
+  - Vishal Jeet
+- **Design**
+  - Cristian Valdes
+
+&nbsp;
+
+<br />
+
+&nbsp;
+
+### Contributors
+
+- **Engineering**
   - Tiffany Wu
   - Mike Dee
   - Max Lustig
-  - Lily Chen
 - **Design**
   - Andres Santanilla
   - Shane Zucker
   - Lily Chen
   - Stephen Varaday
-  - Lauren Kolm
-  - Gearóid O’Rourke
-  - Adam Ruf
-  - Chad Whitaker
-- **Technical Feedback**
-  - Thomas Hu
-  - Hans Arijanto
-  - Jordan Claassen
 
 &nbsp;
 
-## Special Thanks
+<br />
 
-- Veselin Todorov
-- Korbin Hoffman
-- Aaron Vinson
-
-&nbsp;
-
-<img src="https://user-images.githubusercontent.com/194885/54588593-b2a26580-49e0-11e9-99c2-8a702f69747a.gif" width="78" alt="heloswhere" />
+<img
+  src="https://user-images.githubusercontent.com/194885/54588593-b2a26580-49e0-11e9-99c2-8a702f69747a.gif"
+  width="78"
+  alt="heloswhere"
+/>
