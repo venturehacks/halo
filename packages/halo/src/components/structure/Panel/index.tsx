@@ -36,11 +36,13 @@ function Panel({
   ...divElementProps
 }: PanelProps) {
   const hasGapClassName = className?.includes('gap-');
+  const hasMaxWidthClassName = className?.includes('max-w-');
 
   return (
     <div
       className={classNames(
-        'flex flex-col border-t border-slate-100 rounded shadow-md bg-white max-w-3xl',
+        'flex flex-col border-t border-slate-100 rounded shadow-md bg-white',
+        !hasMaxWidthClassName && 'max-w-3xl',
         negativeSpace === 'sm' && 'p-6 pt-4',
         negativeSpace === 'md' && 'p-8 pt-6',
         flow && negativeSpace === 'sm' && 'mb-4',
