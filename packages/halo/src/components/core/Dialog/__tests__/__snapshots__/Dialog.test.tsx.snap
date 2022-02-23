@@ -2,7 +2,7 @@
 
 exports[`Dialog snapshot default 1`] = `
 <div
-  class="component contextModal paddingDefault"
+  class="component shadow-sm paddingDefault"
   data-test="Dialog"
 >
   <div
@@ -28,7 +28,7 @@ exports[`Dialog snapshot inline context 1`] = `
 
 exports[`Dialog snapshot no content padding 1`] = `
 <div
-  class="component contextModal"
+  class="component shadow-sm"
   data-test="Dialog"
 >
   <div
@@ -41,7 +41,7 @@ exports[`Dialog snapshot no content padding 1`] = `
 
 exports[`Dialog snapshot title + both buttons 1`] = `
 <div
-  class="component contextModal paddingDefault"
+  class="component shadow-sm paddingDefault"
   data-test="Dialog"
 >
   <div
