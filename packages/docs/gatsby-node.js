@@ -69,7 +69,7 @@ exports.onCreateWebpackConfig = ({
             },
             {
               addClassesToSVGElement: {
-                className: 'haloIcon w-6 h-6',
+                className: 'haloIcon w-6 max-w-full',
               },
             },
             {
@@ -85,9 +85,7 @@ exports.onCreateWebpackConfig = ({
             // },
             {
               addAttributesToSVGElement: {
-                attributes: {
-                  fill: 'currentColor',
-                },
+                attributes: ['fill="currentColor"'],
               },
             },
           ],
