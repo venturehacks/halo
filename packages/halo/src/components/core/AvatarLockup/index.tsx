@@ -54,14 +54,15 @@ function AvatarLockupRaw({
     size === 'lg' && 'gap-4',
   );
   const titleClassnames = classNames(
-    size === 'sm' && 'text-sm font-normal',
-    size === 'md' && 'text-md font-medium',
-    size === 'lg' && 'text-lg font-medium',
+    'font-medium',
+    size === 'sm' && 'text-sm',
+    size === 'md' && 'text-md',
+    size === 'lg' && 'text-lg',
   );
   const bylineClassnames = classNames(
-    size === 'sm' && 'text-xs font-light',
-    size === 'md' && 'text-sm font-light',
-    size === 'lg' && 'text-md font-normal',
+    size === 'sm' && 'text-xs',
+    size === 'md' && 'text-sm',
+    size === 'lg' && 'text-md',
   );
 
   // using 'order-x' css to implement orientation

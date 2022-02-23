@@ -2,19 +2,19 @@
 
 exports[`Tag snapshot color gray 1`] = `
 <span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-slate-100 bg-opacity-75 text-dark-aaa rounded-md gap-1.5 text-xs h-8 px-3 py-2"
+  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-slate-100 bg-opacity-75 text-dark-aaa rounded-md gap-2 text-xs h-8 px-3 py-2"
 />
 `;
 
 exports[`Tag snapshot color red 1`] = `
 <span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-red-200 text-red-600 rounded-md gap-1.5 text-xs h-8 px-3 py-2"
+  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-red-200 text-red-600 rounded-md gap-2 text-xs h-8 px-3 py-2"
 />
 `;
 
 exports[`Tag snapshot plain 1`] = `
 <span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 bg-opacity-75 text-dark-aaaa rounded-md gap-1.5 text-xs h-8 px-3 py-2"
+  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 bg-opacity-75 text-dark-aaaa rounded-md gap-2 text-xs h-8 px-3 py-2"
 >
   plain
 </span>
@@ -22,19 +22,19 @@ exports[`Tag snapshot plain 1`] = `
 
 exports[`Tag snapshot shape pill 1`] = `
 <span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 bg-opacity-75 text-dark-aaaa rounded-full gap-1.5 text-xs h-8 px-3 py-2"
+  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 bg-opacity-75 text-dark-aaaa rounded-full gap-2 text-xs h-8 px-3 py-2"
 />
 `;
 
 exports[`Tag snapshot shape rectangle 1`] = `
 <span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 bg-opacity-75 text-dark-aaaa rounded-md gap-1.5 text-xs h-8 px-3 py-2"
+  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 bg-opacity-75 text-dark-aaaa rounded-md gap-2 text-xs h-8 px-3 py-2"
 />
 `;
 
 exports[`Tag snapshot size 2xs 1`] = `
 <span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 bg-opacity-75 text-dark-aaaa rounded-md gap-0.5 text-4xs h-4 px-1.5 py-1"
+  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 bg-opacity-75 text-dark-aaaa rounded-md gap-1 text-3xs h-4 px-2 py-1"
 />
 `;
 
@@ -46,19 +46,19 @@ exports[`Tag snapshot size md 1`] = `
 
 exports[`Tag snapshot size sm [default] 1`] = `
 <span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 bg-opacity-75 text-dark-aaaa rounded-md gap-1.5 text-xs h-8 px-3 py-2"
+  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 bg-opacity-75 text-dark-aaaa rounded-md gap-2 text-xs h-8 px-3 py-2"
 />
 `;
 
 exports[`Tag snapshot size xs 1`] = `
 <span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 bg-opacity-75 text-dark-aaaa rounded-md gap-1 text-2xs h-6 px-2 py-1"
+  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 bg-opacity-75 text-dark-aaaa rounded-md gap-1 text-2xs h-6 px-2 py-1.5"
 />
 `;
 
 exports[`Tag snapshot with children 1`] = `
 <span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 bg-opacity-75 text-dark-aaaa rounded-md gap-1.5 text-xs h-8 px-3 py-2"
+  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 bg-opacity-75 text-dark-aaaa rounded-md gap-2 text-xs h-8 px-3 py-2"
 >
   with children
 </span>

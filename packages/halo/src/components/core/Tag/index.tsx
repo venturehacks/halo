@@ -70,13 +70,13 @@ function TagRaw({
     color === 'red' && 'bg-red-200 text-red-600',
     shape === 'pill' && 'rounded-full',
     shape === 'rectangle' && 'rounded-md',
-    size === '2xs' && 'gap-0.5 text-4xs h-4 px-1.5 py-1',
-    size === 'xs' && 'gap-1 text-2xs h-6 px-2 py-1',
-    size === 'sm' && 'gap-1.5 text-xs h-8 px-3 py-2',
+    size === '2xs' && 'gap-1 text-3xs h-4 px-2 py-1',
+    size === 'xs' && 'gap-1 text-2xs h-6 px-2 py-1.5',
+    size === 'sm' && 'gap-2 text-xs h-8 px-3 py-2',
     size === 'md' && 'gap-2 text-md h-10 px-3 py-2',
   );
   const iconClassnames = classNames(
-    size === '2xs' && 'w-1.5 h-1.5',
+    size === '2xs' && 'w-2 h-2',
     size === 'xs' && 'w-2 h-2',
     size === 'sm' && 'w-3 h-3',
     size === 'md' && 'w-4 h-4',

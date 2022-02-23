@@ -6,14 +6,11 @@ import {
   ForwardedRefProps,
   withForwardedRef,
 } from '../../../lib';
-import { Box } from '../../structure/Box';
-
-import styles from './styles.module.scss';
 
 type IconPosition = 'right' | 'left';
 
 export interface RawInputProps
-  extends React.InputHTMLAttributes<HTMLInputElement> {
+  extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
   className?: string;
 
   /**
@@ -57,6 +54,11 @@ export interface RawInputProps
   onChange?: React.ChangeEventHandler<HTMLInputElement> | (() => void);
 
   /**
+   * Magnitude of input field
+   * @default md
+   */
+  size?: 'sm' | 'md' | 'lg';
+  /**
    * Use transparent style
    * @default false
    */
@@ -89,6 +91,7 @@ function RawInputRaw({
   iconContainerClassName,
   iconPosition = 'left',
   intrinsicWidth = '100%',
+  size = 'md',
   transparent = false,
   type = 'text',
   ...rest
@@ -97,16 +100,33 @@ function RawInputRaw({
     <input
       ref={forwardedRef}
       className={classNames(
-        styles.component,
-        className,
-        transparent ? styles.transparent : styles.bordered,
-        icon && iconPosition === 'right' && styles.hasIconRight,
-        icon && iconPosition === 'left' && styles.hasIconLeft,
-        intrinsicWidth === 'auto' && styles.widthAuto,
-        hasError && styles.hasError,
+        'text-dark-aaaa text-md max-w-full placeholder-dark-a',
+        size === 'sm' && 'px-3 py-1',
+        size === 'md' && 'px-3 py-2',
+        size === 'lg' && 'p-3',
+        transparent
+          ? 'bg-transparent shadow-none outline-none'
+          : 'bg-white rounded focus:border-2',
+        !hasError && transparent && 'border-none',
+        !hasError && !transparent && 'border-slate-500 border',
+        // disabled
+        'disabled:text-dark-a disabled:bg-slate-200 disabled:border-light-aa',
+        // warning
+        hasError &&
+          errorSeverity === 'warning' &&
+          'border-dark-warning border-2',
+        // error
+        hasError &&
+          errorSeverity === 'critical' &&
+          'border-dark-error border-2',
         hasError && FORM_FIELD_ERROR_IDENTIFIER,
-        errorSeverity === 'warning' && styles.warning,
-        errorSeverity === 'critical' && styles.critical,
+        // allow space for icon
+        icon && iconPosition === 'left' && 'pl-11',
+        icon && iconPosition === 'right' && 'pr-11',
+        // width behavior
+        intrinsicWidth === 'auto' && 'w-auto',
+        intrinsicWidth === '100%' && 'w-full',
+        className,
       )}
       type={type}
       {...rest}
@@ -118,25 +138,27 @@ function RawInputRaw({
   }
 
   return (
-    <div className={styles.wrapper}>
+    <div className="relative w-full">
       {input}
-      <Box
-        align="center"
+      <div
         className={classNames(
-          styles.iconContainer,
-          iconPosition === 'right' && styles.hasIconRight,
+          size === 'sm' && 'w-4 h-4 top-0.5',
+          size === 'md' && 'w-7 h-7 top-1.5',
+          size === 'lg' && 'w-9 h-9 top-1',
+          'text-dark-a',
+          'flex flex-col items-center justify-center',
+          'absolute',
+          iconPosition === 'left' && 'left-2',
+          iconPosition === 'right' && 'right-2',
           iconContainerClassName,
         )}
-        valign="center"
-        column
       >
         {icon}
-      </Box>
+      </div>
     </div>
   );
 }
 
-// NOTE(drew): I wonder if we need to go back to `extends ...`
 const RawInput = withForwardedRef<RawInputProps, HTMLInputElement>(RawInputRaw);
 
 export { RawInput };

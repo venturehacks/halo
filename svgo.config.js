@@ -1,47 +1,50 @@
 // https://github.com/svg/svgo/#built-in-plugins
 
+// NOTE(drew): svgo@1.x config format!!
+// https://github.com/svg/svgo/tree/v1.3.2
+// https://github.com/venturehacks/halo/pull/144
 module.exports = {
-  // js2svg: {
-  //   indent: 2,
-  // },
   plugins: [
     {
-      name: 'preset-default',
-      params: {
-        overrides: {
-          removeViewBox: false,
-        },
-      },
+      removeViewBox: false,
     },
     {
-      name: 'prefixIds',
-      params: {
+      prefixIds: {
         prefix: 'halo',
       },
     },
     {
-      name: 'convertColors',
-      params: {
-        currentColor: true,
+      removeRasterImages: true,
+    },
+
+    {
+      removeDimensions: true,
+    },
+    {
+      removeScriptElement: true,
+    },
+    {
+      removeOffCanvasPaths: true,
+    },
+    {
+      addClassesToSVGElement: {
+        className: 'haloIcon w-6 max-w-full',
       },
     },
     {
-      name: 'removeRasterImages',
+      convertColors: {
+        currentColor: '#385075',
+      },
     },
+    // {
+    //   removeAttrs: {
+    //     preserveCurrentColor: true,
+    //     attrs: '(fill|stroke)'
+    //   }
+    // },
     {
-      // remove width/height
-      name: 'removeDimensions',
-    },
-    {
-      name: 'removeOffCanvasPaths',
-    },
-    {
-      name: 'removeScriptElement',
-    },
-    {
-      name: 'addClassesToSVGElement',
-      params: {
-        className: 'haloIcon',
+      addAttributesToSVGElement: {
+        attributes: ['fill="currentColor"'],
       },
     },
   ],

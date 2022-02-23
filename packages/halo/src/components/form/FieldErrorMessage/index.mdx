@@ -7,39 +7,45 @@ route: /form/field-error-message
 import { Props, Playground } from 'docz';
 import { RawInput } from '../RawInput';
 import { FieldErrorMessage } from './';
-import { Box } from '../../structure/Box';
 import { Label } from '../Label';
 
 # FieldErrorMessage
 
-Prints a supplied error `message`, styled as a warning or critical error. Typically, this component will come directly after an input component. The `block` preset is great for styling critical server error messages.
+Prints a supplied `message` styled as a warning or critical error. Typically, component comes directly after an input component.
+
+Preset `block` is great for rendering a critical server error message at the header or footer of a given form.
 
 ### Usage
 
 <Playground>
-  <Box align="stretch" maxWidth="500px">
+  <div className="max-w-xl">
     <FieldErrorMessage errorSeverity="critical" preset="block" message="Critical server error. Please try again." />
+
     <FieldErrorMessage errorSeverity="warning" preset="block" message="Relatively soft form warning" />
 
-    <Label field="name" title="Full name">
+    <Label field="name" title="Field warning" supportingText="ex: validation error" className="mt-10">
       <RawInput
         name="name"
         onChange={() => {}}
         type="text"
         value="bad name"
+        hasError
       />
       <FieldErrorMessage errorSeverity="warning" message="A good name is required" />
     </Label>
 
-    <Label field="address" title="Address">
+    <Label field="address" title="Field critical error">
       <RawInput
         name="address"
         onChange={() => {}}
         type="text"
         value="123 Wewtlane"
+        errorSeverity="critical"
+        hasError
       />
+      <FieldErrorMessage errorSeverity="critical" message="City, state, and zip code required" />
     </Label>
-  </Box>
+  </div>
 </Playground>
 
 
