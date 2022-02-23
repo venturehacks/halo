@@ -3,6 +3,11 @@
 $raw-input-height: 50px !default;
 $raw-input-height-transparent: 48px !default;
 
+/**
+ * DEPRECATED(drew):
+ * @mixin input is deprecated as of 0.15.2
+ * Please do not use in new code.
+*/
 @mixin input($size: md, $style: normal) {
   @include font($size: $size, $color: $slate-900);
   max-width: 100%;

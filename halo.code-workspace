@@ -150,7 +150,6 @@
       ["classNames\\(([^)]*)\\)", "'([^']*)'"],
       [":(?:.|\n)*?[\"'`]([^\"'`]*).*?,"]
     ],
-    "editor.formatOnSave": true
   },
   "extensions": {
     "unwantedRecommendations": ["eg2.tslint"],
