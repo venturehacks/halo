@@ -1,41 +1,10 @@
 @import 'halo';
 
 .component {
-  @include font($size: sm);
-  max-height: none;
-  overflow: hidden;
-
-  &.text-only {
-    white-space: pre-wrap;
-    margin-top: tempo(0.5);
-
+  &.textOnly {
+    // TODO: tailwind possible?
     & + & {
       margin-top: 0;
-    }
-
-    &.warning {
-      @include font($color: $dark-warning);
-    }
-
-    &.critical {
-      @include font($color: $dark-error);
-    }
-  }
-
-  &.block {
-    @include font($weight: medium);
-    @include border-rounded;
-    padding: tempo(1) tempo(2);
-    margin-bottom: tempo(2);
-
-    &.warning {
-      @include font($color: $dark-warning);
-      background-color: $orange-100;
-    }
-
-    &.critical {
-      @include font($color: $dark-error);
-      background-color: $red-200;
     }
   }
 }
