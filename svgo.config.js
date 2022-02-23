@@ -41,19 +41,19 @@ module.exports = {
         className: 'haloIcon',
       },
     },
-    {
-      name: 'removeAttrs',
-      params: {
-        attrs: '(fill)',
-        // attrs: '(fill|stroke)' ,
-        preserveCurrentColor: true,
-      },
-    },
-    {
-      name: 'addAttributesToSVGElement',
-      params: {
-        attributes: [{ fill: 'currentColor' }],
-      },
-    },
+    // {
+    //   name: 'removeAttrs',
+    //   params: {
+    //     attrs: '(fill)',
+    //     // attrs: '(fill|stroke)' ,
+    //     preserveCurrentColor: true,
+    //   },
+    // },
+    // {
+    //   name: 'addAttributesToSVGElement',
+    //   params: {
+    //     attributes: [{ fill: 'currentColor' }],
+    //   },
+    // },
   ],
 };
