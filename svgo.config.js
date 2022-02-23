@@ -10,7 +10,7 @@ module.exports = {
       params: {
         overrides: {
           convertColors: {
-            currentColor: '#385075',
+            currentColor: true,
           },
           removeViewBox: false,
         },
@@ -26,19 +26,24 @@ module.exports = {
       name: 'removeRasterImages',
     },
     {
-      // remove width/height
-      name: 'removeDimensions',
-    },
-    {
-      name: 'removeOffCanvasPaths',
+      name: 'removeDimensions', // remove width/height
     },
     {
       name: 'removeScriptElement',
     },
     {
+      name: 'removeOffCanvasPaths',
+    },
+    {
       name: 'addClassesToSVGElement',
       params: {
-        className: 'haloIcon',
+        className: 'haloIcon w-6 h-6',
+      },
+    },
+    {
+      name: 'convertColors',
+      params: {
+        currentColor: '#385075',
       },
     },
     // {
@@ -49,11 +54,11 @@ module.exports = {
     //     preserveCurrentColor: true,
     //   },
     // },
-    // {
-    //   name: 'addAttributesToSVGElement',
-    //   params: {
-    //     attributes: [{ fill: 'currentColor' }],
-    //   },
-    // },
+    {
+      name: 'addAttributesToSVGElement',
+      params: {
+        attributes: [{ fill: 'currentColor' }],
+      },
+    },
   ],
 };
