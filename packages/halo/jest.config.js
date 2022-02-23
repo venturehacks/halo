@@ -10,6 +10,7 @@ const testPathIgnorePatterns = [
   'package.json',
   'public',
   'README.md',
+  '/support/',
 ];
 
 module.exports = {
