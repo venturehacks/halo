@@ -5,7 +5,7 @@ route: /core/tag
 ---
 
 import { Props, Playground } from 'docz';
-import { Header } from '../Header';
+import { InterfaceHeader } from '../../structure/InterfaceHeader';
 import { BookmarkOutlineIcon } from '../../icons';
 import { Box } from '../../structure/Box';
 import { Tag } from './'
@@ -13,186 +13,146 @@ import { Tag } from './'
 
 # Tag
 
-Can be used in lieu of a PillTag or Flair
+Successor to `PillTag` `Flair` (deprecated)
 
 ### Usage
 
 <Playground>
-  <div>
-    <Box margin={{ bottom: 4 }}>
-      <Header h5>2xs</Header>
-      <Tag
-        color="red"
-        size="sm"
-        label="Red Tag"
-        size="2xs"
-      />
-      <Tag
-        color="gray"
-        shape="pill"
-        size="sm"
-        label="Gray Pill Tag"
-        size="2xs"
-      />
-      <Tag
-        icon={<BookmarkOutlineIcon />}
-        shape="pill"
-        size="sm"
-        label="Blue Pill Tag with icon"
-        size="2xs"
-      />
-      <Tag
-        color="green"
-        onClose={() => {alert("close clicked!")}}
-        size="sm"
-        label="Green Tag with clickable close icon"
-        size="2xs"
-      />
-      <Tag
-        color="purple"
-        onClick={() => {alert("tag clicked!")}}
-        size="sm"
-        label="Clickable tag!"
-        size="2xs"
-      />
-      <Tag
-        color="orange"
-        icon={<BookmarkOutlineIcon />}
-        size="2xs"
-      />
-    </Box>
+  <Box margin={{ bottom: 4 }}>
+    <InterfaceHeader title="2xs" section flow />
+    <Tag
+      color="red"
+      size="sm"
+      label="Red tag"
+      size="2xs"
+    />
+    <Tag
+      color="gray"
+      shape="pill"
+      size="sm"
+      label="Gray tag"
+      size="2xs"
+    />
+    <Tag
+      icon={<BookmarkOutlineIcon />}
+      shape="pill"
+      size="sm"
+      label="Blue tag with icon"
+      size="2xs"
+    />
+    <Tag
+      color="green"
+      onClose={() => {alert("close clicked!")}}
+      size="sm"
+      label="Green tag with clickable close icon"
+      size="2xs"
+    />
+    <Tag
+      color="purple"
+      onClick={() => {alert("tag clicked!")}}
+      size="sm"
+      label="Clickable tag!"
+      size="2xs"
+    />
+    <Tag
+      color="orange"
+      icon={<BookmarkOutlineIcon />}
+      size="2xs"
+    />
+  </Box>
 
-    <Box margin={{ bottom: 4 }}>
-      <Header h5>xs</Header>
-      <Tag
-        color="red"
-        size="sm"
-        label="Red Tag"
-        size="xs"
-      />
-      <Tag
-        color="gray"
-        shape="pill"
-        size="sm"
-        label="Gray Pill Tag"
-        size="xs"
-      />
-      <Tag
-        icon={<BookmarkOutlineIcon />}
-        shape="pill"
-        size="sm"
-        label="Blue Pill Tag with icon"
-        size="xs"
-      />
-      <Tag
-        color="green"
-        onClose={() => {alert("close clicked!")}}
-        size="sm"
-        label="Green Tag with clickable close icon"
-        size="xs"
-      />
-      <Tag
-        color="purple"
-        onClick={() => {alert("tag clicked!")}}
-        size="sm"
-        label="Clickable tag!"
-        size="xs"
-      />
-      <Tag
-        color="orange"
-        icon={<BookmarkOutlineIcon />}
-        size="xs"
-      />
-    </Box>
+  <Box margin={{ bottom: 4 }}>
+    <InterfaceHeader title="xs" section flow />
+    <Tag
+      color="red"
+      size="sm"
+      label="Red tag"
+      size="xs"
+    />
+    <Tag
+      color="gray"
+      shape="pill"
+      size="sm"
+      label="Gray tag"
+      size="xs"
+    />
+    <Tag
+      icon={<BookmarkOutlineIcon />}
+      shape="pill"
+      size="sm"
+      label="Blue tag with icon"
+      size="xs"
+    />
+    <Tag
+      color="green"
+      onClose={() => {alert("close clicked!")}}
+      size="sm"
+      label="Green tag with clickable close icon"
+      size="xs"
+    />
+    <Tag
+      color="purple"
+      onClick={() => {alert("tag clicked!")}}
+      size="sm"
+      label="Clickable tag!"
+      size="xs"
+    />
+    <Tag
+      color="orange"
+      icon={<BookmarkOutlineIcon />}
+      size="xs"
+    />
+  </Box>
 
-    <Box margin={{ bottom: 4 }}>
-      <Header h5>sm</Header>
-      <Tag
-        color="red"
-        label="Red Tag"
-      />
-      <Tag
-        color="gray"
-        shape="pill"
-        label="Gray Pill Tag"
-      />
-      <Tag
-        icon={<BookmarkOutlineIcon />}
-        shape="pill"
-        label="Blue Pill Tag with icon"
-      />
-      <Tag
-        color="green"
-        onClose={() => {alert("close clicked!")}}
-        label="Green Tag with clickable close icon"
-      />
-      <Tag
-        color="purple"
-        onClick={() => {alert("tag clicked!")}}
-        label="Clickable tag!"
-      />
-      <Tag
-        color="orange"
-        icon={<BookmarkOutlineIcon />}
-      />
-    </Box>
+  <Box margin={{ bottom: 4 }}>
+    <InterfaceHeader title="sm" section flow />
+    <Tag
+      color="red"
+      label="Red tag"
+    />
+    <Tag
+      color="gray"
+      shape="pill"
+      label="Gray tag"
+    />
+    <Tag
+      icon={<BookmarkOutlineIcon />}
+      shape="pill"
+      label="Blue tag with icon"
+    />
+    <Tag
+      color="green"
+      onClose={() => {alert("close clicked!")}}
+      label="Green tag with clickable close icon"
+    />
+    <Tag
+      color="purple"
+      onClick={() => {alert("tag clicked!")}}
+      label="Clickable tag!"
+    />
+    <Tag
+      color="orange"
+      icon={<BookmarkOutlineIcon />}
+    />
+  </Box>
 
-    <Box margin={{ bottom: 4 }}>
-      <Header h5>md</Header>
-      <Tag
-        color="red"
-        label="Red Tag"
-        size="md"
-      />
-      <Tag
-        color="gray"
-        shape="pill"
-        label="Gray Pill Tag"
-        size="md"
-      />
-      <Tag
-        icon={<BookmarkOutlineIcon />}
-        shape="pill"
-        label="Blue Pill Tag with icon"
-        size="md"
-      />
-      <Tag
-        color="green"
-        onClose={() => {alert("close clicked!")}}
-        label="Green Tag with clickable close icon"
-        size="md"
-      />
-      <Tag
-        color="purple"
-        onClick={() => {alert("tag clicked!")}}
-        label="Clickable tag!"
-        size="md"
-      />
-      <Tag
-        color="orange"
-        icon={<BookmarkOutlineIcon />}
-        size="md"
-      />
-    </Box>
-
-    <Box margin={{ bottom: 4 }}>
-      <Header h5>Custom Content</Header>
-      <Tag onClose={() => {alert("close clicked!")}} size="sm" >
-        <span className="text-xs">Software Engineer</span>
-        <span className="text-2xs font-light">Primary</span>
-      </Tag>
-      <Tag
-        onClose={() => {alert("close clicked!")}}
-        onClick={() => {alert("tag clicked!")}}
-        color="gray"
-        shape="pill"
-        size="md"
-      >
-        <span className="text-sm text-dark-aaa">Software Engineer</span>
-        <span className="text-xs text-dark-aaa font-light">Primary</span>
-      </Tag>
-    </Box>
-  </div>
+  <Box margin={{ bottom: 4 }}>
+    <InterfaceHeader title="Arbitrary content" section flow />
+    <Tag onClose={() => {alert("close clicked!")}} size="sm" >
+      <span className="text-xs font-medium">Software Engineer</span>
+      <span className="text-2xs">Primary</span>
+    </Tag>
+    <Tag
+      onClose={() => {alert("close clicked!")}}
+      onClick={() => {alert("tag clicked!")}}
+      color="gray"
+      shape="pill"
+      size="md"
+    >
+      <span className="text-sm text-dark-aaa font-medium">Software Engineer</span>
+      <span className="text-xs text-dark-aaa">Primary</span>
+    </Tag>
+  </Box>
 </Playground>
 
 ### Exports
