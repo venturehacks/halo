@@ -61,7 +61,7 @@ exports[`Banner snapshot variant error 1`] = `
     class="mr-2 ml-1"
   >
     <svg
-      class="block text-red-700 w-2.5 h-2.5"
+      class="block text-red-700 w-6"
       fill="none"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
