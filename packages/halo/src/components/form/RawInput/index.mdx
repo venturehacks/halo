@@ -7,21 +7,20 @@ route: /form/raw-input
 import { Props, Playground } from 'docz';
 import { Label } from '../Label';
 import { RawInput } from './';
-import { Box } from '../../structure/Box';
+import { FieldErrorMessage } from '../FieldErrorMessage';
+import { TimeIcon, ArchiveIcon } from '../../icons';
+import { Bracket } from '../../structure/Bracket';
 
 # RawInput
 
-📣 Raw input fields are designed to be [controlled](https://reactjs.org/docs/forms.html#controlled-components) by their smarter, form-connected parent.
+Raw input fields are designed to be controlled by a [smart, form-connected parent](https://github.com/venturehacks/AngelList/blob/master/frontend/talent/components/Form/TextField/index.tsx).
 
-This component is primarily used for simple text input. It's also great as a hidden field that holds the value of a complex frontend component. On CoPro, we use it to power our autocomplete text fields and tabular data filter fields.
+
 
 ### Usage
 
 <Playground>
-  <Box align="stretch" maxWidth="500px">
-    <Label field="foo" title="Default Behavior">
-      <RawInput />
-    </Label>
+  <div className="max-w-xl">
     <Label field="foo" title="Text Input">
       <RawInput
         type="text"
@@ -30,25 +29,58 @@ This component is primarily used for simple text input. It's also great as a hid
         maxLength={100}
       />
     </Label>
-    <Label field="bar" title="Email" supportingText="with validation error, intrinsic width = auto">
-      <RawInput
-        type="email"
-        name="bar"
-        onChange={() => {}}
-        value="What is email?"
-        intrinsicWidth="auto"
-        hasError
-      />
-    </Label>
-    <Label field="password" title="Password">
-      <RawInput
-        type="password"
-        name="password"
-        intrinsicWidth="auto"
-        value="abcdefghijk"
-        onChange={() => {}}
-      />
-    </Label>
+    <Bracket>
+      <Label field="foo" title="Icon Left">
+        <RawInput
+          type="text"
+          name="foo"
+          placeholder="Timezone name..."
+          maxLength={100}
+          icon={<TimeIcon />}
+        />
+      </Label>
+      <Label field="foo" title="Icon Right">
+        <RawInput
+          type="text"
+          name="foo"
+          placeholder="archive@foo.com"
+          maxLength={100}
+          iconPosition="right"
+          icon={<ArchiveIcon />}
+        />
+      </Label>
+    </Bracket>
+    <Bracket>
+      <Label field="bar" title="Email">
+        <RawInput
+          type="email"
+          name="bar"
+          onChange={() => {}}
+          value="What is email?"
+          intrinsicWidth="auto"
+          hasError
+        />
+        <FieldErrorMessage
+          errorSeverity="warning"
+          message="An email is required"
+        />
+      </Label>
+      <Label field="password" title="Password">
+        <RawInput
+          type="password"
+          name="password"
+          intrinsicWidth="auto"
+          value="abcdefghijk"
+          onChange={() => {}}
+          errorSeverity="critical"
+          hasError
+        />
+        <FieldErrorMessage
+          errorSeverity="critical"
+          message="Does not match"
+        />
+      </Label>
+    </Bracket>
     <Label field="phone" title="Number">
       <RawInput
         type="number"
@@ -60,7 +92,7 @@ This component is primarily used for simple text input. It's also great as a hid
         onChange={() => {}}
       />
     </Label>
-  </Box>
+  </div>
 </Playground>
 
 ### Props
