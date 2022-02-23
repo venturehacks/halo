@@ -1,6 +1,7 @@
 const path = require('path');
 const rootDirectory = path.resolve(__dirname, '../..');
 const haloDirectory = path.resolve(rootDirectory, 'packages/halo');
+const svgoConfig = require('../../svgo.config.js');
 
 exports.onCreateWebpackConfig = ({
   stage,
@@ -14,6 +15,7 @@ exports.onCreateWebpackConfig = ({
 
   // remove `.svg` extension handler from all gatsby webpack
   // loaders so that we can inject one true loader: @svgr/webpack
+  // additional explanation: https://github.com/venturehacks/halo/pull/144
   config.module.rules = config.module.rules.map(rule => {
     if (!rule.test) {
       return rule;
@@ -35,61 +37,8 @@ exports.onCreateWebpackConfig = ({
     use: {
       loader: '@svgr/webpack',
       options: {
-        // NOTE(drew): loader uses svgo@1.x,
-        // whereas everywhere else we use svgo@2.x
-        // 2.x introduced a different config file
-        // format, so we cannot use svgo.config.js
-        // as is. Thanksfully, we don't 100% need
-        // SVGO on the documentation site. The SVGs
-        // load, look OK, and use currentColor.
         svgo: true,
-        // svgo@1.x configuration format
-        svgoConfig: {
-          plugins: [
-            {
-              removeViewBox: false,
-            },
-            {
-              prefixIds: {
-                prefix: 'halo',
-              },
-            },
-            {
-              removeRasterImages: true,
-            },
-
-            {
-              removeDimensions: true,
-            },
-            {
-              removeScriptElement: true,
-            },
-            {
-              removeOffCanvasPaths: true,
-            },
-            {
-              addClassesToSVGElement: {
-                className: 'haloIcon w-6 max-w-full',
-              },
-            },
-            {
-              convertColors: {
-                currentColor: '#385075',
-              },
-            },
-            // {
-            //   removeAttrs: {
-            //     preserveCurrentColor: true,
-            //     attrs: '(fill|stroke)'
-            //   }
-            // },
-            {
-              addAttributesToSVGElement: {
-                attributes: ['fill="currentColor"'],
-              },
-            },
-          ],
-        },
+        svgoConfig, // svgo@1.x configuration format
       },
     },
     include: [path.resolve(haloDirectory, 'src')],

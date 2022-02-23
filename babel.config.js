@@ -3,6 +3,9 @@ const presets = ['babel-preset-gatsby', '@babel/preset-typescript'];
 
 const svgoConfig = require('./svgo.config.js');
 
+// NOTE(drew): Required for Jest.
+// Please note that Gatsby does not leverage this transform.
+// Gatsby uses @svgr/webpack (see gatsby-node.js)
 const plugins = [['inline-react-svg', { svgo: svgoConfig }]];
 
 module.exports = {
