@@ -250,6 +250,9 @@ module.exports = {
   variants: {
     extend: {
       margin: ['last'],
+      backgroundColor: ['disabled'],
+      borderColor: ['disabled'],
+      textColor: ['disabled'],
     },
   },
 };
