@@ -1,14 +1,17 @@
 // https://github.com/svg/svgo/#built-in-plugins
 
 module.exports = {
-  // js2svg: {
-  //   indent: 2,
-  // },
+  js2svg: {
+    indent: 2,
+  },
   plugins: [
     {
       name: 'preset-default',
       params: {
         overrides: {
+          convertColors: {
+            currentColor: '#385075',
+          },
           removeViewBox: false,
         },
       },
@@ -17,12 +20,6 @@ module.exports = {
       name: 'prefixIds',
       params: {
         prefix: 'halo',
-      },
-    },
-    {
-      name: 'convertColors',
-      params: {
-        currentColor: true,
       },
     },
     {
@@ -42,6 +39,20 @@ module.exports = {
       name: 'addClassesToSVGElement',
       params: {
         className: 'haloIcon',
+      },
+    },
+    {
+      name: 'removeAttrs',
+      params: {
+        attrs: '(fill)',
+        // attrs: '(fill|stroke)' ,
+        preserveCurrentColor: true,
+      },
+    },
+    {
+      name: 'addAttributesToSVGElement',
+      params: {
+        attributes: [{ fill: 'currentColor' }],
       },
     },
   ],
