@@ -9,18 +9,6 @@ import {
 
 import styles from './styles.module.scss';
 
-export interface RawSelectOption {
-  disabled?: boolean;
-  label: string;
-  value?: string;
-}
-
-export interface RawSelectOptgroup {
-  disabled?: boolean;
-  label: string;
-  options: RawSelectOption[];
-}
-
 export interface RawSelectProps
   extends RawInputBase,
     Omit<React.SelectHTMLAttributes<HTMLSelectElement>, 'size'> {
@@ -37,6 +25,18 @@ export interface RawSelectProps
   options: (RawSelectOption | RawSelectOptgroup)[];
 }
 
+export interface RawSelectOption {
+  disabled?: boolean;
+  label: string;
+  value?: string;
+}
+
+export interface RawSelectOptgroup {
+  disabled?: boolean;
+  label: string;
+  options: RawSelectOption[];
+}
+
 function RawSelect({
   className,
   options = [],
@@ -49,8 +49,8 @@ function RawSelect({
   return (
     <select
       className={classNames(
-        styles.component,
         rawInputClassNames({ errorSeverity, hasError, intrinsicWidth, size }),
+        styles.component,
         className,
       )}
       {...rest}
