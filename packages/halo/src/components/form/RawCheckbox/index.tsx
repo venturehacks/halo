@@ -77,4 +77,6 @@ function RawCheckbox({
   );
 }
 
+RawCheckbox.displayName = 'RawCheckbox';
+
 export { RawCheckbox };

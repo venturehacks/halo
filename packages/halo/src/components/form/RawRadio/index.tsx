@@ -82,4 +82,6 @@ function RawRadio({
   );
 }
 
+RawRadio.displayName = 'RawRadio';
+
 export { RawRadio };
