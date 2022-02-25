@@ -183,7 +183,7 @@ function rawInputClassNames({
   transparent,
 }: RawInputBase = {}) {
   return classNames(
-    'text-dark-aaaa text-md max-w-full placeholder-dark-a',
+    'text-dark-aaaa text-md max-w-full placeholder-dark-a mb-6',
     transparent
       ? 'bg-transparent shadow-none outline-none'
       : 'bg-white rounded focus:border-2',
