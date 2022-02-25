@@ -29,6 +29,10 @@
     @apply border-slate-300 my-6;
   }
 
+  ul {
+    @apply list-disc;
+  }
+
   pre.prism-code {
     @apply mt-2;
     @apply mb-10;
