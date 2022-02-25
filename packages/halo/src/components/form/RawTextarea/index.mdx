@@ -16,7 +16,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
 
 <Playground>
   <div className="max-w-lg">
-    <Label field="bio" title="Textarea" supportingText="Explicit rows, cols">
+    <Label field="bio" title="Textarea" byline="Explicit rows, cols">
       <RawTextarea
         name="bio"
         placeholder="Tell us about yourself..."
@@ -24,7 +24,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
         cols={40}
       />
     </Label>
-    <Label field="bio-warning" title="Personal Bio" supportingText="100% width">
+    <Label field="bio-warning" title="Personal Bio" byline="100% width">
       <RawTextarea
         name="bio"
         intrinsicWidth="100%"
@@ -32,7 +32,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
         value="foo bar baz"
       />
     </Label>
-    <Label field="bio-warning" title="Oops" supportingText="validation error">
+    <Label field="bio-warning" title="Oops" byline="validation error">
       <RawTextarea
         name="bio"
         intrinsicWidth="100%"

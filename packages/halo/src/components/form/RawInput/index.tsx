@@ -191,7 +191,7 @@ function rawInputClassNames({
     size === 'md' && 'px-3 py-2 h-10',
     size === 'lg' && 'p-3 h-12',
     !hasError && transparent && 'border-none',
-    !hasError && !transparent && 'border-slate-500 border',
+    !hasError && !transparent && 'border border-slate-500',
     // disabled
     'disabled:text-dark-a disabled:bg-slate-200 disabled:border-light-aa',
     // warning
