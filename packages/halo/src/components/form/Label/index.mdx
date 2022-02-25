@@ -6,21 +6,30 @@ route: /form/label
 
 import { Props, Playground } from 'docz';
 import { RawInput } from '../RawInput';
+import { RawRadio } from '../RawRadio';
 import { Label } from './';
-import { Box } from '../../structure/Box';
 
 # Label
 
-Wrap an input field with this component to surround with an accessible `<label>`, complete with title and supporting text. Unlike the raw form components that must be wrapped or manually wired up to a form library, `Label` works out of the box with no requirment for a form-connected wrapper.
+Wrap an input field or collection of fields (radios, checkboxes) in an accessible `<label>`.
+
+Read more: [Label (MDN Web Docs)](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label)
 
 ### Usage
 
 <Playground>
-  <Box align="stretch" maxWidth="500px">
-    <Label field="name" title="My field title" supportingText="Such supporting text">
+  <div className="max-w-xl">
+    <Label field="title" title="Title" byline="Wraps single input element">
       <RawInput />
     </Label>
-  </Box>
+    <Label field="iceCreamPreference" title="Ice cream preference" byline="Wrap collection of inputs that reference a single form field" containsFieldGroup>
+      <div className="flex flex-col gap-4 px-1">
+        <RawRadio label="Chocolate" checked />
+        <RawRadio label="Vanilla" />
+        <RawRadio label="Strawberry" />
+      </div>
+    </Label>
+  </div>
 </Playground>
 
 ### Props
