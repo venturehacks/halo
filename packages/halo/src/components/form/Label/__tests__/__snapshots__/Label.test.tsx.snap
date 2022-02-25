@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Label snapshot containsFieldGroup 1`] = `
+<fieldset
+  class="mb-6 border-none"
+  name="form-input--undefined"
+>
+  <legend
+    class="w-full mb-3"
+  >
+    <div
+      class="mb-1"
+    >
+      <div
+        class="text-dark-aaaa text-md font-medium antialiased"
+      >
+        Name
+      </div>
+      <div
+        class="text-dark-a text-sm"
+      >
+        Who are you?
+      </div>
+    </div>
+  </legend>
+  <input
+    checked=""
+    class="component warning"
+    id="chocolate"
+    type="radio"
+  />
+  <label
+    class="label asRadio"
+    for="chocolate"
+  >
+    Chocolate
+  </label>
+  <input
+    class="component warning"
+    id="vanilla"
+    type="radio"
+  />
+  <label
+    class="label asRadio"
+    for="vanilla"
+  >
+    Vanilla
+  </label>
+  <input
+    class="component warning"
+    id="strawberry"
+    type="radio"
+  />
+  <label
+    class="label asRadio"
+    for="strawberry"
+  >
+    Strawberry
+  </label>
+</fieldset>
+`;
+
+exports[`Label snapshot standard 1`] = `
+<label
+  class="mb-6"
+  for="form-input--undefined"
+>
+  <div
+    class="mb-1"
+  >
+    <div
+      class="text-dark-aaaa text-md font-medium antialiased"
+    >
+      Name
+    </div>
+    <div
+      class="text-dark-a text-sm"
+    >
+      Who are you?
+    </div>
+  </div>
+  <input
+    class="text-dark-aaaa text-md max-w-full placeholder-dark-a mb-6 bg-white rounded focus:border-2 px-3 py-2 h-10 border-slate-500 border disabled:text-dark-a disabled:bg-slate-200 disabled:border-light-aa w-full"
+    type="text"
+  />
+</label>
+`;
