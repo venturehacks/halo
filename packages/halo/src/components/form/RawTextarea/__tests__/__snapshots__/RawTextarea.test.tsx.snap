@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RawTextarea snapshot size lg 1`] = `
+<textarea
+  class="component text-dark-aaaa text-md max-w-full placeholder-dark-a mb-6 bg-white rounded focus:border-2 p-3 h-12 border-slate-500 border disabled:text-dark-a disabled:bg-slate-200 disabled:border-light-aa w-auto"
+>
+  large
+</textarea>
+`;
+
+exports[`RawTextarea snapshot size md 1`] = `
+<textarea
+  class="component text-dark-aaaa text-md max-w-full placeholder-dark-a mb-6 bg-white rounded focus:border-2 px-3 py-2 h-10 border-slate-500 border disabled:text-dark-a disabled:bg-slate-200 disabled:border-light-aa w-auto"
+>
+  medium
+</textarea>
+`;
+
+exports[`RawTextarea snapshot size sm 1`] = `
+<textarea
+  class="component text-dark-aaaa text-md max-w-full placeholder-dark-a mb-6 bg-white rounded focus:border-2 px-3 py-1 h-8 border-slate-500 border disabled:text-dark-a disabled:bg-slate-200 disabled:border-light-aa w-auto"
+>
+  small
+</textarea>
+`;

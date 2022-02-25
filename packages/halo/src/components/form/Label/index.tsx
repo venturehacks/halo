@@ -1,132 +1,118 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import {
-  Color,
-  ForwardedRefProps,
-  TextWeight,
-  withForwardedRef,
-} from '../../../lib';
-import { Span, SpanProps } from '../../core/Span';
+import { ForwardedRefProps, withForwardedRef } from '../../../lib';
 import { Tooltip } from '../../core/Tooltip';
 
-import styles from './styles.module.scss';
-
-type LabelPropsBase = Pick<SpanProps, 'weight' | 'color'> &
-  Omit<React.HTMLAttributes<HTMLLabelElement>, 'title'>;
+type LabelPropsBase = Omit<React.HTMLAttributes<HTMLLabelElement>, 'title'>;
 
 export interface LabelProps extends LabelPropsBase {
+  /**
+   * Supporting label under title
+   */
+  byline?: string;
+  /**
+   * Input field JSX
+   */
   children?: React.ReactNode;
   className?: string;
   /**
-   * set to true if wrapping a set of checkboxes or radio buttons
+   * Set `true` to wrap group of checkboxes or radios.
+   * Wraps content in fieldset and legend instead of label.
    * @default false
    */
   containsFieldGroup?: boolean;
   controlClassName?: string;
   /**
-   * Form field this label applies to. This should match the "name" prop on input elements.
+   * Form field name the label applies to.
    */
   field?: string;
-  isRequired?: boolean;
 
   /**
-   * Supporting title under title
+   * Mark field required with an asterisk + tooltip.
+   * @default false
    */
-  supportingText?: string;
+  isRequired?: boolean;
   /**
-   * Primary description of field
+   * Primary description
    */
-  title?: React.ReactNode;
+  title?: string;
 }
 
-LabelRaw.defaultProps = {
-  color: 'slate-900' as Color,
-  isRequired: false,
-  weight: 'medium' as TextWeight,
-};
-
 function LabelRaw({
+  byline,
   children,
   className,
+  color,
   containsFieldGroup,
   field,
   forwardedRef,
   isRequired,
-  supportingText,
   title,
-  controlClassName,
-  weight,
-  color,
   ...rest
 }: LabelProps & ForwardedRefProps<HTMLLabelElement>) {
   if (hasCheckboxOrRadio(children) && !containsFieldGroup) {
-    return (
-      <Span block error>
-        Label component for {title} must set containsFieldGroup prop to true
-        because it wraps checkboxes or radios
-      </Span>
+    throw new Error(
+      `Label component for ${title} (${field}) must set containsFieldGroup={true} when wrapping checkboxes or radios`,
     );
   }
 
-  const classes = classNames(
-    styles.component,
-    children && styles.hasControlChildren,
-    className,
-  );
   const id = `form-input--${field}`;
+  const containerClasses = classNames(children && 'mb-6', className);
 
-  const content = (
-    <div>
+  const labelContent = (
+    <div className="mb-1">
       {title && (
-        <div className={styles.title}>
-          <Span color={color} weight={weight}>
-            {title}
-          </Span>{' '}
+        <div className="text-dark-aaaa text-md font-medium antialiased">
+          {title}
           {isRequired && (
             <Tooltip content="Required">
-              <Span xxmuted>*</Span>
+              <span className="text-dark-aa">*</span>
             </Tooltip>
           )}
         </div>
       )}
-      {supportingText && (
-        <div className={styles.supportingText}>{supportingText}</div>
-      )}
+      {byline && <div className="text-dark-a text-sm">{byline}</div>}
     </div>
   );
 
+  // collection of radios, checkboxes
   if (containsFieldGroup) {
     return (
       <fieldset
         ref={(forwardedRef as unknown) as React.Ref<HTMLFieldSetElement>}
-        className={classNames(classes, styles.fieldset)}
+        className={classNames(containerClasses, 'border-none')}
         name={id}
       >
-        <legend className={styles.legend}>{content}</legend>
-        {children && (
-          <div className={classNames(styles.control, controlClassName)}>
-            {children}
-          </div>
-        )}
+        <legend className="w-full mb-3">{labelContent}</legend>
+        {children}
       </fieldset>
     );
   }
 
+  // single input (most common scenario)
   return (
-    <label ref={forwardedRef} className={classes} htmlFor={id} {...rest}>
-      {content}
-      {children && (
-        <div className={classNames(styles.control, controlClassName)}>
-          {children}
-        </div>
-      )}
+    <label
+      ref={forwardedRef}
+      className={containerClasses}
+      htmlFor={id}
+      {...rest}
+    >
+      {labelContent}
+      {children}
     </label>
   );
 }
 
+/**
+ * NOTE(drew):
+ * Not super happy with this clumsy old helper.
+ * Might delete later, as it only provides minor ergonomic benefit.
+ */
 function hasCheckboxOrRadio(children: React.ReactNode) {
   return React.Children.toArray(children).some((child: any) => {
+    // NOTE(drew): for this to work, one must set `displayName` on component
+    // ex: RawRadio.displayName = 'RawRadio';
     const title = child?.type?.displayName || child?.type?.title;
 
     if (typeof title !== 'string') {
@@ -134,10 +120,9 @@ function hasCheckboxOrRadio(children: React.ReactNode) {
     }
 
     return (
-      title &&
-      (title.includes('Checkbox') ||
-        title.includes('Radio') ||
-        title.includes('AtsField'))
+      title.includes('Checkbox') ||
+      title.includes('Radio') ||
+      title.includes('AtsField')
     );
   });
 }

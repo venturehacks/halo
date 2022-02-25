@@ -11,13 +11,13 @@ import { Box } from '../../structure/Box';
 
 # RawSelect
 
-📣 Raw input fields are designed to be [controlled](https://reactjs.org/docs/forms.html#controlled-components) by their smarter, form-connected parent. Be sure to provide an `onChange` handler and manually manage the current selected option via `value` prop.
+Raw input fields are designed to be controlled by a [smart, form-connected parent](https://github.com/venturehacks/AngelList/blob/master/frontend/talent/components/Form/TextField/index.tsx).
 
 ### Usage
 
 <Playground>
   <Label field="ice-cream" title="One True Ice Cream" supportingText="Select your favorite!" containsFieldGroup>
-    <Box row align="space-between" maxWidth="350px">
+    <Box row align="space-between" className="max-w-lg">
       <RawSelect
         name="ice-cream"
         value="vanilla"
@@ -43,12 +43,12 @@ import { Box } from '../../structure/Box';
   </Label>
 </Playground>
 
-### Supplying Options
+### Options
 
 ```jsx
 import { RawSelect, RawSelectOption } from 'halo';
 
-const OPTIONS: RawSelectOption[] = [
+const options: RawSelectOption[] = [
   { label: 'Chocolate', value: 'chocolate' },
   { label: 'Vanilla', value: 'vanilla' },
   { label: 'Strawberry', value: 'strawberry' },

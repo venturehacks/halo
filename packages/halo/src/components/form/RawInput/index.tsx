@@ -7,7 +7,10 @@ import {
   withForwardedRef,
 } from '../../../lib';
 
-type IconPosition = 'right' | 'left';
+export type FormInputIconPosition = 'right' | 'left';
+export type FormInputErrorSeverity = 'warning' | 'critical';
+export type FormInputIntrinsicWidth = 'auto' | '100%';
+export type FormInputSize = 'sm' | 'md' | 'lg';
 
 export interface RawInputProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
@@ -17,7 +20,7 @@ export interface RawInputProps
    * Since the most common callout is for validation errors, you shouldn't need to customize this
    * @default warning
    */
-  errorSeverity?: 'warning' | 'critical';
+  errorSeverity?: FormInputErrorSeverity;
   /**
    * Call out element that needs attention
    * @default false
@@ -38,13 +41,13 @@ export interface RawInputProps
    * left | right
    * @default left
    */
-  iconPosition?: IconPosition;
+  iconPosition?: FormInputIconPosition;
 
   /**
    * Grows as wide as container by default
    * @default 100%
    */
-  intrinsicWidth?: 'auto' | '100%';
+  intrinsicWidth?: FormInputIntrinsicWidth;
 
   /**
    * Field name
@@ -57,7 +60,7 @@ export interface RawInputProps
    * Magnitude of input field
    * @default md
    */
-  size?: 'sm' | 'md' | 'lg';
+  size?: FormInputSize;
   /**
    * Use transparent style
    * @default false
@@ -82,6 +85,9 @@ export interface RawInputProps
     | 'week';
 }
 
+export const inputBaseClasses =
+  'text-dark-aaaa text-md max-w-full placeholder-dark-a';
+
 function RawInputRaw({
   className,
   errorSeverity = 'warning',
@@ -100,32 +106,16 @@ function RawInputRaw({
     <input
       ref={forwardedRef}
       className={classNames(
-        'text-dark-aaaa text-md max-w-full placeholder-dark-a',
-        size === 'sm' && 'px-3 py-1',
-        size === 'md' && 'px-3 py-2',
-        size === 'lg' && 'p-3',
-        transparent
-          ? 'bg-transparent shadow-none outline-none'
-          : 'bg-white rounded focus:border-2',
-        !hasError && transparent && 'border-none',
-        !hasError && !transparent && 'border-slate-500 border',
-        // disabled
-        'disabled:text-dark-a disabled:bg-slate-200 disabled:border-light-aa',
-        // warning
-        hasError &&
-          errorSeverity === 'warning' &&
-          'border-dark-warning border-2',
-        // error
-        hasError &&
-          errorSeverity === 'critical' &&
-          'border-dark-error border-2',
-        hasError && FORM_FIELD_ERROR_IDENTIFIER,
+        rawInputClassNames({
+          errorSeverity,
+          hasError,
+          intrinsicWidth,
+          size,
+          transparent,
+        }),
         // allow space for icon
         icon && iconPosition === 'left' && 'pl-11',
         icon && iconPosition === 'right' && 'pr-11',
-        // width behavior
-        intrinsicWidth === 'auto' && 'w-auto',
-        intrinsicWidth === '100%' && 'w-full',
         className,
       )}
       type={type}
@@ -161,4 +151,58 @@ function RawInputRaw({
 
 const RawInput = withForwardedRef<RawInputProps, HTMLInputElement>(RawInputRaw);
 
-export { RawInput };
+export interface RawInputBase {
+  /**
+   * Validation error = warning
+   * Server error = critical
+   * @default warning
+   */
+  errorSeverity?: FormInputErrorSeverity;
+  /**
+   * Truthy value indicates an error is present on this field.
+   */
+  hasError?: boolean;
+  intrinsicWidth?: FormInputIntrinsicWidth;
+  /**
+   * Magnitude of input field
+   * @default md
+   */
+  size?: FormInputSize;
+  /**
+   * Apply transparent style
+   * @default false
+   */
+  transparent?: boolean;
+}
+
+function rawInputClassNames({
+  errorSeverity,
+  hasError,
+  intrinsicWidth,
+  size,
+  transparent,
+}: RawInputBase = {}) {
+  return classNames(
+    'text-dark-aaaa text-md max-w-full placeholder-dark-a mb-6',
+    transparent
+      ? 'bg-transparent shadow-none outline-none'
+      : 'bg-white rounded focus:border-2',
+    size === 'sm' && 'px-3 py-1 h-8',
+    size === 'md' && 'px-3 py-2 h-10',
+    size === 'lg' && 'p-3 h-12',
+    !hasError && transparent && 'border-none',
+    !hasError && !transparent && 'border-slate-500 border',
+    // disabled
+    'disabled:text-dark-a disabled:bg-slate-200 disabled:border-light-aa',
+    // warning
+    hasError && errorSeverity === 'warning' && 'border-dark-warning border-2',
+    // error
+    hasError && errorSeverity === 'critical' && 'border-dark-error border-2',
+    hasError && FORM_FIELD_ERROR_IDENTIFIER,
+    // width behavior
+    intrinsicWidth === 'auto' && 'w-auto',
+    intrinsicWidth === '100%' && 'w-full',
+  );
+}
+
+export { RawInput, rawInputClassNames };

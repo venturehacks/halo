@@ -1,14 +1,5 @@
 @import 'halo';
 
-.component {
-  width: auto;
-  @include font($family: primary);
-
-  &.bordered {
-    @include input;
-  }
-
-  &.transparent {
-    @include input($style: transparent);
-  }
+.component.component {
+  height: auto;
 }
