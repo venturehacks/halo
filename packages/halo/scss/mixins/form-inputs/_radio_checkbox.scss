@@ -6,7 +6,7 @@ $pill-border-radius: tempo(3);
 
 /**
  * @deprecated (drew) 2022-02-25
- * @mixin input is deprecated as of 0.15.2
+ * @mixin deprecated as of 0.15.2
  * Please do not use in new code.
 */
 @mixin input-radio($args...) {
@@ -15,7 +15,7 @@ $pill-border-radius: tempo(3);
 
 /**
  * @deprecated (drew) 2022-02-25
- * @mixin input is deprecated as of 0.15.2
+ * @mixin deprecated as of 0.15.2
  * Please do not use in new code.
 */
 @mixin input-checkbox {
@@ -28,7 +28,7 @@ $pill-border-radius: tempo(3);
 
 /**
  * @deprecated (drew) 2022-02-25
- * @mixin input is deprecated as of 0.15.2
+ * @mixin deprecated as of 0.15.2
  * Please do not use in new code.
 */
 @mixin hide-default-browser-input {

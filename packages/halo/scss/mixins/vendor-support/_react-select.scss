@@ -1,3 +1,8 @@
+/**
+ * @deprecated (drew) 2022-02-25
+ * @mixin deprecated as of 0.15.2
+ * Please do not use in new code.
+*/
 @mixin input-react-select {
   :global {
     .select__control {

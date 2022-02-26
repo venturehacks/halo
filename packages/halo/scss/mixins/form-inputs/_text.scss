@@ -5,7 +5,7 @@ $raw-input-height-transparent: 48px !default;
 
 /**
  * @deprecated (drew) 2022-02-25
- * @mixin input is deprecated as of 0.15.2
+ * @mixin deprecated as of 0.15.2
  * Please do not use in new code.
 */
 @mixin input($size: md, $style: normal) {
