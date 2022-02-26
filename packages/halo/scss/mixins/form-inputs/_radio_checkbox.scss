@@ -1,15 +1,23 @@
 @import './base';
 
-$raw-checkbox-size: tempo(2.5) !default;
-$raw-radio-size: tempo(2.5) !default;
-
+$raw-checkbox-size: tempo(2);
+$raw-radio-size: tempo(2);
 $pill-border-radius: tempo(3);
 
-// alias for input-checkbox
+/**
+ * @deprecated (drew) 2022-02-25
+ * @mixin input is deprecated as of 0.15.2
+ * Please do not use in new code.
+*/
 @mixin input-radio($args...) {
   @include input-checkbox($args...);
 }
 
+/**
+ * @deprecated (drew) 2022-02-25
+ * @mixin input is deprecated as of 0.15.2
+ * Please do not use in new code.
+*/
 @mixin input-checkbox {
   @include hide-default-browser-input;
 
@@ -18,21 +26,16 @@ $pill-border-radius: tempo(3);
   }
 }
 
-// accessible way of hiding the default input
-// https://webaim.org/techniques/css/invisiblecontent/
+/**
+ * @deprecated (drew) 2022-02-25
+ * @mixin input is deprecated as of 0.15.2
+ * Please do not use in new code.
+*/
 @mixin hide-default-browser-input {
   opacity: 0;
   position: absolute;
   -webkit-appearance: none;
   z-index: -2;
-}
-
-@mixin input-border-checked-thick {
-  border: 2px solid $blue-500;
-}
-
-@mixin input-border-hover {
-  border-color: $blue-500;
 }
 
 %input-label-base {
@@ -52,7 +55,6 @@ $pill-border-radius: tempo(3);
 
   [disabled] + &,
   [disabled]:checked + & {
-    opacity: 0.5;
     cursor: default;
     pointer-events: none;
   }
@@ -60,7 +62,7 @@ $pill-border-radius: tempo(3);
 
 @mixin input-label-checkbox {
   @extend %input-label-base;
-  padding-left: tempo(3.5);
+  padding-left: tempo(3);
   line-height: $raw-checkbox-size;
 
   // empty checkbox
@@ -68,29 +70,31 @@ $pill-border-radius: tempo(3);
     left: 0;
     height: $raw-checkbox-size;
     width: $raw-checkbox-size;
-    @include input-border-slate;
+    border: 1px solid $dark-aaaa;
     background-color: $white;
+    border-radius: 3px;
+  }
+
+  // hover = punchy blue border
+  // &:hover::before {
+  //   @include input-border-hover;
+  // }
+
+  // checked
+  :checked + &::before {
+    border-color: $blue-500;
+    background-color: $blue-500;
   }
 
   // checkmark
   &::after {
-    left: 6px;
-    top: 7px;
+    left: 3px;
+    top: 4px;
     height: 5px;
-    width: 9px;
-    border-left: 2px solid $blue-500;
-    border-bottom: 2px solid $blue-500;
+    width: 10px;
+    border-left: 2px solid white;
+    border-bottom: 2px solid white;
     transform: rotate(-45deg);
-  }
-
-  // hover = punchy blue border
-  &:hover::before {
-    @include input-border-hover;
-  }
-
-  // checked = thick border
-  :checked + &::before {
-    @include input-border-checked-thick;
   }
 
   // checked
@@ -105,6 +109,8 @@ $pill-border-radius: tempo(3);
 
   [disabled] + &,
   [disabled]:checked + & {
+    color: $dark-a;
+
     &::before,
     &::after {
       @include input-disabled;
@@ -113,17 +119,19 @@ $pill-border-radius: tempo(3);
 
   // warning color
   .hasError.warning + & {
-    &::before,
-    &::after {
+    color: $dark-warning;
+    &::before {
       border-color: $dark-warning;
+      background-color: $dark-warning;
     }
   }
 
   // critical color
   .hasError.critical + & {
-    &::before,
-    &::after {
-      border-color: $dark-warning;
+    color: $dark-error;
+    &::before {
+      border-color: $dark-error;
+      background-color: $dark-error;
     }
   }
 }
@@ -131,71 +139,73 @@ $pill-border-radius: tempo(3);
 @mixin input-label-radio {
   @extend %input-label-base;
   line-height: $raw-radio-size;
-  padding-left: tempo(3.5);
+  padding-left: tempo(3);
 
-  // empty radio
+  // circle outline
   &::before {
     left: 0;
     height: $raw-radio-size;
     width: $raw-radio-size;
     @include border-circle;
-    border: 1px solid $slate-400;
+    border: 1px solid $dark-aaaa;
     background-color: $white;
   }
 
-  // selected radio
-  &::after {
-    left: 7px;
-    top: 7px;
+  // circle outline: selected radio
+  :checked + &::before {
+    border-color: $blue-500;
     background-color: $blue-500;
+  }
+
+  // inner dot: unselected radio
+  &::after {
+    left: 5px;
+    top: 5px;
+    background-color: white;
     width: 6px;
     height: 6px;
     @include border-circle;
   }
 
-  // hover = punchy blue border
-  &:hover::before {
-    @include input-border-hover;
-    @include border-circle;
-  }
-
-  // checked = thick border
-  :checked + &::before {
-    @include input-border-checked-thick;
-  }
-
-  // checked
+  // inner dot: selected radio
   :checked + &::after {
     content: ' ';
   }
 
-  // unchecked
+  // inner dot: unselected radio (hide)
   :not(:checked) + &::after {
     content: none;
   }
 
   [disabled] + &,
   [disabled]:checked + & {
-    border-color: $slate-300;
-    &::before,
+    color: $dark-a;
+
+    &::before {
+      border-color: $dark-aa;
+      background-color: $slate-100;
+    }
+
     &::after {
-      @include input-disabled;
+      background-color: $dark-aa;
     }
   }
 
   // warning color
   .hasError.warning + & {
-    &::before,
-    &::after {
+    color: $dark-warning;
+    &::before {
+      background-color: $dark-warning;
       border-color: $dark-warning;
     }
   }
 
   // critical color
   .hasError.critical + & {
-    &::before,
-    &::after {
-      border-color: $dark-warning;
+    color: $dark-error;
+    &::before {
+      background-color: $dark-error;
+      border-color: $dark-error;
     }
   }
 }
@@ -217,7 +227,7 @@ $pill-border-radius: tempo(3);
 }
 
 @mixin input-label-pill {
-  border: 1px solid $slate-200;
+  border: 1px solid $dark-aaaa;
   border-radius: $pill-border-radius;
   padding: 10px tempo(2.5) 10px 38px;
 
@@ -229,17 +239,15 @@ $pill-border-radius: tempo(3);
 
   // selected
   [type='checkbox'] + &::after {
-    left: 18px;
-    top: 17px;
+    left: 15px;
+    top: 15px;
   }
   [type='radio'] + &::after {
-    left: 19px;
-    top: 17px;
+    left: 17px;
+    top: 15px;
   }
 
   &:hover {
-    border-color: $blue-500;
-
     &::before {
       @include border-circle;
     }
@@ -249,7 +257,16 @@ $pill-border-radius: tempo(3);
     border-color: $blue-500;
   }
 
+  [disabled] + &,
   [disabled]:checked + & {
-    border-color: $slate-300;
+    border-color: rgba($dark-a, 0.5);
+
+    &::before {
+      border-color: $slate-100;
+    }
+
+    &::after {
+      border-color: $dark-a;
+    }
   }
 }

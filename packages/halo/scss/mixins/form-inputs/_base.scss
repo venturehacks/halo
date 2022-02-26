@@ -7,7 +7,7 @@
 @mixin input-disabled {
   @include font($color: $dark-a);
   background-color: $slate-200;
-  border-color: $slate-300;
+  border-color: $dark-aa;
 }
 
 @mixin input-border-focused {

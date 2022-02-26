@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 import { ControlAlignment, FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
+// import { rawInputClassNames } from '../RawInput';
 
 import styles from './styles.module.scss';
 
@@ -49,12 +50,12 @@ function RawCheckbox({
     <>
       <input
         className={classNames(
-          styles.component,
-          className,
+          styles.input,
           hasError && styles.hasError,
           hasError && FORM_FIELD_ERROR_IDENTIFIER,
           errorSeverity === 'warning' && styles.warning,
           errorSeverity === 'critical' && styles.critical,
+          className,
         )}
         id={id}
         type="checkbox"

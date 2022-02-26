@@ -1,18 +1,17 @@
 @import 'halo';
 
-.component {
-  @include halo-element-base;
-  @include input-checkbox;
+.input {
+  // hide-default-browser-input
+  opacity: 0;
+  position: absolute;
+  -webkit-appearance: none;
+  z-index: -2;
 }
 
 // Label - larger clickable area is also responsible for rendering checked state
 
-.label {
-  @include halo-element-base;
-
-  &.controlAlignCenter {
-    @include input-control-center;
-  }
+.label.controlAlignCenter {
+  @include input-control-center;
 }
 
 .checkbox {

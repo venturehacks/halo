@@ -55,7 +55,7 @@ function RawRadio({
     <>
       <input
         className={classNames(
-          styles.component,
+          styles.input,
           className,
           hasError && styles.hasError,
           hasError && FORM_FIELD_ERROR_IDENTIFIER,
