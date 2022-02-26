@@ -7,15 +7,16 @@
       width: 100%;
 
       &:hover {
-        @include input-border-hover;
+        border-color: $blue-500;
       }
 
       &.select__control-is-focused,
       &.select__control-menu-is-open.select__control-menu-is-open {
-        @include input-border-hover;
+        border-color: $blue-500;
       }
       &.select__control-is-focused {
-        @include input-border-focused;
+        box-shadow: 0 0 0 4px $blue-200;
+        outline: none;
       }
       &.select__control-menu-is-open.select__control-menu-is-open {
         box-shadow: none;
@@ -92,7 +93,7 @@
   &.error {
     :global {
       .select__control {
-        @include input-border-warning;
+        border: 1px solid $dark-warning;
       }
     }
   }
