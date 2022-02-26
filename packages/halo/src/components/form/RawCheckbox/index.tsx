@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 import { ControlAlignment, FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
-// import { rawInputClassNames } from '../RawInput';
+import { FormInputErrorSeverity } from '../RawInput';
 
 import styles from './styles.module.scss';
 
@@ -15,10 +15,11 @@ export interface RawCheckboxProps
    */
   controlAlignment?: ControlAlignment;
   /**
-   * Since the most common callout is for validation errors, you shouldn't need to customize this.
+   * Validation error = warning
+   * Server error = critical
    * @default warning
    */
-  errorSeverity?: 'warning' | 'critical';
+  errorSeverity?: FormInputErrorSeverity;
   /**
    * Call out element that needs attention.
    * @default false

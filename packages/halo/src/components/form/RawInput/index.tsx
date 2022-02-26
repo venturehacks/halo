@@ -17,7 +17,8 @@ export interface RawInputProps
   className?: string;
 
   /**
-   * Since the most common callout is for validation errors, you shouldn't need to customize this
+   * Validation error = warning
+   * Server error = critical
    * @default warning
    */
   errorSeverity?: FormInputErrorSeverity;
