@@ -4,7 +4,6 @@ $pilltag-height: 28px;
 $pilltag-border-radius: 13px;
 
 .component {
-  @include halo-element-base; // TODO: deprecate
   @include text-truncate;
   display: inline-block;
   border-radius: $pilltag-border-radius;
