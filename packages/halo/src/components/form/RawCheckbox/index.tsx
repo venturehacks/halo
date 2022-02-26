@@ -32,11 +32,14 @@ export interface RawCheckboxProps
   label: React.ReactNode;
   labelClassName?: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement> | (() => void);
+  /**
+   * Control element styling.
+   * @default checkbox
+   */
   variant?: 'checkbox' | 'pill' | 'toggle-switch';
 }
 
 function RawCheckbox({
-  variant = 'checkbox',
   className,
   controlAlignment = 'top',
   errorSeverity = 'warning',
@@ -44,7 +47,8 @@ function RawCheckbox({
   id,
   label,
   labelClassName,
-  type,
+  variant = 'checkbox',
+  type, // deliberately discard
   ...rest
 }: RawCheckboxProps) {
   return (

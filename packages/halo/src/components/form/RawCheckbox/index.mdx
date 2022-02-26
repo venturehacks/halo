@@ -7,7 +7,6 @@ route: /form/raw-checkbox
 import { Props, Playground } from 'docz';
 import { Label } from '../Label';
 import { RawCheckbox } from './';
-import { Box } from '../../structure/Box';
 
 # RawCheckbox
 
@@ -17,7 +16,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
 
 <Playground>
   <Label field="ice-cream" title="Checkbox" containsFieldGroup>
-    <Box row align="space-between" maxWidth="700px" padding>
+    <div className="flex flex-row gap-10 max-w-xl mb-8">
       <RawCheckbox
         name="ice-cream"
         value="chocolate"
@@ -48,10 +47,10 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
         checked
         disabled
       />
-    </Box>
+    </div>
   </Label>
   <Label field="ice-cream" title="Pill" containsFieldGroup>
-    <Box row align="space-between" maxWidth="500px" padding>
+    <div className="flex flex-row gap-10 max-w-xl mb-8">
       <RawCheckbox
         variant="pill"
         name="ice-cream"
@@ -76,10 +75,10 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
         checked
         disabled
       />
-    </Box>
+    </div>
   </Label>
   <Label field="ice-cream" title="Toggle Switch" containsFieldGroup>
-    <Box row align="space-between" maxWidth="500px" padding>
+    <div className="flex flex-row gap-10 max-w-xl mb-8">
       <RawCheckbox
         variant="toggle-switch"
         name="ice-cream"
@@ -104,7 +103,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
         checked
         disabled
       />
-    </Box>
+    </div>
   </Label>
 </Playground>
 
