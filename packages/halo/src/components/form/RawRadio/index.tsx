@@ -8,11 +8,6 @@ import styles from './styles.module.scss';
 
 export interface RawRadioProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
-  /**
-   * set to true to visually render radio elements as checkboxes
-   * @default false
-   */
-  asCheckbox?: boolean;
   className?: string;
   /**
    * Vertical alignment of radio element
@@ -37,20 +32,23 @@ export interface RawRadioProps
   label: React.ReactNode;
   labelClassName?: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement> | (() => void);
-  variant?: 'plain' | 'pill';
+  /**
+   * Control element styling.
+   * @default radio
+   */
+  variant?: 'radio' | 'checkbox' | 'pill';
 }
 
 function RawRadio({
   className,
-  type,
+  controlAlignment = 'top',
+  errorSeverity = 'warning',
+  hasError,
   id,
   label,
   labelClassName,
-  asCheckbox = false,
-  variant = 'plain',
-  controlAlignment = 'top',
-  hasError,
-  errorSeverity = 'warning',
+  type, // deliberately discard
+  variant = 'radio',
   ...rest
 }: RawRadioProps) {
   return (
@@ -71,9 +69,9 @@ function RawRadio({
       <label
         className={classNames(
           labelClassName,
-          styles.label,
-          asCheckbox ? styles.asCheckbox : styles.asRadio,
-          variant === 'pill' && styles.pill,
+          variant === 'radio' && styles.radio,
+          variant === 'checkbox' && styles.checkbox,
+          variant === 'pill' && [styles.radio, styles.pill],
           controlAlignment === 'center' && styles.controlAlignCenter,
         )}
         htmlFor={id}

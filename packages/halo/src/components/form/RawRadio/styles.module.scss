@@ -14,20 +14,18 @@
 
 // Label - larger clickable area is also responsible for rendering checked state
 
-.label {
-  &.asCheckbox {
-    @include input-label-checkbox;
-  }
+.checkbox {
+  @include input-label-checkbox;
+}
 
-  &.asRadio {
-    @include input-label-radio;
-  }
+.radio {
+  @include input-label-radio;
+}
 
-  &.pill {
-    @include input-label-pill;
-  }
+.pill {
+  @include input-label-pill;
+}
 
-  &.controlAlignCenter {
-    @include input-control-center;
-  }
+.controlAlignCenter {
+  @include input-control-center;
 }
