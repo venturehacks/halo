@@ -6,11 +6,15 @@
   position: absolute;
   -webkit-appearance: none;
   z-index: -2;
+
+  &[disabled] {
+    pointer-events: none;
+  }
 }
 
 // Label - larger clickable area is also responsible for rendering checked state
 
-.label.controlAlignCenter {
+.controlAlignCenter {
   @include input-control-center;
 }
 
