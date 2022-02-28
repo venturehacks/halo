@@ -2,6 +2,7 @@ import classNames from 'classnames';
 import React from 'react';
 
 import { ControlAlignment, FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
+import { FormInputErrorSeverity } from '../RawInput';
 
 import styles from './styles.module.scss';
 
@@ -14,10 +15,11 @@ export interface RawCheckboxProps
    */
   controlAlignment?: ControlAlignment;
   /**
-   * Since the most common callout is for validation errors, you shouldn't need to customize this.
+   * Validation error = warning
+   * Server error = critical
    * @default warning
    */
-  errorSeverity?: 'warning' | 'critical';
+  errorSeverity?: FormInputErrorSeverity;
   /**
    * Call out element that needs attention.
    * @default false
@@ -30,11 +32,14 @@ export interface RawCheckboxProps
   label: React.ReactNode;
   labelClassName?: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement> | (() => void);
+  /**
+   * Control element styling.
+   * @default checkbox
+   */
   variant?: 'checkbox' | 'pill' | 'toggle-switch';
 }
 
 function RawCheckbox({
-  variant = 'checkbox',
   className,
   controlAlignment = 'top',
   errorSeverity = 'warning',
@@ -42,19 +47,20 @@ function RawCheckbox({
   id,
   label,
   labelClassName,
-  type,
+  variant = 'checkbox',
+  type, // deliberately discard
   ...rest
 }: RawCheckboxProps) {
   return (
     <>
       <input
         className={classNames(
-          styles.component,
-          className,
+          styles.input,
           hasError && styles.hasError,
           hasError && FORM_FIELD_ERROR_IDENTIFIER,
           errorSeverity === 'warning' && styles.warning,
           errorSeverity === 'critical' && styles.critical,
+          className,
         )}
         id={id}
         type="checkbox"

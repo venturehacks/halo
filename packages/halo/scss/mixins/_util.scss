@@ -1,8 +1,3 @@
-// 24px => 24
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
-}
-
 @function has-unit($v) {
   @return not unitless($v);
 }
@@ -12,8 +7,4 @@
     $map: map-get($map, $key);
   }
   @return $map;
-}
-
-@mixin halo-element-base {
-  // TODO(drew): actually deprecate on next pass
 }

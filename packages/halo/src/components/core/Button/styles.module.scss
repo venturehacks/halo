@@ -1,7 +1,6 @@
 @import 'halo';
 
 .component {
-  @include halo-element-base; // TODO: deprecate
   @include border-rounded;
   @include font-antialiased;
   border: 1px solid transparent;
@@ -22,7 +21,6 @@
   &:focus {
     // probably should not turn this off due to accessibility.
     outline: 0;
-    @include input-border-focused;
   }
 
   &[disabled] {

@@ -1,28 +1,31 @@
 @import 'halo';
 
-.component {
-  @include halo-element-base;
-  @include input-checkbox;
+.input {
+  // hide-default-browser-input
+  opacity: 0;
+  position: absolute;
+  -webkit-appearance: none;
+  z-index: -2;
+
+  &[disabled] {
+    pointer-events: none;
+  }
 }
 
 // Label - larger clickable area is also responsible for rendering checked state
 
-.label {
-  @include halo-element-base;
+.checkbox {
+  @include input-label-checkbox;
+}
 
-  &.asCheckbox {
-    @include input-label-checkbox;
-  }
+.radio {
+  @include input-label-radio;
+}
 
-  &.asRadio {
-    @include input-label-radio;
-  }
+.pill {
+  @include input-label-pill;
+}
 
-  &.pill {
-    @include input-label-pill;
-  }
-
-  &.controlAlignCenter {
-    @include input-control-center;
-  }
+.controlAlignCenter {
+  @include input-control-center;
 }

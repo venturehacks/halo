@@ -50,12 +50,3 @@ Returns the width, in pixels, of an element that is N grid cells wide.
   @return not unitless($v);
 }
 ```
-
-## strip-unit
-
-```scss
-// 24px => 24
-@function strip-unit($value) {
-  @return $value / ($value * 0 + 1);
-}
-```

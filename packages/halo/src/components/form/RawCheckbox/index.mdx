@@ -7,17 +7,16 @@ route: /form/raw-checkbox
 import { Props, Playground } from 'docz';
 import { Label } from '../Label';
 import { RawCheckbox } from './';
-import { Box } from '../../structure/Box';
 
 # RawCheckbox
 
-📣 Raw input fields are designed to be [controlled](https://reactjs.org/docs/forms.html#controlled-components) by their smarter, form-connected parent. Be sure to provide an `onChange` handler to manually manage the state of `checked`
+Raw input fields are designed to be controlled by a [smart, form-connected parent](https://github.com/venturehacks/AngelList/blob/master/frontend/talent/components/Form/TextField/index.tsx).
 
 ### Usage
 
 <Playground>
   <Label field="ice-cream" title="Checkbox" containsFieldGroup>
-    <Box row align="space-between" maxWidth="700px" padding>
+    <div className="flex flex-row gap-10 max-w-xl mb-8">
       <RawCheckbox
         name="ice-cream"
         value="chocolate"
@@ -48,10 +47,10 @@ import { Box } from '../../structure/Box';
         checked
         disabled
       />
-    </Box>
+    </div>
   </Label>
   <Label field="ice-cream" title="Pill" containsFieldGroup>
-    <Box row align="space-between" maxWidth="500px" padding>
+    <div className="flex flex-row gap-10 max-w-xl mb-8">
       <RawCheckbox
         variant="pill"
         name="ice-cream"
@@ -76,10 +75,10 @@ import { Box } from '../../structure/Box';
         checked
         disabled
       />
-    </Box>
+    </div>
   </Label>
   <Label field="ice-cream" title="Toggle Switch" containsFieldGroup>
-    <Box row align="space-between" maxWidth="500px" padding>
+    <div className="flex flex-row gap-10 max-w-xl mb-8">
       <RawCheckbox
         variant="toggle-switch"
         name="ice-cream"
@@ -104,7 +103,7 @@ import { Box } from '../../structure/Box';
         checked
         disabled
       />
-    </Box>
+    </div>
   </Label>
 </Playground>
 

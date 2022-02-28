@@ -7,17 +7,16 @@ route: /form/raw-radio
 import { Props, Playground } from 'docz';
 import { Label } from '../Label';
 import { RawRadio } from './';
-import { Box } from '../../structure/Box';
 
 # RawRadio
 
-📣 Raw input fields are designed to be [controlled](https://reactjs.org/docs/forms.html#controlled-components) by their smarter, form-connected parent. Be sure to provide an `onChange` handler to manually manage the state of `checked`
+Raw input fields are designed to be controlled by a [smart, form-connected parent](https://github.com/venturehacks/AngelList/blob/master/frontend/talent/components/Form/TextField/index.tsx).
 
 ### Usage
 
 <Playground>
   <Label field="ice-cream" title="One True Ice Cream" byline="What's your favorite?" containsFieldGroup>
-    <Box row align="space-between" maxWidth="500px">
+    <div className="flex flex-row gap-10 max-w-xl mb-8">
       <RawRadio
         name="ice-cream"
         value="chocolate"
@@ -31,13 +30,46 @@ import { Box } from '../../structure/Box';
         onChange={() => {}}
         checked
       />
+    </div>
+  </Label>
+  <Label field="disabled-ice-cream" title="Disabled" byline="Sold out" containsFieldGroup>
+    <div className="flex flex-row gap-10 max-w-xl mb-8">
       <RawRadio
-        name="ice-cream"
-        value="strawberry"
-        label="Strawberry"
+        name="disabled-ice-cream"
+        value="banana"
+        label="Banana"
         onChange={() => {}}
+        disabled
       />
-    </Box>
+      <RawRadio
+        name="disabled-ice-cream"
+        value="rocky road"
+        label="Rocky Road"
+        onChange={() => {}}
+        checked
+        disabled
+      />
+    </div>
+  </Label>
+  <Label field="another-ice-cream" title="With errors" byline="not quite sprinkles" containsFieldGroup>
+    <div className="flex flex-row gap-10 max-w-xl">
+      <RawRadio
+        name="another-ice-cream"
+        value="caramel"
+        label="Caramel"
+        onChange={() => {}}
+        hasError
+      />
+      <RawRadio
+        name="another-ice-cream"
+        value="brownie"
+        label="Brownie"
+        onChange={() => {}}
+        errorSeverity="critical"
+        checked
+        hasError
+      />
+    </div>
   </Label>
 </Playground>
 

@@ -4,8 +4,8 @@ $raw-input-height: 50px !default;
 $raw-input-height-transparent: 48px !default;
 
 /**
- * DEPRECATED(drew):
- * @mixin input is deprecated as of 0.15.2
+ * @deprecated (drew) 2022-02-25
+ * @mixin deprecated as of 0.15.2
  * Please do not use in new code.
 */
 @mixin input($size: md, $style: normal) {
@@ -14,12 +14,13 @@ $raw-input-height-transparent: 48px !default;
   padding: tempo(1.5) tempo(2);
 
   @if $style == normal {
-    @include input-border-slate;
-    border-width: 1px;
-    border-style: solid;
+    border: 1px solid $slate-400;
+    border-radius: 4px;
     background-color: white;
   } @else if $style == transparent {
-    @include input-border-transparent;
+    border: none;
+    box-shadow: none;
+    outline: none;
     background-color: transparent;
   }
 
@@ -29,14 +30,15 @@ $raw-input-height-transparent: 48px !default;
 
   &:hover {
     @if $style == normal {
-      @include input-border-hover;
+      border-color: $blue-500;
     }
   }
 
   &:focus {
     @if $style == normal {
-      @include input-border-hover;
-      @include input-border-focused;
+      border-color: $blue-500;
+      box-shadow: 0 0 0 4px $blue-200;
+      outline: none;
     }
   }
 
@@ -63,11 +65,11 @@ $raw-input-height-transparent: 48px !default;
 
   &.hasError {
     &.warning {
-      @include input-border-warning;
+      border: 1px solid $dark-warning;
     }
 
     &.critical {
-      @include input-border-error;
+      border: 1px solid $dark-error;
     }
   }
 }

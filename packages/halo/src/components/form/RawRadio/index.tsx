@@ -2,16 +2,12 @@ import classNames from 'classnames';
 import React from 'react';
 
 import { ControlAlignment, FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
+import { FormInputErrorSeverity } from '../RawInput';
 
 import styles from './styles.module.scss';
 
 export interface RawRadioProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
-  /**
-   * set to true to visually render radio elements as checkboxes
-   * @default false
-   */
-  asCheckbox?: boolean;
   className?: string;
   /**
    * Vertical alignment of radio element
@@ -19,10 +15,11 @@ export interface RawRadioProps
    */
   controlAlignment?: ControlAlignment;
   /**
-   * Since the most common callout is for validation errors, you shouldn't need to customize this.
+   * Validation error = warning
+   * Server error = critical
    * @default warning
    */
-  errorSeverity?: 'warning' | 'critical';
+  errorSeverity?: FormInputErrorSeverity;
   /**
    * Call out element that needs attention
    * @default false
@@ -35,27 +32,30 @@ export interface RawRadioProps
   label: React.ReactNode;
   labelClassName?: string;
   onChange?: React.ChangeEventHandler<HTMLInputElement> | (() => void);
-  variant?: 'plain' | 'pill';
+  /**
+   * Control element styling.
+   * @default radio
+   */
+  variant?: 'radio' | 'checkbox' | 'pill';
 }
 
 function RawRadio({
   className,
-  type,
+  controlAlignment = 'top',
+  errorSeverity = 'warning',
+  hasError,
   id,
   label,
   labelClassName,
-  asCheckbox = false,
-  variant = 'plain',
-  controlAlignment = 'top',
-  hasError,
-  errorSeverity = 'warning',
+  type, // deliberately discard
+  variant = 'radio',
   ...rest
 }: RawRadioProps) {
   return (
     <>
       <input
         className={classNames(
-          styles.component,
+          styles.input,
           className,
           hasError && styles.hasError,
           hasError && FORM_FIELD_ERROR_IDENTIFIER,
@@ -69,9 +69,9 @@ function RawRadio({
       <label
         className={classNames(
           labelClassName,
-          styles.label,
-          asCheckbox ? styles.asCheckbox : styles.asRadio,
-          variant === 'pill' && styles.pill,
+          variant === 'radio' && styles.radio,
+          variant === 'checkbox' && styles.checkbox,
+          variant === 'pill' && [styles.radio, styles.pill],
           controlAlignment === 'center' && styles.controlAlignCenter,
         )}
         htmlFor={id}

@@ -50,7 +50,7 @@ function FieldErrorMessage({
         'text-sm max-h-none overflow-hidden',
         preset === 'text-only' && styles.textOnly,
         preset === 'text-only' && 'whitespace-pre-wrap mt-1',
-        preset === 'block' && 'font-medium rounded py-2 px-4 mb-4',
+        preset === 'block' && 'font-medium antialiased rounded py-2 px-4 mb-4',
         errorSeverity === 'warning' && 'text-dark-warning',
         errorSeverity === 'warning' && preset === 'block' && 'bg-orange-100',
         errorSeverity === 'critical' && 'text-dark-error',

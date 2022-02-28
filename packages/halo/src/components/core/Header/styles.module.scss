@@ -1,7 +1,6 @@
 @import 'halo';
 
 .component {
-  @include halo-element-base; // TODO: deprecate
   margin: 0;
 
   &.flow {

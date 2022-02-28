@@ -1,20 +1,21 @@
 @import './base';
 
-$raw-toggle-switch-gutter-width: tempo(4.5) !default;
-$raw-toggle-switch-gutter-height: 12px !default;
-$raw-toggle-switch-knob-size: tempo(2.5) !default;
+$raw-toggle-switch-gutter-width: tempo(3.5) !default;
+$raw-toggle-switch-gutter-height: 10px !default;
+$raw-toggle-switch-knob-size: tempo(2) !default;
 
 @mixin input-label-toggle-switch-left {
   @extend %input-label-base;
-  padding-left: tempo(6);
+  padding-left: tempo(5);
   padding-right: tempo(1);
-  line-height: $raw-toggle-switch-gutter-height - 1px;
+
+  // line-height: $raw-toggle-switch-gutter-height - 1px;
   display: block;
 
   // switch gutter
   &::before {
     left: 0;
-    top: 4px;
+    top: 7px;
     border-radius: 7px;
     height: $raw-toggle-switch-gutter-height;
     width: $raw-toggle-switch-gutter-width;
@@ -24,19 +25,19 @@ $raw-toggle-switch-knob-size: tempo(2.5) !default;
   // toggle circle nub
   &::after {
     left: 0;
-    top: 0;
+    top: 4px;
     width: $raw-toggle-switch-knob-size;
     height: $raw-toggle-switch-knob-size;
     background-color: $white;
     @include border-circle;
-    border: 2px solid currentColor;
+    border: 1px solid currentColor;
   }
 
   // off (unchecked)
   :not(:checked) + & {
     &::before,
     &::after {
-      color: $slate-500;
+      color: #2b2823; // TODO(drew): GTM color;
     }
   }
 
@@ -72,34 +73,6 @@ $raw-toggle-switch-knob-size: tempo(2.5) !default;
     &::before,
     &::after {
       color: $dark-error;
-    }
-  }
-}
-
-@mixin input-label-toggle-switch-right {
-  @include input-label-toggle-switch-left;
-  padding-right: tempo(6);
-  padding-left: 0;
-  text-align: right;
-
-  // switch gutter
-  &::before {
-    right: 0;
-    left: auto;
-  }
-
-  // toggle circle nub
-  &::after {
-    right: tempo(2);
-    left: auto;
-  }
-
-  // on (checked)
-  :checked + & {
-    // move knob leftward to indicate 'on' state
-    &::after {
-      right: 0;
-      left: auto;
     }
   }
 }
