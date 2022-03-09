@@ -59,8 +59,8 @@ const iconDocs = iconNames
 
 const documentation = `---
 name: Icons
-menu: Core
-route: /core/icons
+menu: Icons
+route: /icons
 ---
 
 ${iconImport}
