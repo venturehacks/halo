@@ -33,13 +33,33 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
       />
       <RawCheckbox
         name="ice-cream"
-        value="vanilla"
-        label="Validation error"
+        value="strawberry"
+        label="Strawberry"
         onChange={() => {}}
-        hasError
+        checked
+        disabled
+      />
+    </div>
+  </Label>
+  <Label field="ice-cream" title="Toggle Switch" containsFieldGroup>
+    <div className="flex flex-row gap-10 max-w-xl mb-8">
+      <RawCheckbox
+        variant="toggle-switch"
+        name="ice-cream"
+        value="chocolate"
+        label="Chocolate"
+        onChange={() => {}}
+      />
+      <RawCheckbox
+        variant="toggle-switch"
+        name="ice-cream"
+        value="vanilla"
+        label="Vanilla"
+        onChange={() => {}}
         checked
       />
       <RawCheckbox
+        variant="toggle-switch"
         name="ice-cream"
         value="strawberry"
         label="Strawberry"
@@ -68,34 +88,6 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
       />
       <RawCheckbox
         variant="pill"
-        name="ice-cream"
-        value="strawberry"
-        label="Strawberry"
-        onChange={() => {}}
-        checked
-        disabled
-      />
-    </div>
-  </Label>
-  <Label field="ice-cream" title="Toggle Switch" containsFieldGroup>
-    <div className="flex flex-row gap-10 max-w-xl mb-8">
-      <RawCheckbox
-        variant="toggle-switch"
-        name="ice-cream"
-        value="chocolate"
-        label="Chocolate"
-        onChange={() => {}}
-      />
-      <RawCheckbox
-        variant="toggle-switch"
-        name="ice-cream"
-        value="vanilla"
-        label="Vanilla"
-        onChange={() => {}}
-        checked
-      />
-      <RawCheckbox
-        variant="toggle-switch"
         name="ice-cream"
         value="strawberry"
         label="Strawberry"
