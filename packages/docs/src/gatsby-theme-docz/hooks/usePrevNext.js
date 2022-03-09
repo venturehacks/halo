@@ -29,10 +29,10 @@ function usePrevNext(menus) {
     };
 
     // loop all groups until found
-    Object.keys(menus).some(groupKey => {
+    Object.keys(menus).some((groupKey) => {
       const basePath = groupKey.length > 0 ? [groupKey] : [];
       // loop all menu items in group until found
-      return menus[groupKey].some(menuItem => {
+      return menus[groupKey].some((menuItem) => {
         // if no sub-menus
         if (!menuItem.menu) {
           return checkItem(menuItem, basePath);
@@ -42,9 +42,9 @@ function usePrevNext(menus) {
           menu: menuItem.menu,
         };
         // check all sub-menu groups
-        return subMenuGroups.some(subGroup => {
+        return subMenuGroups.some((subGroup) => {
           // loop sub-menu items
-          return subGroup.menu.some(subItem => {
+          return subGroup.menu.some((subItem) => {
             // build path
             const path = [...basePath, subItem.name];
             if (subItem.submenu) path.push(subItem.submenu);

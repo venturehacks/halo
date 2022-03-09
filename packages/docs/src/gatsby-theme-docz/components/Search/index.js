@@ -18,7 +18,7 @@ const Search = ({ open, toggleOpen, className, ...rest }) => {
   const [results, setResults] = useState(null);
   const docs = useDocs();
 
-  const search = ev => {
+  const search = (ev) => {
     ev.preventDefault();
     const form = new FormData(ev.target);
     const q = form.get('query');

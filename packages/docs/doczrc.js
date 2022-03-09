@@ -22,10 +22,10 @@ export default {
   ],
   docgenConfig: {
     // NOTE(drew): filter out props that come from `node_modules`, such as React.HTMLAttributes<T>, otherwise we get noisy <Props> tables
-    propFilter: props => {
+    propFilter: (props) => {
       // NOTE(drew): nothing in this function will output to console, unfortunately
       if (props.declarations !== undefined && props.declarations.length > 0) {
-        const useProps = props.declarations.find(declaration => {
+        const useProps = props.declarations.find((declaration) => {
           const isHalo = declaration.fileName.includes('halo');
           const fromNodeModules = declaration.fileName.includes('node_modules');
           return isHalo || !fromNodeModules;
@@ -43,22 +43,24 @@ export default {
       return true;
     },
   },
-  filterComponents: files => {
+  filterComponents: (files) => {
     // NOTE(drew): Please leave this sanity debug output
     console.log('[Halo] Found source component files:', files);
-    const filteredFiles = files.filter(filepath => {
+    const filteredFiles = files.filter((filepath) => {
       const isTest = /\.(test|spec)\.(js|jsx|ts|tsx)$/.test(filepath);
       if (isTest) {
         return false;
       }
 
-      const isComponent = /^src\/components\/(core|form|structure)+\/.*\/*\.(ts|tsx)$/.test(
-        filepath,
-      );
+      const isComponent =
+        /^src\/components\/(core|form|structure)+\/.*\/*\.(ts|tsx)$/.test(
+          filepath,
+        );
 
-      const isComponentViaAncestor = /^\.\.\/halo\/src\/components\/(core|form|structure)+\/.*\/*\.(ts|tsx)$/.test(
-        filepath,
-      );
+      const isComponentViaAncestor =
+        /^\.\.\/halo\/src\/components\/(core|form|structure)+\/.*\/*\.(ts|tsx)$/.test(
+          filepath,
+        );
 
       return isComponent || isComponentViaAncestor;
     });

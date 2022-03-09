@@ -16,16 +16,13 @@ exports.onCreateWebpackConfig = ({
   // remove `.svg` extension handler from all gatsby webpack
   // loaders so that we can inject one true loader: @svgr/webpack
   // additional explanation: https://github.com/venturehacks/halo/pull/144
-  config.module.rules = config.module.rules.map(rule => {
+  config.module.rules = config.module.rules.map((rule) => {
     if (!rule.test) {
       return rule;
     }
 
     if (rule.test.toString().includes('svg')) {
-      const test = rule.test
-        .toString()
-        .replace('svg|', '')
-        .replace(/\//g, '');
+      const test = rule.test.toString().replace('svg|', '').replace(/\//g, '');
       return { ...rule, test: new RegExp(test) };
     } else {
       return rule;

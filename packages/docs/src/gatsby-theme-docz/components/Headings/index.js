@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { jsx } from 'theme-ui';
 import { Link } from './custom-styles';
 
-const heading = Tag => {
-  const Component = props => {
+const heading = (Tag) => {
+  const Component = (props) => {
     return !!props.id ? (
       <Tag {...props}>
         <Link

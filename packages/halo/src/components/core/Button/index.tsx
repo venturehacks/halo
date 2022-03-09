@@ -113,7 +113,7 @@ function ButtonRaw({
   if (href) {
     return (
       <a
-        ref={(forwardedRef as unknown) as React.Ref<HTMLAnchorElement>}
+        ref={forwardedRef as unknown as React.Ref<HTMLAnchorElement>}
         className={buttonClassNames}
         data-test="Button"
         href={href}

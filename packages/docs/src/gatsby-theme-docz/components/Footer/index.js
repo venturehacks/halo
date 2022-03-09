@@ -18,9 +18,9 @@ const Footer = ({ menus, updated }) => {
     return null;
   }
 
-  const buildPath = path => {
+  const buildPath = (path) => {
     if (!path || !path.length) return null;
-    return path.map(i => get(i, menuDisplayName) || i).join(' / ');
+    return path.map((i) => get(i, menuDisplayName) || i).join(' / ');
   };
 
   return (

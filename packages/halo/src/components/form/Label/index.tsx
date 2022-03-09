@@ -80,7 +80,7 @@ function LabelRaw({
   if (containsFieldGroup) {
     return (
       <fieldset
-        ref={(forwardedRef as unknown) as React.Ref<HTMLFieldSetElement>}
+        ref={forwardedRef as unknown as React.Ref<HTMLFieldSetElement>}
         className={classNames(containerClasses, 'border-none')}
         name={id}
       >

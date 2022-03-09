@@ -106,7 +106,7 @@ function TagRaw({
       {onClose && (
         <CloseIcon
           className={classNames(iconClassnames, 'opacity-50')}
-          onClick={e => {
+          onClick={(e) => {
             e.stopPropagation();
             onClose(e);
           }}

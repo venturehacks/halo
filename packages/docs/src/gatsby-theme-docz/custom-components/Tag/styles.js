@@ -4,7 +4,7 @@ const getBgColor = ({ type = 'default', theme }) => theme.colors[type];
 const getRadius = ({ circle, radius }) =>
   circle ? '50%' : typeof radius === 'number' ? `${radius}px` : radius || '2em';
 
-const small = circle => `
+const small = (circle) => `
   ${
     circle
       ? 'width: 1.3rem; height: 1.3rem; line-height: 1.25rem;'
@@ -12,7 +12,7 @@ const small = circle => `
   }
   font-size: .8em;
 `;
-const def = circle => `
+const def = (circle) => `
     ${
       circle
         ? 'width: 1.6rem; height: 1.6rem; line-height: 1.55rem;'
@@ -20,7 +20,7 @@ const def = circle => `
     }
   font-size: .9em;
 `;
-const medium = circle => `
+const medium = (circle) => `
   ${
     circle
       ? 'width: 2rem; height: 2rem; line-height: 1.95rem;'
@@ -28,7 +28,7 @@ const medium = circle => `
   }
   font-size: .95em;
 `;
-const large = circle => `
+const large = (circle) => `
   ${
     circle
       ? 'width: 2.5rem; height: 2.5rem; line-height: 2.45rem;'
