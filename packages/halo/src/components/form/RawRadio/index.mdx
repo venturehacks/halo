@@ -15,59 +15,81 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
 ### Usage
 
 <Playground>
-  <Label field="ice-cream" title="One True Ice Cream" byline="What's your favorite?" containsFieldGroup>
+  <Label field="ice-cream" title="Radio" containsFieldGroup>
     <div className="flex flex-row gap-10 max-w-xl mb-8">
       <RawRadio
         name="ice-cream"
         value="chocolate"
         label="Chocolate"
         onChange={() => {}}
+        checked
       />
       <RawRadio
         name="ice-cream"
         value="vanilla"
         label="Vanilla"
         onChange={() => {}}
-        checked
+      />
+      <RawRadio
+        name="ice-cream"
+        value="strawberry"
+        label="Strawberry"
+        onChange={() => {}}
+        disabled
       />
     </div>
   </Label>
-  <Label field="disabled-ice-cream" title="Disabled" byline="Sold out" containsFieldGroup>
+  <Label field="ice-cream-row-checkbox" title="Checkbox" byline="Looks like checkbox, behaves like radio" containsFieldGroup>
     <div className="flex flex-row gap-10 max-w-xl mb-8">
       <RawRadio
-        name="disabled-ice-cream"
-        value="banana"
-        label="Banana"
+        name="ice-cream-row-checkbox"
+        value="chocolate"
+        label="Chocolate"
         onChange={() => {}}
-        disabled
+        variant="checkbox"
+        checked
       />
       <RawRadio
-        name="disabled-ice-cream"
-        value="rocky road"
-        label="Rocky Road"
+        name="ice-cream-row-checkbox"
+        value="vanilla"
+        label="Vanilla"
+        variant="checkbox"
         onChange={() => {}}
-        checked
+      />
+      <RawRadio
+        name="ice-cream-row-checkbox"
+        value="strawberry"
+        label="Strawberry"
+        variant="checkbox"
+        onChange={() => {}}
         disabled
       />
     </div>
   </Label>
-  <Label field="another-ice-cream" title="With errors" byline="not quite sprinkles" containsFieldGroup>
-    <div className="flex flex-row gap-10 max-w-xl">
+  <Label field="ice-cream-row-pill" title="Pill" containsFieldGroup>
+    <div className="flex flex-row gap-10 max-w-xl mb-8">
       <RawRadio
-        name="another-ice-cream"
-        value="caramel"
-        label="Caramel"
+        variant="pill"
+        name="ice-cream-row-pill"
+        value="chocolate"
+        label="Chocolate"
         onChange={() => {}}
-        hasError
+        checked
       />
       <RawRadio
-        name="another-ice-cream"
-        value="brownie"
-        label="Brownie"
+        variant="pill"
+        name="ice-cream-row-pill"
+        value="vanilla"
+        label="Vanilla"
         onChange={() => {}}
-        errorSeverity="critical"
-        checked
-        hasError
+      />
+      <RawRadio
+        variant="pill"
+        name="ice-cream-row-pill"
+        value="strawberry"
+        label="Strawberry"
+        onChange={() => {}}
+        disabled
       />
     </div>
   </Label>
