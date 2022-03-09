@@ -1,6 +1,6 @@
 /** @jsx jsx */
 import { Global } from '@emotion/core';
-import { useConfig } from 'docz';
+import { useConfig, useCurrentDoc } from 'docz';
 import { Header } from 'gatsby-theme-docz/src/components/Header';
 import * as styles from 'gatsby-theme-docz/src/components/Layout/styles';
 import { MainContainer } from 'gatsby-theme-docz/src/components/MainContainer';
@@ -10,6 +10,7 @@ import PropTypes from 'prop-types';
 import { useRef, useState } from 'react';
 import { Box, Flex, jsx } from 'theme-ui';
 import useExtendedMenus from '../../hooks/useExtendedMenus';
+import { Banner } from '~/components/core/Banner';
 import Footer from '../Footer';
 import NavHeadings from '../NavHeadings';
 import { Content, globalStyles } from './custom-styles';
@@ -22,6 +23,7 @@ export const Layout = ({
   const {
     themeConfig: { mainContainer: { fullscreen, align = 'center' } = {} },
   } = useConfig();
+  const currentDoc = useCurrentDoc();
   const [query, setQuery] = useState('');
   const [open, setOpen] = useState(false);
   const ref = useRef();
@@ -69,7 +71,21 @@ export const Layout = ({
               }}
             >
               <Content>
-                <div>{children}</div>
+                {/* deprecation notice */}
+                {currentDoc && currentDoc.deprecated && (
+                  <Banner
+                    variant="warning"
+                    className="mb-8 max-w-2xl"
+                    constrain={false}
+                  >
+                    {currentDoc.name} is deprecated. Please do not introduce
+                    into new code.
+                  </Banner>
+                )}
+
+                {/* MDX Content */}
+                <div className="mdx-content">{children}</div>
+
                 <Footer updated={updated} menus={menus} />
               </Content>
               <NavHeadings />

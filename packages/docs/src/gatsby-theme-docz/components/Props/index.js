@@ -88,7 +88,7 @@ export const Props = (componentProps) => {
             <th width="22%">Name</th>
             <th width="30%">Type</th>
             <th width="9%">Default</th>
-            <th width="9%">Required</th>
+            <th width="80">Required</th>
             <th width="30%">Description</th>
           </tr>
         </thead>
@@ -110,7 +110,9 @@ export const Props = (componentProps) => {
                 )}
               </td>
               <td className="text-center">{prop.required ? '✅' : ''}</td>
-              <td className="text-dark-aa">{prop.description}</td>
+              <td className="text-dark-aa text-xs max-w-xs">
+                {prop.description}
+              </td>
             </tr>
           ))}
         </tbody>

@@ -3,6 +3,7 @@ import { useConfig, useCurrentDoc } from 'docz';
 import { ChevronDown } from 'gatsby-theme-docz/src/components/Icons';
 import * as styles from 'gatsby-theme-docz/src/components/NavGroup/styles';
 import { NavLink } from 'gatsby-theme-docz/src/components/NavLink';
+import { Tag } from '~/components/core/Tag';
 import { get } from 'lodash/fp';
 import PropTypes from 'prop-types';
 import React from 'react';
@@ -34,16 +35,44 @@ export const NavGroup = ({ item, sidebarRef }) => {
     menuUi = items.map((inlineMenu) => {
       if (inlineMenu.name === NO_GROUP) {
         return inlineMenu.menu.map((submenu) => {
+          console.log('submenu');
+          console.log(submenu);
           if (currentDoc.route === submenu.route) {
             return (
               <NavLink key={submenu.id} item={submenu} ref={currentDocRef}>
-                {get(submenu.name, menuDisplayName) || submenu.name}
+                <span className={submenu.deprecated && 'text-dark-a'}>
+                  {get(submenu.name, menuDisplayName) || submenu.name}
+                </span>
+
+                {submenu.deprecated && (
+                  <Tag size="xs" color="gray" className="ml-2">
+                    deprecated
+                  </Tag>
+                )}
+
+                {submenu.new && (
+                  <Tag color="green" size="xs" className="ml-2">
+                    new
+                  </Tag>
+                )}
               </NavLink>
             );
           }
           return (
             <NavLink key={submenu.id} item={submenu}>
-              {get(submenu.name, menuDisplayName) || submenu.name}
+              <span className={submenu.deprecated && 'text-dark-a'}>
+                {get(submenu.name, menuDisplayName) || submenu.name}
+              </span>
+              {submenu.deprecated && (
+                <Tag size="xs" color="gray" className="ml-2">
+                  deprecated
+                </Tag>
+              )}
+              {submenu.new && (
+                <Tag color="green" size="xs" className="ml-2">
+                  new
+                </Tag>
+              )}
             </NavLink>
           );
         });
