@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import { CloseIcon } from '../../icons';
+import { AlertOutlineIcon, CheckIcon, CloseIcon } from '../../icons';
 
 export type BannerVariant = 'info' | 'warning' | 'success' | 'error';
 
@@ -64,10 +64,13 @@ function Banner({
         {variant === 'error' && (
           <CloseIcon className="block text-red-700 w-6" />
         )}
-        {/* <WarningTriangleIcon
-          className={classNames(variant === 'notice' && 'block')}
-        /> */}
-        {/* <CheckmarkIcon className={classNames(variant === 'success' && 'block')} /> */}
+        {variant === 'warning' && (
+          <AlertOutlineIcon className="block text-dark-warning w-6" />
+        )}
+        {variant === 'success' && (
+          <CheckIcon className="block text-dark-success w-6" />
+        )}
+
         {/* <InfoIcon className={classNames(variant === 'info' && 'block')} /> */}
       </aside>
       <div className="flex-1">
