@@ -57,9 +57,9 @@ describe('InterfaceHeader', () => {
         expect(component).toMatchSnapshot();
       });
 
-      test('subdivision', () => {
+      test('subsection', () => {
         const component = render(
-          <InterfaceHeader title="Diversity" subdivision />,
+          <InterfaceHeader title="Diversity" subsection />,
         );
 
         expect(component).toMatchSnapshot();
