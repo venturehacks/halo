@@ -5,6 +5,7 @@ import {
   ForwardedRefProps,
   withForwardedRef,
 } from '../../../lib/withForwardedRef';
+
 import { CloseIcon } from '../../icons';
 
 export type TagColor = 'blue' | 'gray' | 'green' | 'orange' | 'purple' | 'red';
@@ -71,7 +72,7 @@ function TagRaw({
     shape === 'pill' && 'rounded-full',
     shape === 'rectangle' && 'rounded-md',
     size === '2xs' && 'gap-1 text-3xs h-4 px-2 py-1',
-    size === 'xs' && 'gap-1 text-2xs h-6 px-2 py-1.5',
+    size === 'xs' && 'gap-1 text-2xs h-5 px-2 py-1',
     size === 'sm' && 'gap-2 text-xs h-8 px-3 py-2',
     size === 'md' && 'gap-2 text-md h-10 px-3 py-2',
   );
