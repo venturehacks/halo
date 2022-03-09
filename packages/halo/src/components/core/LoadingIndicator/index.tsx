@@ -56,7 +56,7 @@ function LoadingIndicator({
   const Component =
     alternate || variant === 'alternate' ? ClipLoader : ScaleLoader;
 
-  // @ts-ignore
+  // @ts-expect-error first argument is acceptable
   const indicator = React.createElement(Component, props);
 
   if (bare) {

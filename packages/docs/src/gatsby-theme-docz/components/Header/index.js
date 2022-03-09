@@ -34,8 +34,8 @@ export const Header = ({ onOpen }) => {
     setColorMode(colorMode === 'light' ? 'dark' : 'light');
   };
 
-  const toggleSearch = val => {
-    setDrawerOpen(prev => (val !== undefined ? !!val : !prev));
+  const toggleSearch = (val) => {
+    setDrawerOpen((prev) => (val !== undefined ? !!val : !prev));
   };
 
   const ui = (

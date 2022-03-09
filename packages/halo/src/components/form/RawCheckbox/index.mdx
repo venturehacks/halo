@@ -22,52 +22,15 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
         value="chocolate"
         label="Chocolate"
         onChange={() => {}}
-        checked={false}
+        checked
       />
       <RawCheckbox
         name="ice-cream"
         value="vanilla"
         label="Vanilla"
         onChange={() => {}}
-        checked
       />
       <RawCheckbox
-        name="ice-cream"
-        value="vanilla"
-        label="Validation error"
-        onChange={() => {}}
-        hasError
-        checked
-      />
-      <RawCheckbox
-        name="ice-cream"
-        value="strawberry"
-        label="Strawberry"
-        onChange={() => {}}
-        checked
-        disabled
-      />
-    </div>
-  </Label>
-  <Label field="ice-cream" title="Pill" containsFieldGroup>
-    <div className="flex flex-row gap-10 max-w-xl mb-8">
-      <RawCheckbox
-        variant="pill"
-        name="ice-cream"
-        value="chocolate"
-        label="Chocolate"
-        onChange={() => {}}
-      />
-      <RawCheckbox
-        variant="pill"
-        name="ice-cream"
-        value="vanilla"
-        label="Vanilla"
-        onChange={() => {}}
-        checked
-      />
-      <RawCheckbox
-        variant="pill"
         name="ice-cream"
         value="strawberry"
         label="Strawberry"
@@ -85,6 +48,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
         value="chocolate"
         label="Chocolate"
         onChange={() => {}}
+        checked
       />
       <RawCheckbox
         variant="toggle-switch"
@@ -92,10 +56,37 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
         value="vanilla"
         label="Vanilla"
         onChange={() => {}}
-        checked
       />
       <RawCheckbox
         variant="toggle-switch"
+        name="ice-cream"
+        value="strawberry"
+        label="Strawberry"
+        onChange={() => {}}
+        checked
+        disabled
+      />
+    </div>
+  </Label>
+  <Label field="ice-cream" title="Pill" containsFieldGroup>
+    <div className="flex flex-row gap-10 max-w-xl mb-8">
+      <RawCheckbox
+        variant="pill"
+        name="ice-cream"
+        value="chocolate"
+        label="Chocolate"
+        onChange={() => {}}
+        checked
+      />
+      <RawCheckbox
+        variant="pill"
+        name="ice-cream"
+        value="vanilla"
+        label="Vanilla"
+        onChange={() => {}}
+      />
+      <RawCheckbox
+        variant="pill"
         name="ice-cream"
         value="strawberry"
         label="Strawberry"

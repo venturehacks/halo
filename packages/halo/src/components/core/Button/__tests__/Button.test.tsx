@@ -16,10 +16,7 @@ describe('Button', () => {
 
       expect(dismiss).toBeCalledTimes(0);
 
-      wrapper
-        .find(`[data-test="Button"]`)
-        .last()
-        .simulate('click');
+      wrapper.find(`[data-test="Button"]`).last().simulate('click');
 
       expect(dismiss).toBeCalledTimes(1);
     });

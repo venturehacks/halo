@@ -107,7 +107,7 @@ describe('Avatar', () => {
       it(`adds the right height and width to the img tag`, () => {
         const sizes = Object.keys(IMAGE_SIZES) as AvatarSize[];
 
-        sizes.forEach(size => {
+        sizes.forEach((size) => {
           const component = render(<Avatar {...sharedProps} size={size} />);
           const image = component.find('img');
 

@@ -50,10 +50,10 @@ export const Sidebar = React.forwardRef(
               </SearchContainer>
             ) : null}
             {menus &&
-              Object.keys(menus).map(key => (
+              Object.keys(menus).map((key) => (
                 <Group key={key}>
                   {key !== NO_GROUP ? <Label>{key}</Label> : null}
-                  {(menus[key] || []).map(menu => {
+                  {(menus[key] || []).map((menu) => {
                     if (!menu) return null;
                     if (!menu.route) {
                       return (

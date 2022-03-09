@@ -38,7 +38,7 @@ function Banner({
   const [isDismissed, setIsDismissed] = React.useState(false);
 
   const handleDismiss = React.useCallback(
-    e => {
+    (e) => {
       setIsDismissed(true);
       if (onDismiss) {
         onDismiss(e);

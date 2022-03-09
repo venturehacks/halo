@@ -83,7 +83,7 @@ function SidebarCell({
           <button
             aria-checked={isStarred}
             aria-label={`Star '${title}'`}
-            onClick={e => {
+            onClick={(e) => {
               e.stopPropagation();
               onStarClick(e);
             }}

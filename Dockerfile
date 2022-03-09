@@ -1,4 +1,4 @@
-FROM node:14.17.5-alpine AS base
+FROM node:16.14.0-alpine AS base
 # 'silence' git-related build args to leverage cache
 ARG GIT_COMMIT_SHA
 ENV GIT_COMMIT_SHA ''
@@ -31,7 +31,7 @@ RUN yarn workspace halo install || \
 ##### BUILD
 #####
 
-FROM node:14.17.5-alpine AS build
+FROM node:16.14.0-alpine AS build
 
 # 'silence' git-related build args to leverage cache
 ARG GIT_COMMIT_SHA
@@ -45,7 +45,7 @@ ENV GIT_COMMIT_MESSAGE ''
 
 # 🌳 monorepo
 WORKDIR /app/
-COPY svgo.config.js tsconfig.base.json babel.config.js .eslintrc.js stylelint.config.js tslint.json .prettierrc.js .prettierignore .size-limit.js ./
+COPY svgo.config.js tsconfig.base.json babel.config.js .eslintrc.js stylelint.config.js .prettierrc.js .prettierignore .size-limit.js ./
 COPY bin ./bin
 
 # from base

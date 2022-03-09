@@ -1,5 +1,4 @@
 import { toTheme } from '@theme-ui/typography';
-// tslint:disable-next-line: no-submodule-imports
 import baseTheme from 'gatsby-theme-docz/src/theme/index';
 import { merge } from 'lodash';
 import githubTheme from 'typography-theme-github';

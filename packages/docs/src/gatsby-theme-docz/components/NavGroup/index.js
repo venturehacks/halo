@@ -31,9 +31,9 @@ export const NavGroup = ({ item, sidebarRef }) => {
   if (visible) {
     // has sub-menus
     const items = extendedMenu || [{ name: NO_GROUP, menu }];
-    menuUi = items.map(inlineMenu => {
+    menuUi = items.map((inlineMenu) => {
       if (inlineMenu.name === NO_GROUP) {
-        return inlineMenu.menu.map(submenu => {
+        return inlineMenu.menu.map((submenu) => {
           if (currentDoc.route === submenu.route) {
             return (
               <NavLink key={submenu.id} item={submenu} ref={currentDocRef}>

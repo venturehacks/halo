@@ -1,5 +1,3 @@
-/* eslint-disable sort-keys-fix/sort-keys-fix */
-
 /**
  * Separate jest config file used for package task
  * yarn run test:dev
@@ -15,7 +13,7 @@ const config = {
   verbose: true,
   // Unit tests only.
   projects: defaultConfig.projects.filter(
-    project => project.displayName === 'unit',
+    (project) => project.displayName === 'unit',
   ),
   // NOTE(drew): coming Jest 27+, not ready
   // extensionsToTreatAsEsm: ['.ts', '.mjs'],

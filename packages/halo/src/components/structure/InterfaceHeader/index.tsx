@@ -6,7 +6,7 @@ import {
   withForwardedRef,
 } from '../../../lib/withForwardedRef';
 
-export type InterfaceHeaderLevel = 'page' | 'section' | 'subdivision' | 'mini';
+export type InterfaceHeaderLevel = 'page' | 'section' | 'subsection' | 'mini';
 
 /* eslint-disable typescript-sort-keys/interface */
 export interface InterfaceHeaderProps
@@ -24,10 +24,10 @@ export interface InterfaceHeaderProps
    */
   page?: boolean;
   /**
-   * Optional shorthand for level="subdivision"
+   * Optional shorthand for level="subsection"
    * @default false
    */
-  subdivision?: boolean;
+  subsection?: boolean;
   /**
    * Optional shorthand for level="section"
    * @default false
@@ -44,25 +44,25 @@ export interface InterfaceHeaderProps
 /* eslint-enable typescript-sort-keys/interface */
 
 function InterfaceHeaderRaw({
+  byline,
   className,
-  level,
-  page,
-  section,
-  subdivision,
-  mini,
   flow,
   forwardedRef,
+  level,
+  mini,
+  page,
+  section,
+  subsection,
   title,
-  byline,
   ...rest
 }: InterfaceHeaderProps & ForwardedRefProps<HTMLHeadingElement>) {
-  if (!level && !page && !section && !subdivision && !mini) {
+  if (!level && !page && !section && !subsection && !mini) {
     throw new Error('[Halo InterfaceHeader] must specify `level`');
   }
 
   const isPage = page || level === 'page';
   const isSection = section || level === 'section';
-  const isSubdivision = subdivision || level === 'subdivision';
+  const isSubsection = subsection || level === 'subsection';
   const isMini = mini || level === 'mini';
 
   return (
@@ -72,11 +72,11 @@ function InterfaceHeaderRaw({
         'text-dark-aaaa font-medium antialiased',
         isPage && 'text-xl',
         isSection && 'text-lg',
-        isSubdivision && 'text-md',
+        isSubsection && 'text-md',
         isMini && 'text-sm',
         flow && isPage && 'mb-6',
         flow && isSection && 'mb-4',
-        flow && isSubdivision && 'mb-4',
+        flow && isSubsection && 'mb-4',
         flow && isMini && 'mb-4',
         className,
       )}
@@ -91,7 +91,7 @@ function InterfaceHeaderRaw({
               'font-normal',
               isPage && 'text-md mt-2',
               isSection && 'text-md mt-1',
-              isSubdivision && 'text-sm mt-0.5',
+              isSubsection && 'text-sm mt-0.5',
               isMini && 'text-xs',
             )}
           >

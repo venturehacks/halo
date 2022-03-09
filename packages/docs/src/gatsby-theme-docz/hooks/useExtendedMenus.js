@@ -4,9 +4,9 @@ import { values } from 'lodash/fp';
 
 export const NO_GROUP = '';
 
-const buildSubMenus = menuItems => {
+const buildSubMenus = (menuItems) => {
   const map = {};
-  const extendedMenu = menuItems.map(item => {
+  const extendedMenu = menuItems.map((item) => {
     if (!item.menu) return item;
 
     const grouped = item.menu.reduce((ac, subItem) => {
@@ -60,10 +60,10 @@ const buildGroups = (menuItems, groups) => {
 
   // group menu items
   const grouped = groupKeys
-    .filter(key => Array.isArray(groups[key]))
+    .filter((key) => Array.isArray(groups[key]))
     .reduce((acc, key) => {
       // map menu item to group key
-      acc[key] = groups[key].map(group => {
+      acc[key] = groups[key].map((group) => {
         const val = menusObject[group];
         delete menusObject[group];
         return val;

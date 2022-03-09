@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import React from 'react';
 import { TagContainer } from './styles';
 
-const Tag = props => <TagContainer {...props} />;
+const Tag = (props) => <TagContainer {...props} />;
 
 Tag.propTypes = {
   /**

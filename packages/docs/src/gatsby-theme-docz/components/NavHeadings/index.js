@@ -40,7 +40,7 @@ const NavHeadings = () => {
             <Heading>{icon} Contents</Heading>
             {scrollspy ? (
               <Scrollspy
-                items={headings.map(heading => heading.slug)}
+                items={headings.map((heading) => heading.slug)}
                 currentClassName="current"
               >
                 {ui}

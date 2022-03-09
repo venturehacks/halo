@@ -39,7 +39,7 @@ exports[`InterfaceHeader snapshot hierarchy section 1`] = `
 </header>
 `;
 
-exports[`InterfaceHeader snapshot hierarchy subdivision 1`] = `
+exports[`InterfaceHeader snapshot hierarchy subsection 1`] = `
 <header
   class="text-dark-aaaa font-medium antialiased text-md"
 >

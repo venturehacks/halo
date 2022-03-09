@@ -27,7 +27,7 @@ export const Layout = ({
   const ref = useRef();
   const menus = useExtendedMenus({ query });
 
-  const handleChange = ev => {
+  const handleChange = (ev) => {
     setQuery(ev.target.value);
   };
 
@@ -42,7 +42,7 @@ export const Layout = ({
     <Flex sx={{ '& > div': { flex: '1 1 auto' } }} data-testid="layout">
       <Global styles={globalStyles} />
       <Box sx={styles.main}>
-        <Header onOpen={() => setOpen(s => !s)} />
+        <Header onOpen={() => setOpen((s) => !s)} />
         <div sx={styles.wrapper}>
           <Sidebar
             ref={ref}

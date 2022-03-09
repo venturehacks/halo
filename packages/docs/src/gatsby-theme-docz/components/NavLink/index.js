@@ -18,9 +18,9 @@ const Container = styled.div`
 `;
 
 const getHeadings = (route, docs) => {
-  const doc = docs.find(item => item.route === route);
+  const doc = docs.find((item) => item.route === route);
   const headings = get('headings', doc);
-  return headings ? headings.filter(heading => heading.depth === 2) : [];
+  return headings ? headings.filter((heading) => heading.depth === 2) : [];
 };
 
 const getCurrentHash = () => {
@@ -59,7 +59,7 @@ export const NavLink = React.forwardRef(({ item, ...props }, ref) => {
         ref={ref}
       />
       {showHeadings &&
-        headings.map(heading => (
+        headings.map((heading) => (
           <Link
             key={heading.slug}
             to={`${to}#${heading.slug}`}

@@ -2,7 +2,7 @@
 
 exports[`Label snapshot containsFieldGroup 1`] = `
 <fieldset
-  class="mb-6 border-none"
+  class="block mb-6 border-none"
   name="form-input--undefined"
 >
   <legend
@@ -25,34 +25,34 @@ exports[`Label snapshot containsFieldGroup 1`] = `
   </legend>
   <input
     checked=""
-    class="component warning"
+    class="input warning"
     id="chocolate"
     type="radio"
   />
   <label
-    class="label asRadio"
+    class="radio"
     for="chocolate"
   >
     Chocolate
   </label>
   <input
-    class="component warning"
+    class="input warning"
     id="vanilla"
     type="radio"
   />
   <label
-    class="label asRadio"
+    class="radio"
     for="vanilla"
   >
     Vanilla
   </label>
   <input
-    class="component warning"
+    class="input warning"
     id="strawberry"
     type="radio"
   />
   <label
-    class="label asRadio"
+    class="radio"
     for="strawberry"
   >
     Strawberry
@@ -62,7 +62,7 @@ exports[`Label snapshot containsFieldGroup 1`] = `
 
 exports[`Label snapshot standard 1`] = `
 <label
-  class="mb-6"
+  class="block mb-6"
   for="form-input--undefined"
 >
   <div
@@ -80,7 +80,7 @@ exports[`Label snapshot standard 1`] = `
     </div>
   </div>
   <input
-    class="text-dark-aaaa text-md max-w-full placeholder-dark-a mb-6 bg-white rounded focus:border-2 px-3 py-2 h-10 border border-slate-500 disabled:text-dark-a disabled:bg-slate-200 disabled:border-light-aa w-full"
+    class="text-dark-aaaa text-md max-w-full placeholder-dark-a bg-white rounded focus:border-2 px-3 py-2 h-10 border border-slate-500 disabled:text-dark-a disabled:bg-slate-200 disabled:border-light-aa w-full"
     type="text"
   />
 </label>

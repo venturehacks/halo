@@ -1,5 +1,5 @@
-/* eslint-disable sort-keys-fix/sort-keys-fix */
 module.exports = {
+  root: true,
   extends: ['angellist'],
   parserOptions: {
     tsconfigRootDir: __dirname,
@@ -10,18 +10,6 @@ module.exports = {
     ],
   },
   rules: {
-    '@typescript-eslint/tslint/config': [
-      'error',
-      {
-        rules: {
-          'no-implicit-dependencies': [
-            true,
-            'dev',
-            ['~', 'enzyme', '@wojtekmaj/enzyme-adapter-react-17'],
-          ],
-        },
-      },
-    ],
     'import/extensions': 'off',
     '@typescript-eslint/no-empty-function': 'off',
     '@typescript-eslint/array-type': [
@@ -30,6 +18,8 @@ module.exports = {
         default: 'array',
       },
     ],
+    // NOTE(drew): this is throwing false positives
+    '@typescript-eslint/no-unused-vars': 'off',
     // NOTE(drew):
     // Turning off import/*, as it's busted on monorepo's.
     // Fix is in latest release, but need to upgrade
@@ -44,10 +34,5 @@ module.exports = {
     //     peerDependencies: false,
     //   },
     // ],
-    // TODO: new rules from recommended in ESLint 7
-    '@typescript-eslint/explicit-module-boundary-types': 'off', // TODO-research
-    '@typescript-eslint/ban-types': 'off', // TODO-research. {} is a banned type.
-    '@typescript-eslint/ban-ts-comment': 'off', // TODO-enabled in shared config. Annotate ts-ignore's with comment.
-    '@typescript-eslint/no-non-null-asserted-optional-chain': 'off', // TODO-this should be turned on.
   },
 };

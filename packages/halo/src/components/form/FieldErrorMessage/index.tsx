@@ -37,7 +37,6 @@ function FieldErrorMessage({
   }
 
   if (message && children) {
-    // tslint:disable-next-line: no-console
     console.warn(
       `[Halo FieldErrorMessage] expected only 'message' or 'children' prop, but received both.`,
     );

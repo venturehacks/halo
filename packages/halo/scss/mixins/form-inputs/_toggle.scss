@@ -55,9 +55,11 @@ $raw-toggle-switch-knob-size: tempo(2) !default;
   }
 
   [disabled]:checked + & {
+    color: $dark-a;
+
     &::before,
     &::after {
-      color: $blue-500;
+      color: $dark-a;
     }
   }
 

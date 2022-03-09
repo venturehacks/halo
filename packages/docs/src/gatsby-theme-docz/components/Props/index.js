@@ -34,7 +34,7 @@ export const Prop = ({ propName, prop, getPropType, isToggle }) => {
   const [showing, setShowing] = useState(isToggle || false);
   if (!prop.type && !prop.flowType) return null;
 
-  const toggle = () => setShowing(s => !s);
+  const toggle = () => setShowing((s) => !s);
   return (
     <div sx={styles.line} data-testid="prop">
       <div sx={styles.content}>
@@ -76,7 +76,7 @@ export const Prop = ({ propName, prop, getPropType, isToggle }) => {
   );
 };
 
-export const Props = componentProps => {
+export const Props = (componentProps) => {
   const { props, table, getPropType } = componentProps;
   const entries = Object.entries(props);
 

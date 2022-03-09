@@ -24,13 +24,13 @@ function transform(fileInfo, api) {
         name: 'FieldErrorMessage',
       },
     })
-    .forEach(path => {
+    .forEach((path) => {
       // find `text="foo"` props
       j(path)
         .find(j.JSXIdentifier, {
           name: 'text',
         })
-        .forEach(identifierPath => {
+        .forEach((identifierPath) => {
           // change prop name
           identifierPath.value.name = 'message';
         });
@@ -39,7 +39,7 @@ function transform(fileInfo, api) {
         .find(j.JSXIdentifier, {
           name: 'color',
         })
-        .forEach(identifierPath => {
+        .forEach((identifierPath) => {
           // change prop name
           identifierPath.value.name = 'errorSeverity';
         });

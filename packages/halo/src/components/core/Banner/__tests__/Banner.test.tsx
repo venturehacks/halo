@@ -17,10 +17,7 @@ describe('Banner', () => {
       let component = wrapper.find(`[data-test="Banner"]`);
       expect(component.hasClass('dismissed')).toBe(false);
 
-      wrapper
-        .find(`[data-test="Banner-closeButton"]`)
-        .last()
-        .simulate('click');
+      wrapper.find(`[data-test="Banner-closeButton"]`).last().simulate('click');
 
       component = wrapper.find(`[data-test="Banner"]`);
       expect(component.hasClass('dismissed')).toBe(true);
@@ -32,10 +29,7 @@ describe('Banner', () => {
 
       expect(dismiss).toBeCalledTimes(0);
 
-      wrapper
-        .find(`[data-test="Banner-closeButton"]`)
-        .last()
-        .simulate('click');
+      wrapper.find(`[data-test="Banner-closeButton"]`).last().simulate('click');
 
       expect(dismiss).toBeCalledTimes(1);
     });

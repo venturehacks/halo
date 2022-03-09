@@ -28,13 +28,13 @@ function transform(fileInfo, api) {
         name: 'Label',
       },
     })
-    .forEach(path => {
+    .forEach((path) => {
       // find `name="foo"` props
       j(path)
         .find(j.JSXIdentifier, {
           name: 'name',
         })
-        .forEach(identifierPath => {
+        .forEach((identifierPath) => {
           // change prop name
           identifierPath.value.name = 'title';
         });
