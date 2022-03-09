@@ -103,7 +103,6 @@
     },
     "editor.codeActionsOnSave": {
       "source.fixAll.eslint": true,
-      "source.fixAll.tslint": true
     },
     "editor.quickSuggestions": {
       "strings": true,
