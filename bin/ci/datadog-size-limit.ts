@@ -1,5 +1,5 @@
+/* eslint-disable no-console */
 import { v1 } from '@datadog/datadog-api-client';
-// tslint:disable-next-line: no-submodule-imports
 import { Series } from '@datadog/datadog-api-client/dist/packages/datadog-api-client-v1/models/Series';
 import fs from 'fs';
 import slugify from 'slugify';
@@ -13,13 +13,11 @@ interface SizeLimitEntry {
 const { BUILDKITE_BRANCH, DD_API_KEY } = process.env;
 
 if (DD_API_KEY == null) {
-  // tslint:disable-next-line: no-console
   console.error(`DD_API_KEY is required but not set.`);
   process.exit();
 }
 
 if (BUILDKITE_BRANCH == null) {
-  // tslint:disable-next-line: no-console
   console.error(`BUILDKITE_BRANCH is required but not set.`);
   process.exit();
 }
@@ -45,7 +43,6 @@ const series: Series[] = bundleSize.map(({ name, passed, size }) => ({
   ],
 }));
 
-// tslint:disable-next-line: no-console
 console.log(series);
 
 const configuration = v1.createConfiguration();
@@ -60,10 +57,7 @@ const params: v1.MetricsApiSubmitMetricsRequest = {
 apiInstance
   .submitMetrics(params)
   .then((data: any) => {
-    // tslint:disable-next-line: no-console
     console.log('✅  Pushed metrics to datadog.');
-    // tslint:disable-next-line: no-console
     console.log(JSON.stringify(data));
   })
-  // tslint:disable-next-line: no-console
   .catch((error: any) => console.error(error));

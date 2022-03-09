@@ -167,7 +167,6 @@ function SpanRaw(
 
   // [warning] mutually exclusive color
   if (contrast && hasColorOverride) {
-    // tslint:disable-next-line: no-console
     console.warn(
       `[Halo] conflicting props provided. 'contrast' cannot coexist with: success error warning color muted xmuted xxmuted`,
     );

@@ -1,4 +1,3 @@
-/* eslint-disable sort-keys-fix/sort-keys-fix */
 import path from 'path';
 import { camelCase } from 'change-case';
 import { defineConfig } from 'rollup';
@@ -91,7 +90,7 @@ export default defineConfig({
       },
       plugins: [tailwindcss('./tailwind.config.js')],
       autoModules: true,
-      namedExports: name => {
+      namedExports: (name) => {
         // converts scss dashes to camelCase:
         // styles.slate-200 => styles.slate200
         return camelCase(name);

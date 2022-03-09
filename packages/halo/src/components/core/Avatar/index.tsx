@@ -93,7 +93,6 @@ export { Avatar };
 
 // For setting `height` and `width` attributes on `img` tag directly
 // ! Keep in sync with ./styles.module.scss
-/* eslint-disable sort-keys-fix/sort-keys-fix */
 export const IMAGE_SIZES: Record<AvatarSize, number> = {
   xxs: 16,
   xs: 24,
@@ -102,4 +101,3 @@ export const IMAGE_SIZES: Record<AvatarSize, number> = {
   lg: 72,
   xl: 112,
 };
-/* eslint-enable sort-keys-fix/sort-keys-fix */

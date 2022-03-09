@@ -1,3 +1,6 @@
+// TODO(drew): fix a11y violations
+/* eslint-disable jsx-a11y/no-static-element-interactions */
+/* eslint-disable jsx-a11y/click-events-have-key-events */
 import classNames from 'classnames';
 import React from 'react';
 
@@ -83,7 +86,6 @@ export interface BoxProps extends React.HTMLAttributes<HTMLDivElement> {
   wrap?: boolean;
 }
 
-/* eslint-disable sort-keys-fix/sort-keys-fix */
 const FLEX_ALIGNMENT_MAP: Record<
   'row' | 'column',
   Record<'align' | 'valign', Dictionary<string>>
@@ -121,7 +123,6 @@ const FLEX_ALIGNMENT_MAP: Record<
     },
   },
 };
-/* eslint-enable sort-keys-fix/sort-keys-fix */
 
 function BoxRaw({
   align,
@@ -225,7 +226,7 @@ function augmentNegativeSpaceClasses(
 
   if (typeof space === 'object') {
     return Object.keys(space)
-      .map(direction => `${metric[0]}${direction[0]}-${space[direction]}`)
+      .map((direction) => `${metric[0]}${direction[0]}-${space[direction]}`)
       .join(' ');
   }
 

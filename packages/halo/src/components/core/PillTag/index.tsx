@@ -30,7 +30,6 @@ function PillTag({
 
   if (href) {
     if (onClick) {
-      // tslint:disable-next-line: no-console
       console.warn(
         `[Halo PillTag] onClick handler cannot be assigned when href is supplied`,
       );

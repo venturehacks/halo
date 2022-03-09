@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable no-console */
 /**
@@ -27,7 +28,7 @@ const DOCUMENTATION_PATH = path.join(ICONS_DIRECTORY, 'index.mdx');
 const files = fs.readdirSync(ICONS_DIRECTORY);
 const iconNameRegex = /([A-Za-z0-9]+)Icon/;
 const iconNames = _.compact(
-  files.map(icon => icon.match(iconNameRegex)?.[0]),
+  files.map((icon) => icon.match(iconNameRegex)?.[0]),
 ).sort();
 
 console.log(iconNames);
@@ -35,7 +36,7 @@ console.log(iconNames);
 // ICON INDEX
 
 const iconIndex = `${iconNames
-  .map(icon => `export { default as ${icon} } from './${icon}.svg';`)
+  .map((icon) => `export { default as ${icon} } from './${icon}.svg';`)
   .join('\n')}\n`;
 
 fs.writeFileSync(ICONS_INDEX_PATH, iconIndex);
@@ -48,7 +49,7 @@ const iconImport = `import { ${iconNames.join(', ')} } from './';`;
 
 const iconDocs = iconNames
   .map(
-    icon =>
+    (icon) =>
       `<div className="flex flex-col items-center justify-between border rounded border-slate-300">
    <div className="p-4"><${icon} /></div>
    <span className="font-medium text-sm mb-2">${icon}</span>
