@@ -58,7 +58,7 @@ function LabelRaw({
   }
 
   const id = `form-input--${field}`;
-  const containerClasses = classNames(children && 'mb-6', className);
+  const containerClasses = classNames('block', children && 'mb-6', className);
 
   const labelContent = (
     <div className="mb-1">
