@@ -2,7 +2,7 @@
 
 exports[`RawSelect snapshot size lg 1`] = `
 <select
-  class="text-dark-aaaa text-md max-w-full placeholder-dark-a mb-6 bg-white rounded focus:border-2 p-3 h-12 border border-slate-500 disabled:text-dark-a disabled:bg-slate-200 disabled:border-light-aa w-auto component"
+  class="text-dark-aaaa text-md max-w-full placeholder-dark-a bg-white rounded focus:border-2 p-3 h-12 border border-slate-500 disabled:text-dark-a disabled:bg-slate-200 disabled:border-light-aa w-auto component"
 >
   <option
     value="chocolate"
@@ -24,7 +24,7 @@ exports[`RawSelect snapshot size lg 1`] = `
 
 exports[`RawSelect snapshot size md 1`] = `
 <select
-  class="text-dark-aaaa text-md max-w-full placeholder-dark-a mb-6 bg-white rounded focus:border-2 px-3 py-2 h-10 border border-slate-500 disabled:text-dark-a disabled:bg-slate-200 disabled:border-light-aa w-auto component"
+  class="text-dark-aaaa text-md max-w-full placeholder-dark-a bg-white rounded focus:border-2 px-3 py-2 h-10 border border-slate-500 disabled:text-dark-a disabled:bg-slate-200 disabled:border-light-aa w-auto component"
 >
   <option
     value="chocolate"
@@ -46,7 +46,7 @@ exports[`RawSelect snapshot size md 1`] = `
 
 exports[`RawSelect snapshot size sm 1`] = `
 <select
-  class="text-dark-aaaa text-md max-w-full placeholder-dark-a mb-6 bg-white rounded focus:border-2 px-3 py-1 h-8 border border-slate-500 disabled:text-dark-a disabled:bg-slate-200 disabled:border-light-aa w-auto component"
+  class="text-dark-aaaa text-md max-w-full placeholder-dark-a bg-white rounded focus:border-2 px-3 py-1 h-8 border border-slate-500 disabled:text-dark-a disabled:bg-slate-200 disabled:border-light-aa w-auto component"
 >
   <option
     value="chocolate"
