@@ -17,22 +17,16 @@ export interface BracketProps extends React.HTMLAttributes<HTMLDivElement> {
    * @default first-child
    */
   isolate?: 'first-child' | 'last-child';
-  /**
-   * Negative space magnitude between children
-   * @default 4
-   */
-  gap?: '0' | '2' | '4' | '6' | '8';
 }
-/* eslint-enable typescript-sort-keys/interface */
 
 function BracketRaw({
   className,
   forwardedRef,
   children,
   isolate = 'first-child',
-  gap = '4',
   ...rest
 }: BracketProps & ForwardedRefProps<HTMLDivElement>) {
+  const hasGap = className?.includes('gap-');
   return (
     <div
       ref={forwardedRef}
@@ -41,10 +35,7 @@ function BracketRaw({
         styles.component,
         isolate === 'first-child' && styles.isolateFirstChild,
         isolate === 'last-child' && styles.isolateLastChild,
-        gap === '2' && 'gap-2',
-        gap === '4' && 'gap-4',
-        gap === '6' && 'gap-6',
-        gap === '8' && 'gap-8',
+        !hasGap && 'gap-4',
         className,
       )}
       {...rest}

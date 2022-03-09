@@ -27,12 +27,13 @@ describe('Bracket', () => {
 
   test('gap', () => {
     const component = render(
-      <Bracket gap="8">
+      <Bracket className="gap-8">
         <span>Label</span>
         <button>Click me</button>
       </Bracket>,
     );
     expect(component.hasClass('gap-8')).toBeTruthy();
+    expect(component.hasClass('gap-4')).toBeFalsy();
   });
 
   test('isolate last child', () => {
@@ -58,7 +59,7 @@ describe('Bracket', () => {
 
     test('gap', () => {
       const component = render(
-        <Bracket gap="6">
+        <Bracket className="gap-6">
           <span>Label</span>
           <button>Click me</button>
         </Bracket>,
