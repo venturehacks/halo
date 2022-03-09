@@ -4,8 +4,8 @@ import React from 'react';
 import {
   Button as HaloButton,
   ButtonProps as HaloButtonProps,
-} from '../Button';
-import { Header } from '../Header';
+} from '../../core/Button';
+import { Header } from '../../core/Header';
 
 import styles from './styles.module.scss';
 
