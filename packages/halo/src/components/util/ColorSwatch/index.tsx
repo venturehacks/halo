@@ -65,13 +65,8 @@ function ColorSwatch({
         )}
 
         {showVariable && (
-          <CopyToClipboard
-            onCopy={handleCopy}
-            text={swatch ? `$${swatch}` : color}
-          >
-            <div className={styles.variableName}>
-              {swatch ? `$${swatch}` : color}
-            </div>
+          <CopyToClipboard onCopy={handleCopy} text={swatch || color}>
+            <div className={styles.variableName}>{swatch || color}</div>
           </CopyToClipboard>
         )}
       </div>
