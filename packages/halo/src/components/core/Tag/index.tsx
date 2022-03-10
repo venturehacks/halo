@@ -69,7 +69,6 @@ function TagRaw({
   const componentClassnames = classNames(
     className,
     'inline-flex flex-row items-center mr-2 last:mr-0',
-
     color === 'blue' && 'bg-blue-100 text-dark-aaaa',
     color === 'gray' && 'bg-slate-100 text-dark-aaa',
     color === 'green' && 'bg-green-100 text-green-600',
