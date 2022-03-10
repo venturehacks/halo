@@ -5,15 +5,14 @@ route: /guides/color
 ---
 
 import { ColorSwatch } from '../components/util/ColorSwatch';
-import { Box } from '../components/structure/Box';
 
 # Color
 
 ## Typography
 
-<Box>
+<div className="mb-16">
   {/* dark text on light */}
-  <Box row align="space-between" margin={{ bottom: 1 }} width="100%">
+  <div className="flex justify-between mb-2">
     <ColorSwatch swatch="dark-brand" />
     <ColorSwatch swatch="dark-aaaa" />
     <ColorSwatch swatch="dark-aaa" />
@@ -23,9 +22,9 @@ import { Box } from '../components/structure/Box';
     <ColorSwatch swatch="dark-success" />
     <ColorSwatch swatch="dark-warning" />
     <ColorSwatch swatch="dark-error" />
-  </Box>
+  </div>
   {/* light text on dark */}
-  <Box row align="space-between" margin={{ bottom: 1 }} width="100%">
+  <div className="flex justify-between mb-2">
     <ColorSwatch swatch="light-brand" backgroundColor="black" />
     <ColorSwatch swatch="light-aaaa" backgroundColor="black" />
     <ColorSwatch swatch="light-aaa" backgroundColor="black" />
@@ -35,15 +34,16 @@ import { Box } from '../components/structure/Box';
     <ColorSwatch swatch="light-success" backgroundColor="black" />
     <ColorSwatch swatch="light-warning" backgroundColor="black" />
     <ColorSwatch swatch="light-error" backgroundColor="black" />
-  </Box>
-</Box>
+  </div>
+</div>
 
+## Old Palette
 
-## Spectrum
+🔗 **[Figma](https://www.figma.com/file/8EbOKQuVfc61d9aft8p7cO/Halo-Design-Library?node-id=14%3A735)** – Original palette introduced in 2019.
 
-<Box>
+<div className="mb-16">
   {/* slates */}
-  <Box row align="space-between" margin={{ bottom: 1 }} width="100%">
+  <div className="flex justify-between mb-2">
     <ColorSwatch swatch="slate-900" />
     <ColorSwatch swatch="slate-800" />
     <ColorSwatch swatch="slate-700" />
@@ -53,9 +53,9 @@ import { Box } from '../components/structure/Box';
     <ColorSwatch swatch="slate-300" />
     <ColorSwatch swatch="slate-200" />
     <ColorSwatch swatch="slate-100" />
-  </Box>
+  </div>
   {/* Blues */}
-  <Box row align="space-between" margin={{ bottom: 1 }} width="100%">
+  <div className="flex justify-between mb-2">
     <ColorSwatch swatch="blue-900" />
     <ColorSwatch swatch="blue-800" />
     <ColorSwatch swatch="blue-700" />
@@ -65,9 +65,9 @@ import { Box } from '../components/structure/Box';
     <ColorSwatch swatch="blue-300" />
     <ColorSwatch swatch="blue-200" />
     <ColorSwatch swatch="blue-100" />
-  </Box>
+  </div>
   {/* Greens */}
-  <Box row align="space-between" margin={{ bottom: 1 }} width="100%">
+  <div className="flex justify-between mb-2">
     <ColorSwatch swatch="green-900" />
     <ColorSwatch swatch="green-800" />
     <ColorSwatch swatch="green-700" />
@@ -77,9 +77,9 @@ import { Box } from '../components/structure/Box';
     <ColorSwatch swatch="green-300" />
     <ColorSwatch swatch="green-200" />
     <ColorSwatch swatch="green-100" />
-  </Box>
+  </div>
   {/* Reds */}
-  <Box row align="space-between" margin={{ bottom: 1 }} width="100%">
+  <div className="flex justify-between mb-2">
     <ColorSwatch swatch="red-900" />
     <ColorSwatch swatch="red-800" />
     <ColorSwatch swatch="red-700" />
@@ -89,9 +89,9 @@ import { Box } from '../components/structure/Box';
     <ColorSwatch swatch="red-300" />
     <ColorSwatch swatch="red-200" />
     <ColorSwatch swatch="red-100" />
-  </Box>
+  </div>
   {/* Purples */}
-  <Box row align="space-between" margin={{ bottom: 1 }} width="100%">
+  <div className="flex justify-between mb-2">
     <ColorSwatch swatch="purple-900" />
     <ColorSwatch swatch="purple-800" />
     <ColorSwatch swatch="purple-700" />
@@ -101,9 +101,9 @@ import { Box } from '../components/structure/Box';
     <ColorSwatch swatch="purple-300" />
     <ColorSwatch swatch="purple-200" />
     <ColorSwatch swatch="purple-100" />
-  </Box>
+  </div>
   {/* Oranges */}
-  <Box row align="space-between" margin={{ bottom: 1 }} width="100%">
+  <div className="flex justify-between mb-2">
     <ColorSwatch swatch="orange-900" />
     <ColorSwatch swatch="orange-800" />
     <ColorSwatch swatch="orange-700" />
@@ -113,8 +113,81 @@ import { Box } from '../components/structure/Box';
     <ColorSwatch swatch="orange-300" />
     <ColorSwatch swatch="orange-200" />
     <ColorSwatch swatch="orange-100" />
-  </Box>
-</Box>
+  </div>
+</div>
+
+## GTM Palette
+
+🔗 **[Figma](https://www.figma.com/file/8EbOKQuVfc61d9aft8p7cO/Halo-Design-Library?node-id=663%3A3221)** – Next-generation "go to market" palette, introduced in 2022.
+
+<div className="mb-16">
+  {/* Gray */}
+  <div className="flex justify-between mb-2">
+    <ColorSwatch swatch="gray-800" />
+    <ColorSwatch swatch="gray-700" />
+    <ColorSwatch swatch="gray-600" />
+    <ColorSwatch swatch="gray-500" />
+    <ColorSwatch swatch="gray-400" />
+    <ColorSwatch swatch="gray-300" />
+    <ColorSwatch swatch="gray-200" />
+    <ColorSwatch swatch="gray-100" />
+  </div>
+  {/* Blue */}
+  <div className="flex justify-between mb-2">
+    <ColorSwatch swatch="gtmblue-800" />
+    <ColorSwatch swatch="gtmblue-700" />
+    <ColorSwatch swatch="gtmblue-600" />
+    <ColorSwatch swatch="gtmblue-500" />
+    <ColorSwatch swatch="gtmblue-400" />
+    <ColorSwatch swatch="gtmblue-300" />
+    <ColorSwatch swatch="gtmblue-200" />
+    <ColorSwatch swatch="gtmblue-100" />
+  </div>
+  {/* Oranges */}
+  <div className="flex justify-between mb-2">
+    <ColorSwatch swatch="gtmorange-800" />
+    <ColorSwatch swatch="gtmorange-700" />
+    <ColorSwatch swatch="gtmorange-600" />
+    <ColorSwatch swatch="gtmorange-500" />
+    <ColorSwatch swatch="gtmorange-400" />
+    <ColorSwatch swatch="gtmorange-300" />
+    <ColorSwatch swatch="gtmorange-200" />
+    <ColorSwatch swatch="gtmorange-100" />
+  </div>
+  {/* Yellow */}
+  <div className="flex justify-between mb-2">
+    <ColorSwatch swatch="gtmyellow-800" />
+    <ColorSwatch swatch="gtmyellow-700" />
+    <ColorSwatch swatch="gtmyellow-600" />
+    <ColorSwatch swatch="gtmyellow-500" />
+    <ColorSwatch swatch="gtmyellow-400" />
+    <ColorSwatch swatch="gtmyellow-300" />
+    <ColorSwatch swatch="gtmyellow-200" />
+    <ColorSwatch swatch="gtmyellow-100" />
+  </div>
+  {/* Green */}
+  <div className="flex justify-between mb-2">
+    <ColorSwatch swatch="gtmgreen-800" />
+    <ColorSwatch swatch="gtmgreen-700" />
+    <ColorSwatch swatch="gtmgreen-600" />
+    <ColorSwatch swatch="gtmgreen-500" />
+    <ColorSwatch swatch="gtmgreen-400" />
+    <ColorSwatch swatch="gtmgreen-300" />
+    <ColorSwatch swatch="gtmgreen-200" />
+    <ColorSwatch swatch="gtmgreen-100" />
+  </div>
+  {/* Pink */}
+  <div className="flex justify-between mb-2">
+    <ColorSwatch swatch="gtmpink-800" />
+    <ColorSwatch swatch="gtmpink-700" />
+    <ColorSwatch swatch="gtmpink-600" />
+    <ColorSwatch swatch="gtmpink-500" />
+    <ColorSwatch swatch="gtmpink-400" />
+    <ColorSwatch swatch="gtmpink-300" />
+    <ColorSwatch swatch="gtmpink-200" />
+    <ColorSwatch swatch="gtmpink-100" />
+  </div>
+</div>
 
 ### Export
 
@@ -189,7 +262,61 @@ export type Color =
   | 'orange-400'
   | 'orange-300'
   | 'orange-200'
-  | 'orange-100';
+  | 'orange-100'
+    // GTM
+  | 'gtmblue-800'
+  | 'gtmblue-700'
+  | 'gtmblue-600'
+  | 'gtmblue-500'
+  | 'gtmblue-400'
+  | 'gtmblue-300'
+  | 'gtmblue-200'
+  | 'gtmblue-100'
+
+  | 'gtmgreen-800'
+  | 'gtmgreen-700'
+  | 'gtmgreen-600'
+  | 'gtmgreen-500'
+  | 'gtmgreen-400'
+  | 'gtmgreen-300'
+  | 'gtmgreen-200'
+  | 'gtmgreen-100'
+
+  | 'gtmorange-800'
+  | 'gtmorange-700'
+  | 'gtmorange-600'
+  | 'gtmorange-500'
+  | 'gtmorange-400'
+  | 'gtmorange-300'
+  | 'gtmorange-200'
+  | 'gtmorange-100'
+
+  | 'gtmpink-800'
+  | 'gtmpink-700'
+  | 'gtmpink-600'
+  | 'gtmpink-500'
+  | 'gtmpink-400'
+  | 'gtmpink-300'
+  | 'gtmpink-200'
+  | 'gtmpink-100'
+
+  | 'gtmyellow-800'
+  | 'gtmyellow-700'
+  | 'gtmyellow-600'
+  | 'gtmyellow-500'
+  | 'gtmyellow-400'
+  | 'gtmyellow-300'
+  | 'gtmyellow-200'
+  | 'gtmyellow-100'
+
+  | 'gray-800'
+  | 'gray-700'
+  | 'gray-600'
+  | 'gray-500'
+  | 'gray-400'
+  | 'gray-300'
+  | 'gray-200'
+  | 'gray-100';
 
 export const ColorPalette: Record<Color, string> = {
   // dark text on light background
@@ -278,5 +405,60 @@ export const ColorPalette: Record<Color, string> = {
   'orange-300': '#e9b44f',
   'orange-200': '#fce79b',
   'orange-100': '#fff9e7',
+
+  // GTM palette (2022)
+  'gtmblue-800': '#01134B',
+  'gtmblue-700': '#052077',
+  'gtmblue-600': '#062AA0',
+  'gtmblue-500': '#143FCD',
+  'gtmblue-400': '#3A45D4',
+  'gtmblue-300': '#6670F5',
+  'gtmblue-200': '#B0B5FD',
+  'gtmblue-100': '#EAEBFF',
+
+  'gtmgreen-800': '#002911',
+  'gtmgreen-700': '#00431B',
+  'gtmgreen-600': '#005A24',
+  'gtmgreen-500': '#0C7134',
+  'gtmgreen-400': '#229651',
+  'gtmgreen-300': '#67CC90',
+  'gtmgreen-200': '#B4ECCA',
+  'gtmgreen-100': '#E0F9EA',
+
+  'gtmorange-800': '#790700',
+  'gtmorange-700': '#A82901',
+  'gtmorange-600': '#D3450B',
+  'gtmorange-500': '#F0591C',
+  'gtmorange-400': '#EF7B46',
+  'gtmorange-300': '#FFAA83',
+  'gtmorange-200': '#FFD3BF',
+  'gtmorange-100': '#FFEDE5',
+
+  'gtmpink-800': '#80112C',
+  'gtmpink-700': '#AB2344',
+  'gtmpink-600': '#D44266',
+  'gtmpink-500': '#F47C9A',
+  'gtmpink-400': '#F595A5',
+  'gtmpink-300': '#FFC1CC',
+  'gtmpink-200': '#FFDEE3',
+  'gtmpink-100': '#FFF1F3',
+
+  'gtmyellow-800': '#9F5600',
+  'gtmyellow-700': '#CE7C00',
+  'gtmyellow-600': '#EAA903',
+  'gtmyellow-500': '#F8BE14',
+  'gtmyellow-400': '#F4C63D',
+  'gtmyellow-300': '#FEDD7C',
+  'gtmyellow-200': '#FFEBAF',
+  'gtmyellow-100': '#FFF5D8',
+
+  'gray-800': '#616161',
+  'gray-700': '#757575',
+  'gray-600': '#9E9E9E',
+  'gray-500': '#BDBDBD',
+  'gray-400': '#E0E0E0',
+  'gray-300': '#EEEEEE',
+  'gray-200': '#F5F5F5',
+  'gray-100': '#FAFAFA',
 };
 ```

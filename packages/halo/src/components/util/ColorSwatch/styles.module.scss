@@ -5,7 +5,7 @@
   @include flex-column($fill: true);
   align-items: stretch;
   padding: tempo(2);
-  height: 150px;
+  height: 120px;
   overflow: hidden;
   text-align: center;
   flex-grow: 1;
@@ -28,21 +28,22 @@
 
   .color {
     @include border-rounded;
-    height: 80px;
-    margin-bottom: tempo(2);
+    height: 60px;
+    margin-bottom: tempo(1);
     content: ' ';
     cursor: pointer;
   }
 
   .hex {
     display: block;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 12px;
     white-space: nowrap;
     word-break: keep-all;
     margin-bottom: tempo(1);
     padding: 2px;
     border-radius: 2px;
+    text-transform: uppercase;
     cursor: copy;
 
     &:hover {
@@ -67,9 +68,13 @@
   }
 
   &.backgroundBlack {
-    color: $light-aaa;
+    color: $light-aaaa;
     background-color: $slate-900;
     @include font-antialiased;
+
+    .variableName {
+      color: $light-aaa;
+    }
   }
 
   &.backgroundWhite {
