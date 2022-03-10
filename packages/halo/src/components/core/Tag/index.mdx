@@ -2,6 +2,7 @@
 name: Tag
 menu: Core
 route: /core/tag
+new: true
 ---
 
 import { Props, Playground } from 'docz';
@@ -10,10 +11,11 @@ import { BookmarkOutlineIcon } from '../../icons';
 import { Box } from '../../structure/Box';
 import { Tag } from './'
 
+> TODO(drew): refresh these docs
 
 # Tag
 
-Successor to `PillTag` `Flair` (deprecated)
+Successor to `PillTag` `Flair` (deprecated).
 
 ### Usage
 
@@ -137,10 +139,10 @@ Successor to `PillTag` `Flair` (deprecated)
   </Box>
 
   <Box margin={{ bottom: 4 }}>
-    <InterfaceHeader title="Arbitrary content" section flow />
+    <InterfaceHeader title="Custom content" section flow />
     <Tag onClose={() => {alert("close clicked!")}} size="sm" >
-      <span className="text-xs font-medium">Software Engineer</span>
-      <span className="text-2xs">Primary</span>
+      <span className="font-medium">Software Engineer</span>
+      <span>Primary</span>
     </Tag>
     <Tag
       onClose={() => {alert("close clicked!")}}
@@ -149,8 +151,8 @@ Successor to `PillTag` `Flair` (deprecated)
       shape="pill"
       size="md"
     >
-      <span className="text-sm text-dark-aaa font-medium">Software Engineer</span>
-      <span className="text-xs text-dark-aaa">Primary</span>
+      <span className="text-dark-aaa font-medium">Software Engineer</span>
+      <span className="text-dark-aaa">Primary</span>
     </Tag>
   </Box>
 </Playground>

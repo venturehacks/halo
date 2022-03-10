@@ -33,7 +33,7 @@ export const Container = styled.div`
     width: 100%;
     min-width: 0;
     order: -1;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     padding-left: 0;
   }
 `;
@@ -132,6 +132,12 @@ export const Toc = styled.nav`
             right: 0;
             color: ${({ theme }) => theme.colors.grayLighter};
           }
+        }
+      }
+
+      li:last-child {
+        a.inner:after {
+          display: none;
         }
       }
     }

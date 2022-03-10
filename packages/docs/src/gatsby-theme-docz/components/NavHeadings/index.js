@@ -37,7 +37,6 @@ const NavHeadings = () => {
       <Sticky className="nav-headings">
         <Toc>
           <div>
-            <Heading>{icon} Contents</Heading>
             {scrollspy ? (
               <Scrollspy
                 items={headings.map((heading) => heading.slug)}

@@ -33,9 +33,17 @@
     @apply list-disc;
   }
 
+  // Doc site specific ---------------
+
   pre.prism-code {
     @apply mt-2;
     @apply mb-10;
+  }
+
+  .mdx-content {
+    p {
+      @apply max-w-2xl;
+    }
   }
 }
 

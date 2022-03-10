@@ -5,6 +5,7 @@ import {
   ForwardedRefProps,
   withForwardedRef,
 } from '../../../lib/withForwardedRef';
+
 import { CloseIcon } from '../../icons';
 
 export type TagColor = 'blue' | 'gray' | 'green' | 'orange' | 'purple' | 'red';
@@ -19,6 +20,11 @@ export interface TagProps {
    */
   children?: React.ReactNode;
   className?: string;
+  /**
+   * Removes background color
+   * @default false
+   */
+  clearBackground?: boolean;
   /**
    * @default blue
    */
@@ -49,31 +55,33 @@ export interface TagProps {
 function TagRaw({
   children,
   className,
+  clearBackground,
   color = 'blue',
   forwardedRef,
   icon,
+  label,
   onClick,
   onClose,
   shape = 'rectangle',
   size = 'sm',
-  label,
   ...rest
 }: TagProps & ForwardedRefProps<HTMLSpanElement>) {
   const componentClassnames = classNames(
     className,
     'inline-flex flex-row items-center mr-2 last:mr-0',
-    color === 'blue' && 'bg-blue-100 bg-opacity-75 text-dark-aaaa',
-    color === 'gray' && 'bg-slate-100 bg-opacity-75 text-dark-aaa',
-    color === 'green' && 'bg-green-200 text-green-600',
-    color === 'orange' && 'bg-orange-200 bg-opacity-75 text-orange-600',
-    color === 'purple' && 'bg-purple-200 bg-opacity-75 text-purple-600',
-    color === 'red' && 'bg-red-200 text-red-600',
+    color === 'blue' && 'bg-blue-100 text-dark-aaaa',
+    color === 'gray' && 'bg-slate-100 text-dark-aaa',
+    color === 'green' && 'bg-green-100 text-green-600',
+    color === 'orange' && 'bg-orange-100 text-orange-600',
+    color === 'purple' && 'bg-purple-100 text-purple-600',
+    color === 'red' && 'bg-red-100 text-red-600',
     shape === 'pill' && 'rounded-full',
     shape === 'rectangle' && 'rounded-md',
-    size === '2xs' && 'gap-1 text-3xs h-4 px-2 py-1',
-    size === 'xs' && 'gap-1 text-2xs h-6 px-2 py-1.5',
-    size === 'sm' && 'gap-2 text-xs h-8 px-3 py-2',
-    size === 'md' && 'gap-2 text-md h-10 px-3 py-2',
+    size === '2xs' && 'gap-1 text-3xs px-2 py-0.5 antialiased',
+    size === 'xs' && 'gap-1 text-2xs px-2 py-0.5 antialiased',
+    size === 'sm' && 'gap-2 text-xs px-3 py-1',
+    size === 'md' && 'gap-2 text-md px-3 py-2',
+    clearBackground ? 'bg-opacity-0' : 'bg-opacity-75',
   );
   const iconClassnames = classNames(
     size === '2xs' && 'w-2 h-2',

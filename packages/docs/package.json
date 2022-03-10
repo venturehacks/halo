@@ -8,7 +8,7 @@
   "license": "UNLICENSED",
   "main": "public/index.html",
   "scripts": {
-    "clean": "rm -rf node_modules/.cache && docz clean && rm -rf .docz/ && gatsby clean",
+    "clean": "rm -rf node_modules/.cache && docz clean && rm -rf .docz/ && rm -rf ./.cache && gatsby clean",
     "build": "gatsby build",
     "dev": "gatsby develop",
     "serve": "gatsby serve",
