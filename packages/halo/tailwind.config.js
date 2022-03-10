@@ -1,6 +1,5 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const path = require('path');
-
-/* eslint-disable sort-keys-fix/sort-keys-fix */
 
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
@@ -23,7 +22,7 @@ module.exports = {
   plugins: [],
   purge: {
     content: [
-      path.join(__dirname, 'src/**/*.{tsx,jsx,mdx}'),
+      path.join(__dirname, 'src/**/*.{tsx,jsx,js,mdx}'),
       path.join(__dirname, 'dist/**/*.mjs'),
     ],
     options: {

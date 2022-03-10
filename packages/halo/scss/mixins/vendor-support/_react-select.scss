@@ -7,7 +7,7 @@
   :global {
     .select__control {
       @include input;
-      padding: 6px tempo(1) 6px tempo(2);
+      padding: 6px tempo(2) 6px tempo(4);
       box-shadow: none;
       width: 100%;
 
@@ -76,7 +76,7 @@
 
     .select__option {
       background-color: $white;
-      padding: tempo(0.5) tempo(2);
+      padding: tempo(1) tempo(4);
       border-top: 1px solid $blue-200;
     }
 

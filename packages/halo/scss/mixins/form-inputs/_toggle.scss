@@ -1,13 +1,13 @@
 @import './base';
 
-$raw-toggle-switch-gutter-width: tempo(3.5) !default;
+$raw-toggle-switch-gutter-width: tempo(7) !default;
 $raw-toggle-switch-gutter-height: 10px !default;
-$raw-toggle-switch-knob-size: tempo(2) !default;
+$raw-toggle-switch-knob-size: tempo(4) !default;
 
 @mixin input-label-toggle-switch-left {
   @extend %input-label-base;
-  padding-left: tempo(5);
-  padding-right: tempo(1);
+  padding-left: tempo(10);
+  padding-right: tempo(2);
 
   // line-height: $raw-toggle-switch-gutter-height - 1px;
   display: block;
