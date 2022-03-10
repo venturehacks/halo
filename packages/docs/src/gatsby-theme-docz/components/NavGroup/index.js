@@ -51,7 +51,12 @@ export const NavGroup = ({ item, sidebarRef }) => {
                 )}
 
                 {submenu.new && (
-                  <Tag color="green" size="xs" className="ml-2">
+                  <Tag
+                    color="green"
+                    size="xs"
+                    className="ml-2 relative -top-0.5"
+                    clearBackground
+                  >
                     new
                   </Tag>
                 )}
@@ -69,7 +74,12 @@ export const NavGroup = ({ item, sidebarRef }) => {
                 </Tag>
               )}
               {submenu.new && (
-                <Tag color="green" size="xs" className="ml-2">
+                <Tag
+                  color="green"
+                  size="xs"
+                  className="ml-2 relative -top-0.5"
+                  clearBackground
+                >
                   new
                 </Tag>
               )}

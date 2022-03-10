@@ -78,8 +78,8 @@ export const Layout = ({
                     className="mb-8 max-w-2xl"
                     constrain={false}
                   >
-                    {currentDoc.name} is deprecated. Please do not introduce
-                    into new code.
+                    {currentDoc.name} is deprecated. Please do not introduce in
+                    new code.
                   </Banner>
                 )}
 

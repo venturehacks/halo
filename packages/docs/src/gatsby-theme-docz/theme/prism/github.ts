@@ -5,7 +5,7 @@ export default {
     color: '#393A34',
     fontFamily:
       "'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace",
-    fontSize: '14px',
+    fontSize: '13px',
     'moz-osx-font-smoothing': 'grayscale',
   },
   styles: [
