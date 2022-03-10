@@ -63,16 +63,17 @@ function TagRaw({
   const componentClassnames = classNames(
     className,
     'inline-flex flex-row items-center mr-2 last:mr-0',
+
     color === 'blue' && 'bg-blue-100 bg-opacity-75 text-dark-aaaa',
     color === 'gray' && 'bg-slate-100 bg-opacity-75 text-dark-aaa',
-    color === 'green' && 'bg-green-200 text-green-600',
-    color === 'orange' && 'bg-orange-200 bg-opacity-75 text-orange-600',
-    color === 'purple' && 'bg-purple-200 bg-opacity-75 text-purple-600',
-    color === 'red' && 'bg-red-200 text-red-600',
+    color === 'green' && 'bg-green-100 text-green-600 bg-opacity-75',
+    color === 'orange' && 'bg-orange-100 bg-opacity-75 text-orange-600',
+    color === 'purple' && 'bg-purple-100 bg-opacity-75 text-purple-600',
+    color === 'red' && 'bg-red-100 text-red-600 bg-opacity-75',
     shape === 'pill' && 'rounded-full',
     shape === 'rectangle' && 'rounded-md',
-    size === '2xs' && 'gap-1 text-3xs h-4 px-2 py-1',
-    size === 'xs' && 'gap-1 text-2xs h-5 px-2 py-1',
+    size === '2xs' && 'gap-1 text-3xs h-4 px-2 py-1 antialiased',
+    size === 'xs' && 'gap-1 text-2xs h-5 px-2 py-1 antialiased',
     size === 'sm' && 'gap-2 text-xs h-8 px-3 py-2',
     size === 'md' && 'gap-2 text-md h-10 px-3 py-2',
   );
