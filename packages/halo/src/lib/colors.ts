@@ -70,7 +70,56 @@ export type Color =
   | 'orange-400'
   | 'orange-300'
   | 'orange-200'
-  | 'orange-100';
+  | 'orange-100'
+  // GTM
+  | 'gtmblue-800'
+  | 'gtmblue-700'
+  | 'gtmblue-600'
+  | 'gtmblue-500'
+  | 'gtmblue-400'
+  | 'gtmblue-300'
+  | 'gtmblue-200'
+  | 'gtmblue-100'
+  | 'gtmgreen-800'
+  | 'gtmgreen-700'
+  | 'gtmgreen-600'
+  | 'gtmgreen-500'
+  | 'gtmgreen-400'
+  | 'gtmgreen-300'
+  | 'gtmgreen-200'
+  | 'gtmgreen-100'
+  | 'gtmorange-800'
+  | 'gtmorange-700'
+  | 'gtmorange-600'
+  | 'gtmorange-500'
+  | 'gtmorange-400'
+  | 'gtmorange-300'
+  | 'gtmorange-200'
+  | 'gtmorange-100'
+  | 'gtmpink-800'
+  | 'gtmpink-700'
+  | 'gtmpink-600'
+  | 'gtmpink-500'
+  | 'gtmpink-400'
+  | 'gtmpink-300'
+  | 'gtmpink-200'
+  | 'gtmpink-100'
+  | 'gtmyellow-800'
+  | 'gtmyellow-700'
+  | 'gtmyellow-600'
+  | 'gtmyellow-500'
+  | 'gtmyellow-400'
+  | 'gtmyellow-300'
+  | 'gtmyellow-200'
+  | 'gtmyellow-100'
+  | 'gray-800'
+  | 'gray-700'
+  | 'gray-600'
+  | 'gray-500'
+  | 'gray-400'
+  | 'gray-300'
+  | 'gray-200'
+  | 'gray-100';
 
 export const ColorPalette: Record<Color, string> = {
   // dark text on light background
@@ -161,4 +210,59 @@ export const ColorPalette: Record<Color, string> = {
   'orange-300': '#e9b44f',
   'orange-200': '#fce79b',
   'orange-100': '#fff9e7',
+
+  // GTM (2022)
+  'gtmblue-800': '#01134B',
+  'gtmblue-700': '#052077',
+  'gtmblue-600': '#062AA0',
+  'gtmblue-500': '#143FCD',
+  'gtmblue-400': '#3A45D4',
+  'gtmblue-300': '#6670F5',
+  'gtmblue-200': '#B0B5FD',
+  'gtmblue-100': '#EAEBFF',
+
+  'gtmgreen-800': '#002911',
+  'gtmgreen-700': '#00431B',
+  'gtmgreen-600': '#005A24',
+  'gtmgreen-500': '#0C7134',
+  'gtmgreen-400': '#229651',
+  'gtmgreen-300': '#67CC90',
+  'gtmgreen-200': '#B4ECCA',
+  'gtmgreen-100': '#E0F9EA',
+
+  'gtmorange-800': '#790700',
+  'gtmorange-700': '#A82901',
+  'gtmorange-600': '#D3450B',
+  'gtmorange-500': '#F0591C',
+  'gtmorange-400': '#EF7B46',
+  'gtmorange-300': '#FFAA83',
+  'gtmorange-200': '#FFD3BF',
+  'gtmorange-100': '#FFEDE5',
+
+  'gtmpink-800': '#80112C',
+  'gtmpink-700': '#AB2344',
+  'gtmpink-600': '#D44266',
+  'gtmpink-500': '#F47C9A',
+  'gtmpink-400': '#F595A5',
+  'gtmpink-300': '#FFC1CC',
+  'gtmpink-200': '#FFDEE3',
+  'gtmpink-100': '#FFF1F3',
+
+  'gtmyellow-800': '#9F5600',
+  'gtmyellow-700': '#CE7C00',
+  'gtmyellow-600': '#EAA903',
+  'gtmyellow-500': '#F8BE14',
+  'gtmyellow-400': '#F4C63D',
+  'gtmyellow-300': '#FEDD7C',
+  'gtmyellow-200': '#FFEBAF',
+  'gtmyellow-100': '#FFF5D8',
+
+  'gray-800': '#616161',
+  'gray-700': '#757575',
+  'gray-600': '#9E9E9E',
+  'gray-500': '#BDBDBD',
+  'gray-400': '#E0E0E0',
+  'gray-300': '#EEEEEE',
+  'gray-200': '#F5F5F5',
+  'gray-100': '#FAFAFA',
 };
