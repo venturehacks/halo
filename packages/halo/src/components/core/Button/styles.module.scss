@@ -115,28 +115,28 @@
 
 .sm {
   font-size: 14px;
-  padding: 7px tempo(1.5) tempo(1) tempo(1.5);
+  padding: 7px tempo(3) tempo(2) tempo(3);
 
   &.iconOnly {
-    padding: tempo(2);
+    padding: tempo(4);
   }
 }
 
 .md {
   font-size: 14px;
-  padding: 11px tempo(2) tempo(1.5) tempo(2);
+  padding: 11px tempo(4) tempo(3) tempo(4);
 
   &.iconOnly {
-    padding: tempo(2.5);
+    padding: tempo(5);
   }
 }
 
 .lg {
   font-size: 14px;
-  padding: 15px tempo(5) tempo(2) tempo(5);
+  padding: 15px tempo(10) tempo(4) tempo(10);
 
   &.iconOnly {
-    padding: tempo(4);
+    padding: tempo(8);
   }
 }
 

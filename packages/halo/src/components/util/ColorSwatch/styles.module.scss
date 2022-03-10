@@ -4,7 +4,7 @@
   @include border-rounded(2px);
   @include flex-column($fill: true);
   align-items: stretch;
-  padding: tempo(1);
+  padding: tempo(2);
   height: 150px;
   overflow: hidden;
   text-align: center;
@@ -14,7 +14,7 @@
   border: 1px solid transparent;
 
   & + & {
-    margin-left: tempo(1);
+    margin-left: tempo(2);
   }
 
   &:first-of-type {
@@ -29,7 +29,7 @@
   .color {
     @include border-rounded;
     height: 80px;
-    margin-bottom: tempo(1);
+    margin-bottom: tempo(2);
     content: ' ';
     cursor: pointer;
   }
@@ -40,7 +40,7 @@
     font-size: 12px;
     white-space: nowrap;
     word-break: keep-all;
-    margin-bottom: tempo(0.5);
+    margin-bottom: tempo(1);
     padding: 2px;
     border-radius: 2px;
     cursor: copy;
@@ -90,7 +90,7 @@
         left: 50%;
         transform: translateX(-50%);
         display: inline-block;
-        padding: 0 tempo(1);
+        padding: 0 tempo(2);
         text-align: center;
         line-height: 20px;
         color: darken($color, 70%);

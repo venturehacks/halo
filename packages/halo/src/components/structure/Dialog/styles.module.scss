@@ -10,13 +10,13 @@
 }
 
 .title {
-  padding: tempo(1.5) tempo(2);
+  padding: tempo(3) tempo(4);
   border-bottom: 1px solid #f2f4f7;
 }
 
 .content {
   .paddingDefault & {
-    padding: tempo(1.5) tempo(2);
+    padding: tempo(3) tempo(4);
   }
 }
 
@@ -24,7 +24,7 @@
   @include flex-row($align: right, $valign: center);
   border-top: 1px solid #f2f4f7;
   margin-top: auto; // pushes chin to bottom
-  margin-left: tempo(2);
-  margin-right: tempo(2);
-  padding: tempo(1.5) 0;
+  margin-left: tempo(4);
+  margin-right: tempo(4);
+  padding: tempo(3) 0;
 }

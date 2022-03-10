@@ -6,12 +6,12 @@
     @error 'tempo() parameter $magnitude cannot be more granular than increments of 0.5 (given: #{$magnitude})';
   }
 
-  @return 8px * $magnitude;
+  @return 4px * $magnitude;
 }
 
 @function grid-cell-width($cells) {
-  $cell-width: tempo(4); // 32px
-  $gutter-width: tempo(2); // 16px
+  $cell-width: tempo(8); // 32px
+  $gutter-width: tempo(4); // 16px
   $gutters: $cells - 1;
 
   @if $cells % 1 != 0 {
@@ -71,7 +71,7 @@
     @include grid-cell-centered;
   } @else {
     @include tablet-only {
-      margin-right: tempo(1);
+      margin-right: tempo(2);
       &:last-child {
         margin-right: 0;
       }
@@ -79,7 +79,7 @@
 
     // automatically include right gutter
     @include desktop-up {
-      margin-right: tempo(2);
+      margin-right: tempo(4);
       &:last-child {
         margin-right: 0;
       }

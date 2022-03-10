@@ -4,7 +4,7 @@
   @include border-rounded;
   @include font($size: sm, $weight: medium, $spacing: 0.4px);
   @include font-antialiased;
-  padding: tempo(0.5) tempo(1);
+  padding: tempo(1) tempo(2);
   cursor: default;
   text-transform: uppercase;
 
@@ -19,7 +19,7 @@
   // NOTE(drew): 3xs size is not officially in Halo, but
   // it is useful for this type of element
   font-size: 9px;
-  padding: 2px tempo(0.5) 3px;
+  padding: 2px tempo(1) 3px;
   @include border-rounded(2px);
 }
 
@@ -45,7 +45,7 @@
 
 .size_xl {
   @include font($size: xl);
-  padding: tempo(0.5) tempo(1.5);
+  padding: tempo(1) tempo(3);
 }
 
 // colors

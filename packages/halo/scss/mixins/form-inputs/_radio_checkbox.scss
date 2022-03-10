@@ -1,8 +1,8 @@
 @import './base';
 
-$raw-checkbox-size: tempo(2);
-$raw-radio-size: tempo(2);
-$pill-border-radius: tempo(3);
+$raw-checkbox-size: tempo(4);
+$raw-radio-size: tempo(4);
+$pill-border-radius: tempo(6);
 
 /**
  * @deprecated (drew) 2022-02-25
@@ -62,7 +62,7 @@ $pill-border-radius: tempo(3);
 
 @mixin input-label-checkbox {
   @extend %input-label-base;
-  padding-left: tempo(3);
+  padding-left: tempo(6);
   line-height: $raw-checkbox-size;
 
   // empty checkbox
@@ -139,7 +139,7 @@ $pill-border-radius: tempo(3);
 @mixin input-label-radio {
   @extend %input-label-base;
   line-height: $raw-radio-size;
-  padding-left: tempo(3);
+  padding-left: tempo(6);
 
   // circle outline
   &::before {
@@ -229,12 +229,12 @@ $pill-border-radius: tempo(3);
 @mixin input-label-pill {
   border: 1px solid $dark-aaaa;
   border-radius: $pill-border-radius;
-  padding: 10px tempo(2.5) 10px 38px;
+  padding: 10px tempo(5) 10px 38px;
 
   // empty
   &::before {
     @include border-circle;
-    left: tempo(1.5);
+    left: tempo(3);
   }
 
   // selected

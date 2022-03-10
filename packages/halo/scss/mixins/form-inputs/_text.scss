@@ -11,7 +11,7 @@ $raw-input-height-transparent: 48px !default;
 @mixin input($size: md, $style: normal) {
   @include font($size: $size, $color: $slate-900);
   max-width: 100%;
-  padding: tempo(1.5) tempo(2);
+  padding: tempo(3) tempo(4);
 
   @if $style == normal {
     border: 1px solid $slate-400;
