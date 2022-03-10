@@ -98,6 +98,61 @@ $orange-300: #e9b44f !default;
 $orange-200: #fce79b !default;
 $orange-100: #fff9e7 !default;
 
+// Go to market colors
+$gtmblue-800: #01134b;
+$gtmblue-700: #052077;
+$gtmblue-600: #062aa0;
+$gtmblue-500: #143fcd;
+$gtmblue-400: #3a45d4;
+$gtmblue-300: #6670f5;
+$gtmblue-200: #b0b5fd;
+$gtmblue-100: #eaebff;
+
+$gtmgreen-800: #002911;
+$gtmgreen-700: #00431b;
+$gtmgreen-600: #005a24;
+$gtmgreen-500: #0c7134;
+$gtmgreen-400: #229651;
+$gtmgreen-300: #67cc90;
+$gtmgreen-200: #b4ecca;
+$gtmgreen-100: #e0f9ea;
+
+$gtmorange-800: #790700;
+$gtmorange-700: #a82901;
+$gtmorange-600: #d3450b;
+$gtmorange-500: #f0591c;
+$gtmorange-400: #ef7b46;
+$gtmorange-300: #ffaa83;
+$gtmorange-200: #ffd3bf;
+$gtmorange-100: #ffede5;
+
+$gtmpink-800: #80112c;
+$gtmpink-700: #ab2344;
+$gtmpink-600: #d44266;
+$gtmpink-500: #f47c9a;
+$gtmpink-400: #f595a5;
+$gtmpink-300: #ffc1cc;
+$gtmpink-200: #ffdee3;
+$gtmpink-100: #fff1f3;
+
+$gtmyellow-800: #9f5600;
+$gtmyellow-700: #ce7c00;
+$gtmyellow-600: #eaa903;
+$gtmyellow-500: #f8be14;
+$gtmyellow-400: #f4c63d;
+$gtmyellow-300: #fedd7c;
+$gtmyellow-200: #ffebaf;
+$gtmyellow-100: #fff5d8;
+
+$gray-800: #616161;
+$gray-700: #757575;
+$gray-600: #9e9e9e;
+$gray-500: #bdbdbd;
+$gray-400: #e0e0e0;
+$gray-300: #eee;
+$gray-200: #f5f5f5;
+$gray-100: #fafafa;
+
 // for map-get programmatic look up
 $colors: (
   black: $black,
@@ -174,4 +229,53 @@ $colors: (
   orange-300: $orange-300,
   orange-200: $orange-200,
   orange-100: $orange-100,
+  // GTM
+  gtmblue-800: $gtmblue-800,
+  gtmblue-700: $gtmblue-700,
+  gtmblue-600: $gtmblue-600,
+  gtmblue-500: $gtmblue-500,
+  gtmblue-400: $gtmblue-400,
+  gtmblue-300: $gtmblue-300,
+  gtmblue-200: $gtmblue-200,
+  gtmblue-100: $gtmblue-100,
+  gtmgreen-800: $gtmgreen-800,
+  gtmgreen-700: $gtmgreen-700,
+  gtmgreen-600: $gtmgreen-600,
+  gtmgreen-500: $gtmgreen-500,
+  gtmgreen-400: $gtmgreen-400,
+  gtmgreen-300: $gtmgreen-300,
+  gtmgreen-200: $gtmgreen-200,
+  gtmgreen-100: $gtmgreen-100,
+  gtmorange-800: $gtmorange-800,
+  gtmorange-700: $gtmorange-700,
+  gtmorange-600: $gtmorange-600,
+  gtmorange-500: $gtmorange-500,
+  gtmorange-400: $gtmorange-400,
+  gtmorange-300: $gtmorange-300,
+  gtmorange-200: $gtmorange-200,
+  gtmorange-100: $gtmorange-100,
+  gtmpink-800: $gtmpink-800,
+  gtmpink-700: $gtmpink-700,
+  gtmpink-600: $gtmpink-600,
+  gtmpink-500: $gtmpink-500,
+  gtmpink-400: $gtmpink-400,
+  gtmpink-300: $gtmpink-300,
+  gtmpink-200: $gtmpink-200,
+  gtmpink-100: $gtmpink-100,
+  gtmyellow-800: $gtmyellow-800,
+  gtmyellow-700: $gtmyellow-700,
+  gtmyellow-600: $gtmyellow-600,
+  gtmyellow-500: $gtmyellow-500,
+  gtmyellow-400: $gtmyellow-400,
+  gtmyellow-300: $gtmyellow-300,
+  gtmyellow-200: $gtmyellow-200,
+  gtmyellow-100: $gtmyellow-100,
+  gray-800: $gray-800,
+  gray-700: $gray-700,
+  gray-600: $gray-600,
+  gray-500: $gray-500,
+  gray-400: $gray-400,
+  gray-300: $gray-300,
+  gray-200: $gray-200,
+  gray-100: $gray-100,
 );
