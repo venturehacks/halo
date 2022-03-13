@@ -5,11 +5,18 @@ route: /guides/demo
 ---
 
 import { Playground } from 'docz';
+import { Attribute } from '../components/core/Attribute';
+import { AttentionIndicator } from '../components/core/AttentionIndicator';
+import { Avatar } from '../components/core/Avatar';
+import { AvatarLockup } from '../components/core/AvatarLockup';
+import { Badge } from '../components/core/Badge';
 import { Button } from '../components/core/Button';
 import { Paragraph } from '../components/core/Paragraph';
 import { Header } from '../components/core/Header';
-import { Span } from '../components/core/Span';
+import { Tag } from '../components/core/Tag';
+import { Label } from '../components/form/Label';
 import { RawInput } from '../components/form/RawInput';
+import { RawSelect } from '../components/form/RawSelect';
 import { Bracket } from '../components/structure/Bracket';
 import { InterfaceHeader } from '../components/structure/InterfaceHeader';
 import { Panel } from '../components/structure/Panel';
@@ -19,6 +26,21 @@ import { SearchIcon } from '../components/icons';
 # Demo
 
 <Playground>
+  <Bracket className="bg-slate-300 px-6" isolate="last-child">
+    <Header className="mt-4" h3>Halo AngelList</Header>
+    <Tag label="Source"/>
+    <div className="relative">
+      <Tag label="Applicants"/>
+      <AttentionIndicator color="red" count="2"/>
+    </div>
+    <Tag label="Track"/>
+    <Tag label="Jobs"/>
+    <Avatar
+      imageUrl="https://avatars.githubusercontent.com/u/56262247"
+      size="md"
+      badge={<Badge position="bottom" tooltip="Admin User">✌︎</Badge>}
+    />
+  </Bracket>
   <span className="flex flex-row">
     <Panel className="gap-6 w-80">
       <InterfaceHeader
@@ -71,7 +93,63 @@ import { SearchIcon } from '../components/icons';
         <Header h4>Account Executive</Header>
         <Button variant="gray">View Job</Button>
       </Bracket>
+      <hr/>
+      <Bracket isolate="first-child">
+        <p>List of applicants</p>
+        <p>Sort by</p>
+        <RawSelect
+          value="best-match"
+          options={[
+            { label: 'Best Match', value: 'best-match' },
+            { label: 'New Match', value: 'new-match' },
+          ]}
+        />
+      </Bracket>
       <Panel>
+        <AvatarLockup size="lg" imageUrl="https://avatars.githubusercontent.com/u/56262247" >
+          <div>
+            <p className="font-bold">Vishal Jeet</p>
+            <p className="text-sm font-normal">10 years of exp · New York City · Remote Only</p>
+            <p className="text-xs text-dark-aa">May require a US work visa</p>
+          </div>
+        </AvatarLockup>
+        <hr/>
+        <Bracket>
+          <p>Skills</p>
+          <Tag color="gray" shape="pill" label="Java" size="2xs"/>
+          <Tag color="gray" shape="pill" label="Ruby" size="2xs"/>
+          <Tag color="gray" shape="pill" label="Python" size="2xs"/>
+          <Tag color="gray" shape="pill" label="C++" size="2xs"/>
+          <Tag color="gray" shape="pill" label="React" size="2xs"/>
+        </Bracket>
+        <hr/>
+        <Bracket>
+          <Button>Accept</Button>
+          <Button variant="destructive">Reject</Button>
+        </Bracket>
+      </Panel>
+      <Panel>
+        <AvatarLockup size="lg" imageUrl="https://avatars.githubusercontent.com/u/194885" >
+          <div>
+            <p className="font-bold">Drew Lustro</p>
+            <p className="text-sm font-normal">15 years of exp · Los Angeles </p>
+            <p className="text-xs text-dark-aa">Does not require a US work visa</p>
+          </div>
+        </AvatarLockup>
+        <hr/>
+        <Bracket>
+          <p>Skills</p>
+          <Tag color="gray" shape="pill" label="Javascript" size="2xs"/>
+          <Tag color="gray" shape="pill" label="Ruby" size="2xs"/>
+          <Tag color="gray" shape="pill" label="Python" size="2xs"/>
+          <Tag color="gray" shape="pill" label="Rust" size="2xs"/>
+          <Tag color="gray" shape="pill" label="React" size="2xs"/>
+        </Bracket>
+        <hr/>
+        <Bracket>
+          <Button>Accept</Button>
+          <Button variant="destructive">Reject</Button>
+        </Bracket>
       </Panel>
     </Panel>
   </span>
