@@ -1,0 +1,78 @@
+---
+name: Demo
+menu: Guides
+route: /guides/demo
+---
+
+import { Playground } from 'docz';
+import { Button } from '../components/core/Button';
+import { Paragraph } from '../components/core/Paragraph';
+import { Header } from '../components/core/Header';
+import { Span } from '../components/core/Span';
+import { RawInput } from '../components/form/RawInput';
+import { Bracket } from '../components/structure/Bracket';
+import { InterfaceHeader } from '../components/structure/InterfaceHeader';
+import { Panel } from '../components/structure/Panel';
+import { SidebarCell } from '../components/structure/SidebarCell';
+import { SearchIcon } from '../components/icons';
+
+# Demo
+
+<Playground>
+  <span className="flex flex-row">
+    <Panel className="gap-6 w-80">
+      <InterfaceHeader
+        title="Applicants"
+        byline="View all applicants by job listing."
+        section
+      />
+      <RawInput
+        type="text"
+        name="foo"
+        placeholder="Search by job"
+        maxLength={100}
+        icon={<SearchIcon />}
+      />
+      <div className="max-w-xs bg-blue-100">
+        <SidebarCell
+          title="Account Executive"
+          byline="California, Utah, Colorado, Remote"
+          header="Last edit: 7 days ago"
+          onClick={() => alert('onClick')}
+          onStarClick={() => alert('onStarClick')}
+          isActive
+        />
+        <SidebarCell
+          title="Head of Product"
+          byline="Europe, United States, Remote"
+          header="Last edit: 1 month ago"
+          onClick={() => alert('onClick')}
+          onStarClick={() => alert('onStarClick')}
+          isStarred
+        />
+        <SidebarCell
+          title="Strategic Project Manager"
+          byline="United States, Remote"
+          header="Last edit: 2 days ago"
+          onClick={() => alert('onClick')}
+          onStarClick={() => alert('onStarClick')}
+        />
+        <SidebarCell
+          title="Super Long Copywriter Head of Overflow"
+          byline="United States, Remote"
+          header="Last edit: 1 year ago"
+          onClick={() => alert('onClick')}
+          onStarClick={() => alert('onStarClick')}
+        />
+      </div>
+    </Panel>
+    <Panel className="gap-2 w-full">
+      <Bracket isolate="last-child">
+        <Header h4>Account Executive</Header>
+        <Button variant="gray">View Job</Button>
+      </Bracket>
+      <Panel>
+      </Panel>
+    </Panel>
+  </span>
+</Playground>
