@@ -1,0 +1,34 @@
+---
+name: Adding a new Icon
+menu: Contributing
+route: /contributing/icons
+---
+
+# Steps for adding a new Icon
+
+<br/>
+
+#### 1. Download the `.svg` file to a local directory
+
+&nbsp;&nbsp; NOTE: the default attributes for the `.svg` should be:
+```html
+<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+```
+
+#### 2. Copy the `.svg` file into the `src/components/icons` directory
+
+<img src='/add_icon_step_2.gif' />
+<br/>
+
+#### 3. Run the yarn command to include the Icon as necessary
+
+```bash
+yarn icons
+```
+<img src='/add_icon_step_3.gif' />
+<br/>
+
+
+#### 4. Create a new pull request with your newly added Icon.
+
+&nbsp;&nbsp; NOTE: [here](https://github.com/venturehacks/halo/pull/154) is an example PR that adds the `WarningIcon`.
