@@ -1,4 +1,10 @@
-FROM node:16.14.0-alpine AS base
+ARG NODE_IMAGE_TAG=16.14.0-alpine
+FROM node:${NODE_IMAGE_TAG} AS base
+
+# must repeat ARG NODE_IMAGE_TAG to make available in build stage
+ARG NODE_IMAGE_TAG
+ENV NODE_IMAGE_TAG $NODE_IMAGE_TAG
+
 # 'silence' git-related build args to leverage cache
 ARG GIT_COMMIT_SHA
 ENV GIT_COMMIT_SHA ''
@@ -31,7 +37,12 @@ RUN yarn workspace halo install || \
 ##### BUILD
 #####
 
-FROM node:16.14.0-alpine AS build
+ARG NODE_IMAGE_TAG
+FROM node:${NODE_IMAGE_TAG} AS build
+
+# must repeat ARG NODE_IMAGE_TAG to make available in build stage
+ARG NODE_IMAGE_TAG
+ENV NODE_IMAGE_TAG $NODE_IMAGE_TAG
 
 # 'silence' git-related build args to leverage cache
 ARG GIT_COMMIT_SHA
