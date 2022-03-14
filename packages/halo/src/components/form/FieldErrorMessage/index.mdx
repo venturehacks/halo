@@ -5,7 +5,7 @@ route: /form/field-error-message
 ---
 
 import { Props, Playground } from 'docz';
-import { RawInput } from '../RawInput';
+import { Input } from '../Input';
 import { FieldErrorMessage } from './';
 import { Label } from '../Label';
 
@@ -24,7 +24,7 @@ Preset `block` is great for rendering a critical server error message at the hea
     <FieldErrorMessage errorSeverity="warning" preset="block" message="Relatively soft form warning" />
 
     <Label field="name" title="Field warning" byline="ex: validation error" className="mt-10">
-      <RawInput
+      <Input
         name="name"
         onChange={() => {}}
         type="text"
@@ -35,7 +35,7 @@ Preset `block` is great for rendering a critical server error message at the hea
     </Label>
 
     <Label field="address" title="Field critical error">
-      <RawInput
+      <Input
         name="address"
         onChange={() => {}}
         type="text"

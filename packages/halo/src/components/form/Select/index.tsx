@@ -3,14 +3,14 @@ import React from 'react';
 
 import {
   FormInputIntrinsicWidth,
-  RawInputBase,
+  InputBase,
   rawInputClassNames,
-} from '../RawInput';
+} from '../Input';
 
 import styles from './styles.module.scss';
 
-export interface RawSelectProps
-  extends RawInputBase,
+export interface SelectProps
+  extends InputBase,
     Omit<React.SelectHTMLAttributes<HTMLSelectElement>, 'size'> {
   className?: string;
   /**
@@ -22,22 +22,22 @@ export interface RawSelectProps
    */
   name?: string;
   onChange?: React.ChangeEventHandler<HTMLSelectElement> | (() => void);
-  options: (RawSelectOption | RawSelectOptgroup)[];
+  options: (SelectOption | SelectOptgroup)[];
 }
 
-export interface RawSelectOption {
+export interface SelectOption {
   disabled?: boolean;
   label: string;
   value?: string;
 }
 
-export interface RawSelectOptgroup {
+export interface SelectOptgroup {
   disabled?: boolean;
   label: string;
-  options: RawSelectOption[];
+  options: SelectOption[];
 }
 
-function RawSelect({
+function Select({
   className,
   options = [],
   intrinsicWidth = 'auto',
@@ -45,7 +45,7 @@ function RawSelect({
   errorSeverity = 'warning',
   size = 'md',
   ...rest
-}: RawSelectProps) {
+}: SelectProps) {
   return (
     <select
       className={classNames(
@@ -79,7 +79,7 @@ function RawSelect({
   );
 }
 
-function Option({ option }: { option: RawSelectOption }) {
+function Option({ option }: { option: SelectOption }) {
   const { value, label, disabled } = option;
   return (
     <option disabled={disabled} value={value}>
@@ -88,8 +88,8 @@ function Option({ option }: { option: RawSelectOption }) {
   );
 }
 
-function isOptgroup(opt: any): opt is RawSelectOptgroup {
-  return (opt as RawSelectOptgroup).options !== undefined;
+function isOptgroup(opt: any): opt is SelectOptgroup {
+  return (opt as SelectOptgroup).options !== undefined;
 }
 
-export { RawSelect };
+export { Select };

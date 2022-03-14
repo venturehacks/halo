@@ -1,8 +1,8 @@
 import { render } from 'enzyme';
 import React from 'react';
 
-import { RawInput } from '../../RawInput';
-import { RawRadio } from '../../RawRadio';
+import { Input } from '../../Input';
+import { Radio } from '../../Radio';
 import { Label } from '../index';
 
 describe('Label', () => {
@@ -17,14 +17,9 @@ describe('Label', () => {
     expect(() =>
       render(
         <Label byline="Who are you?" title="Name">
-          <RawRadio
-            id="chocolate"
-            label="Chocolate"
-            onChange={() => {}}
-            checked
-          />
-          <RawRadio id="vanilla" label="Vanilla" />
-          <RawRadio id="strawberry" label="Strawberry" />
+          <Radio id="chocolate" label="Chocolate" onChange={() => {}} checked />
+          <Radio id="vanilla" label="Vanilla" />
+          <Radio id="strawberry" label="Strawberry" />
         </Label>,
       ),
     ).toThrowError();
@@ -34,7 +29,7 @@ describe('Label', () => {
     test('standard', () => {
       const component = render(
         <Label byline="Who are you?" title="Name">
-          <RawInput />
+          <Input />
         </Label>,
       );
       expect(component).toMatchSnapshot();
@@ -43,14 +38,9 @@ describe('Label', () => {
     test('containsFieldGroup', () => {
       const component = render(
         <Label byline="Who are you?" title="Name" containsFieldGroup>
-          <RawRadio
-            id="chocolate"
-            label="Chocolate"
-            onChange={() => {}}
-            checked
-          />
-          <RawRadio id="vanilla" label="Vanilla" />
-          <RawRadio id="strawberry" label="Strawberry" />
+          <Radio id="chocolate" label="Chocolate" onChange={() => {}} checked />
+          <Radio id="vanilla" label="Vanilla" />
+          <Radio id="strawberry" label="Strawberry" />
         </Label>,
       );
       expect(component).toMatchSnapshot();

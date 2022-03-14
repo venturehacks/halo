@@ -12,7 +12,7 @@ export type FormInputErrorSeverity = 'warning' | 'critical';
 export type FormInputIntrinsicWidth = 'auto' | '100%';
 export type FormInputSize = 'sm' | 'md' | 'lg';
 
-export interface RawInputProps
+export interface InputProps
   extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'size'> {
   className?: string;
 
@@ -89,7 +89,7 @@ export interface RawInputProps
 export const inputBaseClasses =
   'text-dark-aaaa text-md max-w-full placeholder-dark-a';
 
-function RawInputRaw({
+function InputRaw({
   className,
   errorSeverity = 'warning',
   forwardedRef,
@@ -102,7 +102,7 @@ function RawInputRaw({
   transparent = false,
   type = 'text',
   ...rest
-}: RawInputProps & ForwardedRefProps<HTMLInputElement>) {
+}: InputProps & ForwardedRefProps<HTMLInputElement>) {
   const input = (
     <input
       ref={forwardedRef}
@@ -150,9 +150,9 @@ function RawInputRaw({
   );
 }
 
-const RawInput = withForwardedRef<RawInputProps, HTMLInputElement>(RawInputRaw);
+const Input = withForwardedRef<InputProps, HTMLInputElement>(InputRaw);
 
-export interface RawInputBase {
+export interface InputBase {
   /**
    * Validation error = warning
    * Server error = critical
@@ -182,7 +182,7 @@ function rawInputClassNames({
   intrinsicWidth,
   size,
   transparent,
-}: RawInputBase = {}) {
+}: InputBase = {}) {
   return classNames(
     'text-dark-aaaa text-md max-w-full placeholder-dark-a',
     transparent
@@ -206,4 +206,4 @@ function rawInputClassNames({
   );
 }
 
-export { RawInput, rawInputClassNames };
+export { Input, rawInputClassNames };

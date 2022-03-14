@@ -2,11 +2,11 @@ import classNames from 'classnames';
 import React from 'react';
 
 import { ControlAlignment, FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
-import { FormInputErrorSeverity } from '../RawInput';
+import { FormInputErrorSeverity } from '../Input';
 
 import styles from './styles.module.scss';
 
-export interface RawCheckboxProps
+export interface CheckboxProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   /**
@@ -39,7 +39,7 @@ export interface RawCheckboxProps
   variant?: 'checkbox' | 'pill' | 'toggle-switch';
 }
 
-function RawCheckbox({
+function Checkbox({
   className,
   controlAlignment = 'top',
   errorSeverity = 'warning',
@@ -50,7 +50,7 @@ function RawCheckbox({
   variant = 'checkbox',
   type, // deliberately discard
   ...rest
-}: RawCheckboxProps) {
+}: CheckboxProps) {
   return (
     <>
       <input
@@ -83,6 +83,6 @@ function RawCheckbox({
   );
 }
 
-RawCheckbox.displayName = 'RawCheckbox';
+Checkbox.displayName = 'Checkbox';
 
-export { RawCheckbox };
+export { Checkbox };

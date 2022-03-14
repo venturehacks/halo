@@ -1,17 +1,17 @@
 ---
-name: RawInput
+name: Input
 menu: Form
 route: /form/raw-input
 ---
 
 import { Props, Playground } from 'docz';
 import { Label } from '../Label';
-import { RawInput } from './';
+import { Input } from './';
 import { FieldErrorMessage } from '../FieldErrorMessage';
 import { TimeIcon, ArchiveIcon } from '../../icons';
 import { Bracket } from '../../structure/Bracket';
 
-# RawInput
+# Input
 
 Raw input fields are designed to be controlled by a [smart, form-connected parent](https://github.com/venturehacks/AngelList/blob/master/frontend/talent/components/Form/TextField/index.tsx).
 
@@ -20,7 +20,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
 <Playground>
   <div className="max-w-xl">
     <Label field="foo" title="Text Input">
-      <RawInput
+      <Input
         type="text"
         name="foo"
         placeholder="Your name"
@@ -29,7 +29,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
     </Label>
     <Bracket>
       <Label field="foo" title="Icon Left">
-        <RawInput
+        <Input
           type="text"
           name="foo"
           placeholder="Timezone name..."
@@ -38,7 +38,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
         />
       </Label>
       <Label field="foo" title="Icon Right">
-        <RawInput
+        <Input
           type="text"
           name="foo"
           placeholder="archive@foo.com"
@@ -50,7 +50,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
     </Bracket>
     <Bracket>
       <Label field="bar" title="Email">
-        <RawInput
+        <Input
           type="email"
           name="bar"
           onChange={() => {}}
@@ -64,7 +64,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
         />
       </Label>
       <Label field="password" title="Password">
-        <RawInput
+        <Input
           type="password"
           name="password"
           intrinsicWidth="auto"
@@ -80,7 +80,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
       </Label>
     </Bracket>
     <Label field="phone" title="Number">
-      <RawInput
+      <Input
         type="number"
         name="phone"
         intrinsicWidth="auto"
@@ -95,4 +95,4 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
 
 ### Props
 
-<Props of={RawInput} />
+<Props of={Input} />

@@ -1,11 +1,11 @@
 import { render } from 'enzyme';
 import React from 'react';
 
-import { RawInput } from '../index';
+import { Input } from '../index';
 
 test('smoke', () => {
   const component = render(
-    <RawInput
+    <Input
       onChange={() => {}}
       placeholder="Type your name..."
       value="Current value"

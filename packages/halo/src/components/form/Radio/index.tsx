@@ -2,11 +2,11 @@ import classNames from 'classnames';
 import React from 'react';
 
 import { ControlAlignment, FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
-import { FormInputErrorSeverity } from '../RawInput';
+import { FormInputErrorSeverity } from '../Input';
 
 import styles from './styles.module.scss';
 
-export interface RawRadioProps
+export interface RadioProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   /**
@@ -39,7 +39,7 @@ export interface RawRadioProps
   variant?: 'radio' | 'checkbox' | 'pill';
 }
 
-function RawRadio({
+function Radio({
   className,
   controlAlignment = 'top',
   errorSeverity = 'warning',
@@ -50,7 +50,7 @@ function RawRadio({
   type, // deliberately discard
   variant = 'radio',
   ...rest
-}: RawRadioProps) {
+}: RadioProps) {
   return (
     <>
       <input
@@ -82,6 +82,6 @@ function RawRadio({
   );
 }
 
-RawRadio.displayName = 'RawRadio';
+Radio.displayName = 'Radio';
 
-export { RawRadio };
+export { Radio };

@@ -3,14 +3,14 @@ import React from 'react';
 
 import {
   FormInputIntrinsicWidth,
-  RawInputBase,
+  InputBase,
   rawInputClassNames,
-} from '../RawInput';
+} from '../Input';
 
 import styles from './styles.module.scss';
 
-export interface RawTextareaProps
-  extends RawInputBase,
+export interface TextareaProps
+  extends InputBase,
     React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   className?: string;
   /**
@@ -32,7 +32,7 @@ export interface RawTextareaProps
   transparent?: boolean;
 }
 
-function RawTextarea({
+function Textarea({
   className,
   intrinsicWidth = 'auto',
   hasError = false,
@@ -40,7 +40,7 @@ function RawTextarea({
   transparent = false,
   size = 'md',
   ...rest
-}: RawTextareaProps) {
+}: TextareaProps) {
   return (
     <textarea
       className={classNames(
@@ -59,4 +59,4 @@ function RawTextarea({
   );
 }
 
-export { RawTextarea };
+export { Textarea };

@@ -5,8 +5,8 @@ route: /form/label
 ---
 
 import { Props, Playground } from 'docz';
-import { RawInput } from '../RawInput';
-import { RawRadio } from '../RawRadio';
+import { Input } from '../Input';
+import { Radio } from '../Radio';
 import { Label } from './';
 
 # Label
@@ -22,13 +22,13 @@ Read more: [Label (MDN Web Docs)](https://developer.mozilla.org/en-US/docs/Web/H
 <Playground>
   <div className="max-w-xl">
     <Label field="title" title="Title" byline="Wraps single input element">
-      <RawInput />
+      <Input />
     </Label>
     <Label field="iceCreamPreference" title="Ice cream preference" byline="Wrap collection of inputs that reference a single form field" containsFieldGroup>
       <div className="flex flex-col gap-4 px-1">
-        <RawRadio label="Chocolate" checked />
-        <RawRadio label="Vanilla" />
-        <RawRadio label="Strawberry" />
+        <Radio label="Chocolate" checked />
+        <Radio label="Vanilla" />
+        <Radio label="Strawberry" />
       </div>
     </Label>
   </div>
