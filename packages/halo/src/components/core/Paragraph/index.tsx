@@ -2,6 +2,11 @@ import classNames from 'classnames';
 import React from 'react';
 
 import {
+  ForwardedRefProps,
+  withForwardedRef,
+} from '../../../lib/withForwardedRef';
+
+import {
   TextColorScheme,
   TextContrast,
   TextLineHeight,
@@ -11,7 +16,8 @@ import { Span } from '../Span';
 
 import styles from './styles.module.scss';
 
-export interface ParagraphProps {
+export interface ParagraphProps
+  extends React.HTMLAttributes<HTMLParagraphElement> {
   children: React.ReactNode;
   className?: string;
   /**
@@ -48,16 +54,18 @@ function ParagraphRaw({
   flow = true,
   children,
   className,
+  forwardedRef,
   size = 'md',
   lineHeight = 'default',
   contrast,
   colorScheme,
   ...paragraphElementProps
-}: ParagraphProps & React.HTMLAttributes<HTMLParagraphElement>) {
+}: ParagraphProps & ForwardedRefProps<HTMLHeadingElement>) {
   const classes = classNames(styles.component, flow && 'mb-4', className);
 
   return (
     <Span
+      ref={forwardedRef}
       className={classes}
       colorScheme={colorScheme}
       contrast={contrast}
@@ -74,6 +82,8 @@ function ParagraphRaw({
   );
 }
 
-// NOTE(drew): I don't know why react-docgen is so finicky.
-// Sometimes the prop table is correct, other times it is not.
-export { ParagraphRaw as Paragraph };
+const Paragraph = withForwardedRef<ParagraphProps, HTMLHeadingElement>(
+  ParagraphRaw,
+);
+
+export { Paragraph };

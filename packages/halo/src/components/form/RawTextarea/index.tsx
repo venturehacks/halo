@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import { ForwardedRefProps, withForwardedRef } from '../../../lib';
+
 import {
   FormInputIntrinsicWidth,
   RawInputBase,
@@ -32,17 +34,19 @@ export interface RawTextareaProps
   transparent?: boolean;
 }
 
-function RawTextarea({
+function RawTextareaRaw({
   className,
+  forwardedRef,
   intrinsicWidth = 'auto',
   hasError = false,
   errorSeverity = 'warning',
   transparent = false,
   size = 'md',
   ...rest
-}: RawTextareaProps) {
+}: RawTextareaProps & ForwardedRefProps<HTMLTextAreaElement>) {
   return (
     <textarea
+      ref={forwardedRef}
       className={classNames(
         styles.component,
         rawInputClassNames({
@@ -58,5 +62,9 @@ function RawTextarea({
     />
   );
 }
+
+const RawTextarea = withForwardedRef<RawTextareaProps, HTMLTextAreaElement>(
+  RawTextareaRaw,
+);
 
 export { RawTextarea };

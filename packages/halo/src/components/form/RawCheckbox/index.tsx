@@ -1,7 +1,13 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import { ControlAlignment, FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
+import {
+  ControlAlignment,
+  FORM_FIELD_ERROR_IDENTIFIER,
+  ForwardedRefProps,
+  withForwardedRef,
+} from '../../../lib';
+
 import { FormInputErrorSeverity } from '../RawInput';
 
 import styles from './styles.module.scss';
@@ -39,10 +45,11 @@ export interface RawCheckboxProps
   variant?: 'checkbox' | 'pill' | 'toggle-switch';
 }
 
-function RawCheckbox({
+function RawCheckboxRaw({
   className,
   controlAlignment = 'top',
   errorSeverity = 'warning',
+  forwardedRef,
   hasError,
   id,
   label,
@@ -50,9 +57,9 @@ function RawCheckbox({
   variant = 'checkbox',
   type, // deliberately discard
   ...rest
-}: RawCheckboxProps) {
+}: RawCheckboxProps & ForwardedRefProps<HTMLInputElement>) {
   return (
-    <>
+    <div ref={forwardedRef}>
       <input
         className={classNames(
           styles.input,
@@ -79,10 +86,14 @@ function RawCheckbox({
       >
         {label}
       </label>
-    </>
+    </div>
   );
 }
 
-RawCheckbox.displayName = 'RawCheckbox';
+RawCheckboxRaw.displayName = 'RawCheckbox';
+
+const RawCheckbox = withForwardedRef<RawCheckboxProps, HTMLInputElement>(
+  RawCheckboxRaw,
+);
 
 export { RawCheckbox };

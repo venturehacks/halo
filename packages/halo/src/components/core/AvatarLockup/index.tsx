@@ -85,7 +85,7 @@ function AvatarLockupRaw({
   );
 
   return (
-    <div className={componentClassnames} {...rest}>
+    <div ref={forwardedRef} className={componentClassnames} {...rest}>
       <Avatar className={avatarOrdering} imageUrl={imageUrl} size={size} />
       {content}
     </div>

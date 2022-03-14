@@ -1,6 +1,11 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import {
+  ForwardedRefProps,
+  withForwardedRef,
+} from '../../../lib/withForwardedRef';
+
 import { AlertOutlineIcon, CheckIcon, CloseIcon } from '../../icons';
 
 export type BannerVariant = 'info' | 'warning' | 'success' | 'error';
@@ -26,15 +31,16 @@ export interface BannerProps {
   variant?: BannerVariant;
 }
 
-function Banner({
+function BannerRaw({
   byline,
   children,
   className,
   constrain = true,
+  forwardedRef,
   offerDismiss = false,
   onDismiss,
   variant = 'info',
-}: BannerProps) {
+}: BannerProps & ForwardedRefProps<HTMLDivElement>) {
   const [isDismissed, setIsDismissed] = React.useState(false);
 
   const handleDismiss = React.useCallback(
@@ -59,7 +65,7 @@ function Banner({
   );
 
   return (
-    <div className={classes} data-test="Banner" role="alert">
+    <div ref={forwardedRef} className={classes} data-test="Banner" role="alert">
       <aside className="mr-2 ml-1">
         {variant === 'error' && (
           <CloseIcon className="block text-red-700 w-6" />
@@ -95,5 +101,7 @@ function Banner({
     </div>
   );
 }
+
+const Banner = withForwardedRef<BannerProps, HTMLDivElement>(BannerRaw);
 
 export { Banner };
