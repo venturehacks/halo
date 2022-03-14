@@ -112,7 +112,7 @@ function LabelRaw({
 function hasCheckboxOrRadio(children: React.ReactNode) {
   return React.Children.toArray(children).some((child: any) => {
     // NOTE(drew): for this to work, one must set `displayName` on component
-    // ex: RawRadio.displayName = 'RawRadio';
+    // ex: Radio.displayName = 'Radio';
     const title = child?.type?.displayName || child?.type?.title;
 
     if (typeof title !== 'string') {

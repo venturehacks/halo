@@ -1,17 +1,17 @@
 import { render } from 'enzyme';
 import React from 'react';
 
-import { RawSelect, RawSelectOption } from '../index';
+import { Select, SelectOption } from '../index';
 
-const options: RawSelectOption[] = [
+const options: SelectOption[] = [
   { label: 'Chocolate', value: 'chocolate' },
   { label: 'Vanilla', value: 'vanilla' },
   { label: 'Strawberry', value: 'strawberry' },
 ];
 
-describe('RawSelect', () => {
+describe('Select', () => {
   test('smoke', () => {
-    const component = render(<RawSelect options={options} />);
+    const component = render(<Select options={options} />);
 
     expect(component.text()).toContain('ChocolateVanillaStrawberry');
   });
@@ -19,17 +19,17 @@ describe('RawSelect', () => {
   describe('snapshot', () => {
     describe('size', () => {
       test('sm', () => {
-        const component = render(<RawSelect options={options} size="sm" />);
+        const component = render(<Select options={options} size="sm" />);
         expect(component).toMatchSnapshot();
       });
 
       test('md', () => {
-        const component = render(<RawSelect options={options} />);
+        const component = render(<Select options={options} />);
         expect(component).toMatchSnapshot();
       });
 
       test('lg', () => {
-        const component = render(<RawSelect options={options} size="lg" />);
+        const component = render(<Select options={options} size="lg" />);
         expect(component).toMatchSnapshot();
       });
     });
