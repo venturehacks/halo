@@ -98,7 +98,6 @@ export default {
     'Icons',
     {
       name: 'Contributing',
-      menu: ['Icons'],
     },
     {
       name: 'Guides',
