@@ -15,7 +15,7 @@ ENV GIT_BRANCH ''
 ARG GIT_COMMIT_MESSAGE
 ENV GIT_COMMIT_MESSAGE ''
 
-RUN apk add --no-cache git python2 build-base libpng-dev pngquant lcms2-dev bash autoconf automake libtool \
+RUN apk add --no-cache bash git python2 build-base libpng-dev pngquant lcms2-dev bash autoconf automake libtool \
   && apk add libimagequant-dev --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main \
   && apk add vips-dev --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
 
@@ -66,7 +66,7 @@ COPY --from=base /app/node_modules ./node_modules
 # 📦 packages/halo
 WORKDIR /app/packages/halo/
 COPY packages/halo/*.json packages/halo/*.js ./
-COPY packages/halo/test ./test
+COPY packages/halo/test/jest-setup.ts ./test/jest-setup.ts
 # from base
 COPY --from=base /app/packages/halo/package.json ./
 COPY --from=base /app/packages/halo/node_modules ./node_modules
