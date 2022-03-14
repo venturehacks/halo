@@ -1,15 +1,15 @@
 @import './base';
 
-$raw-toggle-switch-gutter-width: tempo(7) !default;
-$raw-toggle-switch-gutter-height: 10px !default;
-$raw-toggle-switch-knob-size: tempo(4) !default;
+$toggle-switch-gutter-width: tempo(7) !default;
+$toggle-switch-gutter-height: 10px !default;
+$toggle-switch-knob-size: tempo(4) !default;
 
 @mixin input-label-toggle-switch-left {
   @extend %input-label-base;
   padding-left: tempo(10);
   padding-right: tempo(2);
 
-  // line-height: $raw-toggle-switch-gutter-height - 1px;
+  // line-height: $toggle-switch-gutter-height - 1px;
   display: block;
 
   // switch gutter
@@ -17,8 +17,8 @@ $raw-toggle-switch-knob-size: tempo(4) !default;
     left: 0;
     top: 7px;
     border-radius: 7px;
-    height: $raw-toggle-switch-gutter-height;
-    width: $raw-toggle-switch-gutter-width;
+    height: $toggle-switch-gutter-height;
+    width: $toggle-switch-gutter-width;
     background-color: currentColor;
   }
 
@@ -26,8 +26,8 @@ $raw-toggle-switch-knob-size: tempo(4) !default;
   &::after {
     left: 0;
     top: 4px;
-    width: $raw-toggle-switch-knob-size;
-    height: $raw-toggle-switch-knob-size;
+    width: $toggle-switch-knob-size;
+    height: $toggle-switch-knob-size;
     background-color: $white;
     @include border-circle;
     border: 1px solid currentColor;
@@ -50,7 +50,7 @@ $raw-toggle-switch-knob-size: tempo(4) !default;
 
     // move knob rightward to indicate 'on' state
     &::after {
-      left: $raw-toggle-switch-knob-size - 4px;
+      left: $toggle-switch-knob-size - 4px;
     }
   }
 
