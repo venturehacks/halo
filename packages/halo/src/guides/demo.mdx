@@ -5,18 +5,22 @@ route: /guides/demo
 ---
 
 import { Playground } from 'docz';
-import { Attribute } from '../components/core/Attribute';
+import { Attribute, AttributeList } from '../components/core/Attribute';
 import { AttentionIndicator } from '../components/core/AttentionIndicator';
 import { Avatar } from '../components/core/Avatar';
 import { AvatarLockup } from '../components/core/AvatarLockup';
 import { Badge } from '../components/core/Badge';
+import { Banner } from '../components/core/Banner';
 import { Button } from '../components/core/Button';
 import { Paragraph } from '../components/core/Paragraph';
 import { Header } from '../components/core/Header';
 import { Tag } from '../components/core/Tag';
 import { Label } from '../components/form/Label';
+import { RawCheckbox } from '../components/form/RawCheckbox';
 import { RawInput } from '../components/form/RawInput';
+import { RawRadio } from '../components/form/RawRadio';
 import { RawSelect } from '../components/form/RawSelect';
+import { RawTextarea } from '../components/form/RawTextarea';
 import { Bracket } from '../components/structure/Bracket';
 import { InterfaceHeader } from '../components/structure/InterfaceHeader';
 import { Panel } from '../components/structure/Panel';
@@ -26,6 +30,7 @@ import { SearchIcon } from '../components/icons';
 # Demo
 
 <Playground>
+  <Banner variant="warning"> NOTE: This page is for demo purposes only! </Banner>
   <Bracket className="bg-slate-300 px-6" isolate="last-child">
     <Header className="mt-4" h3>Halo AngelList</Header>
     <Tag label="Source"/>
@@ -87,10 +92,29 @@ import { SearchIcon } from '../components/icons';
           onStarClick={() => alert('onStarClick')}
         />
       </div>
+      <hr/>
+      <Label title="Settings" byline="Update your recruit settings here" containsFieldGroup>
+        <div className="flex flex-col gap-4 px-1">
+          <RawRadio label="Allow new applicants" checked/>
+          <RawCheckbox label="Disable all jobs"/>
+          <RawTextarea
+            name="team-notes"
+            placeholder="Save any notes for your recruiting team here."
+            rows={3}
+            cols={10}
+          />
+        </div>
+      </Label>
+      <hr/>
+      <Paragraph contrast="AA" lineHeight="compact">
+        This is a simple demo page that has been implemented entirely from components that are
+        available in the current Halo release. Clicking on any of the components will take you
+        to the specific documentation for it.
+      </Paragraph>
     </Panel>
     <Panel className="gap-2 w-full">
       <Bracket isolate="last-child">
-        <Header h4>Account Executive</Header>
+        <Header className="pt-4" h4>Senior Software Engineer</Header>
         <Button variant="gray">View Job</Button>
       </Bracket>
       <hr/>
@@ -123,6 +147,11 @@ import { SearchIcon } from '../components/icons';
           <Tag color="gray" shape="pill" label="React" size="2xs"/>
         </Bracket>
         <hr/>
+        <AttributeList size="xs">
+          <Attribute name="Desired Role" value="Software Engineer" />
+          <Attribute name="Desired Salary" value="$100,000" />
+        </AttributeList>
+        <hr/>
         <Bracket>
           <Button>Accept</Button>
           <Button variant="destructive">Reject</Button>
@@ -145,6 +174,11 @@ import { SearchIcon } from '../components/icons';
           <Tag color="gray" shape="pill" label="Rust" size="2xs"/>
           <Tag color="gray" shape="pill" label="React" size="2xs"/>
         </Bracket>
+        <hr/>
+        <AttributeList size="xs">
+          <Attribute name="Desired Role" value="Software Engineer" />
+          <Attribute name="Desired Salary" value="$100,000" />
+        </AttributeList>
         <hr/>
         <Bracket>
           <Button>Accept</Button>
