@@ -44,7 +44,7 @@ export interface RadioProps
   variant?: 'radio' | 'checkbox' | 'pill';
 }
 
-function RawRadio({
+function RadioRaw({
   className,
   controlAlignment = 'top',
   errorSeverity = 'warning',
@@ -88,8 +88,8 @@ function RawRadio({
   );
 }
 
-RawRadio.displayName = 'Radio';
+RadioRaw.displayName = 'Radio';
 
-const Radio = withForwardedRef<RadioProps, HTMLInputElement>(RawRadio);
+const Radio = withForwardedRef<RadioProps, HTMLInputElement>(RadioRaw);
 
 export { Radio };

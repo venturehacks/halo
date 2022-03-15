@@ -34,7 +34,7 @@ export interface TextareaProps
   transparent?: boolean;
 }
 
-function RawTextarea({
+function TextareaRaw({
   className,
   forwardedRef,
   intrinsicWidth = 'auto',
@@ -64,7 +64,7 @@ function RawTextarea({
 }
 
 const Textarea = withForwardedRef<TextareaProps, HTMLTextAreaElement>(
-  RawTextarea,
+  TextareaRaw,
 );
 
 export { Textarea };

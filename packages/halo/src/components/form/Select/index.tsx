@@ -39,7 +39,7 @@ export interface SelectOptgroup {
   options: SelectOption[];
 }
 
-function RawSelect({
+function SelectRaw({
   className,
   forwardedRef,
   options = [],
@@ -96,6 +96,6 @@ function isOptgroup(opt: any): opt is SelectOptgroup {
   return (opt as SelectOptgroup).options !== undefined;
 }
 
-const Select = withForwardedRef<SelectProps, HTMLSelectElement>(RawSelect);
+const Select = withForwardedRef<SelectProps, HTMLSelectElement>(SelectRaw);
 
 export { Select };

@@ -45,7 +45,7 @@ export interface CheckboxProps
   variant?: 'checkbox' | 'pill' | 'toggle-switch';
 }
 
-function RawCheckbox({
+function CheckboxRaw({
   className,
   controlAlignment = 'top',
   errorSeverity = 'warning',
@@ -90,8 +90,8 @@ function RawCheckbox({
   );
 }
 
-RawCheckbox.displayName = 'Checkbox';
+CheckboxRaw.displayName = 'Checkbox';
 
-const Checkbox = withForwardedRef<CheckboxProps, HTMLInputElement>(RawCheckbox);
+const Checkbox = withForwardedRef<CheckboxProps, HTMLInputElement>(CheckboxRaw);
 
 export { Checkbox };
