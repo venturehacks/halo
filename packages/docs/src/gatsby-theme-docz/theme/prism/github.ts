@@ -6,7 +6,7 @@ export default {
     fontFamily:
       "'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace",
     fontSize: '13px',
-    mozOsxFontSmoothing: 'grayscale',
+    MozOsxFontSmoothing: 'grayscale',
   },
   styles: [
     {

@@ -29,7 +29,7 @@ export const globalStyles = {
   'a': {
     color: ({ theme }) => theme.colors.primary,
   },
-  'a:hover > span:first-child': {
+  'a:hover > span:first-of-type': {
     textDecoration: 'underline',
   },
 };

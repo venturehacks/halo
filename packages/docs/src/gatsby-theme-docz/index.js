@@ -27,7 +27,6 @@ const monospaceFontFamily =
   "'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace";
 
 const themeConfig = merge(defaultConfig, {
-  initialColorMode: 'light',
   colors: {
     modes: {
       light: {
