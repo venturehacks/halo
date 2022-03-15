@@ -30,6 +30,8 @@ import { SearchIcon } from '../components/icons';
 
 # Demo
 
+### With annotations:
+
 <Playground>
   <Tooltip content="Banner (variant='warning')">
     <Banner variant="warning">NOTE: This page is for demo purposes only!</Banner>
@@ -255,6 +257,171 @@ import { SearchIcon } from '../components/icons';
           </Tooltip>
         </Panel>
       </Tooltip>
+    </div>
+  </div>
+</Playground>
+
+<hr/>
+
+### Without annotations:
+
+<Playground>
+  <Banner variant="warning">NOTE: This page is for demo purposes only!</Banner>
+  <Bracket className="bg-slate-300 px-6" isolate="last-child">
+    <Header className="mt-4" h3>Halo AngelList</Header>
+    <Tag label="Source"/>
+    <div className="relative">
+      <Tag label="Applicants"/>
+      <AttentionIndicator color="red" count="2"/>
+    </div>
+    <Tag label="Track"/>
+    <Tag label="Jobs"/>
+    <Tag label="Company Profile"/>
+    <Avatar
+      imageUrl="https://avatars.githubusercontent.com/u/56262247"
+      size="md"
+      badge={<Badge position="bottom" tooltip="Badge">✌︎</Badge>}
+    />
+  </Bracket>
+  <div className="flex flex-row">
+    <div className="flex flex-col border-r p-4 gap-6 w-80">
+      <InterfaceHeader
+        title="Applicants"
+        byline="View all applicants by job listing."
+        section
+      />
+      <RawInput
+        type="text"
+        name="foo"
+        placeholder="Search by job"
+        maxLength={100}
+        icon={<SearchIcon />}
+      />
+      <div className="max-w-xs bg-blue-100">
+        <SidebarCell
+          title="Account Executive"
+          byline="California, Utah, Colorado, Remote"
+          header="Last edit: 7 days ago"
+          onClick={() => alert('onClick')}
+          onStarClick={() => alert('onStarClick')}
+          isActive
+        />
+        <SidebarCell
+          title="Head of Product"
+          byline="Europe, United States, Remote"
+          header="Last edit: 1 month ago"
+          onClick={() => alert('onClick')}
+          onStarClick={() => alert('onStarClick')}
+          isStarred
+        />
+        <SidebarCell
+          title="Strategic Project Manager"
+          byline="United States, Remote"
+          header="Last edit: 2 days ago"
+          onClick={() => alert('onClick')}
+          onStarClick={() => alert('onStarClick')}
+        />
+        <SidebarCell
+          title="Super Long Copywriter Head of Overflow"
+          byline="United States, Remote"
+          header="Last edit: 1 year ago"
+          onClick={() => alert('onClick')}
+          onStarClick={() => alert('onStarClick')}
+        />
+      </div>
+      <hr/>
+      <Label title="Settings" byline="Update your recruit settings here" containsFieldGroup>
+        <div className="flex flex-col gap-4 px-1">
+          <RawRadio label="Allow new applicants" checked/>
+          <RawCheckbox label="Disable all jobs"/>
+          <RawTextarea
+            name="team-notes"
+            placeholder="Save any notes for your recruiting team here."
+            rows={2}
+            cols={25}
+          />
+        </div>
+      </Label>
+      <hr/>
+      <Paragraph contrast="AA" lineHeight="compact">
+        This is a simple demo page that has been implemented entirely from components that are
+        available in the current Halo release. Hovering over anything on this page will tell
+        you the name of the component it was constructed using.
+      </Paragraph>
+    </div>
+    <div className="flex flex-col p-4 gap-2 w-full">
+      <Bracket>
+        <Header className="pt-4" h4>Senior Software Engineer</Header>
+        <Button variant="gray">View Job</Button>
+      </Bracket>
+      <hr/>
+      <Bracket className="pb-4" isolate="first-child">
+        <p>List of applicants</p>
+        <p>Sort by</p>
+        <RawSelect
+          value="best-match"
+          options={[
+            { label: 'Best Match', value: 'best-match' },
+            { label: 'New Match', value: 'new-match' },
+          ]}
+        />
+      </Bracket>
+      <Panel>
+        <AvatarLockup size="lg" imageUrl="https://avatars.githubusercontent.com/u/56262247" >
+          <div>
+            <p className="font-bold">Vishal Jeet</p>
+            <p className="text-sm font-normal">10 years of exp · New York City · Remote Only</p>
+            <p className="text-xs text-dark-aa">May require a US work visa</p>
+          </div>
+        </AvatarLockup>
+        <hr/>
+        <Bracket>
+          <p>Skills</p>
+          <Tag color="gray" shape="pill" label="Java" size="2xs"/>
+          <Tag color="gray" shape="pill" label="Ruby" size="2xs"/>
+          <Tag color="gray" shape="pill" label="Python" size="2xs"/>
+          <Tag color="gray" shape="pill" label="C++" size="2xs"/>
+          <Tag color="gray" shape="pill" label="React" size="2xs"/>
+        </Bracket>
+        <hr/>
+        <AttributeList size="xs">
+          <Attribute name="Desired Role" value="Software Engineer" />
+          <Attribute name="Desired Salary" value="$100,000" />
+        </AttributeList>
+        <hr/>
+        <Bracket>
+          <Button>Accept</Button>
+          <Button variant="destructive">Reject</Button>
+        </Bracket>
+      </Panel>
+        <Panel>
+          <AvatarLockup size="lg" imageUrl="https://avatars.githubusercontent.com/u/194885" >
+            <div>
+              <p className="font-bold">Drew Lustro</p>
+              <p className="text-sm font-normal">15 years of exp · Los Angeles </p>
+              <p className="text-xs text-dark-aa">Does not require a US work visa</p>
+            </div>
+          </AvatarLockup>
+          <hr/>
+          <Bracket>
+            <p>Skills</p>
+            <Tag color="gray" shape="pill" label="Java" size="2xs"/>
+            <Tag color="gray" shape="pill" label="Ruby" size="2xs"/>
+            <Tag color="gray" shape="pill" label="Python" size="2xs"/>
+            <Tag color="gray" shape="pill" label="C++" size="2xs"/>
+            <Tag color="gray" shape="pill" label="React" size="2xs"/>
+          </Bracket>
+          <hr/>
+          <AttributeList size="xs">
+            <Attribute name="Desired Role" value="Software Engineer" />
+            <Attribute name="Desired Salary" value="$100,000" />
+          </AttributeList>
+          <hr/>
+          <Bracket>
+            <Button>Accept</Button>
+            <Button variant="destructive">Reject</Button>
+          </Bracket>
+        </Panel>
     </div>
   </div>
 </Playground>
