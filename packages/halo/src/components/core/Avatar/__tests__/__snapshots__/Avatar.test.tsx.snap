@@ -15,7 +15,7 @@ exports[`Avatar snapshots badge label 1`] = `
     class="badge"
   >
     <div
-      class="absolute right-0 border-solid border-slate-100 text-center text-3xs font-bold uppercase p-1 bg-slate-600 border-slate-100 text-white rounded-full h-6 min-w-6 pt-1 -top-2"
+      class="absolute right-0 border-solid border-slate-100 text-center text-2xs font-medium uppercase leading-none antialiased bg-slate-600 border-slate-100 text-white rounded-full min-w-6 p-1 -top-2"
     >
       Test Badge
     </div>
@@ -38,7 +38,7 @@ exports[`Avatar snapshots badgeColor 1`] = `
     class="badge"
   >
     <div
-      class="absolute right-0 border-solid border-slate-100 text-center text-3xs font-bold uppercase p-1 bg-purple-600 border-purple-100 text-white rounded-full h-6 min-w-6 pt-1 -top-2"
+      class="absolute right-0 border-solid border-slate-100 text-center text-2xs font-medium uppercase leading-none antialiased bg-purple-600 border-purple-100 text-white rounded-full min-w-6 p-1 -top-2"
     >
       Purple
     </div>
@@ -61,7 +61,7 @@ exports[`Avatar snapshots badgeShape circle [default] 1`] = `
     class="badge"
   >
     <div
-      class="absolute right-0 border-solid border-slate-100 text-center text-3xs font-bold uppercase p-1 bg-slate-600 border-slate-100 text-white rounded-full h-6 min-w-6 pt-1 -top-2"
+      class="absolute right-0 border-solid border-slate-100 text-center text-2xs font-medium uppercase leading-none antialiased bg-slate-600 border-slate-100 text-white rounded-full min-w-6 p-1 -top-2"
     >
       Test Badge
     </div>
@@ -84,7 +84,7 @@ exports[`Avatar snapshots badgeShape square 1`] = `
     class="badge"
   >
     <div
-      class="absolute right-0 border-solid border-slate-100 text-center text-3xs font-bold uppercase p-1 bg-slate-600 border-slate-100 text-white rounded-md h-6 min-w-6 pt-1 -top-2"
+      class="absolute right-0 border-solid border-slate-100 text-center text-2xs font-medium uppercase leading-none antialiased bg-slate-600 border-slate-100 text-white rounded-md min-w-6 p-1 -top-2"
     >
       Test Badge
     </div>
