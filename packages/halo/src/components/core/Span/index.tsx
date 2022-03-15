@@ -186,7 +186,6 @@ function SpanRaw(
     size === '3xl' && 'text-3xl',
     size === '4xl' && 'text-4xl',
     size === '5xl' && 'text-5xl',
-    size === '6xl' && 'text-6xl',
     // TODO(drew): declare our own tailwind enum for line height
     // so these class names don't need to be mapped
     lineHeight === 'default' && 'leading-normal', // 1.5

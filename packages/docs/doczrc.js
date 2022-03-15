@@ -110,14 +110,15 @@ export default {
         'Badge',
         'Banner',
         'Button',
-        'Header',
+        'InterfaceHeader',
         'LoadingIndicator',
         'Paragraph',
         'Tag',
         'Tooltip',
-        'Span',
         'Flair',
+        'Header',
         'PillTag',
+        'Span',
       ],
     },
     {
@@ -125,7 +126,6 @@ export default {
       menu: [
         'Bracket',
         'Dialog',
-        'InterfaceHeader',
         'Panel',
         'SidebarCell',
         'Box',
@@ -147,7 +147,7 @@ export default {
     },
     {
       name: 'Sass',
-      menu: ['Variables', 'Mixins', 'Functions', 'Breakpoints'],
+      menu: ['Variables', 'Functions', 'Breakpoints', 'Mixins'],
     },
   ],
 };

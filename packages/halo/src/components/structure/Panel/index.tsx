@@ -6,7 +6,7 @@ import {
   withForwardedRef,
 } from '../../../lib/withForwardedRef';
 
-import { InterfaceHeader } from '../InterfaceHeader';
+import { InterfaceHeader } from '../../core/InterfaceHeader';
 
 export interface PanelProps extends React.HTMLAttributes<HTMLDivElement> {
   /**

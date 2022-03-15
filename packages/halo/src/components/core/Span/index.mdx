@@ -49,36 +49,3 @@ The convenient text formatter. Implements common [text interfaces](/constants/te
 
 <Props of={Span} />
 
-
-### Do's & Don'ts
-
-✅
-
-```jsx
-<Span block error semibold>Quick error message</Span>
-<Span size="6xl">{emoji}</Span>
-```
-
-❌
-
-```jsx
-// no Span-specific feature in use
-<Span>hello</Span>
-
-// better off as <span>
-<Span className={styles.memo} muted italic>
-  already took the time to make .memo, so all styles should live in .memo
-</Span>
-
-// lazy style injection
-<Header h1>
-  <Span color="orange-700" italic>should be a custom class on Header</Span>
-</LinkButton>
-
-// lazy style injection
-<Anchor onClick={onClick} className={styles.specialLink}>
-  <Span color="dark-link" size="sm">
-    should be responsibility of Anchor or .specialLink
-  </Span>
-</Anchor>
-```

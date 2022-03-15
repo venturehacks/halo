@@ -6,59 +6,6 @@ route: /sass/variables
 
 # Variables
 
-## Font Family
-
-```scss
-$font-family-primary: 'helvetica neue', arial, helvetica, freesans,
-  'liberation sans', 'numbus sans l', sans-serif;
-$font-family-serif: georgia, serif;
-$font-family-monospace: Monaco, 'Courier New', monospace;
-$font-family-system: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
-  Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-  'Segoe UI Symbol';
-
-$font-families: (
-  primary: $font-family-primary,
-  serif: $font-family-serif,
-  monospace: $font-family-monospace,
-  system: $font-family-system,
-);
-```
-
-## Weight
-
-```scss
-$weight-regular: 400;
-$weight-medium: 500;
-$weight-semibold: 600;
-$weight-bold: 700;
-$weight-heavy: 800;
-
-$weights: (
-  regular: $weight-regular,
-  medium: $weight-medium,
-  semibold: $weight-semibold,
-  bold: $weight-bold,
-  heavy: $weight-heavy,
-);
-```
-
-## Line Height
-
-```scss
-$line-height-default: 1.5;
-$line-height-comfortable: 1.25;
-$line-height-compact: 1.125;
-$line-height-dense: 1.0625;
-
-$line-heights: (
-  default: $line-height-default,
-  comfortable: $line-height-comfortable,
-  compact: $line-height-compact,
-  dense: $line-height-dense,
-);
-```
-
 ## Z Index
 
 ```scss
@@ -75,59 +22,101 @@ $z-index-space: 20000;
 $z-index-max: 2147483647;
 ```
 
-## Text Transform
+## Font Family
+
+**Deprecated.** Please use [tailwind font family](https://v2.tailwindcss.com/docs/font-family).
 
 ```scss
-$text-transforms: (lowercase, uppercase, capitalize, none);
+$font-family-primary: "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";;
+$font-family-serif: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+$font-family-monospace: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+$font-family-system: -apple-system, blinkmacsystemfont, 'Segoe UI', roboto,
+  helvetica, arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+  'Segoe UI Symbol';
+
+$font-families: (
+  primary: $font-family-primary,
+  serif: $font-family-serif,
+  monospace: $font-family-monospace,
+  system: $font-family-system,
+);
+```
+
+## Weight
+
+**Deprecated.** Please use [tailwind font-weight](https://v2.tailwindcss.com/docs/font-weight).
+
+```scss
+$weight-light: 300;
+$weight-regular: 400;
+$weight-medium: 500;
+$weight-semibold: 600;
+$weight-bold: 700;
+
+$weights: (
+  regular: $weight-regular,
+  medium: $weight-medium,
+  semibold: $weight-semibold,
+  bold: $weight-bold,
+  heavy: $weight-heavy,
+);
 ```
 
 ## Type Scale
 
+**Deprecated.** Please use [tailwind font-size](https://v2.tailwindcss.com/docs/font-size).
+
 ```scss
 $font-sizes-map: (
+  // Legacy miniature
   size-2xs: (
     font-size: 11px,
-    line-height: 1.45,
+    line-height: 18px,
   ),
+  // Legacy miniature
   size-xs: (
     font-size: 12px,
-    line-height: 1.67,
+    line-height: 18px,
   ),
+  // Mini
   size-sm: (
     font-size: 14px,
-    line-height: 1.5,
+    line-height: 20px,
   ),
+  // Body / Subsection Heading
   size-md: (
     font-size: 16px,
-    line-height: 1.5,
+    line-height: 20px,
   ),
+  // Section Heading
   size-lg: (
     font-size: 20px,
-    line-height: 1.4,
+    line-height: 24px,
   ),
+  // Page Heading
   size-xl: (
     font-size: 24px,
-    line-height: 1.25,
+    line-height: 30px,
   ),
+  // Display Heading
   size-2xl: (
-    font-size: 32px,
-    line-height: 1.125,
-  ),
-  size-3xl: (
     font-size: 36px,
-    line-height: 1.11,
+    line-height: 40px,
   ),
-  size-4xl: (
-    font-size: 40px,
-    line-height: 1.05,
-  ),
-  size-5xl: (
+  // Blog Articles
+  size-3xl: (
     font-size: 48px,
-    line-height: 1.06,
+    line-height: 52px,
   ),
-  size-6xl: (
+  // Hero Heading
+  size-4xl: (
     font-size: 56px,
-    line-height: 1.07,
+    line-height: 64px,
+  ),
+  // Hero Heading Plus
+  size-5xl: (
+    font-size: 64px,
+    line-height: 72px,
   ),
 );
 ```

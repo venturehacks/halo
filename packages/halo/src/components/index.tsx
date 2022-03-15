@@ -19,7 +19,7 @@ export * from './structure/Bracket';
 export * from './structure/Cell';
 export * from './structure/Dialog';
 export * from './structure/Grid';
-export * from './structure/InterfaceHeader';
+export * from './core/InterfaceHeader';
 export * from './structure/Panel';
 export * from './structure/SidebarCell';
 // form

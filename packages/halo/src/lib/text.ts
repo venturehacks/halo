@@ -5,7 +5,6 @@ export type TextColorScheme = 'dark' | 'light';
 export type TextWeight = 'light' | 'regular' | 'medium' | 'semibold' | 'bold';
 
 export type TextSize =
-  | '6xl'
   | '5xl'
   | '4xl'
   | '3xl'
