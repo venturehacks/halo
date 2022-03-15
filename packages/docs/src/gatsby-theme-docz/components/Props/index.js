@@ -109,7 +109,7 @@ export const Props = (componentProps) => {
                   <InlineCode>{getDefaultValue(prop)}</InlineCode>
                 )}
               </td>
-              <td className="text-center">{prop.required ? '✅' : ''}</td>
+              <td className="text-center">{prop.required ? '✔' : ''}</td>
               <td className="text-dark-aa text-xs max-w-xs">
                 {prop.description}
               </td>
