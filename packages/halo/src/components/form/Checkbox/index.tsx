@@ -7,15 +7,16 @@ import {
   ForwardedRefProps,
   withForwardedRef,
 } from '../../../lib';
-import { FormInputErrorSeverity } from '../RawInput';
+
+import { FormInputErrorSeverity } from '../Input';
 
 import styles from './styles.module.scss';
 
-export interface RawRadioProps
+export interface CheckboxProps
   extends React.InputHTMLAttributes<HTMLInputElement> {
   className?: string;
   /**
-   * Vertical alignment of radio element
+   * Vertical alignment of checkbox element.
    * @default top
    */
   controlAlignment?: ControlAlignment;
@@ -26,7 +27,7 @@ export interface RawRadioProps
    */
   errorSeverity?: FormInputErrorSeverity;
   /**
-   * Call out element that needs attention
+   * Call out element that needs attention.
    * @default false
    */
   hasError?: boolean;
@@ -39,12 +40,12 @@ export interface RawRadioProps
   onChange?: React.ChangeEventHandler<HTMLInputElement> | (() => void);
   /**
    * Control element styling.
-   * @default radio
+   * @default checkbox
    */
-  variant?: 'radio' | 'checkbox' | 'pill';
+  variant?: 'checkbox' | 'pill' | 'toggle-switch';
 }
 
-function RawRadioRaw({
+function RawCheckbox({
   className,
   controlAlignment = 'top',
   errorSeverity = 'warning',
@@ -53,31 +54,32 @@ function RawRadioRaw({
   id,
   label,
   labelClassName,
+  variant = 'checkbox',
   type, // deliberately discard
-  variant = 'radio',
   ...rest
-}: RawRadioProps & ForwardedRefProps<HTMLInputElement>) {
+}: CheckboxProps & ForwardedRefProps<HTMLInputElement>) {
   return (
     <div ref={forwardedRef}>
       <input
         className={classNames(
           styles.input,
-          className,
           hasError && styles.hasError,
           hasError && FORM_FIELD_ERROR_IDENTIFIER,
           errorSeverity === 'warning' && styles.warning,
           errorSeverity === 'critical' && styles.critical,
+          className,
         )}
         id={id}
-        type="radio"
+        type="checkbox"
         {...rest}
       />
       <label
         className={classNames(
           labelClassName,
-          variant === 'radio' && styles.radio,
-          variant === 'checkbox' && styles.checkbox,
-          variant === 'pill' && [styles.radio, styles.pill],
+          styles.label,
+          (variant === 'checkbox' || variant === 'pill') && styles.checkbox,
+          variant === 'pill' && styles.pill,
+          variant === 'toggle-switch' && styles.toggleSwitch,
           controlAlignment === 'center' && styles.controlAlignCenter,
         )}
         htmlFor={id}
@@ -88,8 +90,8 @@ function RawRadioRaw({
   );
 }
 
-RawRadioRaw.displayName = 'RawRadio';
+RawCheckbox.displayName = 'Checkbox';
 
-const RawRadio = withForwardedRef<RawRadioProps, HTMLInputElement>(RawRadioRaw);
+const Checkbox = withForwardedRef<CheckboxProps, HTMLInputElement>(RawCheckbox);
 
-export { RawRadio };
+export { Checkbox };

@@ -1,36 +1,36 @@
 ---
-name: RawCheckbox
+name: Checkbox
 menu: Form
-route: /form/raw-checkbox
+route: /form/checkbox
 ---
 
 import { Props, Playground } from 'docz';
 import { Label } from '../Label';
-import { RawCheckbox } from './';
+import { Checkbox } from './';
 
-# RawCheckbox
+# Checkbox
 
-Raw input fields are designed to be controlled by a [smart, form-connected parent](https://github.com/venturehacks/AngelList/blob/master/frontend/talent/components/Form/TextField/index.tsx).
+Input fields are designed to be controlled by a [smart, form-connected parent](https://github.com/venturehacks/AngelList/blob/master/frontend/talent/components/Form/TextField/index.tsx).
 
 ### Usage
 
 <Playground>
   <Label field="ice-cream" title="Checkbox" containsFieldGroup>
     <div className="flex flex-row gap-10 max-w-xl mb-8">
-      <RawCheckbox
+      <Checkbox
         name="ice-cream"
         value="chocolate"
         label="Chocolate"
         onChange={() => {}}
         checked
       />
-      <RawCheckbox
+      <Checkbox
         name="ice-cream"
         value="vanilla"
         label="Vanilla"
         onChange={() => {}}
       />
-      <RawCheckbox
+      <Checkbox
         name="ice-cream"
         value="strawberry"
         label="Strawberry"
@@ -42,7 +42,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
   </Label>
   <Label field="ice-cream" title="Toggle Switch" containsFieldGroup>
     <div className="flex flex-row gap-10 max-w-xl mb-8">
-      <RawCheckbox
+      <Checkbox
         variant="toggle-switch"
         name="ice-cream"
         value="chocolate"
@@ -50,14 +50,14 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
         onChange={() => {}}
         checked
       />
-      <RawCheckbox
+      <Checkbox
         variant="toggle-switch"
         name="ice-cream"
         value="vanilla"
         label="Vanilla"
         onChange={() => {}}
       />
-      <RawCheckbox
+      <Checkbox
         variant="toggle-switch"
         name="ice-cream"
         value="strawberry"
@@ -70,7 +70,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
   </Label>
   <Label field="ice-cream" title="Pill" containsFieldGroup>
     <div className="flex flex-row gap-10 max-w-xl mb-8">
-      <RawCheckbox
+      <Checkbox
         variant="pill"
         name="ice-cream"
         value="chocolate"
@@ -78,14 +78,14 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
         onChange={() => {}}
         checked
       />
-      <RawCheckbox
+      <Checkbox
         variant="pill"
         name="ice-cream"
         value="vanilla"
         label="Vanilla"
         onChange={() => {}}
       />
-      <RawCheckbox
+      <Checkbox
         variant="pill"
         name="ice-cream"
         value="strawberry"
@@ -100,4 +100,4 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
 
 ### Props
 
-<Props of={RawCheckbox} />
+<Props of={Checkbox} />

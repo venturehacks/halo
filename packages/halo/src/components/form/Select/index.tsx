@@ -5,14 +5,14 @@ import { ForwardedRefProps, withForwardedRef } from '../../../lib';
 
 import {
   FormInputIntrinsicWidth,
-  RawInputBase,
+  InputBase,
   rawInputClassNames,
-} from '../RawInput';
+} from '../Input';
 
 import styles from './styles.module.scss';
 
-export interface RawSelectProps
-  extends RawInputBase,
+export interface SelectProps
+  extends InputBase,
     Omit<React.SelectHTMLAttributes<HTMLSelectElement>, 'size'> {
   className?: string;
   /**
@@ -24,22 +24,22 @@ export interface RawSelectProps
    */
   name?: string;
   onChange?: React.ChangeEventHandler<HTMLSelectElement> | (() => void);
-  options: (RawSelectOption | RawSelectOptgroup)[];
+  options: (SelectOption | SelectOptgroup)[];
 }
 
-export interface RawSelectOption {
+export interface SelectOption {
   disabled?: boolean;
   label: string;
   value?: string;
 }
 
-export interface RawSelectOptgroup {
+export interface SelectOptgroup {
   disabled?: boolean;
   label: string;
-  options: RawSelectOption[];
+  options: SelectOption[];
 }
 
-function RawSelectRaw({
+function RawSelect({
   className,
   forwardedRef,
   options = [],
@@ -48,7 +48,7 @@ function RawSelectRaw({
   errorSeverity = 'warning',
   size = 'md',
   ...rest
-}: RawSelectProps & ForwardedRefProps<HTMLSelectElement>) {
+}: SelectProps & ForwardedRefProps<HTMLSelectElement>) {
   return (
     <select
       ref={forwardedRef}
@@ -83,7 +83,7 @@ function RawSelectRaw({
   );
 }
 
-function Option({ option }: { option: RawSelectOption }) {
+function Option({ option }: { option: SelectOption }) {
   const { value, label, disabled } = option;
   return (
     <option disabled={disabled} value={value}>
@@ -92,12 +92,10 @@ function Option({ option }: { option: RawSelectOption }) {
   );
 }
 
-function isOptgroup(opt: any): opt is RawSelectOptgroup {
-  return (opt as RawSelectOptgroup).options !== undefined;
+function isOptgroup(opt: any): opt is SelectOptgroup {
+  return (opt as SelectOptgroup).options !== undefined;
 }
 
-const RawSelect = withForwardedRef<RawSelectProps, HTMLSelectElement>(
-  RawSelectRaw,
-);
+const Select = withForwardedRef<SelectProps, HTMLSelectElement>(RawSelect);
 
-export { RawSelect };
+export { Select };

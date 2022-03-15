@@ -1,12 +1,12 @@
 import { render } from 'enzyme';
 import React from 'react';
 
-import { RawTextarea } from '../index';
+import { Textarea } from '../index';
 
-describe('RawTextarea', () => {
+describe('Textarea', () => {
   test('smoke', () => {
     const component = render(
-      <RawTextarea onChange={() => {}} value="textarea value" />,
+      <Textarea onChange={() => {}} value="textarea value" />,
     );
 
     expect(component.text()).toContain('textarea value');
@@ -16,21 +16,21 @@ describe('RawTextarea', () => {
     describe('size', () => {
       test('sm', () => {
         const component = render(
-          <RawTextarea onChange={() => {}} size="sm" value="small" />,
+          <Textarea onChange={() => {}} size="sm" value="small" />,
         );
         expect(component).toMatchSnapshot();
       });
 
       test('md', () => {
         const component = render(
-          <RawTextarea onChange={() => {}} value="medium" />,
+          <Textarea onChange={() => {}} value="medium" />,
         );
         expect(component).toMatchSnapshot();
       });
 
       test('lg', () => {
         const component = render(
-          <RawTextarea onChange={() => {}} size="lg" value="large" />,
+          <Textarea onChange={() => {}} size="lg" value="large" />,
         );
         expect(component).toMatchSnapshot();
       });

@@ -1,14 +1,14 @@
 ---
-name: RawTextarea
+name: Textarea
 menu: Form
-route: /form/raw-textarea
+route: /form/textarea
 ---
 
 import { Props, Playground } from 'docz';
 import { Label } from '../Label';
-import { RawTextarea } from './';
+import { Textarea } from './';
 
-# RawTextarea
+# Textarea
 
 Raw input fields are designed to be controlled by a [smart, form-connected parent](https://github.com/venturehacks/AngelList/blob/master/frontend/talent/components/Form/TextField/index.tsx).
 
@@ -17,7 +17,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
 <Playground>
   <div className="max-w-lg">
     <Label field="bio" title="Textarea" byline="Explicit rows, cols">
-      <RawTextarea
+      <Textarea
         name="bio"
         placeholder="Tell us about yourself..."
         rows={5}
@@ -25,7 +25,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
       />
     </Label>
     <Label field="bio-warning" title="Personal Bio" byline="100% width">
-      <RawTextarea
+      <Textarea
         name="bio"
         intrinsicWidth="100%"
         onChange={() => {}}
@@ -33,7 +33,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
       />
     </Label>
     <Label field="bio-warning" title="Oops" byline="validation error">
-      <RawTextarea
+      <Textarea
         name="bio"
         intrinsicWidth="100%"
         value="dang"
@@ -46,4 +46,4 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
 
 ### Props
 
-<Props of={RawTextarea} />
+<Props of={Textarea} />

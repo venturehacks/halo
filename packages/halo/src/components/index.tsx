@@ -25,8 +25,8 @@ export * from './structure/SidebarCell';
 // form
 export * from './form/FieldErrorMessage';
 export * from './form/Label';
-export * from './form/RawCheckbox';
-export * from './form/RawInput';
-export * from './form/RawRadio';
-export * from './form/RawSelect';
-export * from './form/RawTextarea';
+export * from './form/Checkbox';
+export * from './form/Input';
+export * from './form/Radio';
+export * from './form/Select';
+export * from './form/Textarea';

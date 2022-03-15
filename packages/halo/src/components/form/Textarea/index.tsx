@@ -5,14 +5,14 @@ import { ForwardedRefProps, withForwardedRef } from '../../../lib';
 
 import {
   FormInputIntrinsicWidth,
-  RawInputBase,
+  InputBase,
   rawInputClassNames,
-} from '../RawInput';
+} from '../Input';
 
 import styles from './styles.module.scss';
 
-export interface RawTextareaProps
-  extends RawInputBase,
+export interface TextareaProps
+  extends InputBase,
     React.TextareaHTMLAttributes<HTMLTextAreaElement> {
   className?: string;
   /**
@@ -34,7 +34,7 @@ export interface RawTextareaProps
   transparent?: boolean;
 }
 
-function RawTextareaRaw({
+function RawTextarea({
   className,
   forwardedRef,
   intrinsicWidth = 'auto',
@@ -43,7 +43,7 @@ function RawTextareaRaw({
   transparent = false,
   size = 'md',
   ...rest
-}: RawTextareaProps & ForwardedRefProps<HTMLTextAreaElement>) {
+}: TextareaProps & ForwardedRefProps<HTMLTextAreaElement>) {
   return (
     <textarea
       ref={forwardedRef}
@@ -63,8 +63,8 @@ function RawTextareaRaw({
   );
 }
 
-const RawTextarea = withForwardedRef<RawTextareaProps, HTMLTextAreaElement>(
-  RawTextareaRaw,
+const Textarea = withForwardedRef<TextareaProps, HTMLTextAreaElement>(
+  RawTextarea,
 );
 
-export { RawTextarea };
+export { Textarea };

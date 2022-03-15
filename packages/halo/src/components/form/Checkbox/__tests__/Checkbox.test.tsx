@@ -1,10 +1,10 @@
 import { render } from 'enzyme';
 import React from 'react';
 
-import { RawCheckbox } from '../index';
+import { Checkbox } from '../index';
 
 test('smoke', () => {
-  const component = render(<RawCheckbox id="ice-cream" label="Chocolate" />);
+  const component = render(<Checkbox id="ice-cream" label="Chocolate" />);
 
   expect(component.text()).toContain('Chocolate');
 });

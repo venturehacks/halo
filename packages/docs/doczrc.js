@@ -138,11 +138,11 @@ export default {
       menu: [
         'Label',
         'FieldErrorMessage',
-        'RawInput',
-        'RawCheckbox',
-        'RawRadio',
-        'RawSelect',
-        'RawTextarea',
+        'Input',
+        'Checkbox',
+        'Radio',
+        'Select',
+        'Textarea',
       ],
     },
     {

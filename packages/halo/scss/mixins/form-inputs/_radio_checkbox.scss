@@ -1,7 +1,7 @@
 @import './base';
 
-$raw-checkbox-size: tempo(4);
-$raw-radio-size: tempo(4);
+$checkbox-size: tempo(4);
+$radio-size: tempo(4);
 $pill-border-radius: tempo(6);
 
 /**
@@ -63,13 +63,13 @@ $pill-border-radius: tempo(6);
 @mixin input-label-checkbox {
   @extend %input-label-base;
   padding-left: tempo(6);
-  line-height: $raw-checkbox-size;
+  line-height: $checkbox-size;
 
   // empty checkbox
   &::before {
     left: 0;
-    height: $raw-checkbox-size;
-    width: $raw-checkbox-size;
+    height: $checkbox-size;
+    width: $checkbox-size;
     border: 1px solid $dark-aaaa;
     background-color: $white;
     border-radius: 3px;
@@ -138,14 +138,14 @@ $pill-border-radius: tempo(6);
 
 @mixin input-label-radio {
   @extend %input-label-base;
-  line-height: $raw-radio-size;
+  line-height: $radio-size;
   padding-left: tempo(6);
 
   // circle outline
   &::before {
     left: 0;
-    height: $raw-radio-size;
-    width: $raw-radio-size;
+    height: $radio-size;
+    width: $radio-size;
     @include border-circle;
     border: 1px solid $dark-aaaa;
     background-color: $white;
