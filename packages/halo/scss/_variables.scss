@@ -6,11 +6,11 @@
 // --------------------
 // FAMILY
 
-$font-family-primary: 'helvetica neue', arial, helvetica, freesans,
-  'liberation sans', 'numbus sans l', sans-serif;
-$font-family-serif: georgia, serif;
-$font-family-monospace: 'SF Mono', sfmono-regular, ui-monospace, monaco,
-  'Courier New', monospace;
+$font-family-primary: 'Helvetica Neue', arial, 'Noto Sans', sans-serif,
+  'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+$font-family-serif: ui-serif, georgia, cambria, 'Times New Roman', times, serif;
+$font-family-monospace: ui-monospace, sfmono-regular, menlo, monaco, consolas,
+  'Liberation Mono', 'Courier New', monospace;
 $font-family-system: -apple-system, blinkmacsystemfont, 'Segoe UI', roboto,
   helvetica, arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
   'Segoe UI Symbol';

@@ -239,6 +239,10 @@ module.exports = {
       '4xl': ['56px', '64px'], // Hero Heading
       '5xl': ['64px', '72px'], // Hero Heading Plus
     },
+    fontFamily: {
+      sans: '"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif',
+      mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+    },
     spacing: {
       px: '1px',
       0: '0',
