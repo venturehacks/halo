@@ -26,7 +26,7 @@ export default {
       // NOTE(drew): nothing in this function will output to console, unfortunately
       if (props.declarations !== undefined && props.declarations.length > 0) {
         const useProps = props.declarations.find((declaration) => {
-          const isHalo = declaration.fileName.includes('halo');
+          const isHalo = declaration.fileName.includes('halo/src');
           const fromNodeModules = declaration.fileName.includes('node_modules');
           return isHalo || !fromNodeModules;
         });
@@ -35,7 +35,7 @@ export default {
       }
 
       if (props.parent) {
-        const isHalo = props.parent.fileName.includes('halo');
+        const isHalo = props.parent.fileName.includes('halo/src');
         const fromNodeModules = props.parent.fileName.includes('node_modules');
         return isHalo || !fromNodeModules;
       }
@@ -103,7 +103,6 @@ export default {
     {
       name: 'Core',
       menu: [
-        'AttentionIndicator',
         'Attribute',
         'Avatar',
         'AvatarLockup',
@@ -119,6 +118,7 @@ export default {
         'Header',
         'PillTag',
         'Span',
+        'AttentionIndicator',
       ],
     },
     {

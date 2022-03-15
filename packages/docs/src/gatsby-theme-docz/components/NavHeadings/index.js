@@ -1,7 +1,7 @@
 import { useConfig, useCurrentDoc } from 'docz';
 import React from 'react';
 import Scrollspy from 'react-scrollspy';
-import { Container, Heading, icon, Sticky, Toc } from './custom-styles';
+import { Container, Sticky, Toc } from './custom-styles';
 
 const NavHeadings = () => {
   const {
