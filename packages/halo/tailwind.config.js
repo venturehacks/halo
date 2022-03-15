@@ -214,26 +214,26 @@ module.exports = {
         fit: 'fit-content',
       },
       maxWidth: {
-        10: '10%',
-        20: '20%',
-        30: '30%',
-        40: '30%',
-        50: '50%',
-        60: '50%',
-        70: '50%',
-        80: '80%',
-        90: '90%',
+        '10': '10%',
+        '20': '20%',
+        '30': '30%',
+        '40': '30%',
+        '50': '50%',
+        '60': '50%',
+        '70': '50%',
+        '80': '80%',
+        '90': '90%',
         '2xs': '10rem',
         '3xs': '5rem',
       },
     },
     fontSize: {
       '2xs': ['11px', '18px'], // (deprecated legacy nano)
-      xs: ['12px', '18px'], // (deprecated legacy micro)
-      sm: ['14px', '20px'], // Mini
-      md: ['16px', '20px'], // Body / Subsection
-      lg: ['20px', '24px'], // Section
-      xl: ['24px', '30px'], // Page
+      'xs': ['12px', '18px'], // (deprecated legacy micro)
+      'sm': ['14px', '20px'], // Mini
+      'md': ['16px', '20px'], // Body / Subsection
+      'lg': ['20px', '24px'], // Section
+      'xl': ['24px', '30px'], // Page
       '2xl': ['36px', '40px'], // Display
       '3xl': ['48px', '52px'], // Blog Article
       '4xl': ['56px', '64px'], // Hero Heading

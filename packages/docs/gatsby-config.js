@@ -24,7 +24,7 @@ module.exports = {
           '~/lib': path.join(haloDirectory, 'src', 'lib'),
           // NOTE(drew): unsure why this is necessary, but for some reason
           // gatsby cannot find 'halo' scss source via includePaths
-          halo: path.join(haloDirectory, 'scss', '_halo.scss'),
+          'halo': path.join(haloDirectory, 'scss', '_halo.scss'),
         },
       },
     },

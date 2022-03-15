@@ -10,8 +10,8 @@ const heading = (Tag) => {
         <Link
           href={`#${props.id}`}
           sx={{
-            color: 'inherit',
-            textDecoration: 'none',
+            'color': 'inherit',
+            'textDecoration': 'none',
             ':hover': {
               textDecoration: 'underline',
             },
