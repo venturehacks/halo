@@ -104,7 +104,6 @@ Use [Tailwind font-size](https://v2.tailwindcss.com/docs/font-size) to implement
 ## Weight
 
 <Playground>
-  <Span weight="light" block>300 light</Span>
   <Span weight="regular" block>400 regular (default)</Span>
   <Span weight="medium" block>500 medium</Span>
   <Span weight="semibold" block>600 semibold</Span>
@@ -112,7 +111,6 @@ Use [Tailwind font-size](https://v2.tailwindcss.com/docs/font-size) to implement
 </Playground>
 
 ```scss
-$weight-light: 300;
 $weight-regular: 400;
 $weight-medium: 500;
 $weight-semibold: 600;
@@ -137,7 +135,7 @@ the cooresponding rule.
 ```scss
 @mixin font(
   $size: null,   // 2xs | xs | sm | md | lg | xl | 2xl | 3xl | 4xl | 5xl
-  $weight: null, // light | regular | medium | semibold | bold
+  $weight: null, // regular | medium | semibold | bold
   $color: null,  // palette color name or hex
   $family: null, // primary | serif | monospace | system
   $transform: null, // uppercase | lowercase | capitalize | none
@@ -151,7 +149,7 @@ the cooresponding rule.
 ```ts
 type TextSize = '5xl' | '4xl' | '3xl' | '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs' | '2xs';
 
-type TextWeight = 'light' | 'regular' | 'medium' | 'semibold' | 'bold';
+type TextWeight = 'regular' | 'medium' | 'semibold' | 'bold';
 
 type TextContrast = 'A' | 'AA' | 'AAA' | 'AAAA';
 
