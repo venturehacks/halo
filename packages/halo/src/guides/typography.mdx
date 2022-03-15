@@ -12,7 +12,7 @@ import { Span } from '../components/core/Span';
 
 # Typography
 
-Suitable for long, continuous written content, such as editorial or blog posts.
+🔗 [Figma](https://www.figma.com/file/8EbOKQuVfc61d9aft8p7cO/Halo-Design-Library?node-id=364%3A897)
 
 <br />
 
@@ -125,41 +125,6 @@ $weights: (
 
 <br /><br />
 
-## Line Height
-
-> ** ⚠️ Advanced override. Use with caution.**
-
-Generally, you should not override line height. There is a curated line height automatically applied when setting text size.
-
-<Playground>
-  <Box maxWidth="600px">
-    <Paragraph>
-      <strong>Default.</strong> The Paragraph component is ideal for rendering blocks of copy. It offers a narrower subset of features from Span, with stronger default enforcement of type size and line height. By default, it applies a natural document flow bottom margin.
-    </Paragraph>
-    <Paragraph lineHeight="comfortable">
-      <strong>Comfortable.</strong> The Paragraph component is ideal for rendering blocks of copy. It offers a narrower subset of features from Span, with stronger default enforcement of type size and line height. By default, it applies a natural document flow bottom margin.
-    </Paragraph>
-    <Paragraph lineHeight="compact">
-      <strong>Compact.</strong> The Paragraph component is ideal for rendering blocks of copy. It offers a narrower subset of features from Span, with stronger default enforcement of type size and line height. By default, it applies a natural document flow bottom margin.
-    </Paragraph>
-  </Box>
-</Playground>
-
-```scss
-$line-height-default: 1.5;
-$line-height-comfortable: 1.25;
-$line-height-compact: 1.125;
-$line-height-dense: 1.0625;
-$line-heights: (
-  default: $line-height-default,
-  comfortable: $line-height-comfortable,
-  compact: $line-height-compact,
-  dense: $line-height-dense,
-);
-```
-
-<br /><br />
-
 ## Sass
 
 Configure many typeface properties at once. For each setting, it will only spit out a rule if you provide a non-null value.
@@ -184,8 +149,6 @@ the cooresponding rule.
 
 
 ## TypeScript
-
-Relied on by `Header` `Paragraph` and `Span`
 
 ```ts
 type TextSize = '5xl' | '4xl' | '3xl' | '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs' | '2xs';
