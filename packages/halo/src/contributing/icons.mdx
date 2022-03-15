@@ -1,26 +1,37 @@
 ---
-name: Adding a new Icon
+name: Icon
 menu: Contributing
-route: /contributing/icons
+route: /contributing/icon
 ---
 
-# Steps for adding a new Icon
+# Contributing a new Icon
 
 <br/>
 
-#### 1. Download the `.svg` file to a local directory
+#### Download SVG
 
-&nbsp;&nbsp; NOTE: the default attributes for the `.svg` should be:
-```html
-<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+NOTE: the SVG icon should be 24x24.
+
+<br/>
+
+#### Copy SVG to Halo Icon Directory
+
+```bash
+# halo root
+open packages/halo/src/components/icons
 ```
 
-#### 2. Copy the `.svg` file into the `src/components/icons` directory
+NOTE: filename should be pascal case, suffixed with 'Icon'
 
 <img src='/add_icon_step_2.gif' />
+
 <br/>
 
-#### 3. Run the yarn command to include the Icon as necessary
+#### Regenerate Index
+
+We want to index our new icon in the [directory](/icons), and declare it as an export of the halo module.
+
+This chore has been automated:
 
 ```bash
 yarn icons
@@ -29,6 +40,6 @@ yarn icons
 <br/>
 
 
-#### 4. Create a new pull request with your newly added Icon.
+#### Create Pull Request
 
-&nbsp;&nbsp; NOTE: [here](https://github.com/venturehacks/halo/pull/154) is an example PR that adds the `WarningIcon`.
+[An example PR](https://github.com/venturehacks/halo/pull/154) that adds the `WarningIcon`, for reference.
