@@ -11,7 +11,7 @@ export interface AttentionIndicatorProps {
   className?: string;
   color?: AttentionIndicatorColor;
   /**
-   * The count displayed on the indicator
+   * Count displayed on the indicator
    */
   count?: number;
   /**
