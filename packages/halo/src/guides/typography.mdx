@@ -9,34 +9,20 @@ import { Box } from '../components/structure/Box';
 import { Paragraph } from '../components/core/Paragraph';
 import { Header } from '../components/core/Header';
 import { Span } from '../components/core/Span';
+import { Banner } from '../components/core/Banner';
 
 # Typography
 
 🔗 [Figma](https://www.figma.com/file/8EbOKQuVfc61d9aft8p7cO/Halo-Design-Library?node-id=364%3A897)
 
-<br />
+## Primary Scale
 
-## Size
+See [InterfaceHeader](/core/interface-header).
 
 <Playground>
-  <Span contrast="A" monospace>2xs &middot; 11px &middot; 20px</Span>
-  <Paragraph size="2xs">
-    Legal Copy (nano)
-  </Paragraph>
-
-  <Span contrast="A" monospace>xs &middot; 12px &middot; 20px</Span>
-  <Paragraph size="xs">
-    Legal Copy (micro)
-  </Paragraph>
-
-  <Span contrast="A" monospace>sm &middot; 14px &middot; 20px</Span>
-  <Paragraph size="sm">
-    Mini Heading
-  </Paragraph>
-
-  <Span contrast="A" monospace>md &middot; 16px &middot; 20px</Span>
-  <Paragraph size="md">
-    Body / Subsection Heading
+  <Span contrast="A" monospace>xl &middot; 24px &middot; 30px</Span>
+  <Paragraph size="xl">
+    Page Heading
   </Paragraph>
 
   <Span contrast="A" monospace>lg &middot; 20px &middot; 24px</Span>
@@ -44,33 +30,52 @@ import { Span } from '../components/core/Span';
     Section Heading
   </Paragraph>
 
-  <Span contrast="A" monospace>xl &middot; 24px &middot; 30px</Span>
-  <Paragraph size="xl">
-    Page Heading
+  <Span contrast="A" monospace>md &middot; 16px &middot; 20px</Span>
+  <Paragraph size="md">
+    Body / Subsection Heading
   </Paragraph>
 
-  <Span contrast="A" monospace>2xl &middot; 36px &middot; 40px</Span>
-  <Paragraph size="2xl">
-    Display Heading
+  <Span contrast="A" monospace>sm &middot; 14px &middot; 20px</Span>
+  <Paragraph size="sm">
+    Mini Heading
   </Paragraph>
+</Playground>
 
-  <Span contrast="A" monospace>3xl &middot; 48px &middot; 52px</Span>
-  <Paragraph size="3xl">
-    Blog Article
-  </Paragraph>
 
-  <Span contrast="A" monospace>4xl &middot; 56x &middot; 64px</Span>
-  <Paragraph size="4xl">
-    Hero Heading
-  </Paragraph>
+## Specialty Scale
 
+Reach for these sizes sparingly. If you receive a mock that depicts type in one of these sizes, confirm intention with the designer.
+
+Use [Tailwind font-size](https://v2.tailwindcss.com/docs/font-size) to implement.
+
+<Banner variant="warning">Specialty scale use is discouraged for general product work.</Banner>
+
+<Playground>
   <Span contrast="A" monospace>5xl &middot; 64px &middot; 72px</Span>
   <Paragraph size="5xl">
     Hero Heading Plus
   </Paragraph>
+  <Span contrast="A" monospace>4xl &middot; 56x &middot; 64px</Span>
+  <Paragraph size="4xl">
+    Hero Heading
+  </Paragraph>
+  <Span contrast="A" monospace>3xl &middot; 48px &middot; 52px</Span>
+  <Paragraph size="3xl">
+    Blog Article
+  </Paragraph>
+  <Span contrast="A" monospace>2xl &middot; 36px &middot; 40px</Span>
+  <Paragraph size="2xl">
+    Display Heading
+  </Paragraph>
+  <Span contrast="A" monospace>2xs &middot; 11px &middot; 20px</Span>
+  <Paragraph size="2xs">
+    Legal Copy (nano)
+  </Paragraph>
+  <Span contrast="A" monospace>xs &middot; 12px &middot; 20px</Span>
+  <Paragraph size="xs">
+    Legal Copy (micro)
+  </Paragraph>
 </Playground>
-
-<br /><br />
 
 ## Contrast
 
@@ -95,8 +100,6 @@ import { Span } from '../components/core/Span';
   </Box>
 </Playground>
 
-
-<br /><br />
 
 ## Weight
 
@@ -123,27 +126,22 @@ $weights: (
 );
 ```
 
-<br /><br />
-
 ## Sass
 
 Configure many typeface properties at once. For each setting, it will only spit out a rule if you provide a non-null value.
 
-If a supplied preset key name is invalid for `$family`, `$size`, `$line`, `$weight`, etc,
+If a supplied preset key name is invalid for `$family`, `$size`,`$weight`, etc,
 the mix- falls back on supplying the literal value to
 the cooresponding rule.
 
 ```scss
 @mixin font(
   $size: null,   // 2xs | xs | sm | md | lg | xl | 2xl | 3xl | 4xl | 5xl
-  $line: null,   // default | comfortable | compact
   $weight: null, // light | regular | medium | semibold | bold
   $color: null,  // palette color name or hex
   $family: null, // primary | serif | monospace | system
   $transform: null, // uppercase | lowercase | capitalize | none
-  $antialiased: null,
   $spacing: null,
-  $truncate: null
 )
 ```
 
@@ -156,8 +154,6 @@ type TextSize = '5xl' | '4xl' | '3xl' | '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs'
 type TextWeight = 'light' | 'regular' | 'medium' | 'semibold' | 'bold';
 
 type TextContrast = 'A' | 'AA' | 'AAA' | 'AAAA';
-
-type TextLineHeight = 'default' | 'comfortable' | 'compact';
 
 type TextColorScheme = 'dark' | 'light';
 ```
