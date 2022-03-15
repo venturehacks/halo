@@ -17,11 +17,11 @@ import { Header } from '../components/core/Header';
 import { Tag } from '../components/core/Tag';
 import { Tooltip } from '../components/core/Tooltip';
 import { Label } from '../components/form/Label';
-import { RawCheckbox } from '../components/form/RawCheckbox';
-import { RawInput } from '../components/form/RawInput';
-import { RawRadio } from '../components/form/RawRadio';
-import { RawSelect } from '../components/form/RawSelect';
-import { RawTextarea } from '../components/form/RawTextarea';
+import { Checkbox } from '../components/form/Checkbox';
+import { Input } from '../components/form/Input';
+import { Radio } from '../components/form/Radio';
+import { Select } from '../components/form/Select';
+import { Textarea } from '../components/form/Textarea';
 import { Bracket } from '../components/structure/Bracket';
 import { InterfaceHeader } from '../components/structure/InterfaceHeader';
 import { Panel } from '../components/structure/Panel';
@@ -69,8 +69,8 @@ import { SearchIcon } from '../components/icons';
           section
         />
       </Tooltip>
-      <Tooltip content="RawInput (with SearchIcon)" placement="right">
-        <RawInput
+      <Tooltip content="Input (with SearchIcon)" placement="right">
+        <Input
           type="text"
           name="foo"
           placeholder="Search by job"
@@ -116,14 +116,14 @@ import { SearchIcon } from '../components/icons';
       <Tooltip content="Label">
         <Label title="Settings" byline="Update your recruit settings here" containsFieldGroup>
           <div className="flex flex-col gap-4 px-1">
-            <Tooltip content="RawRadio" placement="right">
-              <RawRadio label="Allow new applicants" checked/>
+            <Tooltip content="Radio" placement="right">
+              <Radio label="Allow new applicants" checked/>
             </Tooltip>
-            <Tooltip content="RawCheckbox" placement="right">
-              <RawCheckbox label="Disable all jobs"/>
+            <Tooltip content="Checkbox" placement="right">
+              <Checkbox label="Disable all jobs"/>
             </Tooltip>
-            <Tooltip content="RawTextarea" placement="right">
-              <RawTextarea
+            <Tooltip content="Textarea" placement="right">
+              <Textarea
                 name="team-notes"
                 placeholder="Save any notes for your recruiting team here."
                 rows={2}
@@ -158,8 +158,8 @@ import { SearchIcon } from '../components/icons';
         <Bracket className="pb-4" isolate="first-child">
           <p>List of applicants</p>
           <p>Sort by</p>
-          <Tooltip content="RawSelect">
-            <RawSelect
+          <Tooltip content="Select">
+            <Select
               value="best-match"
               options={[
                 { label: 'Best Match', value: 'best-match' },
@@ -290,7 +290,7 @@ import { SearchIcon } from '../components/icons';
         byline="View all applicants by job listing."
         section
       />
-      <RawInput
+      <Input
         type="text"
         name="foo"
         placeholder="Search by job"
@@ -332,9 +332,9 @@ import { SearchIcon } from '../components/icons';
       <hr/>
       <Label title="Settings" byline="Update your recruit settings here" containsFieldGroup>
         <div className="flex flex-col gap-4 px-1">
-          <RawRadio label="Allow new applicants" checked/>
-          <RawCheckbox label="Disable all jobs"/>
-          <RawTextarea
+          <Radio label="Allow new applicants" checked/>
+          <Checkbox label="Disable all jobs"/>
+          <Textarea
             name="team-notes"
             placeholder="Save any notes for your recruiting team here."
             rows={2}
@@ -358,7 +358,7 @@ import { SearchIcon } from '../components/icons';
       <Bracket className="pb-4" isolate="first-child">
         <p>List of applicants</p>
         <p>Sort by</p>
-        <RawSelect
+        <Select
           value="best-match"
           options={[
             { label: 'Best Match', value: 'best-match' },
