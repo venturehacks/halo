@@ -32,3 +32,4 @@ export { default as UserIcon } from './UserIcon.svg';
 export { default as UsersIcon } from './UsersIcon.svg';
 export { default as VisibilityOffIcon } from './VisibilityOffIcon.svg';
 export { default as VisibilityOnIcon } from './VisibilityOnIcon.svg';
+export { default as WarningIcon } from './WarningIcon.svg';
