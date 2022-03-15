@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import { InterfaceHeader } from '../InterfaceHeader';
+import { InterfaceHeader } from '../../core/InterfaceHeader';
 
 export interface PanelProps extends React.HTMLAttributes<HTMLDivElement> {
   /**
