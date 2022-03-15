@@ -26,9 +26,9 @@ const svgoConfig = require('../../svgo.config.js');
 const GLOBAL_LIBS = {
   '@tippyjs/react': 'Tippy',
   'change-case': 'changeCase',
-  classnames: 'classNames',
-  lodash: 'lodash',
-  react: 'React',
+  'classnames': 'classNames',
+  'lodash': 'lodash',
+  'react': 'React',
   'react-spinners': 'reactSpinners',
 };
 
@@ -108,8 +108,8 @@ export default defineConfig({
       svgoConfig,
     }),
     replace({
-      exclude: ['node_modules/**', '../../node_modules/**'],
-      preventAssignment: true,
+      'exclude': ['node_modules/**', '../../node_modules/**'],
+      'preventAssignment': true,
       'process.env.NODE_ENV': JSON.stringify('development'),
     }),
     copy({

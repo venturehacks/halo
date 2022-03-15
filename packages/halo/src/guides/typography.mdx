@@ -9,73 +9,73 @@ import { Box } from '../components/structure/Box';
 import { Paragraph } from '../components/core/Paragraph';
 import { Header } from '../components/core/Header';
 import { Span } from '../components/core/Span';
+import { Banner } from '../components/core/Banner';
 
 # Typography
 
-Suitable for long, continuous written content, such as editorial or blog posts.
+🔗 [Figma](https://www.figma.com/file/8EbOKQuVfc61d9aft8p7cO/Halo-Design-Library?node-id=364%3A897)
 
-<br />
+## Primary Scale
 
-## Size
+See [InterfaceHeader](/core/interface-header)
 
 <Playground>
-  <Span contrast="A" monospace>2xs &middot; 11px &middot; 1.45</Span>
-  <Paragraph size="2xs">
-    The quick brown fox jumps over the lazy dog.
-  </Paragraph>
-
-  <Span contrast="A" monospace>xs &middot; 12px &middot; 1.67</Span>
-  <Paragraph size="xs">
-    The quick brown fox jumps over the lazy dog.
-  </Paragraph>
-
-  <Span contrast="A" monospace>sm &middot; 14px &middot; 1.5</Span>
-  <Paragraph size="sm">
-    The quick brown fox jumps over the lazy dog.
-  </Paragraph>
-
-  <Span contrast="A" monospace>md &middot; 16px &middot; 1.5</Span>
-  <Paragraph size="md">
-    The quick brown fox jumps over the lazy dog.
-  </Paragraph>
-
-  <Span contrast="A" monospace>lg &middot; 20px &middot; 1.4</Span>
-  <Paragraph size="lg">
-    The quick brown fox jumps over the lazy dog.
-  </Paragraph>
-
-  <Span contrast="A" monospace>xl &middot; 24px &middot; 1.25</Span>
+  <Span contrast="A" monospace>xl &middot; 24px &middot; 30px</Span>
   <Paragraph size="xl">
-    Stand Out from the Competition
+    Page Heading
   </Paragraph>
 
-  <Span contrast="A" monospace>2xl &middot; 32px &middot; 1.125</Span>
-  <Paragraph size="2xl">
-    Stand Out from the Competition
+  <Span contrast="A" monospace>lg &middot; 20px &middot; 24px</Span>
+  <Paragraph size="lg">
+    Section Heading
   </Paragraph>
 
-  <Span contrast="A" monospace>3xl &middot; 36px &middot; 1.11</Span>
-  <Paragraph size="3xl">
-    Stand Out from the Competition
+  <Span contrast="A" monospace>md &middot; 16px &middot; 20px</Span>
+  <Paragraph size="md">
+    Body / Subsection Heading
   </Paragraph>
 
-  <Span contrast="A" monospace>4xl &middot; 40px &middot; 1.05</Span>
-  <Paragraph size="4xl">
-    Stand Out from the Competition
-  </Paragraph>
-
-  <Span contrast="A" monospace>5xl &middot; 48px &middot; 1.06</Span>
-  <Paragraph size="5xl">
-    Stand Out from the Competition
-  </Paragraph>
-
-  <Span contrast="A" monospace>6xl &middot; 56px &middot; 1.07</Span>
-  <Paragraph size="6xl" flow={false}>
-    Stand Out from the Competition
+  <Span contrast="A" monospace>sm &middot; 14px &middot; 20px</Span>
+  <Paragraph size="sm">
+    Mini Heading
   </Paragraph>
 </Playground>
 
-<br /><br />
+
+## Specialty Scale
+
+Reach for these sizes sparingly. If you receive a mock that depicts type in one of these sizes, confirm intention with the designer.
+
+Use [Tailwind font-size](https://v2.tailwindcss.com/docs/font-size) to implement.
+
+<Banner variant="warning">Specialty scale use is discouraged for general product work.</Banner>
+
+<Playground>
+  <Span contrast="A" monospace>5xl &middot; 64px &middot; 72px</Span>
+  <Paragraph size="5xl">
+    Hero Heading Plus
+  </Paragraph>
+  <Span contrast="A" monospace>4xl &middot; 56x &middot; 64px</Span>
+  <Paragraph size="4xl">
+    Hero Heading
+  </Paragraph>
+  <Span contrast="A" monospace>3xl &middot; 48px &middot; 52px</Span>
+  <Paragraph size="3xl">
+    Blog Article
+  </Paragraph>
+  <Span contrast="A" monospace>2xl &middot; 36px &middot; 40px</Span>
+  <Paragraph size="2xl">
+    Display Heading
+  </Paragraph>
+  <Span contrast="A" monospace>xs &middot; 12px &middot; 20px</Span>
+  <Paragraph size="xs">
+    Legal Copy (micro)
+  </Paragraph>
+  <Span contrast="A" monospace>2xs &middot; 11px &middot; 20px</Span>
+  <Paragraph size="2xs">
+    Legal Copy (nano)
+  </Paragraph>
+</Playground>
 
 ## Contrast
 
@@ -101,12 +101,9 @@ Suitable for long, continuous written content, such as editorial or blog posts.
 </Playground>
 
 
-<br /><br />
-
 ## Weight
 
 <Playground>
-  <Span weight="light" block>300 light</Span>
   <Span weight="regular" block>400 regular (default)</Span>
   <Span weight="medium" block>500 medium</Span>
   <Span weight="semibold" block>600 semibold</Span>
@@ -114,7 +111,6 @@ Suitable for long, continuous written content, such as editorial or blog posts.
 </Playground>
 
 ```scss
-$weight-light: 300;
 $weight-regular: 400;
 $weight-medium: 500;
 $weight-semibold: 600;
@@ -128,78 +124,34 @@ $weights: (
 );
 ```
 
-<br /><br />
-
-## Line Height
-
-> ** ⚠️ Advanced override. Use with caution.**
-
-Generally, you should not override line height. There is a curated line height automatically applied when setting text size.
-
-<Playground>
-  <Box maxWidth="600px">
-    <Paragraph>
-      <strong>Default.</strong> The Paragraph component is ideal for rendering blocks of copy. It offers a narrower subset of features from Span, with stronger default enforcement of type size and line height. By default, it applies a natural document flow bottom margin.
-    </Paragraph>
-    <Paragraph lineHeight="comfortable">
-      <strong>Comfortable.</strong> The Paragraph component is ideal for rendering blocks of copy. It offers a narrower subset of features from Span, with stronger default enforcement of type size and line height. By default, it applies a natural document flow bottom margin.
-    </Paragraph>
-    <Paragraph lineHeight="compact">
-      <strong>Compact.</strong> The Paragraph component is ideal for rendering blocks of copy. It offers a narrower subset of features from Span, with stronger default enforcement of type size and line height. By default, it applies a natural document flow bottom margin.
-    </Paragraph>
-  </Box>
-</Playground>
-
-```scss
-$line-height-default: 1.5;
-$line-height-comfortable: 1.25;
-$line-height-compact: 1.125;
-$line-height-dense: 1.0625;
-$line-heights: (
-  default: $line-height-default,
-  comfortable: $line-height-comfortable,
-  compact: $line-height-compact,
-  dense: $line-height-dense,
-);
-```
-
-<br /><br />
-
 ## Sass
 
 Configure many typeface properties at once. For each setting, it will only spit out a rule if you provide a non-null value.
 
-If a supplied preset key name is invalid for `$family`, `$size`, `$line`, `$weight`, etc,
+If a supplied preset key name is invalid for `$family`, `$size`,`$weight`, etc,
 the mix- falls back on supplying the literal value to
 the cooresponding rule.
 
 ```scss
 @mixin font(
-  $size: null,   // 2xs | xs | sm | md | lg | xl | 2xl | 3xl | 4xl | 5xl | 6xl
-  $line: null,   // default | comfortable | compact
-  $weight: null, // light | regular | medium | semibold | bold
+  $size: null,   // 2xs | xs | sm | md | lg | xl | 2xl | 3xl | 4xl | 5xl
+  $weight: null, // regular | medium | semibold | bold
   $color: null,  // palette color name or hex
   $family: null, // primary | serif | monospace | system
   $transform: null, // uppercase | lowercase | capitalize | none
-  $antialiased: null,
   $spacing: null,
-  $truncate: null
 )
 ```
 
 
 ## TypeScript
 
-Relied on by `Header` `Paragraph` and `Span`
-
 ```ts
-type TextSize = '6xl' | '5xl' | '4xl' | '3xl' | '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs' | '2xs';
+type TextSize = '5xl' | '4xl' | '3xl' | '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs' | '2xs';
 
-type TextWeight = 'light' | 'regular' | 'medium' | 'semibold' | 'bold';
+type TextWeight = 'regular' | 'medium' | 'semibold' | 'bold';
 
 type TextContrast = 'A' | 'AA' | 'AAA' | 'AAAA';
-
-type TextLineHeight = 'default' | 'comfortable' | 'compact';
 
 type TextColorScheme = 'dark' | 'light';
 ```

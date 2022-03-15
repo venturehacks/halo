@@ -7,14 +7,14 @@ new: true
 
 import { Playground, Props } from 'docz';
 import { Attribute, AttributeList } from './';
-import { InterfaceHeader } from '../../structure/InterfaceHeader';
+import { InterfaceHeader } from '../InterfaceHeader';
 import { Box } from '../../structure/Box';
 
 # Attribute
 
-Vertical key-value / term-definition. Produces [`<dt><dd>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt) pair.
+Vertical key-value / term-definition pair. Produces [`<dt><dd>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt) pair.
 
-Be sure to wrap in `AttributeList` to grant best semantics. Wrap is required for size adjustment.
+Wrap in `AttributeList` for best semantics and ability to set group size.
 
 ### Usage
 

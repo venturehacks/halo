@@ -1,11 +1,11 @@
 export default {
   plain: {
     '-webkit-font-smoothing': 'antialiased',
-    backgroundColor: '#f6f8fa',
-    color: '#393A34',
-    fontFamily:
+    'backgroundColor': '#f6f8fa',
+    'color': '#393A34',
+    'fontFamily':
       "'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace",
-    fontSize: '13px',
+    'fontSize': '13px',
     'moz-osx-font-smoothing': 'grayscale',
   },
   styles: [

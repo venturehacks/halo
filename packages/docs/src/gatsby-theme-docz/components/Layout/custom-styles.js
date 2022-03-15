@@ -26,7 +26,7 @@ export const globalStyles = {
   'button, select, input, textarea': {
     fontFamily: 'inherit',
   },
-  a: {
+  'a': {
     color: ({ theme }) => theme.colors.primary,
   },
   'a:hover > span:first-child': {
