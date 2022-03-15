@@ -2,11 +2,14 @@
 name: Mixins
 menu: Sass
 route: /sass/mixins
+deprecated: true
 ---
 
 # Mixins
 
 ## font
+
+⚠️  **Deprecated.** Please use [tailwind font](https://v2.tailwindcss.com/docs/font-size).
 
 Configure many typeface properties at once. For each setting, it will only spit out a rule if you provide a non-null value.
 
@@ -16,18 +19,11 @@ the cooresponding rule.
 
 ```scss
 @mixin font(
-  $size: null,
-  // 2xs | xs | sm | md | lg | xl | 2xl | 3xl | 4xl | 5xl
-    $line: null,
-  // default | comfortable | compact | dense
-    $weight: null,
-  // ultralight | light | regular | medium | semibold | bold
-    $color: null,
-  // palette color name or hex
-    $family: null,
-  // primary | serif | monospace | system
-    $transform: null,
-  // uppercase | lowercase | capitalize | none
+  $size: null,  // 2xs | xs | sm | md | lg | xl | 2xl | 3xl | 4xl | 5xl
+    $weight: null,  // light | regular | medium | semibold | bold
+    $color: null,  // palette color name or hex
+    $family: null,  // primary | serif | monospace | system
+    $transform: null,  // uppercase | lowercase | capitalize | none
     $antialiased: null,
   $spacing: null,
   $truncate: null
@@ -55,6 +51,8 @@ the cooresponding rule.
 
 ## font-antialiased
 
+⚠️  **Deprecated.** Please use tailwind class `antialiased`
+
 ```scss
 @mixin font-antialiased {
   -webkit-font-smoothing: antialiased;
@@ -63,6 +61,8 @@ the cooresponding rule.
 ```
 
 ## text-truncate
+
+⚠️  **Deprecated.** Please use tailwind class `truncate`
 
 ```scss
 // requires fixed width container
@@ -84,7 +84,7 @@ the cooresponding rule.
 
 ## flex-column
 
-Scaffold flexbox layouts quickly. `<Box>` heavily leverages this mixin.
+⚠️  **Deprecated.** Please use [tailwind flexbox](https://v2.tailwindcss.com/docs/flex).
 
 ```scss
 @mixin flex-column(
@@ -127,9 +127,13 @@ Scaffold flexbox layouts quickly. `<Box>` heavily leverages this mixin.
 
 ## flex-row
 
+⚠️  **Deprecated.** Please use [tailwind flexbox](https://v2.tailwindcss.com/docs/flex).
+
 Same as `flex-column()` with the axes swapped. Basically, `justify-content` and `align-items` will swap automatically.
 
 ## grid-row
+
+⚠️  **Deprecated.** Please use [tailwind grid](https://v2.tailwindcss.com/docs/display#grid).
 
 Style an element as a container for a single row of cells in the 24-column grid.
 
@@ -167,6 +171,8 @@ Style an element as a container for a single row of cells in the 24-column grid.
 
 ## grid-cell
 
+⚠️  **Deprecated.** Please use [tailwind grid](https://v2.tailwindcss.com/docs/display#grid).
+
 Style an element as a grid cell with configurable width and position.
 
 ```scss
@@ -180,6 +186,8 @@ Style an element as a grid cell with configurable width and position.
 ```
 
 ## border-rounded
+
+⚠️  **Deprecated.** Please use [tailwind border](https://v2.tailwindcss.com/docs/border-radius).
 
 ```scss
 @mixin border-rounded($radius: 4px) {

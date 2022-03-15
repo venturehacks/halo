@@ -147,7 +147,7 @@ export default {
     },
     {
       name: 'Sass',
-      menu: ['Variables', 'Mixins', 'Functions', 'Breakpoints'],
+      menu: ['Variables', 'Functions', 'Breakpoints', 'Mixins'],
     },
   ],
 };
