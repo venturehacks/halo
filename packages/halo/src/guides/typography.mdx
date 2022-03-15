@@ -68,11 +68,6 @@ Suitable for long, continuous written content, such as editorial or blog posts.
   <Paragraph size="5xl">
     Stand Out from the Competition
   </Paragraph>
-
-  <Span contrast="A" monospace>6xl &middot; 56px &middot; 1.07</Span>
-  <Paragraph size="6xl" flow={false}>
-    Stand Out from the Competition
-  </Paragraph>
 </Playground>
 
 <br /><br />
@@ -175,7 +170,7 @@ the cooresponding rule.
 
 ```scss
 @mixin font(
-  $size: null,   // 2xs | xs | sm | md | lg | xl | 2xl | 3xl | 4xl | 5xl | 6xl
+  $size: null,   // 2xs | xs | sm | md | lg | xl | 2xl | 3xl | 4xl | 5xl
   $line: null,   // default | comfortable | compact
   $weight: null, // light | regular | medium | semibold | bold
   $color: null,  // palette color name or hex
@@ -193,7 +188,7 @@ the cooresponding rule.
 Relied on by `Header` `Paragraph` and `Span`
 
 ```ts
-type TextSize = '6xl' | '5xl' | '4xl' | '3xl' | '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs' | '2xs';
+type TextSize = '5xl' | '4xl' | '3xl' | '2xl' | 'xl' | 'lg' | 'md' | 'sm' | 'xs' | '2xs';
 
 type TextWeight = 'light' | 'regular' | 'medium' | 'semibold' | 'bold';
 

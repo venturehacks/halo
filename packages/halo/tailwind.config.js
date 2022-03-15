@@ -24,6 +24,11 @@ module.exports = {
     content: [
       path.join(__dirname, 'src/**/*.{tsx,jsx,js,mdx}'),
       path.join(__dirname, 'dist/**/*.mjs'),
+      path.join(__dirname, 'dist/**/*.mjs'),
+      path.join(
+        __dirname,
+        '../docs/src/gatsby-theme-docz/**/*.{tsx,jsx,js,mdx}',
+      ),
     ],
     options: {
       keyframes: true,
@@ -223,19 +228,16 @@ module.exports = {
       },
     },
     fontSize: {
-      '2xl': ['32px', '1.125'],
-      '2xs': ['11px', '1.45'],
-      '3xl': ['36px', '1.11'],
-      '3xs': ['10px', '1.5'],
-      '4xl': ['40px', '1.05'],
-      '4xs': ['8px', '1.5'],
-      '5xl': ['48px', '1.06'],
-      '6xl': ['56px', '1.07'],
-      lg: ['20px', '1.4'],
-      md: ['16px', '1.5'],
-      sm: ['14px', '1.5'],
-      xl: ['24px', '1.25'],
-      xs: ['12px', '1.67'],
+      '2xs': ['11px', '18px'], // (deprecated legacy nano)
+      xs: ['12px', '18px'], // (deprecated legacy micro)
+      sm: ['14px', '20px'], // Mini
+      md: ['16px', '20px'], // Body / Subsection
+      lg: ['20px', '24px'], // Section
+      xl: ['24px', '30px'], // Page
+      '2xl': ['36px', '40px'], // Display
+      '3xl': ['48px', '52px'], // Blog Article
+      '4xl': ['56px', '64px'], // Hero Heading
+      '5xl': ['64px', '72px'], // Hero Heading Plus
     },
     spacing: {
       px: '1px',
