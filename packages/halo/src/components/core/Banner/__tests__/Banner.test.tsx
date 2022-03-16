@@ -1,11 +1,11 @@
-import { mount, render, shallow } from 'enzyme';
+import { mount, render } from 'enzyme';
 import React from 'react';
 
 import { Banner } from '../index';
 
 describe('Banner', () => {
   test('smoke', () => {
-    const component = shallow(<Banner>PHP</Banner>);
+    const component = mount(<Banner>PHP</Banner>);
     expect(component.text()).toEqual('PHP');
   });
 
