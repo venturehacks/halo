@@ -9,7 +9,7 @@ $input-height-transparent: 48px;
  * Please do not use in new code.
 */
 @mixin input($size: md, $style: normal) {
-  @include font($size: $size, $color: $gray-900);
+  @include font($size: $size, $color: $dark-aaaa);
   max-width: 100%;
   padding: tempo(3) tempo(4);
 

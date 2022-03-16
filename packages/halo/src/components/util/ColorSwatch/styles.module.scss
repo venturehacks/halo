@@ -69,7 +69,7 @@
 
   &.backgroundBlack {
     color: $light-aaaa;
-    background-color: $gray-900;
+    background-color: $dark-aaaa;
     @include font-antialiased;
 
     .variableName {
