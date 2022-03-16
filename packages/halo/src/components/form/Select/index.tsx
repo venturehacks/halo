@@ -97,5 +97,6 @@ function isOptgroup(opt: any): opt is SelectOptgroup {
 }
 
 const Select = withForwardedRef<SelectProps, HTMLSelectElement>(SelectRaw);
+Select.displayName = 'Select';
 
 export { Select };

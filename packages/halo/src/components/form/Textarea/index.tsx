@@ -67,4 +67,6 @@ const Textarea = withForwardedRef<TextareaProps, HTMLTextAreaElement>(
   TextareaRaw,
 );
 
+Textarea.displayName = 'Textarea';
+
 export { Textarea };

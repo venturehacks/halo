@@ -1,16 +1,17 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
+const path = require('path');
+
+const rootDir = path.resolve(__dirname, '../..');
+
 const testPathIgnorePatterns = [
+  '.build',
   '.cache',
   '.docz',
-  '.next',
-  '.vscode',
-  'node_modules',
-  '/test/',
-  'CHANGELOG.md',
+  '.rollup.cache',
+  '.sass-cache',
   'dist',
-  'package.json',
+  'node_modules',
   'public',
-  'README.md',
-  '/support/',
 ];
 
 module.exports = {

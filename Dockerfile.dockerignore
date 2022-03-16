@@ -5,7 +5,5 @@
 **/.sass-cache
 **/*.tsbuildinfo
 **/dist
-**/node_modules
 **/public
-**/__tests__
 **/datadog-size-limit.json

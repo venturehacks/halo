@@ -23,40 +23,46 @@ exports[`Label snapshot containsFieldGroup 1`] = `
       </div>
     </div>
   </legend>
-  <input
-    checked=""
-    class="input warning"
-    id="chocolate"
-    type="radio"
-  />
-  <label
-    class="radio"
-    for="chocolate"
-  >
-    Chocolate
-  </label>
-  <input
-    class="input warning"
-    id="vanilla"
-    type="radio"
-  />
-  <label
-    class="radio"
-    for="vanilla"
-  >
-    Vanilla
-  </label>
-  <input
-    class="input warning"
-    id="strawberry"
-    type="radio"
-  />
-  <label
-    class="radio"
-    for="strawberry"
-  >
-    Strawberry
-  </label>
+  <div>
+    <input
+      checked=""
+      class="input warning"
+      id="chocolate"
+      type="radio"
+    />
+    <label
+      class="radio"
+      for="chocolate"
+    >
+      Chocolate
+    </label>
+  </div>
+  <div>
+    <input
+      class="input warning"
+      id="vanilla"
+      type="radio"
+    />
+    <label
+      class="radio"
+      for="vanilla"
+    >
+      Vanilla
+    </label>
+  </div>
+  <div>
+    <input
+      class="input warning"
+      id="strawberry"
+      type="radio"
+    />
+    <label
+      class="radio"
+      for="strawberry"
+    >
+      Strawberry
+    </label>
+  </div>
 </fieldset>
 `;
 
