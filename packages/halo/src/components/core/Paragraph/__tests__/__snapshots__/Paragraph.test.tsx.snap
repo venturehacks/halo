@@ -2,7 +2,7 @@
 
 exports[`Paragraph snapshot contrast 1`] = `
 <p
-  class="component mb-4 text-dark-a text-md leading-normal"
+  class="component mb-4 text-dark-a text-md"
 >
   single A
 </p>
@@ -10,23 +10,15 @@ exports[`Paragraph snapshot contrast 1`] = `
 
 exports[`Paragraph snapshot flow 1`] = `
 <p
-  class="component text-md leading-normal"
+  class="component text-md"
 >
   no flow
 </p>
 `;
 
-exports[`Paragraph snapshot line height override 1`] = `
-<p
-  class="component mb-4 text-xs"
->
-  dense line height override
-</p>
-`;
-
 exports[`Paragraph snapshot size 1`] = `
 <p
-  class="component mb-4 text-2xl leading-normal"
+  class="component mb-4 text-2xl"
 >
   size 2xl
 </p>
