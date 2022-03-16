@@ -15,7 +15,7 @@ export type ButtonVariant =
   | 'primary'
   | 'secondary'
   | 'gray'
-  | 'destructive'
+  | 'error'
   | 'clear';
 
 export type IconPosition = 'left' | 'right';
@@ -28,11 +28,6 @@ export interface ButtonProps
    * Apply native disabled property and styles
    */
   disabled?: boolean;
-  /**
-   * bold text
-   * @default true
-   */
-  emphasis?: boolean;
   /**
    * Render as HTML anchor/hyperlink, styled like a button
    */
@@ -74,7 +69,6 @@ export interface ButtonProps
 function ButtonRaw({
   children,
   className,
-  emphasis = true,
   forwardedRef,
   href,
   target,
@@ -92,7 +86,6 @@ function ButtonRaw({
     styles.component,
     styles[camelCase(variant)],
     styles[size],
-    emphasis && styles.emphasis,
     icon && styles.hasIcon,
     iconPosition === 'right' && styles.rightIcon,
     icon && !children && styles.iconOnly,

@@ -23,21 +23,21 @@ Use `Box` to quickly scaffold layouts. By default, `Box` is a standard block ele
         <Button>align</Button>
         <Button variant='secondary'>space-between</Button>
         <Button variant='gray'>of</Button>
-        <Button variant='destructive'>content</Button>
+        <Button variant='error'>content</Button>
       </Box>
       <Box row align="right" valign="bottom" margin={{ top: 1, bottom: 2 }} background="red-100">
         <Button>align</Button>
         <Button variant='secondary'>right</Button>
         <Button variant='secondary'>with</Button>
         <Button variant='gray'>margin</Button>
-        <Button variant='destructive'>{`{{ top: 1, bottom: 2 }}`}</Button>
+        <Button variant='error'>{`{{ top: 1, bottom: 2 }}`}</Button>
       </Box>
       <Box row align="left" valign="top" padding={4} background="purple-100">
         <Button>align</Button>
         <Button variant='secondary'>left</Button>
         <Button variant='secondary'>with</Button>
         <Button variant='gray'>padding</Button>
-        <Button variant='destructive'>4</Button>
+        <Button variant='error'>4</Button>
       </Box>
       <Box background="green-100" margin={4} padding={4} textAlign="center" onClick={() => window.alert('Hi. I am clickable!')} role="button">
         Click me :)
