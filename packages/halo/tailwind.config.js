@@ -197,7 +197,7 @@ module.exports = {
         DEFAULT: '#ffffff',
       },
       black: {
-        DEFAULT: '#000000',
+        DEFAULT: '#0E1111',
       },
     },
 
