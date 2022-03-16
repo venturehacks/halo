@@ -97,6 +97,9 @@ export default {
     'Welcome',
     'Icons',
     {
+      name: 'Contributing',
+    },
+    {
       name: 'Guides',
       menu: ['Typography', 'Color'],
     },
