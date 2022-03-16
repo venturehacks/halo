@@ -1,6 +1,11 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import {
+  ForwardedRefProps,
+  withForwardedRef,
+} from '../../../lib/withForwardedRef';
+
 export type AttentionIndicatorColor = 'orange' | 'red';
 
 export type AttentionIndicatorShape = 'circle' | 'rounded-rectangle';
@@ -22,14 +27,15 @@ export interface AttentionIndicatorProps {
   size?: AttentionIndicatorSize;
 }
 
-function AttentionIndicator({
+function AttentionIndicatorRaw({
   className,
   color = 'red',
   count,
+  forwardedRef,
   icon,
   shape = 'circle',
   size = 'sm',
-}: AttentionIndicatorProps) {
+}: AttentionIndicatorProps & ForwardedRefProps<HTMLDivElement>) {
   let displayString: any = count;
   if (displayString && displayString > 99) {
     displayString = '99+';
@@ -68,11 +74,16 @@ function AttentionIndicator({
   );
 
   return (
-    <div className={componentClasses}>
+    <div ref={forwardedRef} className={componentClasses}>
       {icon && <div className={iconClasses}> {icon} </div>}
       {displayString && <>{displayString}</>}
     </div>
   );
 }
+
+const AttentionIndicator = withForwardedRef<
+  AttentionIndicatorProps,
+  HTMLDivElement
+>(AttentionIndicatorRaw);
 
 export { AttentionIndicator };

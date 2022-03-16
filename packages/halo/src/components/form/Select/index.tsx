@@ -1,6 +1,8 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import { ForwardedRefProps, withForwardedRef } from '../../../lib';
+
 import {
   FormInputIntrinsicWidth,
   InputBase,
@@ -37,17 +39,19 @@ export interface SelectOptgroup {
   options: SelectOption[];
 }
 
-function Select({
+function SelectRaw({
   className,
+  forwardedRef,
   options = [],
   intrinsicWidth = 'auto',
   hasError = false,
   errorSeverity = 'warning',
   size = 'md',
   ...rest
-}: SelectProps) {
+}: SelectProps & ForwardedRefProps<HTMLSelectElement>) {
   return (
     <select
+      ref={forwardedRef}
       className={classNames(
         rawInputClassNames({ errorSeverity, hasError, intrinsicWidth, size }),
         styles.component,
@@ -91,5 +95,7 @@ function Option({ option }: { option: SelectOption }) {
 function isOptgroup(opt: any): opt is SelectOptgroup {
   return (opt as SelectOptgroup).options !== undefined;
 }
+
+const Select = withForwardedRef<SelectProps, HTMLSelectElement>(SelectRaw);
 
 export { Select };

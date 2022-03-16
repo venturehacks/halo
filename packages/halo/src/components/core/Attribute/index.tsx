@@ -49,14 +49,16 @@ export interface AttributeListProps
   size?: AttributeSize;
 }
 
-function AttributeList({
+function AttributeListRaw({
   children,
   size = 'sm',
   className,
+  forwardedRef,
   ...rest
-}: AttributeListProps) {
+}: AttributeListProps & ForwardedRefProps<HTMLDListElement>) {
   return (
     <dl
+      ref={forwardedRef}
       className={classNames(
         size === 'xs' && 'text-xs',
         size === 'xs' && styles.xs,
@@ -74,6 +76,10 @@ function AttributeList({
     </dl>
   );
 }
+
+const AttributeList = withForwardedRef<AttributeProps, HTMLDListElement>(
+  AttributeListRaw,
+);
 
 const Attribute = withForwardedRef<AttributeProps, HTMLDivElement>(
   AttributeRaw,

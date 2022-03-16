@@ -1,6 +1,11 @@
 import classNames from 'classnames';
 import React from 'react';
 
+import {
+  ForwardedRefProps,
+  withForwardedRef,
+} from '../../../lib/withForwardedRef';
+
 import { InterfaceHeader } from '../../core/InterfaceHeader';
 
 export interface PanelProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -26,20 +31,22 @@ export interface PanelProps extends React.HTMLAttributes<HTMLDivElement> {
   title?: string;
 }
 
-function Panel({
+function PanelRaw({
   flow,
   children,
   className,
+  forwardedRef,
   negativeSpace = 'md',
   title,
   byline,
   ...divElementProps
-}: PanelProps) {
+}: PanelProps & ForwardedRefProps<HTMLHeadingElement>) {
   const hasGapClassName = className?.includes('gap-');
   const hasMaxWidthClassName = className?.includes('max-w-');
 
   return (
     <div
+      ref={forwardedRef}
       className={classNames(
         'flex flex-col border-t border-slate-100 rounded shadow-md bg-white',
         !hasMaxWidthClassName && 'max-w-3xl',
@@ -63,5 +70,7 @@ function Panel({
     </div>
   );
 }
+
+const Panel = withForwardedRef<PanelProps, HTMLHeadingElement>(PanelRaw);
 
 export { Panel };

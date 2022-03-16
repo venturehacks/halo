@@ -1,7 +1,13 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import { ControlAlignment, FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
+import {
+  ControlAlignment,
+  FORM_FIELD_ERROR_IDENTIFIER,
+  ForwardedRefProps,
+  withForwardedRef,
+} from '../../../lib';
+
 import { FormInputErrorSeverity } from '../Input';
 
 import styles from './styles.module.scss';
@@ -39,10 +45,11 @@ export interface CheckboxProps
   variant?: 'checkbox' | 'pill' | 'toggle-switch';
 }
 
-function Checkbox({
+function CheckboxRaw({
   className,
   controlAlignment = 'top',
   errorSeverity = 'warning',
+  forwardedRef,
   hasError,
   id,
   label,
@@ -50,9 +57,9 @@ function Checkbox({
   variant = 'checkbox',
   type, // deliberately discard
   ...rest
-}: CheckboxProps) {
+}: CheckboxProps & ForwardedRefProps<HTMLInputElement>) {
   return (
-    <>
+    <div ref={forwardedRef}>
       <input
         className={classNames(
           styles.input,
@@ -79,10 +86,12 @@ function Checkbox({
       >
         {label}
       </label>
-    </>
+    </div>
   );
 }
 
-Checkbox.displayName = 'Checkbox';
+CheckboxRaw.displayName = 'Checkbox';
+
+const Checkbox = withForwardedRef<CheckboxProps, HTMLInputElement>(CheckboxRaw);
 
 export { Checkbox };

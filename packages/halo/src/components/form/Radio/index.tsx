@@ -1,7 +1,12 @@
 import classNames from 'classnames';
 import React from 'react';
 
-import { ControlAlignment, FORM_FIELD_ERROR_IDENTIFIER } from '../../../lib';
+import {
+  ControlAlignment,
+  FORM_FIELD_ERROR_IDENTIFIER,
+  ForwardedRefProps,
+  withForwardedRef,
+} from '../../../lib';
 import { FormInputErrorSeverity } from '../Input';
 
 import styles from './styles.module.scss';
@@ -39,10 +44,11 @@ export interface RadioProps
   variant?: 'radio' | 'checkbox' | 'pill';
 }
 
-function Radio({
+function RadioRaw({
   className,
   controlAlignment = 'top',
   errorSeverity = 'warning',
+  forwardedRef,
   hasError,
   id,
   label,
@@ -50,9 +56,9 @@ function Radio({
   type, // deliberately discard
   variant = 'radio',
   ...rest
-}: RadioProps) {
+}: RadioProps & ForwardedRefProps<HTMLInputElement>) {
   return (
-    <>
+    <div ref={forwardedRef}>
       <input
         className={classNames(
           styles.input,
@@ -78,10 +84,12 @@ function Radio({
       >
         {label}
       </label>
-    </>
+    </div>
   );
 }
 
-Radio.displayName = 'Radio';
+RadioRaw.displayName = 'Radio';
+
+const Radio = withForwardedRef<RadioProps, HTMLInputElement>(RadioRaw);
 
 export { Radio };
