@@ -63,14 +63,14 @@ exports[`Dialog snapshot title + both buttons 1`] = `
     data-test="Dialog-chin"
   >
     <button
-      class="component secondary sm emphasis"
+      class="component secondary sm"
       data-test="Dialog-secondaryButton"
       type="button"
     >
       Cancel
     </button>
     <button
-      class="component primary sm emphasis"
+      class="component primary sm"
       data-test="Dialog-primaryButton"
       type="button"
     >
