@@ -183,7 +183,7 @@ $pill-border-radius: tempo(6);
 
     &::before {
       border-color: $dark-aa;
-      background-color: $slate-100;
+      background-color: $gray-100;
     }
 
     &::after {
@@ -262,7 +262,7 @@ $pill-border-radius: tempo(6);
     border-color: rgba($dark-a, 0.5);
 
     &::before {
-      border-color: $slate-100;
+      border-color: $gray-100;
     }
 
     &::after {

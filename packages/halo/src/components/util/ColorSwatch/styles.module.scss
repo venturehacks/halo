@@ -47,13 +47,13 @@
     cursor: copy;
 
     &:hover {
-      background-color: $slate-200;
+      background-color: $gray-200;
     }
   }
 
   .variableName {
     @include font(
-      $color: slate-600,
+      $color: gray-600,
       $size: 11px,
       $family: monospace,
       $antialiased: true
@@ -63,13 +63,13 @@
     word-break: keep-all;
 
     &:hover {
-      background-color: $slate-200;
+      background-color: $gray-200;
     }
   }
 
   &.backgroundBlack {
     color: $light-aaaa;
-    background-color: $slate-900;
+    background-color: $gray-900;
     @include font-antialiased;
 
     .variableName {

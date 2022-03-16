@@ -50,7 +50,7 @@ const iconImport = `import { ${iconNames.join(', ')} } from './';`;
 const iconDocs = iconNames
   .map(
     (icon) =>
-      `<div className="flex flex-col items-center justify-between border rounded border-slate-300">
+      `<div className="flex flex-col items-center justify-between border rounded border-gray-300">
    <div className="p-4"><${icon} /></div>
    <span className="font-medium text-sm mb-2">${icon}</span>
  </div>`,

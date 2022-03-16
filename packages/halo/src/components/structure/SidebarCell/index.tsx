@@ -66,7 +66,7 @@ function SidebarCell({
     <div
       aria-label={title}
       className={classNames(
-        'flex flex-col justify-start content-start px-6 py-4 border-b border-slate-200 hover:bg-slate-300 rounded cursor-pointer',
+        'flex flex-col justify-start content-start px-6 py-4 border-b border-gray-200 hover:bg-gray-300 rounded cursor-pointer',
         styles.component,
         className,
       )}

@@ -2,7 +2,7 @@
 
 exports[`Banner snapshot constrain 1`] = `
 <div
-  class="text-md font-medium rounded relative p-4 mb-2 border-solid border-0 border-t-4 w-full bg-blue-100 shadow-sm flex flex-row justify-start items-center overflow-hidden max-w-screen-desktop border-slate-700"
+  class="text-md font-medium rounded relative p-4 mb-2 border-solid border-0 border-t-4 w-full bg-blue-100 shadow-sm flex flex-row justify-start items-center overflow-hidden max-w-screen-desktop border-gray-700"
   data-test="Banner"
   role="alert"
 >
@@ -17,7 +17,7 @@ exports[`Banner snapshot constrain 1`] = `
 
 exports[`Banner snapshot default 1`] = `
 <div
-  class="text-md font-medium rounded relative p-4 mb-2 border-solid border-0 border-t-4 w-full bg-blue-100 shadow-sm flex flex-row justify-start items-center overflow-hidden max-w-screen-desktop border-slate-700"
+  class="text-md font-medium rounded relative p-4 mb-2 border-solid border-0 border-t-4 w-full bg-blue-100 shadow-sm flex flex-row justify-start items-center overflow-hidden max-w-screen-desktop border-gray-700"
   data-test="Banner"
   role="alert"
 >
@@ -32,7 +32,7 @@ exports[`Banner snapshot default 1`] = `
 
 exports[`Banner snapshot offer dismiss 1`] = `
 <div
-  class="text-md font-medium rounded relative p-4 mb-2 border-solid border-0 border-t-4 w-full bg-blue-100 shadow-sm flex flex-row justify-start items-center overflow-hidden max-w-screen-desktop border-slate-700"
+  class="text-md font-medium rounded relative p-4 mb-2 border-solid border-0 border-t-4 w-full bg-blue-100 shadow-sm flex flex-row justify-start items-center overflow-hidden max-w-screen-desktop border-gray-700"
   data-test="Banner"
   role="alert"
 >

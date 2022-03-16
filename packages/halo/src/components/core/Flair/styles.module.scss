@@ -57,8 +57,8 @@
 
 .gray,
 .slate {
-  @include font($color: slate-600);
-  background: rgba($slate-200, 0.77);
+  @include font($color: gray-600);
+  background: rgba($gray-200, 0.77);
 }
 
 .orange {

@@ -70,7 +70,7 @@ function TagRaw({
     className,
     'inline-flex flex-row items-center mr-2 last:mr-0',
     color === 'blue' && 'bg-blue-100 text-dark-aaaa',
-    color === 'gray' && 'bg-slate-100 text-dark-aaa',
+    color === 'gray' && 'bg-gray-100 text-dark-aaa',
     color === 'green' && 'bg-green-100 text-green-600',
     color === 'orange' && 'bg-orange-100 text-orange-600',
     color === 'purple' && 'bg-purple-100 text-purple-600',
