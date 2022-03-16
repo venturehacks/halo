@@ -151,6 +151,7 @@ function InputRaw({
 }
 
 const Input = withForwardedRef<InputProps, HTMLInputElement>(InputRaw);
+Input.displayName = 'Input';
 
 export interface InputBase {
   /**

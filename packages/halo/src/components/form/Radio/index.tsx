@@ -88,8 +88,9 @@ function RadioRaw({
   );
 }
 
-RadioRaw.displayName = 'Radio';
+RadioRaw.displayName = 'RadioRaw';
 
 const Radio = withForwardedRef<RadioProps, HTMLInputElement>(RadioRaw);
+Radio.displayName = 'Radio';
 
 export { Radio };

@@ -90,8 +90,9 @@ function CheckboxRaw({
   );
 }
 
-CheckboxRaw.displayName = 'Checkbox';
+CheckboxRaw.displayName = 'CheckboxRaw';
 
 const Checkbox = withForwardedRef<CheckboxProps, HTMLInputElement>(CheckboxRaw);
+Checkbox.displayName = 'Checkbox';
 
 export { Checkbox };
