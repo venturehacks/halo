@@ -49,22 +49,7 @@ $weights: (
 );
 
 // --------------------
-// LINE HEIGHT
-
-$line-height-default: 1.5;
-$line-height-comfortable: 1.25;
-$line-height-compact: 1.125;
-$line-height-dense: 1.0625;
-
-$line-heights: (
-  default: $line-height-default,
-  comfortable: $line-height-comfortable,
-  compact: $line-height-compact,
-  dense: $line-height-dense,
-);
-
-// --------------------
-// PRESET - SIZE + LINE HEIGHT
+// PRESET (SIZE, LINE HEIGHT)
 
 $font-sizes-map: (
   // Legacy miniature

@@ -16,8 +16,6 @@ export type TextSize =
   | 'xs'
   | '2xs';
 
-export type TextLineHeight = 'default' | 'comfortable' | 'compact';
-
 export interface TextContrastProps {
   colorScheme?: TextColorScheme;
   contrast?: TextContrast;

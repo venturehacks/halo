@@ -24,15 +24,6 @@ describe('Paragraph', () => {
       expect(component).toMatchSnapshot();
     });
 
-    test('line height override', () => {
-      const component = render(
-        <Paragraph lineHeight="dense" size="xs">
-          dense line height override
-        </Paragraph>,
-      );
-      expect(component).toMatchSnapshot();
-    });
-
     test('flow', () => {
       const component = render(<Paragraph flow={false}>no flow</Paragraph>);
       expect(component).toMatchSnapshot();

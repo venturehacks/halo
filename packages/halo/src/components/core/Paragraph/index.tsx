@@ -6,12 +6,7 @@ import {
   withForwardedRef,
 } from '../../../lib/withForwardedRef';
 
-import {
-  TextColorScheme,
-  TextContrast,
-  TextLineHeight,
-  TextSize,
-} from '../../../lib/text';
+import { TextColorScheme, TextContrast, TextSize } from '../../../lib/text';
 import { Span } from '../Span';
 
 import styles from './styles.module.scss';
@@ -38,12 +33,6 @@ export interface ParagraphProps
   flow?: boolean;
 
   /**
-   * Overrides line height associated with type `size` prop
-   * @default default
-   */
-  lineHeight?: TextLineHeight;
-
-  /**
    * Fine control of type size
    * @default md
    */
@@ -56,7 +45,6 @@ function ParagraphRaw({
   className,
   forwardedRef,
   size = 'md',
-  lineHeight = 'default',
   contrast,
   colorScheme,
   ...paragraphElementProps
@@ -69,7 +57,6 @@ function ParagraphRaw({
       className={classes}
       colorScheme={colorScheme}
       contrast={contrast}
-      lineHeight={lineHeight}
       size={size}
       tag="p"
       {...(paragraphElementProps as Omit<

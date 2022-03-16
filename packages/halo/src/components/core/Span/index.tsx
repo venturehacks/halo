@@ -5,7 +5,6 @@ import { Color } from '../../../lib/colors';
 import {
   TextColorScheme,
   TextContrast,
-  TextLineHeight,
   TextSize,
   TextWeight,
   textContrastForConfiguration,
@@ -53,12 +52,6 @@ export interface SpanProps {
   error?: boolean;
 
   italic?: boolean;
-
-  /**
-   * Fine control over line height
-   * @default (pass through)
-   */
-  lineHeight?: TextLineHeight;
 
   /**
    * Convenience for 500 weight
@@ -142,7 +135,6 @@ function SpanRaw(
     error,
     forwardedRef,
     italic,
-    lineHeight,
     medium,
     monospace,
     muted,
@@ -186,11 +178,6 @@ function SpanRaw(
     size === '3xl' && 'text-3xl',
     size === '4xl' && 'text-4xl',
     size === '5xl' && 'text-5xl',
-    // TODO(drew): declare our own tailwind enum for line height
-    // so these class names don't need to be mapped
-    lineHeight === 'default' && 'leading-normal', // 1.5
-    lineHeight === 'comfortable' && 'leading-snug', // 1.375
-    lineHeight === 'compact' && 'leading-tight', // 1.25
     // TODO(drew): same force inclusion of rules to simplify
     weight === 'light' && 'font-light',
     weight === 'regular' && 'font-normal',
