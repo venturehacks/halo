@@ -1,7 +1,7 @@
 @import './base';
 
-$input-height: 50px !default;
-$input-height-transparent: 48px !default;
+$input-height: 50px;
+$input-height-transparent: 48px;
 
 /**
  * @deprecated (drew) 2022-02-25
@@ -9,12 +9,12 @@ $input-height-transparent: 48px !default;
  * Please do not use in new code.
 */
 @mixin input($size: md, $style: normal) {
-  @include font($size: $size, $color: $slate-900);
+  @include font($size: $size, $color: $dark-aaaa);
   max-width: 100%;
   padding: tempo(3) tempo(4);
 
   @if $style == normal {
-    border: 1px solid $slate-400;
+    border: 1px solid $gray-400;
     border-radius: 4px;
     background-color: white;
   } @else if $style == transparent {

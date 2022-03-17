@@ -3,7 +3,7 @@
 exports[`SidebarCell snapshot accessibility attributes from onClick 1`] = `
 <div
   aria-label="Account Executive"
-  class="flex flex-col justify-start content-start px-6 py-4 border-b border-slate-200 hover:bg-slate-300 rounded cursor-pointer component"
+  class="flex flex-col justify-start content-start px-6 py-4 border-b border-gray-200 hover:bg-gray-300 rounded cursor-pointer component"
   data-test="SidebarCell"
   role="menuitem"
   tabindex="0"
@@ -58,7 +58,7 @@ exports[`SidebarCell snapshot accessibility attributes from onClick 1`] = `
 exports[`SidebarCell snapshot active 1`] = `
 <div
   aria-label="Account Executive"
-  class="flex flex-col justify-start content-start px-6 py-4 border-b border-slate-200 hover:bg-slate-300 rounded cursor-pointer component"
+  class="flex flex-col justify-start content-start px-6 py-4 border-b border-gray-200 hover:bg-gray-300 rounded cursor-pointer component"
   data-test="SidebarCell"
 >
   <div
@@ -83,7 +83,7 @@ exports[`SidebarCell snapshot active 1`] = `
 exports[`SidebarCell snapshot data-attribute 1`] = `
 <div
   aria-label="Account Executive"
-  class="flex flex-col justify-start content-start px-6 py-4 border-b border-slate-200 hover:bg-slate-300 rounded cursor-pointer component"
+  class="flex flex-col justify-start content-start px-6 py-4 border-b border-gray-200 hover:bg-gray-300 rounded cursor-pointer component"
   data-id="123"
   data-test="SidebarCell"
 >
@@ -109,7 +109,7 @@ exports[`SidebarCell snapshot data-attribute 1`] = `
 exports[`SidebarCell snapshot starred 1`] = `
 <div
   aria-label="Account Executive"
-  class="flex flex-col justify-start content-start px-6 py-4 border-b border-slate-200 hover:bg-slate-300 rounded cursor-pointer component"
+  class="flex flex-col justify-start content-start px-6 py-4 border-b border-gray-200 hover:bg-gray-300 rounded cursor-pointer component"
   data-test="SidebarCell"
 >
   <div

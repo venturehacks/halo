@@ -58,7 +58,7 @@ function BannerRaw({
     className,
     constrain && 'max-w-screen-desktop',
     isDismissed && 'max-h-0 opacity-0 m-0 p-0 pointer-events-none dismissed',
-    variant === 'info' && 'border-slate-700',
+    variant === 'info' && 'border-gray-700',
     variant === 'warning' && 'border-orange-300',
     variant === 'error' && 'border-red-600',
     variant === 'success' && 'border-green-500',

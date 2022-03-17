@@ -28,11 +28,6 @@ describe('Button', () => {
       expect(component).toMatchSnapshot();
     });
 
-    test('no emphasis', () => {
-      const component = render(<Button emphasis={false} />);
-      expect(component).toMatchSnapshot();
-    });
-
     test('width 100%', () => {
       const component = render(<Button width="100%" />);
       expect(component).toMatchSnapshot();
@@ -71,8 +66,8 @@ describe('Button', () => {
         expect(component).toMatchSnapshot();
       });
 
-      test('destructive', () => {
-        const component = render(<Button variant="destructive" />);
+      test('error', () => {
+        const component = render(<Button variant="error" />);
         expect(component).toMatchSnapshot();
       });
 

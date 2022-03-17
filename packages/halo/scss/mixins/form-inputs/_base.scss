@@ -6,6 +6,6 @@
 
 @mixin input-disabled {
   @include font($color: $dark-a);
-  background-color: $slate-200;
+  background-color: $gray-200;
   border-color: $dark-aa;
 }

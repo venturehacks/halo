@@ -2,7 +2,7 @@
 
 exports[`Tag snapshot color gray 1`] = `
 <span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-slate-100 text-dark-aaa rounded-md gap-2 text-xs px-3 py-1 bg-opacity-75"
+  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-gray-100 text-dark-aaa rounded-md gap-2 text-xs px-3 py-1 bg-opacity-75"
 />
 `;
 

@@ -1,8 +1,8 @@
 @import './base';
 
-$toggle-switch-gutter-width: tempo(7) !default;
-$toggle-switch-gutter-height: 10px !default;
-$toggle-switch-knob-size: tempo(4) !default;
+$toggle-switch-gutter-width: tempo(7);
+$toggle-switch-gutter-height: 10px;
+$toggle-switch-knob-size: tempo(4);
 
 @mixin input-label-toggle-switch-left {
   @extend %input-label-base;

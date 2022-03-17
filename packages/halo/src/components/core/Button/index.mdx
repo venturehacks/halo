@@ -15,30 +15,25 @@ import { Header } from '../Header'
 ### Usage
 
 <Playground>
-  <Header h4>Variants</Header>
-  <Box row margin={{ bottom: 2 }}>
+  <div className="mb-6">
     <Button>Primary</Button>
     <Button variant="secondary">Secondary</Button>
     <Button variant="gray">Gray</Button>
-    <Button variant="destructive">Destructive</Button>
+    <Button variant="error">Error</Button>
     <Button variant="clear">Clear</Button>
-  </Box>
+  </div>
 
-  <Header h4>Disabled Variants</Header>
-  <Box row margin={{ bottom: 2 }}>
+  <div className="mb-6">
     <Button disabled>Primary</Button>
     <Button variant="secondary" disabled>Secondary</Button>
     <Button variant="gray" disabled>Gray</Button>
-    <Button variant="destructive" disabled>Destructive</Button>
+    <Button variant="error" disabled>Error</Button>
     <Button variant="clear" disabled>Clear</Button>
-  </Box>
+  </div>
 
-  <Header h4>Sizes</Header>
-  <Box maxWidth="540px" align="space-between" valign="bottom" margin={{ bottom: 2 }} row>
-    <Button size="sm">sm</Button>
-    <Button size="md" variant="secondary">md</Button>
-    <Button size="lg" variant="gray">lg</Button>
-  </Box>
+  <Button size="lg" variant="gray">lg</Button>
+  <Button size="md" variant="secondary">md</Button>
+  <Button size="sm">sm</Button>
 </Playground>
 
 ### Exports
@@ -54,7 +49,8 @@ type ButtonVariant =
   | 'primary'
   | 'secondary'
   | 'gray'
-  | 'destructive'
+  | 'error'
+  | 'success'
   | 'clear';
 ```
 

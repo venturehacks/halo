@@ -41,7 +41,7 @@ function Tooltip({
     size === 'sm' && 'text-2xs',
     size === 'md' && 'text-xs',
     size === 'lg' && 'text-md',
-    'bg-slate-900',
+    'bg-gray-900',
     'py-1 px-2',
     'rounded',
     'text-white',

@@ -86,7 +86,7 @@ exports[`Label snapshot standard 1`] = `
     </div>
   </div>
   <input
-    class="text-dark-aaaa text-md max-w-full placeholder-dark-a bg-white rounded focus:border-2 px-3 py-2 h-10 border border-slate-500 disabled:text-dark-a disabled:bg-slate-200 disabled:border-light-aa w-full"
+    class="text-dark-aaaa text-md max-w-full placeholder-dark-a bg-white rounded focus:border-2 px-3 py-2 h-10 border border-gray-500 disabled:text-dark-a disabled:bg-gray-200 disabled:border-light-aa w-full"
     type="text"
   />
 </label>
