@@ -5,9 +5,9 @@ route: /core/header
 deprecated: true
 ---
 
-import { Playground, Props } from 'docz'
-import { Header } from './'
-import { Tooltip } from '../Tooltip'
+import { Playground, Props } from 'docz';
+import { Header } from './';
+import { Tooltip } from '../Tooltip';
 
 # Header
 
@@ -28,7 +28,9 @@ Compare to [InterfaceHeader](/core/interface-header), which is appropriate divid
 </Playground>
 
 <Playground>
-  <Header h3 muted>Tertiary Headline</Header>
+  <Header h3 muted>
+    Tertiary Headline
+  </Header>
   h3 &middot;xl &middot; 24px)
 </Playground>
 
@@ -41,8 +43,13 @@ Compare to [InterfaceHeader](/core/interface-header), which is appropriate divid
 </Playground>
 
 <Playground>
-  <Tooltip content="My tooltip looks good because I'm inline block!" placement="right">
-    <Header h6 inlineBlock>Headline</Header>
+  <Tooltip
+    content="My tooltip looks good because I'm inline block!"
+    placement="right"
+  >
+    <Header h6 inlineBlock>
+      Headline
+    </Header>
   </Tooltip>
 </Playground>
 

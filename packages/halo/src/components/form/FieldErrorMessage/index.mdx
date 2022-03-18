@@ -45,9 +45,9 @@ Preset `block` is great for rendering a critical server error message at the hea
       />
       <FieldErrorMessage errorSeverity="critical" message="City, state, and zip code required" />
     </Label>
+
   </div>
 </Playground>
-
 
 ### Exports
 
@@ -61,7 +61,6 @@ type FieldErrorMessageSeverity = 'warning' | 'critical';
 
 <Props of={FieldErrorMessage} />
 
-
 ### Example with Formik
 
 ```jsx
@@ -69,6 +68,6 @@ import { ErrorMessage } from 'formik';
 
 <ErrorMessage
   name="salaryMax"
-  render={message => <FieldErrorMessage message={message} />}
-/>
+  render={(message) => <FieldErrorMessage message={message} />}
+/>;
 ```

@@ -6,10 +6,10 @@ deprecated: true
 ---
 
 import { Props, Playground } from 'docz';
-import { AttentionIndicator } from './'
+import { AttentionIndicator } from './';
 import { Box } from '../../structure/Box';
 import { BookmarkOutlineIcon, CloseIcon } from '../../icons';
-import { InterfaceHeader } from '../InterfaceHeader'
+import { InterfaceHeader } from '../InterfaceHeader';
 
 # AttentionIndicator
 
@@ -38,43 +38,73 @@ An attention badge that can be used to indicate a count or with an icon.
     </div>
   </div>
 
-  <InterfaceHeader title="Rounded Rectangle" byline="Numeric attention signal" section />
-  <div className="px-1 py-4 mb-6">
-    <div className="flex flex-row items-start gap-10 mb-5">
-      <div className="relative w-4 h-6">
-        <AttentionIndicator color="red" shape="rounded-rectangle" />
-      </div>
-      <div className="relative w-4 h-6">
-        <AttentionIndicator color="red" shape="rounded-rectangle" count={1} />
-      </div>
-      <div className="relative w-4 h-6">
-        <AttentionIndicator color="red" shape="rounded-rectangle" count={10} />
-      </div>
-      <div className="relative w-4 h-6">
-        <AttentionIndicator color="red" shape="rounded-rectangle" count={100} />
-      </div>
-      <div className="relative w-4 h-6">
-        <AttentionIndicator color="red" shape="rounded-rectangle" icon={<CloseIcon className="w-auto" />} />
-      </div>
+{' '}
+
+<InterfaceHeader
+  title="Rounded Rectangle"
+  byline="Numeric attention signal"
+  section
+/>
+<div className="px-1 py-4 mb-6">
+  <div className="flex flex-row items-start gap-10 mb-5">
+    <div className="relative w-4 h-6">
+      <AttentionIndicator color="red" shape="rounded-rectangle" />
     </div>
-    <div className="flex flex-row items-start gap-10 ml-1">
-      <div className="relative w-4 h-6">
-        <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" />
-      </div>
-      <div className="relative w-4 h-6">
-        <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" count={1} />
-      </div>
-      <div className="relative w-4 h-6">
-        <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" count={10} />
-      </div>
-      <div className="relative w-4 h-6">
-        <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" count={100} />
-      </div>
-      <div className="relative w-4 h-6">
-        <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" icon={<CloseIcon className="w-auto" />} />
-      </div>
+    <div className="relative w-4 h-6">
+      <AttentionIndicator color="red" shape="rounded-rectangle" count={1} />
+    </div>
+    <div className="relative w-4 h-6">
+      <AttentionIndicator color="red" shape="rounded-rectangle" count={10} />
+    </div>
+    <div className="relative w-4 h-6">
+      <AttentionIndicator color="red" shape="rounded-rectangle" count={100} />
+    </div>
+    <div className="relative w-4 h-6">
+      <AttentionIndicator
+        color="red"
+        shape="rounded-rectangle"
+        icon={<CloseIcon className="w-auto" />}
+      />
     </div>
   </div>
+  <div className="flex flex-row items-start gap-10 ml-1">
+    <div className="relative w-4 h-6">
+      <AttentionIndicator color="orange" shape="rounded-rectangle" size="md" />
+    </div>
+    <div className="relative w-4 h-6">
+      <AttentionIndicator
+        color="orange"
+        shape="rounded-rectangle"
+        size="md"
+        count={1}
+      />
+    </div>
+    <div className="relative w-4 h-6">
+      <AttentionIndicator
+        color="orange"
+        shape="rounded-rectangle"
+        size="md"
+        count={10}
+      />
+    </div>
+    <div className="relative w-4 h-6">
+      <AttentionIndicator
+        color="orange"
+        shape="rounded-rectangle"
+        size="md"
+        count={100}
+      />
+    </div>
+    <div className="relative w-4 h-6">
+      <AttentionIndicator
+        color="orange"
+        shape="rounded-rectangle"
+        size="md"
+        icon={<CloseIcon className="w-auto" />}
+      />
+    </div>
+  </div>
+</div>
 
   <InterfaceHeader title="Navigation annotation" section />
   <div className="relative flex flex-col items-center h-16 w-16 mt-4">

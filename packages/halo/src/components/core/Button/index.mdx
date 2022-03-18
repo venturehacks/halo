@@ -6,9 +6,9 @@ route: /core/button
 
 import { Props, Playground } from 'docz';
 import { Box } from '../../structure/Box';
-import { Button } from './'
-import { Tooltip } from '../Tooltip'
-import { Header } from '../Header'
+import { Button } from './';
+import { Tooltip } from '../Tooltip';
+import { Header } from '../Header';
 
 # Button
 
@@ -23,13 +23,23 @@ import { Header } from '../Header'
     <Button variant="clear">Clear</Button>
   </div>
 
-  <div className="mb-6">
-    <Button disabled>Primary</Button>
-    <Button variant="secondary" disabled>Secondary</Button>
-    <Button variant="gray" disabled>Gray</Button>
-    <Button variant="error" disabled>Error</Button>
-    <Button variant="clear" disabled>Clear</Button>
-  </div>
+{' '}
+
+<div className="mb-6">
+  <Button disabled>Primary</Button>
+  <Button variant="secondary" disabled>
+    Secondary
+  </Button>
+  <Button variant="gray" disabled>
+    Gray
+  </Button>
+  <Button variant="error" disabled>
+    Error
+  </Button>
+  <Button variant="clear" disabled>
+    Clear
+  </Button>
+</div>
 
   <Button size="lg" variant="gray">lg</Button>
   <Button size="md" variant="secondary">md</Button>
@@ -39,11 +49,9 @@ import { Header } from '../Header'
 ### Exports
 
 ```ts
-type ButtonSize =
-  | 'sm'
-  | 'md'
-  | 'lg'
+type ButtonSize = 'sm' | 'md' | 'lg';
 ```
+
 ```ts
 type ButtonVariant =
   | 'primary'

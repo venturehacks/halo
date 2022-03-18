@@ -20,12 +20,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
 <Playground>
   <div className="max-w-xl">
     <Label field="foo" title="Text Input">
-      <Input
-        type="text"
-        name="foo"
-        placeholder="Your name"
-        maxLength={100}
-      />
+      <Input type="text" name="foo" placeholder="Your name" maxLength={100} />
     </Label>
     <Bracket>
       <Label field="foo" title="Icon Left">
@@ -73,10 +68,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
           errorSeverity="critical"
           hasError
         />
-        <FieldErrorMessage
-          errorSeverity="critical"
-          message="Does not match"
-        />
+        <FieldErrorMessage errorSeverity="critical" message="Does not match" />
       </Label>
     </Bracket>
     <Label field="phone" title="Number">

@@ -8,7 +8,7 @@ import { Props, Playground } from 'docz';
 import { Header } from '../Header';
 import { Span } from '../Span';
 import { Box } from '../../structure/Box';
-import { Banner } from './'
+import { Banner } from './';
 
 # Banner
 
@@ -49,6 +49,7 @@ Display a prominent message and optional action. Banners are displayed at the to
         New password saved! <Span regular>Please log in again</Span>
       </Banner>
     </Box>
+
   </Box>
 </Playground>
 
@@ -59,9 +60,5 @@ Display a prominent message and optional action. Banners are displayed at the to
 ### Exports
 
 ```tsx
-export type BannerVariant =
-  | 'info'
-  | 'warning'
-  | 'success'
-  | 'error';
+export type BannerVariant = 'info' | 'warning' | 'success' | 'error';
 ```

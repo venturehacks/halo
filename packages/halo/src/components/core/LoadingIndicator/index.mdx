@@ -5,12 +5,11 @@ route: /core/loading-indicator
 ---
 
 import { Props, Playground } from 'docz';
-import { LoadingIndicator } from './'
+import { LoadingIndicator } from './';
 import { Header } from '../Header';
 import { Paragraph } from '../Paragraph';
 import { Tooltip } from '../Tooltip';
 import { Box } from '../../structure/Box';
-
 
 # LoadingIndicator
 
@@ -32,26 +31,30 @@ While it is possible to alter color and size, Halo defaults are preferred.
     </Box>
   </Box>
 
-  <Header h5>
-    <Tooltip content="use sparingly! (or never)">
-      <span>Color*</span>
-    </Tooltip>
-  </Header>
+{' '}
 
-  <Box row margin={{ bottom: 4 }}>
-    <Box margin={{ right: 2 }}>
-      <LoadingIndicator bare color="#666" />
-    </Box>
-    <Box margin={{ right: 6 }}>
-      <LoadingIndicator bare color="#888" />
-    </Box>
-    <Box margin={{ right: 2 }}>
-      <LoadingIndicator bare color="#bbb" alternate />
-    </Box>
-    <Box margin={{ right: 2 }}>
-      <LoadingIndicator bare color="#ddd" alternate />
-    </Box>
+<Header h5>
+  <Tooltip content="use sparingly! (or never)">
+    <span>Color*</span>
+  </Tooltip>
+</Header>
+
+{' '}
+
+<Box row margin={{ bottom: 4 }}>
+  <Box margin={{ right: 2 }}>
+    <LoadingIndicator bare color="#666" />
   </Box>
+  <Box margin={{ right: 6 }}>
+    <LoadingIndicator bare color="#888" />
+  </Box>
+  <Box margin={{ right: 2 }}>
+    <LoadingIndicator bare color="#bbb" alternate />
+  </Box>
+  <Box margin={{ right: 2 }}>
+    <LoadingIndicator bare color="#ddd" alternate />
+  </Box>
+</Box>
 
 </Playground>
 
