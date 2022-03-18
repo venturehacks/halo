@@ -70,7 +70,7 @@ ${iconImport}
 
 <div className="grid grid-cols-4 gap-4 text-center max-w-3xl">
 
-  ${iconDocs}
+${iconDocs}
 
 </div>
 `;
