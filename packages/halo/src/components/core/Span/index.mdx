@@ -7,8 +7,7 @@ deprecated: true
 
 import { Props, Playground } from 'docz';
 import { Box } from '../../structure/Box';
-import { Span } from './'
-
+import { Span } from './';
 
 # Span
 
@@ -24,18 +23,22 @@ The convenient text formatter. Implements common [text interfaces](/constants/te
     <Span bold>bold/strong</Span>
   </Box>
 
-  <Box row align="space-between" background="#f6f6f6" margin={{ bottom: 2}}>
-    <Span contrast="AAAA">AAAA contrast</Span>
-    <Span contrast="AAA">AAA contrast</Span>
-    <Span contrast="AA">AA contrast</Span>
-    <Span contrast="A">A contrast</Span>
-  </Box>
+{' '}
 
-  <Box row align="space-between" margin={{ bottom: 2 }}>
-    <Span muted>muted</Span>
-    <Span xmuted>xmuted</Span>
-    <Span xxmuted>xxmuted</Span>
-  </Box>
+<Box row align="space-between" background="#f6f6f6" margin={{ bottom: 2 }}>
+  <Span contrast="AAAA">AAAA contrast</Span>
+  <Span contrast="AAA">AAA contrast</Span>
+  <Span contrast="AA">AA contrast</Span>
+  <Span contrast="A">A contrast</Span>
+</Box>
+
+{' '}
+
+<Box row align="space-between" margin={{ bottom: 2 }}>
+  <Span muted>muted</Span>
+  <Span xmuted>xmuted</Span>
+  <Span xxmuted>xxmuted</Span>
+</Box>
 
   <Box row align="space-between">
     <Span success>success</Span>
@@ -44,8 +47,6 @@ The convenient text formatter. Implements common [text interfaces](/constants/te
   </Box>
 </Playground>
 
-
 ### Props
 
 <Props of={Span} />
-

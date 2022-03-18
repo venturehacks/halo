@@ -9,7 +9,7 @@ import { Props, Playground } from 'docz';
 import { InterfaceHeader } from '../InterfaceHeader';
 import { BookmarkOutlineIcon } from '../../icons';
 import { Box } from '../../structure/Box';
-import { Tag } from './'
+import { Tag } from './';
 
 > TODO(drew): refresh these docs
 
@@ -63,80 +63,63 @@ Successor to `PillTag` `Flair` (deprecated).
     />
   </Box>
 
-  <Box margin={{ bottom: 4 }}>
-    <InterfaceHeader title="xs" section flow />
-    <Tag
-      color="red"
-      size="sm"
-      label="Red tag"
-      size="xs"
-    />
-    <Tag
-      color="gray"
-      shape="pill"
-      size="sm"
-      label="Gray tag"
-      size="xs"
-    />
-    <Tag
-      icon={<BookmarkOutlineIcon />}
-      shape="pill"
-      size="sm"
-      label="Blue tag with icon"
-      size="xs"
-    />
-    <Tag
-      color="green"
-      onClose={() => {alert("close clicked!")}}
-      size="sm"
-      label="Green tag with clickable close icon"
-      size="xs"
-    />
-    <Tag
-      color="purple"
-      onClick={() => {alert("tag clicked!")}}
-      size="sm"
-      label="Clickable tag!"
-      size="xs"
-    />
-    <Tag
-      color="orange"
-      icon={<BookmarkOutlineIcon />}
-      size="xs"
-    />
-  </Box>
+{' '}
 
-  <Box margin={{ bottom: 4 }}>
-    <InterfaceHeader title="sm" section flow />
-    <Tag
-      color="red"
-      label="Red tag"
-    />
-    <Tag
-      color="gray"
-      shape="pill"
-      label="Gray tag"
-    />
-    <Tag
-      icon={<BookmarkOutlineIcon />}
-      shape="pill"
-      label="Blue tag with icon"
-    />
-    <Tag
-      color="green"
-      onClose={() => {alert("close clicked!")}}
-      label="Green tag with clickable close icon"
-    />
-    <Tag
-      color="purple"
-      onClick={() => {alert("tag clicked!")}}
-      label="Clickable tag!"
-    />
-    <Tag
-      color="orange"
-      icon={<BookmarkOutlineIcon />}
-    />
-  </Box>
+<Box margin={{ bottom: 4 }}>
+  <InterfaceHeader title="xs" section flow />
+  <Tag color="red" size="sm" label="Red tag" size="xs" />
+  <Tag color="gray" shape="pill" size="sm" label="Gray tag" size="xs" />
+  <Tag
+    icon={<BookmarkOutlineIcon />}
+    shape="pill"
+    size="sm"
+    label="Blue tag with icon"
+    size="xs"
+  />
+  <Tag
+    color="green"
+    onClose={() => {
+      alert('close clicked!');
+    }}
+    size="sm"
+    label="Green tag with clickable close icon"
+    size="xs"
+  />
+  <Tag
+    color="purple"
+    onClick={() => {
+      alert('tag clicked!');
+    }}
+    size="sm"
+    label="Clickable tag!"
+    size="xs"
+  />
+  <Tag color="orange" icon={<BookmarkOutlineIcon />} size="xs" />
+</Box>
+
+{' '}
+
+<Box margin={{ bottom: 4 }}>
+  <InterfaceHeader title="sm" section flow />
+  <Tag color="red" label="Red tag" />
+  <Tag color="gray" shape="pill" label="Gray tag" />
+  <Tag icon={<BookmarkOutlineIcon />} shape="pill" label="Blue tag with icon" />
+  <Tag
+    color="green"
+    onClose={() => {
+      alert('close clicked!');
+    }}
+    label="Green tag with clickable close icon"
+  />
+  <Tag
+    color="purple"
+    onClick={() => {
+      alert('tag clicked!');
+    }}
+    label="Clickable tag!"
+  />
+  <Tag color="orange" icon={<BookmarkOutlineIcon />} />
+</Box>
 
   <Box margin={{ bottom: 4 }}>
     <InterfaceHeader title="Custom content" section flow />
@@ -160,13 +143,7 @@ Successor to `PillTag` `Flair` (deprecated).
 ### Exports
 
 ```ts
-type TagColor =
-  | 'blue'
-  | 'gray'
-  | 'green'
-  | 'orange'
-  | 'purple'
-  | 'red';
+type TagColor = 'blue' | 'gray' | 'green' | 'orange' | 'purple' | 'red';
 
 type TagShape = 'pill' | 'rectangle';
 

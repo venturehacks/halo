@@ -34,28 +34,36 @@ import { SearchIcon } from '../components/icons';
 
 <Playground>
   <Tooltip content="Banner (variant='warning')">
-    <Banner variant="warning">NOTE: This page is for demo purposes only!</Banner>
+    <Banner variant="warning">
+      NOTE: This page is for demo purposes only!
+    </Banner>
   </Tooltip>
   <Tooltip content="Bracket (isolate='last-child')">
     <Bracket className="bg-gray-300 px-6" isolate="last-child">
       <Tooltip content="Header (h3)" placement="right">
-        <Header className="mt-4" h3>Halo AngelList</Header>
+        <Header className="mt-4" h3>
+          Halo AngelList
+        </Header>
       </Tooltip>
-      <Tag label="Source"/>
+      <Tag label="Source" />
       <div className="relative">
-        <Tag label="Applicants"/>
+        <Tag label="Applicants" />
         <Tooltip content="AttentionIndicator" placement="right">
-          <AttentionIndicator color="red" count="2"/>
+          <AttentionIndicator color="red" count="2" />
         </Tooltip>
       </div>
-      <Tag label="Track"/>
-      <Tag label="Jobs"/>
-      <Tag label="Company Profile"/>
+      <Tag label="Track" />
+      <Tag label="Jobs" />
+      <Tag label="Company Profile" />
       <Tooltip content="Avatar" placement="left">
         <Avatar
           imageUrl="https://avatars.githubusercontent.com/u/56262247"
           size="md"
-          badge={<Badge position="bottom" tooltip="Badge">✌︎</Badge>}
+          badge={
+            <Badge position="bottom" tooltip="Badge">
+              ✌︎
+            </Badge>
+          }
         />
       </Tooltip>
     </Bracket>
@@ -112,15 +120,19 @@ import { SearchIcon } from '../components/icons';
           />
         </div>
       </Tooltip>
-      <hr/>
+      <hr />
       <Tooltip content="Label">
-        <Label title="Settings" byline="Update your recruit settings here" containsFieldGroup>
+        <Label
+          title="Settings"
+          byline="Update your recruit settings here"
+          containsFieldGroup
+        >
           <div className="flex flex-col gap-4 px-1">
             <Tooltip content="Radio" placement="right">
-              <Radio label="Allow new applicants" checked/>
+              <Radio label="Allow new applicants" checked />
             </Tooltip>
             <Tooltip content="Checkbox" placement="right">
-              <Checkbox label="Disable all jobs"/>
+              <Checkbox label="Disable all jobs" />
             </Tooltip>
             <Tooltip content="Textarea" placement="right">
               <Textarea
@@ -133,12 +145,13 @@ import { SearchIcon } from '../components/icons';
           </div>
         </Label>
       </Tooltip>
-      <hr/>
+      <hr />
       <Tooltip content="Paragraph" placement="right">
         <Paragraph contrast="AA">
-          This is a simple demo page that has been implemented entirely from components that are
-          available in the current Halo release. Hovering over anything on this page will tell
-          you the name of the component it was constructed using.
+          This is a simple demo page that has been implemented entirely from
+          components that are available in the current Halo release. Hovering
+          over anything on this page will tell you the name of the component it
+          was constructed using.
         </Paragraph>
       </Tooltip>
     </div>
@@ -146,14 +159,16 @@ import { SearchIcon } from '../components/icons';
       <Tooltip content="Bracket">
         <Bracket>
           <Tooltip content="Header (h4)" placement="right">
-            <Header className="pt-4" h4>Senior Software Engineer</Header>
+            <Header className="pt-4" h4>
+              Senior Software Engineer
+            </Header>
           </Tooltip>
           <Tooltip content="Button (variant='gray')" placement="left">
             <Button variant="gray">View Job</Button>
           </Tooltip>
         </Bracket>
       </Tooltip>
-      <hr/>
+      <hr />
       <Tooltip content="Bracket (isolate='first-child')">
         <Bracket className="pb-4" isolate="first-child">
           <p>List of applicants</p>
@@ -172,24 +187,41 @@ import { SearchIcon } from '../components/icons';
       <Tooltip content="Panel">
         <Panel>
           <Tooltip content="AvatarLockup" placement="left">
-            <AvatarLockup size="lg" imageUrl="https://avatars.githubusercontent.com/u/56262247" >
+            <AvatarLockup
+              size="lg"
+              imageUrl="https://avatars.githubusercontent.com/u/56262247"
+            >
               <div>
                 <p className="font-bold">Vishal Jeet</p>
-                <p className="text-sm font-normal">10 years of exp · New York City · Remote Only</p>
-                <p className="text-xs text-dark-aa">May require a US work visa</p>
+                <p className="text-sm font-normal">
+                  10 years of exp · New York City · Remote Only
+                </p>
+                <p className="text-xs text-dark-aa">
+                  May require a US work visa
+                </p>
               </div>
             </AvatarLockup>
           </Tooltip>
-          <hr/>
+          <hr />
           <Bracket>
             <p>Skills</p>
-            <Tooltip content="Tag"><Tag color="gray" shape="pill" label="Java" size="2xs"/></Tooltip>
-            <Tooltip content="Tag"><Tag color="gray" shape="pill" label="Ruby" size="2xs"/></Tooltip>
-            <Tooltip content="Tag"><Tag color="gray" shape="pill" label="Python" size="2xs"/></Tooltip>
-            <Tooltip content="Tag"><Tag color="gray" shape="pill" label="C++" size="2xs"/></Tooltip>
-            <Tooltip content="Tag"><Tag color="gray" shape="pill" label="React" size="2xs"/></Tooltip>
+            <Tooltip content="Tag">
+              <Tag color="gray" shape="pill" label="Java" size="2xs" />
+            </Tooltip>
+            <Tooltip content="Tag">
+              <Tag color="gray" shape="pill" label="Ruby" size="2xs" />
+            </Tooltip>
+            <Tooltip content="Tag">
+              <Tag color="gray" shape="pill" label="Python" size="2xs" />
+            </Tooltip>
+            <Tooltip content="Tag">
+              <Tag color="gray" shape="pill" label="C++" size="2xs" />
+            </Tooltip>
+            <Tooltip content="Tag">
+              <Tag color="gray" shape="pill" label="React" size="2xs" />
+            </Tooltip>
           </Bracket>
-          <hr/>
+          <hr />
           <Tooltip content="AttributeList">
             <AttributeList size="xs">
               <Tooltip content="Attribute" placement="left">
@@ -200,7 +232,7 @@ import { SearchIcon } from '../components/icons';
               </Tooltip>
             </AttributeList>
           </Tooltip>
-          <hr/>
+          <hr />
           <Tooltip content="Bracket">
             <Bracket>
               <Tooltip content="Button (variant='primary')" placement="right">
@@ -216,35 +248,52 @@ import { SearchIcon } from '../components/icons';
       <Tooltip content="Panel">
         <Panel>
           <Tooltip content="AvatarLockup" placement="left">
-            <AvatarLockup size="lg" imageUrl="https://avatars.githubusercontent.com/u/194885" >
+            <AvatarLockup
+              size="lg"
+              imageUrl="https://avatars.githubusercontent.com/u/194885"
+            >
               <div>
                 <p className="font-bold">Drew Lustro</p>
-                <p className="text-sm font-normal">15 years of exp · Los Angeles </p>
-                <p className="text-xs text-dark-aa">Does not require a US work visa</p>
+                <p className="text-sm font-normal">
+                  15 years of exp · Los Angeles{' '}
+                </p>
+                <p className="text-xs text-dark-aa">
+                  Does not require a US work visa
+                </p>
               </div>
             </AvatarLockup>
           </Tooltip>
-          <hr/>
+          <hr />
           <Bracket>
             <p>Skills</p>
-            <Tooltip content="Tag"><Tag color="gray" shape="pill" label="Java" size="2xs"/></Tooltip>
-            <Tooltip content="Tag"><Tag color="gray" shape="pill" label="Ruby" size="2xs"/></Tooltip>
-            <Tooltip content="Tag"><Tag color="gray" shape="pill" label="Python" size="2xs"/></Tooltip>
-            <Tooltip content="Tag"><Tag color="gray" shape="pill" label="C++" size="2xs"/></Tooltip>
-            <Tooltip content="Tag"><Tag color="gray" shape="pill" label="React" size="2xs"/></Tooltip>
+            <Tooltip content="Tag">
+              <Tag color="gray" shape="pill" label="Java" size="2xs" />
+            </Tooltip>
+            <Tooltip content="Tag">
+              <Tag color="gray" shape="pill" label="Ruby" size="2xs" />
+            </Tooltip>
+            <Tooltip content="Tag">
+              <Tag color="gray" shape="pill" label="Python" size="2xs" />
+            </Tooltip>
+            <Tooltip content="Tag">
+              <Tag color="gray" shape="pill" label="C++" size="2xs" />
+            </Tooltip>
+            <Tooltip content="Tag">
+              <Tag color="gray" shape="pill" label="React" size="2xs" />
+            </Tooltip>
           </Bracket>
-          <hr/>
+          <hr />
           <Tooltip content="AttributeList">
-              <AttributeList size="xs">
-                <Tooltip content="Attribute" placement="left">
-                  <Attribute name="Desired Role" value="Software Engineer" />
-                </Tooltip>
-                <Tooltip content="Attribute" placement="left">
-                  <Attribute name="Desired Salary" value="$100,000" />
-                </Tooltip>
-              </AttributeList>
+            <AttributeList size="xs">
+              <Tooltip content="Attribute" placement="left">
+                <Attribute name="Desired Role" value="Software Engineer" />
+              </Tooltip>
+              <Tooltip content="Attribute" placement="left">
+                <Attribute name="Desired Salary" value="$100,000" />
+              </Tooltip>
+            </AttributeList>
           </Tooltip>
-          <hr/>
+          <hr />
           <Tooltip content="Bracket">
             <Bracket>
               <Tooltip content="Button (variant='primary')" placement="right">
@@ -261,26 +310,32 @@ import { SearchIcon } from '../components/icons';
   </div>
 </Playground>
 
-<hr/>
+<hr />
 
 ### Without annotations:
 
 <Playground>
   <Banner variant="warning">NOTE: This page is for demo purposes only!</Banner>
   <Bracket className="bg-gray-300 px-6" isolate="last-child">
-    <Header className="mt-4" h3>Halo AngelList</Header>
-    <Tag label="Source"/>
+    <Header className="mt-4" h3>
+      Halo AngelList
+    </Header>
+    <Tag label="Source" />
     <div className="relative">
-      <Tag label="Applicants"/>
-      <AttentionIndicator color="red" count="2"/>
+      <Tag label="Applicants" />
+      <AttentionIndicator color="red" count="2" />
     </div>
-    <Tag label="Track"/>
-    <Tag label="Jobs"/>
-    <Tag label="Company Profile"/>
+    <Tag label="Track" />
+    <Tag label="Jobs" />
+    <Tag label="Company Profile" />
     <Avatar
       imageUrl="https://avatars.githubusercontent.com/u/56262247"
       size="md"
-      badge={<Badge position="bottom" tooltip="Badge">✌︎</Badge>}
+      badge={
+        <Badge position="bottom" tooltip="Badge">
+          ✌︎
+        </Badge>
+      }
     />
   </Bracket>
   <div className="flex flex-row">
@@ -329,11 +384,15 @@ import { SearchIcon } from '../components/icons';
           onStarClick={() => alert('onStarClick')}
         />
       </div>
-      <hr/>
-      <Label title="Settings" byline="Update your recruit settings here" containsFieldGroup>
+      <hr />
+      <Label
+        title="Settings"
+        byline="Update your recruit settings here"
+        containsFieldGroup
+      >
         <div className="flex flex-col gap-4 px-1">
-          <Radio label="Allow new applicants" checked/>
-          <Checkbox label="Disable all jobs"/>
+          <Radio label="Allow new applicants" checked />
+          <Checkbox label="Disable all jobs" />
           <Textarea
             name="team-notes"
             placeholder="Save any notes for your recruiting team here."
@@ -342,19 +401,22 @@ import { SearchIcon } from '../components/icons';
           />
         </div>
       </Label>
-      <hr/>
+      <hr />
       <Paragraph contrast="AA">
-        This is a simple demo page that has been implemented entirely from components that are
-        available in the current Halo release. Hovering over anything on this page will tell
-        you the name of the component it was constructed using.
+        This is a simple demo page that has been implemented entirely from
+        components that are available in the current Halo release. Hovering over
+        anything on this page will tell you the name of the component it was
+        constructed using.
       </Paragraph>
     </div>
     <div className="flex flex-col p-4 gap-2 w-full">
       <Bracket>
-        <Header className="pt-4" h4>Senior Software Engineer</Header>
+        <Header className="pt-4" h4>
+          Senior Software Engineer
+        </Header>
         <Button variant="gray">View Job</Button>
       </Bracket>
-      <hr/>
+      <hr />
       <Bracket className="pb-4" isolate="first-child">
         <p>List of applicants</p>
         <p>Sort by</p>
@@ -367,61 +429,73 @@ import { SearchIcon } from '../components/icons';
         />
       </Bracket>
       <Panel>
-        <AvatarLockup size="lg" imageUrl="https://avatars.githubusercontent.com/u/56262247" >
+        <AvatarLockup
+          size="lg"
+          imageUrl="https://avatars.githubusercontent.com/u/56262247"
+        >
           <div>
             <p className="font-bold">Vishal Jeet</p>
-            <p className="text-sm font-normal">10 years of exp · New York City · Remote Only</p>
+            <p className="text-sm font-normal">
+              10 years of exp · New York City · Remote Only
+            </p>
             <p className="text-xs text-dark-aa">May require a US work visa</p>
           </div>
         </AvatarLockup>
-        <hr/>
+        <hr />
         <Bracket>
           <p>Skills</p>
-          <Tag color="gray" shape="pill" label="Java" size="2xs"/>
-          <Tag color="gray" shape="pill" label="Ruby" size="2xs"/>
-          <Tag color="gray" shape="pill" label="Python" size="2xs"/>
-          <Tag color="gray" shape="pill" label="C++" size="2xs"/>
-          <Tag color="gray" shape="pill" label="React" size="2xs"/>
+          <Tag color="gray" shape="pill" label="Java" size="2xs" />
+          <Tag color="gray" shape="pill" label="Ruby" size="2xs" />
+          <Tag color="gray" shape="pill" label="Python" size="2xs" />
+          <Tag color="gray" shape="pill" label="C++" size="2xs" />
+          <Tag color="gray" shape="pill" label="React" size="2xs" />
         </Bracket>
-        <hr/>
+        <hr />
         <AttributeList size="xs">
           <Attribute name="Desired Role" value="Software Engineer" />
           <Attribute name="Desired Salary" value="$100,000" />
         </AttributeList>
-        <hr/>
+        <hr />
         <Bracket>
           <Button>Accept</Button>
           <Button variant="error">Reject</Button>
         </Bracket>
       </Panel>
-        <Panel>
-          <AvatarLockup size="lg" imageUrl="https://avatars.githubusercontent.com/u/194885" >
-            <div>
-              <p className="font-bold">Drew Lustro</p>
-              <p className="text-sm font-normal">15 years of exp · Los Angeles </p>
-              <p className="text-xs text-dark-aa">Does not require a US work visa</p>
-            </div>
-          </AvatarLockup>
-          <hr/>
-          <Bracket>
-            <p>Skills</p>
-            <Tag color="gray" shape="pill" label="Java" size="2xs"/>
-            <Tag color="gray" shape="pill" label="Ruby" size="2xs"/>
-            <Tag color="gray" shape="pill" label="Python" size="2xs"/>
-            <Tag color="gray" shape="pill" label="C++" size="2xs"/>
-            <Tag color="gray" shape="pill" label="React" size="2xs"/>
-          </Bracket>
-          <hr/>
-          <AttributeList size="xs">
-            <Attribute name="Desired Role" value="Software Engineer" />
-            <Attribute name="Desired Salary" value="$100,000" />
-          </AttributeList>
-          <hr/>
-          <Bracket>
-            <Button>Accept</Button>
-            <Button variant="error">Reject</Button>
-          </Bracket>
-        </Panel>
+      <Panel>
+        <AvatarLockup
+          size="lg"
+          imageUrl="https://avatars.githubusercontent.com/u/194885"
+        >
+          <div>
+            <p className="font-bold">Drew Lustro</p>
+            <p className="text-sm font-normal">
+              15 years of exp · Los Angeles{' '}
+            </p>
+            <p className="text-xs text-dark-aa">
+              Does not require a US work visa
+            </p>
+          </div>
+        </AvatarLockup>
+        <hr />
+        <Bracket>
+          <p>Skills</p>
+          <Tag color="gray" shape="pill" label="Java" size="2xs" />
+          <Tag color="gray" shape="pill" label="Ruby" size="2xs" />
+          <Tag color="gray" shape="pill" label="Python" size="2xs" />
+          <Tag color="gray" shape="pill" label="C++" size="2xs" />
+          <Tag color="gray" shape="pill" label="React" size="2xs" />
+        </Bracket>
+        <hr />
+        <AttributeList size="xs">
+          <Attribute name="Desired Role" value="Software Engineer" />
+          <Attribute name="Desired Salary" value="$100,000" />
+        </AttributeList>
+        <hr />
+        <Bracket>
+          <Button>Accept</Button>
+          <Button variant="error">Reject</Button>
+        </Bracket>
+      </Panel>
     </div>
   </div>
 </Playground>
