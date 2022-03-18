@@ -11,6 +11,7 @@ import {
 import { Logo } from 'gatsby-theme-docz/src/components/Logo';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { FigmaIcon } from '~/components/icons/vendor-support';
 //import Headroom from 'react-headroom';
 import { Box, Flex, jsx, useColorMode } from 'theme-ui';
 import SearchDrawer from '../Search';
@@ -26,7 +27,7 @@ export const Header = ({ onOpen }) => {
       header: { fixed, icons } = {},
     },
   } = useConfig();
-  const { edit = true, ...doc } = useCurrentDoc();
+  const { edit = true, figma, ...doc } = useCurrentDoc();
   const [colorMode, setColorMode] = useColorMode();
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -88,16 +89,28 @@ export const Header = ({ onOpen }) => {
           )}
         </Flex>
         {showMarkdownEditButton && edit && doc.link && (
-          <a
-            className="h-o"
-            sx={styles.editButton}
-            href={doc.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Edit width={14} />
-            <Box sx={{ pl: 2 }}>Edit page</Box>
-          </a>
+          <div className="absolute -bottom-10 right-8 w-52 flex flex-row justify-end items-center">
+            <a
+              className="h-o flex flex-row justify-end items-center"
+              href={doc.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Edit width={14} />
+              <Box sx={{ pl: 2 }}>Edit page</Box>
+            </a>
+            {figma && (
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={figma}
+                className="ml-4"
+              >
+                <FigmaIcon className="w-8" />
+                <span className="md:hidden">Figma</span>
+              </a>
+            )}
+          </div>
         )}
       </InnerContainer>
     </Container>

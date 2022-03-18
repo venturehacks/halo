@@ -60,6 +60,8 @@ const iconDocs = iconNames
 const documentation = `---
 name: Icons
 route: /icons
+updated: ${new Date().toISOString()}
+figma: https://www.figma.com/file/8EbOKQuVfc61d9aft8p7cO/Halo-Design-Library?node-id=12%3A1388
 ---
 
 ${iconImport}
