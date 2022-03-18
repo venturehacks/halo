@@ -22,7 +22,7 @@
     "test:ci": "yarn workspace halo test:ci",
     "test:snapshot-update": "yarn workspace halo test:snapshot-update",
     "icons": "yarn workspace halo icons",
-    "prettier:fix": "stylelint --fix '**/*.scss' && prettier --write '**/*.{ts,tsx,js,jsx,css,scss,md,markdown}'",
+    "prettier:fix": "stylelint --fix '**/*.scss' && prettier --write '**/*.{ts,tsx,js,jsx,css,scss,md,mdx,markdown}'",
     "lint": "eslint --format pretty .",
     "lint:fix": "eslint --format pretty --fix .",
     "release": "release-it --npm.publishArgs=\"--registry=https://npm.fury.io/angellist/\" --disable-metrics",
