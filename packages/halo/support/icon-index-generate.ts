@@ -59,7 +59,6 @@ const iconDocs = iconNames
 
 const documentation = `---
 name: Icons
-menu: Icons
 route: /icons
 ---
 
