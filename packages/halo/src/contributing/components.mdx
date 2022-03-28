@@ -1,0 +1,110 @@
+---
+name: Component
+menu: Contributing
+route: /contributing/component
+---
+
+# Updating a component
+
+<br />
+
+This section covers topics related to performing minor enhancements to an existing Halo component.
+
+<hr />
+
+## Filesystem Anatomy
+
+Each Halo component has a consistent file structure (showcased below for the `Banner` component).
+
+```javascript
+Banner // Parent folder (must match the component name)
+|
+└───__tests__ // contains all files used for testing the component
+│   │
+│   └───__snapshots__ // contains the snapshots used when running the tests
+│   │   │
+│   │   └─── Banner.tests.tsx.snap.txt // the reference file used for validating tests
+│   │
+|   └───Banner.test.tsx // contains the test cases
+│
+└───index.mdx // used to generate the documentation page for the component
+|
+└───index.tsx // actual component implementation
+|
+└───styles.module.scss // contains any non-tailwind css that is required
+```
+
+<hr />
+
+## Updating a Component
+
+There are various steps you would take when updating an existing Halo component, which are described below.
+
+(NOTE: all commands are to be run in the halo root directory)
+
+<br />
+
+### Implementation
+
+Make the necessary changes to the `index.tsx` file.
+
+<br />
+
+### Styles
+
+Any style changes should be implemented within the component itself using tailwind.
+
+When using taiwind is NOT an option, add style changes to the `styles.module.scss` file.
+
+<br />
+
+### Documentation
+
+If you have updated any existing behavior or added any new features to a component, be sure to update
+the documentation page to correcrly showcase these changes for future engineers.
+
+This documentation server can be run locally using the command below.
+
+```bash
+yarn clean && yarn dev
+```
+
+It can then be accessed via [this link](http://localhost:8000/).
+
+<br />
+
+### Tests
+
+All components have jest test cases for existing behaviour and functionality.
+Please update existing test cases and add new ones for any updated/added behavior.
+
+Commands for running the test suite locally:
+
+```bash
+# run entire suite (jest)
+yarn test
+
+# unit tests only (no linters, etc.)
+yarn test:dev
+
+# author new unit test iteratively (watch new/changed tests)
+yarn test:dev:watch
+```
+
+<br />
+
+### Snapshots
+
+We use [Snapshot Testing](https://jestjs.io/docs/snapshot-testing) for every Halo component.
+
+If you have made any changes that require existing snapshots to be updated, run:
+
+```bash
+yarn test:snapshot-update
+```
+
+<hr />
+
+## Pull request
+
+[An example PR](https://github.com/venturehacks/halo/pull/125) that updates the `Tooltip` component, for reference.
