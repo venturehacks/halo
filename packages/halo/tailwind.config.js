@@ -322,6 +322,8 @@ module.exports = {
       margin: ['last'],
       backgroundColor: ['disabled'],
       borderColor: ['disabled'],
+      cursor: ['disabled'],
+      fontWeight: ['disabled', 'hover'],
       textColor: ['disabled'],
     },
   },

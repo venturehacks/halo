@@ -10,40 +10,91 @@ import { Button } from './';
 import { Tooltip } from '../Tooltip';
 import { Header } from '../Header';
 
+import { ChevronDownIcon, SearchIcon } from '../../icons';
+
 # Button
 
-### Usage
+The Button component is used to trigger an action or event, such as submitting a form, opening a
+dialog, canceling an action, or performing a delete operation.
+
+### GTM usage
 
 <Playground>
-  <div className="mb-6">
-    <Button>Primary</Button>
-    <Button variant="secondary">Secondary</Button>
-    <Button variant="gray">Gray</Button>
-    <Button variant="error">Error</Button>
-    <Button variant="clear">Clear</Button>
-  </div>
+  <div className="flex flex-row gap-5">
+    <div>
+      <Button
+        icon={<ChevronDownIcon />}
+        iconPosition="right"
+        variant="gtm-primary"
+      >
+        gtm-primary sm
+      </Button>
+      <Button icon={<SearchIcon />} size="md" variant="gtm-primary">gtm-primary md</Button>
+      <Button size="lg" variant="gtm-primary" disabled>gtm-primary lg</Button>
+    </div>
 
-{' '}
+    <div>
+      <Button variant="gtm-secondary">gtm-secondary sm</Button>
+      <Button variant="gtm-secondary" size="md">gtm-secondary md</Button>
+      <Button variant="gtm-secondary" size="lg" disabled>gtm-secondary lg</Button>
+    </div>
 
-<div className="mb-6">
-  <Button disabled>Primary</Button>
-  <Button variant="secondary" disabled>
-    Secondary
-  </Button>
-  <Button variant="gray" disabled>
-    Gray
-  </Button>
-  <Button variant="error" disabled>
-    Error
-  </Button>
-  <Button variant="clear" disabled>
-    Clear
-  </Button>
-</div>
+    <div>
+      <Button variant="gtm-gray">gtm-gray sm</Button>
+      <Button variant="gtm-gray" size="md">gtm-gray md</Button>
+      <Button variant="gtm-gray" size="lg" disabled>gtm-gray lg</Button>
+    </div>
 
-  <Button size="lg" variant="gray">lg</Button>
-  <Button size="md" variant="secondary">md</Button>
-  <Button size="sm">sm</Button>
+    <div>
+      <Button variant="gtm-error">gtm-error sm</Button>
+      <Button variant="gtm-error" size="md">gtm-error md</Button>
+      <Button variant="gtm-error" size="lg" disabled>gtm-error lg</Button>
+    </div>
+
+    <div>
+      <Button variant="gtm-clear">gtm-clear sm</Button>
+      <Button variant="gtm-clear" size="md">gtm-clear md</Button>
+      <Button variant="gtm-clear" size="lg" disabled>gtm-clear lg</Button>
+    </div>
+
+  </div >
+</Playground>
+
+### Legacy usage
+
+<Playground>
+  <div className="flex flex-row gap-5">
+    <div>
+      <Button icon={<ChevronDownIcon />} iconPosition="right">primary sm</Button>
+      <Button icon={<SearchIcon />} size="md">primary md</Button>
+      <Button size="lg" disabled>primary lg</Button>
+    </div>
+
+    <div>
+      <Button variant="secondary">secondary sm</Button>
+      <Button variant="secondary" size="md">secondary md</Button>
+      <Button variant="secondary" size="lg" disabled>secondary lg</Button>
+    </div>
+
+    <div>
+      <Button variant="gray">gray sm</Button>
+      <Button variant="gray" size="md">gray md</Button>
+      <Button variant="gray" size="lg" disabled>gray lg</Button>
+    </div>
+
+    <div>
+      <Button variant="error">error sm</Button>
+      <Button variant="error" size="md">error md</Button>
+      <Button variant="error" size="lg" disabled>error lg</Button>
+    </div>
+
+    <div>
+      <Button variant="clear">clear sm</Button>
+      <Button variant="clear" size="md">clear md</Button>
+      <Button variant="clear" size="lg" disabled>clear lg</Button>
+    </div>
+
+  </div >
 </Playground>
 
 ### Exports
@@ -58,10 +109,14 @@ type ButtonVariant =
   | 'secondary'
   | 'gray'
   | 'error'
-  | 'success'
-  | 'clear';
-```
+  | 'clear'
+  | 'gtm-primary'
+  | 'gtm-secondary'
+  | 'gtm-gray'
+  | 'gtm-clear'
+  | 'gtm-error';
 
 ### Props
 
 <Props of={Button} />
+```
