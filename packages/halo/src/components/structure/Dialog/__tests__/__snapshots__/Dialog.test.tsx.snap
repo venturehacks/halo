@@ -63,22 +63,22 @@ exports[`Dialog snapshot title + both buttons 1`] = `
     data-test="Dialog-chin"
   >
     <button
-      class="rounded border-solid border-transparent border gap-x-2.5 mr-4 mb-2 whitespace-nowrap
-      antialiased text-center text-sm no-underline cursor-poinnter focus:outline-0
-      disabled:cursor-default disabled:pointer-events-none disabled:opacity-50 px-3 h-8 bg-white border-blue-500 text-blue-500 font-medium
-      disabled:bg-white disabled:border-blue-300 disabled:text-blue-300
-      hover:bg-slate-100"
+      class="rounded border-solid border gap-x-2.5 mr-4 mb-2 whitespace-nowrap
+      antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
+      disabled:cursor-default disabled:pointer-events-none disabled:opacity-50 px-3 py-1.5 bg-white border-blue-500 text-blue-500 font-medium
+                disabled:bg-white disabled:border-blue-300 disabled:text-blue-300
+                hover:bg-slate-100"
       data-test="Dialog-secondaryButton"
       type="button"
     >
       Cancel
     </button>
     <button
-      class="rounded border-solid border-transparent border gap-x-2.5 mr-4 mb-2 whitespace-nowrap
-      antialiased text-center text-sm no-underline cursor-poinnter focus:outline-0
-      disabled:cursor-default disabled:pointer-events-none disabled:opacity-50 px-3 h-8 bg-dark-brand border-dark-brand text-white font-medium
-      disabled:bg-blue-300 disabled:border-blue-300
-      hover:bg-blue-600 hover:border-blue-600"
+      class="rounded border-solid border gap-x-2.5 mr-4 mb-2 whitespace-nowrap
+      antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
+      disabled:cursor-default disabled:pointer-events-none disabled:opacity-50 px-3 py-1.5 bg-dark-brand border-dark-brand text-white font-medium
+              disabled:bg-blue-300 disabled:border-blue-300
+              hover:bg-blue-600 hover:border-blue-600"
       data-test="Dialog-primaryButton"
       type="button"
     >
