@@ -121,7 +121,6 @@ export default {
         'Header',
         'PillTag',
         'Span',
-        'AttentionIndicator',
       ],
     },
     {

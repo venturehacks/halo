@@ -6,6 +6,7 @@ route: /core/badge
 
 import { Props, Playground } from 'docz';
 import { Badge } from './';
+import { InterfaceHeader } from '../InterfaceHeader';
 import { Box } from '../../structure/Box';
 import { PillTag } from '../PillTag';
 import { AlarmIcon, ThumbsUpIcon } from '../../icons';
@@ -20,61 +21,70 @@ Colored badge to decorate an element.
   <div className="flex flex-col ml-3">
     <div className="flex flex-row items-start gap-6 mb-5 mr-5">
       <div className="relative">
-        <PillTag className="mr-4">square, sm, top</PillTag>
+        <PillTag className="mr-4">Count Indicator</PillTag>
         <Badge color="purple" shape="square" count={100} />
       </div>
       <div className="relative">
-        <PillTag className="mr-4">square, sm, bottom</PillTag>
-        <Badge color="purple" position="bottom" shape="square" count={12} />
-      </div>
-    </div>
-    <div className="flex flex-row items-start gap-6 mb-5 mr-5">
-      <div className="relative">
-        <PillTag className="mr-4">square, md, top</PillTag>
-        <Badge
-          color="blue"
-          shape="square"
-          size="md"
-          icon={<ThumbsUpIcon className="m-auto" width={16} />}
-          text="Likes"
-          count={33}
-        />
-      </div>
-      <div className="relative">
-        <PillTag className="mr-4">square, md, bottom</PillTag>
+        <PillTag className="mr-4">Icon</PillTag>
         <Badge
           color="blue"
           position="bottom"
           shape="square"
           size="md"
-          text="New"
+          icon={<ThumbsUpIcon className="m-auto" width={16} />}
+        />
+      </div>
+      <div className="relative">
+        <PillTag className="mr-7">Text</PillTag>
+        <Badge color="red" position="top" shape="square" size="sm" text="New" />
+      </div>
+      <div className="relative">
+        <PillTag className="mr-4">Tooltip on Hover</PillTag>
+        <Badge
+          color="green"
+          position="top"
+          shape="square"
+          size="md"
+          icon={<AlarmIcon className="m-0" width={16} />}
+          tooltip="Hover to see tooltip"
         />
       </div>
     </div>
     <div className="flex flex-row items-start gap-6 mb-5 mr-4">
       <div className="relative">
-        <PillTag className="mr-1">circle, sm, top</PillTag>
+        <PillTag className="mr-1">Empty</PillTag>
         <Badge color="red" size="sm" />
       </div>
       <div className="relative">
-        <PillTag className="mr-1">circle, sm, bottom</PillTag>
-        <Badge color="red" position="bottom">
-          B
-        </Badge>
-      </div>
-    </div>
-    <div className="flex flex-row items-start gap-6 mb-5 mr-5">
-      <div className="relative">
-        <PillTag className="mr-4">circle, md, top</PillTag>
-        <Badge color="orange" size="md">
-          LMN
-        </Badge>
+        <PillTag className="mr-6">Icon & Text</PillTag>
+        <Badge
+          color="green"
+          position="top"
+          shape="square"
+          text="Like"
+          icon={<ThumbsUpIcon className="m-auto" width={16} />}
+        />
       </div>
       <div className="relative">
-        <PillTag className="mr-4">circle, md, bottom</PillTag>
-        <Badge color="orange" position="bottom" size="md" tooltip="Wut">
-          OPQ
-        </Badge>
+        <PillTag className="mr-6">Icon & Count</PillTag>
+        <Badge
+          color="purple"
+          position="top"
+          shape="square"
+          count={5}
+          icon={<AlarmIcon className="m-0" width={16} />}
+        />
+      </div>
+      <div className="relative">
+        <PillTag className="mr-10">All Four</PillTag>
+        <Badge
+          color="orange"
+          position="bottom"
+          shape="square"
+          count={3}
+          text="Likes"
+          icon={<ThumbsUpIcon className="m-auto" width={16} />}
+        />
       </div>
     </div>
   </div>
@@ -131,15 +141,41 @@ Colored badge to decorate an element.
     <div className="flex flex-row items-start gap-6 mb-5 mr-5">
       <div className="relative">
         <PillTag className="mr-4">circle, md, top</PillTag>
-        <Badge color="orange" size="md">
-          LMN
-        </Badge>
+        <Badge color="blue" size="md" />
       </div>
       <div className="relative">
         <PillTag className="mr-4">circle, md, bottom</PillTag>
-        <Badge color="orange" position="bottom" size="md">
-          OPQ
-        </Badge>
+        <Badge color="blue" position="bottom" size="md" />
+      </div>
+    </div>
+    <div className="flex flex-row items-start gap-6 mb-5 mr-5">
+      <div className="relative">
+        <PillTag className="mr-1">circle, sm, top</PillTag>
+        <Badge color="red" size="sm" />
+      </div>
+      <div className="relative">
+        <PillTag className="mr-1">circle, sm, bottom</PillTag>
+        <Badge color="red" size="sm" position="bottom" />
+      </div>
+    </div>
+    <div className="flex flex-row items-start gap-6 mb-5 mr-5">
+      <div className="relative">
+        <PillTag className="mr-1">square, sm, top</PillTag>
+        <Badge color="purple" shape="square" />
+      </div>
+      <div className="relative">
+        <PillTag className="mr-1">square, sm, bottom</PillTag>
+        <Badge color="purple" position="bottom" shape="square" />
+      </div>
+    </div>
+    <div className="flex flex-row items-start gap-6 mb-5 mr-5">
+      <div className="relative">
+        <PillTag className="mr-4">square, md, top</PillTag>
+        <Badge color="orange" shape="square" size="md" />
+      </div>
+      <div className="relative">
+        <PillTag className="mr-4">square, md, bottom</PillTag>
+        <Badge color="orange" size="md" position="bottom" shape="square" />
       </div>
     </div>
   </div>

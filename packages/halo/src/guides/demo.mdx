@@ -6,7 +6,6 @@ route: /guides/demo
 
 import { Playground } from 'docz';
 import { Attribute, AttributeList } from '../components/core/Attribute';
-import { AttentionIndicator } from '../components/core/AttentionIndicator';
 import { Avatar } from '../components/core/Avatar';
 import { AvatarLockup } from '../components/core/AvatarLockup';
 import { Badge } from '../components/core/Badge';
@@ -48,9 +47,7 @@ import { SearchIcon } from '../components/icons';
       <Tag label="Source" />
       <div className="relative">
         <Tag label="Applicants" />
-        <Tooltip content="AttentionIndicator" placement="right">
-          <AttentionIndicator color="red" count="2" />
-        </Tooltip>
+        <Badge color="red" count="2" tooltip="Badge" />
       </div>
       <Tag label="Track" />
       <Tag label="Jobs" />
@@ -59,11 +56,7 @@ import { SearchIcon } from '../components/icons';
         <Avatar
           imageUrl="https://avatars.githubusercontent.com/u/56262247"
           size="md"
-          badge={
-            <Badge position="bottom" tooltip="Badge">
-              ✌︎
-            </Badge>
-          }
+          badge={<Badge position="bottom" tooltip="Badge" text="✌︎" />}
         />
       </Tooltip>
     </Bracket>
@@ -323,7 +316,7 @@ import { SearchIcon } from '../components/icons';
     <Tag label="Source" />
     <div className="relative">
       <Tag label="Applicants" />
-      <AttentionIndicator color="red" count="2" />
+      <Badge color="red" count="2" />
     </div>
     <Tag label="Track" />
     <Tag label="Jobs" />
@@ -331,11 +324,7 @@ import { SearchIcon } from '../components/icons';
     <Avatar
       imageUrl="https://avatars.githubusercontent.com/u/56262247"
       size="md"
-      badge={
-        <Badge position="bottom" tooltip="Badge">
-          ✌︎
-        </Badge>
-      }
+      badge={<Badge position="bottom" tooltip="Badge" text="✌︎" />}
     />
   </Bracket>
   <div className="flex flex-row">
