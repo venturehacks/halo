@@ -119,9 +119,9 @@ function ButtonRaw({
     `rounded border-solid border gap-x-2.5 mr-4 mb-2 whitespace-nowrap
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50`,
-    size === 'sm' && 'px-3 h-8',
-    size === 'md' && 'px-4 h-10',
-    size === 'lg' && 'px-10 h-12',
+    size === 'sm' && 'px-3 py-1.5',
+    size === 'md' && 'px-4 py-2.5',
+    size === 'lg' && 'px-10 py-3.5',
     VARIANT_CSS[variant],
     width === '100%' && 'w-full',
     icon && 'flex flex-row justify-center items-center',
