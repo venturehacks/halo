@@ -1,14 +1,14 @@
 ---
-name: Component
+name: Component Revision
 menu: Contributing
-route: /contributing/component
+route: /contributing/component-revision
 ---
 
-# Updating a component
+# Component Revision
 
 <br />
 
-This section covers topics related to performing minor enhancements to an existing Halo component.
+This section explains how to enhance an existing Halo component.
 
 <hr />
 
@@ -19,42 +19,43 @@ Each Halo component has a consistent file structure (showcased below for the `Ba
 ```javascript
 Banner // Parent folder (must match the component name)
 |
-└───__tests__ // contains all files used for testing the component
+└───__tests__ // jest specs
 │   │
-│   └───__snapshots__ // contains the snapshots used when running the tests
+│   └───__snapshots__ // jest html snapshots for specs
 │   │   │
-│   │   └─── Banner.tests.tsx.snap.txt // the reference file used for validating tests
+│   │   └─── Banner.tests.tsx.snap
 │   │
-|   └───Banner.test.tsx // contains the test cases
+|   └───Banner.test.tsx // jest spec
 │
-└───index.mdx // used to generate the documentation page for the component
+└───index.mdx // component documentation; mdx = markdown + JSX (React)
 |
 └───index.tsx // actual component implementation
 |
-└───styles.module.scss // contains any non-tailwind css that is required
+└───styles.module.scss // non-tailwind css
 ```
 
 <hr />
 
-## Updating a Component
+## Process
 
 There are various steps you would take when updating an existing Halo component, which are described below.
 
-(NOTE: all commands are to be run in the halo root directory)
+All commands are to be run from halo repository root directory.
 
 <br />
 
 ### Implementation
 
-Make the necessary changes to the `index.tsx` file.
+Make desired changes to `index.tsx`.
 
 <br />
 
 ### Styles
 
-Set the necessary styles within the component iself, using tailwind classes.
+Prefer an implementation of tailwind classes.
 
-If using tailwind is NOT an option, set style through the `styles.module.scss` file.
+Reserve `styles.module.scss` for complex selectorsthat are not possible with tailwind,
+such as pseudo-elements, parent/child relationships, unusual media queries, etc.
 
 <br />
 
@@ -68,7 +69,7 @@ Run the documentation server locally using the command below.
 yarn clean && yarn dev
 ```
 
-The server can then be accessed via [this link](http://localhost:8000/).
+The server can then be accessed at http://localhost:8000/.
 
 <br />
 
@@ -94,15 +95,21 @@ yarn test:dev:watch
 
 ### Snapshots
 
-We use [Snapshot Testing](https://jestjs.io/docs/snapshot-testing) for every Halo component.
+Halo uses [snapshot testing](https://jestjs.io/docs/snapshot-testing).
 
-Update any components to reflect the changes you have made.
+Snapshots is a cheap testing strategy that is especially helpful in design systems.
+A given component might be composed of several smaller, atomic components.
+Snapshots help one understand the downstream effects of source changes on the entire system.
 
-This can be done using the command below.
+After you've made edits to the source, and live documentation looks good in browser,
+be sure to update snapshots:
 
 ```bash
 yarn test:snapshot-update
 ```
+
+Updated snapshots `*.snap` are written to the filesystem. Inspect these diffs.
+Confirm the HTML source is expected.
 
 <hr />
 
