@@ -110,7 +110,7 @@ exports[`Button snapshot variant clear 1`] = `
 <button
   class="rounded border-solid border gap-x-2.5 mr-4 mb-2 whitespace-nowrap
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
-      disabled:cursor-default disabled:pointer-events-none disabled:opacity-50 px-3 py-1.5 bg-transparent font-medium text-dark-aaa
+      disabled:cursor-default disabled:pointer-events-none disabled:opacity-50 px-3 py-1.5 bg-transparent border-transparent font-medium text-dark-aaa
             disabled:text-dark-a disabled:font-medium hover:bg-gray-100"
   data-test="Button"
   type="button"
