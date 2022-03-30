@@ -40,12 +40,14 @@ function Badge({
   text,
   tooltip,
 }: BadgeProps) {
+  const hasContent = count || text || icon;
+
   const classnames = classNames(
     className,
     'absolute',
-    'right-0',
     'border-solid border-gray-100',
     'text-center text-2xs font-medium uppercase leading-none antialiased',
+    hasContent && 'right-0',
     color === 'gray' && 'bg-gray-600 border-gray-100 text-white',
     color === 'purple' && 'bg-purple-600 border-purple-100 text-white',
     color === 'blue' && 'bg-blue-600 border-blue-100 text-white',
@@ -54,11 +56,16 @@ function Badge({
     color === 'orange' && 'bg-orange-200 border-orange-200 text-orange-600',
     shape === 'circle' && 'rounded-full',
     shape === 'square' && 'rounded-md',
-    size === 'sm' && 'min-w-4 p-1',
-    size === 'md' && 'min-w-8 p-1',
-    position === 'bottom' && 'bottom-0',
-    position === 'top' && size === 'sm' && '-top-1',
-    position === 'top' && size === 'md' && '-top-2',
+    size === 'sm' && 'p-1',
+    size === 'md' && 'min-w-3 min-h-3 p-2',
+    position === 'bottom' && hasContent && 'bottom-0',
+    position === 'top' && size === 'sm' && hasContent && '-top-1',
+    position === 'top' && size === 'md' && hasContent && '-top-3',
+    position === 'top' && !hasContent && 'top-0 ',
+    position === 'top' && !hasContent && size === 'sm' && 'right-1',
+    position === 'top' && !hasContent && size === 'md' && 'right-3',
+    position === 'bottom' && !hasContent && size === 'sm' && 'right-1 bottom-3',
+    position === 'bottom' && !hasContent && size === 'md' && 'right-3 bottom-2',
   );
 
   const component = (
