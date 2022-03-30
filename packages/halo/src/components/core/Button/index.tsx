@@ -45,9 +45,9 @@ const VARIANT_CSS: Record<ButtonVariant, string> = {
                 disabled:border-gray-200 disabled:text-gray-700 disabled:bg-gray-200
                 hover:bg-gtmpink-300 hover:border-gtmpink-300 hover:text-gtmpink-600`,
   'clear': `bg-transparent font-medium text-dark-aaa
-            disabled:text-dark-a disabled:font-medium hover:font-bold`,
+            disabled:text-dark-a disabled:font-medium hover:bg-gray-100`,
   'gtm-clear': `bg-transparent border-transparent font-normal text-black
-                disabled:text-gray-600 disabled:font-medium hover:font-bold`,
+                disabled:text-gray-600 disabled:font-medium hover:bg-gray-100`,
 };
 
 export type IconPosition = 'left' | 'right';
