@@ -18,22 +18,26 @@ export type BadgeSize = 'sm' | 'md';
 export type BadgePosition = 'top' | 'bottom';
 
 export interface BadgeProps {
-  children?: React.ReactNode;
   className?: string;
   color?: BadgeColor;
+  count?: number;
+  icon?: React.ReactNode;
   position?: BadgePosition;
   shape?: BadgeShape;
   size?: BadgeSize;
+  text?: string;
   tooltip?: string;
 }
 
 function Badge({
-  children,
   className,
+  count,
+  icon,
   color = 'gray',
   position = 'top',
   shape = 'circle',
   size = 'sm',
+  text,
   tooltip,
 }: BadgeProps) {
   const classnames = classNames(
@@ -51,15 +55,30 @@ function Badge({
     shape === 'circle' && 'rounded-full',
     shape === 'square' && 'rounded-md',
     size === 'sm' && 'min-w-4 p-1',
-    size === 'md' && 'min-w-6 p-1',
-    position === 'bottom' && 'bottom-1',
+    size === 'md' && 'min-w-8 p-1',
+    position === 'bottom' && 'bottom-0',
     position === 'top' && size === 'sm' && '-top-1',
     position === 'top' && size === 'md' && '-top-2',
   );
 
-  const component = <div className={classnames}>{children}</div>;
+  const component = (
+    <div className={classnames}>
+      {icon && <div>{icon}</div>}
+      <div className="flex gap-1">
+        {count && <div>{countToString(count)}</div>}
+        {text && <div>{text}</div>}
+      </div>
+    </div>
+  );
 
   return tooltip ? <Tooltip content={tooltip}>{component}</Tooltip> : component;
+}
+
+function countToString(count: number) {
+  if (count > 99) {
+    return '99+';
+  }
+  return count.toString();
 }
 
 export { Badge };
