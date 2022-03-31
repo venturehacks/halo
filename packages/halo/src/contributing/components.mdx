@@ -122,8 +122,7 @@ For example, if you were to show the new `lg` sized `Tooltip`:
 
 ### Tests
 
-All components have jest test cases for existing behaviour and functionality.
-Update existing test cases and add new ones for any updated/added behavior.
+All components have jest specs for existing behaviour and functionality.
 
 The test suite can be run locally using the commands below.
 
@@ -136,6 +135,30 @@ yarn test:dev
 
 # author new unit test iteratively (watch new/changed tests)
 yarn test:dev:watch
+```
+
+Add specs to test the changes that you implemented.
+
+The different kinds of specs you could implement are:
+
+- smoke
+- props
+- interactivity
+- snapshot
+
+For example, if you were to write a snapshot test for a `lg` `Tooltip`:
+
+```diff
+describe('snapshot', () => {
++  test('lg', () => {
++    const component = render(
++      <Tooltip content="tooltip" size="lg">
++        <span>test</span>
++      </Tooltip>,
++    );
++    expect(component).toMatchSnapshot();
++  });
+});
 ```
 
 <br />
