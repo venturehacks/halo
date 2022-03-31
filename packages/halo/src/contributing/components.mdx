@@ -48,6 +48,41 @@ All commands are to be run from halo repository root directory.
 
 Make desired changes to `index.tsx`.
 
+For example, if you were to extend the available sizes on `Tooltip`:
+
+```diff
+import Tippy, { TippyProps } from '@tippyjs/react';
+import classNames from 'classnames';
+import React from 'react';
+
+export interface TooltipProps extends TippyProps {
+-  size?: 'sm' | 'md';
++  size?: 'sm' | 'md' | 'lg';
+}
+
+function Tooltip({
+  arrow = false,
+  className,
+  size = 'md',
+  ...rest
+}: TooltipProps) {
+  const classes = classNames(
+    className,
+    size === 'sm' && 'text-2xs',
+    size === 'md' && 'text-xs',
++   size === 'lg' && 'text-md',
+    'bg-dark-aaaa',
+    'py-1 px-2',
+    'rounded',
+    'text-white',
+  );
+
+  return <Tippy arrow={arrow} className={classes} {...rest} />;
+}
+
+export { Tooltip };
+```
+
 <br />
 
 ### Styles
