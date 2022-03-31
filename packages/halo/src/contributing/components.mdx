@@ -141,10 +141,12 @@ Add specs to test the changes that you implemented.
 
 The different kinds of specs you could implement are:
 
-- smoke
-- props
-- interactivity
-- snapshot
+- **smoke**: does component render at all?
+- **props**: does component render as expected, given prop `foo`? (usually unnecessary, as spec type is
+  cheaper to write with a _snapshot_)
+- **interactivity**: does component behave as expected, given click handler `onClick` (rare)
+- **snapshot**: extraordinarily cheap-to-write spec. Does component render as expected given props
+  `foo` `bar` `baz`
 
 For example, if you were to write a snapshot test for a `lg` `Tooltip`:
 
