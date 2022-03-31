@@ -21,7 +21,7 @@ export interface BadgeProps {
   className?: string;
   color?: BadgeColor;
   /**
-   * Count displayed on the indicator. Truncates above 100.
+   * Count displayed on the badge. Truncates above 100.
    */
   count?: number;
   icon?: React.ReactNode;
@@ -51,6 +51,9 @@ function Badge({
     'border-solid border-gray-100',
     'text-center font-medium uppercase leading-none antialiased p-1',
     hasContent && 'right-0',
+    size === 'sm' && hasContent && 'text-2xs min-w-4',
+    size === 'md' && hasContent && 'text-xs min-w-6',
+    size === 'md' && !hasContent && 'w-4 h-4',
     color === 'gray' && 'bg-gray-600 border-gray-100 text-white',
     color === 'purple' && 'bg-purple-600 border-purple-100 text-white',
     color === 'blue' && 'bg-blue-600 border-blue-100 text-white',
@@ -59,29 +62,28 @@ function Badge({
     color === 'orange' && 'bg-orange-200 border-orange-200 text-orange-600',
     shape === 'circle' && 'rounded-full',
     shape === 'square' && hasContent && 'rounded-md',
-    shape === 'square' && !hasContent && size === 'md' && 'rounded-md',
-    shape === 'square' && !hasContent && size === 'sm' && 'rounded-sm',
-    size === 'sm' && hasContent && 'text-2xs min-w-4 min-h-4',
-    size === 'md' && 'text-xs min-w-5 min-h-5',
-    size === 'sm' && shape === 'square' && !hasContent && 'w-2 h-2',
-    size === 'md' && shape === 'square' && !hasContent && 'w-4 h-4',
+    shape === 'square' && size === 'md' && !hasContent && 'rounded-md',
+    shape === 'square' && size === 'sm' && !hasContent && 'rounded-sm',
     position === 'bottom' && hasContent && 'bottom-0',
     position === 'top' && size === 'sm' && hasContent && '-top-1',
     position === 'top' && size === 'md' && hasContent && '-top-3',
-    position === 'top' && !hasContent && 'top-0 ',
-    position === 'top' && !hasContent && size === 'sm' && 'right-1',
-    position === 'top' && !hasContent && size === 'md' && 'right-3',
-    position === 'bottom' && !hasContent && size === 'sm' && 'right-1 bottom-3',
-    position === 'bottom' && !hasContent && size === 'md' && 'right-3 bottom-2',
+    position === 'top' && !hasContent && size === 'sm' && 'top-0 ',
+    position === 'top' && !hasContent && size === 'md' && '-top-2',
+    position === 'top' && size === 'sm' && !hasContent && 'right-1',
+    position === 'top' && size === 'md' && !hasContent && 'right-3',
+    position === 'bottom' && size === 'sm' && !hasContent && 'right-1 bottom-3',
+    position === 'bottom' && size === 'md' && !hasContent && 'right-3 bottom-2',
   );
 
   const component = (
     <div className={classnames}>
       {icon && <div>{icon}</div>}
-      <div className="flex gap-1 justify-center">
-        {count && <div>{countToString(count)}</div>}
-        {text && <div>{text}</div>}
-      </div>
+      {hasContent && (
+        <div className="flex gap-1 justify-center">
+          {count && <div>{countToString(count)}</div>}
+          {text && <div>{text}</div>}
+        </div>
+      )}
     </div>
   );
 
