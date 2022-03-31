@@ -44,6 +44,7 @@ function Badge({
   tooltip,
 }: BadgeProps) {
   const hasContent = count || text || icon;
+  const hasTextContent = text || count;
 
   const classnames = classNames(
     className,
@@ -78,7 +79,7 @@ function Badge({
   const component = (
     <div className={classnames}>
       {icon && <div>{icon}</div>}
-      {hasContent && (
+      {hasTextContent && (
         <div className="flex gap-1 justify-center">
           {count && <div>{countToString(count)}</div>}
           {text && <div>{text}</div>}
