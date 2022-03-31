@@ -1,0 +1,96 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Tooltip snapshot size lg 1`] = `
+<Tooltip
+  content="large tooltip"
+  size="lg"
+>
+  <ForwardRef(TippyWrapper)
+    arrow={false}
+    className="text-md bg-dark-aaaa py-1 px-2 rounded text-white"
+    content="large tooltip"
+  >
+    <Tippy
+      arrow={false}
+      className="text-md bg-dark-aaaa py-1 px-2 rounded text-white"
+      content="large tooltip"
+    >
+      <span>
+        test
+      </span>
+      <Portal
+        containerInfo={
+          <div>
+            large tooltip
+          </div>
+        }
+      >
+        large tooltip
+      </Portal>
+    </Tippy>
+  </ForwardRef(TippyWrapper)>
+</Tooltip>
+`;
+
+exports[`Tooltip snapshot size md 1`] = `
+<Tooltip
+  content="medium tooltip"
+  size="md"
+>
+  <ForwardRef(TippyWrapper)
+    arrow={false}
+    className="text-xs bg-dark-aaaa py-1 px-2 rounded text-white"
+    content="medium tooltip"
+  >
+    <Tippy
+      arrow={false}
+      className="text-xs bg-dark-aaaa py-1 px-2 rounded text-white"
+      content="medium tooltip"
+    >
+      <span>
+        test
+      </span>
+      <Portal
+        containerInfo={
+          <div>
+            medium tooltip
+          </div>
+        }
+      >
+        medium tooltip
+      </Portal>
+    </Tippy>
+  </ForwardRef(TippyWrapper)>
+</Tooltip>
+`;
+
+exports[`Tooltip snapshot size sm [default] 1`] = `
+<Tooltip
+  content="small tooltip"
+>
+  <ForwardRef(TippyWrapper)
+    arrow={false}
+    className="text-xs bg-dark-aaaa py-1 px-2 rounded text-white"
+    content="small tooltip"
+  >
+    <Tippy
+      arrow={false}
+      className="text-xs bg-dark-aaaa py-1 px-2 rounded text-white"
+      content="small tooltip"
+    >
+      <span>
+        test
+      </span>
+      <Portal
+        containerInfo={
+          <div>
+            small tooltip
+          </div>
+        }
+      >
+        small tooltip
+      </Portal>
+    </Tippy>
+  </ForwardRef(TippyWrapper)>
+</Tooltip>
+`;
