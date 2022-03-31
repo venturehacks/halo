@@ -96,15 +96,27 @@ such as pseudo-elements, parent/child relationships, unusual media queries, etc.
 
 ### Documentation
 
-Update any existing examples in the documentation, add any new ones.
-
 Run the documentation server locally using the command below.
+
+It can be accessed at http://localhost:8000/.
 
 ```bash
 yarn clean && yarn dev
 ```
 
-The server can then be accessed at http://localhost:8000/.
+Update the existing documentation to reflect the implementation changes.
+
+For example, if you were to show the new `lg` sized `Tooltip`:
+
+```diff
+<Playground>
++  <Box margin={{ bottom: 3 }}>
++    <Tooltip content="Pop a large tooltip above" size="lg">
++      <Span>🖲 Hover [lg]</Span>
++    </Tooltip>
++  </Box>
+</Playground>
+```
 
 <br />
 
