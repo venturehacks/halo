@@ -1,0 +1,190 @@
+---
+name: Component Revision
+menu: Contributing
+route: /contributing/component-revision
+---
+
+# Component Revision
+
+<br />
+
+This section explains how to enhance an existing Halo component.
+
+<hr />
+
+## Filesystem Anatomy
+
+Each Halo component has a consistent file structure (showcased below for the `Banner` component).
+
+```javascript
+Banner // Parent folder (must match the component name)
+|
+└───__tests__ // jest specs
+│   │
+│   └───__snapshots__ // jest html snapshots for specs
+│   │   │
+│   │   └─── Banner.tests.tsx.snap
+│   │
+|   └───Banner.test.tsx // jest spec
+│
+└───index.mdx // component documentation; mdx = markdown + JSX (React)
+|
+└───index.tsx // actual component implementation
+|
+└───styles.module.scss // non-tailwind css
+```
+
+<hr />
+
+## Process
+
+There are various steps you would take when updating an existing Halo component, which are described below.
+
+All commands are to be run from halo repository root directory.
+
+<br />
+
+### Implementation
+
+Make desired changes to `index.tsx`.
+
+For example, if you were to extend the available sizes on `Tooltip`:
+
+```diff
+import Tippy, { TippyProps } from '@tippyjs/react';
+import classNames from 'classnames';
+import React from 'react';
+
+export interface TooltipProps extends TippyProps {
+-  size?: 'sm' | 'md';
++  size?: 'sm' | 'md' | 'lg';
+}
+
+function Tooltip({
+  arrow = false,
+  className,
+  size = 'md',
+  ...rest
+}: TooltipProps) {
+  const classes = classNames(
+    className,
+    size === 'sm' && 'text-2xs',
+    size === 'md' && 'text-xs',
++   size === 'lg' && 'text-md',
+    'bg-dark-aaaa',
+    'py-1 px-2',
+    'rounded',
+    'text-white',
+  );
+
+  return <Tippy arrow={arrow} className={classes} {...rest} />;
+}
+
+export { Tooltip };
+```
+
+<br />
+
+### Styles
+
+Prefer an implementation of tailwind classes.
+
+Reserve `styles.module.scss` for complex selectorsthat are not possible with tailwind,
+such as pseudo-elements, parent/child relationships, unusual media queries, etc.
+
+<br />
+
+### Documentation
+
+Run the documentation server locally using the command below.
+
+It can be accessed at http://localhost:8000/.
+
+```bash
+yarn clean && yarn dev
+```
+
+Update the existing documentation to reflect the implementation changes.
+
+For example, if you were to show the new `lg` sized `Tooltip`:
+
+```diff
+<Playground>
++  <Box margin={{ bottom: 3 }}>
++    <Tooltip content="Pop a large tooltip above" size="lg">
++      <Span>🖲 Hover [lg]</Span>
++    </Tooltip>
++  </Box>
+</Playground>
+```
+
+<br />
+
+### Tests
+
+All components have jest specs for existing behaviour and functionality.
+
+The test suite can be run locally using the commands below.
+
+```bash
+# run entire suite (jest)
+yarn test
+
+# unit tests only (no linters, etc.)
+yarn test:dev
+
+# author new unit test iteratively (watch new/changed tests)
+yarn test:dev:watch
+```
+
+Add specs to test the changes that you implemented.
+
+The different kinds of specs you could implement are:
+
+- **smoke**: does component render at all?
+- **props**: does component render as expected, given prop `foo`? (usually unnecessary, as spec type is
+  cheaper to write with a _snapshot_)
+- **interactivity**: does component behave as expected, given click handler `onClick` (rare)
+- **snapshot**: extraordinarily cheap-to-write spec. Does component render as expected given props
+  `foo` `bar` `baz`
+
+For example, if you were to write a snapshot test for a `lg` `Tooltip`:
+
+```diff
+describe('snapshot', () => {
++  test('lg', () => {
++    const component = render(
++      <Tooltip content="tooltip" size="lg">
++        <span>test</span>
++      </Tooltip>,
++    );
++    expect(component).toMatchSnapshot();
++  });
+});
+```
+
+<br />
+
+### Snapshots
+
+Halo uses [snapshot testing](https://jestjs.io/docs/snapshot-testing).
+
+Snapshots is a cheap testing strategy that is especially helpful in design systems.
+A given component might be composed of several smaller, atomic components.
+Snapshots help one understand the downstream effects of source changes on the entire system.
+
+After you've made edits to the source, and live documentation looks good in browser,
+be sure to update snapshots:
+
+```bash
+yarn test:snapshot-update
+```
+
+Updated snapshots `*.snap` are written to the filesystem. Inspect these diffs.
+Confirm the HTML source is expected.
+
+<hr />
+
+## Pull request
+
+[An example PR](https://github.com/venturehacks/halo/pull/162) that adds new variants for the `Button` component, for reference.
