@@ -15,7 +15,7 @@ export type BadgeShape = 'square' | 'circle';
 
 export type BadgeSize = 'sm' | 'md';
 
-export type BadgePosition = 'top' | 'bottom';
+export type BadgePosition = 'top' | 'bottom' | 'center';
 
 export interface BadgeProps {
   className?: string;
@@ -25,10 +25,10 @@ export interface BadgeProps {
    */
   count?: number;
   icon?: React.ReactNode;
+  label?: string;
   position?: BadgePosition;
   shape?: BadgeShape;
   size?: BadgeSize;
-  text?: string;
   tooltip?: string;
 }
 
@@ -40,11 +40,11 @@ function Badge({
   position = 'top',
   shape = 'circle',
   size = 'sm',
-  text,
+  label,
   tooltip,
 }: BadgeProps) {
-  const hasContent = count || text || icon;
-  const hasTextContent = text || count;
+  const hasContent = count || label || icon;
+  const hasTextContent = label || count;
 
   const classnames = classNames(
     className,
@@ -52,8 +52,9 @@ function Badge({
     'border-solid border-gray-100',
     'text-center font-medium uppercase leading-none antialiased p-1',
     hasContent && 'right-0',
-    size === 'sm' && hasContent && 'text-2xs min-w-4',
-    size === 'md' && hasContent && 'text-xs min-w-6',
+    size === 'sm' && hasContent && 'text-2xs',
+    size === 'md' && hasContent && 'text-xs',
+    size === 'sm' && !hasContent && 'w-2 h-2',
     size === 'md' && !hasContent && 'w-4 h-4',
     color === 'gray' && 'bg-gray-600 border-gray-100 text-white',
     color === 'purple' && 'bg-purple-600 border-purple-100 text-white',
@@ -65,25 +66,22 @@ function Badge({
     shape === 'square' && hasContent && 'rounded-md',
     shape === 'square' && size === 'md' && !hasContent && 'rounded-md',
     shape === 'square' && size === 'sm' && !hasContent && 'rounded-sm',
-    position === 'bottom' && hasContent && 'bottom-0',
-    position === 'top' && size === 'sm' && hasContent && '-top-1',
-    position === 'top' && size === 'md' && hasContent && '-top-3',
-    position === 'top' && !hasContent && size === 'sm' && 'top-0 ',
-    position === 'top' && !hasContent && size === 'md' && '-top-2',
-    position === 'top' && size === 'sm' && !hasContent && 'right-1',
-    position === 'top' && size === 'md' && !hasContent && 'right-3',
-    position === 'bottom' && size === 'sm' && !hasContent && 'right-1 bottom-3',
-    position === 'bottom' && size === 'md' && !hasContent && 'right-3 bottom-2',
+    position === 'bottom' && !hasContent && 'bottom-0 right-0',
+    position === 'bottom' && hasContent && '-bottom-2 -right-1',
+    position === 'top' && !hasContent && '-top-1 right-1',
+    position === 'top' && hasContent && '-top-3 right-1',
+    position === 'center' && 'right-0 top-1/2 transform -translate-y-1/2',
   );
 
   const component = (
     <div className={classnames}>
-      {icon && <div>{icon}</div>}
-      {hasTextContent && (
+      {hasTextContent ? (
         <div className="flex gap-1 justify-center">
-          {count && <div>{countToString(count)}</div>}
-          {text && <div>{text}</div>}
+          {count && <span>{countToString(count)}</span>}
+          {label && <span>{label}</span>}
         </div>
+      ) : (
+        <>{icon && <div>{icon}</div>}</>
       )}
     </div>
   );

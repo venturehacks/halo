@@ -5,7 +5,7 @@ import { Badge } from '../index';
 
 describe('Badge', () => {
   test('smoke', () => {
-    const component = render(<Badge text="NICE BADGE" />);
+    const component = render(<Badge label="NICE BADGE" />);
     expect(component.text()).toEqual('NICE BADGE');
   });
 

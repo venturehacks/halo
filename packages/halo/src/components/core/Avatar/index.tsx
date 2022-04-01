@@ -80,7 +80,7 @@ function AvatarRaw({
       />
       {showBadge && (
         <div className={styles.badge}>
-          {isBadgeJSX ? badge : <Badge {...badgeOptions} text={badge} />}
+          {isBadgeJSX ? badge : <Badge {...badgeOptions} label={badge} />}
         </div>
       )}
     </div>

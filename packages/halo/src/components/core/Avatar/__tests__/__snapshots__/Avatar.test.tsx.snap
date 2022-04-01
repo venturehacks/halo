@@ -15,14 +15,14 @@ exports[`Avatar snapshots badge label 1`] = `
     class="badge"
   >
     <div
-      class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs min-w-6 bg-gray-600 border-gray-100 text-white rounded-full -top-3"
+      class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-gray-600 border-gray-100 text-white rounded-full -top-3 right-1"
     >
       <div
         class="flex gap-1 justify-center"
       >
-        <div>
+        <span>
           Test Badge
-        </div>
+        </span>
       </div>
     </div>
   </div>
@@ -44,14 +44,14 @@ exports[`Avatar snapshots badgeColor 1`] = `
     class="badge"
   >
     <div
-      class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs min-w-6 bg-purple-600 border-purple-100 text-white rounded-full -top-3"
+      class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-purple-600 border-purple-100 text-white rounded-full -top-3 right-1"
     >
       <div
         class="flex gap-1 justify-center"
       >
-        <div>
+        <span>
           Purple
-        </div>
+        </span>
       </div>
     </div>
   </div>
@@ -73,14 +73,14 @@ exports[`Avatar snapshots badgeShape circle [default] 1`] = `
     class="badge"
   >
     <div
-      class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs min-w-6 bg-gray-600 border-gray-100 text-white rounded-full -top-3"
+      class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-gray-600 border-gray-100 text-white rounded-full -top-3 right-1"
     >
       <div
         class="flex gap-1 justify-center"
       >
-        <div>
+        <span>
           Test Badge
-        </div>
+        </span>
       </div>
     </div>
   </div>
@@ -102,14 +102,14 @@ exports[`Avatar snapshots badgeShape square 1`] = `
     class="badge"
   >
     <div
-      class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs min-w-6 bg-gray-600 border-gray-100 text-white rounded-md -top-3"
+      class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-gray-600 border-gray-100 text-white rounded-md -top-3 right-1"
     >
       <div
         class="flex gap-1 justify-center"
       >
-        <div>
+        <span>
           Test Badge
-        </div>
+        </span>
       </div>
     </div>
   </div>

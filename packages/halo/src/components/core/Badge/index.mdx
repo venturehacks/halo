@@ -9,7 +9,7 @@ import { Badge } from './';
 import { InterfaceHeader } from '../InterfaceHeader';
 import { Box } from '../../structure/Box';
 import { PillTag } from '../PillTag';
-import { AlarmIcon, ThumbsUpIcon } from '../../icons';
+import { AlarmIcon, ThumbsUpIcon, UserIcon } from '../../icons';
 
 # Badge
 
@@ -35,9 +35,11 @@ Colored badge to decorate an element.
         />
       </div>
       <div className="relative">
-        <PillTag className="mr-7">Text</PillTag>
-        <Badge color="red" shape="square" text="New" />
+        <PillTag className="mr-4">Text</PillTag>
+        <Badge color="red" shape="square" label="New" />
       </div>
+    </div>
+    <div className="flex flex-row items-start gap-6 mr-4">
       <div className="relative">
         <PillTag className="mr-4">Tooltip on Hover</PillTag>
         <Badge
@@ -48,46 +50,19 @@ Colored badge to decorate an element.
           tooltip="Hover to see tooltip"
         />
       </div>
-    </div>
-    <div className="flex flex-row items-start gap-6 mr-4">
       <div className="relative">
-        <PillTag className="mr-1">Empty</PillTag>
+        <UserIcon className="mr-2" width={24} />
         <Badge color="red" />
       </div>
       <div className="relative">
-        <PillTag className="mr-6">Icon & Text</PillTag>
-        <Badge
-          color="green"
-          shape="square"
-          text="Like"
-          icon={<ThumbsUpIcon className="m-auto" width={16} />}
-        />
-      </div>
-      <div className="relative">
-        <PillTag className="mr-6">Icon & Count</PillTag>
-        <Badge
-          color="purple"
-          shape="square"
-          count={5}
-          icon={<AlarmIcon className="m-0" width={16} />}
-        />
-      </div>
-      <div className="relative">
-        <PillTag className="mr-10">All Three</PillTag>
-        <Badge
-          color="orange"
-          position="bottom"
-          shape="square"
-          count={3}
-          text="Likes"
-          icon={<ThumbsUpIcon className="m-auto" width={16} />}
-        />
+        <span className="font-medium text-lg mr-4">Messages</span>
+        <Badge color="red" position="center" />
       </div>
     </div>
   </div>
 </Playground>
 
-### Style
+### Shape
 
 <Playground>
   <div className="flex flex-col ml-3">
@@ -118,12 +93,16 @@ Colored badge to decorate an element.
   <div className="flex flex-col ml-3">
     <div className="flex flex-row items-start gap-6 mr-5">
       <div className="relative">
-        <PillTag className="mr-4">top</PillTag>
+        <span className="mr-4">top</span>
         <Badge color="red" count={100} />
       </div>
       <div className="relative">
-        <PillTag className="mr-1">bottom</PillTag>
+        <span className="mr-4">bottom</span>
         <Badge color="red" position="bottom" count={12} />
+      </div>
+      <div className="relative">
+        <span className="mr-6">center</span>
+        <Badge color="red" position="center" count={12} />
       </div>
     </div>
   </div>
