@@ -11,7 +11,7 @@ import {
 import { Logo } from 'gatsby-theme-docz/src/components/Logo';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
-import { FigmaIcon } from '~/components/icons/vendor-support';
+import { FigmaOutlineIcon } from '~/components/icons/vendor-support';
 //import Headroom from 'react-headroom';
 import { Box, Flex, jsx, useColorMode } from 'theme-ui';
 import SearchDrawer from '../Search';
@@ -89,7 +89,7 @@ export const Header = ({ onOpen }) => {
           )}
         </Flex>
         {showMarkdownEditButton && edit && doc.link && (
-          <div className="absolute -bottom-10 right-8 w-52 flex flex-row justify-end items-center">
+          <div className="absolute -bottom-12 right-8 flex flex-row justify-end items-center">
             <a
               className="h-o flex flex-row justify-end items-center"
               href={doc.link}
@@ -104,10 +104,10 @@ export const Header = ({ onOpen }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 href={figma}
-                className="ml-4"
+                className="ml-6 flex flex-row items-center justify-center hover:no-underline"
               >
-                <FigmaIcon className="w-8" />
-                <span className="md:hidden">Figma</span>
+                <FigmaOutlineIcon className="w-9" />
+                <span className="inline-block ml-1 ">Figma</span>
               </a>
             )}
           </div>
