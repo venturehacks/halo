@@ -29,14 +29,34 @@ exports.onCreateWebpackConfig = ({
     }
   });
 
+  // Halo module icons
+  // + svg is located in icons directory
+  // + SVGO optimized with config
+  // + include icon in package publish
   config.module.rules.push({
-    test: /\.svg$/,
+    // *not preceeded* by "vendor-support"
+    test: /(?<!vendor-support)\/[A-Za-z0-9]+\.svg$/,
     use: {
       loader: '@svgr/webpack',
       options: {
         svgo: true,
         svgoConfig, // svgo@1.x configuration format
       },
+    },
+    include: [path.resolve(haloDirectory, 'src')],
+    exclude: /node_modules/,
+  });
+
+  // Documentation site vendor icons
+  // + svg is located in icons/vendor-icons
+  // + skip SVGO
+  // + do not include in package publish
+  config.module.rules.push({
+    // *preceded* by "vendor-support"
+    test: /(?<=vendor-support)\/[A-Za-z0-9]+\.svg$/,
+    use: {
+      loader: '@svgr/webpack',
+      options: { svgo: false },
     },
     include: [path.resolve(haloDirectory, 'src')],
     exclude: /node_modules/,
