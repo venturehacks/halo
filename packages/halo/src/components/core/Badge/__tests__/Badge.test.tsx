@@ -5,7 +5,7 @@ import { Badge } from '../index';
 
 describe('Badge', () => {
   test('smoke', () => {
-    const component = render(<Badge>NICE BADGE</Badge>);
+    const component = render(<Badge label="NICE BADGE" />);
     expect(component.text()).toEqual('NICE BADGE');
   });
 
@@ -60,6 +60,18 @@ describe('Badge', () => {
       test('size', () => {
         const component = render(<Badge size="md" />);
         expect(component).toMatchSnapshot();
+      });
+    });
+
+    describe('count', () => {
+      test('under 100', () => {
+        const component = render(<Badge count={3} />);
+        expect(component.text()).toEqual('3');
+      });
+
+      test('over 100', () => {
+        const component = render(<Badge count={120} />);
+        expect(component.text()).toEqual('99+');
       });
     });
   });

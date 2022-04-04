@@ -20,7 +20,7 @@ export type AvatarShape = 'circle' | 'square';
 export type AvatarSize = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 export interface AvatarProps {
-  badge?: string | boolean | React.ReactNode;
+  badge?: string | React.ReactNode;
   badgeColor?: BadgeColor;
   badgePosition?: BadgePosition;
   badgeShape?: BadgeShape;
@@ -33,7 +33,7 @@ export interface AvatarProps {
 }
 
 function AvatarRaw({
-  badge = false,
+  badge,
   badgeColor,
   badgePosition,
   badgeShape,
@@ -56,7 +56,7 @@ function AvatarRaw({
     size: badgeSize,
     tooltip,
   };
-  const isBadgeJSX = typeof badge !== 'boolean' && typeof badge !== 'string';
+  const isBadgeJSX = typeof badge !== 'string';
   // 'xxs' avatars are too small to have a badge
   const showBadge = badge && size !== 'xxs';
 
@@ -80,7 +80,7 @@ function AvatarRaw({
       />
       {showBadge && (
         <div className={styles.badge}>
-          {isBadgeJSX ? badge : <Badge {...badgeOptions}>{badge}</Badge>}
+          {isBadgeJSX ? badge : <Badge {...badgeOptions} label={badge} />}
         </div>
       )}
     </div>

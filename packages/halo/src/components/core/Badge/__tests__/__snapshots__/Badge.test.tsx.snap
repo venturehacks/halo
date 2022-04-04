@@ -2,54 +2,54 @@
 
 exports[`Badge snapshot color blue 1`] = `
 <div
-  class="absolute right-0 border-solid border-gray-100 text-center text-2xs font-medium uppercase leading-none antialiased bg-blue-600 border-blue-100 text-white rounded-full min-w-4 p-1 -top-1"
+  class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 w-2 h-2 bg-blue-600 border-blue-100 text-white rounded-full -top-1 right-1"
 />
 `;
 
 exports[`Badge snapshot color gray 1`] = `
 <div
-  class="absolute right-0 border-solid border-gray-100 text-center text-2xs font-medium uppercase leading-none antialiased bg-gray-600 border-gray-100 text-white rounded-full min-w-4 p-1 -top-1"
+  class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 w-2 h-2 bg-gray-600 border-gray-100 text-white rounded-full -top-1 right-1"
 />
 `;
 
 exports[`Badge snapshot color green 1`] = `
 <div
-  class="absolute right-0 border-solid border-gray-100 text-center text-2xs font-medium uppercase leading-none antialiased bg-green-600 border-green-100 text-white rounded-full min-w-4 p-1 -top-1"
+  class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 w-2 h-2 bg-green-600 border-green-100 text-white rounded-full -top-1 right-1"
 />
 `;
 
 exports[`Badge snapshot position bottom 1`] = `
 <div
-  class="absolute right-0 border-solid border-gray-100 text-center text-2xs font-medium uppercase leading-none antialiased bg-gray-600 border-gray-100 text-white rounded-full min-w-4 p-1 bottom-1"
+  class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 w-2 h-2 bg-gray-600 border-gray-100 text-white rounded-full bottom-0 right-0"
 />
 `;
 
 exports[`Badge snapshot position top 1`] = `
 <div
-  class="absolute right-0 border-solid border-gray-100 text-center text-2xs font-medium uppercase leading-none antialiased bg-gray-600 border-gray-100 text-white rounded-full min-w-4 p-1 -top-1"
+  class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 w-2 h-2 bg-gray-600 border-gray-100 text-white rounded-full -top-1 right-1"
 />
 `;
 
 exports[`Badge snapshot shape circle 1`] = `
 <div
-  class="absolute right-0 border-solid border-gray-100 text-center text-2xs font-medium uppercase leading-none antialiased bg-gray-600 border-gray-100 text-white rounded-full min-w-4 p-1 -top-1"
+  class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 w-2 h-2 bg-gray-600 border-gray-100 text-white rounded-full -top-1 right-1"
 />
 `;
 
 exports[`Badge snapshot shape square 1`] = `
 <div
-  class="absolute right-0 border-solid border-gray-100 text-center text-2xs font-medium uppercase leading-none antialiased bg-gray-600 border-gray-100 text-white rounded-md min-w-4 p-1 -top-1"
+  class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 w-2 h-2 bg-gray-600 border-gray-100 text-white rounded-sm -top-1 right-1"
 />
 `;
 
 exports[`Badge snapshot size size 1`] = `
 <div
-  class="absolute right-0 border-solid border-gray-100 text-center text-2xs font-medium uppercase leading-none antialiased bg-gray-600 border-gray-100 text-white rounded-full min-w-6 p-1 -top-2"
+  class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 w-4 h-4 bg-gray-600 border-gray-100 text-white rounded-full -top-1 right-1"
 />
 `;
 
 exports[`Badge snapshot size sm 1`] = `
 <div
-  class="absolute right-0 border-solid border-gray-100 text-center text-2xs font-medium uppercase leading-none antialiased bg-gray-600 border-gray-100 text-white rounded-full min-w-4 p-1 -top-1"
+  class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 w-2 h-2 bg-gray-600 border-gray-100 text-white rounded-full -top-1 right-1"
 />
 `;
