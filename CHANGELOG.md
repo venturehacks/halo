@@ -2,7 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.1](https://github.com/venturehacks/halo/compare/1.0.0-beta.0...1.0.0-beta.1)
+
+- [LEV-1396] Convenience hyperlinks: Figma, Report new issue [`#161`](https://github.com/venturehacks/halo/pull/161)
+- [LEV-1385] Badge Refresh, Remove AttentionIndicator [`#164`](https://github.com/venturehacks/halo/pull/164)
+- [LEV-1282] Add a contribution guide for Components [`#163`](https://github.com/venturehacks/halo/pull/163)
+- [LEV-1386]  Button: implement GTM variants + use tailwind for styling [`#162`](https://github.com/venturehacks/halo/pull/162)
+- Prettier 2 MDX [`#160`](https://github.com/venturehacks/halo/pull/160)
+
 #### [1.0.0-beta.0](https://github.com/venturehacks/halo/compare/0.15.2...1.0.0-beta.0)
+
+> 17 March 2022
 
 - [LEV-1299] Conform color palette nomenclature [`#159`](https://github.com/venturehacks/halo/pull/159)
 - [LEV-1381] Deprecate line height APIs [`#158`](https://github.com/venturehacks/halo/pull/158)
@@ -47,6 +57,7 @@ All notable changes to this project will be documented in this file. Dates are d
 - Shrink footprint of Halo global utility classes [`#115`](https://github.com/venturehacks/halo/pull/115)
 - Reduce CSS Bundle Weight [`#113`](https://github.com/venturehacks/halo/pull/113)
 - :package: fix svgo version incompatibility, resolutions [`3b5ca6b`](https://github.com/venturehacks/halo/commit/3b5ca6be11b1eee19b4c0840e3d37a6789697927)
+- Release 1.0.0-beta.0 [`1021adc`](https://github.com/venturehacks/halo/commit/1021adcf881a742787d2152ac41a79d3aff5ae0d)
 - remove `raw-` prefix. @vishaljeet feedback on #155 [`157acd3`](https://github.com/venturehacks/halo/commit/157acd38e74cd3fc6ce3c564ec3e3dd437f2d41e)
 - snapshot update [`7d2af4c`](https://github.com/venturehacks/halo/commit/7d2af4c3f0d9a9e9efebb3740f613081158b4ea9)
 - track CSS in package separately [`46ad10c`](https://github.com/venturehacks/halo/commit/46ad10c43639d3cdd40668bc2ea2d8281c17b47f)
