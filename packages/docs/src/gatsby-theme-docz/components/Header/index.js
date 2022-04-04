@@ -11,6 +11,8 @@ import {
 import { Logo } from 'gatsby-theme-docz/src/components/Logo';
 import PropTypes from 'prop-types';
 import { useState } from 'react';
+import { Button } from '~/components/core/Button';
+import { FigmaOutlineIcon } from '~/components/icons/vendor-support';
 //import Headroom from 'react-headroom';
 import { Box, Flex, jsx, useColorMode } from 'theme-ui';
 import SearchDrawer from '../Search';
@@ -26,7 +28,7 @@ export const Header = ({ onOpen }) => {
       header: { fixed, icons } = {},
     },
   } = useConfig();
-  const { edit = true, ...doc } = useCurrentDoc();
+  const { edit = true, figma, ...doc } = useCurrentDoc();
   const [colorMode, setColorMode] = useColorMode();
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -47,7 +49,7 @@ export const Header = ({ onOpen }) => {
       </Box>
       <InnerContainer sx={styles.innerContainer}>
         <Logo />
-        <Flex>
+        <Flex sx={{ alignItems: 'center' }}>
           {repository && (
             <Box sx={{ mr: 2 }}>
               <a
@@ -86,18 +88,38 @@ export const Header = ({ onOpen }) => {
               <SearchDrawer open={drawerOpen} toggleOpen={toggleSearch} />
             </Box>
           )}
+          <Button
+            className="ml-2"
+            variant="gtm-secondary"
+            href="https://github.com/venturehacks/halo/issues/new"
+            target="_blank"
+          >
+            Report new issue
+          </Button>
         </Flex>
         {showMarkdownEditButton && edit && doc.link && (
-          <a
-            className="h-o"
-            sx={styles.editButton}
-            href={doc.link}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Edit width={14} />
-            <Box sx={{ pl: 2 }}>Edit page</Box>
-          </a>
+          <div className="absolute -bottom-12 right-8 flex flex-row justify-end items-center">
+            <a
+              className="h-o flex flex-row justify-end items-center"
+              href={doc.link}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <Edit width={14} />
+              <Box sx={{ pl: 2 }}>Edit page</Box>
+            </a>
+            {figma && (
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href={figma}
+                className="ml-6 flex flex-row items-center justify-center hover:no-underline"
+              >
+                <FigmaOutlineIcon className="w-9" />
+                <span className="inline-block ml-1 ">Figma</span>
+              </a>
+            )}
+          </div>
         )}
       </InnerContainer>
     </Container>

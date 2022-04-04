@@ -59,8 +59,9 @@ const iconDocs = iconNames
 
 const documentation = `---
 name: Icons
-menu: Icons
 route: /icons
+updated: ${new Date().toISOString()}
+figma: https://www.figma.com/file/8EbOKQuVfc61d9aft8p7cO/Halo-Design-Library?node-id=12%3A1388
 ---
 
 ${iconImport}
@@ -69,7 +70,7 @@ ${iconImport}
 
 <div className="grid grid-cols-4 gap-4 text-center max-w-3xl">
 
-  ${iconDocs}
+${iconDocs}
 
 </div>
 `;
