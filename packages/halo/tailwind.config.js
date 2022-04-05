@@ -214,6 +214,7 @@ module.exports = {
       sans: '"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif',
       mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
       // new brand fonts
+      founders: ['Founders Grotesk', 'sans-serif'],
       arbeit: ['Arbeit', 'sans-serif'],
       galano: ['Galano', 'sans-serif'],
     },
