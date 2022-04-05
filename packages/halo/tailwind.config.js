@@ -5,12 +5,12 @@ const plugin = require('tailwindcss/plugin');
 
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
-  // mode: 'jit',
   darkMode: false,
   corePlugins: {
-    // we have our own style reset
-    // could move to tailwinds but would require a full style audit :X
+    // TODO(drew): use tailwind's preflight reset
+    // https://venturehacks.atlassian.net/browse/LEV-1322
     preflight: true,
+
     // safelist
     margin: true,
     padding: true,
