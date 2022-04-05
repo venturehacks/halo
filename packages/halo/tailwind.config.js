@@ -200,34 +200,6 @@ module.exports = {
         DEFAULT: '#0E1111',
       },
     },
-
-    extend: {
-      minWidth: {
-        3: '12px',
-        4: '16px',
-        6: '24px',
-      },
-      width: {
-        fit: 'fit-content',
-        100: '25rem', // TODO(drew): imported from TFE during merge
-      },
-      maxWidth: {
-        '10': '10%',
-        '20': '20%',
-        '30': '30%',
-        '40': '30%',
-        '50': '50%',
-        '60': '50%',
-        '70': '50%',
-        '80': '80%',
-        '90': '90%',
-        '2xs': '10rem',
-        '3xs': '5rem',
-      },
-      transitionDuration: {
-        250: '250ms',
-      },
-    },
     fontSize: {
       '2xs': ['11px', '18px'], // (deprecated legacy nano)
       'xs': ['12px', '18px'], // (deprecated legacy micro)
@@ -310,20 +282,49 @@ module.exports = {
       lg: '2px 8px 16px rgba(3, 17, 38, 0.1071), 0 0 1px rgba(0, 12, 32, 0.02)',
       xl: '4px 12px 20px rgba(3, 17, 38, 0.1071), 0 0 1px rgba(0, 12, 32, 0.02)',
     },
-    zIndex: {
-      ...defaultTheme.zIndex,
-      1: 1,
-      hover: 2,
-      tooltip: 10,
-      menu: 100,
-      overlay: 200,
-      postoverlay: 300,
-      modal: 400,
-      postmodal: 500,
-      toast: 1000,
-      sky: 10000,
-      space: 20000,
-      max: 2147483647,
+
+    // keys within `extend` inherit from default theme
+    // keys outside `extend` replace the default theme
+    extend: {
+      minWidth: {
+        3: '12px',
+        4: '16px',
+        6: '24px',
+      },
+      width: {
+        fit: 'fit-content',
+        100: '25rem', // TODO(drew): imported from TFE during merge
+      },
+      maxWidth: {
+        '10': '10%',
+        '20': '20%',
+        '30': '30%',
+        '40': '30%',
+        '50': '50%',
+        '60': '50%',
+        '70': '50%',
+        '80': '80%',
+        '90': '90%',
+        '2xs': '10rem',
+        '3xs': '5rem',
+      },
+      transitionDuration: {
+        250: '250ms',
+      },
+      zIndex: {
+        1: 1,
+        hover: 2,
+        tooltip: 10,
+        menu: 100,
+        overlay: 200,
+        postoverlay: 300,
+        modal: 400,
+        postmodal: 500,
+        toast: 1000,
+        sky: 10000,
+        space: 20000,
+        max: 2147483647,
+      },
     },
   },
   variants: {
