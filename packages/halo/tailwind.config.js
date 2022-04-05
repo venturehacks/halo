@@ -1,10 +1,12 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+/* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
+const defaultTheme = require('tailwindcss/defaultTheme');
+const plugin = require('tailwindcss/plugin');
 
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
   // mode: 'jit',
-  // or 'media' or 'class'
+  darkMode: false,
   corePlugins: {
     // we have our own style reset
     // could move to tailwinds but would require a full style audit :X
@@ -18,8 +20,6 @@ module.exports = {
     justifyContent: true,
     alignItems: true,
   },
-  darkMode: false,
-  plugins: [],
   purge: {
     content: [
       path.join(__dirname, 'src/**/*.{tsx,jsx,js,mdx}'),
@@ -209,6 +209,7 @@ module.exports = {
       },
       width: {
         fit: 'fit-content',
+        100: '25rem', // TODO(drew): imported from TFE during merge
       },
       maxWidth: {
         '10': '10%',
@@ -222,6 +223,9 @@ module.exports = {
         '90': '90%',
         '2xs': '10rem',
         '3xs': '5rem',
+      },
+      transitionDuration: {
+        250: '250ms',
       },
     },
     fontSize: {
@@ -239,6 +243,9 @@ module.exports = {
     fontFamily: {
       sans: '"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif',
       mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
+      // new brand fonts
+      arbeit: ['Arbeit', 'sans-serif'],
+      galano: ['Galano', 'sans-serif'],
     },
     spacing: {
       px: '1px',
@@ -285,14 +292,14 @@ module.exports = {
       md: '720px',
       tablet: '720px',
 
-      desktop: '1136px',
       lg: '1136px',
+      desktop: '1136px',
 
-      widescreen: '1440px',
       xl: '1440px',
+      widescreen: '1440px',
 
-      superwidescreen: '1800px',
       xxl: '1800px',
+      superwidescreen: '1800px',
     },
 
     boxShadow: {
@@ -304,17 +311,19 @@ module.exports = {
       xl: '4px 12px 20px rgba(3, 17, 38, 0.1071), 0 0 1px rgba(0, 12, 32, 0.02)',
     },
     zIndex: {
+      ...defaultTheme.zIndex,
+      1: 1,
       hover: 2,
-      max: 2147483647,
+      tooltip: 10,
       menu: 100,
-      modal: 400,
       overlay: 200,
-      postmodal: 500,
       postoverlay: 300,
+      modal: 400,
+      postmodal: 500,
+      toast: 1000,
       sky: 10000,
       space: 20000,
-      toast: 1000,
-      tooltip: 10,
+      max: 2147483647,
     },
   },
   variants: {
