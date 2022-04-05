@@ -2,13 +2,20 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.2](https://github.com/venturehacks/halo/compare/1.0.0-beta.1...1.0.0-beta.2)
+
+- [LEV-1431] Consumable tailwind.config.js [`#166`](https://github.com/venturehacks/halo/pull/166)
+
 #### [1.0.0-beta.1](https://github.com/venturehacks/halo/compare/1.0.0-beta.0...1.0.0-beta.1)
+
+> 4 April 2022
 
 - [LEV-1396] Convenience hyperlinks: Figma, Report new issue [`#161`](https://github.com/venturehacks/halo/pull/161)
 - [LEV-1385] Badge Refresh, Remove AttentionIndicator [`#164`](https://github.com/venturehacks/halo/pull/164)
 - [LEV-1282] Add a contribution guide for Components [`#163`](https://github.com/venturehacks/halo/pull/163)
 - [LEV-1386]  Button: implement GTM variants + use tailwind for styling [`#162`](https://github.com/venturehacks/halo/pull/162)
 - Prettier 2 MDX [`#160`](https://github.com/venturehacks/halo/pull/160)
+- Release 1.0.0-beta.1 [`dfe4e08`](https://github.com/venturehacks/halo/commit/dfe4e087e2519671d793f8ec8184562c2d024c42)
 
 #### [1.0.0-beta.0](https://github.com/venturehacks/halo/compare/0.15.2...1.0.0-beta.0)
 
