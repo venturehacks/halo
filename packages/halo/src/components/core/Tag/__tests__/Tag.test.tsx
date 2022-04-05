@@ -66,24 +66,7 @@ describe('Tag', () => {
       });
     });
 
-    describe('shape', () => {
-      test('pill', () => {
-        const component = render(<Tag shape="pill" />);
-        expect(component).toMatchSnapshot();
-      });
-
-      test('rectangle', () => {
-        const component = render(<Tag shape="rectangle" />);
-        expect(component).toMatchSnapshot();
-      });
-    });
-
     describe('size', () => {
-      test('2xs', () => {
-        const component = render(<Tag size="2xs" />);
-        expect(component).toMatchSnapshot();
-      });
-
       test('xs', () => {
         const component = render(<Tag size="xs" />);
         expect(component).toMatchSnapshot();
