@@ -11,11 +11,13 @@ test
 jest.config.js
 jest.dev.js
 rollup.config.js
+postcss.config.js
 tsconfig.json
 tsconfig.test.json
 
 # source code
 src
+support
 
 # junk
 datadog-size-limit.json
