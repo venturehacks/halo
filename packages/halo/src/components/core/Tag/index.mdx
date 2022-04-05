@@ -8,7 +8,6 @@ new: true
 import { Props, Playground } from 'docz';
 import { InterfaceHeader } from '../InterfaceHeader';
 import { BookmarkOutlineIcon } from '../../icons';
-import { Box } from '../../structure/Box';
 import { Tag } from './';
 
 # Tag
@@ -18,7 +17,7 @@ Successor to `PillTag` `Flair` (deprecated).
 ### Usage
 
 <Playground>
-  <Box margin={{ bottom: 4 }}>
+  <div className="mb-4">
     <InterfaceHeader title="Non-Interactive" section flow />
     <Tag color="red" label="Red tag" />
     <Tag color="gray" label="Gray tag underline" labelDecoration="underline" />
@@ -28,9 +27,9 @@ Successor to `PillTag` `Flair` (deprecated).
       label="Blue tag with icon"
     />
     <Tag color="orange" icon={<BookmarkOutlineIcon />} size="sm" />
-  </Box>
+  </div>
 
-  <Box margin={{ bottom: 4 }}>
+  <div className="mb-4">
     <InterfaceHeader title="Interactive" section flow />
     <Tag onClose={() => {alert("close clicked!")}} >
       <span className="font-medium">Tag Name</span>
@@ -58,17 +57,17 @@ Successor to `PillTag` `Flair` (deprecated).
       }}
       label="Clickable tag!"
     />
-  </Box>
+  </div>
 </Playground>
 
 ### Size
 
 <Playground>
-  <Box margin={{ bottom: 4 }}>
+  <div className="mb-4">
     <Tag label="size xs" />
     <Tag size="sm" label="size sm" />
     <Tag size="md" label="size md" />
-  </Box>
+  </div>
 </Playground>
 
 ### Exports
