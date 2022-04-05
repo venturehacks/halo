@@ -1,6 +1,5 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
-const defaultTheme = require('tailwindcss/defaultTheme');
 const plugin = require('tailwindcss/plugin');
 
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
