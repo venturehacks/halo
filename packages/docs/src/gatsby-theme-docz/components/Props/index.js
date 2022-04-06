@@ -110,7 +110,7 @@ export const Props = (componentProps) => {
                 )}
               </td>
               <td className="text-center">{prop.required ? '✔' : ''}</td>
-              <td className="text-dark-aa text-xs max-w-xs">
+              <td className="text-dark-aa max-w-xs text-xs">
                 {prop.description}
               </td>
             </tr>

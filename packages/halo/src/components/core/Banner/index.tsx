@@ -68,13 +68,13 @@ function BannerRaw({
     <div ref={forwardedRef} className={classes} data-test="Banner" role="alert">
       <aside className="mr-2 ml-1">
         {variant === 'error' && (
-          <CloseIcon className="block text-red-700 w-6" />
+          <CloseIcon className="block w-6 text-red-700" />
         )}
         {variant === 'warning' && (
-          <AlertOutlineIcon className="block text-dark-warning w-6" />
+          <AlertOutlineIcon className="text-dark-warning block w-6" />
         )}
         {variant === 'success' && (
-          <CheckIcon className="block text-dark-success w-6" />
+          <CheckIcon className="text-dark-success block w-6" />
         )}
 
         {/* <InfoIcon className={classNames(variant === 'info' && 'block')} /> */}
@@ -83,7 +83,7 @@ function BannerRaw({
         {byline ? (
           <div>
             {children}
-            <div className="font-medium text-xs text-dark-aa">{byline}</div>
+            <div className="text-dark-aa text-xs font-medium">{byline}</div>
           </div>
         ) : (
           children
@@ -91,7 +91,7 @@ function BannerRaw({
       </div>
       {offerDismiss && (
         <button
-          className="text-sm pl-2 bg-transparent border-0 cursor-pointer text-dark-link font-normal"
+          className="text-dark-link cursor-pointer border-0 bg-transparent pl-2 text-sm font-normal"
           data-test="Banner-closeButton"
           onClick={handleDismiss}
         >

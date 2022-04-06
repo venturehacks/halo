@@ -52,7 +52,7 @@ export const NavGroup = ({ item, sidebarRef }) => {
                 <Tag
                   color="green"
                   size="xs"
-                  className="ml-2 relative -top-0.5"
+                  className="relative -top-0.5 ml-2"
                   clearBackground
                 >
                   new

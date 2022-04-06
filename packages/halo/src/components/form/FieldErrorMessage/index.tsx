@@ -46,10 +46,10 @@ function FieldErrorMessage({
     <div
       className={classNames(
         styles.component,
-        'text-sm max-h-none overflow-hidden',
+        'max-h-none overflow-hidden text-sm',
         preset === 'text-only' && styles.textOnly,
-        preset === 'text-only' && 'whitespace-pre-wrap mt-1',
-        preset === 'block' && 'font-medium antialiased rounded py-2 px-4 mb-4',
+        preset === 'text-only' && 'mt-1 whitespace-pre-wrap',
+        preset === 'block' && 'mb-4 rounded py-2 px-4 font-medium antialiased',
         errorSeverity === 'warning' && 'text-dark-warning',
         errorSeverity === 'warning' && preset === 'block' && 'bg-orange-100',
         errorSeverity === 'critical' && 'text-dark-error',

@@ -91,7 +91,7 @@ function InterfaceHeaderRaw({
               'font-normal',
               isPage && 'text-md mt-2',
               isSection && 'text-md mt-1',
-              isSubsection && 'text-sm mt-0.5',
+              isSubsection && 'mt-0.5 text-sm',
               isMini && 'text-xs',
             )}
           >

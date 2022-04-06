@@ -98,9 +98,9 @@ export const Header = ({ onOpen }) => {
           </Button>
         </Flex>
         {showMarkdownEditButton && edit && doc.link && (
-          <div className="absolute -bottom-12 right-8 flex flex-row justify-end items-center">
+          <div className="absolute -bottom-12 right-8 flex flex-row items-center justify-end">
             <a
-              className="h-o flex flex-row justify-end items-center"
+              className="h-o flex flex-row items-center justify-end"
               href={doc.link}
               target="_blank"
               rel="noopener noreferrer"
@@ -116,7 +116,7 @@ export const Header = ({ onOpen }) => {
                 className="ml-6 flex flex-row items-center justify-center hover:no-underline"
               >
                 <FigmaOutlineIcon className="w-9" />
-                <span className="inline-block ml-1 ">Figma</span>
+                <span className="ml-1 inline-block ">Figma</span>
               </a>
             )}
           </div>

@@ -18,8 +18,8 @@ Colored badge to decorate an element.
 ### Usage
 
 <Playground>
-  <div className="flex flex-col ml-3">
-    <div className="flex flex-row items-start gap-6 mb-5 mr-5">
+  <div className="ml-3 flex flex-col">
+    <div className="mb-5 mr-5 flex flex-row items-start gap-6">
       <div className="relative">
         <PillTag className="mr-4">Count Indicator</PillTag>
         <Badge color="purple" shape="square" count={100} />
@@ -39,7 +39,7 @@ Colored badge to decorate an element.
         <Badge color="red" shape="square" label="New" />
       </div>
     </div>
-    <div className="flex flex-row items-start gap-6 mr-4">
+    <div className="mr-4 flex flex-row items-start gap-6">
       <div className="relative">
         <PillTag className="mr-4">Tooltip on Hover</PillTag>
         <Badge
@@ -55,7 +55,7 @@ Colored badge to decorate an element.
         <Badge color="red" />
       </div>
       <div className="relative">
-        <span className="font-medium text-lg mr-4">Messages</span>
+        <span className="mr-4 text-lg font-medium">Messages</span>
         <Badge color="red" position="center" />
       </div>
     </div>
@@ -65,8 +65,8 @@ Colored badge to decorate an element.
 ### Shape
 
 <Playground>
-  <div className="flex flex-col ml-3">
-    <div className="flex flex-row items-start gap-6 mr-5">
+  <div className="ml-3 flex flex-col">
+    <div className="mr-5 flex flex-row items-start gap-6">
       <div className="relative">
         <PillTag className="mr-1">square, sm</PillTag>
         <Badge color="blue" shape="square" />
@@ -90,8 +90,8 @@ Colored badge to decorate an element.
 ### Placement
 
 <Playground>
-  <div className="flex flex-col ml-3">
-    <div className="flex flex-row items-start gap-6 mr-5">
+  <div className="ml-3 flex flex-col">
+    <div className="mr-5 flex flex-row items-start gap-6">
       <div className="relative">
         <span className="mr-4">top</span>
         <Badge color="red" count={100} />

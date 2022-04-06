@@ -33,8 +33,8 @@ function AttributeRaw({
 }: AttributeProps & ForwardedRefProps<HTMLDivElement>) {
   return (
     <div ref={forwardedRef} className={className} {...rest}>
-      <dt className="font-medium text-dark-aaaa">{name}</dt>
-      <dd className="font-normal text-dark-aaa">{value}</dd>
+      <dt className="text-dark-aaaa font-medium">{name}</dt>
+      <dd className="text-dark-aaa font-normal">{value}</dd>
     </div>
   );
 }
