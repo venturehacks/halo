@@ -8,10 +8,7 @@ new: true
 import { Props, Playground } from 'docz';
 import { InterfaceHeader } from '../InterfaceHeader';
 import { BookmarkOutlineIcon } from '../../icons';
-import { Box } from '../../structure/Box';
 import { Tag } from './';
-
-> TODO(drew): refresh these docs
 
 # Tag
 
@@ -20,134 +17,60 @@ Successor to `PillTag` `Flair` (deprecated).
 ### Usage
 
 <Playground>
-  <Box margin={{ bottom: 4 }}>
-    <InterfaceHeader title="2xs" section flow />
-    <Tag
-      color="red"
-      size="sm"
-      label="Red tag"
-      size="2xs"
-    />
-    <Tag
-      color="gray"
-      shape="pill"
-      size="sm"
-      label="Gray tag"
-      size="2xs"
-    />
+  <div className="mb-4">
+    <InterfaceHeader title="Non-Interactive" section flow />
+    <Tag label="default tag" />
+    <Tag color="blue" label="blue tag" />
     <Tag
       icon={<BookmarkOutlineIcon />}
-      shape="pill"
-      size="sm"
-      label="Blue tag with icon"
-      size="2xs"
+      label="with icon"
+    />
+    <Tag icon={<BookmarkOutlineIcon />} size="sm" />
+  </div>
+
+  <div className="mb-4">
+    <InterfaceHeader title="Interactive" section flow />
+    <Tag
+      onClose={() => {
+        alert('close clicked!');
+      }}
+      label="Tag with close icon"
     />
     <Tag
-      color="green"
+      color="blue"
       onClose={() => {alert("close clicked!")}}
-      size="sm"
-      label="Green tag with clickable close icon"
-      size="2xs"
+      onClick={() => {alert("tag clicked!")}}
+      label="clickable tag + close"
     />
     <Tag
-      color="purple"
-      onClick={() => {alert("tag clicked!")}}
-      size="sm"
+      onClick={() => {
+        alert('tag clicked!');
+      }}
       label="Clickable tag!"
-      size="2xs"
     />
-    <Tag
-      color="orange"
-      icon={<BookmarkOutlineIcon />}
-      size="2xs"
-    />
-  </Box>
-
-{' '}
-
-<Box margin={{ bottom: 4 }}>
-  <InterfaceHeader title="xs" section flow />
-  <Tag color="red" size="sm" label="Red tag" size="xs" />
-  <Tag color="gray" shape="pill" size="sm" label="Gray tag" size="xs" />
-  <Tag
-    icon={<BookmarkOutlineIcon />}
-    shape="pill"
-    size="sm"
-    label="Blue tag with icon"
-    size="xs"
-  />
-  <Tag
-    color="green"
-    onClose={() => {
-      alert('close clicked!');
-    }}
-    size="sm"
-    label="Green tag with clickable close icon"
-    size="xs"
-  />
-  <Tag
-    color="purple"
-    onClick={() => {
-      alert('tag clicked!');
-    }}
-    size="sm"
-    label="Clickable tag!"
-    size="xs"
-  />
-  <Tag color="orange" icon={<BookmarkOutlineIcon />} size="xs" />
-</Box>
-
-{' '}
-
-<Box margin={{ bottom: 4 }}>
-  <InterfaceHeader title="sm" section flow />
-  <Tag color="red" label="Red tag" />
-  <Tag color="gray" shape="pill" label="Gray tag" />
-  <Tag icon={<BookmarkOutlineIcon />} shape="pill" label="Blue tag with icon" />
-  <Tag
-    color="green"
-    onClose={() => {
-      alert('close clicked!');
-    }}
-    label="Green tag with clickable close icon"
-  />
-  <Tag
-    color="purple"
-    onClick={() => {
-      alert('tag clicked!');
-    }}
-    label="Clickable tag!"
-  />
-  <Tag color="orange" icon={<BookmarkOutlineIcon />} />
-</Box>
-
-  <Box margin={{ bottom: 4 }}>
-    <InterfaceHeader title="Custom content" section flow />
-    <Tag onClose={() => {alert("close clicked!")}} size="sm" >
-      <span className="font-medium">Software Engineer</span>
-      <span>Primary</span>
+    <Tag color="blue" onClose={() => {alert("close clicked!")}} >
+      <span>Custom Element</span>
+      <span className="text-red-700">Second Element</span>
     </Tag>
-    <Tag
-      onClose={() => {alert("close clicked!")}}
-      onClick={() => {alert("tag clicked!")}}
-      color="gray"
-      shape="pill"
-      size="md"
-    >
-      <span className="text-dark-aaa font-medium">Software Engineer</span>
-      <span className="text-dark-aaa">Primary</span>
-    </Tag>
-  </Box>
+  </div>
+</Playground>
+
+### Size
+
+<Playground>
+  <div className="mb-4">
+    <Tag label="size xs" />
+    <Tag size="sm" label="size sm" />
+    <Tag size="md" label="size md" />
+  </div>
 </Playground>
 
 ### Exports
 
 ```ts
-type TagColor = 'blue' | 'gray' | 'green' | 'orange' | 'purple' | 'red';
+type TagColor = 'blue' | 'gray';
 
-type TagShape = 'pill' | 'rectangle';
-
-type TagSize = '2xs' | 'xs' | 'sm' | 'md';
+type TagSize = 'xs' | 'sm' | 'md';
 ```
 
 ### Props

@@ -1,64 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Tag snapshot color gray 1`] = `
+exports[`Tag snapshot color blue 1`] = `
 <span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-gray-100 text-dark-aaa rounded-md gap-2 text-xs px-3 py-1 bg-opacity-75"
+  class="component inline-flex flex-row items-center mr-2 last:mr-0 rounded-full bg-gtmblue-100 text-dark-aaaa gap-1 text-2xs px-2 py-0.5"
 />
 `;
 
-exports[`Tag snapshot color red 1`] = `
+exports[`Tag snapshot color gray 1`] = `
 <span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-red-100 text-red-600 rounded-md gap-2 text-xs px-3 py-1 bg-opacity-75"
+  class="component inline-flex flex-row items-center mr-2 last:mr-0 rounded-full bg-gray-200 text-gray-700 gap-1 text-2xs px-2 py-0.5"
 />
 `;
 
 exports[`Tag snapshot plain 1`] = `
 <span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 text-dark-aaaa rounded-md gap-2 text-xs px-3 py-1 bg-opacity-75"
+  class="component inline-flex flex-row items-center mr-2 last:mr-0 rounded-full bg-gray-200 text-gray-700 gap-1 text-2xs px-2 py-0.5"
 >
-  plain
+  <span
+    class="font-medium uppercase"
+  >
+    plain
+  </span>
 </span>
-`;
-
-exports[`Tag snapshot shape pill 1`] = `
-<span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 text-dark-aaaa rounded-full gap-2 text-xs px-3 py-1 bg-opacity-75"
-/>
-`;
-
-exports[`Tag snapshot shape rectangle 1`] = `
-<span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 text-dark-aaaa rounded-md gap-2 text-xs px-3 py-1 bg-opacity-75"
-/>
-`;
-
-exports[`Tag snapshot size 2xs 1`] = `
-<span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 text-dark-aaaa rounded-md gap-1 text-3xs px-2 py-0.5 antialiased bg-opacity-75"
-/>
 `;
 
 exports[`Tag snapshot size md 1`] = `
 <span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 text-dark-aaaa rounded-md gap-2 text-md px-3 py-2 bg-opacity-75"
+  class="component inline-flex flex-row items-center mr-2 last:mr-0 rounded-full bg-gray-200 text-gray-700 gap-2 text-sm px-3 py-2"
 />
 `;
 
-exports[`Tag snapshot size sm [default] 1`] = `
+exports[`Tag snapshot size sm 1`] = `
 <span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 text-dark-aaaa rounded-md gap-2 text-xs px-3 py-1 bg-opacity-75"
+  class="component inline-flex flex-row items-center mr-2 last:mr-0 rounded-full bg-gray-200 text-gray-700 gap-2 text-xs px-3 py-1"
 />
 `;
 
-exports[`Tag snapshot size xs 1`] = `
+exports[`Tag snapshot size xs [default] 1`] = `
 <span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 text-dark-aaaa rounded-md gap-1 text-2xs px-2 py-0.5 antialiased bg-opacity-75"
+  class="component inline-flex flex-row items-center mr-2 last:mr-0 rounded-full bg-gray-200 text-gray-700 gap-1 text-2xs px-2 py-0.5"
 />
 `;
 
 exports[`Tag snapshot with children 1`] = `
 <span
-  class="inline-flex flex-row items-center mr-2 last:mr-0 bg-blue-100 text-dark-aaaa rounded-md gap-2 text-xs px-3 py-1 bg-opacity-75"
+  class="component inline-flex flex-row items-center mr-2 last:mr-0 rounded-full bg-gray-200 text-gray-700 gap-1 text-2xs px-2 py-0.5"
 >
   with children
 </span>
