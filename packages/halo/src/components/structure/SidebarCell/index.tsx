@@ -66,7 +66,7 @@ function SidebarCell({
     <div
       aria-label={title}
       className={classNames(
-        'flex flex-col justify-start content-start px-6 py-4 border-b border-gray-200 hover:bg-gray-300 rounded cursor-pointer',
+        'flex cursor-pointer flex-col content-start justify-start rounded border-b border-gray-200 px-6 py-4 hover:bg-gray-300',
         styles.component,
         className,
       )}
@@ -97,7 +97,7 @@ function SidebarCell({
       )}
 
       {(byline || children) && (
-        <div className="text-xs text-dark-aa">
+        <div className="text-dark-aa text-xs">
           {byline && <div>{byline}</div>}
           {children}
         </div>

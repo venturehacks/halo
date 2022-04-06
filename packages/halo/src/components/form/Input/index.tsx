@@ -133,9 +133,9 @@ function InputRaw({
       {input}
       <div
         className={classNames(
-          size === 'sm' && 'w-4 h-4 top-0.5',
-          size === 'md' && 'w-7 h-7 top-1.5',
-          size === 'lg' && 'w-9 h-9 top-1',
+          size === 'sm' && 'top-0.5 h-4 w-4',
+          size === 'md' && 'top-1.5 h-7 w-7',
+          size === 'lg' && 'top-1 h-9 w-9',
           'text-dark-a',
           'flex flex-col items-center justify-center',
           'absolute',

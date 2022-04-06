@@ -43,7 +43,7 @@ exports[`Banner snapshot offer dismiss 1`] = `
     class="flex-1"
   />
   <button
-    class="text-sm pl-2 bg-transparent border-0 cursor-pointer text-dark-link font-normal"
+    class="text-dark-link cursor-pointer border-0 bg-transparent pl-2 text-sm font-normal"
     data-test="Banner-closeButton"
   >
     Dismiss
@@ -61,7 +61,7 @@ exports[`Banner snapshot variant error 1`] = `
     class="mr-2 ml-1"
   >
     <svg
-      class="block text-red-700 w-6"
+      class="block w-6 text-red-700"
       fill="currentColor"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@ exports[`Banner snapshot variant success 1`] = `
     class="mr-2 ml-1"
   >
     <svg
-      class="block text-dark-success w-6"
+      class="text-dark-success block w-6"
       fill="currentColor"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"
@@ -119,7 +119,7 @@ exports[`Banner snapshot variant warning 1`] = `
     class="mr-2 ml-1"
   >
     <svg
-      class="block text-dark-warning w-6"
+      class="text-dark-warning block w-6"
       fill="currentColor"
       viewBox="0 0 24 24"
       xmlns="http://www.w3.org/2000/svg"

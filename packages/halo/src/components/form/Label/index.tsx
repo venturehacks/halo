@@ -84,7 +84,7 @@ function LabelRaw({
         className={classNames(containerClasses, 'border-none')}
         name={id}
       >
-        <legend className="w-full mb-3">{labelContent}</legend>
+        <legend className="mb-3 w-full">{labelContent}</legend>
         {children}
       </fieldset>
     );

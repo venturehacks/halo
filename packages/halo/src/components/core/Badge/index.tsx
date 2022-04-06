@@ -76,7 +76,7 @@ function Badge({
   const component = (
     <div className={classnames}>
       {hasTextContent ? (
-        <div className="flex gap-1 justify-center">
+        <div className="flex justify-center gap-1">
           {count && <span>{countToString(count)}</span>}
           {label && <span>{label}</span>}
         </div>

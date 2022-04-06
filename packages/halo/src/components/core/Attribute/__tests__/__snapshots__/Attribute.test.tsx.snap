@@ -3,12 +3,12 @@
 exports[`Attribute snapshot smoke 1`] = `
 <div>
   <dt
-    class="font-medium text-dark-aaaa"
+    class="text-dark-aaaa font-medium"
   >
     Recruiting contact
   </dt>
   <dd
-    class="font-normal text-dark-aaa"
+    class="text-dark-aaa font-normal"
   >
     Drew Lustro
   </dd>
@@ -21,24 +21,24 @@ exports[`AttributeList snapshot lg 1`] = `
 >
   <div>
     <dt
-      class="font-medium text-dark-aaaa"
+      class="text-dark-aaaa font-medium"
     >
       key
     </dt>
     <dd
-      class="font-normal text-dark-aaa"
+      class="text-dark-aaa font-normal"
     >
       value
     </dd>
   </div>
   <div>
     <dt
-      class="font-medium text-dark-aaaa"
+      class="text-dark-aaaa font-medium"
     >
       term
     </dt>
     <dd
-      class="font-normal text-dark-aaa"
+      class="text-dark-aaa font-normal"
     >
       definition
     </dd>
@@ -52,24 +52,24 @@ exports[`AttributeList snapshot md 1`] = `
 >
   <div>
     <dt
-      class="font-medium text-dark-aaaa"
+      class="text-dark-aaaa font-medium"
     >
       key
     </dt>
     <dd
-      class="font-normal text-dark-aaa"
+      class="text-dark-aaa font-normal"
     >
       value
     </dd>
   </div>
   <div>
     <dt
-      class="font-medium text-dark-aaaa"
+      class="text-dark-aaaa font-medium"
     >
       term
     </dt>
     <dd
-      class="font-normal text-dark-aaa"
+      class="text-dark-aaa font-normal"
     >
       definition
     </dd>
@@ -83,24 +83,24 @@ exports[`AttributeList snapshot sm [default] 1`] = `
 >
   <div>
     <dt
-      class="font-medium text-dark-aaaa"
+      class="text-dark-aaaa font-medium"
     >
       key
     </dt>
     <dd
-      class="font-normal text-dark-aaa"
+      class="text-dark-aaa font-normal"
     >
       value
     </dd>
   </div>
   <div>
     <dt
-      class="font-medium text-dark-aaaa"
+      class="text-dark-aaaa font-medium"
     >
       term
     </dt>
     <dd
-      class="font-normal text-dark-aaa"
+      class="text-dark-aaa font-normal"
     >
       definition
     </dd>
@@ -114,24 +114,24 @@ exports[`AttributeList snapshot xs  1`] = `
 >
   <div>
     <dt
-      class="font-medium text-dark-aaaa"
+      class="text-dark-aaaa font-medium"
     >
       key
     </dt>
     <dd
-      class="font-normal text-dark-aaa"
+      class="text-dark-aaa font-normal"
     >
       value
     </dd>
   </div>
   <div>
     <dt
-      class="font-medium text-dark-aaaa"
+      class="text-dark-aaaa font-medium"
     >
       term
     </dt>
     <dd
-      class="font-normal text-dark-aaa"
+      class="text-dark-aaa font-normal"
     >
       definition
     </dd>

@@ -48,7 +48,7 @@ function PanelRaw({
     <div
       ref={forwardedRef}
       className={classNames(
-        'flex flex-col border-t border-gray-100 rounded shadow-md bg-white',
+        'flex flex-col rounded border-t border-gray-100 bg-white shadow-md',
         !hasMaxWidthClassName && 'max-w-3xl',
         negativeSpace === 'sm' && 'p-6 pt-4',
         negativeSpace === 'md' && 'p-8 pt-6',
