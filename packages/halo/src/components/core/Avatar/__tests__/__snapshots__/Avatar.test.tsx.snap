@@ -18,7 +18,7 @@ exports[`Avatar snapshots badge label 1`] = `
       class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-gray-600 border-gray-100 text-white rounded-full -top-3 right-1"
     >
       <div
-        class="flex gap-1 justify-center"
+        class="flex justify-center gap-1"
       >
         <span>
           Test Badge
@@ -47,7 +47,7 @@ exports[`Avatar snapshots badgeColor 1`] = `
       class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-purple-600 border-purple-100 text-white rounded-full -top-3 right-1"
     >
       <div
-        class="flex gap-1 justify-center"
+        class="flex justify-center gap-1"
       >
         <span>
           Purple
@@ -76,7 +76,7 @@ exports[`Avatar snapshots badgeShape circle [default] 1`] = `
       class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-gray-600 border-gray-100 text-white rounded-full -top-3 right-1"
     >
       <div
-        class="flex gap-1 justify-center"
+        class="flex justify-center gap-1"
       >
         <span>
           Test Badge
@@ -105,7 +105,7 @@ exports[`Avatar snapshots badgeShape square 1`] = `
       class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-gray-600 border-gray-100 text-white rounded-md -top-3 right-1"
     >
       <div
-        class="flex gap-1 justify-center"
+        class="flex justify-center gap-1"
       >
         <span>
           Test Badge

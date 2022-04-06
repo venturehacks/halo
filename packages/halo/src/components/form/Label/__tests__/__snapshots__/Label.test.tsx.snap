@@ -6,7 +6,7 @@ exports[`Label snapshot containsFieldGroup 1`] = `
   name="form-input--undefined"
 >
   <legend
-    class="w-full mb-3"
+    class="mb-3 w-full"
   >
     <div
       class="mb-1"

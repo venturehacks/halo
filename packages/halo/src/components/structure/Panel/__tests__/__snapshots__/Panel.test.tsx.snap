@@ -2,7 +2,7 @@
 
 exports[`Panel snapshot fully loaded props 1`] = `
 <div
-  class="flex flex-col border-t border-gray-100 rounded shadow-md bg-white max-w-3xl p-6 pt-4 mb-4 gap-4"
+  class="flex flex-col rounded border-t border-gray-100 bg-white shadow-md max-w-3xl p-6 pt-4 mb-4 gap-4"
 >
   Fully loaded props
 </div>
@@ -10,7 +10,7 @@ exports[`Panel snapshot fully loaded props 1`] = `
 
 exports[`Panel snapshot smoke 1`] = `
 <div
-  class="flex flex-col border-t border-gray-100 rounded shadow-md bg-white max-w-3xl p-8 pt-6"
+  class="flex flex-col rounded border-t border-gray-100 bg-white shadow-md max-w-3xl p-8 pt-6"
 >
   Content
 </div>
@@ -18,7 +18,7 @@ exports[`Panel snapshot smoke 1`] = `
 
 exports[`Panel snapshot title 1`] = `
 <div
-  class="flex flex-col border-t border-gray-100 rounded shadow-md bg-white max-w-3xl p-8 pt-6"
+  class="flex flex-col rounded border-t border-gray-100 bg-white shadow-md max-w-3xl p-8 pt-6"
 >
   <header
     class="text-dark-aaaa font-medium antialiased text-lg mb-4"
