@@ -8,6 +8,8 @@ import {
 
 import { CloseIcon } from '../../icons';
 
+import styles from './styles.module.scss';
+
 export type TagColor = 'blue' | 'gray';
 
 export type TagSize = 'xs' | 'sm' | 'md';
@@ -61,6 +63,7 @@ function TagRaw({
 }: TagProps & ForwardedRefProps<HTMLSpanElement>) {
   const componentClassnames = classNames(
     className,
+    styles.component,
     'inline-flex flex-row items-center mr-2 last:mr-0 rounded-full',
     color === 'blue' && 'bg-gtmblue-100 text-dark-aaaa',
     color === 'gray' && 'bg-gray-200 text-gray-700',
