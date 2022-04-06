@@ -19,44 +19,39 @@ Successor to `PillTag` `Flair` (deprecated).
 <Playground>
   <div className="mb-4">
     <InterfaceHeader title="Non-Interactive" section flow />
-    <Tag color="red" label="Red tag" />
-    <Tag color="gray" label="Gray tag underline" labelDecoration="underline" />
+    <Tag label="default tag" />
+     <Tag color="blue" label="blue tag" />
     <Tag
-      color="blue"
       icon={<BookmarkOutlineIcon />}
-      label="Blue tag with icon"
+      label="with icon"
     />
-    <Tag color="orange" icon={<BookmarkOutlineIcon />} size="sm" />
+    <Tag icon={<BookmarkOutlineIcon />} size="sm" />
   </div>
 
   <div className="mb-4">
     <InterfaceHeader title="Interactive" section flow />
-    <Tag onClose={() => {alert("close clicked!")}} >
-      <span className="font-medium">Tag Name</span>
-      <span className="text-green-400">Flair</span>
-    </Tag>
     <Tag
-      onClose={() => {alert("close clicked!")}}
-      onClick={() => {alert("tag clicked!")}}
-      color="gray"
-    >
-      <span className="text-dark-aaa font-medium">Clickable Tag</span>
-      <span className="text-green-400">Flair</span>
-    </Tag>
-    <Tag
-      color="green"
       onClose={() => {
         alert('close clicked!');
       }}
-      label="Green tag with clickable close icon"
+      label="Tag with close icon"
     />
     <Tag
-      color="purple"
+      color="blue"
+      onClose={() => {alert("close clicked!")}}
+      onClick={() => {alert("tag clicked!")}}
+      label="clickable tag + close"
+    />
+    <Tag
       onClick={() => {
         alert('tag clicked!');
       }}
       label="Clickable tag!"
     />
+    <Tag color="blue" onClose={() => {alert("close clicked!")}} >
+      <span>Custom Element</span>
+      <span className="text-red-700">Second Element</span>
+    </Tag>
   </div>
 </Playground>
 
@@ -73,11 +68,9 @@ Successor to `PillTag` `Flair` (deprecated).
 ### Exports
 
 ```ts
-type TagColor = 'blue' | 'gray' | 'green' | 'orange' | 'purple' | 'red';
+type TagColor = 'blue' | 'gray';
 
-type TagSize = '2xs' | 'xs' | 'sm' | 'md';
-
-type TagStyle = 'underline';
+type TagSize = 'xs' | 'sm' | 'md';
 ```
 
 ### Props

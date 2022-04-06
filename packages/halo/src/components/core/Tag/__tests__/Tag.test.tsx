@@ -55,8 +55,8 @@ describe('Tag', () => {
     });
 
     describe('color', () => {
-      test('red', () => {
-        const component = render(<Tag color="red" />);
+      test('blue', () => {
+        const component = render(<Tag color="blue" />);
         expect(component).toMatchSnapshot();
       });
 
@@ -67,12 +67,12 @@ describe('Tag', () => {
     });
 
     describe('size', () => {
-      test('xs', () => {
+      test('xs [default]', () => {
         const component = render(<Tag size="xs" />);
         expect(component).toMatchSnapshot();
       });
 
-      test('sm [default]', () => {
+      test('sm', () => {
         const component = render(<Tag size="sm" />);
         expect(component).toMatchSnapshot();
       });

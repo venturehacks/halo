@@ -8,11 +8,9 @@ import {
 
 import { CloseIcon } from '../../icons';
 
-export type TagColor = 'blue' | 'gray' | 'green' | 'orange' | 'purple' | 'red';
+export type TagColor = 'blue' | 'gray';
 
 export type TagSize = 'xs' | 'sm' | 'md';
-
-export type LabelDecoration = 'underline';
 
 export interface TagProps {
   /**
@@ -37,7 +35,6 @@ export interface TagProps {
    * text rendered inside the tag
    */
   label?: string;
-  labelDecoration?: LabelDecoration;
   onClick?: React.MouseEventHandler<HTMLSpanElement>;
   /**
    * displays a 'x' icon and adds event handler
@@ -60,22 +57,17 @@ function TagRaw({
   onClick,
   onClose,
   size = 'xs',
-  labelDecoration,
   ...rest
 }: TagProps & ForwardedRefProps<HTMLSpanElement>) {
   const componentClassnames = classNames(
     className,
-    'inline-flex flex-row items-center mr-2 last:mr-0 rounded-full uppercase font-bold',
+    'inline-flex flex-row items-center mr-2 last:mr-0 rounded-full',
     color === 'blue' && 'bg-gtmblue-100 text-dark-aaaa',
     color === 'gray' && 'bg-gray-200 text-gray-700',
-    color === 'green' && 'bg-green-100 text-green-600',
-    color === 'orange' && 'bg-orange-100 text-orange-600',
-    color === 'purple' && 'bg-purple-100 text-purple-600',
-    color === 'red' && 'bg-red-100 text-red-600',
-    size === 'xs' && 'gap-1 text-2xs px-2 py-0.5 antialiased',
+    size === 'xs' && 'gap-1 text-2xs px-2 py-0.5',
     size === 'sm' && 'gap-2 text-xs px-3 py-1',
     size === 'md' && 'gap-2 text-sm px-3 py-2',
-    labelDecoration === 'underline' && labelDecoration,
+    onClick && 'hover:underline',
     clearBackground && 'bg-opacity-0',
   );
   const iconClassnames = classNames(
@@ -104,7 +96,7 @@ function TagRaw({
       {...rest}
     >
       {icon && <span className={iconClassnames}>{icon}</span>}
-      {label && label}
+      {label && <span className="font-medium uppercase">{label}</span>}
       {renderChildren && children}
       {onClose && (
         <CloseIcon
