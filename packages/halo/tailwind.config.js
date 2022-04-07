@@ -285,6 +285,9 @@ module.exports = {
     // keys within `extend` inherit from default theme
     // keys outside `extend` replace the default theme
     extend: {
+      height: {
+        18: '4.5rem', // used by Avatar size lg
+      },
       minWidth: {
         3: '12px',
         4: '16px',
@@ -293,6 +296,7 @@ module.exports = {
       width: {
         fit: 'fit-content',
         100: '25rem', // TODO(drew): imported from TFE during merge
+        18: '4.5rem', // used by Avatar size lg
       },
       maxWidth: {
         '10': '10%',
