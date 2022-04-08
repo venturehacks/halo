@@ -52,7 +52,7 @@ function AvatarRaw({
 
   const componentClassnames = classNames(
     className,
-    'inline-flex flex-row items-center mr-2 last:mr-0 relative',
+    'inline-flex flex-row items-center relative',
     'border border-gray-200',
     shape === 'circle' && 'rounded-full',
     shape === 'square' && 'rounded-md',
@@ -64,7 +64,6 @@ function AvatarRaw({
   );
 
   const avatarClassNames = classNames(
-    'w-full h-full',
     shape === 'circle' && 'rounded-full',
     shape === 'square' && 'rounded-md',
   );
@@ -86,7 +85,9 @@ function AvatarRaw({
       <img
         alt={name ? `Avatar for ${name}` : 'Avatar'}
         className={avatarClassNames}
+        height={IMAGE_SIZES[size]}
         src={imageUrl}
+        width={IMAGE_SIZES[size]}
       />
       {badge && (
         <>{isBadgeJSX ? badge : <Badge {...badgeOptions} label={badge} />}</>
@@ -98,3 +99,13 @@ function AvatarRaw({
 const Avatar = withForwardedRef<AvatarProps, HTMLDivElement>(AvatarRaw);
 
 export { Avatar };
+
+// For setting `height` and `width` attributes on `img` tag directly
+// due to css loading causing layout shifts.
+export const IMAGE_SIZES: Record<AvatarSize, number> = {
+  xs: 24,
+  sm: 32,
+  md: 48,
+  lg: 72,
+  xl: 112,
+};
