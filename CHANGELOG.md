@@ -2,9 +2,20 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.3](https://github.com/venturehacks/halo/compare/1.0.0-beta.2...1.0.0-beta.3)
+
+- [LEV-1416] Tailwindify Avatar [`#168`](https://github.com/venturehacks/halo/pull/168)
+- [LEV-1387] Refresh Tag [`#165`](https://github.com/venturehacks/halo/pull/165)
+- [LEV-1432] prettier-plugin-tailwindcss [`#167`](https://github.com/venturehacks/halo/pull/167)
+- Remove gpg sign from release it json [`830bec9`](https://github.com/venturehacks/halo/commit/830bec9acf47d4c9c7c034829ac29af4b075e94e)
+- add fontFamily: 'Founders Grotesk' [`9488f36`](https://github.com/venturehacks/halo/commit/9488f360bdd8073adc7b8102f9eca88334790276)
+
 #### [1.0.0-beta.2](https://github.com/venturehacks/halo/compare/1.0.0-beta.1...1.0.0-beta.2)
 
+> 5 April 2022
+
 - [LEV-1431] Consumable tailwind.config.js [`#166`](https://github.com/venturehacks/halo/pull/166)
+- Release 1.0.0-beta.2 [`c430dd0`](https://github.com/venturehacks/halo/commit/c430dd0d3c62c6a90179fbeb953ee0c3525cb8be)
 
 #### [1.0.0-beta.1](https://github.com/venturehacks/halo/compare/1.0.0-beta.0...1.0.0-beta.1)
 
