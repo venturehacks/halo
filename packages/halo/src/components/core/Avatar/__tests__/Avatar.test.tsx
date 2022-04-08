@@ -17,12 +17,6 @@ describe('Avatar', () => {
 
   describe('snapshots', () => {
     describe('size', () => {
-      test(`xxs`, () => {
-        const component = render(<Avatar {...sharedProps} size="xxs" />);
-
-        expect(component).toMatchSnapshot();
-      });
-
       test(`xs`, () => {
         const component = render(<Avatar {...sharedProps} size="xs" />);
 
@@ -102,18 +96,18 @@ describe('Avatar', () => {
         expect(component).toMatchSnapshot();
       });
     });
+  });
 
-    describe(`Dimensions`, () => {
-      it(`adds the right height and width to the img tag`, () => {
-        const sizes = Object.keys(IMAGE_SIZES) as AvatarSize[];
+  describe(`Dimensions`, () => {
+    it(`adds the right height and width to the img tag`, () => {
+      const sizes = Object.keys(IMAGE_SIZES) as AvatarSize[];
 
-        sizes.forEach((size) => {
-          const component = render(<Avatar {...sharedProps} size={size} />);
-          const image = component.find('img');
+      sizes.forEach((size) => {
+        const component = render(<Avatar {...sharedProps} size={size} />);
+        const image = component.find('img');
 
-          expect(image.prop('height')).toEqual(IMAGE_SIZES[size].toString());
-          expect(image.prop('width')).toEqual(IMAGE_SIZES[size].toString());
-        });
+        expect(image.prop('height')).toEqual(IMAGE_SIZES[size].toString());
+        expect(image.prop('width')).toEqual(IMAGE_SIZES[size].toString());
       });
     });
   });

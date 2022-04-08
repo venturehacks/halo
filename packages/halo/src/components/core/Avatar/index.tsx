@@ -13,11 +13,9 @@ import {
   BadgeSize,
 } from '../Badge';
 
-import styles from './styles.module.scss';
-
 export type AvatarShape = 'circle' | 'square';
 
-export type AvatarSize = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+export type AvatarSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 export interface AvatarProps {
   badge?: string | React.ReactNode;
@@ -41,7 +39,7 @@ function AvatarRaw({
   imageUrl,
   name,
   shape = 'circle',
-  size = 'md',
+  size = 'sm',
   tooltip,
   forwardedRef,
   ...rest
@@ -49,6 +47,27 @@ function AvatarRaw({
   ForwardedRefProps<HTMLDivElement> &
   React.HTMLAttributes<HTMLDivElement>) {
   const badgeSize: BadgeSize = size === 'lg' || size === 'xl' ? 'md' : 'sm';
+
+  const isBadgeJSX = typeof badge !== 'string';
+
+  const componentClassnames = classNames(
+    className,
+    'inline-flex flex-row items-center relative',
+    'border border-gray-200',
+    shape === 'circle' && 'rounded-full',
+    shape === 'square' && 'rounded-md',
+    size === 'xs' && 'h-6 w-6',
+    size === 'sm' && 'h-8 w-8',
+    size === 'md' && 'h-12 w-12',
+    size === 'lg' && 'h-18 w-18',
+    size === 'xl' && 'h-28 w-28',
+  );
+
+  const avatarClassNames = classNames(
+    shape === 'circle' && 'rounded-full',
+    shape === 'square' && 'rounded-md',
+  );
+
   const badgeOptions = {
     color: badgeColor,
     position: badgePosition,
@@ -56,32 +75,22 @@ function AvatarRaw({
     size: badgeSize,
     tooltip,
   };
-  const isBadgeJSX = typeof badge !== 'string';
-  // 'xxs' avatars are too small to have a badge
-  const showBadge = badge && size !== 'xxs';
 
   return (
     <div
       ref={forwardedRef}
-      className={classNames(
-        styles.component,
-        className,
-        styles[size],
-        styles[shape],
-      )}
+      className={classNames(componentClassnames, className)}
       {...rest}
     >
       <img
         alt={name ? `Avatar for ${name}` : 'Avatar'}
-        className={classNames(styles.avatar, styles[shape])}
+        className={avatarClassNames}
         height={IMAGE_SIZES[size]}
         src={imageUrl}
         width={IMAGE_SIZES[size]}
       />
-      {showBadge && (
-        <div className={styles.badge}>
-          {isBadgeJSX ? badge : <Badge {...badgeOptions} label={badge} />}
-        </div>
+      {badge && (
+        <>{isBadgeJSX ? badge : <Badge {...badgeOptions} label={badge} />}</>
       )}
     </div>
   );
@@ -92,9 +101,8 @@ const Avatar = withForwardedRef<AvatarProps, HTMLDivElement>(AvatarRaw);
 export { Avatar };
 
 // For setting `height` and `width` attributes on `img` tag directly
-// ! Keep in sync with ./styles.module.scss
+// due to css loading causing layout shifts.
 export const IMAGE_SIZES: Record<AvatarSize, number> = {
-  xxs: 16,
   xs: 24,
   sm: 32,
   md: 48,

@@ -2,28 +2,24 @@
 
 exports[`Avatar snapshots badge label 1`] = `
 <div
-  class="component lg circle"
+  class="inline-flex flex-row items-center relative border border-gray-200 rounded-full h-18 w-18"
 >
   <img
     alt="Avatar for Drew"
-    class="avatar circle"
+    class="rounded-full"
     height="72"
     src="https://avatars1.githubusercontent.com/u/194885"
     width="72"
   />
   <div
-    class="badge"
+    class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-gray-600 border-gray-100 text-white rounded-full -top-3 right-1"
   >
     <div
-      class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-gray-600 border-gray-100 text-white rounded-full -top-3 right-1"
+      class="flex justify-center gap-1"
     >
-      <div
-        class="flex justify-center gap-1"
-      >
-        <span>
-          Test Badge
-        </span>
-      </div>
+      <span>
+        Test Badge
+      </span>
     </div>
   </div>
 </div>
@@ -31,28 +27,24 @@ exports[`Avatar snapshots badge label 1`] = `
 
 exports[`Avatar snapshots badgeColor 1`] = `
 <div
-  class="component lg circle"
+  class="inline-flex flex-row items-center relative border border-gray-200 rounded-full h-18 w-18"
 >
   <img
     alt="Avatar for Drew"
-    class="avatar circle"
+    class="rounded-full"
     height="72"
     src="https://avatars1.githubusercontent.com/u/194885"
     width="72"
   />
   <div
-    class="badge"
+    class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-purple-600 border-purple-100 text-white rounded-full -top-3 right-1"
   >
     <div
-      class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-purple-600 border-purple-100 text-white rounded-full -top-3 right-1"
+      class="flex justify-center gap-1"
     >
-      <div
-        class="flex justify-center gap-1"
-      >
-        <span>
-          Purple
-        </span>
-      </div>
+      <span>
+        Purple
+      </span>
     </div>
   </div>
 </div>
@@ -60,28 +52,24 @@ exports[`Avatar snapshots badgeColor 1`] = `
 
 exports[`Avatar snapshots badgeShape circle [default] 1`] = `
 <div
-  class="component lg circle"
+  class="inline-flex flex-row items-center relative border border-gray-200 rounded-full h-18 w-18"
 >
   <img
     alt="Avatar for Drew"
-    class="avatar circle"
+    class="rounded-full"
     height="72"
     src="https://avatars1.githubusercontent.com/u/194885"
     width="72"
   />
   <div
-    class="badge"
+    class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-gray-600 border-gray-100 text-white rounded-full -top-3 right-1"
   >
     <div
-      class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-gray-600 border-gray-100 text-white rounded-full -top-3 right-1"
+      class="flex justify-center gap-1"
     >
-      <div
-        class="flex justify-center gap-1"
-      >
-        <span>
-          Test Badge
-        </span>
-      </div>
+      <span>
+        Test Badge
+      </span>
     </div>
   </div>
 </div>
@@ -89,28 +77,24 @@ exports[`Avatar snapshots badgeShape circle [default] 1`] = `
 
 exports[`Avatar snapshots badgeShape square 1`] = `
 <div
-  class="component lg circle"
+  class="inline-flex flex-row items-center relative border border-gray-200 rounded-full h-18 w-18"
 >
   <img
     alt="Avatar for Drew"
-    class="avatar circle"
+    class="rounded-full"
     height="72"
     src="https://avatars1.githubusercontent.com/u/194885"
     width="72"
   />
   <div
-    class="badge"
+    class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-gray-600 border-gray-100 text-white rounded-md -top-3 right-1"
   >
     <div
-      class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-gray-600 border-gray-100 text-white rounded-md -top-3 right-1"
+      class="flex justify-center gap-1"
     >
-      <div
-        class="flex justify-center gap-1"
-      >
-        <span>
-          Test Badge
-        </span>
-      </div>
+      <span>
+        Test Badge
+      </span>
     </div>
   </div>
 </div>
@@ -118,11 +102,11 @@ exports[`Avatar snapshots badgeShape square 1`] = `
 
 exports[`Avatar snapshots shape circle [default] 1`] = `
 <div
-  class="component md circle"
+  class="inline-flex flex-row items-center relative border border-gray-200 rounded-full h-12 w-12"
 >
   <img
     alt="Avatar for Drew"
-    class="avatar circle"
+    class="rounded-full"
     height="48"
     src="https://avatars1.githubusercontent.com/u/194885"
     width="48"
@@ -132,11 +116,11 @@ exports[`Avatar snapshots shape circle [default] 1`] = `
 
 exports[`Avatar snapshots shape square 1`] = `
 <div
-  class="component md square"
+  class="inline-flex flex-row items-center relative border border-gray-200 rounded-md h-12 w-12"
 >
   <img
     alt="Avatar for Drew"
-    class="avatar square"
+    class="rounded-md"
     height="48"
     src="https://avatars1.githubusercontent.com/u/194885"
     width="48"
@@ -146,11 +130,11 @@ exports[`Avatar snapshots shape square 1`] = `
 
 exports[`Avatar snapshots size lg 1`] = `
 <div
-  class="component lg circle"
+  class="inline-flex flex-row items-center relative border border-gray-200 rounded-full h-18 w-18"
 >
   <img
     alt="Avatar for Drew"
-    class="avatar circle"
+    class="rounded-full"
     height="72"
     src="https://avatars1.githubusercontent.com/u/194885"
     width="72"
@@ -160,11 +144,11 @@ exports[`Avatar snapshots size lg 1`] = `
 
 exports[`Avatar snapshots size md [default] 1`] = `
 <div
-  class="component md circle"
+  class="inline-flex flex-row items-center relative border border-gray-200 rounded-full h-12 w-12"
 >
   <img
     alt="Avatar for Drew"
-    class="avatar circle"
+    class="rounded-full"
     height="48"
     src="https://avatars1.githubusercontent.com/u/194885"
     width="48"
@@ -174,28 +158,14 @@ exports[`Avatar snapshots size md [default] 1`] = `
 
 exports[`Avatar snapshots size xs 1`] = `
 <div
-  class="component xs circle"
+  class="inline-flex flex-row items-center relative border border-gray-200 rounded-full h-6 w-6"
 >
   <img
     alt="Avatar for Drew"
-    class="avatar circle"
+    class="rounded-full"
     height="24"
     src="https://avatars1.githubusercontent.com/u/194885"
     width="24"
-  />
-</div>
-`;
-
-exports[`Avatar snapshots size xxs 1`] = `
-<div
-  class="component xxs circle"
->
-  <img
-    alt="Avatar for Drew"
-    class="avatar circle"
-    height="16"
-    src="https://avatars1.githubusercontent.com/u/194885"
-    width="16"
   />
 </div>
 `;
