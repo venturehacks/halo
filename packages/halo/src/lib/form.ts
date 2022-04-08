@@ -59,11 +59,33 @@ export function prettyFileSize(
  */
 export const FORM_FIELD_ERROR_IDENTIFIER = 'js-halo-form-field-error';
 
-export function scrollToFieldError(errorFieldKey?: string) {
-  const container = getFieldContainer(errorFieldKey);
+interface ScrollToFieldErrorOptions {
+  /**
+   * Name of field to scroll focus to.
+   * Only set when you require explicit control.
+   * When unset, window will scroll to first form input with
+   * `FORM_FIELD_ERROR_IDENTIFIER`. All TFE form components
+   * decorate `FORM_FIELD_ERROR_IDENTIFIER` automatically.
+   * @example email
+   */
+  field?: string;
+
+  /**
+   * Pixel offset from master parent scope container (usually `#mail` or `.ReactModal__Content`).
+   * Rarely requires override. Override when you need more control
+   * over scroll position behavior.
+   * Example: a sticky header is overlapping the element.
+   * @default 120
+   */
+  offsetTop?: number;
+}
+export function scrollToFieldError(options: ScrollToFieldErrorOptions = {}) {
+  const { field, offsetTop } = options;
+
+  const container = getFieldContainer(field);
   const errors =
     container === window
-      ? findErrorFieldNodes('#main', errorFieldKey)
+      ? findErrorFieldNodes('#main', field)
       : findErrorFieldNodes('.ReactModal__Content');
 
   if (errors.length === 0) {
@@ -73,7 +95,7 @@ export function scrollToFieldError(errorFieldKey?: string) {
   const errorField = errors[0];
   const errorOffset = errorField.getBoundingClientRect().top;
   const scrollPosition = container === window ? window.pageYOffset : 0;
-  const verticalPadding = container === window ? 120 : 0;
+  const verticalPadding = container === window ? offsetTop : 0;
   const top = scrollPosition + errorOffset - verticalPadding;
   container.scrollTo({ behavior: 'smooth', left: 0, top });
 }
@@ -90,10 +112,10 @@ function getFieldContainer(errorFieldKey?: string): Element | Window {
 
 function findErrorFieldNodes(
   parentScope: '#main' | '.ReactModal__Content',
-  errorFieldKey?: string,
+  field?: string,
 ) {
-  return errorFieldKey
-    ? document.querySelectorAll(`${parentScope} input[name="${errorFieldKey}"]`)
+  return field
+    ? document.querySelectorAll(`${parentScope} input[name="${field}"]`)
     : document.querySelectorAll(
         `${parentScope} .${FORM_FIELD_ERROR_IDENTIFIER}`,
       );
