@@ -6,7 +6,6 @@
   },
   "git": {
     "changelog": "git log --pretty=format:\"* %s (%h)\" ${from}...${to}",
-    "commitArgs": ["--gpg-sign"],
     "requireCleanWorkingDir": true
   },
   "github": {
