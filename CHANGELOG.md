@@ -2,8 +2,100 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [0.16.0](https://github.com/venturehacks/halo/compare/1.0.0-beta.3...0.16.0)
+
+- [CXE-1060] Allow supplying offset argument when scrolling to error [`#169`](https://github.com/venturehacks/halo/pull/169)
+- Remove gpg sign from release it json [`c583cc1`](https://github.com/venturehacks/halo/commit/c583cc1e6abd8306983340427725428f28aa11a3)
+
+#### [1.0.0-beta.3](https://github.com/venturehacks/halo/compare/1.0.0-beta.2...1.0.0-beta.3)
+
+> 8 April 2022
+
+- [LEV-1416] Tailwindify Avatar [`#168`](https://github.com/venturehacks/halo/pull/168)
+- [LEV-1387] Refresh Tag [`#165`](https://github.com/venturehacks/halo/pull/165)
+- [LEV-1432] prettier-plugin-tailwindcss [`#167`](https://github.com/venturehacks/halo/pull/167)
+- Release 1.0.0-beta.3 [`e5463b9`](https://github.com/venturehacks/halo/commit/e5463b9dcc69ab44ab2a8204ffde6ff49d8aadfd)
+- Remove gpg sign from release it json [`830bec9`](https://github.com/venturehacks/halo/commit/830bec9acf47d4c9c7c034829ac29af4b075e94e)
+- add fontFamily: 'Founders Grotesk' [`9488f36`](https://github.com/venturehacks/halo/commit/9488f360bdd8073adc7b8102f9eca88334790276)
+
+#### [1.0.0-beta.2](https://github.com/venturehacks/halo/compare/1.0.0-beta.1...1.0.0-beta.2)
+
+> 5 April 2022
+
+- [LEV-1431] Consumable tailwind.config.js [`#166`](https://github.com/venturehacks/halo/pull/166)
+- Release 1.0.0-beta.2 [`c430dd0`](https://github.com/venturehacks/halo/commit/c430dd0d3c62c6a90179fbeb953ee0c3525cb8be)
+
+#### [1.0.0-beta.1](https://github.com/venturehacks/halo/compare/1.0.0-beta.0...1.0.0-beta.1)
+
+> 4 April 2022
+
+- [LEV-1396] Convenience hyperlinks: Figma, Report new issue [`#161`](https://github.com/venturehacks/halo/pull/161)
+- [LEV-1385] Badge Refresh, Remove AttentionIndicator [`#164`](https://github.com/venturehacks/halo/pull/164)
+- [LEV-1282] Add a contribution guide for Components [`#163`](https://github.com/venturehacks/halo/pull/163)
+- [LEV-1386]  Button: implement GTM variants + use tailwind for styling [`#162`](https://github.com/venturehacks/halo/pull/162)
+- Prettier 2 MDX [`#160`](https://github.com/venturehacks/halo/pull/160)
+- Release 1.0.0-beta.1 [`dfe4e08`](https://github.com/venturehacks/halo/commit/dfe4e087e2519671d793f8ec8184562c2d024c42)
+
+#### [1.0.0-beta.0](https://github.com/venturehacks/halo/compare/0.15.2...1.0.0-beta.0)
+
+> 17 March 2022
+
+- [LEV-1299] Conform color palette nomenclature [`#159`](https://github.com/venturehacks/halo/pull/159)
+- [LEV-1381] Deprecate line height APIs [`#158`](https://github.com/venturehacks/halo/pull/158)
+- [LEV-1283] add a guide to the documentation on how to add a new icon [`#152`](https://github.com/venturehacks/halo/pull/152)
+- [LEV-1281] Create a demo page constructed of all Halo components [`#151`](https://github.com/venturehacks/halo/pull/151)
+- [LEV-1383] Clean Prop Table of node_modules [`#157`](https://github.com/venturehacks/halo/pull/157)
+- Icons: add new WarningIcon svg [`#154`](https://github.com/venturehacks/halo/pull/154)
+- [LEV-1301] Typography scale refresh [`#156`](https://github.com/venturehacks/halo/pull/156)
+- Icons: update VisibilityOffIcon svg [`#153`](https://github.com/venturehacks/halo/pull/153)
+- drop "Raw" prefix from form components [`#155`](https://github.com/venturehacks/halo/pull/155)
+- [LEV-1302] Alternative GTM color palette [`#150`](https://github.com/venturehacks/halo/pull/150)
+- [LEV-1356] Tempo(1) =&gt; 4px [`#149`](https://github.com/venturehacks/halo/pull/149)
+- [LEV-1355] Call out deprecated components [`#148`](https://github.com/venturehacks/halo/pull/148)
+- [LEV-778] Rapid clean up, toolchain upgrade [`#147`](https://github.com/venturehacks/halo/pull/147)
+- [LEV-1286] RawCheckbox, RawRadio refresh [`#146`](https://github.com/venturehacks/halo/pull/146)
+- [LEV-1287] RawSelect, RawTextarea, Label refresh [`#145`](https://github.com/venturehacks/halo/pull/145)
+- [LEV-1285] RawInput, FieldErrorMessage refresh [`#144`](https://github.com/venturehacks/halo/pull/144)
+- [LEV-1280] README rewrite [`#142`](https://github.com/venturehacks/halo/pull/142)
+- [LEV-1279] Drop shadow elevations (box shadow) [`#141`](https://github.com/venturehacks/halo/pull/141)
+- [LEV-1284] Icon Set [`#140`](https://github.com/venturehacks/halo/pull/140)
+- [InterfaceHeader] byline support [`#139`](https://github.com/venturehacks/halo/pull/139)
+- [LEV-1252] Panel [`#138`](https://github.com/venturehacks/halo/pull/138)
+- [LEV-1142] SidebarCell [`#136`](https://github.com/venturehacks/halo/pull/136)
+- [LEV-1143] Tag [`#134`](https://github.com/venturehacks/halo/pull/134)
+- [LEV-1144] AvatarLockup [`#133`](https://github.com/venturehacks/halo/pull/133)
+- [Tests] update snapshots for Header, Dialog [`#135`](https://github.com/venturehacks/halo/pull/135)
+- Re-reflect color palette [`#132`](https://github.com/venturehacks/halo/pull/132)
+- Color Palette, Typography conformance to Tailwind [`#129`](https://github.com/venturehacks/halo/pull/129)
+- [LEV-1013] implement Badge styles using tailwind [`#128`](https://github.com/venturehacks/halo/pull/128)
+- [LEV-1013] Badge: add size, position support [`#122`](https://github.com/venturehacks/halo/pull/122)
+- [LEV-1145] use Tailwind to style AttentionIndicator [`#127`](https://github.com/venturehacks/halo/pull/127)
+- [LEV-1145] AttentionIndicator [`#126`](https://github.com/venturehacks/halo/pull/126)
+- [LEV-1014] tweak Color palette [`#124`](https://github.com/venturehacks/halo/pull/124)
+- [LEV-1055] Tooltip: reimplement size prop with CSS [`#125`](https://github.com/venturehacks/halo/pull/125)
+- [LEV-1012] Implement new design for Button component [`#110`](https://github.com/venturehacks/halo/pull/110)
+- Fix Gatsby PurgeCSS in production [`#121`](https://github.com/venturehacks/halo/pull/121)
+- [LEV-1141] Bracket [`#120`](https://github.com/venturehacks/halo/pull/120)
+- Attribute [`#119`](https://github.com/venturehacks/halo/pull/119)
+- Precise Total Bundle Size [`#118`](https://github.com/venturehacks/halo/pull/118)
+- InterfaceHeader [`#117`](https://github.com/venturehacks/halo/pull/117)
+- Tailwind ⚗️ [`#116`](https://github.com/venturehacks/halo/pull/116)
+- Shrink footprint of Halo global utility classes [`#115`](https://github.com/venturehacks/halo/pull/115)
+- Reduce CSS Bundle Weight [`#113`](https://github.com/venturehacks/halo/pull/113)
+- :package: fix svgo version incompatibility, resolutions [`3b5ca6b`](https://github.com/venturehacks/halo/commit/3b5ca6be11b1eee19b4c0840e3d37a6789697927)
+- Release 1.0.0-beta.0 [`1021adc`](https://github.com/venturehacks/halo/commit/1021adcf881a742787d2152ac41a79d3aff5ae0d)
+- remove `raw-` prefix. @vishaljeet feedback on #155 [`157acd3`](https://github.com/venturehacks/halo/commit/157acd38e74cd3fc6ce3c564ec3e3dd437f2d41e)
+- snapshot update [`7d2af4c`](https://github.com/venturehacks/halo/commit/7d2af4c3f0d9a9e9efebb3740f613081158b4ea9)
+- track CSS in package separately [`46ad10c`](https://github.com/venturehacks/halo/commit/46ad10c43639d3cdd40668bc2ea2d8281c17b47f)
+- [misc] replace byline [`2e97174`](https://github.com/venturehacks/halo/commit/2e971743149936242e9f1fbe089b97fae6118724)
+- Replace symlink (bad MDX artifacts) with README stub [`103584d`](https://github.com/venturehacks/halo/commit/103584de833f0f9d25358fb099a6cbdea34e41c9)
+- try rename to mdx, see github result [`f5752e3`](https://github.com/venturehacks/halo/commit/f5752e3d37cd4f26d34d0cc7b493e1866b059a6d)
+
 #### [0.15.2](https://github.com/venturehacks/halo/compare/0.15.1...0.15.2)
 
+> 17 November 2021
+
+- Release 0.15.2 [`8d332c5`](https://github.com/venturehacks/halo/commit/8d332c5c2c9038b93d0982e5912864ab603a260a)
 - one more padding-left/right hotfix for Track [`7c0f82d`](https://github.com/venturehacks/halo/commit/7c0f82d4b5c58786d0dbfe0e219e6cc513f3eb98)
 
 #### [0.15.1](https://github.com/venturehacks/halo/compare/0.15.0...0.15.1)
@@ -75,15 +167,20 @@ All notable changes to this project will be documented in this file. Dates are d
 - Enable size-limit workflow on master commits [`5954a9c`](https://github.com/venturehacks/halo/commit/5954a9ce91fb052f4a74b0e9b43a148b3c220a1a)
 - :package: sideEffects: false [`c2f4945`](https://github.com/venturehacks/halo/commit/c2f494574bb7ed4c3e9acb8238f11de6e3341548)
 
-#### [0.13.0](https://github.com/venturehacks/halo/compare/0.12.0...0.13.0)
+#### [0.13.0](https://github.com/venturehacks/halo/compare/v0.13.0...0.13.0)
 
 > 21 October 2021
 
-- [LEV-950] Monorepository Refactor [`#98`](https://github.com/venturehacks/halo/pull/98)
 - Improved ignore patterns [`0bfd85e`](https://github.com/venturehacks/halo/commit/0bfd85ef0c671723fec19ebe11b55aa8d184b07f)
 - :package: force use of gemfury registry during publish [`1f71aca`](https://github.com/venturehacks/halo/commit/1f71acaf994b273f4a347d041f3d56ecae63e5fb)
 - Release 0.13.0 [`eadffce`](https://github.com/venturehacks/halo/commit/eadffce4aed97b34ae0c1bba713f28c1f2181b41)
 - Update package.json [`a00023a`](https://github.com/venturehacks/halo/commit/a00023a40d4f3818aa6c7f8daa3b7892e40b7c2c)
+
+#### [v0.13.0](https://github.com/venturehacks/halo/compare/0.12.0...v0.13.0)
+
+> 21 October 2021
+
+- [LEV-950] Monorepository Refactor [`#98`](https://github.com/venturehacks/halo/pull/98)
 - symlink yarnrc [`944e3bb`](https://github.com/venturehacks/halo/commit/944e3bb3bc54042182c258edb5ef03483cee209c)
 
 #### [0.12.0](https://github.com/venturehacks/halo/compare/0.11.0...0.12.0)
@@ -154,11 +251,28 @@ All notable changes to this project will be documented in this file. Dates are d
 - prepublish scripts that generate an slim package.json [`ffe4019`](https://github.com/venturehacks/halo/commit/ffe4019845e36a90a859c2ef2a02985ce25448f3)
 - Update .release-it.json [`2536461`](https://github.com/venturehacks/halo/commit/2536461f9c21ede346242af339dc9f6a1fa91db3)
 
-#### [0.9.7](https://github.com/venturehacks/halo/compare/0.9.6...0.9.7)
+#### [0.9.7](https://github.com/venturehacks/halo/compare/v0.9.7...0.9.7)
 
 > 9 October 2020
 
+#### [v0.9.7](https://github.com/venturehacks/halo/compare/0.9.6...v0.9.7)
+
+> 12 October 2020
+
+- Robust .npmignore to slim down package [`39619a0`](https://github.com/venturehacks/halo/commit/39619a0dc3be6bea22e66fff28c51e215301c031)
+- Release 0.9.9 [`c001988`](https://github.com/venturehacks/halo/commit/c0019880efb37486fe11faeb96e1a59b4c192c98)
+- Release 0.9.11 [`f81d1b8`](https://github.com/venturehacks/halo/commit/f81d1b8d7bc7d4e4de1df2e21e3dd6330182a597)
+- Release 0.9.10 [`7297022`](https://github.com/venturehacks/halo/commit/72970220a5c53e93558e5eda521b4db43ca2dfee)
+- Release 0.9.8 [`df337cc`](https://github.com/venturehacks/halo/commit/df337cca783869d95ae45cdf1334950c576a2240)
 - Release 0.9.7 [`6287dca`](https://github.com/venturehacks/halo/commit/6287dca2daa16681275ae1f55c7af88058b63ed4)
+- Expand npmignore further [`cefad6e`](https://github.com/venturehacks/halo/commit/cefad6e0a5e7670e4ebede66bf604eb693ddb008)
+- tidy up publish scripts [`f525265`](https://github.com/venturehacks/halo/commit/f525265ee76a0b60eab7d6a91bda635a37a6f30a)
+- Ignore special publish package jsons [`545da0d`](https://github.com/venturehacks/halo/commit/545da0dea2511dfccb9ad3259bb742595288b54a)
+- prepublish scripts that generate an slim package.json [`ffe4019`](https://github.com/venturehacks/halo/commit/ffe4019845e36a90a859c2ef2a02985ce25448f3)
+- Postpublish script [`a4260f6`](https://github.com/venturehacks/halo/commit/a4260f6ecc0cda09cd5823fd0ba692deffab532d)
+- postpublish: Only reset yarn.lock [`4315293`](https://github.com/venturehacks/halo/commit/431529300be4fb85f5ecb16c0336dc06a124e1ac)
+- Do not re-test before publish, it's redundant with our build system [`aff900e`](https://github.com/venturehacks/halo/commit/aff900e58d724bd18cd1d7cb387592bc398966fa)
+- Update .release-it.json [`2536461`](https://github.com/venturehacks/halo/commit/2536461f9c21ede346242af339dc9f6a1fa91db3)
 - remove `prepare` script [`411f4db`](https://github.com/venturehacks/halo/commit/411f4db8f573a7f12168c82e6f6af715340bbb3a)
 
 #### [0.9.6](https://github.com/venturehacks/halo/compare/0.9.5...0.9.6)
