@@ -59,7 +59,7 @@ export function prettyFileSize(
  */
 export const FORM_FIELD_ERROR_IDENTIFIER = 'js-halo-form-field-error';
 
-export function scrollToFieldError(errorFieldKey?: string) {
+export function scrollToFieldError(errorFieldKey?: string, offsetTop = 120) {
   const container = getFieldContainer(errorFieldKey);
   const errors =
     container === window
@@ -73,7 +73,7 @@ export function scrollToFieldError(errorFieldKey?: string) {
   const errorField = errors[0];
   const errorOffset = errorField.getBoundingClientRect().top;
   const scrollPosition = container === window ? window.pageYOffset : 0;
-  const verticalPadding = container === window ? 120 : 0;
+  const verticalPadding = container === window ? offsetTop : 0;
   const top = scrollPosition + errorOffset - verticalPadding;
   container.scrollTo({ behavior: 'smooth', left: 0, top });
 }
