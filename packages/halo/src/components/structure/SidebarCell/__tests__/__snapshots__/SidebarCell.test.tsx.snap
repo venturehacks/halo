@@ -31,7 +31,7 @@ exports[`SidebarCell snapshot accessibility attributes from onClick 1`] = `
       role="switch"
     >
       <svg
-        class="haloIcon w-6 max-w-full"
+        class="haloIcon w-4 max-w-full"
         fill="currentColor"
         viewBox="0 0 24 24"
         xmlns="http://www.w3.org/2000/svg"
