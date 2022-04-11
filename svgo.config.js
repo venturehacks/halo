@@ -28,7 +28,7 @@ module.exports = {
     },
     {
       addClassesToSVGElement: {
-        className: 'haloIcon w-6 max-w-full',
+        className: 'haloIcon w-4 max-w-full',
       },
     },
     {
