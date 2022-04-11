@@ -2,11 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.4](https://github.com/venturehacks/halo/compare/1.0.0-beta.3...1.0.0-beta.4)
+
+- [LEV] Smaller Default Icon Width [`#170`](https://github.com/venturehacks/halo/pull/170)
+- [CXE-1060] Allow supplying offset argument when scrolling to error [`#169`](https://github.com/venturehacks/halo/pull/169)
+
 #### [1.0.0-beta.3](https://github.com/venturehacks/halo/compare/1.0.0-beta.2...1.0.0-beta.3)
+
+> 8 April 2022
 
 - [LEV-1416] Tailwindify Avatar [`#168`](https://github.com/venturehacks/halo/pull/168)
 - [LEV-1387] Refresh Tag [`#165`](https://github.com/venturehacks/halo/pull/165)
 - [LEV-1432] prettier-plugin-tailwindcss [`#167`](https://github.com/venturehacks/halo/pull/167)
+- Release 1.0.0-beta.3 [`e5463b9`](https://github.com/venturehacks/halo/commit/e5463b9dcc69ab44ab2a8204ffde6ff49d8aadfd)
 - Remove gpg sign from release it json [`830bec9`](https://github.com/venturehacks/halo/commit/830bec9acf47d4c9c7c034829ac29af4b075e94e)
 - add fontFamily: 'Founders Grotesk' [`9488f36`](https://github.com/venturehacks/halo/commit/9488f360bdd8073adc7b8102f9eca88334790276)
 
@@ -28,7 +36,7 @@ All notable changes to this project will be documented in this file. Dates are d
 - Prettier 2 MDX [`#160`](https://github.com/venturehacks/halo/pull/160)
 - Release 1.0.0-beta.1 [`dfe4e08`](https://github.com/venturehacks/halo/commit/dfe4e087e2519671d793f8ec8184562c2d024c42)
 
-#### [1.0.0-beta.0](https://github.com/venturehacks/halo/compare/0.15.2...1.0.0-beta.0)
+#### [1.0.0-beta.0](https://github.com/venturehacks/halo/compare/0.16.0...1.0.0-beta.0)
 
 > 17 March 2022
 
@@ -82,6 +90,14 @@ All notable changes to this project will be documented in this file. Dates are d
 - [misc] replace byline [`2e97174`](https://github.com/venturehacks/halo/commit/2e971743149936242e9f1fbe089b97fae6118724)
 - Replace symlink (bad MDX artifacts) with README stub [`103584d`](https://github.com/venturehacks/halo/commit/103584de833f0f9d25358fb099a6cbdea34e41c9)
 - try rename to mdx, see github result [`f5752e3`](https://github.com/venturehacks/halo/commit/f5752e3d37cd4f26d34d0cc7b493e1866b059a6d)
+
+#### [0.16.0](https://github.com/venturehacks/halo/compare/0.15.2...0.16.0)
+
+> 8 April 2022
+
+- [CXE-1060] Allow supplying offset argument when scrolling to error [`#169`](https://github.com/venturehacks/halo/pull/169)
+- Release 0.16.0 [`3a5fd5a`](https://github.com/venturehacks/halo/commit/3a5fd5a71f1bd1fdeca6aac484a628d21ec861be)
+- Remove gpg sign from release it json [`c583cc1`](https://github.com/venturehacks/halo/commit/c583cc1e6abd8306983340427725428f28aa11a3)
 
 #### [0.15.2](https://github.com/venturehacks/halo/compare/0.15.1...0.15.2)
 
