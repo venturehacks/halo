@@ -169,3 +169,17 @@ exports[`Avatar snapshots size xs 1`] = `
   />
 </div>
 `;
+
+exports[`Avatar snapshots size xxs 1`] = `
+<div
+  class="inline-flex flex-row items-center relative border border-gray-200 rounded-full h-4 w-4"
+>
+  <img
+    alt="Avatar for Drew"
+    class="rounded-full"
+    height="16"
+    src="https://avatars1.githubusercontent.com/u/194885"
+    width="16"
+  />
+</div>
+`;
