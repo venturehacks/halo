@@ -2,10 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.5](https://github.com/venturehacks/halo/compare/1.0.0-beta.4...1.0.0-beta.5)
+
+- add back xxs size to avatar [`#171`](https://github.com/venturehacks/halo/pull/171)
+- Update index.mdx [`496c9c9`](https://github.com/venturehacks/halo/commit/496c9c9dfad8c280c9ec5bc2381746e784f51360)
+
 #### [1.0.0-beta.4](https://github.com/venturehacks/halo/compare/1.0.0-beta.3...1.0.0-beta.4)
+
+> 11 April 2022
 
 - [LEV] Smaller Default Icon Width [`#170`](https://github.com/venturehacks/halo/pull/170)
 - [CXE-1060] Allow supplying offset argument when scrolling to error [`#169`](https://github.com/venturehacks/halo/pull/169)
+- Release 1.0.0-beta.4 [`00c2250`](https://github.com/venturehacks/halo/commit/00c22507449807bf33ff4bc642c1475f180170c0)
 
 #### [1.0.0-beta.3](https://github.com/venturehacks/halo/compare/1.0.0-beta.2...1.0.0-beta.3)
 
