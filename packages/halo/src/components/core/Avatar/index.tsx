@@ -15,7 +15,7 @@ import {
 
 export type AvatarShape = 'circle' | 'square';
 
-export type AvatarSize = 'xs' | 'sm' | 'md' | 'lg' | 'xl';
+export type AvatarSize = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
 export interface AvatarProps {
   badge?: string | React.ReactNode;
@@ -48,6 +48,9 @@ function AvatarRaw({
   React.HTMLAttributes<HTMLDivElement>) {
   const badgeSize: BadgeSize = size === 'lg' || size === 'xl' ? 'md' : 'sm';
 
+  // 'xxs' avatars are too small to have a badge
+  const showBadge = badge && size !== 'xxs';
+
   const isBadgeJSX = typeof badge !== 'string';
 
   const componentClassnames = classNames(
@@ -56,6 +59,7 @@ function AvatarRaw({
     'border border-gray-200',
     shape === 'circle' && 'rounded-full',
     shape === 'square' && 'rounded-md',
+    size === 'xxs' && 'h-4 w-4',
     size === 'xs' && 'h-6 w-6',
     size === 'sm' && 'h-8 w-8',
     size === 'md' && 'h-12 w-12',
@@ -89,7 +93,7 @@ function AvatarRaw({
         src={imageUrl}
         width={IMAGE_SIZES[size]}
       />
-      {badge && (
+      {showBadge && (
         <>{isBadgeJSX ? badge : <Badge {...badgeOptions} label={badge} />}</>
       )}
     </div>
@@ -103,6 +107,7 @@ export { Avatar };
 // For setting `height` and `width` attributes on `img` tag directly
 // due to css loading causing layout shifts.
 export const IMAGE_SIZES: Record<AvatarSize, number> = {
+  xxs: 16,
   xs: 24,
   sm: 32,
   md: 48,
