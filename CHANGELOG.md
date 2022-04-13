@@ -2,9 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.6](https://github.com/venturehacks/halo/compare/1.0.0-beta.5...1.0.0-beta.6)
+
+- [LEV-1436] Label restore accept of ReactNode on `title` [`#172`](https://github.com/venturehacks/halo/pull/172)
+
 #### [1.0.0-beta.5](https://github.com/venturehacks/halo/compare/1.0.0-beta.4...1.0.0-beta.5)
 
+> 12 April 2022
+
 - add back xxs size to avatar [`#171`](https://github.com/venturehacks/halo/pull/171)
+- Release 1.0.0-beta.5 [`ff13da2`](https://github.com/venturehacks/halo/commit/ff13da2f5a9bb03c7c2c414db966555396664b70)
 - Update index.mdx [`496c9c9`](https://github.com/venturehacks/halo/commit/496c9c9dfad8c280c9ec5bc2381746e784f51360)
 
 #### [1.0.0-beta.4](https://github.com/venturehacks/halo/compare/1.0.0-beta.3...1.0.0-beta.4)
