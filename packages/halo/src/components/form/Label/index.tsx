@@ -36,7 +36,7 @@ export interface LabelProps extends LabelPropsBase {
   /**
    * Primary description
    */
-  title?: string;
+  title?: React.ReactNode;
 }
 
 function LabelRaw({
