@@ -2,9 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.7](https://github.com/venturehacks/halo/compare/1.0.0-beta.6...1.0.0-beta.7)
+
+- [LEV-1439] Add New Icons  [`#173`](https://github.com/venturehacks/halo/pull/173)
+
 #### [1.0.0-beta.6](https://github.com/venturehacks/halo/compare/1.0.0-beta.5...1.0.0-beta.6)
 
+> 13 April 2022
+
 - [LEV-1436] Label restore accept of ReactNode on `title` [`#172`](https://github.com/venturehacks/halo/pull/172)
+- Release 1.0.0-beta.6 [`bc82da2`](https://github.com/venturehacks/halo/commit/bc82da2cb6dfd6307ac83cdbc30c59f1140b730e)
 
 #### [1.0.0-beta.5](https://github.com/venturehacks/halo/compare/1.0.0-beta.4...1.0.0-beta.5)
 
