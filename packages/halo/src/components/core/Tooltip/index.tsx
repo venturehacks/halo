@@ -2,7 +2,7 @@ import Tippy, { TippyProps } from '@tippyjs/react';
 import classNames from 'classnames';
 import React from 'react';
 
-import 'tippy.js/dist/tippy.css'; // optional
+import 'tippy.js/dist/tippy.css'; // needed for the arrow
 
 export interface TooltipProps extends TippyProps {
   /**
