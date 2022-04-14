@@ -2,6 +2,8 @@ import Tippy, { TippyProps } from '@tippyjs/react';
 import classNames from 'classnames';
 import React from 'react';
 
+import 'tippy.js/dist/tippy.css'; // optional
+
 export interface TooltipProps extends TippyProps {
   /**
    * @deprecated `distance` is unsupported since popper@2.x. Use offset instead.
@@ -30,7 +32,7 @@ export interface TooltipProps extends TippyProps {
  * ```
  */
 function Tooltip({
-  arrow = false,
+  arrow = true,
   className,
   distance,
   size = 'md',
