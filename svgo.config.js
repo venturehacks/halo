@@ -33,7 +33,7 @@ module.exports = {
     },
     {
       convertColors: {
-        currentColor: '#385075',
+        currentColor: '#0E1111',
       },
     },
     // {
