@@ -2,9 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.8](https://github.com/venturehacks/halo/compare/1.0.0-beta.7...1.0.0-beta.8)
+
+- Update missed fills [`#176`](https://github.com/venturehacks/halo/pull/176)
+- [LEV-1424] Standardize Icon Fill Color [`#174`](https://github.com/venturehacks/halo/pull/174)
+
 #### [1.0.0-beta.7](https://github.com/venturehacks/halo/compare/1.0.0-beta.6...1.0.0-beta.7)
 
+> 14 April 2022
+
 - [LEV-1439] Add New Icons  [`#173`](https://github.com/venturehacks/halo/pull/173)
+- Release 1.0.0-beta.7 [`2f14052`](https://github.com/venturehacks/halo/commit/2f14052373834fff5b4b1a01114f5706b03cb3ec)
 
 #### [1.0.0-beta.6](https://github.com/venturehacks/halo/compare/1.0.0-beta.5...1.0.0-beta.6)
 
