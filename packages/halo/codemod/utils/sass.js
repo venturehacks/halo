@@ -1,4 +1,7 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+
+import { match } from 'assert';
+
 /* eslint-disable no-console */
 const fs = require('fs');
 const postcss = require('postcss');
@@ -62,7 +65,10 @@ function getTailwindPropertiesForClass(fileName, className) {
     }
   });
 
-  return tailwindClasses.filter((c) => c !== '');
+  // Add any tailwindClasses for mixins that aren't supported
+  tailwindClasses.push(mixinsToTailwind(classNode));
+
+  return tailwindClasses.flat().filter((c) => c !== '');
 }
 
 /**
@@ -103,10 +109,85 @@ function extractCssDeclarations(classNode) {
     return [];
   }
 
-  // TODO: how do we handle inner classes?
-  // TODO: how do we deal with mixins?
+  const { nodes } = classNode;
 
-  return classNode.nodes.filter((node) => node.type === 'decl');
+  // extract all the pure css rules
+  const cssDeclarations = nodes.filter((node) => node.type === 'decl');
+
+  // handle mixins one at a time
+  const mixins = nodes.filter(
+    (node) => node.type === 'atrule' && node.name === 'include',
+  );
+  mixins.forEach((mixin) => {
+    const mixinString = mixin.params;
+    if (mixinString.startsWith('border-rounded')) {
+      // this is the default from the mixin declaration
+      let radiusValue = '4px';
+      const extractedRadiusVal = extractParamFromParentheses(mixinString);
+      if (extractedRadiusVal) {
+        radiusValue = extractedRadiusVal;
+      }
+
+      cssDeclarations.push({
+        prop: 'border-radius',
+        value: radiusValue,
+      });
+    }
+  });
+  // TODO: how do we handle inner classes?
+
+  return cssDeclarations;
+}
+
+/**
+ * Returns the value inside the FIRST parentheses in the given string
+ *
+ * e.g. "border-rounded(2px)" => "2px"
+ */
+function extractParamFromParentheses(input) {
+  const parenMatch = input.match(/\((.*?)\)/);
+  if (parenMatch && parenMatch.length > 1) {
+    return parenMatch[1];
+  }
+}
+
+/**
+ * Returns the tailwind string for all mixins that are not supported earlier.
+ *
+ * e.g. `font-antialiased` => antialiased
+ */
+function mixinsToTailwind(classNode) {
+  const tailwindClasses = [];
+  classNode.nodes
+    .filter((node) => node.type === 'atrule' && node.name === 'include')
+    .forEach((mixin) => {
+      const mixinString = mixin.params;
+
+      if (mixinString === 'font-antialiased') {
+        tailwindClasses.push('antialiased');
+      } else if (mixinString.startsWith('font(')) {
+        // extract size
+        const sizeRegex = /size: (.*?)(,|\))/;
+        const sizeMatches = mixinString.match(sizeRegex);
+        if (sizeMatches && sizeMatches.length > 1) {
+          tailwindClasses.push(`text-${sizeMatches[1]}`);
+        }
+        // extract weight
+        const weightRegex = /weight: (.*?)(,|\))/;
+        const weightMatches = mixinString.match(weightRegex);
+        if (weightMatches && weightMatches.length > 1) {
+          tailwindClasses.push(`font-${weightMatches[1]}`);
+        }
+        // extract color
+        const colorRegex = /color: (.*?)(,|\))/;
+        const colorMatches = mixinString.match(colorRegex);
+        if (colorMatches && colorMatches.length > 1) {
+          tailwindClasses.push(`text-${colorMatches[1]}`);
+        }
+      }
+    });
+
+  return tailwindClasses;
 }
 
 export { getTailwindPropertiesForClass };
