@@ -15,7 +15,6 @@
     "size:report": "yarn workspace halo build && yarn workspace halo size:json && yarn ts-node bin/ci/datadog-size-limit.ts",
     "build:docs": "yarn workspace docs build",
     "clean": "yarn workspace halo clean && yarn workspace docs clean",
-    "codemod": "jscodeshift -t codemode.js packages/halo/src/components/core/PillTag/index.tsx -d -p --parser=tsx ",
     "dev": "yarn workspace docs dev",
     "test": "yarn workspace halo test",
     "test:dev": "yarn workspace halo test:dev",
