@@ -1,7 +1,9 @@
-const path = require('path');
+/* eslint-disable @typescript-eslint/no-var-requires */
+/* eslint-disable no-console */
+import { getCssClassnames, CSS_FILENAME } from './utils/react';
+import { getTailwindPropertiesForClass } from './utils/sass';
 
-import { getCssClassnames, CSS_FILENAME } from '../codemod/utils/react';
-import { getTailwindPropertiesForClass } from '../codemod/utils/sass';
+const path = require('path');
 
 const CONSOLE_MAGENTA = '\x1b[35m%s\x1b[0m';
 const CONSOLE_YELLOW = '\x1b[33m%s\x1b[0m';
@@ -16,7 +18,7 @@ export default (fileInfo, api) => {
   const cssFilename = path.join(fileDirectory, CSS_FILENAME);
 
   const cssToTailwind = {};
-  cssClasses.forEach(className => {
+  cssClasses.forEach((className) => {
     console.log(CONSOLE_YELLOW, `Transforming css for class: '.${className}'`);
     const tailwindProps = getTailwindPropertiesForClass(cssFilename, className);
     cssToTailwind[className] = tailwindProps;
@@ -25,7 +27,7 @@ export default (fileInfo, api) => {
   console.log(CONSOLE_MAGENTA, '---------------------------------------');
   console.log(CONSOLE_MAGENTA, '------- TAILWIND TRANSFOMATION --------');
   console.log(CONSOLE_MAGENTA, '---------------------------------------');
-  Object.keys(cssToTailwind).forEach(className => {
+  Object.keys(cssToTailwind).forEach((className) => {
     if (cssToTailwind[className]) {
       const msg = `'.${className}' => "${cssToTailwind[className].join(' ')}"`;
       console.log(CONSOLE_MAGENTA, msg);

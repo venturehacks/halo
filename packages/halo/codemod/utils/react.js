@@ -1,3 +1,4 @@
+/* eslint-disable no-console */
 const CSS_FILENAME = './styles.module.scss';
 
 /**
@@ -25,7 +26,7 @@ function getCssClassnames(source, jscodeshiftApi) {
   const cssClassesReferenced = [];
   root
     .find(j.MemberExpression, { object: { name: importLocalName } })
-    .forEach(nodePath => {
+    .forEach((nodePath) => {
       const cssClassname = nodePath.node.property.name;
       // ensure classnames are deduped
       if (!cssClassesReferenced.includes(cssClassname)) {
