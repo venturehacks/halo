@@ -1,14 +1,11 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
-
-import { match } from 'assert';
-
 /* eslint-disable no-console */
 const fs = require('fs');
 const postcss = require('postcss');
 const { getTailwindUtils } = require('tailwind-mappings');
 
 const CONSOLE_RED = '\x1b[31m%s\x1b[0m';
-const TEMPO_VAL_PX = 8;
+const TEMPO_VAL_PX = 4;
 
 function getTailwindPropertiesForClass(fileName, className) {
   // need to remove all single line comments because parser cannot handle them
@@ -23,9 +20,12 @@ function getTailwindPropertiesForClass(fileName, className) {
       fileConstants[decl.prop] = decl.value;
     });
 
+  const allCssRuleNodes = extractRuleNodes(parsedCss.nodes);
+
   // We have all the parsed css nodes - iterate and fetch the css for matching classname
-  const matchingNodes = parsedCss.nodes.filter(
-    (node) => node.type === 'rule' && node.selector === `.${className}`,
+  const matchingNodes = allCssRuleNodes.filter(
+    (node) =>
+      node.selector === `.${className}` || node.selector === `&.${className}`,
   );
 
   if (matchingNodes.length === 0) {
@@ -69,6 +69,25 @@ function getTailwindPropertiesForClass(fileName, className) {
   tailwindClasses.push(mixinsToTailwind(classNode));
 
   return tailwindClasses.flat().filter((c) => c !== '');
+}
+
+/**
+ * Recursively extracts all the nodes that represent css rules. This ensures that we also
+ * extract any inner classes.
+ */
+function extractRuleNodes(inputNodes) {
+  const matchedNodes = inputNodes.filter((node) => node.type === 'rule');
+
+  const matchedChildNodes = [];
+  matchedNodes.forEach((matchedNode) => {
+    const childNodes = extractRuleNodes(matchedNode.nodes);
+    if (childNodes && childNodes.length > 0) {
+      matchedChildNodes.push(childNodes);
+    }
+  });
+
+  matchedNodes.push(matchedChildNodes.flat());
+  return matchedNodes.flat();
 }
 
 /**
@@ -134,7 +153,6 @@ function extractCssDeclarations(classNode) {
       });
     }
   });
-  // TODO: how do we handle inner classes?
 
   return cssDeclarations;
 }
