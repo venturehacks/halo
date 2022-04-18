@@ -6,12 +6,12 @@ exports[`Tooltip snapshot size lg 1`] = `
   size="lg"
 >
   <ForwardRef(TippyWrapper)
-    arrow={false}
+    arrow={true}
     className="text-md bg-dark-aaaa py-1 px-2 rounded text-white"
     content="large tooltip"
   >
     <Tippy
-      arrow={false}
+      arrow={true}
       className="text-md bg-dark-aaaa py-1 px-2 rounded text-white"
       content="large tooltip"
     >
@@ -38,12 +38,12 @@ exports[`Tooltip snapshot size md 1`] = `
   size="md"
 >
   <ForwardRef(TippyWrapper)
-    arrow={false}
+    arrow={true}
     className="text-xs bg-dark-aaaa py-1 px-2 rounded text-white"
     content="medium tooltip"
   >
     <Tippy
-      arrow={false}
+      arrow={true}
       className="text-xs bg-dark-aaaa py-1 px-2 rounded text-white"
       content="medium tooltip"
     >
@@ -69,12 +69,12 @@ exports[`Tooltip snapshot size sm [default] 1`] = `
   content="small tooltip"
 >
   <ForwardRef(TippyWrapper)
-    arrow={false}
+    arrow={true}
     className="text-xs bg-dark-aaaa py-1 px-2 rounded text-white"
     content="small tooltip"
   >
     <Tippy
-      arrow={false}
+      arrow={true}
       className="text-xs bg-dark-aaaa py-1 px-2 rounded text-white"
       content="small tooltip"
     >
