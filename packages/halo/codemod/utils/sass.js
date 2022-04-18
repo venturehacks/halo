@@ -10,7 +10,7 @@ const TEMPO_VAL_PX = 4;
 function getTailwindPropertiesForClass(fileName, className) {
   // need to remove all single line comments because parser cannot handle them
   const cssSource = fs.readFileSync(fileName).toString();
-  const cssWithoutComments = cssSource.replace(/\/\/.*/, '');
+  const cssWithoutComments = cssSource.replace(/\/\/.*/g, '');
   const parsedCss = postcss.parse(cssWithoutComments);
 
   const fileConstants = {};
