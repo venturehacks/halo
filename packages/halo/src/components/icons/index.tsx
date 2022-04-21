@@ -37,6 +37,7 @@ export { default as SuccessIcon } from './SuccessIcon.svg';
 export { default as ThumbsDownIcon } from './ThumbsDownIcon.svg';
 export { default as ThumbsUpIcon } from './ThumbsUpIcon.svg';
 export { default as TimeIcon } from './TimeIcon.svg';
+export { default as TrashIcon } from './TrashIcon.svg';
 export { default as TrendingUpIcon } from './TrendingUpIcon.svg';
 export { default as TwitterIcon } from './TwitterIcon.svg';
 export { default as UserAddIcon } from './UserAddIcon.svg';

@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
+import { CompanyIcon } from '~/components/icons';
 
 import {
   ForwardedRefProps,
@@ -23,7 +24,7 @@ export interface AvatarProps {
   badgePosition?: BadgePosition;
   badgeShape?: BadgeShape;
   className?: string;
-  imageUrl: string;
+  imageUrl?: string;
   name?: string;
   shape?: AvatarShape;
   size: AvatarSize;
@@ -67,6 +68,14 @@ function AvatarRaw({
     size === 'xl' && 'h-28 w-28',
   );
 
+  const iconClassnames = classNames(
+    'm-auto',
+    size === 'xxs' && 'h-4 w-4',
+    size === 'xs' && 'h-6 w-6',
+    size === 'sm' && 'h-8 w-8',
+    (size === 'xl' || size === 'lg' || size === 'md') && 'h-10 w-10',
+  );
+
   const avatarClassNames = classNames(
     shape === 'circle' && 'rounded-full',
     shape === 'square' && 'rounded-md',
@@ -86,13 +95,17 @@ function AvatarRaw({
       className={classNames(componentClassnames, className)}
       {...rest}
     >
-      <img
-        alt={name ? `Avatar for ${name}` : 'Avatar'}
-        className={avatarClassNames}
-        height={IMAGE_SIZES[size]}
-        src={imageUrl}
-        width={IMAGE_SIZES[size]}
-      />
+      {imageUrl ? (
+        <img
+          alt={name ? `Avatar for ${name}` : 'Avatar'}
+          className={avatarClassNames}
+          height={IMAGE_SIZES[size]}
+          src={imageUrl}
+          width={IMAGE_SIZES[size]}
+        />
+      ) : (
+        <CompanyIcon className={iconClassnames} />
+      )}
       {showBadge && (
         <>{isBadgeJSX ? badge : <Badge {...badgeOptions} label={badge} />}</>
       )}
