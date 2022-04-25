@@ -67,14 +67,16 @@ describe('Avatar', () => {
     });
 
     test(`square image fallback`, () => {
-      const component = render(<Avatar shape="square" size="lg" />);
+      const component = render(
+        <Avatar imageUrl={null} shape="square" size="lg" />,
+      );
 
       expect(component.html()).toContain('<svg');
       expect(component).toMatchSnapshot();
     });
 
     test(`circle image fallback`, () => {
-      const component = render(<Avatar size="lg" />);
+      const component = render(<Avatar imageUrl={null} size="lg" />);
 
       expect(component.html()).not.toContain('<svg');
       expect(component).toMatchSnapshot();

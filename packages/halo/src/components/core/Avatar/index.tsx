@@ -18,8 +18,6 @@ export type AvatarShape = 'circle' | 'square';
 
 export type AvatarSize = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
-const COMPANY_NOPIC = 'https://angel.co/images/shared/nopic_startup.png';
-
 export interface AvatarProps {
   badge?: string | React.ReactNode;
   badgeColor?: BadgeColor;
@@ -56,6 +54,9 @@ function AvatarRaw({
 
   const isBadgeJSX = typeof badge !== 'string';
 
+  const showImage =
+    shape === 'circle' || (imageUrl && !imageUrl.includes('nopic_startup.png'));
+
   const componentClassnames = classNames(
     className,
     'inline-flex flex-row items-center relative',
@@ -68,6 +69,7 @@ function AvatarRaw({
     size === 'md' && 'h-12 w-12',
     size === 'lg' && 'h-18 w-18',
     size === 'xl' && 'h-28 w-28',
+    !showImage && 'bg-slate-100',
   );
 
   const iconClassnames = classNames(
@@ -90,9 +92,6 @@ function AvatarRaw({
     size: badgeSize,
     tooltip,
   };
-
-  const showImage =
-    shape === 'circle' || (imageUrl && imageUrl !== COMPANY_NOPIC);
 
   return (
     <div
