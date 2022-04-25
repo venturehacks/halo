@@ -2,10 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.9](https://github.com/venturehacks/halo/compare/1.0.0-beta.8...1.0.0-beta.9)
+
+- Latest React (DOM) types [`#278`](https://github.com/venturehacks/halo/pull/278)
+- add issue template [`#177`](https://github.com/venturehacks/halo/pull/177)
+- [Tooltip] restore arrow functionality [`#175`](https://github.com/venturehacks/halo/pull/175)
+
 #### [1.0.0-beta.8](https://github.com/venturehacks/halo/compare/1.0.0-beta.7...1.0.0-beta.8)
+
+> 14 April 2022
 
 - Update missed fills [`#176`](https://github.com/venturehacks/halo/pull/176)
 - [LEV-1424] Standardize Icon Fill Color [`#174`](https://github.com/venturehacks/halo/pull/174)
+- Release 1.0.0-beta.8 [`4dd9d85`](https://github.com/venturehacks/halo/commit/4dd9d859b0d73c80e9a3c819cf5a8b88e1e06f33)
 
 #### [1.0.0-beta.7](https://github.com/venturehacks/halo/compare/1.0.0-beta.6...1.0.0-beta.7)
 
