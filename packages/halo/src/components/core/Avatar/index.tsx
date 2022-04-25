@@ -24,7 +24,7 @@ export interface AvatarProps {
   badgePosition?: BadgePosition;
   badgeShape?: BadgeShape;
   className?: string;
-  imageUrl: string;
+  imageUrl: Nullable<string>;
   name?: string;
   shape?: AvatarShape;
   size: AvatarSize;
