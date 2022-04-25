@@ -116,7 +116,7 @@ function ButtonRaw({
 }: ButtonProps & ForwardedRefProps<HTMLButtonElement | HTMLAnchorElement>) {
   const buttonClassNames = classNames([
     className,
-    `rounded border-solid border gap-x-2.5 mr-4 last:mr-0 whitespace-nowrap
+    `rounded border-solid border gap-x-2.5 whitespace-nowrap
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50`,
     size === 'sm' && 'px-3 py-1.5',
