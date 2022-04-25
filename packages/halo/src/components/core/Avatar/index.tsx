@@ -55,7 +55,7 @@ function AvatarRaw({
   const isBadgeJSX = typeof badge !== 'string';
 
   const showImage =
-    shape === 'circle' || (imageUrl && !imageUrl.includes('nopic_startup.png'));
+    shape === 'circle' || (imageUrl && !imageUrl.includes('nopic_startup'));
 
   const componentClassnames = classNames(
     className,
