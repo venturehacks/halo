@@ -18,6 +18,8 @@ export type AvatarShape = 'circle' | 'square';
 
 export type AvatarSize = 'xxs' | 'xs' | 'sm' | 'md' | 'lg' | 'xl';
 
+const COMPANY_NOPIC = 'https://angel.co/images/shared/nopic_startup.png';
+
 export interface AvatarProps {
   badge?: string | React.ReactNode;
   badgeColor?: BadgeColor;
@@ -89,13 +91,16 @@ function AvatarRaw({
     tooltip,
   };
 
+  const showImage =
+    shape === 'circle' || (imageUrl && imageUrl !== COMPANY_NOPIC);
+
   return (
     <div
       ref={forwardedRef}
       className={classNames(componentClassnames, className)}
       {...rest}
     >
-      {imageUrl ? (
+      {showImage ? (
         <img
           alt={name ? `Avatar for ${name}` : 'Avatar'}
           className={avatarClassNames}
