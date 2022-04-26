@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.10](https://github.com/venturehacks/halo/compare/1.0.0-beta.9...1.0.0-beta.10)
+
+- [LEV-855] Restore grid class names [`#279`](https://github.com/venturehacks/halo/pull/279)
+
 #### [1.0.0-beta.9](https://github.com/venturehacks/halo/compare/1.0.0-beta.8...1.0.0-beta.9)
+
+> 25 April 2022
 
 - Latest React (DOM) types [`#278`](https://github.com/venturehacks/halo/pull/278)
 - add issue template [`#177`](https://github.com/venturehacks/halo/pull/177)
 - [Tooltip] restore arrow functionality [`#175`](https://github.com/venturehacks/halo/pull/175)
+- Release 1.0.0-beta.9 [`5fcdb23`](https://github.com/venturehacks/halo/commit/5fcdb23758cfaca317e0aa3c3a9b6fa069c90103)
 
 #### [1.0.0-beta.8](https://github.com/venturehacks/halo/compare/1.0.0-beta.7...1.0.0-beta.8)
 
