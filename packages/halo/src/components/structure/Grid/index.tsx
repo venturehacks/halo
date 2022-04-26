@@ -42,8 +42,8 @@ function Grid({
     className,
     row && styles.row,
     centered && styles.centered,
-    !row && span && `__halo_cellSpan_${span}`,
-    !row && offset && `__halo_cellOffset_${offset}`,
+    !row && span && `_h_cellSpan_${span}`,
+    !row && offset && `_h_cellOffset_${offset}`,
   );
 
   return (
