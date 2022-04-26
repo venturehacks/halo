@@ -37,7 +37,7 @@ $toggle-switch-knob-size: tempo(4);
   :not(:checked) + & {
     &::before,
     &::after {
-      color: #2b2823; // TODO(drew): GTM color;
+      color: $slate-500;
     }
   }
 
