@@ -2,7 +2,7 @@
   "name": "halo",
   "version": "1.0.0-beta.10",
   "module": "dist/esm/halo.mjs",
-  "main": "dist/cjs/halo.cjs",
+  "main": "dist/cjs/halo.js",
   "style": "dist/esm/halo.css",
   "types": "dist/typings/index.d.ts",
   "displayName": "Halo Design System",
