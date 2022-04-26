@@ -2,8 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.12](https://github.com/venturehacks/halo/compare/1.0.0-beta.11...1.0.0-beta.12)
+
+- [LEV-855] Halo QA Fixes Round 1(?) [`#280`](https://github.com/venturehacks/halo/pull/280)
+- [LEV-855] Halo QA Fixes Round 1(?) (#280) [`#236`](https://github.com/venturehacks/halo/issues/236) [`#234`](https://github.com/venturehacks/halo/issues/234) [`#232`](https://github.com/venturehacks/halo/issues/232) [`#224`](https://github.com/venturehacks/halo/issues/224) [`#218`](https://github.com/venturehacks/halo/issues/218)
+
 #### [1.0.0-beta.11](https://github.com/venturehacks/halo/compare/1.0.0-beta.10...1.0.0-beta.11)
 
+> 26 April 2022
+
+- Release 1.0.0-beta.11 [`261cd70`](https://github.com/venturehacks/halo/commit/261cd70a22230df10f6cc61835396fea2927efd3)
 - output `.js` for CommonJS module [`f1ccb7d`](https://github.com/venturehacks/halo/commit/f1ccb7dafe090ea0ec41fcf46a652def98e5d0ed)
 
 #### [1.0.0-beta.10](https://github.com/venturehacks/halo/compare/1.0.0-beta.9...1.0.0-beta.10)
