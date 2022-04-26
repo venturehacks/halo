@@ -2,9 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.11](https://github.com/venturehacks/halo/compare/1.0.0-beta.10...1.0.0-beta.11)
+
+- output `.js` for CommonJS module [`f1ccb7d`](https://github.com/venturehacks/halo/commit/f1ccb7dafe090ea0ec41fcf46a652def98e5d0ed)
+
 #### [1.0.0-beta.10](https://github.com/venturehacks/halo/compare/1.0.0-beta.9...1.0.0-beta.10)
 
+> 26 April 2022
+
 - [LEV-855] Restore grid class names [`#279`](https://github.com/venturehacks/halo/pull/279)
+- Release 1.0.0-beta.10 [`d24af70`](https://github.com/venturehacks/halo/commit/d24af70fcc4d46746dadd46162c01040f0398dc8)
 
 #### [1.0.0-beta.9](https://github.com/venturehacks/halo/compare/1.0.0-beta.8...1.0.0-beta.9)
 
