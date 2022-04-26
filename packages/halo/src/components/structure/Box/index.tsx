@@ -226,7 +226,7 @@ function augmentNegativeSpaceClasses(
 
   if (typeof space === 'object') {
     return Object.keys(space)
-      .map((direction) => `${metric[0]}${direction[0]}-${space[direction]}`)
+      .map((direction) => `${metric[0]}${direction[0]}-${space[direction] * 2}`) // Halo magnitude is 2x Tailwind
       .join(' ');
   }
 
