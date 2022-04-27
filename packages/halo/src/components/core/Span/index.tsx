@@ -171,6 +171,7 @@ function SpanRaw(
     // these conditional expressions (save kb)
     size === '2xs' && 'text-2xs',
     size === 'xs' && 'text-xs',
+    size === 'sm' && 'text-sm',
     size === 'md' && 'text-md',
     size === 'lg' && 'text-lg',
     size === 'xl' && 'text-xl',
