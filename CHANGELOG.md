@@ -2,10 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.15](https://github.com/venturehacks/halo/compare/1.0.0-beta.14...1.0.0-beta.15)
+
+- [LEV-1440] Restore input mixins [`#282`](https://github.com/venturehacks/halo/pull/282)
+
 #### [1.0.0-beta.14](https://github.com/venturehacks/halo/compare/1.0.0-beta.13...1.0.0-beta.14)
+
+> 27 April 2022
 
 - Fixes #207 Fixes #195 Fixes #187 [`#281`](https://github.com/venturehacks/halo/pull/281)
 - Fixes #207 Fixes #195 Fixes #187 (#281) [`#207`](https://github.com/venturehacks/halo/issues/207) [`#195`](https://github.com/venturehacks/halo/issues/195) [`#187`](https://github.com/venturehacks/halo/issues/187)
+- Release 1.0.0-beta.14 [`0b32bf0`](https://github.com/venturehacks/halo/commit/0b32bf02b3a078bd4e31b1c978382fad07fbf0de)
 
 #### [1.0.0-beta.13](https://github.com/venturehacks/halo/compare/1.0.0-beta.12...1.0.0-beta.13)
 
