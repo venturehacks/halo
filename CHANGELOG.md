@@ -2,10 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.13](https://github.com/venturehacks/halo/compare/1.0.0-beta.12...1.0.0-beta.13)
+
+- disable interpolation because it's breaking PurgeCSS on TFE [`1f30cc0`](https://github.com/venturehacks/halo/commit/1f30cc07f8c620591ad334db3d4d48bdf9bf5056)
+
 #### [1.0.0-beta.12](https://github.com/venturehacks/halo/compare/1.0.0-beta.11...1.0.0-beta.12)
+
+> 26 April 2022
 
 - [LEV-855] Halo QA Fixes Round 1(?) [`#280`](https://github.com/venturehacks/halo/pull/280)
 - [LEV-855] Halo QA Fixes Round 1(?) (#280) [`#236`](https://github.com/venturehacks/halo/issues/236) [`#234`](https://github.com/venturehacks/halo/issues/234) [`#232`](https://github.com/venturehacks/halo/issues/232) [`#224`](https://github.com/venturehacks/halo/issues/224) [`#218`](https://github.com/venturehacks/halo/issues/218)
+- Release 1.0.0-beta.12 [`5c45864`](https://github.com/venturehacks/halo/commit/5c4586485baea33dcc2b548a32d2c7deb80553b2)
 
 #### [1.0.0-beta.11](https://github.com/venturehacks/halo/compare/1.0.0-beta.10...1.0.0-beta.11)
 
