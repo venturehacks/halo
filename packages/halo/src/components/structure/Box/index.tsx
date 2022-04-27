@@ -189,9 +189,10 @@ function BoxRaw({
     isFlexRow && valign && FLEX_ALIGNMENT_MAP.row.valign[valign],
     // TODO(drew): restore inline styles or remove prop
     order && `order-${order}`,
-    maxWidth && `max-w-[${maxWidth}]`,
-    maxHeight && `max-h-[${maxHeight}]`,
-    background && `bg-[${background}]`,
+    // TODO(drew): disable interpolation because it's breaking PurgeCSS on TFE
+    // maxWidth && `max-w`,
+    // maxHeight && `max-h`
+    // background && `bg`
     relative && 'relative',
     width === '100%' && 'w-full',
     wrap && 'flex-wrap',
