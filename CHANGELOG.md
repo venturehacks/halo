@@ -2,10 +2,20 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.17](https://github.com/venturehacks/halo/compare/1.0.0-beta.16...1.0.0-beta.17)
+
+- [LEV-855] Avatar: accommodate 1px border on image dimensions [`#286`](https://github.com/venturehacks/halo/pull/286)
+- [LEV-855] Input Icons and Paragraph Margin (again), Label Spacing [`#287`](https://github.com/venturehacks/halo/pull/287)
+- [LEV-1435] Startup Fallback Image [`#277`](https://github.com/venturehacks/halo/pull/277)
+- [LEV-855] Input Icons and Paragraph Margin (again), Label Spacing (#287) [`#246`](https://github.com/venturehacks/halo/issues/246) [`#246`](https://github.com/venturehacks/halo/issues/246) [`#258`](https://github.com/venturehacks/halo/issues/258)
+
 #### [1.0.0-beta.16](https://github.com/venturehacks/halo/compare/1.0.0-beta.15...1.0.0-beta.16)
+
+> 28 April 2022
 
 - [LEV-855] Fix Flow on Paragraph [`#285`](https://github.com/venturehacks/halo/pull/285)
 - [LEV-855] Fix Flow on Paragraph (#285) [`#265`](https://github.com/venturehacks/halo/issues/265) [`#253`](https://github.com/venturehacks/halo/issues/253) [`#216`](https://github.com/venturehacks/halo/issues/216) [`#192`](https://github.com/venturehacks/halo/issues/192) [`#240`](https://github.com/venturehacks/halo/issues/240)
+- Release 1.0.0-beta.16 [`4e342d3`](https://github.com/venturehacks/halo/commit/4e342d329173635e03e95b047d1b389af8e5bf57)
 
 #### [1.0.0-beta.15](https://github.com/venturehacks/halo/compare/1.0.0-beta.14...1.0.0-beta.15)
 
