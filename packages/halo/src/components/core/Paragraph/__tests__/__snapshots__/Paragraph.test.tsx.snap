@@ -2,7 +2,7 @@
 
 exports[`Paragraph snapshot contrast 1`] = `
 <p
-  class="component mb-4 text-dark-a text-md"
+  class="component m-0 mb-4 text-dark-a text-md"
 >
   single A
 </p>
@@ -18,7 +18,7 @@ exports[`Paragraph snapshot flow 1`] = `
 
 exports[`Paragraph snapshot size 1`] = `
 <p
-  class="component mb-4 text-2xl"
+  class="component m-0 mb-4 text-2xl"
 >
   size 2xl
 </p>
