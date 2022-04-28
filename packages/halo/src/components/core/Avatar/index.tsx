@@ -24,9 +24,20 @@ export interface AvatarProps {
   badgePosition?: BadgePosition;
   badgeShape?: BadgeShape;
   className?: string;
+  /**
+   * Falsy value or url containing nopic_startup will result in
+   * startup fallback icon.
+   */
   imageUrl: Nullable<string>;
   name?: string;
+  /**
+   * Circle for individuals, square for startups
+   * @default circle
+   */
   shape?: AvatarShape;
+  /**
+   * @default sm
+   */
   size: AvatarSize;
   tooltip?: string;
 }
@@ -54,13 +65,13 @@ function AvatarRaw({
 
   const isBadgeJSX = typeof badge !== 'string';
 
-  const showImage =
-    shape === 'circle' || (imageUrl && !imageUrl.includes('nopic_startup'));
+  const useStartupFallbackIcon =
+    shape === 'square' && (!imageUrl || imageUrl?.includes('nopic_startup'));
 
   const componentClassnames = classNames(
     className,
     'inline-flex flex-row items-center relative',
-    'border border-gray-200',
+    'border border-gray-300',
     shape === 'circle' && 'rounded-full',
     shape === 'square' && 'rounded-md',
     size === 'xxs' && 'h-4 w-4',
@@ -69,15 +80,16 @@ function AvatarRaw({
     size === 'md' && 'h-12 w-12',
     size === 'lg' && 'h-18 w-18',
     size === 'xl' && 'h-28 w-28',
-    !showImage && 'bg-slate-100',
+    useStartupFallbackIcon && 'bg-slate-100',
   );
 
   const iconClassnames = classNames(
     'm-auto',
-    size === 'xxs' && 'h-4 w-4',
-    size === 'xs' && 'h-6 w-6',
-    size === 'sm' && 'h-8 w-8',
-    (size === 'xl' || size === 'lg' || size === 'md') && 'h-10 w-10',
+    size === 'xxs' && 'h-3 w-3',
+    size === 'xs' && 'h-4 w-4',
+    size === 'sm' && 'h-5 w-5',
+    size === 'md' && 'h-7 w-7',
+    (size === 'xl' || size === 'lg') && 'h-10 w-10',
   );
 
   const avatarClassNames = classNames(
@@ -99,16 +111,17 @@ function AvatarRaw({
       className={classNames(componentClassnames, className)}
       {...rest}
     >
-      {showImage ? (
+      {useStartupFallbackIcon ? (
+        <CompanyIcon className={iconClassnames} />
+      ) : (
         <img
           alt={name ? `Avatar for ${name}` : 'Avatar'}
           className={avatarClassNames}
-          height={IMAGE_SIZES[size]}
+          /* accomodate 1px border */
+          height={IMAGE_SIZES[size] - 2}
           src={imageUrl}
-          width={IMAGE_SIZES[size]}
+          width={IMAGE_SIZES[size] - 2}
         />
-      ) : (
-        <CompanyIcon className={iconClassnames} />
       )}
       {showBadge && (
         <>{isBadgeJSX ? badge : <Badge {...badgeOptions} label={badge} />}</>

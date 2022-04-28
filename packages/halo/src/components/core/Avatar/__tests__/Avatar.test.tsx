@@ -142,8 +142,10 @@ describe('Avatar', () => {
         const component = render(<Avatar {...sharedProps} size={size} />);
         const image = component.find('img');
 
-        expect(image.prop('height')).toEqual(IMAGE_SIZES[size].toString());
-        expect(image.prop('width')).toEqual(IMAGE_SIZES[size].toString());
+        expect(image.prop('height')).toEqual(
+          (IMAGE_SIZES[size] - 2).toString(),
+        );
+        expect(image.prop('width')).toEqual((IMAGE_SIZES[size] - 2).toString());
       });
     });
   });
