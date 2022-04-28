@@ -24,9 +24,20 @@ export interface AvatarProps {
   badgePosition?: BadgePosition;
   badgeShape?: BadgeShape;
   className?: string;
+  /**
+   * Falsy value or url containing nopic_startup will result in
+   * startup fallback icon.
+   */
   imageUrl: Nullable<string>;
   name?: string;
+  /**
+   * Circle for individuals, square for startups
+   * @default circle
+   */
   shape?: AvatarShape;
+  /**
+   * @default sm
+   */
   size: AvatarSize;
   tooltip?: string;
 }
@@ -55,7 +66,7 @@ function AvatarRaw({
   const isBadgeJSX = typeof badge !== 'string';
 
   const useStartupFallbackIcon =
-    shape === 'square' && imageUrl?.includes('nopic_startup');
+    shape === 'square' && (!imageUrl || imageUrl?.includes('nopic_startup'));
 
   const componentClassnames = classNames(
     className,
@@ -74,10 +85,11 @@ function AvatarRaw({
 
   const iconClassnames = classNames(
     'm-auto',
-    size === 'xxs' && 'h-4 w-4',
-    size === 'xs' && 'h-6 w-6',
-    size === 'sm' && 'h-8 w-8',
-    (size === 'xl' || size === 'lg' || size === 'md') && 'h-10 w-10',
+    size === 'xxs' && 'h-3 w-3',
+    size === 'xs' && 'h-4 w-4',
+    size === 'sm' && 'h-5 w-5',
+    size === 'md' && 'h-7 w-7',
+    (size === 'xl' || size === 'lg') && 'h-10 w-10',
   );
 
   const avatarClassNames = classNames(
