@@ -51,8 +51,7 @@ function ParagraphRaw({
 }: ParagraphProps & ForwardedRefProps<HTMLHeadingElement>) {
   const classes = classNames(
     styles.component,
-    'm-0',
-    flow && 'mb-4',
+    flow ? 'mb-4' : 'm-0',
     className,
   );
 
