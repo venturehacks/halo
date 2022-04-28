@@ -17,7 +17,7 @@ exports[`Label snapshot containsFieldGroup 1`] = `
         Name
       </div>
       <div
-        class="text-dark-a text-sm"
+        class="text-dark-a mb-2 text-sm"
       >
         Who are you?
       </div>
@@ -80,7 +80,7 @@ exports[`Label snapshot standard 1`] = `
       Name
     </div>
     <div
-      class="text-dark-a text-sm"
+      class="text-dark-a mb-2 text-sm"
     >
       Who are you?
     </div>

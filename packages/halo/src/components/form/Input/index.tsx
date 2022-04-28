@@ -133,10 +133,10 @@ function InputRaw({
       {input}
       <div
         className={classNames(
-          size === 'sm' && 'top-0.5 h-4 w-4',
-          size === 'md' && 'top-1.5 h-7 w-7',
-          size === 'lg' && 'top-1 h-9 w-9',
-          'text-dark-a rounded-md bg-blue-100',
+          size === 'sm' && ' h-5 w-5',
+          size === 'md' && ' h-7 w-7',
+          size === 'lg' && 'h-9 w-9',
+          'text-dark-a top-1.5 rounded-md bg-blue-100',
           'flex flex-col items-center justify-center',
           'absolute',
           iconPosition === 'left' && 'left-2',
