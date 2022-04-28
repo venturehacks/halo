@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
+import { CompanyIcon } from '~/components/icons';
 
 import {
   ForwardedRefProps,
@@ -23,7 +24,7 @@ export interface AvatarProps {
   badgePosition?: BadgePosition;
   badgeShape?: BadgeShape;
   className?: string;
-  imageUrl: string;
+  imageUrl: Nullable<string>;
   name?: string;
   shape?: AvatarShape;
   size: AvatarSize;
@@ -53,6 +54,9 @@ function AvatarRaw({
 
   const isBadgeJSX = typeof badge !== 'string';
 
+  const showImage =
+    shape === 'circle' || (imageUrl && !imageUrl.includes('nopic_startup'));
+
   const componentClassnames = classNames(
     className,
     'inline-flex flex-row items-center relative',
@@ -65,6 +69,15 @@ function AvatarRaw({
     size === 'md' && 'h-12 w-12',
     size === 'lg' && 'h-18 w-18',
     size === 'xl' && 'h-28 w-28',
+    !showImage && 'bg-slate-100',
+  );
+
+  const iconClassnames = classNames(
+    'm-auto',
+    size === 'xxs' && 'h-4 w-4',
+    size === 'xs' && 'h-6 w-6',
+    size === 'sm' && 'h-8 w-8',
+    (size === 'xl' || size === 'lg' || size === 'md') && 'h-10 w-10',
   );
 
   const avatarClassNames = classNames(
@@ -86,13 +99,17 @@ function AvatarRaw({
       className={classNames(componentClassnames, className)}
       {...rest}
     >
-      <img
-        alt={name ? `Avatar for ${name}` : 'Avatar'}
-        className={avatarClassNames}
-        height={IMAGE_SIZES[size]}
-        src={imageUrl}
-        width={IMAGE_SIZES[size]}
-      />
+      {showImage ? (
+        <img
+          alt={name ? `Avatar for ${name}` : 'Avatar'}
+          className={avatarClassNames}
+          height={IMAGE_SIZES[size]}
+          src={imageUrl}
+          width={IMAGE_SIZES[size]}
+        />
+      ) : (
+        <CompanyIcon className={iconClassnames} />
+      )}
       {showBadge && (
         <>{isBadgeJSX ? badge : <Badge {...badgeOptions} label={badge} />}</>
       )}

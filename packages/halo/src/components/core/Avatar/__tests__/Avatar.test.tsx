@@ -66,6 +66,36 @@ describe('Avatar', () => {
       expect(component).toMatchSnapshot();
     });
 
+    test(`square image fallback`, () => {
+      const component = render(
+        <Avatar imageUrl={null} shape="square" size="lg" />,
+      );
+
+      expect(component.html()).toContain('<svg');
+      expect(component).toMatchSnapshot();
+    });
+
+    test(`circle image fallback`, () => {
+      const component = render(<Avatar imageUrl={null} size="lg" />);
+
+      expect(component.html()).not.toContain('<svg');
+      expect(component).toMatchSnapshot();
+    });
+
+    test(`badgeColor`, () => {
+      const component = render(
+        <Avatar
+          {...sharedProps}
+          badge="Purple"
+          badgeColor="purple"
+          size="lg"
+        />,
+      );
+
+      expect(component.text()).toContain('Purple');
+      expect(component).toMatchSnapshot();
+    });
+
     test(`badgeColor`, () => {
       const component = render(
         <Avatar
