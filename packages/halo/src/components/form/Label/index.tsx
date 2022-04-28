@@ -72,7 +72,7 @@ function LabelRaw({
           )}
         </div>
       )}
-      {byline && <div className="text-dark-a text-sm">{byline}</div>}
+      {byline && <div className="text-dark-a mb-2 text-sm">{byline}</div>}
     </div>
   );
 

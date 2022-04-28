@@ -115,7 +115,9 @@ function InputRaw({
           transparent,
         }),
         // allow space for icon
-        icon && iconPosition === 'left' && 'pl-11',
+        icon && iconPosition === 'left' && size === 'sm' && 'pl-9',
+        icon && iconPosition === 'left' && size === 'md' && 'pl-11',
+        icon && iconPosition === 'left' && size === 'lg' && 'pl-14',
         icon && iconPosition === 'right' && 'pr-11',
         className,
       )}
@@ -133,10 +135,10 @@ function InputRaw({
       {input}
       <div
         className={classNames(
-          size === 'sm' && 'top-0.5 h-4 w-4',
-          size === 'md' && 'top-1.5 h-7 w-7',
-          size === 'lg' && 'top-1 h-9 w-9',
-          'text-dark-a rounded-md bg-blue-100',
+          size === 'sm' && ' h-5 w-5',
+          size === 'md' && ' h-7 w-7',
+          size === 'lg' && 'h-9 w-9',
+          'text-dark-a top-1.5 rounded-md bg-blue-100',
           'flex flex-col items-center justify-center',
           'absolute',
           iconPosition === 'left' && 'left-2',
@@ -191,7 +193,7 @@ function rawInputClassNames({
       : 'bg-white rounded focus:border-2',
     size === 'sm' && 'px-3 py-1 h-8',
     size === 'md' && 'px-3 py-2 h-10',
-    size === 'lg' && 'p-3 h-12',
+    size === 'lg' && 'p-3  h-12',
     !hasError && transparent && 'border-none',
     !hasError && !transparent && 'border border-gray-500',
     // disabled
