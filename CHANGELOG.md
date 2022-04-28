@@ -2,9 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.16](https://github.com/venturehacks/halo/compare/1.0.0-beta.15...1.0.0-beta.16)
+
+- [LEV-855] Fix Flow on Paragraph [`#285`](https://github.com/venturehacks/halo/pull/285)
+- [LEV-855] Fix Flow on Paragraph (#285) [`#265`](https://github.com/venturehacks/halo/issues/265) [`#253`](https://github.com/venturehacks/halo/issues/253) [`#216`](https://github.com/venturehacks/halo/issues/216) [`#192`](https://github.com/venturehacks/halo/issues/192) [`#240`](https://github.com/venturehacks/halo/issues/240)
+
 #### [1.0.0-beta.15](https://github.com/venturehacks/halo/compare/1.0.0-beta.14...1.0.0-beta.15)
 
+> 27 April 2022
+
 - [LEV-1440] Restore input mixins [`#282`](https://github.com/venturehacks/halo/pull/282)
+- Release 1.0.0-beta.15 [`c6631e3`](https://github.com/venturehacks/halo/commit/c6631e3a608ce5aac5f8247ea4ec78eab97c6f8b)
 
 #### [1.0.0-beta.14](https://github.com/venturehacks/halo/compare/1.0.0-beta.13...1.0.0-beta.14)
 
