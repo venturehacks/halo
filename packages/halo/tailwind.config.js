@@ -202,7 +202,7 @@ module.exports = {
       '2xs': ['11px', '18px'], // (deprecated legacy nano)
       'xs': ['12px', '18px'], // (deprecated legacy micro)
       'sm': ['14px', '20px'], // Mini
-      'md': ['16px', '20px'], // Body / Subsection
+      'md': ['16px', '24px'], // Body / Subsection
       'lg': ['20px', '24px'], // Section
       'xl': ['24px', '30px'], // Page
       '2xl': ['36px', '40px'], // Display
