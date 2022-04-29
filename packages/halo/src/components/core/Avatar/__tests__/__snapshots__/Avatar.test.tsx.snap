@@ -227,7 +227,7 @@ exports[`Avatar snapshots square image fallback 1`] = `
   class="inline-flex flex-row items-center relative border border-gray-300 rounded-md h-18 w-18 bg-slate-100"
 >
   <svg
-    class="m-auto h-10 w-10"
+    class="m-auto text-slate-400 h-10 w-10"
     fill="currentColor"
     viewBox="0 0 24 24"
     xmlns="http://www.w3.org/2000/svg"
