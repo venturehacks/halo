@@ -84,7 +84,7 @@ function AvatarRaw({
   );
 
   const iconClassnames = classNames(
-    'm-auto',
+    'm-auto text-slate-400',
     size === 'xxs' && 'h-3 w-3',
     size === 'xs' && 'h-4 w-4',
     size === 'sm' && 'h-5 w-5',

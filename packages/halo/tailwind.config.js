@@ -202,7 +202,7 @@ module.exports = {
       '2xs': ['11px', '18px'], // (deprecated legacy nano)
       'xs': ['12px', '18px'], // (deprecated legacy micro)
       'sm': ['14px', '20px'], // Mini
-      'md': ['16px', '20px'], // Body / Subsection
+      'md': ['16px', '24px'], // Body / Subsection
       'lg': ['20px', '24px'], // Section
       'xl': ['24px', '30px'], // Page
       '2xl': ['36px', '40px'], // Display
@@ -271,6 +271,17 @@ module.exports = {
 
       xxl: '1800px',
       superwidescreen: '1800px',
+    },
+    borderRadius: {
+      'none': '0px',
+      'sm': '2px',
+      'DEFAULT': '4px',
+      'md': '4px',
+      'lg': '8px',
+      'xl': '12px',
+      '2xl': '16px',
+      '3xl': '24px',
+      'full': '9999px',
     },
 
     boxShadow: {
