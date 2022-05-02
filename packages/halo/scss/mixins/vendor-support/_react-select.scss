@@ -15,24 +15,24 @@
         border-color: $blue-500;
       }
 
-      &.select__control-is-focused,
-      &.select__control-menu-is-open.select__control-menu-is-open {
+      &.select__control--is-focused,
+      &.select__control--menu-is-open.select__control--menu-is-open {
         border-color: $blue-500;
       }
-      &.select__control-is-focused {
+      &.select__control--is-focused {
         box-shadow: 0 0 0 4px $blue-200;
         outline: none;
       }
-      &.select__control-menu-is-open.select__control-menu-is-open {
+      &.select__control--menu-is-open.select__control--menu-is-open {
         box-shadow: none;
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
       }
 
-      &.select__control-is-disabled {
+      &.select__control--is-disabled {
         @include input-disabled;
       }
-      .select__single-value-is-disabled {
+      .select__single-value--is-disabled {
         @include font($color: text-dark-a);
       }
     }
@@ -81,16 +81,16 @@
     }
 
     .select__option:hover,
-    .select__option-is-focused {
+    .select__option--is-focused {
       background-color: $blue-200;
     }
 
-    .select__option-is-selected {
+    .select__option--is-selected {
       color: $dark-aaaa;
       background-color: $blue-200;
     }
 
-    .select__option-is-disabled {
+    .select__option--is-disabled {
       @include font($color: $dark-a);
     }
   }

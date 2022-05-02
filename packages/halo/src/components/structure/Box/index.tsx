@@ -179,6 +179,10 @@ function BoxRaw({
     inlineStyles.background = background;
   }
 
+  if (textAlign) {
+    inlineStyles.textAlign = textAlign;
+  }
+
   const classes = classNames(
     className,
     isFlexColumn && 'flex flex-col',
@@ -187,21 +191,12 @@ function BoxRaw({
     isFlexRow && 'flex flex-row',
     isFlexRow && align && FLEX_ALIGNMENT_MAP.row.align[align],
     isFlexRow && valign && FLEX_ALIGNMENT_MAP.row.valign[valign],
-    // TODO(drew): restore inline styles or remove prop
-    order && `order-${order}`,
-    // TODO(drew): disable interpolation because it's breaking PurgeCSS on TFE
-    // maxWidth && `max-w`,
-    // maxHeight && `max-h`
-    // background && `bg`
     relative && 'relative',
     width === '100%' && 'w-full',
     wrap && 'flex-wrap',
     onClick && 'cursor-pointer',
     augmentNegativeSpaceClasses(padding, 'padding'),
     augmentNegativeSpaceClasses(margin, 'margin'),
-    // TODO(drew): restore inline styles or remove prop
-    background && `bg-${background}`,
-    textAlign && `text-${textAlign}`,
   );
 
   return (

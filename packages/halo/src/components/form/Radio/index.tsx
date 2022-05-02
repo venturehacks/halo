@@ -58,8 +58,9 @@ function RadioRaw({
   ...rest
 }: RadioProps & ForwardedRefProps<HTMLInputElement>) {
   return (
-    <div ref={forwardedRef}>
+    <>
       <input
+        ref={forwardedRef}
         className={classNames(
           styles.input,
           className,
@@ -84,7 +85,7 @@ function RadioRaw({
       >
         {label}
       </label>
-    </div>
+    </>
   );
 }
 
