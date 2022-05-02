@@ -108,7 +108,7 @@ function ButtonRaw({
   icon,
   iconPosition = 'left',
   onClick,
-  size = 'sm',
+  size = 'md',
   type = 'button',
   variant = 'primary',
   width,
