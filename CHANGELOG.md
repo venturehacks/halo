@@ -2,9 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.19](https://github.com/venturehacks/halo/compare/1.0.0-beta.18...1.0.0-beta.19)
+
+- [LEV-855] Monday Fixes: react-select mixins [`#327`](https://github.com/venturehacks/halo/pull/327)
+
 #### [1.0.0-beta.18](https://github.com/venturehacks/halo/compare/1.0.0-beta.17...1.0.0-beta.18)
 
+> 29 April 2022
+
 - [LEV-855] Friday Fixes: Smaller Icons, Fix Grabbag [`#319`](https://github.com/venturehacks/halo/pull/319)
+- Release 1.0.0-beta.18 [`67b0872`](https://github.com/venturehacks/halo/commit/67b087265f0a3fe790fd0d672322baa05ece687c)
 
 #### [1.0.0-beta.17](https://github.com/venturehacks/halo/compare/1.0.0-beta.16...1.0.0-beta.17)
 
