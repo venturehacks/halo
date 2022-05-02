@@ -59,8 +59,9 @@ function CheckboxRaw({
   ...rest
 }: CheckboxProps & ForwardedRefProps<HTMLInputElement>) {
   return (
-    <div ref={forwardedRef}>
+    <>
       <input
+        ref={forwardedRef}
         className={classNames(
           styles.input,
           hasError && styles.hasError,
@@ -86,7 +87,7 @@ function CheckboxRaw({
       >
         {label}
       </label>
-    </div>
+    </>
   );
 }
 
