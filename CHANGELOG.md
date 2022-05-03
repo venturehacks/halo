@@ -2,9 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.20](https://github.com/venturehacks/halo/compare/1.0.0-beta.19...1.0.0-beta.20)
+
+- [LEV-855] Input: implement focus with tailwind ring [`#328`](https://github.com/venturehacks/halo/pull/328)
+
 #### [1.0.0-beta.19](https://github.com/venturehacks/halo/compare/1.0.0-beta.18...1.0.0-beta.19)
 
+> 2 May 2022
+
 - [LEV-855] Monday Fixes: react-select mixins [`#327`](https://github.com/venturehacks/halo/pull/327)
+- Release 1.0.0-beta.19 [`5a98c10`](https://github.com/venturehacks/halo/commit/5a98c1065c2ecdf6aa27b7655fafb60d906454e8)
 
 #### [1.0.0-beta.18](https://github.com/venturehacks/halo/compare/1.0.0-beta.17...1.0.0-beta.18)
 
