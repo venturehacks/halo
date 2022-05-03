@@ -2,9 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.21](https://github.com/venturehacks/halo/compare/1.0.0-beta.20...1.0.0-beta.21)
+
+- [icon update] `CheckIcon` `HelpSolidIcon` [`7990b4f`](https://github.com/venturehacks/halo/commit/7990b4fde1e547fdf891dc387553fb3835912dbf)
+
 #### [1.0.0-beta.20](https://github.com/venturehacks/halo/compare/1.0.0-beta.19...1.0.0-beta.20)
 
+> 2 May 2022
+
 - [LEV-855] Input: implement focus with tailwind ring [`#328`](https://github.com/venturehacks/halo/pull/328)
+- Release 1.0.0-beta.20 [`111e455`](https://github.com/venturehacks/halo/commit/111e455be08dce430fe4cbf3843879b2a97436bc)
 
 #### [1.0.0-beta.19](https://github.com/venturehacks/halo/compare/1.0.0-beta.18...1.0.0-beta.19)
 
