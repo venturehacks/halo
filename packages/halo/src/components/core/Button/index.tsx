@@ -127,7 +127,7 @@ function ButtonRaw({
     icon && 'flex flex-row justify-center items-center',
   ]);
 
-  const iconClassNames = 'fill-current stroke-current w-3';
+  const iconClassNames = 'fill-current stroke-current w-3 leading-none';
 
   const content = icon ? (
     <>
