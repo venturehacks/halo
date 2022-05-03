@@ -187,21 +187,21 @@ function rawInputClassNames({
   transparent,
 }: InputBase = {}) {
   return classNames(
-    'text-dark-aaaa text-md max-w-full placeholder-dark-a',
+    'text-dark-aaaa text-md max-w-full placeholder-dark-a ring-inset border rounded focus:ring-dark-link',
     transparent
-      ? 'bg-transparent shadow-none outline-none'
-      : 'bg-white rounded focus:border-2',
+      ? 'bg-transparent shadow-none outline-none focus:ring-2'
+      : 'bg-white  focus:ring-1',
     size === 'sm' && 'px-3 py-1 h-8',
     size === 'md' && 'px-3 py-2 h-10',
     size === 'lg' && 'p-3  h-12',
-    !hasError && transparent && 'border-none',
-    !hasError && !transparent && 'border border-gray-500',
+    !hasError && transparent && 'border-transparent',
+    !hasError && !transparent && 'border-gray-500',
     // disabled
     'disabled:text-dark-a disabled:bg-gray-200 disabled:border-light-aa',
     // warning
-    hasError && errorSeverity === 'warning' && 'border-dark-warning border-2',
+    hasError && errorSeverity === 'warning' && 'border-dark-warning ',
     // error
-    hasError && errorSeverity === 'critical' && 'border-dark-error border-2',
+    hasError && errorSeverity === 'critical' && 'border-dark-error',
     hasError && FORM_FIELD_ERROR_IDENTIFIER,
     // width behavior
     intrinsicWidth === 'auto' && 'w-auto',
