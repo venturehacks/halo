@@ -2,8 +2,15 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.22](https://github.com/venturehacks/halo/compare/1.0.0-beta.21...1.0.0-beta.22)
+
+- [Button] leading-none on supplied icon [`e3c6e13`](https://github.com/venturehacks/halo/commit/e3c6e1319da4d6eaba12c51830dc99472917cd6b)
+
 #### [1.0.0-beta.21](https://github.com/venturehacks/halo/compare/1.0.0-beta.20...1.0.0-beta.21)
 
+> 3 May 2022
+
+- Release 1.0.0-beta.21 [`1c82ae9`](https://github.com/venturehacks/halo/commit/1c82ae96dbeb48a431b25f329336f528b975a9d3)
 - [icon update] `CheckIcon` `HelpSolidIcon` [`7990b4f`](https://github.com/venturehacks/halo/commit/7990b4fde1e547fdf891dc387553fb3835912dbf)
 
 #### [1.0.0-beta.20](https://github.com/venturehacks/halo/compare/1.0.0-beta.19...1.0.0-beta.20)
