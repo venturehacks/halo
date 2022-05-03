@@ -130,24 +130,23 @@ function InputRaw({
     return input;
   }
 
+  const iconClassnames = classNames(
+    'text-dark-a top-1.5 rounded-md',
+    'flex flex-col items-center justify-center',
+    'absolute',
+    !iconContainerClassName?.includes('bg-') && 'bg-blue-100',
+    size === 'sm' && ' h-5 w-5',
+    size === 'md' && ' h-7 w-7',
+    size === 'lg' && 'h-9 w-9',
+    iconPosition === 'left' && 'left-2',
+    iconPosition === 'right' && 'right-2',
+    iconContainerClassName,
+  );
+
   return (
     <div className="relative w-full">
       {input}
-      <div
-        className={classNames(
-          size === 'sm' && ' h-5 w-5',
-          size === 'md' && ' h-7 w-7',
-          size === 'lg' && 'h-9 w-9',
-          'text-dark-a top-1.5 rounded-md bg-blue-100',
-          'flex flex-col items-center justify-center',
-          'absolute',
-          iconPosition === 'left' && 'left-2',
-          iconPosition === 'right' && 'right-2',
-          iconContainerClassName,
-        )}
-      >
-        {icon}
-      </div>
+      <div className={iconClassnames}>{icon}</div>
     </div>
   );
 }
