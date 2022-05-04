@@ -2,8 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.23](https://github.com/venturehacks/halo/compare/1.0.0-beta.22...1.0.0-beta.23)
+
+- `Button` revise last child margin logic, refine docs [`#332`](https://github.com/venturehacks/halo/issues/332)
+- Scalar checkbox/radio line height [`1e5eeaa`](https://github.com/venturehacks/halo/commit/1e5eeaa1d20df314a91a921216dde5f69497c796)
+- typo [`1d9b791`](https://github.com/venturehacks/halo/commit/1d9b79174b07936978544bbae74f25289e7e9691)
+
 #### [1.0.0-beta.22](https://github.com/venturehacks/halo/compare/1.0.0-beta.21...1.0.0-beta.22)
 
+> 3 May 2022
+
+- Release 1.0.0-beta.22 [`9bb4747`](https://github.com/venturehacks/halo/commit/9bb4747315764795ee14c6784928087350349cc9)
 - [Button] leading-none on supplied icon [`e3c6e13`](https://github.com/venturehacks/halo/commit/e3c6e1319da4d6eaba12c51830dc99472917cd6b)
 
 #### [1.0.0-beta.21](https://github.com/venturehacks/halo/compare/1.0.0-beta.20...1.0.0-beta.21)
