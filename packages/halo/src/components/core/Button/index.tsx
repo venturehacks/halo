@@ -6,6 +6,8 @@ import {
   withForwardedRef,
 } from '../../../lib/withForwardedRef';
 
+import styles from './styles.module.scss';
+
 export type ButtonSize = 'sm' | 'md' | 'lg';
 
 export type ButtonVariant =
@@ -77,7 +79,7 @@ export interface ButtonProps
   rel?: string;
   /**
    * Size preset
-   * @default sm
+   * @default md
    */
   size?: ButtonSize;
   target?: '_blank' | '_self' | '_parent' | '_top' | undefined;
@@ -114,9 +116,10 @@ function ButtonRaw({
   width,
   ...buttonElementProps
 }: ButtonProps & ForwardedRefProps<HTMLButtonElement | HTMLAnchorElement>) {
-  const buttonClassNames = classNames([
+  const buttonClassNames = classNames(
+    styles.component,
     className,
-    `rounded border-solid border gap-x-2 mr-4 last:mr-0 whitespace-nowrap
+    `rounded border-solid border gap-x-2 whitespace-nowrap
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50`,
     size === 'sm' && 'px-3 py-1.5',
@@ -125,7 +128,7 @@ function ButtonRaw({
     VARIANT_CSS[variant],
     width === '100%' && 'w-full',
     icon && 'flex flex-row justify-center items-center',
-  ]);
+  );
 
   const iconClassNames = 'fill-current stroke-current w-3 leading-none';
 

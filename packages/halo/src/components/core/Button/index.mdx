@@ -22,39 +22,93 @@ Button is used to trigger an action, such as submit form, open dialog, or cancel
 <Playground>
   <div className="flex flex-row gap-5">
     <div className="flex flex-col items-start gap-3">
-      <Button
-        icon={<ChevronDownIcon />}
-        iconPosition="right"
-        variant="gtm-primary"
-      >
-        gtm-primary
-      </Button>
-      <Button icon={<SearchIcon />} size="md" variant="gtm-primary">gtm-primary md</Button>
-      <Button size="lg" variant="gtm-primary" disabled>gtm-primary lg</Button>
+      <div className="font-medium h-7">
+        size
+      </div>
+      <div className="h-9">
+        small
+      </div>
+      <div className="h-12">
+        medium
+      </div>
+      <div className="h-8">
+        large
+      </div>
+    </div>
+    <div className="flex flex-col items-start gap-3">
+      <div>
+        <code>gtm-primary</code>
+      </div>
+      <div>
+        <Button
+          icon={<ChevronDownIcon />}
+          iconPosition="right"
+          variant="gtm-primary"
+          size="sm"
+        >
+          Create template
+        </Button>
+      </div>
+      <div>
+        <Button icon={<SearchIcon />} size="md" variant="gtm-primary">Search</Button>
+      </div>
+      <div>
+        <Button size="lg" variant="gtm-primary" disabled>Apply now</Button>
+      </div>
     </div>
 
     <div className="flex flex-col items-start gap-3">
-      <Button variant="gtm-secondary">gtm-secondary</Button>
-      <Button variant="gtm-secondary" size="md">gtm-secondary md</Button>
-      <Button variant="gtm-secondary" size="lg" disabled>gtm-secondary lg</Button>
+      <div>
+        <code>gtm-secondary</code>
+      </div>
+      <div>
+         <Button variant="gtm-secondary" size="sm">Cancel</Button></div>
+      <div>
+        <Button variant="gtm-secondary" size="md">Cancel</Button></div>
+      <div>
+        <Button variant="gtm-secondary" size="lg" disabled>Cancel</Button>
+      </div>
     </div>
 
     <div className="flex flex-col items-start gap-3">
-      <Button variant="gtm-gray">gtm-gray</Button>
-      <Button variant="gtm-gray" size="md">gtm-gray md</Button>
-      <Button variant="gtm-gray" size="lg" disabled>gtm-gray lg</Button>
+      <div>
+        <code>gtm-gray</code>
+      </div>
+      <div>
+        <Button variant="gtm-gray" size="sm">Manage plan</Button></div>
+      <div>
+        <Button variant="gtm-gray" size="md">Manage plan</Button></div>
+      <div>
+        <Button variant="gtm-gray" size="lg" disabled>Manage plan</Button>
+      </div>
     </div>
 
     <div className="flex flex-col items-start gap-3">
-      <Button variant="gtm-error">gtm-error</Button>
-      <Button variant="gtm-error" size="md">gtm-error md</Button>
-      <Button variant="gtm-error" size="lg" disabled>gtm-error lg</Button>
+      <div>
+        <code>gtm-error</code>
+      </div>
+      <div>
+        <Button variant="gtm-error" size="sm">Reject</Button></div>
+      <div>
+        <Button variant="gtm-error" size="md">Reject</Button></div>
+      <div>
+        <Button variant="gtm-error" size="lg" disabled>Reject</Button>
+      </div>
     </div>
 
     <div className="flex flex-col items-start gap-3">
-      <Button variant="gtm-clear">gtm-clear</Button>
-      <Button variant="gtm-clear" size="md">gtm-clear md</Button>
-      <Button variant="gtm-clear" size="lg" disabled>gtm-clear lg</Button>
+      <div>
+        <code>gtm-clear</code>
+      </div>
+      <div>
+        <Button variant="gtm-clear" size="sm">View more</Button>
+      </div>
+      <div>
+        <Button variant="gtm-clear" size="md">View more</Button>
+      </div>
+      <div>
+        <Button variant="gtm-clear" size="lg" disabled>View more</Button>
+      </div>
     </div>
 
   </div >
@@ -65,33 +119,51 @@ Button is used to trigger an action, such as submit form, open dialog, or cancel
 <Playground>
   <div className="flex flex-row gap-5">
     <div className="flex flex-col items-start gap-3">
-      <Button icon={<ChevronDownIcon />} iconPosition="right">primary</Button>
-      <Button icon={<SearchIcon />} size="md">primary md</Button>
-      <Button size="lg" disabled>primary lg</Button>
+      <div>
+        <Button icon={<ChevronDownIcon />} iconPosition="right">primary</Button></div>
+      <div>
+        <Button icon={<SearchIcon />} size="md">primary md</Button></div>
+      <div>
+        <Button size="lg" disabled>primary lg</Button>
+      </div>
     </div>
 
     <div className="flex flex-col items-start gap-3">
-      <Button variant="secondary">secondary</Button>
-      <Button variant="secondary" size="md">secondary md</Button>
-      <Button variant="secondary" size="lg" disabled>secondary lg</Button>
+      <div>
+        <Button variant="secondary">secondary</Button></div>
+      <div>
+        <Button variant="secondary" size="md">secondary md</Button></div>
+      <div>
+        <Button variant="secondary" size="lg" disabled>secondary lg</Button>
+      </div>
     </div>
 
     <div className="flex flex-col items-start gap-3">
-      <Button variant="gray">gray</Button>
-      <Button variant="gray" size="md">gray md</Button>
-      <Button variant="gray" size="lg" disabled>gray lg</Button>
+      <div>
+       <Button variant="gray">gray</Button></div>
+      <div>
+        <Button variant="gray" size="md">gray md</Button></div>
+      <div>
+       <Button variant="gray" size="lg" disabled>gray lg</Button></div>
     </div>
 
     <div className="flex flex-col items-start gap-3">
-      <Button variant="error">error</Button>
-      <Button variant="error" size="md">error md</Button>
-      <Button variant="error" size="lg" disabled>error lg</Button>
+      <div>
+      <Button variant="error">error</Button></div>
+      <div>
+      <Button variant="error" size="md">error md</Button></div>
+      <div>
+      <Button variant="error" size="lg" disabled>error lg</Button></div>
     </div>
 
     <div className="flex flex-col items-start gap-3">
-      <Button variant="clear">clear</Button>
-      <Button variant="clear" size="md">clear md</Button>
-      <Button variant="clear" size="lg" disabled>clear lg</Button>
+      <div>
+        <Button variant="clear">clear</Button></div>
+      <div>
+        <Button variant="clear" size="md">clear md</Button></div>
+      <div>
+        <Button variant="clear" size="lg" disabled>clear lg</Button>
+      </div>
     </div>
 
   </div >

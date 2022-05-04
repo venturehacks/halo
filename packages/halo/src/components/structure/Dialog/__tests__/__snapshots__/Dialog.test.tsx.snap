@@ -63,7 +63,7 @@ exports[`Dialog snapshot title + both buttons 1`] = `
     data-test="Dialog-chin"
   >
     <button
-      class="rounded border-solid border gap-x-2 mr-4 last:mr-0 whitespace-nowrap
+      class="component rounded border-solid border gap-x-2 whitespace-nowrap
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50 px-3 py-1.5 bg-white border-blue-500 text-blue-500 font-medium
                 disabled:bg-white disabled:border-blue-300 disabled:text-blue-300
@@ -74,7 +74,7 @@ exports[`Dialog snapshot title + both buttons 1`] = `
       Cancel
     </button>
     <button
-      class="rounded border-solid border gap-x-2 mr-4 last:mr-0 whitespace-nowrap
+      class="component rounded border-solid border gap-x-2 whitespace-nowrap
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50 px-3 py-1.5 bg-dark-brand border-dark-brand text-white font-medium
               disabled:bg-blue-300 disabled:border-blue-300
