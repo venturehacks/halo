@@ -81,7 +81,7 @@ $pill-border-radius: tempo(6);
 @mixin input-label-checkbox {
   @extend %input-label-base;
   padding-left: tempo(6);
-  line-height: $checkbox-size;
+  line-height: 1.25;
 
   // empty checkbox
   &::before {
@@ -167,7 +167,7 @@ $pill-border-radius: tempo(6);
 
 @mixin input-label-radio {
   @extend %input-label-base;
-  line-height: $radio-size;
+  line-height: 1.25;
   padding-left: tempo(6);
 
   // circle outline
