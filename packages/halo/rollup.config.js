@@ -39,6 +39,7 @@ const EXTERNAL_LIBS = [
   'react-dom',
   'react-spinners',
   'react',
+  'react-use',
 ];
 
 let analyzePluginIterations = 0;

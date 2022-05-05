@@ -3,6 +3,7 @@ const path = require('path');
 
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
+  mode: 'jit',
   darkMode: false,
   corePlugins: {
     // TODO(drew): use tailwind's preflight reset
@@ -20,12 +21,12 @@ module.exports = {
   },
   purge: {
     content: [
-      path.join(__dirname, 'src/**/*.{tsx,jsx,js,mdx}'),
-      path.join(__dirname, 'dist/**/*.mjs'),
+      path.join(__dirname, 'src/**/*.{ts,tsx,js,jsx,mdx}'),
+      path.join(__dirname, 'dist/**/*.js'),
       path.join(__dirname, 'dist/**/*.mjs'),
       path.join(
         __dirname,
-        '../docs/src/gatsby-theme-docz/**/*.{tsx,jsx,js,mdx}',
+        '../docs/src/gatsby-theme-docz/**/*.{ts,tsx,js,jsx,mdx}',
       ),
     ],
     options: {

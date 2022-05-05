@@ -1,0 +1,16 @@
+@import 'halo';
+
+.component {
+  position: relative;
+
+  &::before {
+    @apply text-2xs block bg-purple-800 px-1 font-mono font-medium text-purple-200 antialiased;
+    position: absolute;
+    top: 0;
+    right: 0;
+    border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
+    content: attr(data-halo-component);
+    transform: translateY(-100%);
+  }
+}

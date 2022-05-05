@@ -3,7 +3,6 @@ import baseTheme from 'gatsby-theme-docz/src/theme/index';
 import { merge } from 'lodash';
 import githubTheme from 'typography-theme-github';
 
-// import palenightTheme from './prism/palenight';
 import github from './prism/github';
 
 const typography = toTheme(githubTheme);

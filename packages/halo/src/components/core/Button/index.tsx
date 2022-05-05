@@ -8,6 +8,7 @@ import {
 } from '../../../lib/withForwardedRef';
 
 import styles from './styles.module.scss';
+import { withDevTool } from '~/components/util/DevTool';
 
 export type ButtonSize = 'sm' | 'md' | 'lg';
 
@@ -167,7 +168,6 @@ function ButtonRaw({
     <button
       ref={forwardedRef as React.Ref<HTMLButtonElement>}
       className={buttonClassNames}
-      data-halo-path-base={base}
       data-test="Button"
       onClick={onClick}
       type={type}
@@ -178,6 +178,9 @@ function ButtonRaw({
   );
 }
 
-const Button = withForwardedRef<ButtonProps, HTMLButtonElement>(ButtonRaw);
+const Button = withDevTool<ButtonProps>(
+  withForwardedRef<ButtonProps, HTMLButtonElement>(ButtonRaw),
+  { path: base },
+);
 
 export { Button };

@@ -12,6 +12,7 @@ import React, { useEffect, useRef } from 'react';
 import { Box, jsx } from 'theme-ui';
 import { NO_GROUP } from '../../hooks/useExtendedMenus';
 import { Container, Group, Label, SearchContainer } from './custom-styles';
+import ControlPanel from '~/components/util/LocalExperimentContext/ControlPanel';
 
 export const Sidebar = React.forwardRef(
   ({ menus, query, handleChange, onClick, open }, ref) => {
@@ -78,6 +79,7 @@ export const Sidebar = React.forwardRef(
                 </Group>
               ))}
           </div>
+          <ControlPanel />
         </Box>
       </Container>
     );

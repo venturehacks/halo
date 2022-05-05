@@ -5,6 +5,7 @@ import defaultConfig from 'gatsby-theme-docz/src/theme';
 import { merge } from 'lodash/fp';
 import React from 'react';
 import { Styled, ThemeProvider } from 'theme-ui';
+import { LocalExperimentProvider } from '~/components/util/LocalExperimentContext';
 
 const componentsMap = {
   ...baseComponents,
@@ -14,11 +15,13 @@ const componentsMap = {
 const Theme = ({ children }) => {
   const config = useConfig();
   return (
-    <ThemeProvider theme={config.themeConfig}>
-      <ComponentsProvider components={componentsMap}>
-        <Styled.root>{children}</Styled.root>
-      </ComponentsProvider>
-    </ThemeProvider>
+    <LocalExperimentProvider>
+      <ThemeProvider theme={config.themeConfig}>
+        <ComponentsProvider components={componentsMap}>
+          <Styled.root>{children}</Styled.root>
+        </ComponentsProvider>
+      </ThemeProvider>
+    </LocalExperimentProvider>
   );
 };
 
