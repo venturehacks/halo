@@ -1,3 +1,4 @@
+import { base } from 'paths.macro';
 import classNames from 'classnames';
 import React from 'react';
 
@@ -166,6 +167,7 @@ function ButtonRaw({
     <button
       ref={forwardedRef as React.Ref<HTMLButtonElement>}
       className={buttonClassNames}
+      data-halo-path-base={base}
       data-test="Button"
       onClick={onClick}
       type={type}

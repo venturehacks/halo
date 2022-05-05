@@ -6,6 +6,7 @@ import { defineConfig } from 'rollup';
 import resolve from '@rollup/plugin-node-resolve';
 import replace from '@rollup/plugin-replace';
 import typescript from '@rollup/plugin-typescript';
+import { babel } from '@rollup/plugin-babel';
 
 // 3rd party
 import filesize from 'rollup-plugin-filesize';
@@ -76,6 +77,12 @@ export default defineConfig({
       dedupe: EXTERNAL_LIBS,
       mainFields: ['module', 'main'],
       extensions: ['.mjs', '.js'],
+    }),
+    babel({
+      extensions: ['.js', '.jsx', '.es6', '.es', '.mjs', '.ts', '.tsx'],
+      exclude: 'node_modules/**',
+      babelHelpers: 'bundled',
+      configFile: path.join(__dirname, 'babel.rollup.config.js'),
     }),
     typescript({
       outputToFilesystem: true,
