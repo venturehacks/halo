@@ -1,9 +1,20 @@
 {
   "name": "halo",
   "version": "1.0.0-beta.23",
-  "module": "dist/esm/halo.mjs",
-  "main": "dist/cjs/halo.js",
+  "///": "dist/esm/halo.mjs",
+  "//": "dist/cjs/halo.js",
+  "main": "src/index.tsx",
+  "module": "src/index.tsx",
   "style": "dist/esm/halo.css",
+  "exports": {
+    ".": {
+      "require": "./src/index.tsx",
+      "import": "./src/index.tsx"
+    },
+    "./tailwind.config": "./tailwind.config.js",
+    "./scss/*": "./scss/*",
+    "./dist/*": "./dist/*"
+  },
   "types": "dist/typings/index.d.ts",
   "displayName": "Halo Design System",
   "description": "Next-generation design system for AngelList and beyond.",
@@ -45,8 +56,7 @@
   },
   "devDependencies": {
     "@types/lodash": "4.14.176",
-    "@types/react": "17.0.44",
-    "@types/react-dom": "17.0.16"
+    "@types/react": "17.0.44"
   },
   "resolutions": {
     "react": "17.0.2",
