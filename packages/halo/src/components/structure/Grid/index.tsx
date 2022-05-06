@@ -39,6 +39,7 @@ function Grid({
   ...boxProps
 }: GridProps) {
   const classes = classNames(
+    styles.component,
     className,
     row && styles.row,
     centered && styles.centered,

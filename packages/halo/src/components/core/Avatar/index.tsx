@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
-import { CompanyIcon } from '~/components/icons';
+import { CompanyIcon } from '../../icons';
 
 import {
   ForwardedRefProps,

@@ -8,7 +8,7 @@ import {
 } from '../../../lib/withForwardedRef';
 
 import styles from './styles.module.scss';
-import { withDevTool } from '~/components/util/DevTool';
+import { withDevTool } from '../../util/DevTool';
 
 export type ButtonSize = 'sm' | 'md' | 'lg';
 
