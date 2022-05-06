@@ -10,7 +10,7 @@ interface WithDevToolOptions {
   path: string;
 }
 
-function withDevTool<OriginalProps>(
+function withDevTool<OriginalProps, RefElement = HTMLElement>(
   WrappedComponent: React.ComponentType<OriginalProps>,
   options: WithDevToolOptions,
 ) {
@@ -19,19 +19,23 @@ function withDevTool<OriginalProps>(
   const chunks = compact(path.split('/'));
   const componentName = chunks.pop();
 
-  function WithDevToolComponent(props: OriginalProps) {
+  function WithDevToolComponent(
+    props: OriginalProps,
+    ref: React.Ref<RefElement>,
+  ) {
     const { componentIdentify } = useLocalExperiment();
 
-    const component = <WrappedComponent {...props} />;
+    const component = <WrappedComponent {...props} forwardedRef={ref} />;
 
-    if (componentIdentify) {
+    // if (componentIdentify) {
+    if (true) {
       return (
         <a
           className={classNames(
             styles.component,
-            'block rounded ring-2 ring-purple-800 ring-opacity-100 ring-offset-2',
+            'block rounded ring-2 ring-green-500 ring-opacity-100 ring-offset-2',
           )}
-          data-halo-component={componentName}
+          data-halo-component={`${componentName}`}
           href={`https://halo-design-system.netlify.app/core/${componentName?.toLowerCase()}`}
           target="_blank"
         >
@@ -45,7 +49,7 @@ function withDevTool<OriginalProps>(
 
   WithDevToolComponent.displayName = `WithDevTool(${componentName})`;
 
-  return WithDevToolComponent;
+  return React.forwardRef(WithDevToolComponent);
 }
 
 export { withDevTool };
