@@ -92,12 +92,12 @@ exports[`Banner snapshot variant success 1`] = `
     <svg
       class="text-dark-success block w-6"
       fill="currentColor"
-      viewBox="0 0 24 24"
+      viewBox="0 0 16 16"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
         clip-rule="evenodd"
-        d="M9.91 17.496l-6.203-6.203a1 1 0 0 0-1.414 1.414l7 7a1 1 0 0 0 1.493-.09l11-14a1 1 0 0 0-1.572-1.235L9.91 17.496z"
+        d="M5.91 10.496L3.707 8.293a1 1 0 0 0-1.414 1.414l3 3a1 1 0 0 0 1.493-.09l7-8a1 1 0 1 0-1.572-1.235L5.91 10.496z"
         fill="currentColor"
         fill-rule="evenodd"
       />
