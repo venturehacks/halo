@@ -1,6 +1,6 @@
 {
   "name": "halo",
-  "version": "1.0.0-beta.23",
+  "version": "1.0.0-beta.24",
   "module": "dist/esm/halo.mjs",
   "main": "dist/cjs/halo.js",
   "style": "dist/esm/halo.css",

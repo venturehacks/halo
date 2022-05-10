@@ -2,9 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.24](https://github.com/venturehacks/halo/compare/1.0.0-beta.23...1.0.0-beta.24)
+
+- [LEV-855] Replace trash icon, Notification Icon Fill [`#342`](https://github.com/venturehacks/halo/pull/342)
+
 #### [1.0.0-beta.23](https://github.com/venturehacks/halo/compare/1.0.0-beta.22...1.0.0-beta.23)
 
+> 4 May 2022
+
 - `Button` revise last child margin logic, refine docs [`#332`](https://github.com/venturehacks/halo/issues/332)
+- Release 1.0.0-beta.23 [`23fa6c6`](https://github.com/venturehacks/halo/commit/23fa6c6927c52cfde0116939a1eeb3dae908f2c9)
 - Scalar checkbox/radio line height [`1e5eeaa`](https://github.com/venturehacks/halo/commit/1e5eeaa1d20df314a91a921216dde5f69497c796)
 - typo [`1d9b791`](https://github.com/venturehacks/halo/commit/1d9b79174b07936978544bbae74f25289e7e9691)
 
