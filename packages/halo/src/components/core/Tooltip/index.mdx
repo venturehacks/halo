@@ -6,6 +6,8 @@ route: /core/tooltip
 
 import { Props, Playground } from 'docz';
 import { Tooltip } from './';
+import { Tag } from '../Tag';
+import { CheckIcon, CompanyIcon, SearchIcon } from '../../icons';
 
 # Tooltip
 
@@ -16,31 +18,81 @@ Our tooltip component is a thin wrapper around Tippy, with small tweaks to styli
 ### Usage
 
 <Playground>
-  <div className="mb-6">
-    <Tooltip content="Pop a small tooltip above" size="sm">
-      <span>🖲 Hover [sm]</span>
+  <div className="mb-6 flex space-x-8 items-center">
+    <Tooltip content="Only show full time positions" size="md">
+      <Tag color="blue" size="md" onClose={()=>alert('Clicked')}>Full Time</Tag>
     </Tooltip>
+
+    <Tooltip content="Global Search" size="md" placement="right">
+      <div className="w-4 h-4"><SearchIcon /></div>
+    </Tooltip>
+
   </div>
-  <div className="mb-6">
-    <Tooltip content="Pop a medium tooltip above">
-      <span>🖲 Hover [md]</span>
-    </Tooltip>
+</Playground>
+
+### Size
+
+<Playground>
+  <div className="flex space-x-8">
+    <div className="mb-6">
+      <Tooltip content="Pop a small tooltip above" size="sm">
+        <Tag color="blue" size="md">
+          Small
+        </Tag>
+      </Tooltip>
+    </div>
+    <div className="mb-6">
+      <Tooltip content="Pop a medium tooltip above">
+        <Tag color="blue" size="md">
+          Medium
+        </Tag>
+      </Tooltip>
+    </div>
+    <div className="mb-6">
+      <Tooltip content="Pop a large tooltip above" size="lg">
+        <Tag color="blue" size="md">
+          Large
+        </Tag>
+      </Tooltip>
+    </div>
   </div>
-  <div className="mb-6">
-    <Tooltip content="Pop a large tooltip above" size="lg">
-      <span>🖲 Hover [lg]</span>
-    </Tooltip>
+</Playground>
+
+### Placement
+
+<Playground>
+  <div className="flex space-x-12">
+    <div className="mb-6">
+      <h4>Right</h4>
+      <Tooltip placement="right" content="on the right">
+        <div className="h-16 w-16 rounded-md bg-gray-300"></div>
+      </Tooltip>
+    </div>
+    <div className="mb-6">
+      <h4>Left</h4>
+      <Tooltip placement="left" content="on the left">
+        <div className="h-16 w-16 rounded-md bg-green-300"></div>
+      </Tooltip>
+    </div>
+    <div className="mb-6">
+      <h4>Top</h4>
+      <Tooltip placement="top" content="on the top">
+        <div className="h-16 w-16 rounded-md bg-purple-300"></div>
+      </Tooltip>
+    </div>
+    <div className="mb-6">
+      <h4>Bottom</h4>
+      <Tooltip placement="bottom" content="on the bottom">
+        <div className="bg-orange-300 h-16 w-16 rounded-md"></div>
+      </Tooltip>
+    </div>
+    <div className="pb-8">
+      <h4>Corner</h4>
+      <Tooltip content="even at an element's corner :)" placement="right-end">
+        <div className="h-16 w-16 rounded-md bg-blue-300"></div>
+      </Tooltip>
+    </div>
   </div>
-  <div className="mb-6">
-    <Tooltip placement="right" content="on the right">
-      <span>🙌 Customize placement</span>
-    </Tooltip>
-  </div>
-  <Box>
-    <Tooltip content="even at an element's corner :)" placement="right-end">
-      <img src="https://picsum.photos/id/518/300/200" alt="froot" />
-    </Tooltip>
-  </Box>
 </Playground>
 
 ## Apply to a custom component
