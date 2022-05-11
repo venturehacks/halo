@@ -7,7 +7,6 @@ route: /form/select
 import { Props, Playground } from 'docz';
 import { Label } from '../Label';
 import { Select } from './';
-import { Box } from '../../structure/Box';
 
 # Select
 
@@ -22,7 +21,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
     byline="Select your favorite!"
     containsFieldGroup
   >
-    <Box row align="space-between" className="max-w-lg">
+    <div className="max-w-lg space-x-8">
       <Select
         name="ice-cream"
         value="vanilla"
@@ -44,7 +43,7 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
         onChange={() => {}}
         hasError
       />
-    </Box>
+    </div>
   </Label>
 </Playground>
 

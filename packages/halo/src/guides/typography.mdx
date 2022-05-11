@@ -6,10 +6,7 @@ figma: https://www.figma.com/file/8EbOKQuVfc61d9aft8p7cO/Halo-Design-Library?nod
 ---
 
 import { Playground } from 'docz';
-import { Box } from '../components/structure/Box';
 import { Paragraph } from '../components/core/Paragraph';
-import { Header } from '../components/core/Header';
-import { Span } from '../components/core/Span';
 import { Banner } from '../components/core/Banner';
 
 # Typography
@@ -19,26 +16,18 @@ import { Banner } from '../components/core/Banner';
 See [InterfaceHeader](/core/interface-header)
 
 <Playground>
-  <Span contrast="A" monospace>xl &middot; 24px &middot; 30px</Span>
+  <span className="text-dark-a font-mono">xl &middot; 24px &middot; 30px</span>
   <Paragraph size="xl">
     Page Heading
   </Paragraph>
 
-{' '}
-
-<Span contrast="A" monospace>
-  lg &middot; 20px &middot; 24px
-</Span>
+<span className="text-dark-a font-mono">lg &middot; 20px &middot; 24px</span>
 <Paragraph size="lg">Section Heading</Paragraph>
 
-{' '}
-
-<Span contrast="A" monospace>
-  md &middot; 16px &middot; 20px
-</Span>
+<span className="text-dark-a font-mono">md &middot; 16px &middot; 20px</span>
 <Paragraph size="md">Body / Subsection Heading</Paragraph>
 
-  <Span contrast="A" monospace>sm &middot; 14px &middot; 20px</Span>
+  <span className="text-dark-a font-mono">sm &middot; 14px &middot; 20px</span>
   <Paragraph size="sm">
     Mini Heading
   </Paragraph>
@@ -55,90 +44,62 @@ Use [Tailwind font-size](https://v2.tailwindcss.com/docs/font-size) to implement
 </Banner>
 
 <Playground>
-  <Span contrast="A" monospace>
-    5xl &middot; 64px &middot; 72px
-  </Span>
+  <span className="text-dark-a font-mono">5xl &middot; 64px &middot; 72px</span>
   <Paragraph size="5xl">Hero Heading Plus</Paragraph>
-  <Span contrast="A" monospace>
-    4xl &middot; 56x &middot; 64px
-  </Span>
+  <span className="text-dark-a font-mono">4xl &middot; 56x &middot; 64px</span>
   <Paragraph size="4xl">Hero Heading</Paragraph>
-  <Span contrast="A" monospace>
-    3xl &middot; 48px &middot; 52px
-  </Span>
+  <span className="text-dark-a font-mono">3xl &middot; 48px &middot; 52px</span>
   <Paragraph size="3xl">Blog Article</Paragraph>
-  <Span contrast="A" monospace>
-    2xl &middot; 36px &middot; 40px
-  </Span>
+  <span className="text-dark-a font-mono">2xl &middot; 36px &middot; 40px</span>
   <Paragraph size="2xl">Display Heading</Paragraph>
-  <Span contrast="A" monospace>
-    xs &middot; 12px &middot; 20px
-  </Span>
+  <span className="text-dark-a font-mono">xs &middot; 12px &middot; 20px</span>
   <Paragraph size="xs">Legal Copy (micro)</Paragraph>
-  <Span contrast="A" monospace>
-    2xs &middot; 11px &middot; 20px
-  </Span>
+  <span className="text-dark-a font-mono">2xs &middot; 11px &middot; 20px</span>
   <Paragraph size="2xs">Legal Copy (nano)</Paragraph>
 </Playground>
 
 ## Contrast
 
 <Playground>
-  <Box maxWidth="600px">
+  <div>
     <Paragraph contrast="AAAA">
-      <Span monospace semibold block>
-        AAAA
-      </Span>
+      <p className="font-mono font-semibold">AAAA</p>
       Hammock salvia helvetica whatever bespoke wayfarers man bun meditation unicorn,
       la croix mixtape chambray before they sold out ethical literally. Put a bird
       on it truffaut meditation, authentic cray irony banh mi four dollar toast cred
       retro whatever mumblecore messenger bag neutra austin.
     </Paragraph>
     <Paragraph contrast="AAA">
-      <Span monospace semibold block>
-        AAA
-      </Span>
+      <p className="font-mono font-semibold">AAA</p>
       Hammock salvia helvetica whatever bespoke wayfarers man bun meditation unicorn,
       la croix mixtape chambray before they sold out ethical literally. Put a bird
       on it truffaut meditation, authentic cray irony banh mi four dollar toast cred
       retro whatever mumblecore messenger bag neutra austin.
     </Paragraph>
     <Paragraph contrast="AA">
-      <Span monospace semibold block>
-        AA
-      </Span>
+      <p className="font-mono font-semibold">AA</p>
       Hammock salvia helvetica whatever bespoke wayfarers man bun meditation unicorn,
       la croix mixtape chambray before they sold out ethical literally. Put a bird
       on it truffaut meditation, authentic cray irony banh mi four dollar toast cred
       retro whatever mumblecore messenger bag neutra austin.
     </Paragraph>
     <Paragraph contrast="A">
-      <Span monospace semibold block>
-        A
-      </Span>
+      <p className="font-mono font-semibold">A</p>
       Hammock salvia helvetica whatever bespoke wayfarers man bun meditation unicorn,
       la croix mixtape chambray before they sold out ethical literally. Put a bird
       on it truffaut meditation, authentic cray irony banh mi four dollar toast cred
       retro whatever mumblecore messenger bag neutra austin.
     </Paragraph>
-  </Box>
+  </div>
 </Playground>
 
 ## Weight
 
 <Playground>
-  <Span weight="regular" block>
-    400 regular (default)
-  </Span>
-  <Span weight="medium" block>
-    500 medium
-  </Span>
-  <Span weight="semibold" block>
-    600 semibold
-  </Span>
-  <Span weight="bold" block>
-    700 bold
-  </Span>
+  <p>400 regular (default)</p>
+  <p className="font-medium">500 medium</p>
+  <p className="font-semibold">600 semibold</p>
+  <p className="font-bold">700 bold</p>
 </Playground>
 
 ```scss
@@ -147,7 +108,7 @@ $weight-medium: 500;
 $weight-semibold: 600;
 $weight-bold: 700;
 $weights: (
-  light: $weight-light,
+  dark: $weight-dark,
   regular: $weight-regular,
   medium: $weight-medium,
   semibold: $weight-semibold,
@@ -198,5 +159,5 @@ type TextWeight = 'regular' | 'medium' | 'semibold' | 'bold';
 
 type TextContrast = 'A' | 'AA' | 'AAA' | 'AAAA';
 
-type TextColorScheme = 'dark' | 'light';
+type TextColorScheme = 'dark' | 'dark';
 ```
