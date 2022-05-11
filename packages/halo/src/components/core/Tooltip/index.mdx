@@ -6,9 +6,6 @@ route: /core/tooltip
 
 import { Props, Playground } from 'docz';
 import { Tooltip } from './';
-import { Span } from '../Span';
-import { Header } from '../Header';
-import { Box } from '../../structure/Box';
 
 # Tooltip
 
@@ -19,26 +16,26 @@ Our tooltip component is a thin wrapper around Tippy, with small tweaks to styli
 ### Usage
 
 <Playground>
-  <Box margin={{ bottom: 3 }}>
+  <div className="mb-6">
     <Tooltip content="Pop a small tooltip above" size="sm">
-      <Span>🖲 Hover [sm]</Span>
+      <span>🖲 Hover [sm]</span>
     </Tooltip>
-  </Box>
-  <Box margin={{ bottom: 3 }}>
+  </div>
+  <div className="mb-6">
     <Tooltip content="Pop a medium tooltip above">
-      <Span>🖲 Hover [md]</Span>
+      <span>🖲 Hover [md]</span>
     </Tooltip>
-  </Box>
-  <Box margin={{ bottom: 3 }}>
+  </div>
+  <div className="mb-6">
     <Tooltip content="Pop a large tooltip above" size="lg">
-      <Span>🖲 Hover [lg]</Span>
+      <span>🖲 Hover [lg]</span>
     </Tooltip>
-  </Box>
-  <Box margin={{ bottom: 3 }}>
+  </div>
+  <div className="mb-6">
     <Tooltip placement="right" content="on the right">
-      <Span>🙌 Customize placement</Span>
+      <span>🙌 Customize placement</span>
     </Tooltip>
-  </Box>
+  </div>
   <Box>
     <Tooltip content="even at an element's corner :)" placement="right-end">
       <img src="https://picsum.photos/id/518/300/200" alt="froot" />

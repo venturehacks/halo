@@ -3,6 +3,7 @@ name: Attribute
 menu: Core
 route: /core/attribute
 new: true
+figma: https://www.figma.com/file/8EbOKQuVfc61d9aft8p7cO/Halo-Design-Library?node-id=761%3A2101
 ---
 
 import { Playground, Props } from 'docz';
@@ -14,14 +15,14 @@ import { Box } from '../../structure/Box';
 
 Vertical key-value pair, great for job listing attributes. Produces [`<dt><dd>`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dt) pair.
 
-Wrap in `AttributeList` for best semantics, ability to set group size.
+Wrap in `AttributeList` for best semantics, ability to set size.
 
 ### Usage
 
 <Playground>
   <AttributeList>
-    <Attribute name="Term" value="Definition" />
-    <Attribute name="Key" value="Value" />
+    <Attribute name="AngelList" value="A platform for startups" />
+    <Attribute name="Apple" value="Think different" />
   </AttributeList>
 </Playground>
 
@@ -29,47 +30,39 @@ Wrap in `AttributeList` for best semantics, ability to set group size.
 
 <Playground>
 
-<Box align="space-between" padding={{ left: 4, right : 4 }} maxWidth="700px" row>
+<div className="p-4 flex space-x-8">
   <div>
     <InterfaceHeader section flow>Extra small</InterfaceHeader>
     <AttributeList size="xs">
-      <Attribute name="Term" value="Definition" />
-      <Attribute name="Key" value="Value" />
+      <Attribute name="AngelList" value="A platform for startups" />
+    </AttributeList>
+  </div>
+  <div>
+    <InterfaceHeader section flow>
+      Small
+    </InterfaceHeader>
+    <AttributeList size="sm">
+      <Attribute name="AngelList" value="A platform for startups" />
     </AttributeList>
   </div>
 
 {' '}
-
-<div>
-  <InterfaceHeader section flow>
-    Small
-  </InterfaceHeader>
-  <AttributeList size="sm">
-    <Attribute name="Term" value="Definition" />
-    <Attribute name="Key" value="Value" />
-  </AttributeList>
-</div>
-
-{' '}
-
 <div>
   <InterfaceHeader section flow>
     Medium
   </InterfaceHeader>
   <AttributeList size="md">
-    <Attribute name="Term" value="Definition" />
-    <Attribute name="Key" value="Value" />
+    <Attribute name="AngelList" value="A platform for startups" />
   </AttributeList>
 </div>
 
   <div>
     <InterfaceHeader section flow>Large</InterfaceHeader>
     <AttributeList size="lg">
-      <Attribute name="Term" value="Definition" />
-      <Attribute name="Key" value="Value" />
+      <Attribute name="AngelList" value="A platform for startups" />
     </AttributeList>
   </div>
-</Box>
+</div>
 
 </Playground>
 

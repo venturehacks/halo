@@ -5,9 +5,7 @@ route: /core/banner
 ---
 
 import { Props, Playground } from 'docz';
-import { Header } from '../Header';
-import { Span } from '../Span';
-import { Box } from '../../structure/Box';
+import { InterfaceHeader } from '../InterfaceHeader';
 import { Banner } from './';
 
 # Banner
@@ -17,40 +15,40 @@ Display a prominent message and optional action. Banners are displayed at the to
 ### Usage
 
 <Playground>
-  <Box maxWidth="640px">
-    <Header h4>Static, with inline links</Header>
-    <Box margin={{ bottom: 4 }}>
+  <div>
+    <InterfaceHeader section flow title="Static, with inline links" />
+    <div className="mb-8">
       <Banner>
-        Find more jobs. <Span regular><a href="#">Try clearing your filters</a>.</Span>
+        Find more jobs. <span className="font-normal"><a href="#">Try clearing your filters</a>.</span>
       </Banner>
       <Banner variant="warning">
-        Draft Mode. <Span regular>To make public, <a href="#">publish this profile</a>.</Span>
+        Draft Mode. <span className="font-normal">To make public, <a href="#">publish this profile</a>.</span>
       </Banner>
       <Banner variant="error">
-        This profile is banned from Talent. <Span regular>They cannot recruit on AngelList.</Span>
+        This profile is banned from Talent. <span className="font-normal">They cannot recruit on AngelList.</span>
       </Banner>
       <Banner variant="success">
-        New password saved! <Span regular>Please <a href="#">log in</a> again.</Span>
+        New password saved! <span className="font-normal">Please <a href="#">log in</a> again.</span>
       </Banner>
-    </Box>
+    </div>
 
-    <Header h4>Dismissable</Header>
-    <Box margin={{ bottom: 4 }}>
+    <InterfaceHeader section flow title="Dismissable" />
+     <div className="mb-8">
       <Banner offerDismiss>
-        Find more jobs. <Span regular>Try clearing your filters.</Span>
+        Find more jobs. <span className="font-normal">Try clearing your filters.</span>
       </Banner>
       <Banner variant="warning" offerDismiss>
-        Draft Mode. <Span regular>To make public, publish this profile</Span>
+        Draft Mode. <span className="font-normal">To make public, publish this profile</span>
       </Banner>
       <Banner variant="error" offerDismiss>
-        This profile is banned from Talent. <Span regular>They cannot recruit on AngelList.</Span>
+        This profile is banned from Talent. <span className="font-normal">They cannot recruit on AngelList.</span>
       </Banner>
       <Banner variant="success" offerDismiss>
-        New password saved! <Span regular>Please log in again</Span>
+        New password saved! <span className="font-normal">Please log in again</span>
       </Banner>
-    </Box>
+    </div>
 
-  </Box>
+  </div>
 </Playground>
 
 ### Props
