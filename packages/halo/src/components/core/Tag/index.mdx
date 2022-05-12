@@ -20,11 +20,11 @@ Successor to `PillTag` `Flair` (deprecated).
 <Playground>
   <div className="mb-4">
     <InterfaceHeader title="Non-Interactive" section flow />
-    <Tag label="default tag" />
-    <Tag color="blue" label="blue tag" />
+    <Tag label="new york" />
+    <Tag color="blue" label="javascript" />
     <Tag
       icon={<BookmarkOutlineIcon />}
-      label="with icon"
+      label="bookmarked"
     />
     <Tag icon={<BookmarkOutlineIcon />} size="sm" />
   </div>
@@ -35,23 +35,24 @@ Successor to `PillTag` `Flair` (deprecated).
       onClose={() => {
         alert('close clicked!');
       }}
-      label="Tag with close icon"
+      label="remote only"
     />
     <Tag
       color="blue"
       onClose={() => {alert("close clicked!")}}
       onClick={() => {alert("tag clicked!")}}
-      label="clickable tag + close"
+      label="paris, france"
     />
     <Tag
+     icon={<BookmarkOutlineIcon />}
       onClick={() => {
         alert('tag clicked!');
       }}
-      label="Clickable tag!"
+      label="Bookmark"
     />
     <Tag color="blue" onClose={() => {alert("close clicked!")}} >
-      <span>Custom Element</span>
-      <span className="text-red-700">Second Element</span>
+      <span>10 yrs experience</span>
+      <span className="text-blue-700">Nice to have</span>
     </Tag>
   </div>
 </Playground>
