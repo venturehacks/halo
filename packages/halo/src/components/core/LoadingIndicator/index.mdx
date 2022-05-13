@@ -6,55 +6,58 @@ route: /core/loading-indicator
 
 import { Props, Playground } from 'docz';
 import { LoadingIndicator } from './';
-import { Header } from '../Header';
-import { Paragraph } from '../Paragraph';
+import { InterfaceHeader } from '../InterfaceHeader';
 import { Tooltip } from '../Tooltip';
-import { Box } from '../../structure/Box';
 
 # LoadingIndicator
 
-Use the primary loading indicator for large components and pages.
-
-While it is possible to alter color and size, Halo defaults are preferred.
+Animated component that shows a loading indicator.
 
 ### Usage
 
 <Playground>
-  <Box row margin={{ bottom: 8 }}>
-    <Box margin={{ right: 12 }}>
-      <Header h5>Primary</Header>
+  <div className="mb-1 flex space-x-8">
+    <div>
+      <InterfaceHeader
+        subsection
+        flow
+        title="Primary"
+        byline="Use with large components and pages"
+      />
       <LoadingIndicator bare />
-    </Box>
-    <Box margin={{ right: 2 }}>
-      <Header h5>Alternate</Header>
+    </div>
+    <div>
+      <InterfaceHeader
+        subsection
+        flow
+        title="Alternate"
+        byline="Use with smaller components"
+      />
       <LoadingIndicator bare alternate />
-    </Box>
-  </Box>
+    </div>
+  </div>
+</Playground>
 
-{' '}
+### Color
 
-<Header h5>
-  <Tooltip content="use sparingly! (or never)">
-    <span>Color*</span>
-  </Tooltip>
-</Header>
+While it is possible to alter color and size, Halo defaults are preferred.
 
-{' '}
+<Playground>
 
-<Box row margin={{ bottom: 4 }}>
-  <Box margin={{ right: 2 }}>
+<div className="flex space-x-8">
+  <div>
     <LoadingIndicator bare color="#666" />
-  </Box>
-  <Box margin={{ right: 6 }}>
+  </div>
+  <div>
     <LoadingIndicator bare color="#888" />
-  </Box>
-  <Box margin={{ right: 2 }}>
+  </div>
+  <div>
     <LoadingIndicator bare color="#bbb" alternate />
-  </Box>
-  <Box margin={{ right: 2 }}>
+  </div>
+  <div>
     <LoadingIndicator bare color="#ddd" alternate />
-  </Box>
-</Box>
+  </div>
+</div>
 
 </Playground>
 

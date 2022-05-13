@@ -8,7 +8,6 @@ new: true
 import { Playground, Props } from 'docz';
 import { Bracket } from './';
 import { InterfaceHeader } from '../../core/InterfaceHeader';
-import { Box } from '../../structure/Box';
 import { Avatar } from '../../core/Avatar';
 import { Button } from '../../core/Button';
 
@@ -25,7 +24,7 @@ Component that isolates its first or last child from remaining children. Smart r
       imageUrl="https://avatars1.githubusercontent.com/u/194885"
     />
     <span className="text-dark-a text-sm">Isolate first child (default)</span>
-    <Button>Resend code</Button>
+    <Button>Send message</Button>
   </Bracket>
   <hr />
   <Bracket isolate="last-child" className="max-w-xl">
@@ -34,7 +33,7 @@ Component that isolates its first or last child from remaining children. Smart r
       imageUrl="https://avatars1.githubusercontent.com/u/194885"
     />
     <span className="text-dark-a text-sm">Isolate last child</span>
-    <Button>Resend code</Button>
+    <Button>Send message</Button>
   </Bracket>
 </Playground>
 
