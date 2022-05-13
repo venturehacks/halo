@@ -16,14 +16,17 @@ Combines an avatar with a title and byline or children.
 
 <Playground>
   <div className="flex space-x-12">
-    <AvatarLockup
-      imageUrl="https://avatars.githubusercontent.com/u/56262247"
-      title="Vishal Jeet"
-      byline="AngelList"
-    />
+    <div>
+      <h4>Default</h4>
+      <AvatarLockup
+        imageUrl="https://avatars.githubusercontent.com/u/56262247"
+        title="Vishal Jeet"
+        byline="AngelList"
+      />
+    </div>
 
     <div>
-      <h4>With children</h4>
+      <h4>Advanced</h4>
       <AvatarLockup imageUrl="https://avatars.githubusercontent.com/u/56262247" >
         <div>
           <p className="font-bold">Vishal Jeet</p>
