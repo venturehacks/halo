@@ -20,7 +20,6 @@ module.exports = {
     alignItems: true,
   },
   content: [
-    // './src/components/core/Avatar/index.mdx',
     path.join(__dirname, 'src/**/*.{tsx,jsx,js,mdx}'),
     path.join(__dirname, 'dist/**/*.mjs'),
     path.join(__dirname, 'dist/**/*.mjs'),
