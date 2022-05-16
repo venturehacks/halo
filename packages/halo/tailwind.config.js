@@ -1,8 +1,6 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 
-console.log(path.join(__dirname, 'src/**/*.{tsx,jsx,js,mdx}'));
-
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
   corePlugins: {
