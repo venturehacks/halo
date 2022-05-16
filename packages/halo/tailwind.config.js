@@ -1,6 +1,8 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 const path = require('path');
 
+console.log(path.join(__dirname, 'src/**/*.{tsx,jsx,js,mdx}'));
+
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
   corePlugins: {
@@ -18,6 +20,7 @@ module.exports = {
     alignItems: true,
   },
   content: [
+    // './src/components/core/Avatar/index.mdx',
     path.join(__dirname, 'src/**/*.{tsx,jsx,js,mdx}'),
     path.join(__dirname, 'dist/**/*.mjs'),
     path.join(__dirname, 'dist/**/*.mjs'),
