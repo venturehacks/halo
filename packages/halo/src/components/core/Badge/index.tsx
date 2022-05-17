@@ -70,7 +70,7 @@ function Badge({
     position === 'bottom' && hasContent && '-bottom-2 -right-1',
     position === 'top' && !hasContent && '-top-1 right-1',
     position === 'top' && hasContent && '-top-3 right-1',
-    position === 'center' && 'right-0 top-1/2 transform -translate-y-1/2',
+    position === 'center' && 'right-0 top-1/2 -translate-y-1/2',
   );
 
   const component = (
