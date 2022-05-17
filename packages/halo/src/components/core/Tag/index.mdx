@@ -8,7 +8,7 @@ figma: https://www.figma.com/file/8EbOKQuVfc61d9aft8p7cO/Halo-Design-Library?nod
 
 import { Props, Playground } from 'docz';
 import { InterfaceHeader } from '../InterfaceHeader';
-import { BookmarkOutlineIcon } from '../../icons';
+import { BookmarkOutlineIcon, CheckIcon } from '../../icons';
 import { Tag } from './';
 
 # Tag
@@ -20,11 +20,11 @@ Successor to `PillTag` `Flair` (deprecated).
 <Playground>
   <div className="mb-4">
     <InterfaceHeader title="Non-Interactive" section flow />
-    <Tag label="new york" />
-    <Tag color="blue" label="javascript" />
+    <Tag label="New York" />
+    <Tag color="blue" label="Javascript" icon={<CheckIcon/>} />
     <Tag
       icon={<BookmarkOutlineIcon />}
-      label="bookmarked"
+      label="Bookmarked"
     />
     <Tag icon={<BookmarkOutlineIcon />} size="sm" />
   </div>
@@ -35,13 +35,13 @@ Successor to `PillTag` `Flair` (deprecated).
       onClose={() => {
         alert('close clicked!');
       }}
-      label="remote only"
+      label="Remote only"
     />
     <Tag
       color="blue"
       onClose={() => {alert("close clicked!")}}
       onClick={() => {alert("tag clicked!")}}
-      label="paris, france"
+      label="Paris, France"
     />
     <Tag
      icon={<BookmarkOutlineIcon />}
