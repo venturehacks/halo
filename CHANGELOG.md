@@ -2,9 +2,19 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.25](https://github.com/venturehacks/halo/compare/1.0.0-beta.24...1.0.0-beta.25)
+
+- [Platform-23] Tailwind 3 [`#351`](https://github.com/venturehacks/halo/pull/351)
+- update tag [`#349`](https://github.com/venturehacks/halo/pull/349)
+- [Platform-20] Refresh Halo Docs [`#348`](https://github.com/venturehacks/halo/pull/348)
+- [PLATFORM-29] Add GTM Purple [`#347`](https://github.com/venturehacks/halo/pull/347)
+
 #### [1.0.0-beta.24](https://github.com/venturehacks/halo/compare/1.0.0-beta.23...1.0.0-beta.24)
 
+> 10 May 2022
+
 - [LEV-855] Replace trash icon, Notification Icon Fill [`#342`](https://github.com/venturehacks/halo/pull/342)
+- Release 1.0.0-beta.24 [`f4861b0`](https://github.com/venturehacks/halo/commit/f4861b0fcd16f4355b94e57c304ce5649916c913)
 
 #### [1.0.0-beta.23](https://github.com/venturehacks/halo/compare/1.0.0-beta.22...1.0.0-beta.23)
 
