@@ -5,6 +5,7 @@ export { default as AppsIcon } from './AppsIcon.svg';
 export { default as ArchiveIcon } from './ArchiveIcon.svg';
 export { default as BookmarkOutlineIcon } from './BookmarkOutlineIcon.svg';
 export { default as BookmarkSolidIcon } from './BookmarkSolidIcon.svg';
+export { default as CalendarIcon } from './CalendarIcon.svg';
 export { default as CheckIcon } from './CheckIcon.svg';
 export { default as ChevronDownIcon } from './ChevronDownIcon.svg';
 export { default as ChevronLeftIcon } from './ChevronLeftIcon.svg';
