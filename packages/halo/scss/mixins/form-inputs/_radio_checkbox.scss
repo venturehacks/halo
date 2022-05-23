@@ -60,23 +60,46 @@ $pill-border-radius: tempo(6);
   }
 }
 
+/**
+ * @deprecated (drew) 2022-02-25
+ * @mixin deprecated as of 0.15.2
+ * Please do not use in new code.
+*/
+@mixin input-border-checked-thick {
+  border: 2px solid $blue-500;
+}
+
+/**
+ * @deprecated (drew) 2022-02-25
+ * @mixin deprecated as of 0.15.2
+ * Please do not use in new code.
+*/
+@mixin input-border-hover {
+  border-color: $blue-500;
+}
+
 @mixin input-label-checkbox {
   @extend %input-label-base;
   padding-left: tempo(6);
-  line-height: $checkbox-size;
+  line-height: 1.25;
 
   // empty checkbox
   &::before {
     left: 0;
     height: $checkbox-size;
     width: $checkbox-size;
-    border: 1px solid $dark-aaaa;
+
+    // HALOGTM(drew): restore slate color. Remove during GTM cutover.
+    @include input-border-slate;
+
+    // border: 1px solid $dark-aaaa; // restore on GTM cutover
     background-color: $white;
     border-radius: 3px;
   }
 
+  // HALOGTM(drew): restore slate color. Remove during GTM cutover.
   // hover = punchy blue border
-  // &:hover::before {
+  // &:hover {
   //   @include input-border-hover;
   // }
 
@@ -109,12 +132,7 @@ $pill-border-radius: tempo(6);
 
   [disabled] + &,
   [disabled]:checked + & {
-    color: $dark-a;
-
-    &::before,
-    &::after {
-      @include input-disabled;
-    }
+    opacity: 0.66;
   }
 
   // warning color
@@ -134,11 +152,22 @@ $pill-border-radius: tempo(6);
       background-color: $dark-error;
     }
   }
+
+  [disabled]:not(.hasError) + &,
+  [disabled]:not(.hasError):checked + & {
+    opacity: 1;
+    color: $dark-a;
+
+    &::before,
+    &::after {
+      @include input-disabled;
+    }
+  }
 }
 
 @mixin input-label-radio {
   @extend %input-label-base;
-  line-height: $radio-size;
+  line-height: 1.25;
   padding-left: tempo(6);
 
   // circle outline
@@ -147,7 +176,11 @@ $pill-border-radius: tempo(6);
     height: $radio-size;
     width: $radio-size;
     @include border-circle;
-    border: 1px solid $dark-aaaa;
+
+    // HALOGTM(drew): restore slate color. Remove during GTM cutover.
+    border: 1px solid $slate-300;
+
+    // border: 1px solid $dark-aaaa;
     background-color: $white;
   }
 
@@ -183,7 +216,7 @@ $pill-border-radius: tempo(6);
 
     &::before {
       border-color: $dark-aa;
-      background-color: $gray-100;
+      background-color: $gray-200;
     }
 
     &::after {
@@ -227,7 +260,10 @@ $pill-border-radius: tempo(6);
 }
 
 @mixin input-label-pill {
-  border: 1px solid $dark-aaaa;
+  // HALOGTM(drew): restore slate color. Remove during GTM cutover.
+  border: 1px solid $slate-300;
+
+  // border: 1px solid $dark-aaaa;
   border-radius: $pill-border-radius;
   padding: 10px tempo(5) 10px 38px;
 
@@ -248,6 +284,7 @@ $pill-border-radius: tempo(6);
   }
 
   &:hover {
+    border-radius: $pill-border-radius;
     &::before {
       @include border-circle;
     }
@@ -259,6 +296,32 @@ $pill-border-radius: tempo(6);
 
   [disabled] + &,
   [disabled]:checked + & {
+    opacity: 0.66;
+  }
+
+  // warning color
+  .hasError.warning + & {
+    color: $dark-warning;
+    border-color: $dark-warning;
+    &::before {
+      background-color: $dark-warning;
+      border-color: $dark-warning;
+    }
+  }
+
+  // critical color
+  .hasError.critical + & {
+    color: $dark-error;
+    border-color: $dark-error;
+    &::before {
+      background-color: $dark-error;
+      border-color: $dark-error;
+    }
+  }
+
+  [disabled]:not(.hasError) + &,
+  [disabled]:not(.hasError):checked + & {
+    opacity: 1;
     border-color: rgba($dark-a, 0.5);
 
     &::before {

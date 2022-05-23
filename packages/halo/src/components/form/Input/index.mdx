@@ -83,6 +83,54 @@ Raw input fields are designed to be controlled by a [smart, form-connected paren
         onChange={() => {}}
       />
     </Label>
+    <Label field="foo" title="Transparent">
+      <Input
+        type="text"
+        name="foo"
+        placeholder="Your name"
+        maxLength={100}
+        transparent
+      />
+    </Label>
+  </div>
+</Playground>
+
+### Size
+
+<Playground>
+  <div className="max-w-xl">
+    <Bracket>
+      <Label field="foo" title="sm">
+        <Input
+          type="text"
+          name="foo"
+          placeholder="Timezone name..."
+          maxLength={100}
+          size="sm"
+          icon={<TimeIcon />}
+        />
+      </Label>
+      <Label field="foo" title="md">
+        <Input
+          type="text"
+          name="foo"
+          placeholder="Timezone name..."
+          maxLength={100}
+          size="md"
+          icon={<TimeIcon />}
+        />
+      </Label>
+      <Label field="foo" title="lg">
+        <Input
+          type="text"
+          name="foo"
+          placeholder="Timezone name..."
+          maxLength={100}
+          size="lg"
+          icon={<TimeIcon />}
+        />
+      </Label>
+    </Bracket>
   </div>
 </Playground>
 

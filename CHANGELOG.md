@@ -2,10 +2,142 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.25](https://github.com/venturehacks/halo/compare/1.0.0-beta.24...1.0.0-beta.25)
+
+- [Platform-23] Tailwind 3 [`#351`](https://github.com/venturehacks/halo/pull/351)
+- update tag [`#349`](https://github.com/venturehacks/halo/pull/349)
+- [Platform-20] Refresh Halo Docs [`#348`](https://github.com/venturehacks/halo/pull/348)
+- [PLATFORM-29] Add GTM Purple [`#347`](https://github.com/venturehacks/halo/pull/347)
+
+#### [1.0.0-beta.24](https://github.com/venturehacks/halo/compare/1.0.0-beta.23...1.0.0-beta.24)
+
+> 10 May 2022
+
+- [LEV-855] Replace trash icon, Notification Icon Fill [`#342`](https://github.com/venturehacks/halo/pull/342)
+- Release 1.0.0-beta.24 [`f4861b0`](https://github.com/venturehacks/halo/commit/f4861b0fcd16f4355b94e57c304ce5649916c913)
+
+#### [1.0.0-beta.23](https://github.com/venturehacks/halo/compare/1.0.0-beta.22...1.0.0-beta.23)
+
+> 4 May 2022
+
+- `Button` revise last child margin logic, refine docs [`#332`](https://github.com/venturehacks/halo/issues/332)
+- Release 1.0.0-beta.23 [`23fa6c6`](https://github.com/venturehacks/halo/commit/23fa6c6927c52cfde0116939a1eeb3dae908f2c9)
+- Scalar checkbox/radio line height [`1e5eeaa`](https://github.com/venturehacks/halo/commit/1e5eeaa1d20df314a91a921216dde5f69497c796)
+- typo [`1d9b791`](https://github.com/venturehacks/halo/commit/1d9b79174b07936978544bbae74f25289e7e9691)
+
+#### [1.0.0-beta.22](https://github.com/venturehacks/halo/compare/1.0.0-beta.21...1.0.0-beta.22)
+
+> 3 May 2022
+
+- Release 1.0.0-beta.22 [`9bb4747`](https://github.com/venturehacks/halo/commit/9bb4747315764795ee14c6784928087350349cc9)
+- [Button] leading-none on supplied icon [`e3c6e13`](https://github.com/venturehacks/halo/commit/e3c6e1319da4d6eaba12c51830dc99472917cd6b)
+
+#### [1.0.0-beta.21](https://github.com/venturehacks/halo/compare/1.0.0-beta.20...1.0.0-beta.21)
+
+> 3 May 2022
+
+- Release 1.0.0-beta.21 [`1c82ae9`](https://github.com/venturehacks/halo/commit/1c82ae96dbeb48a431b25f329336f528b975a9d3)
+- [icon update] `CheckIcon` `HelpSolidIcon` [`7990b4f`](https://github.com/venturehacks/halo/commit/7990b4fde1e547fdf891dc387553fb3835912dbf)
+
+#### [1.0.0-beta.20](https://github.com/venturehacks/halo/compare/1.0.0-beta.19...1.0.0-beta.20)
+
+> 2 May 2022
+
+- [LEV-855] Input: implement focus with tailwind ring [`#328`](https://github.com/venturehacks/halo/pull/328)
+- Release 1.0.0-beta.20 [`111e455`](https://github.com/venturehacks/halo/commit/111e455be08dce430fe4cbf3843879b2a97436bc)
+
+#### [1.0.0-beta.19](https://github.com/venturehacks/halo/compare/1.0.0-beta.18...1.0.0-beta.19)
+
+> 2 May 2022
+
+- [LEV-855] Monday Fixes: react-select mixins [`#327`](https://github.com/venturehacks/halo/pull/327)
+- Release 1.0.0-beta.19 [`5a98c10`](https://github.com/venturehacks/halo/commit/5a98c1065c2ecdf6aa27b7655fafb60d906454e8)
+
+#### [1.0.0-beta.18](https://github.com/venturehacks/halo/compare/1.0.0-beta.17...1.0.0-beta.18)
+
+> 29 April 2022
+
+- [LEV-855] Friday Fixes: Smaller Icons, Fix Grabbag [`#319`](https://github.com/venturehacks/halo/pull/319)
+- Release 1.0.0-beta.18 [`67b0872`](https://github.com/venturehacks/halo/commit/67b087265f0a3fe790fd0d672322baa05ece687c)
+
+#### [1.0.0-beta.17](https://github.com/venturehacks/halo/compare/1.0.0-beta.16...1.0.0-beta.17)
+
+> 28 April 2022
+
+- [LEV-855] Avatar: accommodate 1px border on image dimensions [`#286`](https://github.com/venturehacks/halo/pull/286)
+- [LEV-855] Input Icons and Paragraph Margin (again), Label Spacing [`#287`](https://github.com/venturehacks/halo/pull/287)
+- [LEV-1435] Startup Fallback Image [`#277`](https://github.com/venturehacks/halo/pull/277)
+- [LEV-855] Input Icons and Paragraph Margin (again), Label Spacing (#287) [`#246`](https://github.com/venturehacks/halo/issues/246) [`#246`](https://github.com/venturehacks/halo/issues/246) [`#258`](https://github.com/venturehacks/halo/issues/258)
+- Release 1.0.0-beta.17 [`749ec9a`](https://github.com/venturehacks/halo/commit/749ec9a5bcac248461208b35bf347a0aef01c977)
+
+#### [1.0.0-beta.16](https://github.com/venturehacks/halo/compare/1.0.0-beta.15...1.0.0-beta.16)
+
+> 28 April 2022
+
+- [LEV-855] Fix Flow on Paragraph [`#285`](https://github.com/venturehacks/halo/pull/285)
+- [LEV-855] Fix Flow on Paragraph (#285) [`#265`](https://github.com/venturehacks/halo/issues/265) [`#253`](https://github.com/venturehacks/halo/issues/253) [`#216`](https://github.com/venturehacks/halo/issues/216) [`#192`](https://github.com/venturehacks/halo/issues/192) [`#240`](https://github.com/venturehacks/halo/issues/240)
+- Release 1.0.0-beta.16 [`4e342d3`](https://github.com/venturehacks/halo/commit/4e342d329173635e03e95b047d1b389af8e5bf57)
+
+#### [1.0.0-beta.15](https://github.com/venturehacks/halo/compare/1.0.0-beta.14...1.0.0-beta.15)
+
+> 27 April 2022
+
+- [LEV-1440] Restore input mixins [`#282`](https://github.com/venturehacks/halo/pull/282)
+- Release 1.0.0-beta.15 [`c6631e3`](https://github.com/venturehacks/halo/commit/c6631e3a608ce5aac5f8247ea4ec78eab97c6f8b)
+
+#### [1.0.0-beta.14](https://github.com/venturehacks/halo/compare/1.0.0-beta.13...1.0.0-beta.14)
+
+> 27 April 2022
+
+- Fixes #207 Fixes #195 Fixes #187 [`#281`](https://github.com/venturehacks/halo/pull/281)
+- Fixes #207 Fixes #195 Fixes #187 (#281) [`#207`](https://github.com/venturehacks/halo/issues/207) [`#195`](https://github.com/venturehacks/halo/issues/195) [`#187`](https://github.com/venturehacks/halo/issues/187)
+- Release 1.0.0-beta.14 [`0b32bf0`](https://github.com/venturehacks/halo/commit/0b32bf02b3a078bd4e31b1c978382fad07fbf0de)
+
+#### [1.0.0-beta.13](https://github.com/venturehacks/halo/compare/1.0.0-beta.12...1.0.0-beta.13)
+
+> 26 April 2022
+
+- Release 1.0.0-beta.13 [`7aad9fb`](https://github.com/venturehacks/halo/commit/7aad9fb2bd5b8e6787521d7379f1c7667a37b37d)
+- disable interpolation because it's breaking PurgeCSS on TFE [`1f30cc0`](https://github.com/venturehacks/halo/commit/1f30cc07f8c620591ad334db3d4d48bdf9bf5056)
+
+#### [1.0.0-beta.12](https://github.com/venturehacks/halo/compare/1.0.0-beta.11...1.0.0-beta.12)
+
+> 26 April 2022
+
+- [LEV-855] Halo QA Fixes Round 1(?) [`#280`](https://github.com/venturehacks/halo/pull/280)
+- [LEV-855] Halo QA Fixes Round 1(?) (#280) [`#236`](https://github.com/venturehacks/halo/issues/236) [`#234`](https://github.com/venturehacks/halo/issues/234) [`#232`](https://github.com/venturehacks/halo/issues/232) [`#224`](https://github.com/venturehacks/halo/issues/224) [`#218`](https://github.com/venturehacks/halo/issues/218)
+- Release 1.0.0-beta.12 [`5c45864`](https://github.com/venturehacks/halo/commit/5c4586485baea33dcc2b548a32d2c7deb80553b2)
+
+#### [1.0.0-beta.11](https://github.com/venturehacks/halo/compare/1.0.0-beta.10...1.0.0-beta.11)
+
+> 26 April 2022
+
+- Release 1.0.0-beta.11 [`261cd70`](https://github.com/venturehacks/halo/commit/261cd70a22230df10f6cc61835396fea2927efd3)
+- output `.js` for CommonJS module [`f1ccb7d`](https://github.com/venturehacks/halo/commit/f1ccb7dafe090ea0ec41fcf46a652def98e5d0ed)
+
+#### [1.0.0-beta.10](https://github.com/venturehacks/halo/compare/1.0.0-beta.9...1.0.0-beta.10)
+
+> 26 April 2022
+
+- [LEV-855] Restore grid class names [`#279`](https://github.com/venturehacks/halo/pull/279)
+- Release 1.0.0-beta.10 [`d24af70`](https://github.com/venturehacks/halo/commit/d24af70fcc4d46746dadd46162c01040f0398dc8)
+
+#### [1.0.0-beta.9](https://github.com/venturehacks/halo/compare/1.0.0-beta.8...1.0.0-beta.9)
+
+> 25 April 2022
+
+- Latest React (DOM) types [`#278`](https://github.com/venturehacks/halo/pull/278)
+- add issue template [`#177`](https://github.com/venturehacks/halo/pull/177)
+- [Tooltip] restore arrow functionality [`#175`](https://github.com/venturehacks/halo/pull/175)
+- Release 1.0.0-beta.9 [`5fcdb23`](https://github.com/venturehacks/halo/commit/5fcdb23758cfaca317e0aa3c3a9b6fa069c90103)
+
 #### [1.0.0-beta.8](https://github.com/venturehacks/halo/compare/1.0.0-beta.7...1.0.0-beta.8)
+
+> 14 April 2022
 
 - Update missed fills [`#176`](https://github.com/venturehacks/halo/pull/176)
 - [LEV-1424] Standardize Icon Fill Color [`#174`](https://github.com/venturehacks/halo/pull/174)
+- Release 1.0.0-beta.8 [`4dd9d85`](https://github.com/venturehacks/halo/commit/4dd9d859b0d73c80e9a3c819cf5a8b88e1e06f33)
 
 #### [1.0.0-beta.7](https://github.com/venturehacks/halo/compare/1.0.0-beta.6...1.0.0-beta.7)
 

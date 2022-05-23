@@ -9,3 +9,40 @@
   background-color: $gray-200;
   border-color: $dark-aa;
 }
+
+// DEPRECATED(drew): deprecated as of 1.0 – will be removed in future release
+@mixin input-border-focused {
+  box-shadow: 0 0 0 4px $blue-200;
+  outline: none;
+}
+
+// DEPRECATED(drew): deprecated as of 1.0 – will be removed in future release
+@mixin input-border-hover {
+  @include border-rounded;
+  border: 1px solid $blue-500;
+}
+
+// DEPRECATED(drew): deprecated as of 1.0 – will be removed in future release
+@mixin input-border-warning {
+  @include border-rounded;
+  border: 1px solid $dark-warning;
+}
+
+// DEPRECATED(drew): deprecated as of 1.0 – will be removed in future release
+@mixin input-border-error {
+  @include border-rounded;
+  border: 1px solid $dark-error;
+}
+
+// DEPRECATED(drew): deprecated as of 1.0 – will be removed in future release
+@mixin input-border-slate {
+  @include border-rounded;
+  border: 1px solid $slate-400;
+}
+
+// DEPRECATED(drew): deprecated as of 1.0 – will be removed in future release
+@mixin input-border-transparent {
+  border: none;
+  box-shadow: none;
+  outline: none;
+}

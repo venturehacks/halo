@@ -171,6 +171,7 @@ function SpanRaw(
     // these conditional expressions (save kb)
     size === '2xs' && 'text-2xs',
     size === 'xs' && 'text-xs',
+    size === 'sm' && 'text-sm',
     size === 'md' && 'text-md',
     size === 'lg' && 'text-lg',
     size === 'xl' && 'text-xl',
@@ -178,7 +179,6 @@ function SpanRaw(
     size === '3xl' && 'text-3xl',
     size === '4xl' && 'text-4xl',
     size === '5xl' && 'text-5xl',
-    // TODO(drew): same force inclusion of rules to simplify
     weight === 'light' && 'font-light',
     weight === 'regular' && 'font-normal',
     weight === 'medium' && 'font-medium',

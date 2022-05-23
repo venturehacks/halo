@@ -122,7 +122,7 @@ exports[`Span snapshot size lg 1`] = `
 
 exports[`Span snapshot size sm 1`] = `
 <span
-  class=""
+  class="text-sm"
 >
   sm
 </span>

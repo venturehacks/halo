@@ -2,10 +2,11 @@
 name: Paragraph
 menu: Core
 route: /core/paragraph
+figma: https://www.figma.com/file/8EbOKQuVfc61d9aft8p7cO/Halo-Design-Library?node-id=366%3A961
 ---
 
 import { Props, Playground } from 'docz';
-import { Header } from '../Header';
+import { InterfaceHeader } from '../InterfaceHeader';
 import { Paragraph } from './';
 
 # Paragraph
@@ -20,9 +21,7 @@ import { Paragraph } from './';
 
 <Playground>
   <div className="max-w-lg">
-    <Header contrast="AAA" h3>
-      Comfortable, contrast AAA
-    </Header>
+    <InterfaceHeader section flow title="Comfortable, contrast AAA" />
     <Paragraph contrast="AAA">
       Suitable for long, continuous written content, such as editorial or blog
       posts. Applies a natural document flow bottom margin by default.
@@ -30,6 +29,12 @@ import { Paragraph } from './';
     <Paragraph contrast="AAA">
       This is following sample paragraph to illustrate the natural bottom margin
       flow.
+    </Paragraph>
+    <Paragraph contrast="AAA" flow={false}>
+      This paragraph has no flow.
+    </Paragraph>
+    <Paragraph contrast="AAA" flow={false}>
+      This is the second of two paragraphs without flow.
     </Paragraph>
   </div>
 </Playground>

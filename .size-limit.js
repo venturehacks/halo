@@ -1,7 +1,7 @@
 module.exports = [
   {
     name: 'CommonJS',
-    path: ['packages/halo/dist/cjs/halo.cjs'],
+    path: ['packages/halo/dist/cjs/halo.js'],
     limit: '50 kB',
   },
   {

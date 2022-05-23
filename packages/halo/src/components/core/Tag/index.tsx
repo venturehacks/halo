@@ -99,7 +99,7 @@ function TagRaw({
       {...rest}
     >
       {icon && <span className={iconClassnames}>{icon}</span>}
-      {label && <span className="font-medium uppercase">{label}</span>}
+      {label && <span>{label}</span>}
       {renderChildren && children}
       {onClose && (
         <CloseIcon

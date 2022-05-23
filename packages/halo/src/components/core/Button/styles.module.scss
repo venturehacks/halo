@@ -1,0 +1,7 @@
+@import 'halo';
+
+.component {
+  & + & {
+    @apply ml-4;
+  }
+}

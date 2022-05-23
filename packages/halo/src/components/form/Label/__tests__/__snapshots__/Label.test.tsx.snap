@@ -17,52 +17,46 @@ exports[`Label snapshot containsFieldGroup 1`] = `
         Name
       </div>
       <div
-        class="text-dark-a text-sm"
+        class="text-dark-a mb-2 text-sm"
       >
         Who are you?
       </div>
     </div>
   </legend>
-  <div>
-    <input
-      checked=""
-      class="input warning"
-      id="chocolate"
-      type="radio"
-    />
-    <label
-      class="radio"
-      for="chocolate"
-    >
-      Chocolate
-    </label>
-  </div>
-  <div>
-    <input
-      class="input warning"
-      id="vanilla"
-      type="radio"
-    />
-    <label
-      class="radio"
-      for="vanilla"
-    >
-      Vanilla
-    </label>
-  </div>
-  <div>
-    <input
-      class="input warning"
-      id="strawberry"
-      type="radio"
-    />
-    <label
-      class="radio"
-      for="strawberry"
-    >
-      Strawberry
-    </label>
-  </div>
+  <input
+    checked=""
+    class="input warning"
+    id="chocolate"
+    type="radio"
+  />
+  <label
+    class="radio"
+    for="chocolate"
+  >
+    Chocolate
+  </label>
+  <input
+    class="input warning"
+    id="vanilla"
+    type="radio"
+  />
+  <label
+    class="radio"
+    for="vanilla"
+  >
+    Vanilla
+  </label>
+  <input
+    class="input warning"
+    id="strawberry"
+    type="radio"
+  />
+  <label
+    class="radio"
+    for="strawberry"
+  >
+    Strawberry
+  </label>
 </fieldset>
 `;
 
@@ -80,13 +74,13 @@ exports[`Label snapshot standard 1`] = `
       Name
     </div>
     <div
-      class="text-dark-a text-sm"
+      class="text-dark-a mb-2 text-sm"
     >
       Who are you?
     </div>
   </div>
   <input
-    class="text-dark-aaaa text-md max-w-full placeholder-dark-a bg-white rounded focus:border-2 px-3 py-2 h-10 border border-gray-500 disabled:text-dark-a disabled:bg-gray-200 disabled:border-light-aa w-full"
+    class="text-dark-aaaa text-md max-w-full placeholder-dark-a ring-inset border rounded focus:ring-dark-link bg-white  focus:ring-1 px-3 py-2 h-10 border-gray-500 disabled:text-dark-a disabled:bg-gray-200 disabled:border-light-aa w-full"
     type="text"
   />
 </label>

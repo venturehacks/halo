@@ -104,6 +104,14 @@ export type Color =
   | 'gtmpink-300'
   | 'gtmpink-200'
   | 'gtmpink-100'
+  | 'gtmpurple-800'
+  | 'gtmpurple-700'
+  | 'gtmpurple-600'
+  | 'gtmpurple-500'
+  | 'gtmpurple-400'
+  | 'gtmpurple-300'
+  | 'gtmpurple-200'
+  | 'gtmpurple-100'
   | 'gtmyellow-800'
   | 'gtmyellow-700'
   | 'gtmyellow-600'
@@ -247,6 +255,15 @@ export const ColorPalette: Record<Color, string> = {
   'gtmpink-300': '#FFC1CC',
   'gtmpink-200': '#FFDEE3',
   'gtmpink-100': '#FFF1F3',
+
+  'gtmpurple-800': '#38014b',
+  'gtmpurple-700': '#571770',
+  'gtmpurple-600': '#73338b',
+  'gtmpurple-500': '#aa61ba',
+  'gtmpurple-400': '#c692ca',
+  'gtmpurple-300': '#ddbcdb',
+  'gtmpurple-200': '#f0daef',
+  'gtmpurple-100': '#faedff',
 
   'gtmyellow-800': '#9F5600',
   'gtmyellow-700': '#CE7C00',

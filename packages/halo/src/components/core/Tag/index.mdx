@@ -3,11 +3,12 @@ name: Tag
 menu: Core
 route: /core/tag
 new: true
+figma: https://www.figma.com/file/8EbOKQuVfc61d9aft8p7cO/Halo-Design-Library?node-id=1747%3A6092
 ---
 
 import { Props, Playground } from 'docz';
 import { InterfaceHeader } from '../InterfaceHeader';
-import { BookmarkOutlineIcon } from '../../icons';
+import { BookmarkOutlineIcon, CheckIcon } from '../../icons';
 import { Tag } from './';
 
 # Tag
@@ -19,11 +20,11 @@ Successor to `PillTag` `Flair` (deprecated).
 <Playground>
   <div className="mb-4">
     <InterfaceHeader title="Non-Interactive" section flow />
-    <Tag label="default tag" />
-    <Tag color="blue" label="blue tag" />
+    <Tag label="New York" />
+    <Tag color="blue" label="Javascript" icon={<CheckIcon/>} />
     <Tag
       icon={<BookmarkOutlineIcon />}
-      label="with icon"
+      label="Bookmarked"
     />
     <Tag icon={<BookmarkOutlineIcon />} size="sm" />
   </div>
@@ -34,23 +35,24 @@ Successor to `PillTag` `Flair` (deprecated).
       onClose={() => {
         alert('close clicked!');
       }}
-      label="Tag with close icon"
+      label="Remote only"
     />
     <Tag
       color="blue"
       onClose={() => {alert("close clicked!")}}
       onClick={() => {alert("tag clicked!")}}
-      label="clickable tag + close"
+      label="Paris, France"
     />
     <Tag
+     icon={<BookmarkOutlineIcon />}
       onClick={() => {
         alert('tag clicked!');
       }}
-      label="Clickable tag!"
+      label="Bookmark"
     />
     <Tag color="blue" onClose={() => {alert("close clicked!")}} >
-      <span>Custom Element</span>
-      <span className="text-red-700">Second Element</span>
+      <span>10 yrs experience</span>
+      <span className="text-blue-700">Nice to have</span>
     </Tag>
   </div>
 </Playground>

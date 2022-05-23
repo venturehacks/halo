@@ -3,7 +3,6 @@ const path = require('path');
 
 /** @type {import('tailwindcss/tailwind-config').TailwindConfig} */
 module.exports = {
-  darkMode: false,
   corePlugins: {
     // TODO(drew): use tailwind's preflight reset
     // https://venturehacks.atlassian.net/browse/LEV-1322
@@ -18,20 +17,12 @@ module.exports = {
     justifyContent: true,
     alignItems: true,
   },
-  purge: {
-    content: [
-      path.join(__dirname, 'src/**/*.{tsx,jsx,js,mdx}'),
-      path.join(__dirname, 'dist/**/*.mjs'),
-      path.join(__dirname, 'dist/**/*.mjs'),
-      path.join(
-        __dirname,
-        '../docs/src/gatsby-theme-docz/**/*.{tsx,jsx,js,mdx}',
-      ),
-    ],
-    options: {
-      keyframes: true,
-    },
-  },
+  content: [
+    path.join(__dirname, 'src/**/*.{tsx,jsx,js,mdx}'),
+    path.join(__dirname, 'dist/**/*.mjs'),
+    path.join(__dirname, 'dist/**/*.mjs'),
+    path.join(__dirname, '../docs/src/gatsby-theme-docz/**/*.{tsx,jsx,js,mdx}'),
+  ],
   theme: {
     colors: {
       transparent: 'transparent',
@@ -202,7 +193,7 @@ module.exports = {
       '2xs': ['11px', '18px'], // (deprecated legacy nano)
       'xs': ['12px', '18px'], // (deprecated legacy micro)
       'sm': ['14px', '20px'], // Mini
-      'md': ['16px', '20px'], // Body / Subsection
+      'md': ['16px', '24px'], // Body / Subsection
       'lg': ['20px', '24px'], // Section
       'xl': ['24px', '30px'], // Page
       '2xl': ['36px', '40px'], // Display
@@ -272,6 +263,17 @@ module.exports = {
       xxl: '1800px',
       superwidescreen: '1800px',
     },
+    borderRadius: {
+      'none': '0px',
+      'sm': '2px',
+      'DEFAULT': '4px',
+      'md': '4px',
+      'lg': '8px',
+      'xl': '12px',
+      '2xl': '16px',
+      '3xl': '24px',
+      'full': '9999px',
+    },
 
     boxShadow: {
       DEFAULT:
@@ -328,16 +330,6 @@ module.exports = {
         space: 20000,
         max: 2147483647,
       },
-    },
-  },
-  variants: {
-    extend: {
-      margin: ['last'],
-      backgroundColor: ['disabled'],
-      borderColor: ['disabled'],
-      cursor: ['disabled'],
-      fontWeight: ['disabled', 'hover'],
-      textColor: ['disabled'],
     },
   },
 };

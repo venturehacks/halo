@@ -115,7 +115,9 @@ function InputRaw({
           transparent,
         }),
         // allow space for icon
-        icon && iconPosition === 'left' && 'pl-11',
+        icon && iconPosition === 'left' && size === 'sm' && 'pl-9',
+        icon && iconPosition === 'left' && size === 'md' && 'pl-11',
+        icon && iconPosition === 'left' && size === 'lg' && 'pl-14',
         icon && iconPosition === 'right' && 'pr-11',
         className,
       )}
@@ -128,24 +130,23 @@ function InputRaw({
     return input;
   }
 
+  const iconClassnames = classNames(
+    'text-dark-a top-1.5 rounded-md',
+    'flex flex-col items-center justify-center',
+    'absolute',
+    !iconContainerClassName?.includes('bg-') && 'bg-blue-100',
+    size === 'sm' && ' h-5 w-5',
+    size === 'md' && ' h-7 w-7',
+    size === 'lg' && 'h-9 w-9',
+    iconPosition === 'left' && 'left-2',
+    iconPosition === 'right' && 'right-2',
+    iconContainerClassName,
+  );
+
   return (
     <div className="relative w-full">
       {input}
-      <div
-        className={classNames(
-          size === 'sm' && 'top-0.5 h-4 w-4',
-          size === 'md' && 'top-1.5 h-7 w-7',
-          size === 'lg' && 'top-1 h-9 w-9',
-          'text-dark-a',
-          'flex flex-col items-center justify-center',
-          'absolute',
-          iconPosition === 'left' && 'left-2',
-          iconPosition === 'right' && 'right-2',
-          iconContainerClassName,
-        )}
-      >
-        {icon}
-      </div>
+      <div className={iconClassnames}>{icon}</div>
     </div>
   );
 }
@@ -185,21 +186,21 @@ function rawInputClassNames({
   transparent,
 }: InputBase = {}) {
   return classNames(
-    'text-dark-aaaa text-md max-w-full placeholder-dark-a',
+    'text-dark-aaaa text-md max-w-full placeholder-dark-a ring-inset border rounded focus:ring-dark-link',
     transparent
-      ? 'bg-transparent shadow-none outline-none'
-      : 'bg-white rounded focus:border-2',
+      ? 'bg-transparent shadow-none outline-none focus:ring-2'
+      : 'bg-white  focus:ring-1',
     size === 'sm' && 'px-3 py-1 h-8',
     size === 'md' && 'px-3 py-2 h-10',
-    size === 'lg' && 'p-3 h-12',
-    !hasError && transparent && 'border-none',
-    !hasError && !transparent && 'border border-gray-500',
+    size === 'lg' && 'p-3  h-12',
+    !hasError && transparent && 'border-transparent',
+    !hasError && !transparent && 'border-gray-500',
     // disabled
     'disabled:text-dark-a disabled:bg-gray-200 disabled:border-light-aa',
     // warning
-    hasError && errorSeverity === 'warning' && 'border-dark-warning border-2',
+    hasError && errorSeverity === 'warning' && 'border-dark-warning ',
     // error
-    hasError && errorSeverity === 'critical' && 'border-dark-error border-2',
+    hasError && errorSeverity === 'critical' && 'border-dark-error',
     hasError && FORM_FIELD_ERROR_IDENTIFIER,
     // width behavior
     intrinsicWidth === 'auto' && 'w-auto',

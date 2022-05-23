@@ -179,6 +179,10 @@ function BoxRaw({
     inlineStyles.background = background;
   }
 
+  if (textAlign) {
+    inlineStyles.textAlign = textAlign;
+  }
+
   const classes = classNames(
     className,
     isFlexColumn && 'flex flex-col',
@@ -187,20 +191,12 @@ function BoxRaw({
     isFlexRow && 'flex flex-row',
     isFlexRow && align && FLEX_ALIGNMENT_MAP.row.align[align],
     isFlexRow && valign && FLEX_ALIGNMENT_MAP.row.valign[valign],
-    // TODO(drew): restore inline styles or remove prop
-    order && `order-${order}`,
-    maxWidth && `max-w-[${maxWidth}]`,
-    maxHeight && `max-h-[${maxHeight}]`,
-    background && `bg-[${background}]`,
     relative && 'relative',
     width === '100%' && 'w-full',
     wrap && 'flex-wrap',
     onClick && 'cursor-pointer',
     augmentNegativeSpaceClasses(padding, 'padding'),
     augmentNegativeSpaceClasses(margin, 'margin'),
-    // TODO(drew): restore inline styles or remove prop
-    background && `bg-${background}`,
-    textAlign && `text-${textAlign}`,
   );
 
   return (
@@ -226,7 +222,7 @@ function augmentNegativeSpaceClasses(
 
   if (typeof space === 'object') {
     return Object.keys(space)
-      .map((direction) => `${metric[0]}${direction[0]}-${space[direction]}`)
+      .map((direction) => `${metric[0]}${direction[0]}-${space[direction] * 2}`) // Halo magnitude is 2x Tailwind
       .join(' ');
   }
 

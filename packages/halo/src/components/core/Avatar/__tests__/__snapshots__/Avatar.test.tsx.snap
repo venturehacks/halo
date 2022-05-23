@@ -2,14 +2,14 @@
 
 exports[`Avatar snapshots badge label 1`] = `
 <div
-  class="inline-flex flex-row items-center relative border border-gray-200 rounded-full h-18 w-18"
+  class="inline-flex flex-row items-center relative border border-gray-300 rounded-full h-18 w-18"
 >
   <img
     alt="Avatar for Drew"
     class="rounded-full"
-    height="72"
+    height="70"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="72"
+    width="70"
   />
   <div
     class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-gray-600 border-gray-100 text-white rounded-full -top-3 right-1"
@@ -27,14 +27,39 @@ exports[`Avatar snapshots badge label 1`] = `
 
 exports[`Avatar snapshots badgeColor 1`] = `
 <div
-  class="inline-flex flex-row items-center relative border border-gray-200 rounded-full h-18 w-18"
+  class="inline-flex flex-row items-center relative border border-gray-300 rounded-full h-18 w-18"
 >
   <img
     alt="Avatar for Drew"
     class="rounded-full"
-    height="72"
+    height="70"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="72"
+    width="70"
+  />
+  <div
+    class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-purple-600 border-purple-100 text-white rounded-full -top-3 right-1"
+  >
+    <div
+      class="flex justify-center gap-1"
+    >
+      <span>
+        Purple
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Avatar snapshots badgeColor 2`] = `
+<div
+  class="inline-flex flex-row items-center relative border border-gray-300 rounded-full h-18 w-18"
+>
+  <img
+    alt="Avatar for Drew"
+    class="rounded-full"
+    height="70"
+    src="https://avatars1.githubusercontent.com/u/194885"
+    width="70"
   />
   <div
     class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-purple-600 border-purple-100 text-white rounded-full -top-3 right-1"
@@ -52,14 +77,14 @@ exports[`Avatar snapshots badgeColor 1`] = `
 
 exports[`Avatar snapshots badgeShape circle [default] 1`] = `
 <div
-  class="inline-flex flex-row items-center relative border border-gray-200 rounded-full h-18 w-18"
+  class="inline-flex flex-row items-center relative border border-gray-300 rounded-full h-18 w-18"
 >
   <img
     alt="Avatar for Drew"
     class="rounded-full"
-    height="72"
+    height="70"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="72"
+    width="70"
   />
   <div
     class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-gray-600 border-gray-100 text-white rounded-full -top-3 right-1"
@@ -77,14 +102,14 @@ exports[`Avatar snapshots badgeShape circle [default] 1`] = `
 
 exports[`Avatar snapshots badgeShape square 1`] = `
 <div
-  class="inline-flex flex-row items-center relative border border-gray-200 rounded-full h-18 w-18"
+  class="inline-flex flex-row items-center relative border border-gray-300 rounded-full h-18 w-18"
 >
   <img
     alt="Avatar for Drew"
     class="rounded-full"
-    height="72"
+    height="70"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="72"
+    width="70"
   />
   <div
     class="absolute border-solid border-gray-100 text-center font-medium uppercase leading-none antialiased p-1 right-0 text-xs bg-gray-600 border-gray-100 text-white rounded-md -top-3 right-1"
@@ -100,86 +125,119 @@ exports[`Avatar snapshots badgeShape square 1`] = `
 </div>
 `;
 
+exports[`Avatar snapshots circle image fallback 1`] = `
+<div
+  class="inline-flex flex-row items-center relative border border-gray-300 rounded-full h-18 w-18"
+>
+  <img
+    alt="Avatar"
+    class="rounded-full"
+    height="70"
+    width="70"
+  />
+</div>
+`;
+
 exports[`Avatar snapshots shape circle [default] 1`] = `
 <div
-  class="inline-flex flex-row items-center relative border border-gray-200 rounded-full h-12 w-12"
+  class="inline-flex flex-row items-center relative border border-gray-300 rounded-full h-12 w-12"
 >
   <img
     alt="Avatar for Drew"
     class="rounded-full"
-    height="48"
+    height="46"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="48"
+    width="46"
   />
 </div>
 `;
 
 exports[`Avatar snapshots shape square 1`] = `
 <div
-  class="inline-flex flex-row items-center relative border border-gray-200 rounded-md h-12 w-12"
+  class="inline-flex flex-row items-center relative border border-gray-300 rounded-md h-12 w-12"
 >
   <img
     alt="Avatar for Drew"
     class="rounded-md"
-    height="48"
+    height="46"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="48"
+    width="46"
   />
 </div>
 `;
 
 exports[`Avatar snapshots size lg 1`] = `
 <div
-  class="inline-flex flex-row items-center relative border border-gray-200 rounded-full h-18 w-18"
+  class="inline-flex flex-row items-center relative border border-gray-300 rounded-full h-18 w-18"
 >
   <img
     alt="Avatar for Drew"
     class="rounded-full"
-    height="72"
+    height="70"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="72"
+    width="70"
   />
 </div>
 `;
 
 exports[`Avatar snapshots size md [default] 1`] = `
 <div
-  class="inline-flex flex-row items-center relative border border-gray-200 rounded-full h-12 w-12"
+  class="inline-flex flex-row items-center relative border border-gray-300 rounded-full h-12 w-12"
 >
   <img
     alt="Avatar for Drew"
     class="rounded-full"
-    height="48"
+    height="46"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="48"
+    width="46"
   />
 </div>
 `;
 
 exports[`Avatar snapshots size xs 1`] = `
 <div
-  class="inline-flex flex-row items-center relative border border-gray-200 rounded-full h-6 w-6"
+  class="inline-flex flex-row items-center relative border border-gray-300 rounded-full h-6 w-6"
 >
   <img
     alt="Avatar for Drew"
     class="rounded-full"
-    height="24"
+    height="22"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="24"
+    width="22"
   />
 </div>
 `;
 
 exports[`Avatar snapshots size xxs 1`] = `
 <div
-  class="inline-flex flex-row items-center relative border border-gray-200 rounded-full h-4 w-4"
+  class="inline-flex flex-row items-center relative border border-gray-300 rounded-full h-4 w-4"
 >
   <img
     alt="Avatar for Drew"
     class="rounded-full"
-    height="16"
+    height="14"
     src="https://avatars1.githubusercontent.com/u/194885"
-    width="16"
+    width="14"
   />
+</div>
+`;
+
+exports[`Avatar snapshots square image fallback 1`] = `
+<div
+  class="inline-flex flex-row items-center relative border border-gray-300 rounded-md h-18 w-18 bg-slate-100"
+>
+  <svg
+    class="m-auto text-slate-400 h-10 w-10"
+    fill="currentColor"
+    viewBox="0 0 24 24"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      clip-rule="evenodd"
+      d="M11 2a3 3 0 0 1 3 3v1.17c.313-.11.65-.17 1-.17h4a3 3 0 0 1 3 3v10a3 3 0 0 1-3 3H5a3 3 0 0 1-3-3V5a3 3 0 0 1 3-3h6zm0 2H5a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h7V5a1 1 0 0 0-1-1zm8 4h-4a1 1 0 0 0-1 1v11h5a1 1 0 0 0 1-1V9a1 1 0 0 0-1-1zM9 14a1 1 0 1 1 0 2H7a1 1 0 1 1 0-2h2zm9 0a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2h2zm-9-4a1 1 0 1 1 0 2H7a1 1 0 1 1 0-2h2zm9 0a1 1 0 1 1 0 2h-2a1 1 0 1 1 0-2h2zM9 6a1 1 0 0 1 0 2H7a1 1 0 0 1 0-2h2z"
+      fill="currentColor"
+      fill-rule="evenodd"
+    />
+  </svg>
 </div>
 `;

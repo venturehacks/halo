@@ -1,5 +1,6 @@
 import classNames from 'classnames';
 import React from 'react';
+import { CompanyIcon } from '~/components/icons';
 
 import {
   ForwardedRefProps,
@@ -23,9 +24,20 @@ export interface AvatarProps {
   badgePosition?: BadgePosition;
   badgeShape?: BadgeShape;
   className?: string;
-  imageUrl: string;
+  /**
+   * Falsy value or url containing nopic_startup will result in
+   * startup fallback icon.
+   */
+  imageUrl: Nullable<string>;
   name?: string;
+  /**
+   * Circle for individuals, square for startups
+   * @default circle
+   */
   shape?: AvatarShape;
+  /**
+   * @default sm
+   */
   size: AvatarSize;
   tooltip?: string;
 }
@@ -53,10 +65,13 @@ function AvatarRaw({
 
   const isBadgeJSX = typeof badge !== 'string';
 
+  const useStartupFallbackIcon =
+    shape === 'square' && (!imageUrl || imageUrl?.includes('nopic_startup'));
+
   const componentClassnames = classNames(
     className,
     'inline-flex flex-row items-center relative',
-    'border border-gray-200',
+    'border border-gray-300',
     shape === 'circle' && 'rounded-full',
     shape === 'square' && 'rounded-md',
     size === 'xxs' && 'h-4 w-4',
@@ -65,6 +80,16 @@ function AvatarRaw({
     size === 'md' && 'h-12 w-12',
     size === 'lg' && 'h-18 w-18',
     size === 'xl' && 'h-28 w-28',
+    useStartupFallbackIcon && 'bg-slate-100',
+  );
+
+  const iconClassnames = classNames(
+    'm-auto text-slate-400',
+    size === 'xxs' && 'h-3 w-3',
+    size === 'xs' && 'h-4 w-4',
+    size === 'sm' && 'h-5 w-5',
+    size === 'md' && 'h-7 w-7',
+    (size === 'xl' || size === 'lg') && 'h-10 w-10',
   );
 
   const avatarClassNames = classNames(
@@ -86,13 +111,18 @@ function AvatarRaw({
       className={classNames(componentClassnames, className)}
       {...rest}
     >
-      <img
-        alt={name ? `Avatar for ${name}` : 'Avatar'}
-        className={avatarClassNames}
-        height={IMAGE_SIZES[size]}
-        src={imageUrl}
-        width={IMAGE_SIZES[size]}
-      />
+      {useStartupFallbackIcon ? (
+        <CompanyIcon className={iconClassnames} />
+      ) : (
+        <img
+          alt={name ? `Avatar for ${name}` : 'Avatar'}
+          className={avatarClassNames}
+          /* accomodate 1px border */
+          height={IMAGE_SIZES[size] - 2}
+          src={imageUrl}
+          width={IMAGE_SIZES[size] - 2}
+        />
+      )}
       {showBadge && (
         <>{isBadgeJSX ? badge : <Badge {...badgeOptions} label={badge} />}</>
       )}
