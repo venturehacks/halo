@@ -1,4 +1,6 @@
 /* eslint-disable no-console */
+import chalk from 'chalk';
+
 const CSS_FILENAME = './styles.module.scss';
 
 /**
@@ -16,25 +18,21 @@ function getCssClassnames(source, jscodeshiftApi) {
   });
 
   if (importDeclaration.length === 0) {
-    console.log('`styles` import statement was not found.`');
+    console.log(chalk.red('`styles` import statement was not found.'));
     return [];
   }
 
   // get the local name for the imported module
   const importLocalName = importDeclaration.find(j.Identifier).get(0).node.name;
 
-  const cssClassesReferenced = [];
+  const cssClassesReferenced = new Set();
   root
     .find(j.MemberExpression, { object: { name: importLocalName } })
     .forEach((nodePath) => {
-      const cssClassname = nodePath.node.property.name;
-      // ensure classnames are deduped
-      if (!cssClassesReferenced.includes(cssClassname)) {
-        cssClassesReferenced.push(cssClassname);
-      }
+      cssClassesReferenced.push(nodePath.node.property.name);
     });
 
-  return cssClassesReferenced;
+  return Array.from(cssClassesReferenced);
 }
 
 export { getCssClassnames, CSS_FILENAME };
