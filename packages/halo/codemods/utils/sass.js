@@ -73,8 +73,14 @@ function getTailwindPropertiesForClass(fileName, className) {
 }
 
 /**
- * Recursively extracts all the nodes that represent css rules. This ensures that we also
- * extract any inner classes.
+ * `postcss.parse` returns a Document object (https://postcss.org/api/#document) that contains a
+ * nodes array, which is the input provided to this method.
+ *
+ * A node can be one of the following: [root, atrule, rule, decl, comment] - this method will
+ * recursively extract all the `rule` nodes from the input array. This includes any inner css rule
+ * classes as well.
+ *
+ * More information regarding this API can be found here: https://postcss.org/api/.
  */
 function extractRuleNodes(inputNodes) {
   const matchedNodes = inputNodes.filter((node) => node.type === 'rule');
