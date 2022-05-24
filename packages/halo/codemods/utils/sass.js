@@ -1,10 +1,10 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable no-console */
 import chalk from 'chalk';
+import getTailwindUtils from './tailwind-mappings/index';
 
 const fs = require('fs');
 const postcss = require('postcss');
-const { getTailwindUtils } = require('tailwind-mappings');
 
 const TEMPO_VAL_PX = 4;
 
