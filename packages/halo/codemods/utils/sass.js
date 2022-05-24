@@ -1,10 +1,11 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
 /* eslint-disable no-console */
+import chalk from 'chalk';
+
 const fs = require('fs');
 const postcss = require('postcss');
 const { getTailwindUtils } = require('tailwind-mappings');
 
-const CONSOLE_RED = '\x1b[31m%s\x1b[0m';
 const TEMPO_VAL_PX = 4;
 
 function getTailwindPropertiesForClass(fileName, className) {
@@ -29,7 +30,7 @@ function getTailwindPropertiesForClass(fileName, className) {
   );
 
   if (matchingNodes.length === 0) {
-    console.log(CONSOLE_RED, `COULD NOT FIND CSS FOR '.${className}'`);
+    console.log(chalk.red(`COULD NOT FIND CSS FOR '.${className}'`));
     return;
   }
 
@@ -68,7 +69,7 @@ function getTailwindPropertiesForClass(fileName, className) {
   // Add any tailwindClasses for mixins that aren't supported
   tailwindClasses.push(mixinsToTailwind(classNode));
 
-  return tailwindClasses.flat().filter((c) => c !== '');
+  return tailwindClasses.flat().filter(Boolean);
 }
 
 /**
@@ -118,8 +119,9 @@ function replaceTempoWithPixel(input) {
 
 function logTransformationError(declaration) {
   console.log(
-    CONSOLE_RED,
-    `COULD NOT TRANSFORM '${declaration.prop}: ${declaration.value}'`,
+    chalk.red(
+      `COULD NOT TRANSFORM '${declaration.prop}: ${declaration.value}'`,
+    ),
   );
 }
 
