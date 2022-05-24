@@ -29,7 +29,7 @@ function getCssClassnames(source, jscodeshiftApi) {
   root
     .find(j.MemberExpression, { object: { name: importLocalName } })
     .forEach((nodePath) => {
-      cssClassesReferenced.push(nodePath.node.property.name);
+      cssClassesReferenced.add(nodePath.node.property.name);
     });
 
   return Array.from(cssClassesReferenced);
