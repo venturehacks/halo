@@ -11,7 +11,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "clean": "rm -rf ./dist/*",
-    "codemod:tailwind": "run(){ jscodeshift -t codemods/scssToTailwind.js $1 -d -p --parser=tsx; }; run",
+    "codemod:tailwind": "jscodeshift -t codemods/scssToTailwind.js -d -p --parser=tsx",
     "build": "tsc --emitDeclarationOnly && rollup -c rollup.config.js",
     "icons": "ts-node support/icon-index-generate.ts && prettier --write src/components/icons/**/*.mdx",
     "size": "size-limit",
