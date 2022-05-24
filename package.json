@@ -93,6 +93,7 @@
     "babel-plugin-inline-react-svg": "1.1.2",
     "change-case": "4.1.2",
     "chokidar-cli": "^1.2.2",
+    "chroma-js": "^2.1.2",
     "classnames": "^2.2.6",
     "concurrently": "^4.1.2",
     "cross-env": "^5.2.0",
