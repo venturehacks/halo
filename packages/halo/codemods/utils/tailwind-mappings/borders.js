@@ -2,7 +2,7 @@
 import chroma from 'chroma-js';
 
 import TAILWIND_CLASSES from './constants';
-import getColorUtils from './color-utils';
+import getColorUtils from './colors';
 import getProximateKey from './get-proximate-key';
 
 function getBorderUtils(decl) {
