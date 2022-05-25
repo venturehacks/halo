@@ -24,7 +24,7 @@ export default (fileInfo, api) => {
   });
 
   console.log(chalk.magenta('---------------------------------------'));
-  console.log(chalk.magenta('------- TAILWIND TRANSFORMATION --------'));
+  console.log(chalk.magenta('------- TAILWIND TRANSFORMATION -------'));
   console.log(chalk.magenta('---------------------------------------'));
   Object.keys(cssToTailwind).forEach((className) => {
     if (cssToTailwind[className]) {
