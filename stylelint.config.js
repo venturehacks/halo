@@ -79,5 +79,6 @@ module.exports = {
     ],
     'selector-pseudo-element-colon-notation': 'double',
     'string-quotes': 'single',
+    'font-family-name-quotes': null,
   },
 };
