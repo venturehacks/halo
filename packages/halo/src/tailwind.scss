@@ -49,3 +49,25 @@
 
 @tailwind components;
 @tailwind utilities;
+
+// New brand fonts
+@font-face {
+  font-family: 'Arbeit';
+  font-style: normal;
+  font-weight: 400;
+  src: url('/fonts/Arbeit-Regular.otf');
+}
+
+@font-face {
+  font-family: 'Arbeit';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/fonts/Arbeit-Bold.otf');
+}
+
+@font-face {
+  font-family: 'Galano Classic';
+  font-style: normal;
+  font-weight: bold;
+  src: url('/fonts/galano-bold.otf');
+}

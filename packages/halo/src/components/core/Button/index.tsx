@@ -126,6 +126,7 @@ function ButtonRaw({
     size === 'md' && 'px-4 py-2.5',
     size === 'lg' && 'px-10 py-3.5',
     VARIANT_CSS[variant],
+    variant.includes('gtm') && 'font-arbeit',
     width === '100%' && 'w-full',
     icon && 'flex flex-row justify-center items-center',
   );
