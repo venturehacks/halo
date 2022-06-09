@@ -2,12 +2,24 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.26](https://github.com/venturehacks/halo/compare/1.0.0-beta.25...1.0.0-beta.26)
+
+- Expand Team Q2 2022 [`#359`](https://github.com/venturehacks/halo/pull/359)
+- [Platform-21] Halo Educational Videos [`#360`](https://github.com/venturehacks/halo/pull/360)
+- [PLATFORM-83] Add Brand Fonts to Halo Buttons/Doc Site [`#356`](https://github.com/venturehacks/halo/pull/356)
+- [LEV-1277] extract logic and remove tailwind-mappings dependency from codemod [`#355`](https://github.com/venturehacks/halo/pull/355)
+- [LEV-1277] Implement a codemod script to assist in migrating from scss -&gt; tailwind [`#137`](https://github.com/venturehacks/halo/pull/137)
+- Add calendar icon [`#352`](https://github.com/venturehacks/halo/pull/352)
+
 #### [1.0.0-beta.25](https://github.com/venturehacks/halo/compare/1.0.0-beta.24...1.0.0-beta.25)
+
+> 17 May 2022
 
 - [Platform-23] Tailwind 3 [`#351`](https://github.com/venturehacks/halo/pull/351)
 - update tag [`#349`](https://github.com/venturehacks/halo/pull/349)
 - [Platform-20] Refresh Halo Docs [`#348`](https://github.com/venturehacks/halo/pull/348)
 - [PLATFORM-29] Add GTM Purple [`#347`](https://github.com/venturehacks/halo/pull/347)
+- Release 1.0.0-beta.25 [`229cf4a`](https://github.com/venturehacks/halo/commit/229cf4a64e4471b8401bcfdcca864effa91d18cd)
 
 #### [1.0.0-beta.24](https://github.com/venturehacks/halo/compare/1.0.0-beta.23...1.0.0-beta.24)
 
