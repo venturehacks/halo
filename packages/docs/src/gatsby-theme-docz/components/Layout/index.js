@@ -14,6 +14,7 @@ import { Banner } from '~/components/core/Banner';
 import Footer from '../Footer';
 import NavHeadings from '../NavHeadings';
 import { Content, globalStyles } from './custom-styles';
+import VideoTutorial from '../VideoTutorial';
 
 export const Layout = ({
   children,
@@ -82,10 +83,11 @@ export const Layout = ({
                     new code.
                   </Banner>
                 )}
-
                 {/* MDX Content */}
                 <div className="mdx-content">{children}</div>
-
+                {currentDoc && currentDoc.video && (
+                  <VideoTutorial url={currentDoc.video} />
+                )}
                 <Footer updated={updated} menus={menus} />
               </Content>
               <NavHeadings />

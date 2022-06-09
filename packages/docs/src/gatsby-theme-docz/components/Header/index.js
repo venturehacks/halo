@@ -122,8 +122,8 @@ export const Header = ({ onOpen }) => {
             )}
             {video && (
               <a
-                className="ml-6 flex flex-row items-center justify-center hover:no-underline"
-                href="#tutorial"
+                className="ml-6 flex flex-row items-center justify-center"
+                href="#video-tutorial"
               >
                 <InfoSolidIcon className="w-6" />
                 Video Tutorial
