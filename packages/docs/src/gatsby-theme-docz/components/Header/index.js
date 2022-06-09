@@ -13,6 +13,7 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 import { Button } from '~/components/core/Button';
 import { FigmaOutlineIcon } from '~/components/icons/vendor-support';
+import { InfoSolidIcon } from '~/components/icons';
 //import Headroom from 'react-headroom';
 import { Box, Flex, jsx, useColorMode } from 'theme-ui';
 import SearchDrawer from '../Search';
@@ -28,7 +29,7 @@ export const Header = ({ onOpen }) => {
       header: { fixed, icons } = {},
     },
   } = useConfig();
-  const { edit = true, figma, ...doc } = useCurrentDoc();
+  const { edit = true, figma, video, ...doc } = useCurrentDoc();
   const [colorMode, setColorMode] = useColorMode();
   const [drawerOpen, setDrawerOpen] = useState(false);
 
@@ -117,6 +118,15 @@ export const Header = ({ onOpen }) => {
               >
                 <FigmaOutlineIcon className="w-9" />
                 <span className="ml-1 inline-block ">Figma</span>
+              </a>
+            )}
+            {video && (
+              <a
+                className="ml-6 flex flex-row items-center justify-center"
+                href="#video-tutorial"
+              >
+                <InfoSolidIcon className="w-6" />
+                Video Tutorial
               </a>
             )}
           </div>

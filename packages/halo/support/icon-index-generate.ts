@@ -62,6 +62,7 @@ name: Icons
 route: /icons
 updated: ${new Date().toISOString()}
 figma: https://www.figma.com/file/8EbOKQuVfc61d9aft8p7cO/Halo-Design-Library?node-id=12%3A1388
+video: https://www.youtube.com/embed/mfEjrRpjjhM?start=47
 ---
 
 ${iconImport}
