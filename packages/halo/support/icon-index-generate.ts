@@ -62,6 +62,7 @@ name: Icons
 route: /icons
 updated: ${new Date().toISOString()}
 figma: https://www.figma.com/file/8EbOKQuVfc61d9aft8p7cO/Halo-Design-Library?node-id=12%3A1388
+video: true
 ---
 
 ${iconImport}
@@ -73,6 +74,11 @@ ${iconImport}
 ${iconDocs}
 
 </div>
+
+## Video Tutorial
+<a id="tutorial">
+<iframe width="560" height="315" src="https://www.youtube.com/embed/mfEjrRpjjhM?start=47" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</a>
 `;
 
 fs.writeFileSync(DOCUMENTATION_PATH, documentation);
