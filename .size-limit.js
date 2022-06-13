@@ -6,7 +6,7 @@ module.exports = [
   },
   {
     name: 'ES6',
-    path: ['packages/halo/dist/esm/**/*.mjs'],
+    path: ['packages/halo/dist/esm/**/*.js'],
     limit: '50 kB',
   },
   {
@@ -17,7 +17,7 @@ module.exports = [
   {
     name: 'Total',
     path: [
-      'packages/halo/dist/esm/halo.mjs',
+      'packages/halo/dist/esm/halo.esm.js',
       'packages/halo/dist/esm/halo.css',
     ],
   },
