@@ -3,7 +3,7 @@
   "version": "1.0.0-beta.26",
   "module": "dist/esm/halo.esm.js",
   "main": "dist/cjs/halo.js",
-  "style": "dist/esm/halo.css",
+  "style": "dist/esm/halo.esm.css",
   "types": "dist/typings/index.d.ts",
   "displayName": "Halo Design System",
   "description": "Next-generation design system for AngelList and beyond.",
