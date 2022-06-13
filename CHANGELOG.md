@@ -2,7 +2,13 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.27](https://github.com/venturehacks/halo/compare/1.0.0-beta.26...1.0.0-beta.27)
+
+- Change ESM file extension [`#362`](https://github.com/venturehacks/halo/pull/362)
+
 #### [1.0.0-beta.26](https://github.com/venturehacks/halo/compare/1.0.0-beta.25...1.0.0-beta.26)
+
+> 9 June 2022
 
 - Expand Team Q2 2022 [`#359`](https://github.com/venturehacks/halo/pull/359)
 - [Platform-21] Halo Educational Videos [`#360`](https://github.com/venturehacks/halo/pull/360)
@@ -10,6 +16,7 @@ All notable changes to this project will be documented in this file. Dates are d
 - [LEV-1277] extract logic and remove tailwind-mappings dependency from codemod [`#355`](https://github.com/venturehacks/halo/pull/355)
 - [LEV-1277] Implement a codemod script to assist in migrating from scss -&gt; tailwind [`#137`](https://github.com/venturehacks/halo/pull/137)
 - Add calendar icon [`#352`](https://github.com/venturehacks/halo/pull/352)
+- Release 1.0.0-beta.26 [`9020762`](https://github.com/venturehacks/halo/commit/90207621b535251e9375d54e13f6e5b158c069c9)
 
 #### [1.0.0-beta.25](https://github.com/venturehacks/halo/compare/1.0.0-beta.24...1.0.0-beta.25)
 
