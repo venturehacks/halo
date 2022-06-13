@@ -19,8 +19,7 @@ module.exports = {
   },
   content: [
     path.join(__dirname, 'src/**/*.{tsx,jsx,js,mdx}'),
-    path.join(__dirname, 'dist/**/*.mjs'),
-    path.join(__dirname, 'dist/**/*.mjs'),
+    path.join(__dirname, 'dist/**/*.js'),
     path.join(__dirname, '../docs/src/gatsby-theme-docz/**/*.{tsx,jsx,js,mdx}'),
   ],
   theme: {
