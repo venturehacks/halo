@@ -82,7 +82,7 @@ export default defineConfig({
     }),
     postcss({
       extensions: ['.css', '.sass', '.scss'],
-      extract: true,
+      extract: 'halo.css',
       minimize: {
         preset: 'default',
       },

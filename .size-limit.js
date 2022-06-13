@@ -11,7 +11,7 @@ module.exports = [
   },
   {
     name: 'CSS',
-    path: ['packages/halo/dist/esm/halo.esm.css'],
+    path: ['packages/halo/dist/esm/halo.css'],
     limit: '10 kB',
   },
   {
