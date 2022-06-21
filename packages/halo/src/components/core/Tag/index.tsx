@@ -58,7 +58,7 @@ function TagRaw({
   label,
   onClick,
   onClose,
-  size = 'xs',
+  size = 'sm',
   ...rest
 }: TagProps & ForwardedRefProps<HTMLSpanElement>) {
   const componentClassnames = classNames(
