@@ -2,9 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.28](https://github.com/venturehacks/halo/compare/1.0.0-beta.27...1.0.0-beta.28)
+
+- update test and default size [`#364`](https://github.com/venturehacks/halo/pull/364)
+
 #### [1.0.0-beta.27](https://github.com/venturehacks/halo/compare/1.0.0-beta.26...1.0.0-beta.27)
 
+> 13 June 2022
+
 - Change ESM file extension [`#362`](https://github.com/venturehacks/halo/pull/362)
+- Release 1.0.0-beta.27 [`61e33ed`](https://github.com/venturehacks/halo/commit/61e33ed08f2c23c9b6013bee4575404b8cc436b3)
 
 #### [1.0.0-beta.26](https://github.com/venturehacks/halo/compare/1.0.0-beta.25...1.0.0-beta.26)
 
