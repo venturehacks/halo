@@ -48,6 +48,13 @@ const colorToStyle = {
   'red-dark': 'bg-red-600 border-red-100 ',
   'orange-dark': 'bg-orange-600 border-orange-600 ',
   'yellow-dark': 'bg-gtmyellow-700 border-gtmyellow-700 ',
+  'gray-light': 'bg-gray-200 text-gray-800',
+  'purple-light': 'bg-purple-100 border-purple-100 text-purple-700',
+  'blue-light': 'bg-blue-100 border-blue-100 text-blue-400',
+  'green-light': 'bg-green-100 border-green-100 text-green-400',
+  'red-light': 'bg-red-600 border-red-100 text-white',
+  'orange-light': 'bg-orange-100 border-orange-100 text-orange-600',
+  'yellow-light': 'bg-gtmyellow-100 border-gtmyellow-100 text-gtmyellow-700',
 };
 
 function Badge({
@@ -75,17 +82,8 @@ function Badge({
     size === 'md' && hasContent && 'text-xs',
     size === 'sm' && !hasContent && 'w-2 h-2',
     size === 'md' && !hasContent && 'w-4 h-4',
-    color === 'gray-light' && 'bg-gray-200 text-gray-800',
-    color === 'purple-light' &&
-      'bg-purple-100 border-purple-100 text-purple-700',
-    color === 'blue-light' && 'bg-blue-100 border-blue-100 text-blue-400',
-    color === 'green-light' && 'bg-green-100 border-green-100 text-green-400',
-    color === 'red-light' && 'bg-red-600 border-red-100 text-white',
-    color === 'orange-light' &&
-      'bg-orange-100 border-orange-100 text-orange-600',
-    color === 'yellow-light' &&
-      'bg-gtmyellow-100 border-gtmyellow-100 text-gtmyellow-700',
-    color.includes('-dark') && `text-white ${colorToStyle[color]}`,
+    color.includes('-dark') && 'text-white',
+    colorToStyle[color],
     shape === 'circle' && 'rounded-full',
     shape === 'square' && hasContent && 'rounded-md',
     shape === 'square' && size === 'md' && !hasContent && 'rounded-md',
