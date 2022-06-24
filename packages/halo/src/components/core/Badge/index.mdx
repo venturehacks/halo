@@ -23,12 +23,12 @@ Colored badge to decorate an element. Assumes parent element has position="relat
     <div className="mb-5 mr-5 flex flex-row items-start gap-6">
       <div className="relative">
         <PillTag className="mr-4">Count Indicator</PillTag>
-        <Badge color="purple" shape="square" count={100} />
+        <Badge color="purple-light" shape="square" count={0} />
       </div>
       <div className="relative">
         <PillTag className="mr-4">Icon</PillTag>
         <Badge
-          color="blue"
+          color="blue-light"
           position="bottom"
           shape="square"
           size="md"
@@ -37,14 +37,14 @@ Colored badge to decorate an element. Assumes parent element has position="relat
       </div>
       <div className="relative">
         <PillTag className="mr-4">Text</PillTag>
-        <Badge color="red" shape="square" label="New" />
+        <Badge color="red-light" shape="square" label="New" />
       </div>
     </div>
     <div className="mr-4 flex flex-row items-start gap-6">
       <div className="relative">
         <PillTag className="mr-4">Tooltip on Hover</PillTag>
         <Badge
-          color="green"
+          color="green-light"
           shape="square"
           size="md"
           icon={<AlarmIcon className="m-0" width={16} />}
@@ -88,6 +88,53 @@ Colored badge to decorate an element. Assumes parent element has position="relat
   </div>
 </Playground>
 
+### Color
+
+<Playground>
+  <div className="ml-3">
+    <div className="mr-5 flex h-4 flex-row items-start gap-6">
+      <div className="relative w-28">
+        <Badge color="gray-light" position="center" label="gray-light" />
+      </div>
+      <div className="relative w-28">
+        <Badge color="red-light" position="center" label="red-light" />
+      </div>
+      <div className="relative w-28">
+        <Badge color="orange-light" position="center" label="orange-light" />
+      </div>
+      <div className="relative w-28">
+        <Badge color="green-light" position="center" label="green-light" />
+      </div>
+      <div className="relative w-28">
+        <Badge color="blue-light" position="center" label="blue-light" />
+      </div>
+      <div className="relative w-28">
+        <Badge color="purple-light" position="center" label="purple-light" />
+      </div>
+    </div>
+    <div className="mr-5 mt-4 flex h-4 flex-row items-start gap-6">
+      <div className="relative w-28">
+        <Badge color="gray-dark" position="center" label="gray-dark" />
+      </div>
+      <div className="relative w-28">
+        <Badge color="red-dark" position="center" label="red-dark" />
+      </div>
+      <div className="relative w-28">
+        <Badge color="orange-dark" position="center" label="orange-dark" />
+      </div>
+      <div className="relative w-28">
+        <Badge color="green-dark" position="center" label="green-dark" />
+      </div>
+      <div className="relative w-28">
+        <Badge color="blue-dark" position="center" label="blue-dark" />
+      </div>
+      <div className="relative w-28">
+        <Badge color="purple-dark" position="center" label="purple-dark" />
+      </div>
+    </div>
+  </div>
+</Playground>
+
 ### Placement
 
 <Playground>
@@ -112,7 +159,21 @@ Colored badge to decorate an element. Assumes parent element has position="relat
 ### Exports
 
 ```ts
-type BadgeColor = 'blue' | 'gray' | 'green' | 'orange' | 'purple' | 'red';
+type BadgeColor =
+  | 'blue-light'
+  | 'gray-light'
+  | 'green-light'
+  | 'orange-light'
+  | 'yellow-light'
+  | 'purple-light'
+  | 'red-light'
+  | 'blue-dark'
+  | 'gray-dark'
+  | 'green-dark'
+  | 'orange-dark'
+  | 'purple-dark'
+  | 'yellow-dark'
+  | 'red-dark';
 
 type BadgeShape = 'square' | 'circle';
 ```
