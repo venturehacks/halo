@@ -10,14 +10,12 @@ export type BadgeColor =
   | 'orange-light'
   | 'yellow-light'
   | 'purple-light'
-  | 'red-light'
   | 'blue-dark'
   | 'gray-dark'
   | 'green-dark'
   | 'orange-dark'
   | 'purple-dark'
-  | 'yellow-dark'
-  | 'red-dark';
+  | 'yellow-dark';
 
 export type BadgeShape = 'square' | 'circle';
 
@@ -41,19 +39,17 @@ export interface BadgeProps {
 }
 
 const colorToStyle = {
-  'blue-dark': 'bg-blue-400 border-blue-400',
+  'blue-dark': 'bg-gtmblue-400 border-gtmblue-400',
   'gray-dark': 'bg-gray-800 border-gray-800',
-  'purple-dark': 'bg-purple-700 border-purple-700',
-  'green-dark': 'bg-green-400 border-green-400',
-  'red-dark': 'bg-red-600 border-red-100 ',
-  'orange-dark': 'bg-orange-600 border-orange-600 ',
+  'purple-dark': 'bg-gtmpurple-700 border-gtmpurple-700',
+  'green-dark': 'bg-gtmgreen-400 border-gtmgreen-400',
+  'orange-dark': 'bg-gtmorange-600 border-gtmorange-600 ',
   'yellow-dark': 'bg-gtmyellow-700 border-gtmyellow-700 ',
   'gray-light': 'bg-gray-200 text-gray-800',
-  'purple-light': 'bg-purple-100 border-purple-100 text-purple-700',
-  'blue-light': 'bg-blue-100 border-blue-100 text-blue-400',
-  'green-light': 'bg-green-100 border-green-100 text-green-400',
-  'red-light': 'bg-red-600 border-red-100 text-white',
-  'orange-light': 'bg-orange-100 border-orange-100 text-orange-600',
+  'purple-light': 'bg-gtmpurple-100 border-gtmpurple-100 text-gtmpurple-700',
+  'blue-light': 'bg-gtmblue-100 border-gtmblue-100 text-gtmblue-400',
+  'green-light': 'bg-gtmgreen-100 border-gtmgreen-100 text-gtmgreen-400',
+  'orange-light': 'bg-gtmorange-100 border-gtmorange-100 text-gtmorange-600',
   'yellow-light': 'bg-gtmyellow-100 border-gtmyellow-100 text-gtmyellow-700',
 };
 
