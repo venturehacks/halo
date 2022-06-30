@@ -96,6 +96,7 @@ export default {
   menu: [
     'Welcome',
     'Icons',
+    'Dashboard',
     {
       name: 'Contributing',
     },
