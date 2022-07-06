@@ -81,6 +81,7 @@ function Badge({
     color.includes('-dark') && 'text-white',
     colorToStyle[color],
     shape === 'circle' && 'rounded-full',
+    shape === 'circle' && label && 'px-2',
     shape === 'square' && hasContent && 'rounded-md',
     shape === 'square' && size === 'md' && !hasContent && 'rounded-md',
     shape === 'square' && size === 'sm' && !hasContent && 'rounded-sm',
