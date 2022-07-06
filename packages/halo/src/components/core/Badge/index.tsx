@@ -4,12 +4,18 @@ import React from 'react';
 import { Tooltip } from '../Tooltip';
 
 export type BadgeColor =
-  | 'blue'
-  | 'gray'
-  | 'green'
-  | 'orange'
-  | 'purple'
-  | 'red';
+  | 'blue-light'
+  | 'gray-light'
+  | 'green-light'
+  | 'orange-light'
+  | 'yellow-light'
+  | 'purple-light'
+  | 'blue-dark'
+  | 'gray-dark'
+  | 'green-dark'
+  | 'orange-dark'
+  | 'purple-dark'
+  | 'yellow-dark';
 
 export type BadgeShape = 'square' | 'circle';
 
@@ -32,37 +38,50 @@ export interface BadgeProps {
   tooltip?: string;
 }
 
+const colorToStyle = {
+  'blue-dark': 'bg-gtmblue-400 border-gtmblue-400',
+  'gray-dark': 'bg-gray-800 border-gray-800',
+  'purple-dark': 'bg-gtmpurple-700 border-gtmpurple-700',
+  'green-dark': 'bg-gtmgreen-400 border-gtmgreen-400',
+  'orange-dark': 'bg-gtmorange-600 border-gtmorange-600 ',
+  'yellow-dark': 'bg-gtmyellow-700 border-gtmyellow-700 ',
+  'gray-light': 'bg-gray-200 text-gray-800',
+  'purple-light': 'bg-gtmpurple-100 border-gtmpurple-100 text-gtmpurple-700',
+  'blue-light': 'bg-gtmblue-100 border-gtmblue-100 text-gtmblue-400',
+  'green-light': 'bg-gtmgreen-100 border-gtmgreen-100 text-gtmgreen-400',
+  'orange-light': 'bg-gtmorange-100 border-gtmorange-100 text-gtmorange-600',
+  'yellow-light': 'bg-gtmyellow-100 border-gtmyellow-100 text-gtmyellow-700',
+};
+
 function Badge({
   className,
   count,
   icon,
-  color = 'gray',
+  color = 'gray-light',
   position = 'top',
   shape = 'circle',
   size = 'sm',
   label,
   tooltip,
 }: BadgeProps) {
-  const hasContent = count || label || icon;
-  const hasTextContent = label || count;
+  const countText = countToString(count);
+  const hasContent = countText || label || icon;
+  const hasTextContent = label || countText;
 
   const classnames = classNames(
     className,
     'absolute',
-    'border-solid border-gray-100',
+    'border-solid border-gray-200',
     'text-center font-medium uppercase leading-none antialiased p-1',
     hasContent && 'right-0',
     size === 'sm' && hasContent && 'text-2xs',
     size === 'md' && hasContent && 'text-xs',
     size === 'sm' && !hasContent && 'w-2 h-2',
     size === 'md' && !hasContent && 'w-4 h-4',
-    color === 'gray' && 'bg-gray-600 border-gray-100 text-white',
-    color === 'purple' && 'bg-purple-600 border-purple-100 text-white',
-    color === 'blue' && 'bg-blue-600 border-blue-100 text-white',
-    color === 'green' && 'bg-green-600 border-green-100 text-white',
-    color === 'red' && 'bg-red-600 border-red-100 text-white',
-    color === 'orange' && 'bg-orange-200 border-orange-200 text-orange-600',
+    color.includes('-dark') && 'text-white',
+    colorToStyle[color],
     shape === 'circle' && 'rounded-full',
+    shape === 'circle' && label && 'px-2',
     shape === 'square' && hasContent && 'rounded-md',
     shape === 'square' && size === 'md' && !hasContent && 'rounded-md',
     shape === 'square' && size === 'sm' && !hasContent && 'rounded-sm',
@@ -77,7 +96,7 @@ function Badge({
     <div className={classnames}>
       {hasTextContent ? (
         <div className="flex justify-center gap-1">
-          {count && <span>{countToString(count)}</span>}
+          {countText && <span>{countText}</span>}
           {label && <span>{label}</span>}
         </div>
       ) : (
@@ -89,7 +108,10 @@ function Badge({
   return tooltip ? <Tooltip content={tooltip}>{component}</Tooltip> : component;
 }
 
-function countToString(count: number) {
+function countToString(count?: number) {
+  if (!count && count !== 0) {
+    return;
+  }
   if (count > 99) {
     return '99+';
   }
