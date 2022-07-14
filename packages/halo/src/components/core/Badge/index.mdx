@@ -9,7 +9,7 @@ import { Props, Playground } from 'docz';
 import { Badge } from './';
 import { InterfaceHeader } from '../InterfaceHeader';
 import { Box } from '../../structure/Box';
-import { PillTag } from '../PillTag';
+import { Tag } from '../Tag';
 import { AlarmIcon, ThumbsUpIcon, UserIcon } from '../../icons';
 
 # Badge
@@ -22,11 +22,11 @@ Colored badge to decorate an element. Assumes parent element has position="relat
   <div className="ml-3 flex flex-col">
     <div className="mb-5 mr-5 flex flex-row items-start gap-6">
       <div className="relative">
-        <PillTag className="mr-4">Count Indicator</PillTag>
+        <Tag className="mr-4">Count Indicator</Tag>
         <Badge color="purple-light" shape="square" count={100} />
       </div>
       <div className="relative">
-        <PillTag className="mr-4">Icon</PillTag>
+        <Tag className="mr-4">Icon</Tag>
         <Badge
           color="blue-light"
           position="bottom"
@@ -36,13 +36,13 @@ Colored badge to decorate an element. Assumes parent element has position="relat
         />
       </div>
       <div className="relative">
-        <PillTag className="mr-4">Text</PillTag>
+        <Tag className="mr-4">Text</Tag>
         <Badge color="orange-light" shape="square" label="New" />
       </div>
     </div>
     <div className="mr-4 flex flex-row items-start gap-6">
       <div className="relative">
-        <PillTag className="mr-4">Tooltip on Hover</PillTag>
+        <Tag className="mr-4">Tooltip on Hover</Tag>
         <Badge
           color="green-light"
           shape="square"
@@ -69,19 +69,19 @@ Colored badge to decorate an element. Assumes parent element has position="relat
   <div className="ml-3 flex flex-col">
     <div className="mr-5 flex flex-row items-start gap-6">
       <div className="relative">
-        <PillTag className="mr-1">square, sm</PillTag>
+        <Tag className="mr-1">square, sm</Tag>
         <Badge color="blue-dark" shape="square" />
       </div>
       <div className="relative">
-        <PillTag className="mr-4">square, md</PillTag>
+        <Tag className="mr-4">square, md</Tag>
         <Badge color="blue-dark" shape="square" size="md" />
       </div>
       <div className="relative">
-        <PillTag className="mr-1">circle, sm</PillTag>
+        <Tag className="mr-1">circle, sm</Tag>
         <Badge color="blue-dark" />
       </div>
       <div className="relative">
-        <PillTag className="mr-4">circle, md</PillTag>
+        <Tag className="mr-4">circle, md</Tag>
         <Badge color="blue-dark" size="md" />
       </div>
     </div>
