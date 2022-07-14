@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.30](https://github.com/venturehacks/halo/compare/1.0.0-beta.29...1.0.0-beta.30)
+
+- Remove Flair and PillTag [`#369`](https://github.com/venturehacks/halo/pull/369)
+
 #### [1.0.0-beta.29](https://github.com/venturehacks/halo/compare/1.0.0-beta.28...1.0.0-beta.29)
+
+> 6 July 2022
 
 - [Platform-104] Add Light and Dark Variants to Badge, Fix Zero Issue [`#367`](https://github.com/venturehacks/halo/pull/367)
 - Datadog Dashboard Embed [`#368`](https://github.com/venturehacks/halo/pull/368)
 - [Platform-104] Add Light and Dark Variants to Badge, Fix Zero Issue (#367) [`#366`](https://github.com/venturehacks/halo/issues/366)
+- Release 1.0.0-beta.29 [`72cf115`](https://github.com/venturehacks/halo/commit/72cf1156ed8f4aca496f28b8aff0b286b72e4680)
 
 #### [1.0.0-beta.28](https://github.com/venturehacks/halo/compare/1.0.0-beta.27...1.0.0-beta.28)
 
