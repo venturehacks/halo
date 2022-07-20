@@ -30,9 +30,9 @@ export interface BadgeProps {
    */
   color?: BadgeColor;
   /**
-   * Count displayed on the badge. Truncates above 100 when passing number. String is rendered as-is.
+   * Count displayed on the badge. Truncates above 100.
    */
-  count?: number | string;
+  count?: number;
   icon?: React.ReactNode;
   label?: string;
   /**
@@ -76,7 +76,7 @@ function Badge({
   label,
   tooltip,
 }: BadgeProps) {
-  const countText = typeof count === 'number' ? countToString(count) : count;
+  const countText = countToString(count);
   const hasContent = countText || label || icon;
   const hasTextContent = label || countText;
 
