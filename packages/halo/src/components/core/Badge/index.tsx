@@ -85,7 +85,7 @@ function Badge({
     position !== 'freeform' && 'absolute',
     'border-solid border-gray-200',
     'text-center font-medium uppercase leading-none antialiased p-1',
-    hasContent && 'right-0',
+    position !== 'freeform' && hasContent && 'right-0',
     size === 'sm' && hasContent && 'text-2xs',
     size === 'md' && hasContent && 'text-xs',
     size === 'sm' && !hasContent && 'w-2 h-2',
