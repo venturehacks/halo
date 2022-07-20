@@ -2,9 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.31](https://github.com/venturehacks/halo/compare/1.0.0-beta.30...1.0.0-beta.31)
+
+- [Badge] Allow as-is string override of `count` [`#370`](https://github.com/venturehacks/halo/pull/370)
+
 #### [1.0.0-beta.30](https://github.com/venturehacks/halo/compare/1.0.0-beta.29...1.0.0-beta.30)
 
+> 14 July 2022
+
 - Remove Flair and PillTag [`#369`](https://github.com/venturehacks/halo/pull/369)
+- Release 1.0.0-beta.30 [`836340d`](https://github.com/venturehacks/halo/commit/836340d04ec0767221ca6d5efc777fa88d3bd8f8)
 
 #### [1.0.0-beta.29](https://github.com/venturehacks/halo/compare/1.0.0-beta.28...1.0.0-beta.29)
 
