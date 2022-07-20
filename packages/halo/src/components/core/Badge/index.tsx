@@ -21,10 +21,13 @@ export type BadgeShape = 'square' | 'circle';
 
 export type BadgeSize = 'sm' | 'md';
 
-export type BadgePosition = 'top' | 'bottom' | 'center';
+export type BadgePosition = 'top' | 'bottom' | 'center' | 'freeform';
 
 export interface BadgeProps {
   className?: string;
+  /**
+   * @default gray-light
+   */
   color?: BadgeColor;
   /**
    * Count displayed on the badge. Truncates above 100.
@@ -32,8 +35,17 @@ export interface BadgeProps {
   count?: number;
   icon?: React.ReactNode;
   label?: string;
+  /**
+   * @default top
+   */
   position?: BadgePosition;
+  /**
+   * @default circle
+   */
   shape?: BadgeShape;
+  /**
+   * @default sm
+   */
   size?: BadgeSize;
   tooltip?: string;
 }
@@ -70,10 +82,10 @@ function Badge({
 
   const classnames = classNames(
     className,
-    'absolute',
+    position !== 'freeform' && 'absolute',
     'border-solid border-gray-200',
     'text-center font-medium uppercase leading-none antialiased p-1',
-    hasContent && 'right-0',
+    position !== 'freeform' && hasContent && 'right-0',
     size === 'sm' && hasContent && 'text-2xs',
     size === 'md' && hasContent && 'text-xs',
     size === 'sm' && !hasContent && 'w-2 h-2',
