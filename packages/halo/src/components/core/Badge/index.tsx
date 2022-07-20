@@ -25,15 +25,27 @@ export type BadgePosition = 'top' | 'bottom' | 'center';
 
 export interface BadgeProps {
   className?: string;
+  /**
+   * @default gray-light
+   */
   color?: BadgeColor;
   /**
-   * Count displayed on the badge. Truncates above 100.
+   * Count displayed on the badge. Truncates above 100 when passing number. String is rendered as-is.
    */
-  count?: number;
+  count?: number | string;
   icon?: React.ReactNode;
   label?: string;
+  /**
+   * @default top
+   */
   position?: BadgePosition;
+  /**
+   * @default circle
+   */
   shape?: BadgeShape;
+  /**
+   * @default sm
+   */
   size?: BadgeSize;
   tooltip?: string;
 }
@@ -64,7 +76,7 @@ function Badge({
   label,
   tooltip,
 }: BadgeProps) {
-  const countText = countToString(count);
+  const countText = typeof count === 'number' ? countToString(count) : count;
   const hasContent = countText || label || icon;
   const hasTextContent = label || countText;
 
