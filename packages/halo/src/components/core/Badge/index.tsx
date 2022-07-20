@@ -21,7 +21,7 @@ export type BadgeShape = 'square' | 'circle';
 
 export type BadgeSize = 'sm' | 'md';
 
-export type BadgePosition = 'top' | 'bottom' | 'center';
+export type BadgePosition = 'top' | 'bottom' | 'center' | 'freeform';
 
 export interface BadgeProps {
   className?: string;
@@ -82,7 +82,7 @@ function Badge({
 
   const classnames = classNames(
     className,
-    'absolute',
+    position !== 'freeform' && 'absolute',
     'border-solid border-gray-200',
     'text-center font-medium uppercase leading-none antialiased p-1',
     hasContent && 'right-0',
