@@ -15,40 +15,21 @@ export type ButtonVariant =
   | 'secondary'
   | 'gray'
   | 'error'
-  | 'clear'
-  | 'gtm-primary'
-  | 'gtm-secondary'
-  | 'gtm-gray'
-  | 'gtm-clear'
-  | 'gtm-error';
+  | 'clear';
 
 const VARIANT_CSS: Record<ButtonVariant, string> = {
-  'primary': `bg-dark-brand border-dark-brand text-white font-medium
-              disabled:bg-blue-300 disabled:border-blue-300
-              hover:bg-blue-600 hover:border-blue-600`,
-  'gtm-primary': `bg-black border-black text-white font-normal
+  primary: `bg-black border-black text-white font-normal
                   disabled:bg-gray-400 disabled:border-gray-400 disabled:text-gray-700
                   hover:bg-gtmblue-500 hover:border-gtmblue-500`,
-  'secondary': `bg-white border-blue-500 text-blue-500 font-medium
-                disabled:bg-white disabled:border-blue-300 disabled:text-blue-300
-                hover:bg-slate-100`,
-  'gtm-secondary': `bg-white border-black text-black font-normal
+  secondary: `bg-white border-black text-black font-normal
                     disabled:bg-white disabled:border-gray-700 disabled:text-gray-700
                     hover:bg-gtmblue-100 hover:border-gtmblue-500 hover:text-gtmblue-500`,
-  'gray': `bg-gray-100 border-dark-aaa text-dark-aaa font-medium
-           disabled:bg-gray-100 disabled:border-dark-a disabled:text-dark-a
-           hover:bg-slate-200`,
-  'gtm-gray': `bg-gray-200 border-black text-black font-normal hover:bg-gray-400
+  gray: `bg-gray-200 border-black text-black font-normal hover:bg-gray-400
                disabled:bg-gray-100 disabled:border-gray-500 disabled:text-gray-500`,
-  'error': `bg-red-100 border-red-100 text-light-error font-medium
-            disabled:border-gray-100 disabled:text-gray-500 disabled:bg-gray-100
-            hover:bg-red-200`,
-  'gtm-error': `bg-gtmpink-100 border-gtmpink-100 text-gtmpink-600 font-formal
+  error: `bg-gtmpink-100 border-gtmpink-100 text-gtmpink-600 font-formal
                 disabled:border-gray-200 disabled:text-gray-700 disabled:bg-gray-200
                 hover:bg-gtmpink-300 hover:border-gtmpink-300 hover:text-gtmpink-600`,
-  'clear': `bg-transparent border-transparent font-medium text-dark-aaa
-            disabled:text-dark-a disabled:font-medium hover:bg-gray-100`,
-  'gtm-clear': `bg-transparent border-transparent font-normal text-black
+  clear: `bg-transparent border-transparent font-normal text-black
                 disabled:text-gray-600 disabled:font-medium hover:bg-gray-100`,
 };
 
