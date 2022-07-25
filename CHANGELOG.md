@@ -2,9 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.32](https://github.com/venturehacks/halo/compare/1.0.0-beta.31...1.0.0-beta.32)
+
+- update tooltip class [`#372`](https://github.com/venturehacks/halo/pull/372)
+- [PLATFORM-138] GTM Button Cutover [`#371`](https://github.com/venturehacks/halo/pull/371)
+
 #### [1.0.0-beta.31](https://github.com/venturehacks/halo/compare/1.0.0-beta.30...1.0.0-beta.31)
 
+> 20 July 2022
+
 - [Badge] Allow as-is string override of `count` [`#370`](https://github.com/venturehacks/halo/pull/370)
+- Release 1.0.0-beta.31 [`4ebd8bd`](https://github.com/venturehacks/halo/commit/4ebd8bdae7748ced2c1c0e3f22ae0938c85741f2)
 
 #### [1.0.0-beta.30](https://github.com/venturehacks/halo/compare/1.0.0-beta.29...1.0.0-beta.30)
 
