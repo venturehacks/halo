@@ -18,104 +18,7 @@ import { ChevronDownIcon, SearchIcon } from '../../icons';
 
 Used to trigger an action, such as submit form, open dialog, or cancel action.
 
-### GTM usage
-
-<Playground>
-  <div className="flex flex-row gap-5">
-    <div className="flex flex-col items-start gap-3">
-      <div className="font-medium h-7">
-        size
-      </div>
-      <div className="h-9">
-        small
-      </div>
-      <div className="h-12">
-        medium
-      </div>
-      <div className="h-8">
-        large
-      </div>
-    </div>
-    <div className="flex flex-col items-start gap-3">
-      <div>
-        <code>gtm-primary</code>
-      </div>
-      <div>
-        <Button
-          icon={<ChevronDownIcon />}
-          iconPosition="right"
-          variant="gtm-primary"
-          size="sm"
-        >
-          Create template
-        </Button>
-      </div>
-      <div>
-        <Button icon={<SearchIcon />} size="md" variant="gtm-primary">Search</Button>
-      </div>
-      <div>
-        <Button size="lg" variant="gtm-primary" disabled>Apply now</Button>
-      </div>
-    </div>
-
-    <div className="flex flex-col items-start gap-3">
-      <div>
-        <code>gtm-secondary</code>
-      </div>
-      <div>
-         <Button variant="gtm-secondary" size="sm">Cancel</Button></div>
-      <div>
-        <Button variant="gtm-secondary" size="md">Cancel</Button></div>
-      <div>
-        <Button variant="gtm-secondary" size="lg" disabled>Cancel</Button>
-      </div>
-    </div>
-
-    <div className="flex flex-col items-start gap-3">
-      <div>
-        <code>gtm-gray</code>
-      </div>
-      <div>
-        <Button variant="gtm-gray" size="sm">Manage plan</Button></div>
-      <div>
-        <Button variant="gtm-gray" size="md">Manage plan</Button></div>
-      <div>
-        <Button variant="gtm-gray" size="lg" disabled>Manage plan</Button>
-      </div>
-    </div>
-
-    <div className="flex flex-col items-start gap-3">
-      <div>
-        <code>gtm-error</code>
-      </div>
-      <div>
-        <Button variant="gtm-error" size="sm">Reject</Button></div>
-      <div>
-        <Button variant="gtm-error" size="md">Reject</Button></div>
-      <div>
-        <Button variant="gtm-error" size="lg" disabled>Reject</Button>
-      </div>
-    </div>
-
-    <div className="flex flex-col items-start gap-3">
-      <div>
-        <code>gtm-clear</code>
-      </div>
-      <div>
-        <Button variant="gtm-clear" size="sm">View more</Button>
-      </div>
-      <div>
-        <Button variant="gtm-clear" size="md">View more</Button>
-      </div>
-      <div>
-        <Button variant="gtm-clear" size="lg" disabled>View more</Button>
-      </div>
-    </div>
-
-  </div >
-</Playground>
-
-### Legacy usage
+### Usage
 
 <Playground>
   <div className="flex flex-row gap-5">
@@ -177,17 +80,7 @@ type ButtonSize = 'sm' | 'md' | 'lg';
 ```
 
 ```ts
-type ButtonVariant =
-  | 'primary'
-  | 'secondary'
-  | 'gray'
-  | 'error'
-  | 'clear'
-  | 'gtm-primary'
-  | 'gtm-secondary'
-  | 'gtm-gray'
-  | 'gtm-clear'
-  | 'gtm-error';
+type ButtonVariant = 'primary' | 'secondary' | 'gray' | 'error' | 'clear';
 ```
 
 ### Props
