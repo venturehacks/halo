@@ -76,32 +76,5 @@ describe('Button', () => {
         expect(component).toMatchSnapshot();
       });
     });
-
-    describe('gtm variant', () => {
-      test('gtm-primary', () => {
-        const component = render(<Button variant="gtm-primary" />);
-        expect(component).toMatchSnapshot();
-      });
-
-      test('gtm-secondary', () => {
-        const component = render(<Button variant="gtm-secondary" />);
-        expect(component).toMatchSnapshot();
-      });
-
-      test('gtm-gray', () => {
-        const component = render(<Button variant="gtm-gray" />);
-        expect(component).toMatchSnapshot();
-      });
-
-      test('gtm-error', () => {
-        const component = render(<Button variant="gtm-error" />);
-        expect(component).toMatchSnapshot();
-      });
-
-      test('gtm-clear', () => {
-        const component = render(<Button variant="gtm-clear" />);
-        expect(component).toMatchSnapshot();
-      });
-    });
   });
 });
