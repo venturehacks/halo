@@ -102,7 +102,8 @@ function ButtonRaw({
     className,
     `rounded border-solid border gap-x-2 whitespace-nowrap
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
-      disabled:cursor-default disabled:pointer-events-none disabled:opacity-50`,
+      disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
+      transition duration-200`,
     size === 'sm' && 'px-3 py-1.5',
     size === 'md' && 'px-4 py-2.5',
     size === 'lg' && 'px-10 py-3.5',
