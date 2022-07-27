@@ -2,10 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.33](https://github.com/venturehacks/halo/compare/1.0.0-beta.32...1.0.0-beta.33)
+
+- add transition and update test [`#373`](https://github.com/venturehacks/halo/pull/373)
+
 #### [1.0.0-beta.32](https://github.com/venturehacks/halo/compare/1.0.0-beta.31...1.0.0-beta.32)
+
+> 25 July 2022
 
 - update tooltip class [`#372`](https://github.com/venturehacks/halo/pull/372)
 - [PLATFORM-138] GTM Button Cutover [`#371`](https://github.com/venturehacks/halo/pull/371)
+- Release 1.0.0-beta.32 [`d127b78`](https://github.com/venturehacks/halo/commit/d127b78e040a163432344f7a754a651dfbc49b10)
 
 #### [1.0.0-beta.31](https://github.com/venturehacks/halo/compare/1.0.0-beta.30...1.0.0-beta.31)
 
