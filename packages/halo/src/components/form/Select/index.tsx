@@ -56,6 +56,7 @@ function SelectRaw({
         rawInputClassNames({ errorSeverity, hasError, intrinsicWidth, size }),
         styles.component,
         className,
+        size === 'md' && 'py-1.5',
       )}
       {...rest}
     >

@@ -10,7 +10,7 @@ exports[`Banner snapshot constrain 1`] = `
     class="mr-2 ml-1"
   />
   <div
-    class="flex-1"
+    class="flex-1 font-bold"
   />
 </div>
 `;
@@ -25,7 +25,7 @@ exports[`Banner snapshot default 1`] = `
     class="mr-2 ml-1"
   />
   <div
-    class="flex-1"
+    class="flex-1 font-bold"
   />
 </div>
 `;
@@ -40,7 +40,7 @@ exports[`Banner snapshot offer dismiss 1`] = `
     class="mr-2 ml-1"
   />
   <div
-    class="flex-1"
+    class="flex-1 font-bold"
   />
   <button
     class="text-dark-link cursor-pointer border-0 bg-transparent pl-2 text-sm font-normal"
@@ -75,7 +75,7 @@ exports[`Banner snapshot variant error 1`] = `
     </svg>
   </aside>
   <div
-    class="flex-1"
+    class="flex-1 font-bold"
   />
 </div>
 `;
@@ -104,7 +104,7 @@ exports[`Banner snapshot variant success 1`] = `
     </svg>
   </aside>
   <div
-    class="flex-1"
+    class="flex-1 font-bold"
   />
 </div>
 `;
@@ -133,7 +133,7 @@ exports[`Banner snapshot variant warning 1`] = `
     </svg>
   </aside>
   <div
-    class="flex-1"
+    class="flex-1 font-bold"
   />
 </div>
 `;

@@ -79,7 +79,7 @@ function BannerRaw({
 
         {/* <InfoIcon className={classNames(variant === 'info' && 'block')} /> */}
       </aside>
-      <div className="flex-1">
+      <div className="flex-1 font-bold">
         {byline ? (
           <div>
             {children}

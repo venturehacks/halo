@@ -104,11 +104,10 @@ function ButtonRaw({
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
       transition duration-200`,
-    size === 'sm' && 'px-3 py-1.5',
-    size === 'md' && 'px-4 py-2.5',
-    size === 'lg' && 'px-10 py-3.5',
+    size === 'sm' && 'px-3 py-1',
+    size === 'md' && 'px-4 py-2',
+    size === 'lg' && 'px-10 py-3',
     VARIANT_CSS[variant],
-    variant.includes('gtm') && 'font-arbeit',
     width === '100%' && 'w-full',
     icon && 'flex flex-row justify-center items-center',
   );
