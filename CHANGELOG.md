@@ -2,9 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.34](https://github.com/venturehacks/halo/compare/1.0.0-beta.33...1.0.0-beta.34)
+
+- [Platform-145] Brand Fonts, Alignment Fixes, Demo Fix [`#374`](https://github.com/venturehacks/halo/pull/374)
+
 #### [1.0.0-beta.33](https://github.com/venturehacks/halo/compare/1.0.0-beta.32...1.0.0-beta.33)
 
+> 27 July 2022
+
 - add transition and update test [`#373`](https://github.com/venturehacks/halo/pull/373)
+- Release 1.0.0-beta.33 [`b55ae61`](https://github.com/venturehacks/halo/commit/b55ae613f84ca06cfec70ab08fcac4d1a1f3c99a)
 
 #### [1.0.0-beta.32](https://github.com/venturehacks/halo/compare/1.0.0-beta.31...1.0.0-beta.32)
 
