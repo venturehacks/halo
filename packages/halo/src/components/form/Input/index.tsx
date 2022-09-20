@@ -29,6 +29,12 @@ export interface InputProps
   hasError?: boolean;
 
   /**
+   * HTML tag native size. Typically describes the
+   * character width of the field.
+   */
+  htmlSize?: number;
+
+  /**
    * Optional prefix/suffix icon
    */
   icon?: React.ReactNode;
@@ -101,6 +107,7 @@ function InputRaw({
   size = 'md',
   transparent = false,
   type = 'text',
+  htmlSize,
   ...rest
 }: InputProps & ForwardedRefProps<HTMLInputElement>) {
   const input = (
@@ -121,6 +128,7 @@ function InputRaw({
         icon && iconPosition === 'right' && 'pr-11',
         className,
       )}
+      size={htmlSize}
       type={type}
       {...rest}
     />
