@@ -8,15 +8,11 @@ export type Color =
   | 'dark-success'
   | 'dark-warning'
   | 'dark-error'
-  | 'light-brand'
   | 'light-aaaa'
   | 'light-aaa'
   | 'light-aa'
   | 'light-a'
   | 'light-link'
-  | 'light-success'
-  | 'light-warning'
-  | 'light-error'
   | 'slate-900'
   | 'slate-800'
   | 'slate-700'
@@ -131,26 +127,22 @@ export type Color =
 
 export const ColorPalette: Record<Color, string> = {
   // dark text on light background
-  'dark-brand': '#0f6fff',
+  'dark-brand': '#143fcd',
   'dark-aaaa': '#050c26',
   'dark-aaa': '#525769',
   'dark-aa': '#717584',
   'dark-a': '#9194a0',
-  'dark-link': '#0a6cff',
-  'dark-success': '#008562',
+  'dark-link': '#143fcd',
+  'dark-success': '#0c7134',
   'dark-warning': '#ac6600',
   'dark-error': '#cc033e',
 
   // light text on dark background
-  'light-brand': '#1a75ff',
   'light-aaaa': '#fff',
   'light-aaa': '#9b9da8',
   'light-aa': '#777b89',
   'light-a': '#5a5e70',
-  'light-link': '#1a75ff',
-  'light-success': '#009c5e',
-  'light-warning': '#c56e09',
-  'light-error': '#ee2531',
+  'light-link': '#3a45d4',
 
   // SPECTRUM
   // slate
