@@ -14,28 +14,29 @@ import { ColorSwatch } from '../components/util/ColorSwatch';
 <div className="mb-16">
   {/* dark text on light */}
   <div className="mb-2 flex justify-between">
-    <ColorSwatch swatch="dark-brand" />
     <ColorSwatch swatch="dark-aaaa" />
     <ColorSwatch swatch="dark-aaa" />
     <ColorSwatch swatch="dark-aa" />
     <ColorSwatch swatch="dark-a" />
-    <ColorSwatch swatch="dark-link" />
-    <ColorSwatch swatch="dark-success" />
-    <ColorSwatch swatch="dark-warning" />
-    <ColorSwatch swatch="dark-error" />
+    <ColorSwatch swatch="dark-link"  />
   </div>
   {/* light text on dark */}
-  <div className="mb-2 flex justify-between">
-    <ColorSwatch swatch="light-brand" backgroundColor="black" />
+  <div className="mb-10 flex justify-between">
     <ColorSwatch swatch="light-aaaa" backgroundColor="black" />
     <ColorSwatch swatch="light-aaa" backgroundColor="black" />
     <ColorSwatch swatch="light-aa" backgroundColor="black" />
     <ColorSwatch swatch="light-a" backgroundColor="black" />
     <ColorSwatch swatch="light-link" backgroundColor="black" />
-    <ColorSwatch swatch="light-success" backgroundColor="black" />
-    <ColorSwatch swatch="light-warning" backgroundColor="black" />
-    <ColorSwatch swatch="light-error" backgroundColor="black" />
+
   </div>
+  {/* links + status colors */}
+  <div className="mb-2 flex justify-between">
+    <ColorSwatch swatch="dark-success" />
+    <ColorSwatch swatch="dark-warning" />
+    <ColorSwatch swatch="dark-error" />
+    <ColorSwatch swatch="dark-brand" />
+  </div>
+
 </div>
 
 ## GTM Palette (2022)

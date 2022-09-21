@@ -1,7 +1,7 @@
 @import 'halo';
 
 .component {
-  @include border-rounded(2px);
+  @include border-rounded;
   @include flex-column($fill: true);
   align-items: stretch;
   padding: tempo(2);
@@ -10,7 +10,6 @@
   text-align: center;
   flex-grow: 1;
   cursor: pointer;
-  border-radius: 2px;
   border: 1px solid transparent;
 
   & + & {
