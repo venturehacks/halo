@@ -45,7 +45,7 @@ $toggle-switch-knob-size: tempo(4);
   :checked + & {
     &::before,
     &::after {
-      color: $blue-500;
+      color: $gtmblue-500;
     }
 
     // move knob rightward to indicate 'on' state
