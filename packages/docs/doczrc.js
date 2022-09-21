@@ -70,7 +70,7 @@ export default {
     return filteredFiles;
   },
   themeConfig: {
-    primary: '#0F6FFF',
+    primary: '#143fcd',
     showPlaygroundEditor: true,
     search: true,
     mainContainer: {

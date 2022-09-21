@@ -50,13 +50,13 @@ module.exports = {
       },
 
       dark: {
-        brand: '#0a6cff',
+        brand: '#143fcd',
         aaaa: '#050c26',
         aaa: '#525769',
         aa: '#717584',
         a: '#9194a0',
-        link: '#0a6cff',
-        success: '#008562',
+        link: '#143fcd',
+        success: '#0c7134',
         warning: '#ac6600',
         error: '#cc033e',
       },
@@ -83,15 +83,11 @@ module.exports = {
         100: '#E0F9EA',
       },
       light: {
-        brand: '#1a75ff',
         aaaa: '#fff',
         aaa: '#9b9da8',
         aa: '#777b89',
         a: '#5a5e70',
-        link: '#1a75ff',
-        success: '#009c5e',
-        warning: '#c56e09',
-        error: '#ee2531',
+        link: '#3a45d4',
       },
       orange: {
         900: '#4e2400',
