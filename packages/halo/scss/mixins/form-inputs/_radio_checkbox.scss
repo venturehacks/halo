@@ -66,7 +66,7 @@ $pill-border-radius: tempo(6);
  * Please do not use in new code.
 */
 @mixin input-border-checked-thick {
-  border: 2px solid $blue-500;
+  border: 2px solid $gtmblue-500;
 }
 
 /**
@@ -75,7 +75,7 @@ $pill-border-radius: tempo(6);
  * Please do not use in new code.
 */
 @mixin input-border-hover {
-  border-color: $blue-500;
+  border-color: $gtmblue-500;
 }
 
 @mixin input-label-checkbox {
@@ -105,8 +105,8 @@ $pill-border-radius: tempo(6);
 
   // checked
   :checked + &::before {
-    border-color: $blue-500;
-    background-color: $blue-500;
+    border-color: $gtmblue-500;
+    background-color: $gtmblue-500;
   }
 
   // checkmark
@@ -186,8 +186,8 @@ $pill-border-radius: tempo(6);
 
   // circle outline: selected radio
   :checked + &::before {
-    border-color: $blue-500;
-    background-color: $blue-500;
+    border-color: $gtmblue-500;
+    background-color: $gtmblue-500;
   }
 
   // inner dot: unselected radio
@@ -291,7 +291,7 @@ $pill-border-radius: tempo(6);
   }
 
   :checked + & {
-    border-color: $blue-500;
+    border-color: $gtmblue-500;
   }
 
   [disabled] + &,

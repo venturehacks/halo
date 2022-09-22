@@ -12,15 +12,15 @@
       width: 100%;
 
       &:hover {
-        border-color: $blue-500;
+        border-color: $gtmblue-500;
       }
 
       &.select__control--is-focused,
       &.select__control--menu-is-open.select__control--menu-is-open {
-        border-color: $blue-500;
+        border-color: $gtmblue-500;
       }
       &.select__control--is-focused {
-        box-shadow: 0 0 0 4px $blue-200;
+        box-shadow: 0 0 0 4px $gtmblue-200;
         outline: none;
       }
       &.select__control--menu-is-open.select__control--menu-is-open {
@@ -60,7 +60,7 @@
     }
 
     .select__menu {
-      border: 1px solid $blue-500;
+      border: 1px solid $gtmblue-500;
       border-top-color: transparent;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
@@ -77,17 +77,17 @@
     .select__option {
       background-color: $white;
       padding: tempo(1) tempo(4);
-      border-top: 1px solid $blue-200;
+      border-top: 1px solid $gtmblue-200;
     }
 
     .select__option:hover,
     .select__option--is-focused {
-      background-color: $blue-200;
+      background-color: $gtmblue-200;
     }
 
     .select__option--is-selected {
       color: $dark-aaaa;
-      background-color: $blue-200;
+      background-color: $gtmblue-200;
     }
 
     .select__option--is-disabled {

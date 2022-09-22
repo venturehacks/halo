@@ -10,9 +10,13 @@ const typography = toTheme(githubTheme);
 
 export default merge(baseTheme, typography, {
   colors: {
+    primary: '#143fcd',
     header: {
       bg: '#f1f2f6',
       text: '#747d8c',
+    },
+    sidebar: {
+      navLinkActive: '#143fcd',
     },
   },
   fontWeights: {

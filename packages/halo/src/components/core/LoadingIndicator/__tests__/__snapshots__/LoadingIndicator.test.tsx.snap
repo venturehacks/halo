@@ -2,7 +2,7 @@
 
 exports[`LoadingIndicator snapshot alternate 1`] = `
 <span
-  class="css-1v6ckp3"
+  class="css-o8leb"
 />
 `;
 
@@ -11,7 +11,7 @@ exports[`LoadingIndicator snapshot default component wrapping 1`] = `
   class="component"
 >
   <span
-    class="css-1v6ckp3"
+    class="css-o8leb"
   />
 </div>
 `;
@@ -21,19 +21,19 @@ exports[`LoadingIndicator snapshot primary 1`] = `
   class="css-1xdhyk6"
 >
   <span
-    class="css-9lxfgy"
+    class="css-fl1se0"
   />
   <span
-    class="css-malg2r"
+    class="css-1qccjm5"
   />
   <span
-    class="css-1piacs6"
+    class="css-do256"
   />
   <span
-    class="css-jm3i4v"
+    class="css-1vt3jh2"
   />
   <span
-    class="css-1bnq1ww"
+    class="css-dx1ugf"
   />
 </span>
 `;

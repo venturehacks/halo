@@ -61,7 +61,7 @@ function BannerRaw({
     variant === 'info' && 'border-gray-700',
     variant === 'warning' && 'border-orange-300',
     variant === 'error' && 'border-red-600',
-    variant === 'success' && 'border-green-500',
+    variant === 'success' && 'border-gtmgreen-500',
   );
 
   return (

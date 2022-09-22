@@ -12,14 +12,14 @@
 
 // DEPRECATED(drew): deprecated as of 1.0 – will be removed in future release
 @mixin input-border-focused {
-  box-shadow: 0 0 0 4px $blue-200;
+  box-shadow: 0 0 0 4px $gtmblue-200;
   outline: none;
 }
 
 // DEPRECATED(drew): deprecated as of 1.0 – will be removed in future release
 @mixin input-border-hover {
   @include border-rounded;
-  border: 1px solid $blue-500;
+  border: 1px solid $gtmblue-500;
 }
 
 // DEPRECATED(drew): deprecated as of 1.0 – will be removed in future release

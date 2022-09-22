@@ -30,14 +30,14 @@ $input-height-transparent: 48px;
 
   &:hover {
     @if $style == normal {
-      border-color: $blue-500;
+      border-color: $gtmblue-500;
     }
   }
 
   &:focus {
     @if $style == normal {
-      border-color: $blue-500;
-      box-shadow: 0 0 0 4px $blue-200;
+      border-color: $gtmblue-500;
+      box-shadow: 0 0 0 4px $gtmblue-200;
       outline: none;
     }
   }

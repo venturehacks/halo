@@ -142,7 +142,7 @@ function InputRaw({
     'text-dark-a top-1.5 rounded-md',
     'flex flex-col items-center justify-center',
     'absolute',
-    !iconContainerClassName?.includes('bg-') && 'bg-blue-100',
+    !iconContainerClassName?.includes('bg-') && 'bg-gtmblue-100',
     size === 'sm' && ' h-5 w-5',
     size === 'md' && ' h-7 w-7',
     size === 'lg' && 'h-9 w-9',
