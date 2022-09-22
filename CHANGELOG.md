@@ -2,9 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.36](https://github.com/venturehacks/halo/compare/1.0.0-beta.35...1.0.0-beta.36)
+
+- GTM Blue [`#376`](https://github.com/venturehacks/halo/pull/376)
+
 #### [1.0.0-beta.35](https://github.com/venturehacks/halo/compare/1.0.0-beta.34...1.0.0-beta.35)
 
+> 21 September 2022
+
 - Darker Link Color, Simplified Palette [`#375`](https://github.com/venturehacks/halo/pull/375)
+- Release 1.0.0-beta.35 [`103e38f`](https://github.com/venturehacks/halo/commit/103e38fd7a8a563e456b787f8f4541dc36699c8b)
 
 #### [1.0.0-beta.34](https://github.com/venturehacks/halo/compare/1.0.0-beta.33...1.0.0-beta.34)
 
