@@ -204,7 +204,7 @@ function rawInputClassNames({
     !hasError && transparent && 'border-transparent',
     !hasError && !transparent && 'border-gray-500',
     // disabled
-    'disabled:text-dark-a disabled:bg-gray-200 disabled:border-light-aa',
+    'disabled:text-dark-a disabled:bg-gray-200 disabled:border-dark-aa',
     // warning
     hasError && errorSeverity === 'warning' && 'border-dark-warning ',
     // error
