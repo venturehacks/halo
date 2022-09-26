@@ -72,6 +72,7 @@ function AvatarRaw({
     className,
     'inline-flex flex-row items-center relative',
     'border border-gray-400',
+    'bg-gray-100',
     shape === 'circle' && 'rounded-full',
     shape === 'square' && 'rounded-md',
     size === 'xxs' && 'h-4 w-4',
@@ -80,7 +81,6 @@ function AvatarRaw({
     size === 'md' && 'h-12 w-12',
     size === 'lg' && 'h-18 w-18',
     size === 'xl' && 'h-28 w-28',
-    useStartupFallbackIcon && 'bg-gray-100',
   );
 
   const iconClassnames = classNames(
