@@ -2,9 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.37](https://github.com/venturehacks/halo/compare/1.0.0-beta.36...1.0.0-beta.37)
+
+- GTM Grabbag: Sept 2022 [`#377`](https://github.com/venturehacks/halo/pull/377)
+
 #### [1.0.0-beta.36](https://github.com/venturehacks/halo/compare/1.0.0-beta.35...1.0.0-beta.36)
 
+> 21 September 2022
+
 - GTM Blue [`#376`](https://github.com/venturehacks/halo/pull/376)
+- Release 1.0.0-beta.36 [`b7981c5`](https://github.com/venturehacks/halo/commit/b7981c50abec147f98d50108be8c098c89bfb944)
 
 #### [1.0.0-beta.35](https://github.com/venturehacks/halo/compare/1.0.0-beta.34...1.0.0-beta.35)
 
