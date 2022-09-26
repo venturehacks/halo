@@ -38,13 +38,17 @@ export interface InterfaceHeaderProps
    * @default false
    */
   mini?: boolean;
-  title: string;
+  /**
+   * Primarily content label of the header. Alternatively may use chilren.
+   */
+  title?: string;
   byline?: string;
 }
 /* eslint-enable typescript-sort-keys/interface */
 
 function InterfaceHeaderRaw({
   byline,
+  children,
   className,
   flow,
   forwardedRef,
@@ -55,15 +59,23 @@ function InterfaceHeaderRaw({
   subsection,
   title,
   ...rest
-}: InterfaceHeaderProps & ForwardedRefProps<HTMLHeadingElement>) {
+}: React.PropsWithChildren<InterfaceHeaderProps> &
+  ForwardedRefProps<HTMLHeadingElement>) {
   if (!level && !page && !section && !subsection && !mini) {
     throw new Error('[Halo InterfaceHeader] must specify `level`');
+  }
+
+  if (children && title) {
+    throw new Error(
+      '[Halo InterfaceHeader] must specify `title` or `children` (detected both)',
+    );
   }
 
   const isPage = page || level === 'page';
   const isSection = section || level === 'section';
   const isSubsection = subsection || level === 'subsection';
   const isMini = mini || level === 'mini';
+  const titleContent = title || children;
 
   return (
     <header
@@ -84,7 +96,7 @@ function InterfaceHeaderRaw({
     >
       {byline ? (
         <>
-          <div>{title}</div>
+          <div>{titleContent}</div>
           <div
             className={classNames(
               'text-dark-aa',
@@ -100,7 +112,7 @@ function InterfaceHeaderRaw({
           </div>
         </>
       ) : (
-        title
+        titleContent
       )}
     </header>
   );
