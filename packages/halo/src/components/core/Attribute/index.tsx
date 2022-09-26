@@ -79,7 +79,7 @@ function AttributeListRaw({
   );
 }
 
-const AttributeList = withForwardedRef<AttributeProps, HTMLDListElement>(
+const AttributeList = withForwardedRef<AttributeListProps, HTMLDListElement>(
   AttributeListRaw,
 );
 
