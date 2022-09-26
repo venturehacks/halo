@@ -2,7 +2,7 @@
 
 exports[`Select snapshot size lg 1`] = `
 <select
-  class="text-dark-aaaa text-md max-w-full placeholder-dark-a ring-inset border rounded focus:ring-dark-link bg-white  focus:ring-1 p-3  h-12 border-gray-500 disabled:text-dark-a disabled:bg-gray-200 disabled:border-light-aa w-auto component"
+  class="text-dark-aaaa text-md max-w-full placeholder-dark-a ring-inset border rounded focus:ring-dark-link bg-white  focus:ring-1 p-3  h-12 border-gray-500 disabled:text-dark-a disabled:bg-gray-200 disabled:border-dark-aa w-auto component"
 >
   <option
     value="chocolate"
@@ -24,7 +24,7 @@ exports[`Select snapshot size lg 1`] = `
 
 exports[`Select snapshot size md 1`] = `
 <select
-  class="text-dark-aaaa text-md max-w-full placeholder-dark-a ring-inset border rounded focus:ring-dark-link bg-white  focus:ring-1 px-3 py-2 h-10 border-gray-500 disabled:text-dark-a disabled:bg-gray-200 disabled:border-light-aa w-auto component py-1.5"
+  class="text-dark-aaaa text-md max-w-full placeholder-dark-a ring-inset border rounded focus:ring-dark-link bg-white  focus:ring-1 px-3 py-2 h-10 border-gray-500 disabled:text-dark-a disabled:bg-gray-200 disabled:border-dark-aa w-auto component py-1.5"
 >
   <option
     value="chocolate"
@@ -46,7 +46,7 @@ exports[`Select snapshot size md 1`] = `
 
 exports[`Select snapshot size sm 1`] = `
 <select
-  class="text-dark-aaaa text-md max-w-full placeholder-dark-a ring-inset border rounded focus:ring-dark-link bg-white  focus:ring-1 px-3 py-1 h-8 border-gray-500 disabled:text-dark-a disabled:bg-gray-200 disabled:border-light-aa w-auto component"
+  class="text-dark-aaaa text-md max-w-full placeholder-dark-a ring-inset border rounded focus:ring-dark-link bg-white  focus:ring-1 px-3 py-1 h-8 border-gray-500 disabled:text-dark-a disabled:bg-gray-200 disabled:border-dark-aa w-auto component"
 >
   <option
     value="chocolate"

@@ -71,7 +71,8 @@ function AvatarRaw({
   const componentClassnames = classNames(
     className,
     'inline-flex flex-row items-center relative',
-    'border border-gray-300',
+    'border border-gray-400',
+    'bg-gray-100',
     shape === 'circle' && 'rounded-full',
     shape === 'square' && 'rounded-md',
     size === 'xxs' && 'h-4 w-4',
@@ -80,11 +81,10 @@ function AvatarRaw({
     size === 'md' && 'h-12 w-12',
     size === 'lg' && 'h-18 w-18',
     size === 'xl' && 'h-28 w-28',
-    useStartupFallbackIcon && 'bg-slate-100',
   );
 
   const iconClassnames = classNames(
-    'm-auto text-slate-400',
+    'm-auto text-dark-a',
     size === 'xxs' && 'h-3 w-3',
     size === 'xs' && 'h-4 w-4',
     size === 'sm' && 'h-5 w-5',

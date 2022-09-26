@@ -18,9 +18,9 @@ export interface AttributeProps extends React.HTMLAttributes<HTMLElement> {
    */
   name: string;
   /**
-   * Attribute value / definition
+   * Attribute value / definition. Alternatively may use children.
    */
-  value: string;
+  value?: string;
 }
 /* eslint-enable typescript-sort-keys/interface */
 
@@ -29,12 +29,14 @@ function AttributeRaw({
   name,
   value,
   forwardedRef,
+  children,
   ...rest
-}: AttributeProps & ForwardedRefProps<HTMLDivElement>) {
+}: React.PropsWithChildren<AttributeProps> &
+  ForwardedRefProps<HTMLDivElement>) {
   return (
     <div ref={forwardedRef} className={className} {...rest}>
       <dt className="text-dark-aaaa font-medium">{name}</dt>
-      <dd className="text-dark-aaa font-normal">{value}</dd>
+      <dd className="text-dark-aaa font-normal">{value || children}</dd>
     </div>
   );
 }
@@ -77,7 +79,7 @@ function AttributeListRaw({
   );
 }
 
-const AttributeList = withForwardedRef<AttributeProps, HTMLDListElement>(
+const AttributeList = withForwardedRef<AttributeListProps, HTMLDListElement>(
   AttributeListRaw,
 );
 

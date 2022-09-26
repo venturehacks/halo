@@ -37,7 +37,7 @@
 // DEPRECATED(drew): deprecated as of 1.0 – will be removed in future release
 @mixin input-border-slate {
   @include border-rounded;
-  border: 1px solid $slate-400;
+  border: 1px solid $gray-500;
 }
 
 // DEPRECATED(drew): deprecated as of 1.0 – will be removed in future release

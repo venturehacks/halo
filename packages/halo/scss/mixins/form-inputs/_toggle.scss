@@ -37,7 +37,7 @@ $toggle-switch-knob-size: tempo(4);
   :not(:checked) + & {
     &::before,
     &::after {
-      color: $slate-500;
+      color: $gray-600;
     }
   }
 

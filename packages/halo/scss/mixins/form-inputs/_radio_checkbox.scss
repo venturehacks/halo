@@ -176,9 +176,7 @@ $pill-border-radius: tempo(6);
     height: $radio-size;
     width: $radio-size;
     @include border-circle;
-
-    // HALOGTM(drew): restore slate color. Remove during GTM cutover.
-    border: 1px solid $slate-300;
+    border: 1px solid $gray-500;
 
     // border: 1px solid $dark-aaaa;
     background-color: $white;
@@ -260,8 +258,7 @@ $pill-border-radius: tempo(6);
 }
 
 @mixin input-label-pill {
-  // HALOGTM(drew): restore slate color. Remove during GTM cutover.
-  border: 1px solid $slate-300;
+  border: 1px solid $gray-500;
 
   // border: 1px solid $dark-aaaa;
   border-radius: $pill-border-radius;

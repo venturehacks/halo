@@ -5,7 +5,7 @@ exports[`Avatar snapshots orientation left [default] 1`] = `
   class="flex antialiased flex-row items-center gap-3"
 >
   <div
-    class="order-1 inline-flex flex-row items-center relative border border-gray-300 rounded-full h-12 w-12 order-1"
+    class="order-1 inline-flex flex-row items-center relative border border-gray-400 bg-gray-100 rounded-full h-12 w-12 order-1"
   >
     <img
       alt="Avatar"
@@ -28,7 +28,7 @@ exports[`Avatar snapshots orientation right 1`] = `
   class="flex antialiased flex-row items-center gap-3"
 >
   <div
-    class="order-3 inline-flex flex-row items-center relative border border-gray-300 rounded-full h-12 w-12 order-3"
+    class="order-3 inline-flex flex-row items-center relative border border-gray-400 bg-gray-100 rounded-full h-12 w-12 order-3"
   >
     <img
       alt="Avatar"
@@ -51,7 +51,7 @@ exports[`Avatar snapshots orientation top 1`] = `
   class="flex antialiased flex-col gap-3"
 >
   <div
-    class="order-1 inline-flex flex-row items-center relative border border-gray-300 rounded-full h-12 w-12 order-1"
+    class="order-1 inline-flex flex-row items-center relative border border-gray-400 bg-gray-100 rounded-full h-12 w-12 order-1"
   >
     <img
       alt="Avatar"
@@ -74,7 +74,7 @@ exports[`Avatar snapshots size lg 1`] = `
   class="flex antialiased flex-row items-center gap-4"
 >
   <div
-    class="order-1 inline-flex flex-row items-center relative border border-gray-300 rounded-full h-18 w-18 order-1"
+    class="order-1 inline-flex flex-row items-center relative border border-gray-400 bg-gray-100 rounded-full h-18 w-18 order-1"
   >
     <img
       alt="Avatar"
@@ -97,7 +97,7 @@ exports[`Avatar snapshots size md [default] 1`] = `
   class="flex antialiased flex-row items-center gap-3"
 >
   <div
-    class="order-1 inline-flex flex-row items-center relative border border-gray-300 rounded-full h-12 w-12 order-1"
+    class="order-1 inline-flex flex-row items-center relative border border-gray-400 bg-gray-100 rounded-full h-12 w-12 order-1"
   >
     <img
       alt="Avatar"
@@ -120,7 +120,7 @@ exports[`Avatar snapshots size sm 1`] = `
   class="flex antialiased flex-row items-center gap-1"
 >
   <div
-    class="order-1 inline-flex flex-row items-center relative border border-gray-300 rounded-full h-8 w-8 order-1"
+    class="order-1 inline-flex flex-row items-center relative border border-gray-400 bg-gray-100 rounded-full h-8 w-8 order-1"
   >
     <img
       alt="Avatar"
