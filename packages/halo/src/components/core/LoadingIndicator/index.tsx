@@ -42,7 +42,7 @@ interface PrecompiledCss {
 LoadingIndicator.defaultProps = {
   bare: false,
   color: '#143fcd',
-  size: 34,
+  size: 20,
   variant: 'primary',
 };
 
