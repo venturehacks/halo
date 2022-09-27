@@ -2,7 +2,7 @@
 
 exports[`LoadingIndicator snapshot alternate 1`] = `
 <span
-  class="css-o6cbs8"
+  class="css-o8leb"
 />
 `;
 
@@ -11,7 +11,7 @@ exports[`LoadingIndicator snapshot default component wrapping 1`] = `
   class="component"
 >
   <span
-    class="css-o6cbs8"
+    class="css-o8leb"
   />
 </div>
 `;
