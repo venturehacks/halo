@@ -2,9 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.38](https://github.com/venturehacks/halo/compare/1.0.0-beta.37...1.0.0-beta.38)
+
+- [react-select] tune border colors [`1f16c4c`](https://github.com/venturehacks/halo/commit/1f16c4c2c376665e42080dd57f021aa476d140ce)
+- (snapshot) [`bfdbf7c`](https://github.com/venturehacks/halo/commit/bfdbf7c843d4f15e7dcae9e3954ec8e7c9856c37)
+- [Label] increase contrast on byline [`3dbee09`](https://github.com/venturehacks/halo/commit/3dbee09503486da06680d329e8cfeac8d381ba64)
+
 #### [1.0.0-beta.37](https://github.com/venturehacks/halo/compare/1.0.0-beta.36...1.0.0-beta.37)
 
+> 26 September 2022
+
 - GTM Grabbag: Sept 2022 [`#377`](https://github.com/venturehacks/halo/pull/377)
+- Release 1.0.0-beta.37 [`f0fe24c`](https://github.com/venturehacks/halo/commit/f0fe24ccffd166c6b0b099d82eddd20fc98b7025)
 
 #### [1.0.0-beta.36](https://github.com/venturehacks/halo/compare/1.0.0-beta.35...1.0.0-beta.36)
 
