@@ -2,8 +2,18 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.39](https://github.com/venturehacks/halo/compare/1.0.0-beta.38...1.0.0-beta.39)
+
+- (snapshot) [`f1535cb`](https://github.com/venturehacks/halo/commit/f1535cbfb07ccd53c56bdf49814404338dc5e941)
+- (snapshot) [`bf25c3b`](https://github.com/venturehacks/halo/commit/bf25c3b868180b37fd709bc9e0292587100d71f2)
+- ugh, forgotten color on react-select [`a5621d1`](https://github.com/venturehacks/halo/commit/a5621d10e74d0a1ba999ac03acf5b068d11e41e7)
+- [LoadingIndicator] revert default size [`380c638`](https://github.com/venturehacks/halo/commit/380c6383076e3cf726a92c42459ee44f729dc4e3)
+
 #### [1.0.0-beta.38](https://github.com/venturehacks/halo/compare/1.0.0-beta.37...1.0.0-beta.38)
 
+> 27 September 2022
+
+- Release 1.0.0-beta.38 [`dd935b9`](https://github.com/venturehacks/halo/commit/dd935b98f3314cb78c375568e9e297e525ff3269)
 - [react-select] tune border colors [`1f16c4c`](https://github.com/venturehacks/halo/commit/1f16c4c2c376665e42080dd57f021aa476d140ce)
 - (snapshot) [`bfdbf7c`](https://github.com/venturehacks/halo/commit/bfdbf7c843d4f15e7dcae9e3954ec8e7c9856c37)
 - [Label] increase contrast on byline [`3dbee09`](https://github.com/venturehacks/halo/commit/3dbee09503486da06680d329e8cfeac8d381ba64)
