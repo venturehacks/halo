@@ -33,17 +33,17 @@
         @include input-disabled;
       }
       .select__single-value--is-disabled {
-        @include font($color: text-dark-a);
+        @include font($color: dark-a);
       }
     }
 
     .select__placeholder {
-      @include font($size: md, $color: text-dark-a);
+      @include font($size: md, $color: dark-a);
     }
 
     .select__indicator,
     .select__indicator:hover {
-      color: $gray-500;
+      color: $dark-aa;
     }
 
     .select__value-container {
@@ -77,21 +77,21 @@
     .select__option {
       background-color: $white;
       padding: tempo(1) tempo(4);
-      border-top: 1px solid $gtmblue-200;
+      border-top: 1px solid $gtmblue-100;
     }
 
     .select__option:hover,
     .select__option--is-focused {
-      background-color: $gtmblue-200;
+      background-color: $gtmblue-50;
     }
 
     .select__option--is-selected {
       color: $dark-aaaa;
-      background-color: $gtmblue-200;
+      background-color: $gtmblue-100;
     }
 
     .select__option--is-disabled {
-      @include font($color: $dark-a);
+      @include font($color: dark-a);
     }
   }
 
