@@ -82,7 +82,7 @@ function InterfaceHeaderRaw({
       ref={forwardedRef}
       className={classNames(
         'text-dark-aaaa font-medium antialiased',
-        isPage && 'font-galano text-xl',
+        isPage && 'text-xl',
         isSection && 'text-lg',
         isSubsection && 'text-md',
         isMini && 'text-sm',
@@ -101,7 +101,6 @@ function InterfaceHeaderRaw({
             className={classNames(
               'text-dark-aa',
               'font-normal',
-              'font-arbeit',
               isPage && 'text-md mt-2',
               isSection && 'text-md mt-1',
               isSubsection && 'mt-0.5 text-sm',

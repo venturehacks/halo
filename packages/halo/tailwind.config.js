@@ -207,12 +207,12 @@ module.exports = {
       '5xl': ['64px', '72px'], // Hero Heading Plus
     },
     fontFamily: {
-      sans: '"Arbeit", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif',
+      sans: '"Graphik", "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji", sans-serif',
       mono: 'ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace',
       // new brand fonts
       founders: ['"Founders Grotesk"', 'sans-serif'],
-      arbeit: ['Arbeit', 'sans-serif'],
-      galano: ['"Galano Classic"', 'sans-serif'],
+      aeonik: ['Aeonik', 'sans-serif'],
+      graphik: ['"Graphik"', 'sans-serif'],
     },
     spacing: {
       px: '1px',

@@ -3,7 +3,7 @@
 @import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap');
 
 div[data-testid='live-preview'] {
-  font-family: 'Arbeit', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Graphik', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 div[data-testid='playground'] {
@@ -21,7 +21,7 @@ div[data-testid='code'] {
 }
 
 .tippy-popper {
-  font-family: 'Arbeit', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Graphik', 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
 
 iframe.datadog-dashboard {
