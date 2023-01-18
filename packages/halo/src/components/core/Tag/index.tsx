@@ -98,7 +98,7 @@ function TagRaw({
       {...onClickProps}
       {...rest}
     >
-      {icon && <>{icon}</>}
+      {icon && <span className={iconClassnames}>{icon}</span>}
       {label && <span>{label}</span>}
 
       {renderChildren && children}
