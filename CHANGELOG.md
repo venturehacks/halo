@@ -2,8 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.40](https://github.com/venturehacks/halo/compare/1.0.0-beta.39...1.0.0-beta.40)
+
+- Wellfound Rebrand, Tag Fix [`#378`](https://github.com/venturehacks/halo/pull/378)
+- Update welcome.mdx [`d063339`](https://github.com/venturehacks/halo/commit/d063339d9dc4146bdd6df80986741e1991611278)
+
 #### [1.0.0-beta.39](https://github.com/venturehacks/halo/compare/1.0.0-beta.38...1.0.0-beta.39)
 
+> 27 September 2022
+
+- Release 1.0.0-beta.39 [`d1298d8`](https://github.com/venturehacks/halo/commit/d1298d84e5494a7b8b95837884f4f3e003f347d7)
 - (snapshot) [`f1535cb`](https://github.com/venturehacks/halo/commit/f1535cbfb07ccd53c56bdf49814404338dc5e941)
 - (snapshot) [`bf25c3b`](https://github.com/venturehacks/halo/commit/bf25c3b868180b37fd709bc9e0292587100d71f2)
 - ugh, forgotten color on react-select [`a5621d1`](https://github.com/venturehacks/halo/commit/a5621d10e74d0a1ba999ac03acf5b068d11e41e7)
