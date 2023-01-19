@@ -2,13 +2,13 @@
 
 exports[`InterfaceHeader snapshot byline 1`] = `
 <header
-  class="text-dark-aaaa font-medium antialiased font-galano text-xl"
+  class="text-dark-aaaa font-medium antialiased text-xl"
 >
   <div>
     Title
   </div>
   <div
-    class="text-dark-aa font-normal font-arbeit text-md mt-2"
+    class="text-dark-aa font-normal text-md mt-2"
   >
     Byline
   </div>
@@ -25,7 +25,7 @@ exports[`InterfaceHeader snapshot hierarchy mini 1`] = `
 
 exports[`InterfaceHeader snapshot hierarchy page 1`] = `
 <header
-  class="text-dark-aaaa font-medium antialiased font-galano text-xl"
+  class="text-dark-aaaa font-medium antialiased text-xl"
 >
   General Settings
 </header>
