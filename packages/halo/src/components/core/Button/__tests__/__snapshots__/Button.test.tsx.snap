@@ -2,7 +2,7 @@
 
 exports[`Button snapshot default 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-aeonik
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
       transition duration-200 px-4 py-2 bg-black border-black text-white font-normal
@@ -15,7 +15,7 @@ exports[`Button snapshot default 1`] = `
 
 exports[`Button snapshot size lg 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-aeonik
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
       transition duration-200 px-10 py-3 bg-black border-black text-white font-normal
@@ -28,7 +28,7 @@ exports[`Button snapshot size lg 1`] = `
 
 exports[`Button snapshot size md 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-aeonik
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
       transition duration-200 px-4 py-2 bg-black border-black text-white font-normal
@@ -41,7 +41,7 @@ exports[`Button snapshot size md 1`] = `
 
 exports[`Button snapshot size sm 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-aeonik
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
       transition duration-200 px-3 py-1 bg-black border-black text-white font-normal
@@ -54,7 +54,7 @@ exports[`Button snapshot size sm 1`] = `
 
 exports[`Button snapshot variant clear 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-aeonik
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
       transition duration-200 px-4 py-2 bg-transparent border-transparent font-normal text-black
@@ -66,7 +66,7 @@ exports[`Button snapshot variant clear 1`] = `
 
 exports[`Button snapshot variant error 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-aeonik
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
       transition duration-200 px-4 py-2 bg-gtmpink-100 border-gtmpink-100 text-gtmpink-600 font-formal
@@ -79,7 +79,7 @@ exports[`Button snapshot variant error 1`] = `
 
 exports[`Button snapshot variant gray 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-aeonik
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
       transition duration-200 px-4 py-2 bg-gray-200 border-black text-black font-normal hover:bg-gray-400
@@ -91,7 +91,7 @@ exports[`Button snapshot variant gray 1`] = `
 
 exports[`Button snapshot variant primary 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-aeonik
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
       transition duration-200 px-4 py-2 bg-black border-black text-white font-normal
@@ -104,7 +104,7 @@ exports[`Button snapshot variant primary 1`] = `
 
 exports[`Button snapshot variant secondary 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-aeonik
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
       transition duration-200 px-4 py-2 bg-white border-black text-black font-normal
@@ -117,7 +117,7 @@ exports[`Button snapshot variant secondary 1`] = `
 
 exports[`Button snapshot width 100% 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-aeonik
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
       transition duration-200 px-4 py-2 bg-black border-black text-white font-normal
