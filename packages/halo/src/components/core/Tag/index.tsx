@@ -64,7 +64,7 @@ function TagRaw({
   const componentClassnames = classNames(
     className,
     styles.component,
-    'inline-flex font-aeonik flex-row items-center mr-2 last:mr-0 rounded-full align-middle',
+    'inline-flex flex-row items-center mr-2 last:mr-0 rounded-full align-middle',
     color === 'blue' && 'bg-gtmblue-100 text-dark-aaaa',
     color === 'gray' && 'bg-gray-200 text-gray-700',
     size === 'xs' && 'gap-1 text-2xs px-2 py-0.5',

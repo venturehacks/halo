@@ -2,19 +2,19 @@
 
 exports[`Tag snapshot color blue 1`] = `
 <span
-  class="component inline-flex font-aeonik flex-row items-center mr-2 last:mr-0 rounded-full align-middle bg-gtmblue-100 text-dark-aaaa gap-2 text-xs px-3 py-1"
+  class="component inline-flex flex-row items-center mr-2 last:mr-0 rounded-full align-middle bg-gtmblue-100 text-dark-aaaa gap-2 text-xs px-3 py-1"
 />
 `;
 
 exports[`Tag snapshot color gray 1`] = `
 <span
-  class="component inline-flex font-aeonik flex-row items-center mr-2 last:mr-0 rounded-full align-middle bg-gray-200 text-gray-700 gap-2 text-xs px-3 py-1"
+  class="component inline-flex flex-row items-center mr-2 last:mr-0 rounded-full align-middle bg-gray-200 text-gray-700 gap-2 text-xs px-3 py-1"
 />
 `;
 
 exports[`Tag snapshot plain 1`] = `
 <span
-  class="component inline-flex font-aeonik flex-row items-center mr-2 last:mr-0 rounded-full align-middle bg-gray-200 text-gray-700 gap-2 text-xs px-3 py-1"
+  class="component inline-flex flex-row items-center mr-2 last:mr-0 rounded-full align-middle bg-gray-200 text-gray-700 gap-2 text-xs px-3 py-1"
 >
   <span>
     plain
@@ -24,25 +24,25 @@ exports[`Tag snapshot plain 1`] = `
 
 exports[`Tag snapshot size md 1`] = `
 <span
-  class="component inline-flex font-aeonik flex-row items-center mr-2 last:mr-0 rounded-full align-middle bg-gray-200 text-gray-700 gap-2 text-sm px-3 py-2"
+  class="component inline-flex flex-row items-center mr-2 last:mr-0 rounded-full align-middle bg-gray-200 text-gray-700 gap-2 text-sm px-3 py-2"
 />
 `;
 
 exports[`Tag snapshot size sm 1`] = `
 <span
-  class="component inline-flex font-aeonik flex-row items-center mr-2 last:mr-0 rounded-full align-middle bg-gray-200 text-gray-700 gap-2 text-xs px-3 py-1"
+  class="component inline-flex flex-row items-center mr-2 last:mr-0 rounded-full align-middle bg-gray-200 text-gray-700 gap-2 text-xs px-3 py-1"
 />
 `;
 
 exports[`Tag snapshot size xs [default] 1`] = `
 <span
-  class="component inline-flex font-aeonik flex-row items-center mr-2 last:mr-0 rounded-full align-middle bg-gray-200 text-gray-700 gap-1 text-2xs px-2 py-0.5"
+  class="component inline-flex flex-row items-center mr-2 last:mr-0 rounded-full align-middle bg-gray-200 text-gray-700 gap-1 text-2xs px-2 py-0.5"
 />
 `;
 
 exports[`Tag snapshot with children 1`] = `
 <span
-  class="component inline-flex font-aeonik flex-row items-center mr-2 last:mr-0 rounded-full align-middle bg-gray-200 text-gray-700 gap-2 text-xs px-3 py-1"
+  class="component inline-flex flex-row items-center mr-2 last:mr-0 rounded-full align-middle bg-gray-200 text-gray-700 gap-2 text-xs px-3 py-1"
 >
   with children
 </span>
