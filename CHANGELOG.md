@@ -2,9 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.41](https://github.com/venturehacks/halo/compare/1.0.0-beta.40...1.0.0-beta.41)
+
+- remove aeonik [`#379`](https://github.com/venturehacks/halo/pull/379)
+
 #### [1.0.0-beta.40](https://github.com/venturehacks/halo/compare/1.0.0-beta.39...1.0.0-beta.40)
 
+> 19 January 2023
+
 - Wellfound Rebrand, Tag Fix [`#378`](https://github.com/venturehacks/halo/pull/378)
+- Release 1.0.0-beta.40 [`d632121`](https://github.com/venturehacks/halo/commit/d6321215754b41abd849d1be38a473b87c59336c)
 - Update welcome.mdx [`d063339`](https://github.com/venturehacks/halo/commit/d063339d9dc4146bdd6df80986741e1991611278)
 
 #### [1.0.0-beta.39](https://github.com/venturehacks/halo/compare/1.0.0-beta.38...1.0.0-beta.39)
