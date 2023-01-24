@@ -15,7 +15,7 @@ ENV GIT_BRANCH ''
 ARG GIT_COMMIT_MESSAGE
 ENV GIT_COMMIT_MESSAGE ''
 
-RUN apk add --no-cache bash git python2 build-base libpng-dev pngquant lcms2-dev bash autoconf automake libtool tiff-dev \
+RUN apk add --no-cache bash git python2 build-base libpng-dev pngquant lcms2-dev bash autoconf automake libtool libtiff6-dev \
   && apk add libimagequant-dev --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main \
   && apk add vips-dev --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
 
