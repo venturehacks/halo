@@ -18,18 +18,18 @@ export type ButtonVariant =
   | 'clear';
 
 const VARIANT_CSS: Record<ButtonVariant, string> = {
-  primary: `bg-black border-black text-white font-normal
+  primary: `bg-black border-black text-white
                   disabled:bg-gray-400 disabled:border-gray-400 disabled:text-gray-700
                   hover:bg-gtmblue-500 hover:border-gtmblue-500`,
-  secondary: `bg-white border-black text-black font-normal
+  secondary: `bg-white border-black text-black
                     disabled:bg-white disabled:border-gray-700 disabled:text-gray-700
                     hover:bg-gtmblue-100 hover:border-gtmblue-500 hover:text-gtmblue-500`,
-  gray: `bg-gray-200 border-black text-black font-normal hover:bg-gray-400
+  gray: `bg-gray-200 border-black text-black  hover:bg-gray-400
                disabled:bg-gray-100 disabled:border-gray-500 disabled:text-gray-500`,
   error: `bg-gtmpink-100 border-gtmpink-100 text-gtmpink-600 font-formal
                 disabled:border-gray-200 disabled:text-gray-700 disabled:bg-gray-200
                 hover:bg-gtmpink-300 hover:border-gtmpink-300 hover:text-gtmpink-600`,
-  clear: `bg-transparent border-transparent font-normal text-black
+  clear: `bg-transparent border-transparent  text-black
                 disabled:text-gray-600 disabled:font-medium hover:bg-gray-100`,
 };
 
@@ -100,7 +100,7 @@ function ButtonRaw({
   const buttonClassNames = classNames(
     styles.component,
     className,
-    `rounded border-solid border gap-x-2 whitespace-nowrap
+    `rounded border-solid border gap-x-2 whitespace-nowrap font-medium
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
       transition duration-200`,

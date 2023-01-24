@@ -63,10 +63,10 @@ exports[`Dialog snapshot title + both buttons 1`] = `
     data-test="Dialog-chin"
   >
     <button
-      class="component rounded border-solid border gap-x-2 whitespace-nowrap
+      class="component rounded border-solid border gap-x-2 whitespace-nowrap font-medium
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
-      transition duration-200 px-3 py-1 bg-white border-black text-black font-normal
+      transition duration-200 px-3 py-1 bg-white border-black text-black
                     disabled:bg-white disabled:border-gray-700 disabled:text-gray-700
                     hover:bg-gtmblue-100 hover:border-gtmblue-500 hover:text-gtmblue-500"
       data-test="Dialog-secondaryButton"
@@ -75,10 +75,10 @@ exports[`Dialog snapshot title + both buttons 1`] = `
       Cancel
     </button>
     <button
-      class="component rounded border-solid border gap-x-2 whitespace-nowrap
+      class="component rounded border-solid border gap-x-2 whitespace-nowrap font-medium
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
-      transition duration-200 px-3 py-1 bg-black border-black text-white font-normal
+      transition duration-200 px-3 py-1 bg-black border-black text-white
                   disabled:bg-gray-400 disabled:border-gray-400 disabled:text-gray-700
                   hover:bg-gtmblue-500 hover:border-gtmblue-500"
       data-test="Dialog-primaryButton"
