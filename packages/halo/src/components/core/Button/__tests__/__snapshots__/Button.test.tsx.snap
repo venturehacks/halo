@@ -2,10 +2,10 @@
 
 exports[`Button snapshot default 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-medium
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
-      transition duration-200 px-4 py-2 bg-black border-black text-white font-normal
+      transition duration-200 px-4 py-2 bg-black border-black text-white
                   disabled:bg-gray-400 disabled:border-gray-400 disabled:text-gray-700
                   hover:bg-gtmblue-500 hover:border-gtmblue-500"
   data-test="Button"
@@ -15,10 +15,10 @@ exports[`Button snapshot default 1`] = `
 
 exports[`Button snapshot size lg 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-medium
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
-      transition duration-200 px-10 py-3 bg-black border-black text-white font-normal
+      transition duration-200 px-10 py-3 bg-black border-black text-white
                   disabled:bg-gray-400 disabled:border-gray-400 disabled:text-gray-700
                   hover:bg-gtmblue-500 hover:border-gtmblue-500"
   data-test="Button"
@@ -28,10 +28,10 @@ exports[`Button snapshot size lg 1`] = `
 
 exports[`Button snapshot size md 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-medium
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
-      transition duration-200 px-4 py-2 bg-black border-black text-white font-normal
+      transition duration-200 px-4 py-2 bg-black border-black text-white
                   disabled:bg-gray-400 disabled:border-gray-400 disabled:text-gray-700
                   hover:bg-gtmblue-500 hover:border-gtmblue-500"
   data-test="Button"
@@ -41,10 +41,10 @@ exports[`Button snapshot size md 1`] = `
 
 exports[`Button snapshot size sm 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-medium
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
-      transition duration-200 px-3 py-1 bg-black border-black text-white font-normal
+      transition duration-200 px-3 py-1 bg-black border-black text-white
                   disabled:bg-gray-400 disabled:border-gray-400 disabled:text-gray-700
                   hover:bg-gtmblue-500 hover:border-gtmblue-500"
   data-test="Button"
@@ -54,10 +54,10 @@ exports[`Button snapshot size sm 1`] = `
 
 exports[`Button snapshot variant clear 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-medium
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
-      transition duration-200 px-4 py-2 bg-transparent border-transparent font-normal text-black
+      transition duration-200 px-4 py-2 bg-transparent border-transparent  text-black
                 disabled:text-gray-600 disabled:font-medium hover:bg-gray-100"
   data-test="Button"
   type="button"
@@ -66,7 +66,7 @@ exports[`Button snapshot variant clear 1`] = `
 
 exports[`Button snapshot variant error 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-medium
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
       transition duration-200 px-4 py-2 bg-gtmpink-100 border-gtmpink-100 text-gtmpink-600 font-formal
@@ -79,10 +79,10 @@ exports[`Button snapshot variant error 1`] = `
 
 exports[`Button snapshot variant gray 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-medium
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
-      transition duration-200 px-4 py-2 bg-gray-200 border-black text-black font-normal hover:bg-gray-400
+      transition duration-200 px-4 py-2 bg-gray-200 border-black text-black  hover:bg-gray-400
                disabled:bg-gray-100 disabled:border-gray-500 disabled:text-gray-500"
   data-test="Button"
   type="button"
@@ -91,10 +91,10 @@ exports[`Button snapshot variant gray 1`] = `
 
 exports[`Button snapshot variant primary 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-medium
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
-      transition duration-200 px-4 py-2 bg-black border-black text-white font-normal
+      transition duration-200 px-4 py-2 bg-black border-black text-white
                   disabled:bg-gray-400 disabled:border-gray-400 disabled:text-gray-700
                   hover:bg-gtmblue-500 hover:border-gtmblue-500"
   data-test="Button"
@@ -104,10 +104,10 @@ exports[`Button snapshot variant primary 1`] = `
 
 exports[`Button snapshot variant secondary 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-medium
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
-      transition duration-200 px-4 py-2 bg-white border-black text-black font-normal
+      transition duration-200 px-4 py-2 bg-white border-black text-black
                     disabled:bg-white disabled:border-gray-700 disabled:text-gray-700
                     hover:bg-gtmblue-100 hover:border-gtmblue-500 hover:text-gtmblue-500"
   data-test="Button"
@@ -117,10 +117,10 @@ exports[`Button snapshot variant secondary 1`] = `
 
 exports[`Button snapshot width 100% 1`] = `
 <button
-  class="component rounded border-solid border gap-x-2 whitespace-nowrap
+  class="component rounded border-solid border gap-x-2 whitespace-nowrap font-medium
       antialiased text-center text-sm no-underline cursor-pointer focus:outline-0
       disabled:cursor-default disabled:pointer-events-none disabled:opacity-50
-      transition duration-200 px-4 py-2 bg-black border-black text-white font-normal
+      transition duration-200 px-4 py-2 bg-black border-black text-white
                   disabled:bg-gray-400 disabled:border-gray-400 disabled:text-gray-700
                   hover:bg-gtmblue-500 hover:border-gtmblue-500 w-full"
   data-test="Button"
