@@ -17,7 +17,7 @@ ENV GIT_COMMIT_MESSAGE ''
 
 RUN apk add --no-cache bash git python2 build-base libpng-dev pngquant lcms2-dev bash autoconf automake libtool \
   && apk add libimagequant-dev --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main \
-  && apk add libtiff --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main \
+  && apk add libtiff-dev --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/main \
   && apk add vips-dev --no-cache --repository=http://dl-cdn.alpinelinux.org/alpine/edge/community
 
 # 🌳 monorepo
