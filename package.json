@@ -25,7 +25,7 @@
     "prettier:fix": "stylelint --fix '**/*.scss' && prettier --write '**/*.{ts,tsx,js,jsx,css,scss,md,mdx,markdown}'",
     "lint": "eslint --format pretty .",
     "lint:fix": "eslint --format pretty --fix .",
-    "release": "release-it --npm.publishArgs=\"--registry=https://npm.fury.io/angellist/\" --disable-metrics",
+    "release": "release-it --npm.publishArgs=\"--registry=https://npm.fury.io/wellfound/\" --disable-metrics",
     "release:major": "yarn release --increment=major",
     "release:minor": "yarn release --increment=minor",
     "release:patch": "yarn release --increment=patch",
@@ -36,7 +36,7 @@
     "publish": false
   },
   "publishConfig": {
-    "registry": "https://npm.fury.io/angellist/"
+    "registry": "https://npm.fury.io/wellfound/"
   },
   "repository": {
     "type": "git",
@@ -122,7 +122,7 @@
     "jscodeshift": "^0.6.4",
     "lint-staged": "^9.3.0",
     "lodash": "^4.17.15",
-    "node-sass": "6.0.1",
+    "sass": "1.62.1",
     "postcss": "8.4.13",
     "postcss-scss": "^4.0.3",
     "prettier": "2.5.1",
