@@ -2,9 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.44](https://github.com/venturehacks/halo/compare/1.0.0-beta.43...1.0.0-beta.44)
+
+- Make registry settings consistent [`#382`](https://github.com/venturehacks/halo/pull/382)
+
 #### [1.0.0-beta.43](https://github.com/venturehacks/halo/compare/1.0.0-beta.42...1.0.0-beta.43)
 
+> 17 May 2023
+
 - New package backend [`#381`](https://github.com/venturehacks/halo/pull/381)
+- Release 1.0.0-beta.43 [`cd49def`](https://github.com/venturehacks/halo/commit/cd49defe2b2318949f83176c9d2d52c9c917ab18)
 
 #### [1.0.0-beta.42](https://github.com/venturehacks/halo/compare/1.0.0-beta.41...1.0.0-beta.42)
 
