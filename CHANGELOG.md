@@ -2,9 +2,16 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.43](https://github.com/venturehacks/halo/compare/1.0.0-beta.42...1.0.0-beta.43)
+
+- New package backend [`#381`](https://github.com/venturehacks/halo/pull/381)
+
 #### [1.0.0-beta.42](https://github.com/venturehacks/halo/compare/1.0.0-beta.41...1.0.0-beta.42)
 
+> 24 January 2023
+
 - Replace button weight, hardcode alpine version [`#380`](https://github.com/venturehacks/halo/pull/380)
+- Release 1.0.0-beta.42 [`cd469c7`](https://github.com/venturehacks/halo/commit/cd469c7f3acfe225691fbf777190fe0f652cfdaf)
 
 #### [1.0.0-beta.41](https://github.com/venturehacks/halo/compare/1.0.0-beta.40...1.0.0-beta.41)
 
