@@ -28,7 +28,7 @@
     "publish": true
   },
   "publishConfig": {
-    "registry": "https://npm.fury.io/angellist/"
+    "registry": "https://npm.fury.io/wellfound/"
   },
   "repository": {
     "type": "git",
