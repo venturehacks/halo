@@ -11,6 +11,12 @@ module.exports = {
     'no-invalid-position-at-import-rule': null,
     'number-max-precision': null,
     'property-disallowed-list': ['float'],
+    'property-no-unknown': [
+      true,
+      {
+        ignoreProperties: ['size-adjust'],
+      },
+    ],
     'property-no-vendor-prefix': null,
     'selector-class-pattern': null,
     'shorthand-property-no-redundant-values': null,

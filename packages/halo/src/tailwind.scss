@@ -90,3 +90,16 @@
   font-style: normal;
   font-display: swap;
 }
+
+// size-adjust fallback fonts to avoid layout shifts
+@font-face {
+  font-family: 'Helvetica Neue';
+  size-adjust: 104.6%;
+  src: local('Helvetica Neue');
+}
+
+@font-face {
+  font-family: 'Arial';
+  size-adjust: 105.5%;
+  src: local('Arial');
+}
