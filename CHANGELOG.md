@@ -2,13 +2,10 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
-#### [1.0.0-beta.45](https://github.com/venturehacks/halo/compare/1.0.0-beta.45...1.0.0-beta.45)
-
-#### [1.0.0-beta.45](https://github.com/venturehacks/halo/compare/1.0.0-beta.44...1.0.0-beta.45)
-
-> 3 July 2023
+#### [1.0.0-beta.46](https://github.com/venturehacks/halo/compare/1.0.0-beta.44...1.0.0-beta.46)
 
 - size-adjust system fonts [`#383`](https://github.com/venturehacks/halo/pull/383)
+- Release 1.0.0-beta.45 [`3c5ce8d`](https://github.com/venturehacks/halo/commit/3c5ce8dcfd44c2da31656d8aad1cf5cb4cf2fa41)
 
 #### [1.0.0-beta.44](https://github.com/venturehacks/halo/compare/1.0.0-beta.43...1.0.0-beta.44)
 
