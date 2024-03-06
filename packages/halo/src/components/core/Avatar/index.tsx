@@ -29,6 +29,10 @@ export interface AvatarProps {
    * startup fallback icon.
    */
   imageUrl: Nullable<string>;
+  /**
+   * @default false
+   */
+  lazyloadImage?: boolean;
   name?: string;
   /**
    * Circle for individuals, square for startups
@@ -40,10 +44,6 @@ export interface AvatarProps {
    */
   size: AvatarSize;
   tooltip?: string;
- /**
-   * @default false
-   */
-  lazyloadImage?: boolean;
 }
 
 function AvatarRaw({
@@ -53,12 +53,12 @@ function AvatarRaw({
   badgeShape,
   className,
   imageUrl,
+  lazyloadImage,
   name,
   shape = 'circle',
   size = 'sm',
   tooltip,
   forwardedRef,
-  lazyloadImage,
   ...rest
 }: AvatarProps &
   ForwardedRefProps<HTMLDivElement> &
