@@ -29,6 +29,10 @@ export interface AvatarProps {
    * startup fallback icon.
    */
   imageUrl: Nullable<string>;
+  /**
+   * @default false
+   */
+  lazyloadImage?: boolean;
   name?: string;
   /**
    * Circle for individuals, square for startups
@@ -49,6 +53,7 @@ function AvatarRaw({
   badgeShape,
   className,
   imageUrl,
+  lazyloadImage,
   name,
   shape = 'circle',
   size = 'sm',
@@ -117,8 +122,9 @@ function AvatarRaw({
         <img
           alt={name ? `Avatar for ${name}` : 'Avatar'}
           className={avatarClassNames}
-          /* accomodate 1px border */
+          /* accommodate 1px border */
           height={IMAGE_SIZES[size] - 2}
+          loading={lazyloadImage ? 'lazy' : undefined}
           src={imageUrl}
           width={IMAGE_SIZES[size] - 2}
         />
