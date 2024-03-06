@@ -2,10 +2,17 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.47](https://github.com/venturehacks/halo/compare/1.0.0-beta.46...1.0.0-beta.47)
+
+- Add lazyload support to Avatar's image [`#384`](https://github.com/venturehacks/halo/pull/384)
+
 #### [1.0.0-beta.46](https://github.com/venturehacks/halo/compare/1.0.0-beta.44...1.0.0-beta.46)
+
+> 3 July 2023
 
 - size-adjust system fonts [`#383`](https://github.com/venturehacks/halo/pull/383)
 - Release 1.0.0-beta.45 [`3c5ce8d`](https://github.com/venturehacks/halo/commit/3c5ce8dcfd44c2da31656d8aad1cf5cb4cf2fa41)
+- Release 1.0.0-beta.46 [`70fbcc8`](https://github.com/venturehacks/halo/commit/70fbcc8a42351aa90c61022be5838a43e7fd5459)
 
 #### [1.0.0-beta.44](https://github.com/venturehacks/halo/compare/1.0.0-beta.43...1.0.0-beta.44)
 
