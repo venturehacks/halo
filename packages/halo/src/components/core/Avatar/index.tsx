@@ -40,6 +40,10 @@ export interface AvatarProps {
    */
   size: AvatarSize;
   tooltip?: string;
+ /**
+   * @default false
+   */
+  lazyloadImage?: boolean;
 }
 
 function AvatarRaw({
@@ -54,6 +58,7 @@ function AvatarRaw({
   size = 'sm',
   tooltip,
   forwardedRef,
+  lazyloadImage,
   ...rest
 }: AvatarProps &
   ForwardedRefProps<HTMLDivElement> &
@@ -121,6 +126,7 @@ function AvatarRaw({
           height={IMAGE_SIZES[size] - 2}
           src={imageUrl}
           width={IMAGE_SIZES[size] - 2}
+          loading={lazyloadImage ? 'lazy' : undefined}
         />
       )}
       {showBadge && (
