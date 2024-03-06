@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. Dates are displayed in UTC.
 
+#### [1.0.0-beta.47](https://github.com/venturehacks/halo/compare/1.0.0-beta.46...1.0.0-beta.47)
+
+- Add lazyload support to Avatar's image [`#384`](https://github.com/venturehacks/halo/pull/384)
+
 #### [1.0.0-beta.46](https://github.com/venturehacks/halo/compare/1.0.0-beta.44...1.0.0-beta.46)
 
 - size-adjust system fonts [`#383`](https://github.com/venturehacks/halo/pull/383)
